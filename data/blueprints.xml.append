@@ -1,0 +1,178 @@
+
+<!--weaponBlueprint name="ION_2">
+	<type>LASER</type>
+	<flavorType>Ion Blast</flavorType>
+	<title>Ion Barrage MK I</title>
+	<short>Ion I</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>A simple ion weapon which can keep a shield barrier offline.</desc>
+	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<spin>720</spin>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>7</cooldown>
+	<power>1</power>
+	<cost>40</cost>
+	<bp>3</bp>
+	<rarity>3</rarity>
+	<image>ion_barrage</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_2</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="ION_3">
+	<type>LASER</type>
+	<flavorType>Ion Blast</flavorType>
+	<title>Ion Barrage MK II</title>
+	<short>Ion II</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>An upgraded ion weapon which can keep multiple shield barriers offline.</desc>
+	<tooltip>Fires a single blast that does 1 ion damage and recharges very quickly. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<spin>720</spin>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>1</stunChance>
+	<cooldown>5</cooldown>
+	<power>2</power>
+	<cost>55</cost>
+	<bp>6</bp>
+	<rarity>4</rarity>
+	<image>ion_barrage</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_4</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="ION_4">
+	<type>LASER</type>
+	<flavorType>Ion Blast</flavorType>
+	<title>Ion Barrage MK III</title>
+	<short>Ion III</short>
+	<tip>tip_ion</tip>
+	<locked>1</locked>
+	<desc>An advanced ion weapon which can keep many shield barriers offline.</desc>
+	<tooltip>Fires a single blast that does 1 ion damage and recharges very quickly. Can hit and disable shields as well as systems.</tooltip>
+	<damage>0</damage>
+	<spin>720</spin>
+	<ion>1</ion>
+	<speed>30</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<stunChance>0</stunChance>
+	<cooldown>3</cooldown>
+	<power>4</power>
+	<cost>65</cost>
+	<bp>6</bp>
+	<rarity>5</rarity>
+	<image>ion_barrage</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_5</weaponArt>
+	<iconImage>ion</iconImage>
+</weaponBlueprint>
+</FTL-->
+<FTL>
+<weaponBlueprint name="LILY_FOCUS_ION_1">
+	<type>BEAM</type>
+	<flavorType>Pinpoint</flavorType>
+	<tip>tip_ion</tip>
+	<title>Ion Pinpoint I</title>
+	<short>P. Ion I</short>
+	<desc>A modified pinpoint beam that does 1 ion damage. Charges slower than regular ions.</desc>
+	<tooltip>One ion damage per room beam weapon</tooltip>
+	<damage>0</damage>
+    <ion>1</ion>
+	<sp>0</sp>
+	<ionBeamFix>true</ionBeamFix>
+    <color>
+        <r>0</r>
+		<g>255</g>
+		<b>255</b>
+    </color>
+    <stunChance>2</stunChance>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>8</cooldown>
+	<speed>1</speed>
+	<power>1</power>
+	<cost>60</cost>
+	<bp>2</bp>
+	<rarity>3</rarity>
+	<image>beam_contact</image>
+	<length>1</length>
+	<launchSounds>
+		<sound>focus_weak</sound>
+	</launchSounds>
+	<weaponArt>lily_focus_ion_1</weaponArt>
+	<iconImage>beam</iconImage>
+</weaponBlueprint>
+</FTL>

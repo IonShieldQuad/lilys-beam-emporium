@@ -1,0 +1,38 @@
+<FTL>
+<mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
+<mod-append:name>LILY_FOCUS_ION_1</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
+<mod-append:name>LILY_FOCUS_ION_1</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET_EE">
+<mod-append:name>LILY_FOCUS_ION_1</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="LIST_WEAPONS_PLAYER">
+<mod-append:name>LILY_FOCUS_ION_1</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_ION">
+<mod-append:name>LILY_FOCUS_ION_1</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
+<mod-append:name>LILY_FOCUS_ION_1</mod-append:name>
+</mod:findName>
+
+<mod:findName type="blueprintList" name="SHOP_ITEM_WEAPONS_ION">
+<mod-append:name>LILY_FOCUS_ION_1</mod-append:name>
+</mod:findName>
+</FTL>
+
+
+
+
+
+
+
+
+

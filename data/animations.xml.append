@@ -1,0 +1,12 @@
+<FTL>
+<animSheet name="lily_focus_ion_1" w="234" h="53" fw="26" fh="53">weapon/focus_ion_1.png</animSheet>
+<weaponAnim name="lily_focus_ion_1">
+	<sheet>lily_focus_ion_1</sheet>
+	<desc length="9" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>2</fireFrame>
+	<firePoint  x="16" y="25"/>
+	<mountPoint x="5" y="40"/>
+	<chargeImage>weapon/focus_ion_1_glow.png</chargeImage>
+</weaponAnim>
+</FTL>

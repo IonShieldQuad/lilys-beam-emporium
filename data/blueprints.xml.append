@@ -270,7 +270,7 @@ disable shields as well as systems.</tooltip>
         <stunChance>2</stunChance>
         <fireChance>1</fireChance>
         <breachChance>0</breachChance>
-        <cooldown>12</cooldown>
+        <cooldown>14</cooldown>
         <speed>1</speed>
         <power>3</power>
         <cost>120</cost>

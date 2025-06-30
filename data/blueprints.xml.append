@@ -7,7 +7,8 @@
 	<tip>tip_ion</tip>
 	<locked>1</locked>
 	<desc>A simple ion weapon which can keep a shield barrier offline.</desc>
-	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as systems.</tooltip>
+	<tooltip>Fires a single blast that does 1 ion damage. Can hit and disable shields as well as
+systems.</tooltip>
 	<damage>0</damage>
 	<spin>720</spin>
 	<ion>1</ion>
@@ -54,7 +55,8 @@
 	<tip>tip_ion</tip>
 	<locked>1</locked>
 	<desc>An upgraded ion weapon which can keep multiple shield barriers offline.</desc>
-	<tooltip>Fires a single blast that does 1 ion damage and recharges very quickly. Can hit and disable shields as well as systems.</tooltip>
+	<tooltip>Fires a single blast that does 1 ion damage and recharges very quickly. Can hit and
+disable shields as well as systems.</tooltip>
 	<damage>0</damage>
 	<spin>720</spin>
 	<ion>1</ion>
@@ -101,7 +103,8 @@
 	<tip>tip_ion</tip>
 	<locked>1</locked>
 	<desc>An advanced ion weapon which can keep many shield barriers offline.</desc>
-	<tooltip>Fires a single blast that does 1 ion damage and recharges very quickly. Can hit and disable shields as well as systems.</tooltip>
+	<tooltip>Fires a single blast that does 1 ion damage and recharges very quickly. Can hit and
+disable shields as well as systems.</tooltip>
 	<damage>0</damage>
 	<spin>720</spin>
 	<ion>1</ion>
@@ -141,38 +144,149 @@
 </weaponBlueprint>
 </FTL-->
 <FTL>
-<weaponBlueprint name="LILY_FOCUS_ION_1">
-	<type>BEAM</type>
-	<flavorType>Pinpoint</flavorType>
-	<tip>tip_ion</tip>
-	<title>Ion Pinpoint I</title>
-	<short>P. Ion I</short>
-	<desc>A modified pinpoint beam that does 1 ion damage. Charges slower than regular ions.</desc>
-	<tooltip>One ion damage per room beam weapon</tooltip>
-	<damage>0</damage>
-    <ion>1</ion>
-	<sp>0</sp>
-	<ionBeamFix>true</ionBeamFix>
-    <color>
-        <r>0</r>
-		<g>255</g>
-		<b>255</b>
-    </color>
-    <stunChance>2</stunChance>
-	<fireChance>1</fireChance>
-	<breachChance>0</breachChance>
-	<cooldown>8</cooldown>
-	<speed>1</speed>
-	<power>1</power>
-	<cost>60</cost>
-	<bp>2</bp>
-	<rarity>3</rarity>
-	<image>beam_contact</image>
-	<length>1</length>
-	<launchSounds>
-		<sound>focus_weak</sound>
-	</launchSounds>
-	<weaponArt>lily_focus_ion_1</weaponArt>
-	<iconImage>beam</iconImage>
-</weaponBlueprint>
+    <weaponBlueprint name="LILY_FOCUS_ION_1">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_ion</tip>
+        <title>Ion Pinpoint I</title>
+        <short>Ionpoint I</short>
+        <desc>A modified pinpoint beam that does 1 ion damage. Charges slower than regular ions.</desc>
+        <tooltip>One ion damage per room beam weapon</tooltip>
+        <damage>0</damage>
+        <ion>1</ion>
+        <sp>0</sp>
+        <ionBeamFix>true</ionBeamFix>
+        <color>
+            <r>0</r>
+            <g>255</g>
+            <b>255</b>
+        </color>
+        <stunChance>2</stunChance>
+        <fireChance>1</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>9</cooldown>
+        <speed>1</speed>
+        <power>1</power>
+        <cost>60</cost>
+        <bp>2</bp>
+        <rarity>3</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <launchSounds>
+            <sound>focus_weak</sound>
+        </launchSounds>
+        <weaponArt>lily_focus_ion_1</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_FOCUS_ION_2">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_ion</tip>
+        <title>Ion Pinpoint II</title>
+        <short>Ionpoint II</short>
+        <desc>A modified pinpoint beam that does 1 ion damage. Charges faster than previous model.</desc>
+        <tooltip>One ion damage per room beam weapon</tooltip>
+        <damage>0</damage>
+        <ion>1</ion>
+        <sp>0</sp>
+        <ionBeamFix>true</ionBeamFix>
+        <color>
+            <r>0</r>
+            <g>255</g>
+            <b>255</b>
+        </color>
+        <stunChance>2</stunChance>
+        <fireChance>1</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>6</cooldown>
+        <speed>1</speed>
+        <power>2</power>
+        <cost>100</cost>
+        <bp>4</bp>
+        <rarity>4</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <launchSounds>
+            <sound>focus_weak</sound>
+        </launchSounds>
+        <weaponArt>lily_focus_ion_2</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_FOCUS_ION_HEAVY">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_ion</tip>
+        <title>Heavy Ion Pinpoint</title>
+        <short>H. Ionpoint</short>
+        <desc>A modified pinpoint beam that does 3 ion damage, but is slow to charge.</desc>
+        <tooltip>Three ion damage per room beam weapon</tooltip>
+        <damage>0</damage>
+        <!--<sysDamage>1</sysDamage>-->
+        <sp>0</sp>
+        <ion>3</ion>
+        <ionBeamFix>true</ionBeamFix>
+        <color>
+            <r>0</r>
+            <g>255</g>
+            <b>255</b>
+        </color>
+        <stunChance>5</stunChance>
+        <fireChance>5</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>18</cooldown>
+        <speed>1</speed>
+        <power>2</power>
+        <cost>110</cost>
+        <bp>5</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <launchSounds>
+            <sound>focus_strong</sound>
+        </launchSounds>
+        <weaponArt>lily_focus_ion_heavy</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_FOCUS_ION_CHAIN">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_chain_beam</tip>
+        <title>Chain Ion Pinpoint</title>
+        <short>C. Ionpoint</short>
+        <desc>This modified Pinpoint weapon only does a small amount of ion damage, but quickly ramps up its fire rate until it becoms able to keep multiple systems down by itself.</desc>
+        <tooltip>One ion damage, ramping fire rate.</tooltip>
+        <damage>0</damage>
+        <ion>1</ion>
+        <sp>0</sp>
+        <ionBeamFix>true</ionBeamFix>
+        <color>
+            <r>0</r>
+            <g>255</g>
+            <b>255</b>
+        </color>
+        <stunChance>2</stunChance>
+        <fireChance>1</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>12</cooldown>
+        <speed>1</speed>
+        <power>3</power>
+        <cost>120</cost>
+        <bp>8</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <boost>
+            <type>cooldown</type>
+            <amount>2</amount>
+            <count>5</count>
+        </boost>
+        <length>1</length>
+        <launchSounds>
+            <sound>focus_weak</sound>
+        </launchSounds>
+        <weaponArt>lily_focus_ion_chain</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
 </FTL>

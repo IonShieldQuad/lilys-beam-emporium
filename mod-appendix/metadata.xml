@@ -30,12 +30,12 @@
 			2.4.1 Hi-res Bkgs
 			1.0 for FTL 1.03.1
 	-->
-	<version><![CDATA[ 0.0.1 ]]></version>
+	<version><![CDATA[ 0.1.0 ]]></version>
 
 
 	<description>
 <![CDATA[
-An extra collection of BEAM themed weapon, ships and augments.
+An extra collection of BEAM themed weapons, ships and augments.
 
 Because Beams are the Best! (tm)
 ]]>

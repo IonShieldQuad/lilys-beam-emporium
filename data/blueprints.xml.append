@@ -143,6 +143,15 @@ disable shields as well as systems.</tooltip>
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 </FTL-->
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					ION PINPOINTS
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+
 <FTL>
     <weaponBlueprint name="LILY_FOCUS_ION_1">
         <type>BEAM</type>
@@ -287,6 +296,112 @@ disable shields as well as systems.</tooltip>
             <sound>focus_weak</sound>
         </launchSounds>
         <weaponArt>lily_focus_ion_chain</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+</FTL>
+
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					TOGGLE - SUNSET
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+
+<FTL>
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_SUNSET_H">
+        <type>BEAM</type>
+        <tip>tip_beams</tip>
+        <title>'Sunset' Beam [Hullbust]</title>
+        <short>'Sunset' [H]</short>
+        <desc>This Beam boasts an unique multimodal power core, allowing it to be effective against hull, systems and crew, though not at once. Current mode: Anti-hull.</desc>
+        <tooltip>Beam weapon; 1 damage; 2x damage in systemless rooms.</tooltip>
+        <damage>1</damage>
+        <persDamage>-1</persDamage>
+        <sp>0</sp>
+        <fireChance>0</fireChance>
+        <breachChance>5</breachChance>
+        <cooldown>15</cooldown>
+        <hullBust>1</hullBust>
+        <power>2</power>
+        <cost>100</cost>
+        <bp>8</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>100</length>
+        <launchSounds>
+            <sound>beam1</sound>
+            <sound>beam1_2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_sunset_h</weaponArt>
+        <iconImage>beamH</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_SUNSET_P">
+        <type>BEAM</type>
+        <tip>tip_particle_beam</tip>
+        <title>'Sunset' Beam [Particle]</title>
+        <short>'Sunset' [P]</short>
+        <desc>This Beam boasts an unique multimodal power core, allowing it to be effective against hull, systems and crew, though not at once. Current mode: Anti-system.</desc>
+        <tooltip>Starts fires and does 1 hull damage per room.</tooltip>
+        <damage>0</damage>
+        <sysDamage>1</sysDamage>
+        <sp>2</sp>
+        <fireChance>3</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>15</cooldown>
+        <color>
+            <r>255</r>
+            <g>110</g>
+            <b>0</b>
+        </color>
+        <power>2</power>
+        <cost>100</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <length>100</length>
+        <image>beam_contact</image>
+        <launchSounds>
+            <sound>beam2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_sunset_p</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_SUNSET_B">
+        <type>BEAM</type>
+        <tip>tip_bio</tip>
+        <title>'Sunset' Beam [Anti-Bio]</title>
+        <short>'Sunset' [B]</short>
+        <desc>This Beam boasts an unique multimodal power core, allowing it to be effective against hull, systems and crew, though not at once. Current mode: Anti-crew.</desc>
+        <tooltip>2 power beam weapon that greatly damages enemy crew.</tooltip>
+        <damage>0</damage>
+        <persDamage>5</persDamage>
+        <sp>2</sp>
+        <fireChance>0</fireChance>
+        <breachChance>1</breachChance>
+        <cooldown>15</cooldown>
+        <color>
+            <r>255</r>
+            <g>8</g>
+            <b>200</b>
+        </color>
+        <statBoosts>
+            <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
+            <statBoost name="stunMultiplier" load="RAD_STUN"/>
+            <statBoost name="repairSpeed" load="RAD_REPAIR"/>
+        </statBoosts>
+        <power>2</power>
+        <cost>100</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <length>100</length>
+        <image>beam_contact</image>
+        <launchSounds>
+            <sound>beam2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_sunset_b</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
 </FTL>

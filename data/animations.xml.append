@@ -54,3 +54,44 @@
 
 
 </FTL>
+
+	<animSheet name="lily_beam_toggle_sunset_h" w="456" h="77" fw="38" fh="77">weapon_lily/beam_toggle_sunset_h.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_sunset_h">
+		<sheet>lily_beam_toggle_sunset_h</sheet>
+		<desc length="12" x="0" y="0"/>
+		<chargedFrame>6</chargedFrame>
+		<fireFrame>7</fireFrame>
+		<firePoint x="22" y="23"/>
+		<mountPoint x="10" y="55"/>
+		<chargeImage>weapon_lily/beam_toggle_sunset_h_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_toggle_sunset_p" w="456" h="77" fw="38" fh="77">weapon_lily/beam_toggle_sunset_p.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_sunset_p">
+		<sheet>lily_beam_toggle_sunset_p</sheet>
+		<desc length="12" x="0" y="0"/>
+		<chargedFrame>6</chargedFrame>
+		<fireFrame>7</fireFrame>
+		<firePoint x="22" y="23"/>
+		<mountPoint x="10" y="55"/>
+		<chargeImage>weapon_lily/beam_toggle_sunset_p_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_toggle_sunset_b" w="456" h="77" fw="38" fh="77">weapon_lily/beam_toggle_sunset_b.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_sunset_b">
+		<sheet>lily_beam_toggle_sunset_b</sheet>
+		<desc length="12" x="0" y="0"/>
+		<chargedFrame>6</chargedFrame>
+		<fireFrame>7</fireFrame>
+		<firePoint x="22" y="23"/>
+		<mountPoint x="10" y="55"/>
+		<chargeImage>weapon_lily/beam_toggle_sunset_b_glow.png</chargeImage>
+	</weaponAnim>
+
+
+
+
+<FTL>
+
+
+</FTL>

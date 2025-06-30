@@ -1,0 +1,152 @@
+
+<FTL>
+
+<mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+    <mod-append:choice req="LILY_BEAM_TOGGLE_SUNSET_H" blue="false">
+        <text>('Sunset' Beam) Set the state of the weapon. [Current mode: Hullbust]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_SUNSET_H"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_TOGGLE_SUNSET_P" blue="false">
+        <text>('Sunset' Beam) Set the state of the weapon. [Current mode: Particle]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_SUNSET_P"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_TOGGLE_SUNSET_B" blue="false">
+        <text>('Sunset' Beam) Set the state of the weapon. [Current mode: Anti-Bio]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_SUNSET_B"/>
+    </mod-append:choice>
+</mod:findName>
+
+
+
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_SUNSET_H">
+    <text>What mode do you want to set the weapon to?
+	Current mode: Hullbust.</text>
+    <choice hidden="true">
+        <text>Switch to Particle mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_SUNSET_H"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_SUNSET_P"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Anti-Bio mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_SUNSET_H"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_SUNSET_B"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_SUNSET_P">
+    <text>What mode do you want to set the weapon to?
+	Current mode: Particle.</text>
+    <choice hidden="true">
+        <text>Switch to Hullbust mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_SUNSET_P"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_SUNSET_H"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Anti-Bio mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_SUNSET_P"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_SUNSET_B"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_SUNSET_B">
+    <text>What mode do you want to set the weapon to?
+	Current mode: Anti-Bio.</text>
+    <choice hidden="true">
+        <text>Switch to Hullbust mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_SUNSET_B"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_SUNSET_H"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Particle mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_SUNSET_B"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_SUNSET_P"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>

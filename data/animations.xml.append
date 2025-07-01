@@ -54,7 +54,7 @@
 
 
 </FTL>
-
+<FTL>
 	<animSheet name="lily_beam_toggle_sunset_h" w="456" h="77" fw="38" fh="77">weapon_lily/beam_toggle_sunset_h.png</animSheet>
 	<weaponAnim name="lily_beam_toggle_sunset_h">
 		<sheet>lily_beam_toggle_sunset_h</sheet>
@@ -89,9 +89,89 @@
 	</weaponAnim>
 
 
+</FTL>
+
+<FTL>
+<animSheet name="lily_invisible" w="35" h="35" fw="35" fh="35">effects_lily/invisible.png</animSheet>
+<anim name="lily_invisible">
+	<sheet>lily_invisible</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>0.1</time>
+</anim>
+
+<animSheet name="lily_acid_wall_1" w="175" h="35" fw="35" fh="35">effects_lily/acid_wall_1.png</animSheet>
+<anim name="lily_acid_wall_1">
+	<sheet>lily_acid_wall_1</sheet>
+	<desc length="5" x="0" y="0"/>
+	<time>0.2</time>
+</anim>
+
+<animSheet name="lily_poison_effect" w="352" h="32" fw="32" fh="32">people_lily/poison_effect.png</animSheet>
+<anim name="lily_poison_effect">
+	<sheet>lily_poison_effect</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="lily_acid_effect" w="352" h="32" fw="32" fh="32">people_lily/acid_effect.png</animSheet>
+<anim name="lily_acid_effect">
+	<sheet>lily_acid_effect</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+</FTL>
 
 
 <FTL>
+	<animSheet name="lily_beam_toggle_syringe" w="750" h="120" fw="30" fh="120">weapon_lily/beam_toggle_syringe.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_syringe">
+		<sheet>lily_beam_toggle_syringe</sheet>
+		<desc length="25" x="0" y="0"/>
+		<chargedFrame>12</chargedFrame>
+		<fireFrame>13</fireFrame>
+		<firePoint x="18" y="1"/>
+		<mountPoint x="6" y="65"/>
+	</weaponAnim>
 
+	<animSheet name="lily_beam_toggle_syringe_m" w="750" h="120" fw="30" fh="120">weapon_lily/beam_toggle_syringe_m.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_syringe_m">
+		<sheet>lily_beam_toggle_syringe_m</sheet>
+		<desc length="25" x="0" y="0"/>
+		<chargedFrame>12</chargedFrame>
+		<fireFrame>13</fireFrame>
+		<firePoint x="8" y="1"/>
+		<mountPoint x="6" y="65"/>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_toggle_syringe_s" w="750" h="120" fw="30" fh="120">weapon_lily/beam_toggle_syringe_s.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_syringe_s">
+		<sheet>lily_beam_toggle_syringe_s</sheet>
+		<desc length="25" x="0" y="0"/>
+		<chargedFrame>12</chargedFrame>
+		<fireFrame>13</fireFrame>
+		<firePoint x="18" y="1"/>
+		<mountPoint x="6" y="65"/>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_toggle_syringe_p" w="750" h="120" fw="30" fh="120">weapon_lily/beam_toggle_syringe_p.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_syringe_p">
+		<sheet>lily_beam_toggle_syringe_p</sheet>
+		<desc length="23" x="0" y="0"/>
+		<chargedFrame>12</chargedFrame>
+		<fireFrame>13</fireFrame>
+		<firePoint x="18" y="1"/>
+		<mountPoint x="6" y="65"/>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_toggle_syringe_a" w="750" h="120" fw="30" fh="120">weapon_lily/beam_toggle_syringe_a.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_syringe_a">
+		<sheet>lily_beam_toggle_syringe_a</sheet>
+		<desc length="25" x="0" y="0"/>
+		<chargedFrame>12</chargedFrame>
+		<fireFrame>13</fireFrame>
+		<firePoint x="18" y="1"/>
+		<mountPoint x="6" y="65"/>
+	</weaponAnim>
 
 </FTL>

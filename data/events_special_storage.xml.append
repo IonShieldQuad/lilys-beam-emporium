@@ -150,3 +150,175 @@
         <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
     </choice>
 </event>
+
+
+
+
+<mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+    <mod-append:choice req="LILY_BEAM_TOGGLE_SYRINGE" blue="false">
+        <text>('Syringe' Beam) Set the state of the weapon. [Current mode: Empty]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_SYRINGE"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_TOGGLE_SYRINGE_M" blue="false">
+        <text>('Syringe' Beam) Reset the state of the weapon. [Current mode: Medicine]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_SYRINGE_M"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_TOGGLE_SYRINGE_S" blue="false">
+        <text>('Syringe' Beam) Reset the state of the weapon. [Current mode: Stimulant]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_SYRINGE_S"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_TOGGLE_SYRINGE_P" blue="false">
+        <text>('Syringe' Beam) Reset the state of the weapon. [Current mode: Poison]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_SYRINGE_P"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_TOGGLE_SYRINGE_A" blue="false">
+        <text>('Syringe' Beam) Reset the state of the weapon. [Current mode: Acid]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_SYRINGE_A"/>
+    </mod-append:choice>
+</mod:findName>
+
+
+
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_SYRINGE">
+    <text>What do you want to load the weapon with?</text>
+    <choice hidden="true">
+        <text>Medicine.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_SYRINGE"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_SYRINGE_M"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Stimulant.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_SYRINGE"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_SYRINGE_S"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Poison.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_SYRINGE"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_SYRINGE_P"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Acid.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_SYRINGE"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_SYRINGE_A"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+
+
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_SYRINGE_M">
+    <text>You start calibrating the weapon...</text>
+    <remove name="LILY_BEAM_TOGGLE_SYRINGE_M"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>You finish calibrating the weapon successfully.</text>
+            <weapon name="LILY_BEAM_TOGGLE_SYRINGE"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_SYRINGE_S">
+    <text>You start calibrating the weapon...</text>
+    <remove name="LILY_BEAM_TOGGLE_SYRINGE_S"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>You finish calibrating the weapon successfully.</text>
+            <weapon name="LILY_BEAM_TOGGLE_SYRINGE"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_SYRINGE_P">
+    <text>You start calibrating the weapon...</text>
+    <remove name="LILY_BEAM_TOGGLE_SYRINGE_P"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>You finish calibrating the weapon successfully.</text>
+            <weapon name="LILY_BEAM_TOGGLE_SYRINGE"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_SYRINGE_A">
+    <text>You start calibrating the weapon...</text>
+    <remove name="LILY_BEAM_TOGGLE_SYRINGE_A"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>You finish calibrating the weapon successfully.</text>
+            <weapon name="LILY_BEAM_TOGGLE_SYRINGE"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+</FTL>

@@ -405,3 +405,298 @@ disable shields as well as systems.</tooltip>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
 </FTL>
+
+
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					TOGGLE - SYRINGE
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+
+<FTL>
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_SYRINGE">
+        <type>BEAM</type>
+        <tip>tip_lily_syringe</tip>
+        <title>'Syringe' Beam [Empty]</title>
+        <short>'Syringe' [-]</short>
+        <desc>This weapon is less of traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Empty, need to be configured before use.</desc>
+        <tooltip>Special beam weapon. Need to be configured before use.</tooltip>
+        <damage>0</damage>
+        <persDamage>0</persDamage>
+        <sp>0</sp>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>5</cooldown>
+        <hullBust>0</hullBust>
+        <power>1</power>
+        <cost>100</cost>
+        <bp>8</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>50</length>
+        <speed>10</speed>
+        <color>
+            <r>255</r>
+            <g>255</g>
+            <b>255</b>
+        </color>
+        <launchSounds>
+            <sound>beam1</sound>
+            <sound>beam1_2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_syringe</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_SYRINGE_M">
+        <type>BEAM</type>
+        <tip>tip_lily_syringe_m</tip>
+        <title>'Syringe' Beam [Medicine]</title>
+        <short>'Syringe' [M]</short>
+        <desc>This weapon is less of traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Medicine.</desc>
+        <tooltip>Applies 4/s healing for 10 second for allied crew.</tooltip>
+        <damage>0</damage>
+        <persDamage>0</persDamage>
+        <sp>3</sp>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>10</cooldown>
+        <hullBust>0</hullBust>
+        <power>1</power>
+        <cost>100</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <image>beam_contact</image>
+        <length>50</length>
+        <speed>10</speed>
+        <color>
+            <r>255</r>
+            <g>228</g>
+            <b>180</b>
+        </color>
+        <statBoosts>
+            <statBoost name="healAmount">
+                <boostType>FLAT</boostType>
+                <amount>4</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <affectsSelf>true</affectsSelf>
+                <duration>10</duration>
+            </statBoost>
+            <statBoost name="suffocationModifier">
+                <boostType>MULT</boostType>
+                <amount>0.5</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+            </statBoost>
+            <statBoost name="fireDamageMultiplier">
+                <boostType>MULT</boostType>
+                <amount>0.5</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+            </statBoost>
+        </statBoosts>
+        <launchSounds>
+            <sound>beam1</sound>
+            <sound>beam1_2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_syringe_m</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_SYRINGE_S">
+        <type>BEAM</type>
+        <tip>tip_lily_syringe_s</tip>
+        <title>'Syringe' Beam [Stimulant]</title>
+        <short>'Syringe' [S]</short>
+        <desc>This weapon is less of traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Stimulant.</desc>
+        <tooltip>Provides doubled movement speed and damage for 10 seconds for allied crew.</tooltip>
+        <damage>0</damage>
+        <persDamage>0</persDamage>
+        <sp>3</sp>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>12</cooldown>
+        <hullBust>0</hullBust>
+        <power>1</power>
+        <cost>100</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <image>beam_contact</image>
+        <length>50</length>
+        <speed>10</speed>
+        <color>
+            <r>255</r>
+            <g>200</g>
+            <b>200</b>
+        </color>
+        <statBoosts>
+            <statBoost name="moveSpeedMultiplier">
+                <boostType>MULT</boostType>
+                <amount>2.0</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+                <boostAnim>pheromones</boostAnim>
+            </statBoost>
+            <statBoost name="damageMultiplier">
+                <boostType>MULT</boostType>
+                <amount>2.0</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+            </statBoost>
+            <statBoost name="sabotageSpeedMultiplier">
+                <boostType>MULT</boostType>
+                <amount>2.0</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+            </statBoost>
+            <statBoost name="repairSpeed">
+                <boostType>MULT</boostType>
+                <amount>2.0</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+            </statBoost>
+        </statBoosts>
+        <launchSounds>
+            <sound>beam1</sound>
+            <sound>beam1_2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_syringe_s</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_SYRINGE_P">
+        <type>BEAM</type>
+        <tip>tip_lily_syringe_p</tip>
+        <title>'Syringe' Beam [Poison]</title>
+        <short>'Syringe' [P]</short>
+        <desc>This weapon is less of traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Poison.</desc>
+        <tooltip>Does 4 hp/s damage for 30 seconds for any crew hit.</tooltip>
+        <damage>0</damage>
+        <persDamage>0</persDamage>
+        <sp>3</sp>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>12</cooldown>
+        <hullBust>0</hullBust>
+        <power>1</power>
+        <cost>100</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <image>beam_contact</image>
+        <length>50</length>
+        <speed>10</speed>
+        <color>
+            <r>255</r>
+            <g>200</g>
+            <b>255</b>
+        </color>
+        <statBoosts>
+            <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
+            <statBoost name="stunMultiplier" load="RAD_STUN"/>
+            <statBoost name="repairSpeed" load="RAD_REPAIR"/>
+            <statBoost name="trueHealAmount">
+                <boostType>FLAT</boostType>
+                <amount>-4</amount>
+                <maxStacks>1</maxStacks>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <duration>30</duration>
+                <boostAnim>lily_poison_effect</boostAnim>
+            </statBoost>
+        </statBoosts>
+        <launchSounds>
+            <sound>beam1</sound>
+            <sound>beam1_2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_syringe_p</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_SYRINGE_A">
+        <type>BEAM</type>
+        <tip>tip_lily_syringe_a</tip>
+        <title>'Syringe' Beam [Acid]</title>
+        <short>'Syringe' [A]</short>
+        <desc>This weapon is less of traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Acid.</desc>
+        <tooltip>Applies erosion effect for every tile hit. Also does 10 hp/s damage for 3 seconds for any crew hit.</tooltip>
+        <damage>0</damage>
+        <persDamage>2</persDamage>
+        <sp>3</sp>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>15</cooldown>
+        <hullBust>0</hullBust>
+        <power>1</power>
+        <cost>100</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <image>beam_contact</image>
+        <length>50</length>
+        <speed>10</speed>
+        <color>
+            <r>200</r>
+            <g>255</g>
+            <b>200</b>
+        </color>
+        <mv-tileDamage method="2"/>
+        <erosion>
+            <speed>0.5</speed>
+            <maxSpeed>2</maxSpeed>
+            <time>5.0</time>
+            <maxTime>10.0</maxTime>
+            <systemRepairMultiplier>1</systemRepairMultiplier>
+            <erodeShields>false</erodeShields>
+            <roomAnim renderLayer="1">
+                <anim animType="default" animBorder="2">lily_invisible</anim>
+                <wallAnim>lily_acid_wall_1</wallAnim>
+            </roomAnim>
+        </erosion>
+        <statBoosts>
+            <statBoost name="trueHealAmount">
+                <boostType>FLAT</boostType>
+                <amount>-10</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <droneTarget>ALL</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <duration>3</duration>
+                <boostAnim>lily_acid_effect</boostAnim>
+            </statBoost>
+        </statBoosts>
+        <launchSounds>
+            <sound>beam1</sound>
+            <sound>beam1_2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_syringe_a</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+</FTL>

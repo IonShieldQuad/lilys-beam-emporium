@@ -144,6 +144,42 @@ disable shields as well as systems.</tooltip>
 </weaponBlueprint>
 </FTL-->
 
+<FTL>
+    <weaponBlueprint name="LILY_FOCUS_POINTER">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_lily_pointer</tip>
+        <title>'Pointer' Pinpoint</title>
+        <short>'Pointer'</short>
+        <desc>This... is not a military grade weapon, but a just regular laser pointer. What is it doing here?</desc>
+        <tooltip>Laser pointer</tooltip>
+        <damage>0</damage>
+        <sp>10</sp>
+        <color>
+            <r>255</r>
+            <g>0</g>
+            <b>0</b>
+        </color>
+        <cooldown>1</cooldown>
+        <stunChance>1</stunChance>
+        <speed>100</speed>
+        <fireTime>0.05</fireTime>
+        <power>0</power>
+        <cost>20</cost>
+        <bp>2</bp>
+        <rarity>0</rarity>
+        <!--image>beam_contact</image-->
+        <length>1</length>
+        <!--launchSounds>
+            <sound>focus_weak</sound>
+        </launchSounds-->
+        <weaponArt>lily_focus_pointer</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+</FTL>
+
+
+
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -265,7 +301,7 @@ disable shields as well as systems.</tooltip>
         <tip>tip_chain_beam</tip>
         <title>Chain Ion Pinpoint</title>
         <short>C. Ionpoint</short>
-        <desc>This modified Pinpoint weapon only does a small amount of ion damage, but quickly ramps up its fire rate until it becoms able to keep multiple systems down by itself.</desc>
+        <desc>This modified Pinpoint weapon only does a small amount of ion damage, but quickly ramps up its fire rate until it becomes able to keep multiple systems down by itself.</desc>
         <tooltip>One ion damage, ramping fire rate.</tooltip>
         <damage>0</damage>
         <ion>1</ion>
@@ -279,7 +315,7 @@ disable shields as well as systems.</tooltip>
         <stunChance>2</stunChance>
         <fireChance>1</fireChance>
         <breachChance>0</breachChance>
-        <cooldown>14</cooldown>
+        <cooldown>9</cooldown>
         <speed>1</speed>
         <power>3</power>
         <cost>120</cost>
@@ -288,7 +324,7 @@ disable shields as well as systems.</tooltip>
         <image>beam_contact</image>
         <boost>
             <type>cooldown</type>
-            <amount>2</amount>
+            <amount>1</amount>
             <count>5</count>
         </boost>
         <length>1</length>
@@ -485,7 +521,7 @@ disable shields as well as systems.</tooltip>
                 <shipTarget>ALL</shipTarget>
                 <crewTarget>ALLIES</crewTarget>
                 <affectsSelf>true</affectsSelf>
-                <duration>10</duration>
+                <duration>15</duration>
             </statBoost>
             <statBoost name="suffocationModifier">
                 <boostType>MULT</boostType>
@@ -494,7 +530,7 @@ disable shields as well as systems.</tooltip>
                 <crewTarget>ALLIES</crewTarget>
                 <affectsSelf>true</affectsSelf>
                 <maxStacks>1</maxStacks>
-                <duration>10</duration>
+                <duration>15</duration>
             </statBoost>
             <statBoost name="fireDamageMultiplier">
                 <boostType>MULT</boostType>
@@ -503,7 +539,7 @@ disable shields as well as systems.</tooltip>
                 <crewTarget>ALLIES</crewTarget>
                 <affectsSelf>true</affectsSelf>
                 <maxStacks>1</maxStacks>
-                <duration>10</duration>
+                <duration>15</duration>
             </statBoost>
         </statBoosts>
         <launchSounds>
@@ -582,6 +618,16 @@ disable shields as well as systems.</tooltip>
                 <maxStacks>1</maxStacks>
                 <duration>10</duration>
             </statBoost>
+            <statBoost name="stunMultiplier">
+                <boostType>MULT</boostType>
+                <amount>0.1</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALLIES</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+            </statBoost>
         </statBoosts>
         <launchSounds>
             <sound>beam1</sound>
@@ -629,7 +675,7 @@ disable shields as well as systems.</tooltip>
                 <crewTarget>ALL</crewTarget>
                 <droneTarget>CREW</droneTarget>
                 <affectsSelf>true</affectsSelf>
-                <duration>30</duration>
+                <duration>25</duration>
                 <boostAnim>lily_poison_effect</boostAnim>
             </statBoost>
         </statBoosts>
@@ -649,7 +695,7 @@ disable shields as well as systems.</tooltip>
         <desc>This weapon is less of traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Acid.</desc>
         <tooltip>Applies erosion effect for every tile hit. Also does 10 hp/s damage for 3 seconds for any crew hit.</tooltip>
         <damage>0</damage>
-        <persDamage>2</persDamage>
+        <persDamage>0</persDamage>
         <sp>3</sp>
         <fireChance>0</fireChance>
         <breachChance>0</breachChance>
@@ -699,4 +745,198 @@ disable shields as well as systems.</tooltip>
         <weaponArt>lily_beam_toggle_syringe_a</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
+</FTL>
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					AMP - SIPHON
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+</FTL>
+<weaponBlueprint name="LILY_BEAM_AMP_SIPHON">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Burst Beam Projectile</title>
+    <short>Burst Beam Projectile</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>0</damage>
+
+    <sysDamage>0</sysDamage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <speed>1</speed>
+    <length>5</length>
+    <power>0</power>
+    <cost>140</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <color>
+        <r>255</r>
+        <g>200</g>
+        <b>0</b>
+    </color>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_zap_1</sound>
+    </launchSounds>
+    <weaponArt>beam_burst_1</weaponArt>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="LILY_BEAM_AMP_SIPHON_0">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_siphon</tip>
+    <title>'Edison' Siphon Beam [0]</title>
+    <short>'Edison' [0]</short>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. More power allows for longer burst. Current power: 0 (Conservative).</desc>
+    <tooltip>A shield draining burst beam.</tooltip>
+    <damage>0</damage>
+    <persDamage>0</persDamage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>18</cooldown>
+    <hullBust>0</hullBust>
+    <power>0</power>
+    <cost>140</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>
+    <speed>0</speed> 
+    <fireTime>0.25</fireTime>
+    <mv-stealth/>
+
+    <shots>1</shots>
+
+    <projectiles>
+        <projectile count="1" fake="false">laser_burst</projectile>
+    </projectiles>
+
+    
+    <launchSounds>
+        <sound>lily_zap_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_amp_siphon_0</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_AMP_SIPHON_1">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_siphon</tip>
+    <title>'Edison' Siphon Beam [1]</title>
+    <short>'Edison' [1]</short>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. More power allows for longer burst. Current power: 1.</desc>
+    <tooltip>A shield draining burst beam.</tooltip>
+    <damage>0</damage>
+    <persDamage>0</persDamage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <hullBust>0</hullBust>
+    <power>1</power>
+    <cost>140</cost>
+    <bp>8</bp>
+    <rarity>6</rarity>
+    <speed>0</speed>
+    <fireTime>0.25</fireTime>
+    <mv-stealth/>
+
+    <shots>2</shots>
+
+    <projectiles>
+        <projectile count="1" fake="false">laser_burst</projectile>
+    </projectiles>
+
+
+    <launchSounds>
+        <sound>lily_zap_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_amp_siphon_1</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+
+
+<weaponBlueprint name="LILY_BEAM_AMP_SIPHON_2">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_siphon</tip>
+    <title>'Edison' Siphon Beam [2]</title>
+    <short>'Edison' [2]</short>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. More power allows for longer burst. Current power: 2.</desc>
+    <tooltip>A shield draining burst beam.</tooltip>
+    <damage>0</damage>
+    <persDamage>0</persDamage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <hullBust>0</hullBust>
+    <power>2</power>
+    <cost>140</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>
+    <speed>0</speed>
+    <fireTime>0.25</fireTime>
+    <mv-stealth/>
+
+    <shots>3</shots>
+
+    <projectiles>
+        <projectile count="1" fake="false">laser_burst</projectile>
+    </projectiles>
+
+
+    <launchSounds>
+        <sound>lily_zap_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_amp_siphon_2</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="LILY_BEAM_AMP_SIPHON_3">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_siphon</tip>
+    <title>'Edison' Siphon Beam [3]</title>
+    <short>'Edison' [3]</short>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. More power allows for longer burst. Current power: 3.</desc>
+    <tooltip>A shield draining burst beam.</tooltip>
+    <damage>0</damage>
+    <persDamage>0</persDamage>
+    <sp>0</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <hullBust>0</hullBust>
+    <power>3</power>
+    <cost>140</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>
+    <speed>0</speed>
+    <fireTime>0.25</fireTime>
+    <mv-stealth/>
+
+    <shots>5</shots>
+
+    <projectiles>
+        <projectile count="1" fake="false">laser_burst</projectile>
+    </projectiles>
+
+
+    <launchSounds>
+        <sound>lily_zap_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_amp_siphon_3</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
 </FTL>

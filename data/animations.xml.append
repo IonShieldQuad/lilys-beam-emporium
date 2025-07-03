@@ -1,4 +1,17 @@
 <FTL>
+
+
+	<animSheet name="lily_focus_pointer" w="96" h="33" fw="24" fh="33">weapon_lily/focus_pointer.png</animSheet>
+	<weaponAnim name="lily_focus_pointer">
+		<sheet>lily_focus_pointer</sheet>
+		<desc length="4" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="16" y="3"/>
+		<mountPoint x="4" y="19"/>
+	</weaponAnim>
+
+
 	<animSheet name="lily_focus_ion_1" w="234" h="53" fw="26" fh="53">weapon_lily/focus_ion_1.png</animSheet>
 	<weaponAnim name="lily_focus_ion_1">
 		<sheet>lily_focus_ion_1</sheet>
@@ -174,4 +187,53 @@
 		<mountPoint x="6" y="65"/>
 	</weaponAnim>
 
+</FTL>
+
+
+
+
+<FTL>
+	<animSheet name="lily_beam_amp_siphon_0" w="1280" h="100" fw="40" fh="100">weapon_lily/beam_amp_siphon_0.png</animSheet>
+	<weaponAnim name="lily_beam_amp_siphon_0">
+		<sheet>lily_beam_amp_siphon_0</sheet>
+		<desc length="32" x="0" y="0"/>
+		<chargedFrame>13</chargedFrame>
+		<fireFrame>14</fireFrame>
+		<firePoint x="20" y="64"/>
+		<mountPoint x="6" y="64"/>
+		<chargeImage>weapon_lily/beam_amp_siphon_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_amp_siphon_1" w="1280" h="100" fw="40" fh="100">weapon_lily/beam_amp_siphon_1.png</animSheet>
+	<weaponAnim name="lily_beam_amp_siphon_1">
+		<sheet>lily_beam_amp_siphon_1</sheet>
+		<desc length="32" x="0" y="0"/>
+		<chargedFrame>13</chargedFrame>
+		<fireFrame>14</fireFrame>
+		<firePoint x="20" y="64"/>
+		<mountPoint x="6" y="64"/>
+		<chargeImage>weapon_lily/beam_amp_siphon_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_amp_siphon_2" w="1280" h="100" fw="40" fh="100">weapon_lily/beam_amp_siphon_2.png</animSheet>
+	<weaponAnim name="lily_beam_amp_siphon_2">
+		<sheet>lily_beam_amp_siphon_2</sheet>
+		<desc length="32" x="0" y="0"/>
+		<chargedFrame>13</chargedFrame>
+		<fireFrame>14</fireFrame>
+		<firePoint x="20" y="64"/>
+		<mountPoint x="6" y="64"/>
+		<chargeImage>weapon_lily/beam_amp_siphon_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_amp_siphon_3" w="1280" h="100" fw="40" fh="100">weapon_lily/beam_amp_siphon_3.png</animSheet>
+	<weaponAnim name="lily_beam_amp_siphon_3">
+		<sheet>lily_beam_amp_siphon_3</sheet>
+		<desc length="32" x="0" y="0"/>
+		<chargedFrame>13</chargedFrame>
+		<fireFrame>14</fireFrame>
+		<firePoint x="20" y="64"/>
+		<mountPoint x="6" y="64"/>
+		<chargeImage>weapon_lily/beam_amp_siphon_glow.png</chargeImage>
+	</weaponAnim>
 </FTL>

@@ -1,9 +1,11 @@
 <FTL>
 
+<text name="tip_lily_pointer">Tip: You can use it to play with your cat. And your drones too.</text>
+<text name="tip_lily_siphon">Tip: This beam does no damage, but transfers enemy shields to you, supershields included. Use it for offence, defence, or both!</text>
 
 <text name="tip_lily_syringe">Tip: Special beam weapon. Need to be configured before use.</text>
-<text name="tip_lily_syringe_m">Tip: Applies 4/s healing for 10 second for allied crew. Also halves damage taken from hazards for the duration.</text>
+<text name="tip_lily_syringe_m">Tip: Applies 4/s healing for 15 second for allied crew. Also halves damage taken from hazards for the duration.</text>
 <text name="tip_lily_syringe_s">Tip: Provides doubled movement speed and damage for 10 seconds for allied crew.</text>
-<text name="tip_lily_syringe_p">Tip: Does 4 hp/s damage for 30 seconds for any crew hit, doesn't stack. Lethal for most races in ships without any medical facilities.</text>
+<text name="tip_lily_syringe_p">Tip: Does 4 hp/s damage for 25 seconds for any crew hit, doesn't stack. Lethal for most races in ships without any medical facilities.</text>
 <text name="tip_lily_syringe_a">Tip: Applies weak erosion effect for every tile hit. Also does 10 hp/s damage for 3 seconds for any crew hit.</text>
 </FTL>

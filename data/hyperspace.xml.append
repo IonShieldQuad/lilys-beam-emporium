@@ -1,0 +1,7 @@
+<FTL>
+
+<mod:findLike type="scripts">
+    <mod-append:script>data/scripts_lily/script_lily_weapons.lua</mod-append:script>
+</mod:findLike>
+
+</FTL>

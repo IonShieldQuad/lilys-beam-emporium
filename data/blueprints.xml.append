@@ -153,6 +153,7 @@ disable shields as well as systems.</tooltip>
         <short>'Pointer'</short>
         <desc>This... is not a military grade weapon, but a just regular laser pointer. What is it doing here?</desc>
         <tooltip>Laser pointer</tooltip>
+        <iconReplace>lily_focus_pointer_icon</iconReplace>
         <damage>0</damage>
         <sp>10</sp>
         <color>
@@ -460,6 +461,7 @@ disable shields as well as systems.</tooltip>
         <short>'Syringe' [-]</short>
         <desc>This weapon is less of traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Empty, need to be configured before use.</desc>
         <tooltip>Special beam weapon. Need to be configured before use.</tooltip>
+        <iconReplace>lily_beam_toggle_syringe_icon</iconReplace>
         <damage>0</damage>
         <persDamage>0</persDamage>
         <sp>0</sp>
@@ -765,7 +767,7 @@ disable shields as well as systems.</tooltip>
     <damage>0</damage>
 
     <sysDamage>0</sysDamage>
-    <sp>0</sp>
+    <sp>-10</sp>
     <fireChance>0</fireChance>
     <breachChance>0</breachChance>
     <cooldown>14</cooldown>
@@ -784,7 +786,7 @@ disable shields as well as systems.</tooltip>
     <launchSounds>
         <sound>lily_zap_1</sound>
     </launchSounds>
-    <weaponArt>beam_burst_1</weaponArt>
+    <weaponArt>lily_beam_amp_siphon_0</weaponArt>
 </weaponBlueprint>
 
 
@@ -812,7 +814,10 @@ disable shields as well as systems.</tooltip>
     <mv-stealth/>
 
     <shots>1</shots>
-
+    <mv-pop>
+        <count>1</count>
+        <countSuper>1</countSuper>
+    </mv-pop>
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
     </projectiles>
@@ -849,7 +854,10 @@ disable shields as well as systems.</tooltip>
     <mv-stealth/>
 
     <shots>2</shots>
-
+    <mv-pop>
+        <count>1</count>
+        <countSuper>1</countSuper>
+    </mv-pop>
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
     </projectiles>
@@ -888,7 +896,10 @@ disable shields as well as systems.</tooltip>
     <mv-stealth/>
 
     <shots>3</shots>
-
+    <mv-pop>
+        <count>1</count>
+        <countSuper>1</countSuper>
+    </mv-pop>
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
     </projectiles>
@@ -926,7 +937,10 @@ disable shields as well as systems.</tooltip>
     <mv-stealth/>
 
     <shots>5</shots>
-
+    <mv-pop>
+        <count>1</count>
+        <countSuper>1</countSuper>
+    </mv-pop>
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
     </projectiles>
@@ -939,4 +953,402 @@ disable shields as well as systems.</tooltip>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
+</FTL>
+
+
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					REFRACTORS
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+
+
+<FTL>
+
+<weaponBlueprint name="LILY_FOCUS_PIERCE_1">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_refractor</tip>
+    <title>Refractive Pinpoint I</title>
+    <short>Refr. I</short>
+    <desc>A pinpoint beam utilizing specialized pierce technology. While incapable of piercing shields the regular way, it allows the beam to refract through them, still hitting the ship, albeit with precision loss.</desc>
+    <tooltip>Refractor beam weapon</tooltip>
+    <iconReplace>lily_focus_pierce_1_icon</iconReplace>
+    <damage>2</damage>
+    <ion>0</ion>
+    <sp>-10</sp>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <stunChance>0</stunChance>
+    <fireChance>2</fireChance>
+    <breachChance>3</breachChance>
+    <hullbust>1</hullbust>
+    <cooldown>16</cooldown>
+    <speed>1</speed>
+    <power>2</power>
+    <cost>80</cost>
+    <bp>2</bp>
+    <rarity>3</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <launchSounds>
+        <sound>focus_weak</sound>
+    </launchSounds>
+    <weaponArt>lily_focus_pierce_1</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<!--weaponBlueprint name="LILY_FOCUS_PIERCE_1_FAKE">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_refractor</tip>
+    <title>NO</title>
+    <short>NO</short>
+    <desc>NO</desc>
+    <tooltip>Refractor beam weapon</tooltip>
+    <iconReplace>lily_focus_pierce_1_icon</iconReplace>
+    <damage>2</damage>
+    <ion>0</ion>
+    <sp>-10</sp>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <mv-pop>
+        <countSuper>0</countSuper>
+        <countSuper>-2</countSuper>
+    </mv-pop>
+    <stunChance>0</stunChance>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <hullbust>0</hullbust>
+    <cooldown>16</cooldown>
+    <speed>1</speed>
+    <power>2</power>
+    <cost>80</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <launchSounds>
+        <sound>focus_weak</sound>
+    </launchSounds>
+    <weaponArt>lily_focus_pierce_1</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint-->
+
+
+<weaponBlueprint name="LILY_FOCUS_PIERCE_1_R">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_refractor</tip>
+    <title>Refractive Pinpoint I</title>
+    <short>Refr. I</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>Refractor beam weapon</tooltip>
+    <iconReplace>lily_focus_pierce_1_icon</iconReplace>
+    <damage>2</damage>
+    <ion>0</ion>
+    <sp>10</sp>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <stunChance>0</stunChance>
+    <fireChance>2</fireChance>
+    <breachChance>3</breachChance>
+    <hullbust>1</hullbust>
+    <cooldown>16</cooldown>
+    <speed>1</speed>
+    <power>2</power>
+    <cost>80</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    
+    <weaponArt>lily_focus_pierce_1</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_FOCUS_PIERCE_2">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_refractor</tip>
+    <title>Refractive Pinpoint II</title>
+    <short>Refr. II</short>
+    <desc>A pinpoint beam utilizing specialized pierce technology. While incapable of piercing shields the regular way, it allows the beam to refract through them, still hitting the ship, albeit with precision loss. Stronger then the Mk I.</desc>
+    <tooltip>Refractor beam weapon</tooltip>
+    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <damage>4</damage>
+    <ion>0</ion>
+    <sp>-10</sp>
+    <color>
+        <r>255</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <stunChance>0</stunChance>
+    <fireChance>8</fireChance>
+    <breachChance>3</breachChance>
+    <cooldown>20</cooldown>
+    <speed>1</speed>
+    <power>3</power>
+    <cost>120</cost>
+    <bp>2</bp>
+    <rarity>5</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <launchSounds>
+        <sound>focus_strong</sound>
+    </launchSounds>
+    <weaponArt>lily_focus_pierce_2</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_FOCUS_PIERCE_2_R">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_refractor</tip>
+    <title>Refractive Pinpoint II</title>
+    <short>Refr. II</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>Refractor beam weapon</tooltip>
+    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <damage>1</damage>
+    <hullbust>1</hullbust>
+    <ion>0</ion>
+    <sp>10</sp>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <stunChance>0</stunChance>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>20</cooldown>
+    <speed>1</speed>
+    <power>3</power>
+    <cost>120</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <weaponArt>lily_focus_pierce_2</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_FOCUS_PIERCE_2_O">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_refractor</tip>
+    <title>Refractive Pinpoint II</title>
+    <short>Refr. II</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>Refractor beam weapon</tooltip>
+    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <damage>0</damage>
+    <sysDamage>1</sysDamage>
+    <ion>0</ion>
+    <sp>10</sp>
+    <color>
+        <r>255</r>
+        <g>128</g>
+        <b>0</b>
+    </color>
+    <stunChance>0</stunChance>
+    <fireChance>10</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>20</cooldown>
+    <speed>1</speed>
+    <power>3</power>
+    <cost>120</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <weaponArt>lily_focus_pierce_2</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_FOCUS_PIERCE_2_Y">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_refractor</tip>
+    <title>Refractive Pinpoint II</title>
+    <short>Refr. II</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>Refractor beam weapon</tooltip>
+    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <damage>0</damage>
+    <hullbust>0</hullbust>
+    <ion>0</ion>
+    <sp>10</sp>
+    <color>
+        <r>255</r>
+        <g>255</g>
+        <b>0</b>
+    </color>
+    <stun>15</stun>
+    <stunChance>0</stunChance>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>20</cooldown>
+    <speed>1</speed>
+    <power>3</power>
+    <cost>120</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <weaponArt>lily_focus_pierce_2</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_FOCUS_PIERCE_2_G">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_refractor</tip>
+    <title>Refractive Pinpoint II</title>
+    <short>Refr. II</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>Refractor beam weapon</tooltip>
+    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <damage>1</damage>
+    <hullbust>0</hullbust>
+    <ion>0</ion>
+    <sp>10</sp>
+    <color>
+        <r>0</r>
+        <g>255</g>
+        <b>0</b>
+    </color>
+    <stunChance>0</stunChance>
+    <fireChance>0</fireChance>
+    <breachChance>10</breachChance>
+    <cooldown>20</cooldown>
+    <speed>1</speed>
+    <power>3</power>
+    <cost>120</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <weaponArt>lily_focus_pierce_2</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_FOCUS_PIERCE_2_B">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_refractor</tip>
+    <title>Refractive Pinpoint II</title>
+    <short>Refr. II</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>Refractor beam weapon</tooltip>
+    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <damage>0</damage>
+    <hullbust>0</hullbust>
+    <ion>1</ion>
+    <sp>10</sp>
+    <color>
+        <r>0</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <stunChance>0</stunChance>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>20</cooldown>
+    <speed>1</speed>
+    <power>3</power>
+    <cost>120</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <weaponArt>lily_focus_pierce_2</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_FOCUS_PIERCE_2_I">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_refractor</tip>
+    <title>Refractive Pinpoint II</title>
+    <short>Refr. II</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>Refractor beam weapon</tooltip>
+    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <damage>1</damage>
+    <hullbust>0</hullbust>
+    <ion>0</ion>
+    <sp>10</sp>
+    <color>
+        <r>0</r>
+        <g>0</g>
+        <b>255</b>
+    </color>
+    <stunChance>6</stunChance>
+    <fireChance>3</fireChance>
+    <breachChance>5</breachChance>
+    <cooldown>20</cooldown>
+    <speed>1</speed>
+    <power>3</power>
+    <cost>120</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <weaponArt>lily_focus_pierce_2</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_FOCUS_PIERCE_2_V">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_refractor</tip>
+    <title>Refractive Pinpoint II</title>
+    <short>Refr. II</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>Refractor beam weapon</tooltip>
+    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <damage>0</damage>
+    <hullbust>0</hullbust>
+    <persDamage>4</persDamage>
+    <ion>0</ion>
+    <sp>10</sp>
+    <color>
+        <r>128</r>
+        <g>0</g>
+        <b>255</b>
+    </color>
+    <statBoosts>
+        <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
+        <statBoost name="stunMultiplier" load="RAD_STUN"/>
+        <statBoost name="repairSpeed" load="RAD_REPAIR"/>
+    </statBoosts>
+    <stunChance>0</stunChance>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>20</cooldown>
+    <speed>1</speed>
+    <power>3</power>
+    <cost>120</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <weaponArt>lily_focus_pierce_2</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
 </FTL>

@@ -16,6 +16,8 @@
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_PIERCE_1" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_PIERCE_2" rarity="0" />
 
 
     </mod:findLike>
@@ -30,6 +32,9 @@
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_PIERCE_1" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_PIERCE_2" rarity="0" />
+
 
 
     </mod:findLike>
@@ -44,6 +49,9 @@
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_PIERCE_1" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_PIERCE_2" rarity="0" />
+
 
 
     </mod:findLike>
@@ -58,6 +66,9 @@
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_PIERCE_1" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_PIERCE_2" rarity="0" />
+
 
 
     </mod:findLike>

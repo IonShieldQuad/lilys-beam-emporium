@@ -15,6 +15,12 @@ local function get_random_point_in_radius(center, radius)
     return Hyperspace.Pointf(center.x + r * math.cos(theta), center.y + r * math.sin(theta))
 end
 
+local function get_random_point_on_radius(center, radius)
+    local r = radius
+    local theta = math.random() * 2 * math.pi
+    return Hyperspace.Pointf(center.x + r * math.cos(theta), center.y + r * math.sin(theta))
+end
+
 -----------------------------------------------------------------
 -- LASER POINTER --
 -----------------------------------------------------------------
@@ -68,11 +74,18 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
     end
 end)
 
+
+--LILY_IGNORE_PROJ = LILY_IGNORE_PROJ or {}
+local refractors = {}
+refractors["LILY_FOCUS_PIERCE_1"] = {num = 1, beams = {"LILY_FOCUS_PIERCE_1_R",}, offsets = {20, } }
+refractors["LILY_FOCUS_PIERCE_2"] = { num = 7, beams = { "LILY_FOCUS_PIERCE_2_V", "LILY_FOCUS_PIERCE_2_I", "LILY_FOCUS_PIERCE_2_B", "LILY_FOCUS_PIERCE_2_G", "LILY_FOCUS_PIERCE_2_Y", "LILY_FOCUS_PIERCE_2_O", "LILY_FOCUS_PIERCE_2_R" }, offsets = { 20, 18.33, 16.66, 15, 13.33, 11.66, 10} }
+
 local burstPins = {}
 burstPins["LILY_BEAM_AMP_SIPHON"] = { count = 1, countSuper = 1 }
 -- Pop shield bubbles
 script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
     local shieldPower = shipManager.shieldSystem.shields.power
+    local weaponName = projectile and projectile.extend and projectile.extend.name
     local popData = burstPins[projectile and projectile.extend and projectile.extend.name]
     local otherShip = Hyperspace.ships(1 - shipManager.iShipId)
     local otherShieldPower = otherShip and otherShip.shieldSystem.shields.power or nil
@@ -83,6 +96,7 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
                     true)
                 shieldPower.super.first = math.max(0, shieldPower.super.first - popData.countSuper)
                 if otherShieldPower then
+                    otherShieldPower.super.second = math.max(otherShieldPower.super.second, 5)
                     otherShieldPower.super.first = math.min(math.max(otherShieldPower.super.second, 5), otherShieldPower.super.first + popData.countSuper)
                 end
             end
@@ -92,10 +106,87 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
                 true)
             shieldPower.first = math.max(0, shieldPower.first - popData.count)
             if otherShieldPower and hasShield then
-                otherShieldPower.first = math.min(otherShieldPower.second,
-                otherShieldPower.first + popData.count)
+                if otherShieldPower.first < otherShieldPower.second then
+                    otherShieldPower.first = math.min(otherShieldPower.second, otherShieldPower.first + popData.count)
+                else
+                    if otherShip.shields and otherShip.shields.iLockCount > 0 then
+                        otherShip.shields.iLockCount = math.max(0, otherShip.shields.iLockCount - popData.count)
+                        otherShip.shields:ForceIncreasePower(math.min(popData.count,
+                            otherShip.shields:GetMaxPower() - otherShip.shields:GetEffectivePower()))
+                    end
+                    if otherShip:HasAugmentation("UPG_AETHER_SHIELDS") > 0 then
+                        otherShieldPower.super.first = math.min(otherShieldPower.super.second,
+                            otherShieldPower.super.first + popData.count)
+                    end
+                end
             end
         end
         projectile:Kill()
     end
+
+
+    -- refractors
+    if shieldPower.first > 0 and shieldPower.super.first == 0 and refractors[weaponName] ~= nil then
+        local theta = math.random() * 2 * math.pi
+        --LILY_IGNORE_PROJ[projectile] = 50.0
+        local refrData = refractors[weaponName]
+
+        --[[local fakeBlueprint = Hyperspace.Blueprints:GetWeaponBlueprint(weaponName .. "_FAKE")
+        local spaceManager = Hyperspace.App.world.space
+        local fakeBeam = spaceManager:CreateBeam(
+            fakeBlueprint,
+            projectile.position,
+            projectile.currentSpace,
+            projectile.ownerId,
+            projectile.target,
+            Hyperspace.Pointf(projectile.target.x, projectile.target.y + 1),
+            projectile.destinationSpace,
+            1,
+            1)
+        fakeBeam.sub_start = projectile.sub_start
+        fakeBeam.sub_end = projectile.sub_end--]]
+
+
+        local i = 1
+        while i <= refrData.num do
+            local weaponBlueprint = Hyperspace.Blueprints:GetWeaponBlueprint(refrData.beams[i])
+            local offset_per_layer = refrData.offsets[i]
+
+
+            local newTarget1 = Hyperspace.Pointf(
+                projectile.target.x + math.cos(theta) * offset_per_layer * shieldPower.first,
+                projectile.target.y + math.sin(theta) * offset_per_layer * shieldPower.first)
+            local newTarget2 = Hyperspace.Pointf(
+                projectile.target.x + math.cos(theta) * offset_per_layer * shieldPower.first,
+                projectile.target.y + math.sin(theta) * offset_per_layer * shieldPower.first + 1)
+
+            local spaceManager = Hyperspace.App.world.space
+            local beam = spaceManager:CreateBeam(
+                weaponBlueprint,
+                response.point,
+                projectile.destinationSpace,
+                projectile.ownerId,
+                newTarget1,
+                newTarget2,
+                projectile.destinationSpace,
+                1,
+                1.0)
+            --beam.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+
+
+            i = i + 1
+        end
+        projectile:Kill()
+    end
+
 end)
+
+
+--[[script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
+    for key, value in pairs(ignoreProj) do
+        ignoreProj[key] = value - Hyperspace.FPS.SpeedFactor / 16
+        if value < 0 then
+            ignoreProj[key] = nil
+        end
+    end
+end)--]]

@@ -10,6 +10,12 @@
 		<firePoint x="16" y="3"/>
 		<mountPoint x="4" y="19"/>
 	</weaponAnim>
+	<animSheet name="lily_focus_pointer_icon" w="27" h="8" fw="27" fh="8">weapon_lily/focus_pointer_icon.png</animSheet>
+	<anim name="lily_focus_pointer_icon">
+		<sheet>lily_focus_pointer_icon</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
 
 
 	<animSheet name="lily_focus_ion_1" w="234" h="53" fw="26" fh="53">weapon_lily/focus_ion_1.png</animSheet>
@@ -187,6 +193,12 @@
 		<mountPoint x="6" y="65"/>
 	</weaponAnim>
 
+	<animSheet name="lily_beam_toggle_syringe_icon" w="86" h="26" fw="86" fh="26">weapon_lily/beam_toggle_syringe_icon.png</animSheet>
+	<anim name="lily_beam_toggle_syringe_icon">
+		<sheet>lily_beam_toggle_syringe_icon</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
 </FTL>
 
 
@@ -236,4 +248,43 @@
 		<mountPoint x="6" y="64"/>
 		<chargeImage>weapon_lily/beam_amp_siphon_glow.png</chargeImage>
 	</weaponAnim>
+</FTL>
+
+
+<FTL>
+	<animSheet name="lily_focus_pierce_1" w="532" h="111" fw="28" fh="111">weapon_lily/focus_pierce_1.png</animSheet>
+	<weaponAnim name="lily_focus_pierce_1">
+		<sheet>lily_focus_pierce_1</sheet>
+		<desc length="19" x="0" y="0"/>
+		<chargedFrame>11</chargedFrame>
+		<fireFrame>12</fireFrame>
+		<firePoint x="18" y="27"/>
+		<mountPoint x="5" y="89"/>
+		<chargeImage>weapon_lily/focus_pierce_1_glow.png</chargeImage>
+	</weaponAnim>
+	<animSheet name="lily_focus_pierce_1_icon" w="90" h="28" fw="90" fh="28">weapon_lily/focus_pierce_1_icon.png</animSheet>
+	<anim name="lily_focus_pierce_1_icon">
+		<sheet>lily_focus_pierce_1_icon</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+	<animSheet name="lily_focus_pierce_2" w="756" h="167" fw="36" fh="167">weapon_lily/focus_pierce_2.png</animSheet>
+	<weaponAnim name="lily_focus_pierce_2">
+		<sheet>lily_focus_pierce_2</sheet>
+		<desc length="21" x="0" y="0"/>
+		<chargedFrame>11</chargedFrame>
+		<fireFrame>12</fireFrame>
+		<firePoint x="22" y="59"/>
+		<mountPoint x="10" y="145"/>
+		<chargeImage>weapon_lily/focus_pierce_2_glow.png</chargeImage>
+	</weaponAnim>
+	<animSheet name="lily_focus_pierce_2_icon" w="112" h="36" fw="112" fh="36">weapon_lily/focus_pierce_2_icon.png</animSheet>
+	<anim name="lily_focus_pierce_2_icon">
+		<sheet>lily_focus_pierce_2_icon</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+
 </FTL>

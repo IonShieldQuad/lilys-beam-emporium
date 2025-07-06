@@ -2,6 +2,9 @@
 
 <text name="tip_lily_pointer">Tip: You can use it to play with your cat. And your drones too.</text>
 <text name="tip_lily_siphon">Tip: This beam does no damage, but transfers enemy shields to you, supershields included. Use it for offence, defence, or both!</text>
+<text name="tip_lily_refractor">Tip: Refractor beams can pierce any amount of shields, but refraction offsets the target point the stronger the shields are.</text>
+
+
 
 <text name="tip_lily_syringe">Tip: Special beam weapon. Need to be configured before use.</text>
 <text name="tip_lily_syringe_m">Tip: Applies 4/s healing for 15 second for allied crew. Also halves damage taken from hazards for the duration.</text>

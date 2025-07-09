@@ -612,4 +612,51 @@
 
 
 
+
+
+<mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+    <mod-append:choice req="LILY_BEAM_SHOTGUN_P" blue="false">
+        <text>('Matrix' Pinpoint Array) Switch to Scatter Mode. [Current mode: Pattern]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_SHOTGUN_P"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_SHOTGUN_S" blue="false">
+        <text>('Matrix' Pinpoint Array) Switch to Pattern mode. [Current mode: Scatter]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_SHOTGUN_S"/>
+    </mod-append:choice>
+</mod:findName>
+
+
+
+<event name="COMBAT_CHECK_LILY_BEAM_SHOTGUN_P">
+    <text>You start calibrating the weapon...</text>
+    <remove name="LILY_BEAM_SHOTGUN_P"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>You finish calibrating the weapon successfully.</text>
+            <weapon name="LILY_BEAM_SHOTGUN_S"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<event name="COMBAT_CHECK_LILY_BEAM_SHOTGUN_S">
+    <text>You start calibrating the weapon...</text>
+    <remove name="LILY_BEAM_SHOTGUN_S"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>You finish calibrating the weapon successfully.</text>
+            <weapon name="LILY_BEAM_SHOTGUN_P"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+            </choice>
+        </event>
+    </choice>
+</event>
+
 </FTL>

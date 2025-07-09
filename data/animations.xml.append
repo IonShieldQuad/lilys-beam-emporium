@@ -288,3 +288,32 @@
 
 
 </FTL>
+
+<FTL>
+
+	<animSheet name="lily_beam_shotgun_p" w="1170" h="52" fw="45" fh="52">weapon_lily/beam_shotgun_p.png</animSheet>
+	<weaponAnim name="lily_beam_shotgun_p">
+		<sheet>lily_beam_shotgun_p</sheet>
+		<desc length="26" x="0" y="0"/>
+		<chargedFrame>18</chargedFrame>
+		<fireFrame>19</fireFrame>
+		<firePoint x="19" y="9"/>
+		<mountPoint x="5" y="30"/>
+		<chargeImage>weapon_lily/beam_shotgun_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_shotgun_s" w="1170" h="52" fw="45" fh="52">weapon_lily/beam_shotgun_s.png</animSheet>
+	<weaponAnim name="lily_beam_shotgun_s">
+		<sheet>lily_beam_shotgun_s</sheet>
+		<desc length="26" x="0" y="0"/>
+		<chargedFrame>18</chargedFrame>
+		<fireFrame>19</fireFrame>
+		<firePoint x="19" y="9"/>
+		<mountPoint x="5" y="30"/>
+		<chargeImage>weapon_lily/beam_shotgun_glow.png</chargeImage>
+	</weaponAnim>
+	
+
+
+
+</FTL>

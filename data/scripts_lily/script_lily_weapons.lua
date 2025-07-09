@@ -40,12 +40,12 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                     drone.targetLocation = location
                 end
             end
-
         end
+        return Defines.Chain.CONTINUE, beamHit
     end)
 
 -----------------------------------------------------------------
--- SIPHON BEAM --
+-- SIPHON AND SHOTGUN BEAMS --
 -----------------------------------------------------------------
 
 local burstPinpoints = {}
@@ -53,6 +53,7 @@ burstPinpoints["LILY_BEAM_AMP_SIPHON_0"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_1"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_2"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_3"] = "LILY_BEAM_AMP_SIPHON"
+
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     if weapon.blueprint and burstPinpoints[weapon.blueprint.name] then
@@ -72,6 +73,78 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
         beam.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
         projectile:Kill()
     end
+
+
+    if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SHOTGUN_P" then
+        local offsets = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}}
+        local offsets2 = { 6, 6, 6, 0, 0, -6, -6, -6 }
+        local gap = 35 * 2
+        while #offsets > 0 do
+            local idx = math.random(#offsets)
+            local offset = table.remove(offsets, idx)
+            idx = math.random(#offsets2)
+            local offset2 = table.remove(offsets2, idx)
+            local tgt1 = Hyperspace.Pointf(projectile.target.x + offset[1] * gap, projectile.target.y + offset[2] * gap)
+            local tgt2 = Hyperspace.Pointf(tgt1.x, tgt1.y + 1)
+
+            local spaceManager = Hyperspace.App.world.space
+
+            local pos = projectile.position
+            if projectile.currentSpace == 0 then
+                pos = Hyperspace.Pointf(projectile.position.x, projectile.position.y + offset2)
+            else
+                pos = Hyperspace.Pointf(projectile.position.x + offset2, projectile.position.y)
+            end
+
+            local beam = spaceManager:CreateBeam(
+                Hyperspace.Blueprints:GetWeaponBlueprint("LILY_BEAM_SHOTGUN_P"),
+                pos,
+                projectile.currentSpace,
+                projectile.ownerId,
+                tgt1,
+                tgt2,
+                projectile.destinationSpace,
+                1,
+                -0.1)
+            ---@diagnostic disable-next-line: undefined-field
+            beam.sub_start = projectile.sub_start--offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+
+        end
+    end
+
+    if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SHOTGUN_S" then
+        local offsets2 = { 6, 6, 6, 0, 0, 0, -6, -6, -6 }
+        while #offsets2 > 0 do
+            local idx = math.random(#offsets2)
+            local offset2 = table.remove(offsets2, idx)
+            local tgt1 = get_random_point_in_radius(projectile.target, 100)
+            local tgt2 = Hyperspace.Pointf(tgt1.x, tgt1.y + 1)
+
+            local spaceManager = Hyperspace.App.world.space
+
+            local pos = projectile.position
+            if projectile.currentSpace == 0 then
+                pos = Hyperspace.Pointf(projectile.position.x, projectile.position.y + offset2)
+            else
+                pos = Hyperspace.Pointf(projectile.position.x + offset2, projectile.position.y)
+            end
+
+            local beam = spaceManager:CreateBeam(
+                Hyperspace.Blueprints:GetWeaponBlueprint("LILY_BEAM_SHOTGUN_P"),
+                pos,
+                projectile.currentSpace,
+                projectile.ownerId,
+                tgt1,
+                tgt2,
+                projectile.destinationSpace,
+                1,
+                -0.1)
+            beam.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+
+        end
+        projectile:Kill()
+    end
+
 end)
 
 
@@ -81,7 +154,8 @@ refractors["LILY_FOCUS_PIERCE_1"] = {num = 1, beams = {"LILY_FOCUS_PIERCE_1_R",}
 refractors["LILY_FOCUS_PIERCE_2"] = { num = 7, beams = { "LILY_FOCUS_PIERCE_2_V", "LILY_FOCUS_PIERCE_2_I", "LILY_FOCUS_PIERCE_2_B", "LILY_FOCUS_PIERCE_2_G", "LILY_FOCUS_PIERCE_2_Y", "LILY_FOCUS_PIERCE_2_O", "LILY_FOCUS_PIERCE_2_R" }, offsets = { 20, 18.33, 16.66, 15, 13.33, 11.66, 10} }
 
 local burstPins = {}
-burstPins["LILY_BEAM_AMP_SIPHON"] = { count = 1, countSuper = 1 }
+burstPins["LILY_BEAM_AMP_SIPHON"] = { count = 1, countSuper = 1, siphon = true }
+burstPins["LILY_BEAM_SHOTGUN_P"] = { count = 1, countSuper = 1, siphon = false }
 -- Pop shield bubbles
 script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
     local shieldPower = shipManager.shieldSystem.shields.power
@@ -95,9 +169,10 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
                 shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(),
                     true)
                 shieldPower.super.first = math.max(0, shieldPower.super.first - popData.countSuper)
-                if otherShieldPower then
-                    otherShieldPower.super.second = math.max(otherShieldPower.super.second, 5)
-                    otherShieldPower.super.first = math.min(math.max(otherShieldPower.super.second, 5), otherShieldPower.super.first + popData.countSuper)
+                if otherShieldPower and popData.siphon then
+                    otherShip.shieldSystem:AddSuperShield(Hyperspace.Point(projectile.position.x, projectile.position.y))
+                    --otherShieldPower.super.second = math.max(otherShieldPower.super.second, 5)
+                    --otherShieldPower.super.first = math.min(math.max(otherShieldPower.super.second, 5), otherShieldPower.super.first + popData.countSuper)
                 end
             end
         else
@@ -105,18 +180,19 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
             shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(),
                 true)
             shieldPower.first = math.max(0, shieldPower.first - popData.count)
-            if otherShieldPower and hasShield then
+            if popData.siphon and otherShieldPower and hasShield then
                 if otherShieldPower.first < otherShieldPower.second then
                     otherShieldPower.first = math.min(otherShieldPower.second, otherShieldPower.first + popData.count)
                 else
-                    if otherShip.shields and otherShip.shields.iLockCount > 0 then
-                        otherShip.shields.iLockCount = math.max(0, otherShip.shields.iLockCount - popData.count)
-                        otherShip.shields:ForceIncreasePower(math.min(popData.count,
-                            otherShip.shields:GetMaxPower() - otherShip.shields:GetEffectivePower()))
+                    if otherShip.shieldSystem and otherShip.shieldSystem.iLockCount > 0 then
+                        otherShip.shieldSystem.iLockCount = math.max(0, otherShip.shieldSystem.iLockCount - popData.count)
+                        otherShip.shieldSystem:ForceIncreasePower(math.min(popData.count,
+                            otherShip.shieldSystem:GetMaxPower() - otherShip.shieldSystem:GetEffectivePower()))
                     end
                     if otherShip:HasAugmentation("UPG_AETHER_SHIELDS") > 0 then
-                        otherShieldPower.super.first = math.min(otherShieldPower.super.second,
-                            otherShieldPower.super.first + popData.count)
+                        otherShip.shieldSystem:AddSuperShield(Hyperspace.Point(projectile.position.x, projectile.position.y))
+                        --otherShieldPower.super.first = math.min(otherShieldPower.super.second,
+                        --    otherShieldPower.super.first + popData.count)
                     end
                 end
             end
@@ -190,3 +266,44 @@ end)
         end
     end
 end)--]]
+
+
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
+    local ship = Hyperspace.ships(projectile.ownerId)
+    if ship and ship:HasAugmentation("LILY_TARGETING_BYPASS") > 0 then
+        projectile.extend.customDamage.accuracyMod = projectile.extend.customDamage.accuracyMod - 30
+    end
+end)
+
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_INITIALIZE, function(projectile)
+    --print("TYPE: " .. projectile:GetType())
+    --print("DEST: " .. projectile.destinationSpace)
+    --print("X: " .. projectile.target.x)
+    --print("Y: " .. projectile.target.y)
+    local destination = projectile.destinationSpace
+    local ship = Hyperspace.ships(destination)
+    --print("SHIP: " .. (ship == nil and "X" or "OK"))
+    if ship and ship:HasAugmentation("LILY_ASB_SCRAMBLER") > 0 and projectile:GetType() == 6 then
+        projectile.target = Hyperspace.Pointf(-400, projectile.target.y)
+        --print("newX: " .. projectile.target.x)
+        --print("newY: " .. projectile.target.y)
+        projectile:ComputeHeading()
+    end
+end)
+
+script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, function(ship, projectile, location, damage, forceHit, shipFriendlyFire)
+    
+    --damage.iDamage = 0
+    --damage.breachChance = 0
+    --print("TYPE: " .. projectile:GetType())
+    if ship and ship:HasAugmentation("LILY_ASB_SCRAMBLER") > 0 and projectile and projectile:GetType() == 6 then
+        forceHit = Defines.Evasion.MISS
+        --projectile:Kill()
+        damage.iDamage = 0
+        damage.breachChance = 0
+        projectile.hitTarget = false
+        projectile.missed = true
+        return Defines.Chain.CONTINUE, Defines.Evasion.MISS, shipFriendlyFire
+    end
+    return Defines.Chain.CONTINUE, forceHit, shipFriendlyFire
+end)

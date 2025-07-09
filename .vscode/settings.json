@@ -3,6 +3,13 @@
         "script",
         "Defines",
         "Hyperspace",
-        "mods"
-    ]
+        "mods",
+        "time_increment"
+    ],
+    "Lua.workspace.library": [
+        "${addons}/ftl-hyperspace/module/library"
+    ],
+    "Lua.runtime.version": "Lua 5.3",
+    "Lua.hover.expandAlias": false,
+    "Lua.workspace.checkThirdParty": false
 }

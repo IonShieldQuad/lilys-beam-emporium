@@ -143,6 +143,30 @@ disable shields as well as systems.</tooltip>
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 </FTL-->
+<FTL>
+    <augBlueprint name="LILY_TARGETING_BYPASS">
+        <title>Weap. Targeting Bypass</title>
+        <desc>Increases weapon charge rate by 30%. However, all weapons also recieve -30% accuracy penalty.</desc>
+        <cost>100</cost>
+        <bp>5</bp>
+        <rarity>5</rarity>
+        <stackable>true</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_ASB_SCRAMBLER">
+        <title>ASB Scrambler</title>
+        <desc>Scrambles your long range ship signature, preventing enemy ASBs from getting an accurate lock on your ship.</desc>
+        <cost>120</cost>
+        <bp>5</bp>
+        <rarity>5</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+
+
+</FTL>
+
+
 
 <FTL>
     <weaponBlueprint name="LILY_FOCUS_POINTER">
@@ -1349,6 +1373,96 @@ disable shields as well as systems.</tooltip>
     <image>beam_contact</image>
     <length>1</length>
     <weaponArt>lily_focus_pierce_2</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+</FTL>
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					BEAM FLAK
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+
+<FTL>
+<weaponBlueprint name="LILY_BEAM_SHOTGUN_P">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_beam_shotgun</tip>
+    <title>'Matrix' Pinpoint Array [Pattern]</title>
+    <short>'Matrix' [P]</short>
+    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak chaos on enemy ship, but is cumbersome and hard to aim. Current mode: Pattern</desc>
+    <tooltip>Pinpoint array weapon</tooltip>
+    <damage>1</damage>
+    <persDamage>2</persDamage>
+    <ion>0</ion>
+    <sp>0</sp>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <stunChance>0</stunChance>
+    <fireChance>8</fireChance>
+    <breachChance>0</breachChance>
+    <hullbust>0</hullbust>
+    <cooldown>25</cooldown>
+    <speed>1</speed>
+    <power>4</power>
+    <cost>180</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <mv-pop>
+        <count>1</count>
+        <countSuper>1</countSuper>
+    </mv-pop>
+    <launchSounds>
+        <sound>focus_weak</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_shotgun_p</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="LILY_BEAM_SHOTGUN_S">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_beam_shotgun</tip>
+    <title>'Matrix' Pinpoint Array [Scatter]</title>
+    <short>'Matrix' [S]</short>
+    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak chaos on enemy ship, but is cumbersome and hard to aim. Current mode: Pattern</desc>
+    <tooltip>Pinpoint array weapon</tooltip>
+    <!--radius>100</radius-->
+    <damage>1</damage>
+    <persDamage>2</persDamage>
+    <sp>0</sp>
+    <fireChance>8</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>25</cooldown>
+    <hullBust>0</hullBust>
+    <power>4</power>
+    <cost>180</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>
+    <speed>0</speed>
+    <!--fireTime>0.1</fireTime-->
+    <mv-stealth/>
+
+    <shots>1</shots>
+    <mv-pop>
+        <count>1</count>
+        <countSuper>1</countSuper>
+    </mv-pop>
+    <projectiles>
+        <projectile count="1" fake="false">laser_burst</projectile>
+    </projectiles>
+
+
+    <launchSounds>
+        <sound>focus_weak</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_shotgun_s</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 </FTL>

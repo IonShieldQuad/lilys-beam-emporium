@@ -4,4 +4,14 @@
     <mod-append:script>data/scripts_lily/script_lily_weapons.lua</mod-append:script>
 </mod:findLike>
 
+
+<augments>
+    <aug name="LILY_TARGETING_BYPASS">
+        <function name="AUTO_COOLDOWN" value="0.3" useForReqs="false" warning="false" />
+    </aug>
+    <aug name="LILY_ASB_SCRAMBLER">
+        <function name="PDS_DISABLE" value="1" useForReqs="true" warning="true" />
+    </aug>
+</augments>
+
 </FTL>

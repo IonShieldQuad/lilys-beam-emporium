@@ -3,7 +3,7 @@
 <text name="tip_lily_pointer">Tip: You can use it to play with your cat. And your drones too.</text>
 <text name="tip_lily_siphon">Tip: This beam does no damage, but transfers enemy shields to you, supershields included. Use it for offence, defence, or both!</text>
 <text name="tip_lily_refractor">Tip: Refractor beams can pierce any amount of shields, but refraction offsets the target point the stronger the shields are.</text>
-
+<text name="tip_lily_beam_shotgun">Tip: The pinpoint array fires 9 pinpoint beams at once. Has 2 modes: [Pattern] fires beams in 3x3 grid with 1 tile spacing, while [Scatter] fires them randomly in a radius.</text>
 
 
 <text name="tip_lily_syringe">Tip: Special beam weapon. Need to be configured before use.</text>

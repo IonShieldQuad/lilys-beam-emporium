@@ -317,3 +317,20 @@
 
 
 </FTL>
+
+<FTL>
+
+	<animSheet name="lily_focus_hack" w="1150" h="82" fw="50" fh="82">weapon_lily/focus_hack.png</animSheet>
+	<weaponAnim name="lily_focus_hack">
+		<sheet>lily_focus_hack</sheet>
+		<desc length="23" x="0" y="0"/>
+		<chargedFrame>16</chargedFrame>
+		<fireFrame>18</fireFrame>
+		<firePoint x="23" y="5"/>
+		<mountPoint x="5" y="55"/>
+		<chargeImage>weapon_lily/focus_hack_glow.png</chargeImage>
+	</weaponAnim>
+
+
+
+</FTL>

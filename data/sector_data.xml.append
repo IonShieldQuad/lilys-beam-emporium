@@ -212,7 +212,8 @@
 
 <mod:findName type="sectorDescription" name="SECTOR_HACKED_UNIQUE">
     <mod:findLike type="rarityList">
-        <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="3" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="4" />
+        <mod-append:blueprint name="LILY_FOCUS_HACK" rarity="2" />
 
     </mod:findLike>
 </mod:findName>
@@ -220,6 +221,8 @@
 <mod:findName type="sectorDescription" name="SECTOR_KLEPTOCRACY">
     <mod:findLike type="rarityList">
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_HACK" rarity="5" />
+
 
     </mod:findLike>
 </mod:findName>
@@ -227,6 +230,8 @@
 <mod:findName type="sectorDescription" name="SECTOR_KLEPTOCRACY_UNIQUE">
     <mod:findLike type="rarityList">
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_HACK" rarity="5" />
+
 
     </mod:findLike>
 </mod:findName>
@@ -234,6 +239,8 @@
 <mod:findName type="sectorDescription" name="SECTOR_KLEPTOCRACY_HEKTAR">
     <mod:findLike type="rarityList">
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_HACK" rarity="5" />
+
 
     </mod:findLike>
 </mod:findName>
@@ -241,6 +248,8 @@
 <mod:findName type="sectorDescription" name="SECTOR_CLAN_UNIQUE">
     <mod:findLike type="rarityList">
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_HACK" rarity="5" />
+
 
     </mod:findLike>
 </mod:findName>

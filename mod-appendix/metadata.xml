@@ -30,7 +30,7 @@
 			2.4.1 Hi-res Bkgs
 			1.0 for FTL 1.03.1
 	-->
-	<version><![CDATA[ 0.6.0 ]]></version>
+	<version><![CDATA[ 0.7.0 ]]></version>
 
 
 	<description>
@@ -39,10 +39,13 @@ An extra collection of BEAM themed weapons, ships and augments.
 
 Because Beams are the Best! (tm)
 
+;)
+
 
 
 Special thanks to: 
-Arc, sillysandvich, for help with scripting
+Arc, sillysandvich, for help with scripting;
+Kix, and everyone else who have worked on creating FTL: Multiverse (and Hyperspace);
 ]]>
 	</description>
 

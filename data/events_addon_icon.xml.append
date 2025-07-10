@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FTL>
+    <event name="ADDON_LILYBEAMS">
+        <hover-text>Lily's Beam Emporium 
+	Click to see more info.</hover-text>
+        <text>Lily's Beam Emporium
+Developed by: MsBinaryLily
+Currently Enabled.
+        
+An addon focusing on beam weapons, adding a large variety of them with unique gimmicks.
+        
+To enable Lily's Beam Emporium, go to the Multiverse Forums and visit the addon section!.</text>
+    </event>
+
+</FTL>

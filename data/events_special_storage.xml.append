@@ -1,6 +1,422 @@
 
 <FTL>
 
+<mod:findName type="event" name="STORAGE_CHECK_BUTTON">
+    <mod-append:choice req="LILY_PATRONAGE" blue="false">
+        <text>(Lily's Patronage) Contact Lily.</text>
+        <event load="STORAGE_CHECK_LILY_MENU"/>
+    </mod-append:choice>
+
+</mod:findName>
+
+
+<event name="STORAGE_CHECK_LILY_MENU_LOAD">
+    <loadEvent>STORAGE_CHECK_LILY_MENU</loadEvent>
+</event>
+<event name="STORAGE_CHECK_LILY_MENU">
+    <text>You manage to remotely contact Lily. 
+What do you want to ask?</text>
+    <choice>
+        <text>Ask her about special beam weapons.</text>
+        <event load="STORAGE_CHECK_LILY_QUESTS"/>
+    </choice>
+    <choice hidden="true" blue="false" req="unique_lily_avatar" lvl="-999" max_lvl="0">
+        <text>Ask her to join you personally.</text>
+        <event load="STORAGE_CHECK_LILY_JOIN"/>
+    </choice>
+    <choice hidden="true" req="unique_lily_avatar" lvl="1">
+        <text>She is already accompanying you.</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice>
+        <text>Nevermind.</text>
+        <event load="STORAGE_CHECK"/>
+    </choice>
+</event>
+
+
+<event name="STORAGE_CHECK_LILY_QUESTS_LOAD">
+    <loadEvent>STORAGE_CHECK_LILY_QUESTS</loadEvent>
+</event>
+<event name="STORAGE_CHECK_LILY_QUESTS">
+    <text>Oh, you want one of those fancy beam weapons that nobody else has?--
+Well, we have someting in common then--
+Get the necessarry materials and knowledge for them and I'd gladly share--</text>
+    <choice>
+        <text>Ask her about Aether beams.</text>
+        <event load="STORAGE_CHECK_LILY_QUESTS_AETHER"/>
+    </choice>
+    <choice hidden="true">
+        <text>More dialogue options will be added in further updates.</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice>
+        <text>Nevermind.</text>
+        <event load="STORAGE_CHECK_LILY_MENU_LOAD"/>
+    </choice>
+</event>
+
+
+
+<event name="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD">
+    <loadEvent>STORAGE_CHECK_LILY_QUESTS_AETHER</loadEvent>
+</event>
+<event name="STORAGE_CHECK_LILY_QUESTS_AETHER">
+<text>Ah, a clasic--
+This kind of weapons has been around for millenias, and they still remain one of the strongest--
+Not strong enough to do the thing I was hoping to...
+But alright, just bring me some materials and I'll make one for you--
+2-3 pieces of ancient tech should suffice--</text>
+    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="0">
+        <text>[Current parts: 0]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="1" max_lvl="1">
+        <text>[Current parts: 1]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="2" max_lvl="2">
+        <text>[Current parts: 2]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="3" max_lvl="3">
+        <text>[Current parts: 3]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="4" max_lvl="4">
+        <text>[Current parts: 4]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="5">
+        <text>[Current parts: 5+]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice>
+        <text>Give her some tech to use for parts.</text>
+        <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_SUBMIT"/>
+    </choice>
+    <choice>
+        <text>Ask her to make a new weapon from given parts.</text>
+        <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_REDEEM"/>
+    </choice>
+    <choice>
+        <text>Nevermind.</text>
+        <event load="STORAGE_CHECK_LILY_QUESTS_LOAD"/>
+    </choice>
+</event>
+
+<event name="STORAGE_CHECK_LILY_QUESTS_AETHER_SUBMIT">
+    <text>Select what do you want to give:</text>
+    <choice hidden="true" req="ANCIENT_LASER">
+        <text>Offer her an Ancient Laser.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ANCIENT_LASER"/>
+
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="ANCIENT_BEAM">
+        <text>Offer her an Ancient Beam.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ANCIENT_BEAM"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="ANCIENT_FOCUS">
+        <text>Offer her an Ancient Pinpoint.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ANCIENT_FOCUS"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="ANCIENT_MISSILES">
+        <text>Offer her an Ancient Missile Launcher.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ANCIENT_MISSILES"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="ANCIENT_BOMB">
+        <text>Offer her an Ancient Bomb Launcher.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ANCIENT_BOMB"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="ANCIENT_STUN">
+        <text>Offer her an Ancient Peacekeeper.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ANCIENT_STUN"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="ANCIENT_COMBAT_LASER">
+        <text>Offer her an Ancient Laser Drone.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ANCIENT_COMBAT_LASER"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="ANCIENT_COMBAT_ION">
+        <text>Offer her an Ancient Ion Drone.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ANCIENT_COMBAT_ION"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="ANCIENT_COMBAT_MISSILE">
+        <text>Offer her an Ancient Missile Drone.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ANCIENT_COMBAT_MISSILE"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="ANCIENT_DEFENSE_1">
+        <text>Offer her an Ancient Overwatcher Drone.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ANCIENT_DEFENSE_1"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="MENDER">
+        <text>Offer her an Ancient Mender.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="MENDER"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="DIRECTOR">
+        <text>Offer her an Ancient Director.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="DIRECTOR"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="ATOM_DEFEND">
+        <text>Offer her an Ancient Atomizer.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ATOM_DEFEND"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="ATOM_BOARDER">
+        <text>Offer her an Ancient Atomizer.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <remove name="ATOM_BOARDER"/>
+            
+            <variable name="lily_aether_points" op="add" val="1"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice>
+        <text>Nevermind.</text>
+        <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+    </choice>
+</event>
+
+
+<event name="STORAGE_CHECK_LILY_QUESTS_AETHER_REDEEM">
+    <text>Select what do you want her to craft:</text>
+
+    <choice hidden="true" req="lily_aether_points" lvl="3">
+        <text>Craft a Royal Beam.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <weapon name="ROYAL_BEAM_3"/>
+
+            <variable name="lily_aether_points" op="add" val="-3"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="2">
+        <text>Craft a Royal Beam.</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    
+    <choice hidden="true" req="lily_aether_points" lvl="2">
+        <text>Craft a Royal Pinpoint.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <weapon name="ROYAL_FOCUS"/>
+
+            <variable name="lily_aether_points" op="add" val="-2"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="1">
+        <text>Craft a Royal Pinpoint.</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+
+    <choice hidden="true" req="lily_aether_points" lvl="2">
+        <text>Craft a Royal Havoceizer.</text>
+        <event>
+            <text id="lily_aether_submit"/>
+            <weapon name="ROYAL_HAVOC"/>
+
+            <variable name="lily_aether_points" op="add" val="-2"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="1">
+        <text>Craft a Royal Havoceizer.</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+
+    <choice>
+        <text>Nevermind.</text>
+        <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+    </choice>
+</event>
+
+
+<event name="STORAGE_CHECK_LILY_JOIN">
+    <loadEventList first="true" default="STORAGE_CHECK_LILY_JOIN_PAY">
+        <event name="STORAGE_CHECK_LILY_JOIN_FIRST" req="lily_times_summoned" lvl="-999" max_lvl="0"/>
+        <event name="STORAGE_CHECK_LILY_JOIN_SECOND" req="lily_times_summoned" lvl="1"  max_lvl="1"/>
+    </loadEventList>
+</event>
+
+<event name="STORAGE_CHECK_LILY_JOIN_FIRST">
+    <text>Oh, you want me to join personally?--
+While I can't do that due to ... reasons, I can lend you my Avatar--
+Think of it as a kind of remotely controlled drone, except that it's not--
+Oh, and don't dare to think of it as expendable, or I will make you pay--
+    </text>
+
+    <choice>
+        <text>Continue...</text>
+        <event>
+            <text>A rift in space suddenly opens near you, materializing... a quite normal looking human. Although if feels like there's something off...</text>
+            <crewMember amount="1" class="unique_lily_avatar">Lily</crewMember>
+
+            <variable name="lily_times_summoned" op="set" val="1"/>
+            <event load="STORAGE_CHECK"/>
+        </event>
+    </choice>
+
+    <choice>
+        <text>Nevermind.</text>
+        <event load="STORAGE_CHECK"/>
+    </choice>
+</event>
+
+
+<event name="STORAGE_CHECK_LILY_JOIN_SECOND">
+    <text>Hey! Didn't I tell you NOT to treat my avatar as expendable?--
+Fine, I'll consider this an accident... But only this time--
+    </text>
+
+    <choice>
+        <text>Continue...</text>
+        <event>
+            <text>A rift in space suddenly opens near you, materializing the avatar once again. It seems like she can't actually die.</text>
+            <crewMember amount="1" class="unique_lily_avatar">Lily</crewMember>
+
+            <variable name="lily_times_summoned" op="set" val="2"/>
+            <event load="STORAGE_CHECK"/>
+        </event>
+    </choice>
+
+    <choice>
+        <text>Nevermind.</text>
+        <event load="STORAGE_CHECK"/>
+    </choice>
+</event>
+
+<event name="STORAGE_CHECK_LILY_JOIN_PAY">
+    <text>Well... pay me then--
+What do Renegades value... Scrap? Well, you can give me some or I can take it right from your ship!--
+    </text>
+
+    <choice>
+        <text>Pay her 100~</text>
+        <event>
+            <item_modify>
+                <item type="scrap" min="-100" max="-100"/>
+            </item_modify>
+            <text>A rift in space suddenly opens, scooping up your scrap. Right after, another one appears next to you, materializing the avatar once again. It seems like she can't actually die.</text>
+            <crewMember amount="1" class="unique_lily_avatar">Lily</crewMember>
+
+            <variable name="lily_times_summoned" op="add" val="1"/>
+            <event load="STORAGE_CHECK"/>
+        </event>
+    </choice>
+
+    <choice req="hull" lvl="21" max_group="1" blue="false" hidden="true">
+        <text>Pay her with your ship. [20 hull damage] </text>
+        <event>
+            <damage amount="20"/>
+            <text>Multiple rifts in space suddenly open, nearly tearing you ship apart and dealing heavy hull damage! Right after, another one appears next to you, materializing the avatar once again. It seems like she can't actually die.</text>
+            <crewMember amount="1" class="unique_lily_avatar">Lily</crewMember>
+
+            <variable name="lily_times_summoned" op="add" val="1"/>
+            <event load="STORAGE_CHECK"/>
+
+        </event>
+    </choice>
+    <choice req="hull" max_lvl="20" max_group="1" blue="false" hidden="true">
+        <text>Pay her with your ship. [20 hull damage]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+
+
+    <choice>
+        <text>Nevermind.</text>
+        <event load="STORAGE_CHECK"/>
+    </choice>
+</event>
+
+
+
+
+
+
+
+
+
+
+
+
 <mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
     <mod-append:choice req="LILY_BEAM_TOGGLE_SUNSET_H" blue="false">
         <text>('Sunset' Beam) Set the state of the weapon. [Current mode: Hullbust]</text>

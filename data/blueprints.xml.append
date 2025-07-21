@@ -162,8 +162,50 @@ disable shields as well as systems.</tooltip>
         <stackable>false</stackable>
     </augBlueprint>
 
+    <augBlueprint name="LILY_AFTERBURNER">
+        <title>Afterburner</title>
+        <desc>A fusion powered afterburner for you engines, provides great thrust but guzzles through fuel. Can be activated before combat for the cost of 3 fuel to either increase your evasion or deal damage to enemy.</desc>
+        <cost>120</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_ANTI_CEL">
+        <title>Anti-C.E.L. Resonator</title>
+        <desc>This odd device seem to somehow cause your weapons to resonate with C.E.L tech on enemy ships, sausing them to deal double damage. An attached note says "Some help for you to deal with those pests - :)"</desc>
+        <cost>120</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_PATRONAGE">
+        <title>???</title>
+        <desc>You aren't supposed to see this.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
 
 
+    
+    <crewBlueprint name="unique_lily_avatar">
+        <desc>Yes, that's me--</desc>
+        <cost>2147483647</cost>
+        <bp>20</bp>
+        <title>???</title>
+        <short>???</short>
+        <rarity>0</rarity>
+        <powerList>
+            <power>I got beams--</power>
+            <power>I'm immune to hazards--</power>
+            <power>Pretty strong--</power>
+            <power>And pretty pretty--</power>
+            <power>Totally 100% human, trust me--</power>
+        </powerList>
+    </crewBlueprint>
 </FTL>
 
 
@@ -203,7 +245,73 @@ disable shields as well as systems.</tooltip>
     </weaponBlueprint>
 </FTL>
 
+<FTL>
+    <weaponBlueprint name="LILY_POWER_BEAM">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <title>NO</title>
+        <short>NO</short>
+        <desc>YOU SHOULD NEVER SEE THIS</desc>
+        <tooltip>NO</tooltip>
+        <damage>2</damage>
+        <sysDamage>0</sysDamage>
+        <ion>0</ion>
+        <sp>10</sp>
+        <color>
+            <r>255</r>
+            <g>0</g>
+            <b>0</b>
+        </color>
+        <stunChance>0</stunChance>
+        <fireChance>10</fireChance>
+        <breachChance>0</breachChance>
+        <hullbust>0</hullbust>
+        <cooldown>25</cooldown>
+        <speed>2</speed>
+        <power>0</power>
+        <cost>0</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <weaponArt>lily_focus_pointer</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
 
+    <weaponBlueprint name="LILY_POWER_ION">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <title>NO</title>
+        <short>NO</short>
+        <desc>YOU SHOULD NEVER SEE THIS</desc>
+        <tooltip>NO</tooltip>
+        <damage>0</damage>
+        <sysDamage>0</sysDamage>
+        <ion>1</ion>
+        <sp>10</sp>
+        <ionBeamFix>true</ionBeamFix>
+        <color>
+            <r>0</r>
+            <g>255</g>
+            <b>255</b>
+        </color>
+        <stunChance>0</stunChance>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <hullbust>0</hullbust>
+        <stun>10</stun>
+        <cooldown>25</cooldown>
+        <speed>2</speed>
+        <power>0</power>
+        <cost>0</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <weaponArt>lily_focus_pointer</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+</FTL>
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -237,7 +345,7 @@ disable shields as well as systems.</tooltip>
         <cooldown>9</cooldown>
         <speed>1</speed>
         <power>1</power>
-        <cost>60</cost>
+        <cost>45</cost>
         <bp>2</bp>
         <rarity>3</rarity>
         <image>beam_contact</image>
@@ -272,7 +380,7 @@ disable shields as well as systems.</tooltip>
         <cooldown>6</cooldown>
         <speed>1</speed>
         <power>2</power>
-        <cost>100</cost>
+        <cost>65</cost>
         <bp>4</bp>
         <rarity>4</rarity>
         <image>beam_contact</image>
@@ -308,7 +416,7 @@ disable shields as well as systems.</tooltip>
         <cooldown>18</cooldown>
         <speed>1</speed>
         <power>2</power>
-        <cost>110</cost>
+        <cost>70</cost>
         <bp>5</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -343,7 +451,7 @@ disable shields as well as systems.</tooltip>
         <cooldown>9</cooldown>
         <speed>1</speed>
         <power>3</power>
-        <cost>120</cost>
+        <cost>90</cost>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -386,7 +494,7 @@ disable shields as well as systems.</tooltip>
         <cooldown>15</cooldown>
         <hullBust>1</hullBust>
         <power>2</power>
-        <cost>100</cost>
+        <cost>70</cost>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -418,7 +526,7 @@ disable shields as well as systems.</tooltip>
             <b>0</b>
         </color>
         <power>2</power>
-        <cost>100</cost>
+        <cost>70</cost>
         <bp>8</bp>
         <rarity>0</rarity>
         <length>100</length>
@@ -454,7 +562,7 @@ disable shields as well as systems.</tooltip>
             <statBoost name="repairSpeed" load="RAD_REPAIR"/>
         </statBoosts>
         <power>2</power>
-        <cost>100</cost>
+        <cost>70</cost>
         <bp>8</bp>
         <rarity>0</rarity>
         <length>100</length>
@@ -494,7 +602,7 @@ disable shields as well as systems.</tooltip>
         <cooldown>5</cooldown>
         <hullBust>0</hullBust>
         <power>1</power>
-        <cost>100</cost>
+        <cost>90</cost>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -529,7 +637,7 @@ disable shields as well as systems.</tooltip>
         <cooldown>10</cooldown>
         <hullBust>0</hullBust>
         <power>1</power>
-        <cost>100</cost>
+        <cost>90</cost>
         <bp>8</bp>
         <rarity>0</rarity>
         <image>beam_contact</image>
@@ -591,7 +699,7 @@ disable shields as well as systems.</tooltip>
         <cooldown>12</cooldown>
         <hullBust>0</hullBust>
         <power>1</power>
-        <cost>100</cost>
+        <cost>90</cost>
         <bp>8</bp>
         <rarity>0</rarity>
         <image>beam_contact</image>
@@ -678,7 +786,7 @@ disable shields as well as systems.</tooltip>
         <cooldown>12</cooldown>
         <hullBust>0</hullBust>
         <power>1</power>
-        <cost>100</cost>
+        <cost>90</cost>
         <bp>8</bp>
         <rarity>0</rarity>
         <image>beam_contact</image>
@@ -728,7 +836,7 @@ disable shields as well as systems.</tooltip>
         <cooldown>15</cooldown>
         <hullBust>0</hullBust>
         <power>1</power>
-        <cost>100</cost>
+        <cost>90</cost>
         <bp>8</bp>
         <rarity>0</rarity>
         <image>beam_contact</image>
@@ -798,7 +906,7 @@ disable shields as well as systems.</tooltip>
     <speed>1</speed>
     <length>5</length>
     <power>0</power>
-    <cost>140</cost>
+    <cost>100</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <color>
@@ -830,7 +938,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>18</cooldown>
     <hullBust>0</hullBust>
     <power>0</power>
-    <cost>140</cost>
+    <cost>100</cost>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed> 
@@ -870,7 +978,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>14</cooldown>
     <hullBust>0</hullBust>
     <power>1</power>
-    <cost>140</cost>
+    <cost>100</cost>
     <bp>8</bp>
     <rarity>6</rarity>
     <speed>0</speed>
@@ -912,7 +1020,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>14</cooldown>
     <hullBust>0</hullBust>
     <power>2</power>
-    <cost>140</cost>
+    <cost>100</cost>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed>
@@ -953,7 +1061,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>14</cooldown>
     <hullBust>0</hullBust>
     <power>3</power>
-    <cost>140</cost>
+    <cost>100</cost>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed>
@@ -1016,7 +1124,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>16</cooldown>
     <speed>1</speed>
     <power>2</power>
-    <cost>80</cost>
+    <cost>60</cost>
     <bp>2</bp>
     <rarity>3</rarity>
     <image>beam_contact</image>
@@ -1093,7 +1201,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>16</cooldown>
     <speed>1</speed>
     <power>2</power>
-    <cost>80</cost>
+    <cost>60</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <image>beam_contact</image>
@@ -1126,7 +1234,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>20</cooldown>
     <speed>1</speed>
     <power>3</power>
-    <cost>120</cost>
+    <cost>100</cost>
     <bp>2</bp>
     <rarity>5</rarity>
     <image>beam_contact</image>
@@ -1162,7 +1270,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>20</cooldown>
     <speed>1</speed>
     <power>3</power>
-    <cost>120</cost>
+    <cost>100</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <image>beam_contact</image>
@@ -1195,7 +1303,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>20</cooldown>
     <speed>1</speed>
     <power>3</power>
-    <cost>120</cost>
+    <cost>100</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <image>beam_contact</image>
@@ -1229,7 +1337,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>20</cooldown>
     <speed>1</speed>
     <power>3</power>
-    <cost>120</cost>
+    <cost>100</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <image>beam_contact</image>
@@ -1262,7 +1370,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>20</cooldown>
     <speed>1</speed>
     <power>3</power>
-    <cost>120</cost>
+    <cost>100</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <image>beam_contact</image>
@@ -1295,7 +1403,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>20</cooldown>
     <speed>1</speed>
     <power>3</power>
-    <cost>120</cost>
+    <cost>100</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <image>beam_contact</image>
@@ -1328,7 +1436,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>20</cooldown>
     <speed>1</speed>
     <power>3</power>
-    <cost>120</cost>
+    <cost>100</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <image>beam_contact</image>
@@ -1367,7 +1475,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>20</cooldown>
     <speed>1</speed>
     <power>3</power>
-    <cost>120</cost>
+    <cost>100</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <image>beam_contact</image>
@@ -1410,7 +1518,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>25</cooldown>
     <speed>1</speed>
     <power>4</power>
-    <cost>180</cost>
+    <cost>140</cost>
     <bp>8</bp>
     <rarity>0</rarity>
     <image>beam_contact</image>
@@ -1442,7 +1550,7 @@ disable shields as well as systems.</tooltip>
     <cooldown>25</cooldown>
     <hullBust>0</hullBust>
     <power>4</power>
-    <cost>180</cost>
+    <cost>140</cost>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed>
@@ -1517,6 +1625,138 @@ disable shields as well as systems.</tooltip>
             <sound>lily_dial_up_3</sound>
         </launchSounds>
         <weaponArt>lily_focus_hack</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+</FTL>
+
+
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					HOWITZERS
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+
+<FTL>
+    <weaponBlueprint name="LILY_HOWITZER_1">
+        <type>BURST</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_lily_howitzers</tip>
+        <title>'Quake' Howitzer</title>
+        <short>'Quake'</short>
+        <desc>The lighest out of howitzer series, this weapon is nevertheless capable of inflicting heavy damage to a system it hits, and has decent accuracy and reload speed.</desc>
+        <tooltip>Howitzer 1</tooltip>
+        <missiles>1</missiles>
+        <radius>20</radius>
+        <damage>4</damage>
+        <sysDamage>1</sysDamage>
+        <sp>0</sp>
+        <fireChance>4</fireChance>
+        <breachChance>7</breachChance>
+        <cooldown>16</cooldown>
+        <hullBust>0</hullBust>
+        <power>2</power>
+        <cost>70</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <speed>100</speed>
+        <fireTime>1</fireTime>
+        
+
+        <shots>1</shots>
+        
+
+        <projectiles>
+            <projectile count="1" fake="false">missile_heavy_2</projectile>
+            <!--projectile count="3" fake="true">debris_small</projectile-->
+        </projectiles>
+
+
+        <launchSounds>
+            <sound>lily_shockwave_1_1</sound>
+            <sound>lily_shockwave_1_2</sound>
+            <sound>lily_shockwave_1_3</sound>
+        </launchSounds>
+        <hitShipSounds>
+            <sound>flakImpact1</sound>
+            <sound>flakImpact2</sound>
+            <sound>flakImpact3</sound>
+            <sound>flakImpact4</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>hitShield1</sound>
+            <sound>hitShield2</sound>
+            <sound>hitShield3</sound>
+        </hitShieldSounds>
+        <missSounds>
+            <sound>miss</sound>
+        </missSounds>
+        <weaponArt>lily_howitzer_1</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_HOWITZER_1_BEAM_P">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <title>NO</title>
+        <short>NO</short>
+        <desc>YOU SHOULD NEVER SEE THIS</desc>
+        <tooltip>NO</tooltip>
+        <damage>1</damage>
+        <sysDamage>1</sysDamage>
+        <ion>0</ion>
+        <sp>10</sp>
+        <color>
+            <r>255</r>
+            <g>255</g>
+            <b>255</b>
+        </color>
+        <stunChance>0</stunChance>
+        <fireChance>2</fireChance>
+        <breachChance>5</breachChance>
+        <hullbust>0</hullbust>
+        <cooldown>25</cooldown>
+        <speed>2</speed>
+        <power>4</power>
+        <cost>70</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <weaponArt>lily_howitzer_1</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_HOWITZER_1_BEAM_S">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <title>NO</title>
+        <short>NO</short>
+        <desc>YOU SHOULD NEVER SEE THIS</desc>
+        <tooltip>NO</tooltip>
+        <damage>3</damage>
+        <ion>0</ion>
+        <sp>0</sp>
+        <color>
+            <r>242</r>
+            <g>244</g>
+            <b>100</b>
+        </color>
+        <stunChance>0</stunChance>
+        <fireChance>4</fireChance>
+        <breachChance>8</breachChance>
+        <hullbust>0</hullbust>
+        <cooldown>25</cooldown>
+        <speed>2</speed>
+        <power>4</power>
+        <cost>70</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <weaponArt>lily_howitzer_1</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
 </FTL>

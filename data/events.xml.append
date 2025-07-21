@@ -1,0 +1,301 @@
+<FTL>
+
+<event name="STORE_LOAD_LILY_EMPORIUM">
+    <store>STORE_LILY_EMPORIUM</store>
+    <text>Before you shop, you still have some time to do something else aboard the ship.</text>
+    <choice>
+        <text>Do something onboard the ship.</text>
+        <event load="STORAGE_CHECK"/>
+    </choice>
+    <choice>
+        <text>Do nothing.</text>
+        <event/>
+    </choice>
+</event>
+
+<event name="STORE_LOAD_LILY_EMPORIUM_UNLOCKED">
+    <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
+    <text>Before you shop, you still have some time to do something else aboard the ship.</text>
+    <choice>
+        <text>Do something onboard the ship.</text>
+        <event load="STORAGE_CHECK"/>
+    </choice>
+    <choice>
+        <text>Do nothing.</text>
+        <event/>
+    </choice>
+</event>
+
+<ship name="SHIP_BEAM_EMPORIUM_STATION" auto_blueprint="SHIP_BEAM_EMPORIUM_STATION">
+    <destroyed>
+    <text>Somehow, you have destroyed the station. It breaks into flickering colorful pieces, which then proceed to fade out of existence.
+Unfortunately, there's nothing left to scrap.</text>
+    </destroyed>
+</ship>
+
+<event name="LILY_EMPORIUM_QUEST_START" unique="true">
+    <beaconType id="map_icon_beam_emporium" global="true">
+        <color r="255" g="0" b="0" a="1"/>
+    </beaconType>
+    <preventQuest />
+    <preventFleet/>
+    <quest>
+    	<preventFleet/>
+        <removeNebula>true</removeNebula>
+        <nextSector>true</nextSector>
+        <aggressive>2</aggressive>
+    </quest>
+    <text>You have arrived at the advertised location of the advertised "Beam Emporium" store. However, the beacon appears to be empty, with no ships there. However, you feel a strange sense of unease, as if someone was watching you...</text>
+    <choice hidden="true">
+        <text>Investigate further.</text>
+        <event>
+            <loadEventList first="true" default="LILY_EMPORIUM_GLITCH">
+                <event name="LILY_EMPORIUM_NOGLITCH" req="lily_backdoor" lvl="1"/>
+                <event name="LILY_EMPORIUM_NOGLITCH" req="LILY_PATRONAGE" lvl="1"/>
+            </loadEventList>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Leave as soon as possible.</text>
+        <event>
+            <text>You are not interested in risking your mission to investigate odd phenomena. You turn around and charge your FTL drive to leave immediately.</text>
+        </event>
+    </choice>
+</event>
+
+
+<event name="LILY_EMPORIUM_NOGLITCH">
+    <loadEvent>LILY_EMPORIUM_CHECK_CEL</loadEvent>
+</event>
+
+<event name="LILY_EMPORIUM_GLITCH">
+    <variable name="loc_protomv_drive_block" op="set" val="1"/>
+    <variable name="lily_backdoor" op="set" val="1"/>
+    <status type="limit" target="player" system="sensors" amount="0"/>
+    <backgroundObject name="GLITCH">
+        <layer z="0">front</layer>
+        <spawnArea x="295" y="188" w="0" h="0" center="true"/>
+        <anim>glitch</anim>
+        <active>true</active>
+    </backgroundObject>
+    <playSound>glitch</playSound>
+    <triggeredEvent event="LILY_EMPORIUM_GLITCH_CONTINUE" time="1" clearOnJump="true"/>
+    <!--text>You continue you search for the store, as your systems suddenly glitch out and reboot!</text-->
+</event>
+
+<event name="LILY_EMPORIUM_GLITCH_CONTINUE">
+    <variable name="loc_protomv_drive_block" op="set" val="0"/>
+    <status type="clear" target="player" system="sensors" amount="100"/>
+    <clearBackgroundObject name="GLITCH"/>
+
+
+    <text>You continue you search for the store, as your systems suddenly glitch out and reboot!</text>
+    <loadEvent>LILY_EMPORIUM_CHECK_CEL</loadEvent>
+</event>
+
+<event name="LILY_EMPORIUM_CHECK_CEL">
+    <loadEventList first="true" default="LILY_EMPORIUM_SHIP">
+        <event name="LILY_EMPORIUM_CEL_FOUND" req="LIST_CREW_SYLVAN" lvl="1"/>
+        <event name="LILY_EMPORIUM_CEL_FOUND" req="JUDGELIST_ROCK_NEXUS_LOOT" lvl="1"/>
+    </loadEventList>
+</event>
+
+
+<event name="LILY_EMPORIUM_CEL_FOUND">
+    <text>You continue spending your time searching for the store. However, despite you best effort, you still can't find anything here. Why is the advertisement for a store there is still a mystery.</text>
+    <modifyPursuit amount="1"/>
+    <!--choice hidden="true">
+        <text>Continue...</text>
+    </choice-->
+</event>
+
+<event name="LILY_EMPORIUM_SHIP">
+    <ship load="SHIP_BEAM_EMPORIUM_STATION" hostile="false"/>
+    <loadEvent>LILY_EMPORIUM_REAL</loadEvent>
+</event>
+
+<event name="LILY_EMPORIUM_REAL">
+    <text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
+It hails you: "Welcome to the Lily's Beam Emporium!--
+A wide collection of beam and pinpoint weapons available for sale--"
+You are pretty sure it wasn't there minites ago...</text>
+    <choice hidden="true">
+        <text>Just shop.</text>
+        <event>
+            <text>You ignore the odd things that have been happening and continue to the store. Luckily everything goes without further incidents.</text>
+            <store>STORE_LILY_EMPORIUM</store>
+        </event>
+    </choice>
+
+    <choice hidden="true">
+        <text>Question her about the anomalies.</text>
+        <event>
+            <text>You question her about the anomalies.
+"Your systems glitched out, you say?--
+That's very odd, you are the first one to complain about this--
+Mind if I take a look on them? For free even--"</text>
+            <choice hidden="true">
+                <text>Sure.</text>
+                <event>
+                    <loadEventList>
+                        <event name="LILY_EMPORIUM_INSTALL_SENSORS" req="sensors" lvl="-999" max_lvl="0"/>
+                        <event name="LILY_EMPORIUM_UPGRADE_SENSORS" req="sensors" lvl="1" max_lvl="2"/>
+                        <event name="LILY_EMPORIUM_UPGRADE_REACTOR" />
+                        <event name="LILY_EMPORIUM_UPGRADE_NOTHING" />
+                    </loadEventList>
+                </event>
+            </choice>
+            <choice hidden="true">
+                <text>No thanks.</text>
+                <event name="LILY_EMPORIUM_STOREASK">
+                    <text>"Alright. Do you want to shop still?--"</text>
+                    <choice hidden="true">
+                        <text>Yes.</text>
+                        <event>
+                            <store>STORE_LILY_EMPORIUM</store>
+                        </event>
+                    </choice>
+                    <choice hidden="true">
+                        <text>No.</text>
+                        <event>
+                            <text>You decide not to shop and just continue on your journey.</text>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Attack the station, we can get some goods by force!</text>
+        <event>
+            <text>"Wait wait wait wait wait!--
+Are you really just going to attack a civilian station?
+You will get notoriety for this, don't you know? 2x even!--
+Besides, I'm actually an optional boss and you definitely aren't ready to fight me yet!--"</text>
+            <choice hidden="true">
+                <text>Change your mind and go back.</text>
+                <event>
+                    <loadEvent>LILY_EMPORIUM_REAL</loadEvent>
+                </event>
+            </choice>
+            <choice hidden="true">
+                <text>Choose the option above.</text>
+                <event load="OPTION_INVALID"/>
+            </choice>
+            <choice hidden="true">
+                <text>@%#$$#$$@$</text>
+                <event load="OPTION_INVALID"/>
+            </choice>
+            <choice hidden="true">
+                <text>#0#@%%*@$%</text>
+                <event load="OPTION_INVALID"/>
+            </choice>
+            <choice hidden="true">
+                <text>Nope.</text>
+                <event load="OPTION_INVALID"/>
+            </choice>
+            <choice hidden="true">
+                <text>I said NOPE.</text>
+                <event load="OPTION_INVALID"/>
+            </choice>
+            <choice hidden="true">
+                <text>Continue and attack her anyway.</text>
+                <event>
+                    <ship hostile="true" />
+                    <loadEvent>LILY_EMPORIUM_ATTACK</loadEvent>
+                </event>
+            </choice>
+
+        </event>
+    </choice>
+</event>
+
+
+<event name="LILY_EMPORIUM_INSTALL_SENSORS">
+    <text>"Well, you don't even have a sensor system, huh!--
+Here's one for you, not the best, but better than nothing--"</text>
+    <system name="sensors"/>
+    <choice>
+        <text>Continue...</text>
+        <event>
+            <loadEvent>LILY_EMPORIUM_STOREASK</loadEvent>
+        </event>
+    </choice>
+</event>
+
+<event name="LILY_EMPORIUM_UPGRADE_SENSORS">
+    <text>"Well, your sensors could definitely use some more work!--
+I've managed to tune them up a little, by the way--"</text>
+    <upgrade amount="1" system="sensors"/>
+    <choice>
+        <text>Continue...</text>
+        <event>
+            <loadEvent>LILY_EMPORIUM_STOREASK</loadEvent>
+        </event>
+    </choice>
+</event>
+
+<event name="LILY_EMPORIUM_UPGRADE_REACTOR">
+    <text>"Well, maybe it's an odd glitch with your power system?--
+I've managed to tune it up a little, by the way--"</text>
+    <upgrade amount="1" system="reactor"/>
+
+    <choice>
+        <text>Continue...</text>
+        <event>
+            <loadEvent>LILY_EMPORIUM_STOREASK</loadEvent>
+        </event>
+    </choice>
+</event>
+
+<event name="LILY_EMPORIUM_UPGRADE_NOTHING">
+    <text>"Well, that's odd, but I can't find anything out of ordinary--
+It was probably nothing, just ignore it--"</text>
+    <choice>
+        <text>Continue...</text>
+        <event>
+            <loadEvent>LILY_EMPORIUM_STOREASK</loadEvent>
+        </event>
+    </choice>
+</event>
+
+<event name="LILY_EMPORIUM_ATTACK">
+    <variable name="loc_protomv_drive_block" op="set" val="1"/>
+    <status type="limit" target="player" system="sensors" amount="0"/>
+    <backgroundObject name="GLITCH">
+        <layer z="0">front</layer>
+        <spawnArea x="295" y="188" w="0" h="0" center="true"/>
+        <anim>glitch</anim>
+        <active>true</active>
+    </backgroundObject>
+    <playSound>glitch</playSound>
+    <instantEscape />
+    <triggeredEvent event="LILY_EMPORIUM_ATTACK_CONTINUE" time="1" clearOnJump="true"/>
+</event>
+
+<event name="LILY_EMPORIUM_ATTACK_CONTINUE">
+    <variable name="loc_protomv_drive_block" op="set" val="0"/>
+    <status type="clear" target="player" system="sensors" amount="100"/>
+    <clearBackgroundObject name="GLITCH"/>
+
+
+    <text>You try to attack the station, but your systems suddenly glitch out again and the station disappears like it never existed!</text>
+
+    <choice>
+        <text>Continue...</text>
+        <event>
+            <text>Moreover, a Blue Giant star has appeared right nearby! You have to leave quickly unless you want to get cooked!
+Whoever the mysterious shop owner is, they clearly don't want you messing with them.</text>
+            <!--environment type="sun"/-->
+            <triggeredEvent name="BLUE_GIANT" event="BLUE_GIANT_FLARE" seeded="true" thisFight="false" clearOnJump="true" loops="999999999" minTime="24.0" maxTime="30.0">
+                <warningMessage id="warning_solar_flare" x="825" y="30" time="5.0" centerText="true" flash="true" sound="environWarning" useWarningLine="false"/>
+            </triggeredEvent>
+            <damage amount="1" effect="fire" system="random"/>
+            <damage amount="1" effect="fire" system="random"/>
+            <damage amount="1" effect="fire" system="random"/>
+
+        </event>
+    </choice>
+</event>
+
+</FTL>

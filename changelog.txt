@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.0
+Date: 2025-07-21
+  Changes:
+    - The Beam Emporium store is officialy there and open for business! - Spawns in sectors 3 and 6
+    - Guaranteed to sell beams from the mod, including ones not found elsewhere!
+    - Added "Quake" howitzer beam
+    - Lowered weapon prices across the board
+---------------------------------------------------------------------------------------------------
 Version: 0.7.0
 Date: 2025-07-09
   Changes:

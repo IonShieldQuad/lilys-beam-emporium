@@ -1,3 +1,9 @@
+<FTL>
+
+
+<mod:findLike type="sectorDescription">
+    <mod-append:priorityEvent name="LILY_EMPORIUM_QUEST_START" min="1" max="1" priority="1" req="LILY_EMPORIUM_SPAWN_CHECK" lvl="1"/>
+</mod:findLike>
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -261,3 +267,47 @@
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
+
+<mod:findName type="sectorDescription" name="SECTOR_THEOCRACY">
+    <mod:findLike type="rarityList">
+        <mod-append:blueprint name="LILY_HOWITZER_1" rarity="4" />
+
+
+    </mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_THEOCRACY_UNIQUE">
+    <mod:findLike type="rarityList">
+        <mod-append:blueprint name="LILY_HOWITZER_1" rarity="4" />
+
+
+    </mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_OUTCAST">
+    <mod:findLike type="rarityList">
+        <mod-append:blueprint name="LILY_HOWITZER_1" rarity="4" />
+
+
+    </mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_OUTCAST_UNIQUE">
+    <mod:findLike type="rarityList">
+        <mod-append:blueprint name="LILY_HOWITZER_1" rarity="4" />
+
+
+    </mod:findLike>
+</mod:findName>
+
+<mod:findName type="sectorDescription" name="SECTOR_LOSTSUN_UNIQUE">
+    <mod:findLike type="rarityList">
+        <mod-append:blueprint name="LILY_HOWITZER_1" rarity="4" />
+
+
+    </mod:findLike>
+</mod:findName>
+
+
+
+</FTL>

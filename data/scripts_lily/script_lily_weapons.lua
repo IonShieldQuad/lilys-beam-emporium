@@ -53,7 +53,8 @@ burstPinpoints["LILY_BEAM_AMP_SIPHON_0"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_1"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_2"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_3"] = "LILY_BEAM_AMP_SIPHON"
-
+local howitzers = {}
+howitzers["LILY_HOWITZER_1"] = { dmg = 4, primary = "LILY_HOWITZER_1_BEAM_P", secondary = "LILY_HOWITZER_1_BEAM_S" }
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     if weapon.blueprint and burstPinpoints[weapon.blueprint.name] then
@@ -74,6 +75,38 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
         projectile:Kill()
     end
 
+
+    if weapon.blueprint and howitzers[weapon.blueprint.name] and projectile.damage.iDamage == howitzers[weapon.blueprint.name].dmg then
+        local primaryBlueprint = Hyperspace.Blueprints:GetWeaponBlueprint(howitzers[weapon.blueprint.name].primary)
+        local secondaryBlueprint = Hyperspace.Blueprints:GetWeaponBlueprint(howitzers[weapon.blueprint.name].secondary)
+
+        local spaceManager = Hyperspace.App.world.space
+
+        local beam1 = spaceManager:CreateBeam(
+            primaryBlueprint,
+            projectile.position,
+            projectile.currentSpace,
+            projectile.ownerId,
+            projectile.target,
+            Hyperspace.Pointf(projectile.target.x, projectile.target.y + 5),
+            projectile.destinationSpace,
+            1,
+            -0.1)
+        beam1.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+        local beam2 = spaceManager:CreateBeam(
+            secondaryBlueprint,
+            projectile.position,
+            projectile.currentSpace,
+            projectile.ownerId,
+            projectile.target,
+            Hyperspace.Pointf(projectile.target.x, projectile.target.y + 5),
+            projectile.destinationSpace,
+            1,
+            -0.1)
+        beam2.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+        projectile:Kill()
+
+    end
 
     if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SHOTGUN_P" then
         local offsets = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}}
@@ -267,43 +300,3 @@ end)
     end
 end)--]]
 
-
-script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
-    local ship = Hyperspace.ships(projectile.ownerId)
-    if ship and ship:HasAugmentation("LILY_TARGETING_BYPASS") > 0 then
-        projectile.extend.customDamage.accuracyMod = projectile.extend.customDamage.accuracyMod - 30
-    end
-end)
-
-script.on_internal_event(Defines.InternalEvents.PROJECTILE_INITIALIZE, function(projectile)
-    --print("TYPE: " .. projectile:GetType())
-    --print("DEST: " .. projectile.destinationSpace)
-    --print("X: " .. projectile.target.x)
-    --print("Y: " .. projectile.target.y)
-    local destination = projectile.destinationSpace
-    local ship = Hyperspace.ships(destination)
-    --print("SHIP: " .. (ship == nil and "X" or "OK"))
-    if ship and ship:HasAugmentation("LILY_ASB_SCRAMBLER") > 0 and projectile:GetType() == 6 then
-        projectile.target = Hyperspace.Pointf(-400, projectile.target.y)
-        --print("newX: " .. projectile.target.x)
-        --print("newY: " .. projectile.target.y)
-        projectile:ComputeHeading()
-    end
-end)
-
-script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA, function(ship, projectile, location, damage, forceHit, shipFriendlyFire)
-    
-    --damage.iDamage = 0
-    --damage.breachChance = 0
-    --print("TYPE: " .. projectile:GetType())
-    if ship and ship:HasAugmentation("LILY_ASB_SCRAMBLER") > 0 and projectile and projectile:GetType() == 6 then
-        forceHit = Defines.Evasion.MISS
-        --projectile:Kill()
-        damage.iDamage = 0
-        damage.breachChance = 0
-        projectile.hitTarget = false
-        projectile.missed = true
-        return Defines.Chain.CONTINUE, Defines.Evasion.MISS, shipFriendlyFire
-    end
-    return Defines.Chain.CONTINUE, forceHit, shipFriendlyFire
-end)

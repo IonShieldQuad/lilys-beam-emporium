@@ -192,18 +192,23 @@ disable shields as well as systems.</tooltip>
 
     
     <crewBlueprint name="unique_lily_avatar">
-        <desc>Yes, that's me--</desc>
+        <desc>A multiverse traveller, beam saleswoman, and a loyal servant of the Supreme Eldritch Goddess of True Chaos. Yes, that's me--</desc>
         <cost>2147483647</cost>
         <bp>20</bp>
         <title>???</title>
         <short>???</short>
         <rarity>0</rarity>
         <powerList>
-            <power>I got beams--</power>
-            <power>I'm immune to hazards--</power>
-            <power>Pretty strong--</power>
-            <power>And pretty pretty--</power>
-            <power>Totally 100% human, trust me--</power>
+            <power>Immune to fires, suffocation, stun and mind control</power>
+            <power>Can teleport anywhere on current ship</power>
+            <power>Wields a large arsenal of eldritch powers</power>
+            <power>Only 100 Max Health, but regenerates automatically after 5 seconds</power>
+            <power>Cannot permanently die, instead can be respawned from the storage menu for a fee</power>
+            <!--power>I got beams-</power>
+            <power>I'm immune to hazards-</power>
+            <power>Pretty strong-</power>
+            <power>And pretty pretty-</power>
+            <power>Totally 100% human, trust me-</power-->
         </powerList>
     </crewBlueprint>
 </FTL>
@@ -253,8 +258,9 @@ disable shields as well as systems.</tooltip>
         <short>NO</short>
         <desc>YOU SHOULD NEVER SEE THIS</desc>
         <tooltip>NO</tooltip>
-        <damage>2</damage>
-        <sysDamage>0</sysDamage>
+        <damage>0</damage>
+        <sysDamage>2</sysDamage>
+        <persDamage>3</persDamage>
         <ion>0</ion>
         <sp>10</sp>
         <color>
@@ -263,8 +269,8 @@ disable shields as well as systems.</tooltip>
             <b>0</b>
         </color>
         <stunChance>0</stunChance>
-        <fireChance>10</fireChance>
-        <breachChance>0</breachChance>
+        <fireChance>4</fireChance>
+        <breachChance>4</breachChance>
         <hullbust>0</hullbust>
         <cooldown>25</cooldown>
         <speed>2</speed>
@@ -276,6 +282,33 @@ disable shields as well as systems.</tooltip>
         <length>1</length>
         <weaponArt>lily_focus_pointer</weaponArt>
         <iconImage>beam</iconImage>
+
+        <statBoosts>
+            <statBoost name="silenced">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>false</affectsSelf>
+                <duration>25</duration>
+                <!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
+                <blackList>
+                    <slug_hektar_box/>
+                    <unique_billy_box/>
+                    <unique_irwin_demon/>
+                    <unique_dessius/>
+                    <siren/>
+                    <siren_harpy/>
+                    <eldritch_thing/>
+                    <eldritch_thing_weak/>
+                    <eldritch_cat/>
+                    <gnome/>
+                    <unique_lily_avatar/>
+                </blackList>
+                <boostAnim>madness</boostAnim>
+            </statBoost>
+        </statBoosts>
     </weaponBlueprint>
 
     <weaponBlueprint name="LILY_POWER_ION">
@@ -397,7 +430,7 @@ disable shields as well as systems.</tooltip>
         <flavorType>Pinpoint</flavorType>
         <tip>tip_ion</tip>
         <title>Heavy Ion Pinpoint</title>
-        <short>H. Ionpoint</short>
+        <short>Hv. Ionpoint</short>
         <desc>A modified pinpoint beam that does 3 ion damage, but is slow to charge.</desc>
         <tooltip>Three ion damage per room beam weapon</tooltip>
         <damage>0</damage>
@@ -433,7 +466,7 @@ disable shields as well as systems.</tooltip>
         <flavorType>Pinpoint</flavorType>
         <tip>tip_chain_beam</tip>
         <title>Chain Ion Pinpoint</title>
-        <short>C. Ionpoint</short>
+        <short>Ch. Ionpoint</short>
         <desc>This modified Pinpoint weapon only does a small amount of ion damage, but quickly ramps up its fire rate until it becomes able to keep multiple systems down by itself.</desc>
         <tooltip>One ion damage, ramping fire rate.</tooltip>
         <damage>0</damage>
@@ -467,6 +500,119 @@ disable shields as well as systems.</tooltip>
         <weaponArt>lily_focus_ion_chain</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
+
+
+    <weaponBlueprint name="LILY_FOCUS_ION_FIRE">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_ion_fire</tip>
+        <title>Thermal Ion Pinpoint</title>
+        <short>Th. Ionpoint</short>
+        <desc>A modified pinpoint beam that shoots a stream of superheated ions. Does 1 ion damage and is guaranteed to ignite the tile hit.</desc>
+        <tooltip>One ion damage per room beam weapon</tooltip>
+        <damage>0</damage>
+        <ion>1</ion>
+        <sp>0</sp>
+        <ionBeamFix>true</ionBeamFix>
+        <color>
+            <r>255</r>
+            <g>72</g>
+            <b>48</b>
+        </color>
+        <stunChance>0</stunChance>
+        <fireChance>10</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>7</cooldown>
+        <speed>1</speed>
+        <power>2</power>
+        <cost>75</cost>
+        <bp>4</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <launchSounds>
+            <sound>focus_weak</sound>
+        </launchSounds>
+        <weaponArt>lily_focus_ion_fire</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_FOCUS_ION_STUN">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_ion_stun</tip>
+        <title>Stunner Ion Pinpoint</title>
+        <short>St. Ionpoint</short>
+        <desc>A modified pinpoint beam that does 2 ion damage and stuns crew hit.</desc>
+        <tooltip>One ion damage per room beam weapon</tooltip>
+        <damage>0</damage>
+        <ion>2</ion>
+        <sp>0</sp>
+        <ionBeamFix>true</ionBeamFix>
+        <color>
+            <r>230</r>
+            <g>237</g>
+            <b>132</b>
+        </color>
+        <stun>10</stun>
+        <stunChance>10</stunChance>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>12</cooldown>
+        <speed>1</speed>
+        <power>2</power>
+        <cost>75</cost>
+        <bp>4</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <launchSounds>
+            <sound>focus_weak</sound>
+        </launchSounds>
+        <weaponArt>lily_focus_ion_stun</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_FOCUS_ION_BIO">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_ion_bio</tip>
+        <title>Ionizing Radiation Pinpoint</title>
+        <short>Rad Ionpoint</short>
+        <desc>A modified pinpoint beam that shoots a stream of beta particles, disrupting systems and irradiating crew.</desc>
+        <tooltip>One ion damage per room beam weapon</tooltip>
+        <damage>0</damage>
+        <ion>1</ion>
+        <persDamage>2</persDamage>
+        <sp>0</sp>
+        <ionBeamFix>true</ionBeamFix>
+        <color>
+            <r>255</r>
+            <g>0</g>
+            <b>146</b>
+        </color>
+        <stunChance>0</stunChance>
+        <fireChance>0</fireChance>
+        <breachChance>3</breachChance>
+        <statBoosts>
+            <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
+            <statBoost name="stunMultiplier" load="RAD_STUN"/>
+            <statBoost name="repairSpeed" load="RAD_REPAIR"/>
+        </statBoosts>
+        <cooldown>7</cooldown>
+        <speed>1</speed>
+        <power>2</power>
+        <cost>75</cost>
+        <bp>4</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <launchSounds>
+            <sound>focus_weak</sound>
+        </launchSounds>
+        <weaponArt>lily_focus_ion_bio</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
 </FTL>
 
 
@@ -490,7 +636,7 @@ disable shields as well as systems.</tooltip>
         <persDamage>-1</persDamage>
         <sp>0</sp>
         <fireChance>0</fireChance>
-        <breachChance>5</breachChance>
+        <breachChance>3</breachChance>
         <cooldown>15</cooldown>
         <hullBust>1</hullBust>
         <power>2</power>
@@ -546,10 +692,10 @@ disable shields as well as systems.</tooltip>
         <desc>This Beam boasts an unique multimodal power core, allowing it to be effective against hull, systems and crew, though not at once. Current mode: Anti-crew.</desc>
         <tooltip>2 power beam weapon that greatly damages enemy crew.</tooltip>
         <damage>0</damage>
-        <persDamage>5</persDamage>
+        <persDamage>4</persDamage>
         <sp>2</sp>
         <fireChance>0</fireChance>
-        <breachChance>1</breachChance>
+        <breachChance>5</breachChance>
         <cooldown>15</cooldown>
         <color>
             <r>255</r>
@@ -777,7 +923,7 @@ disable shields as well as systems.</tooltip>
         <title>'Syringe' Beam [Poison]</title>
         <short>'Syringe' [P]</short>
         <desc>This weapon is less of traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Poison.</desc>
-        <tooltip>Does 4 hp/s damage for 30 seconds for any crew hit.</tooltip>
+        <tooltip>Does 4 hp/s damage for 25 seconds for any crew hit.</tooltip>
         <damage>0</damage>
         <persDamage>0</persDamage>
         <sp>3</sp>

@@ -78,11 +78,38 @@
 		</shootingSounds>
 
 		<deathSounds>
-            <deathSound>shieldsDown</deathSound>
+            <deathSound>energyDeath</deathSound>
 			<!--deathSound>femaleDeath1</deathSound>
 			<deathSound>femaleDeath2</deathSound>
 			<deathSound>femaleDeath3</deathSound-->
 		</deathSounds>
+
+		<passiveStatBoosts>
+			<statBoost name="silenced">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>CREW_TARGET</shipTarget>
+				<crewTarget>ALL</crewTarget>
+				<droneTarget>ALL</droneTarget>
+				<affectsSelf>false</affectsSelf>
+				<!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
+				<blackList>
+					<slug_hektar_box/>
+					<unique_billy_box/>
+					<unique_irwin_demon/>
+					<unique_dessius/>
+					<siren/>
+					<siren_harpy/>
+					<eldritch_thing/>
+					<eldritch_thing_weak/>
+					<eldritch_cat/>
+					<gnome/>
+					<unique_lily_avatar/>
+				</blackList>
+				<duration>10</duration>
+				<boostAnim>madness</boostAnim>
+			</statBoost>
+		</passiveStatBoosts>
 
 		<powerEffect>
 			<cooldown>15</cooldown>
@@ -93,10 +120,11 @@
 			<req type="enemy">
 				<aiDisabled/>
 			</req>
-			<buttonText id="button_lily_beam">BEAM</buttonText>
-			<tooltip>[COOLDOWN:15s]
-Supercharges your cursor with destructive energy. Your next click on a tile will spawn a superheated pinpoint beam aimed at it.
-	Damage: 2; Shield pierce: 10; Fire chance: 100%.
+			<buttonText id="button_lily_beam">E. BLAST</buttonText>
+			<tooltip>ELDRITCH BLAST [COOLDOWN:15s]
+Supercharges your cursor with chaotic eldritch energy. Your next click on a tile will summon a pinpoint beam aimed at it.
+	Sys. Damage: 2; Crew damage: 45; Shield pierce: 10; Fire chance: 40%; Breach chance: 40%.
+	Temporarily induces madness on the crew it hits, disabling their active abilities.
 	Can target your own ship.</tooltip>
 			<cooldownColor r="255" g="0" b="0" />
 		</powerEffect>
@@ -114,7 +142,7 @@ Supercharges your cursor with destructive energy. Your next click on a tile will
 			</req>
 			<buttonText id="button_lily_ion">ION</buttonText>
 			<tooltip>[COOLDOWN:90s  DURATION:10s]
-Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks on tiles will spawn a ion pinpoint beam aimed at it.
+Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks on tiles will summon a ion pinpoint beam aimed at it.
 	Ion Damage: 1; Shield pierce: 10; Stun: 10 seconds.
 	Can target your own ship.
 	Also deals 2 ion damage to your pause button, disabling your ability to pause game for the duration.</tooltip>
@@ -281,6 +309,25 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			<item>
 				<modifier flat="false">1.1</modifier>
 				<blueprint>LILY_FOCUS_ION_CHAIN</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>ION PINPOINTS</customTitle>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_FOCUS_ION_FIRE</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_FOCUS_ION_STUN</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_FOCUS_ION_BIO</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -544,6 +591,25 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		</category>
 
 		<category type="WEAPONS">
+			<customTitle>ION PINPOINTS</customTitle>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_FOCUS_ION_FIRE</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_FOCUS_ION_STUN</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_FOCUS_ION_BIO</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
 			<customTitle>UTILITY</customTitle>
 			<item>
 				<modifier flat="false">1.1</modifier>
@@ -624,39 +690,39 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		</category>
 
 		<category type="WEAPONS">
-			<customTitle>CHAOS</customTitle>
+			<customTitle>CHAOS :)</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier flat="false">1.5</modifier>
 				<blueprint>BEAM_MADNESS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.25</modifier>
+				<modifier flat="false">2</modifier>
 				<blueprint>BEAM_MADNESS_CHAOS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.5</modifier>
+				<modifier flat="false">2.5</modifier>
 				<blueprint>BEAM_MADNESS_ELITE</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
 
 		<category type="CREW">
-			<customTitle>CHAOS</customTitle>
+			<customTitle>CHAOS :)</customTitle>
 			<allowDuplicates/>
 			<item>
-				<modifier flat="false">1.5</modifier>
+				<modifier flat="false">1.0</modifier>
 				<blueprint>LIST_CREW_SIREN</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.5</modifier>
+				<modifier flat="false">1.0</modifier>
 				<blueprint>LIST_CREW_SIREN</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.5</modifier>
+				<modifier flat="false">1.0</modifier>
 				<blueprint>LIST_CREW_SIREN</blueprint>
 				<price>-1</price>
 			</item>

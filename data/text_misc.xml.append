@@ -14,7 +14,7 @@
 <text name="tip_lily_syringe_a">Tip: Applies weak erosion effect for every tile hit. Also does 10 hp/s damage for 3 seconds for any crew hit.</text>
 
 
-<text name="button_lily_beam">BEAM</text>
+<text name="button_lily_beam">E. BLAST</text>
 <text name="button_lily_ion">ION</text>
 
 <text name="map_icon_beam_emporium">BEAM EMPORIUM</text>

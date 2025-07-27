@@ -19,6 +19,9 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
@@ -35,6 +38,9 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
@@ -52,6 +58,9 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
@@ -69,6 +78,9 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
@@ -94,6 +106,8 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="4" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="3" />
 
 
@@ -107,6 +121,9 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="3" />
 
 
@@ -120,6 +137,8 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="4" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="3" />
 
 
@@ -133,6 +152,9 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="3" />
 
 
@@ -155,6 +177,8 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="4" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="3" />
 
 
@@ -168,6 +192,8 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="3" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="3" />
 
 
@@ -180,6 +206,8 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="4" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="3" />
 
 
@@ -192,6 +220,8 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="4" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="3" />
 
 
@@ -204,6 +234,9 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_2" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_HEAVY" rarity="2" />
         <mod-append:blueprint name="LILY_FOCUS_ION_CHAIN" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="5" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="3" />
+
 
     </mod:findLike>
 </mod:findName>
@@ -220,6 +253,7 @@
     <mod:findLike type="rarityList">
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="4" />
         <mod-append:blueprint name="LILY_FOCUS_HACK" rarity="2" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="4" />
 
     </mod:findLike>
 </mod:findName>
@@ -228,6 +262,7 @@
     <mod:findLike type="rarityList">
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="3" />
         <mod-append:blueprint name="LILY_FOCUS_HACK" rarity="5" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="3" />
 
 
     </mod:findLike>
@@ -237,6 +272,8 @@
     <mod:findLike type="rarityList">
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="3" />
         <mod-append:blueprint name="LILY_FOCUS_HACK" rarity="5" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="3" />
+
 
 
     </mod:findLike>
@@ -246,6 +283,7 @@
     <mod:findLike type="rarityList">
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="3" />
         <mod-append:blueprint name="LILY_FOCUS_HACK" rarity="5" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="3" />
 
 
     </mod:findLike>
@@ -255,6 +293,7 @@
     <mod:findLike type="rarityList">
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="3" />
         <mod-append:blueprint name="LILY_FOCUS_HACK" rarity="5" />
+        <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="2" />
 
 
     </mod:findLike>
@@ -303,7 +342,7 @@
 <mod:findName type="sectorDescription" name="SECTOR_LOSTSUN_UNIQUE">
     <mod:findLike type="rarityList">
         <mod-append:blueprint name="LILY_HOWITZER_1" rarity="4" />
-
+        <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="3" />
 
     </mod:findLike>
 </mod:findName>

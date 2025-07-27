@@ -129,12 +129,12 @@
 	</anim>
 	<anim name="unique_lily_avatar_death_right">
 		<sheet>unique_lily_avatar</sheet>
-		<desc length="7" x="3" y="0"/>
+		<desc length="9" x="3" y="0"/>
 		<time>1</time>
 	</anim>
 	<anim name="unique_lily_avatar_death_left">
 		<sheet>unique_lily_avatar</sheet>
-		<desc length="7" x="3" y="0"/>
+		<desc length="9" x="3" y="0"/>
 		<time>1</time>
 	</anim>
 	<anim name="unique_lily_avatar_walk_down">
@@ -199,7 +199,7 @@
 	</anim>
 	<anim name="unique_lily_avatar_repair">
 		<sheet>unique_lily_avatar</sheet>
-		<desc length="9" x="0" y="6"/>
+		<desc length="8" x="0" y="6"/>
 		<time>1.0</time>
 	</anim>
 	<anim name="unique_lily_avatar_punch_up">
@@ -215,7 +215,7 @@
 	<anim name="unique_lily_avatar_teleport">
 		<sheet>unique_lily_avatar</sheet>
 		<desc length="9" x="0" y="2"/>
-		<time>0.5</time>
+		<time>0.2</time>
 	</anim>
 	<anim name="unique_lily_avatar_type_right">
 		<sheet>unique_lily_avatar</sheet>
@@ -294,14 +294,14 @@
 		<chargeImage>weapon_lily/focus_ion_2_glow.png</chargeImage>
 	</weaponAnim>
 
-	<animSheet name="lily_focus_ion_heavy" w="279" h="78" fw="31" fh="78">weapon_lily/focus_ion_heavy.png</animSheet>
+	<animSheet name="lily_focus_ion_heavy" w="279" h="94" fw="31" fh="94">weapon_lily/focus_ion_heavy.png</animSheet>
 	<weaponAnim name="lily_focus_ion_heavy">
 		<sheet>lily_focus_ion_heavy</sheet>
 		<desc length="9" x="0" y="0" />
 		<chargedFrame>1</chargedFrame>
 		<fireFrame>2</fireFrame>
-		<firePoint x="19" y="38" />
-		<mountPoint x="5" y="59" />
+		<firePoint x="19" y="54" />
+		<mountPoint x="5" y="75" />
 		<chargeImage>weapon_lily/focus_ion_heavy_glow.png</chargeImage>
 	</weaponAnim>
 
@@ -325,6 +325,38 @@
 		<boost>focus_chain_charge</boost>
 	</weaponAnim>
 
+	<animSheet name="lily_focus_ion_fire" w="320" h="80" fw="32" fh="80">weapon_lily/focus_ion_fire.png</animSheet>
+	<weaponAnim name="lily_focus_ion_fire">
+		<sheet>lily_focus_ion_fire</sheet>
+		<desc length="10" x="0" y="0" />
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="18" y="52" />
+		<mountPoint x="3" y="60" />
+		<chargeImage>weapon_lily/focus_ion_fire_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_focus_ion_stun" w="396" h="85" fw="36" fh="85">weapon_lily/focus_ion_stun.png</animSheet>
+	<weaponAnim name="lily_focus_ion_stun">
+		<sheet>lily_focus_ion_stun</sheet>
+		<desc length="11" x="0" y="0" />
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="18" y="60" />
+		<mountPoint x="3" y="72" />
+		<chargeImage>weapon_lily/focus_ion_stun_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_focus_ion_bio" w="224" h="90" fw="32" fh="90">weapon_lily/focus_ion_bio.png</animSheet>
+	<weaponAnim name="lily_focus_ion_bio">
+		<sheet>lily_focus_ion_bio</sheet>
+		<desc length="7" x="0" y="0" />
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="16" y="60" />
+		<mountPoint x="3" y="72" />
+		<chargeImage>weapon_lily/focus_ion_bio_glow.png</chargeImage>
+	</weaponAnim>
 
 </FTL>
 <FTL>
@@ -413,7 +445,7 @@
 		<desc length="25" x="0" y="0"/>
 		<chargedFrame>12</chargedFrame>
 		<fireFrame>13</fireFrame>
-		<firePoint x="8" y="1"/>
+		<firePoint x="18" y="1"/>
 		<mountPoint x="6" y="65"/>
 	</weaponAnim>
 
@@ -506,7 +538,7 @@
 
 
 <FTL>
-	<animSheet name="lily_focus_pierce_1" w="532" h="111" fw="28" fh="111">weapon_lily/focus_pierce_1.png</animSheet>
+	<animSheet name="lily_focus_pierce_1" w="646" h="111" fw="34" fh="111">weapon_lily/focus_pierce_1.png</animSheet>
 	<weaponAnim name="lily_focus_pierce_1">
 		<sheet>lily_focus_pierce_1</sheet>
 		<desc length="19" x="0" y="0"/>
@@ -516,14 +548,14 @@
 		<mountPoint x="5" y="89"/>
 		<chargeImage>weapon_lily/focus_pierce_1_glow.png</chargeImage>
 	</weaponAnim>
-	<animSheet name="lily_focus_pierce_1_icon" w="90" h="28" fw="90" fh="28">weapon_lily/focus_pierce_1_icon.png</animSheet>
+	<animSheet name="lily_focus_pierce_1_icon" w="97" h="34" fw="97" fh="34">weapon_lily/focus_pierce_1_icon.png</animSheet>
 	<anim name="lily_focus_pierce_1_icon">
 		<sheet>lily_focus_pierce_1_icon</sheet>
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
 
-	<animSheet name="lily_focus_pierce_2" w="756" h="167" fw="36" fh="167">weapon_lily/focus_pierce_2.png</animSheet>
+	<animSheet name="lily_focus_pierce_2" w="882" h="167" fw="42" fh="167">weapon_lily/focus_pierce_2.png</animSheet>
 	<weaponAnim name="lily_focus_pierce_2">
 		<sheet>lily_focus_pierce_2</sheet>
 		<desc length="21" x="0" y="0"/>
@@ -533,7 +565,7 @@
 		<mountPoint x="10" y="145"/>
 		<chargeImage>weapon_lily/focus_pierce_2_glow.png</chargeImage>
 	</weaponAnim>
-	<animSheet name="lily_focus_pierce_2_icon" w="112" h="36" fw="112" fh="36">weapon_lily/focus_pierce_2_icon.png</animSheet>
+	<animSheet name="lily_focus_pierce_2_icon" w="128" h="42" fw="128" fh="42">weapon_lily/focus_pierce_2_icon.png</animSheet>
 	<anim name="lily_focus_pierce_2_icon">
 		<sheet>lily_focus_pierce_2_icon</sheet>
 		<desc length="1" x="0" y="0"/>

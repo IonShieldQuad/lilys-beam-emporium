@@ -23,11 +23,11 @@
         <maxPower amount="42" />
         <!--crewCount amount="4" max="10" class="human" /-->
         <boardingAI>sabotage</boardingAI>
-        <aug name="UNION_JACKETS" />
-        <aug name="UPG_TECH_RESPIRATOR" />
+        <aug name="RHYME_SHIELDS" />
         <aug name="NO_GHOST" />
         <aug name="CHAOS" />
-        <aug name="RHYME_SHIELDS" />
+        <aug name="UNION_JACKETS" />
+        <aug name="UPG_TECH_RESPIRATOR" />
         <aug name="ENERGY_SHIELD" />
 
     </shipBlueprint>
@@ -45,6 +45,9 @@
         <mod-append:name>LILY_FOCUS_ION_2</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_HEAVY</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_CHAIN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE_M</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE_S</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE_P</mod-append:name>
@@ -70,6 +73,9 @@
         <mod-append:name>LILY_FOCUS_ION_2</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_HEAVY</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_CHAIN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_H</mod-append:name>
         <mod-append:name>LILY_BEAM_AMP_SIPHON_1</mod-append:name>
@@ -85,6 +91,9 @@
         <mod-append:name>LILY_FOCUS_ION_2</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_HEAVY</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_CHAIN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_H</mod-append:name>
         <mod-append:name>LILY_BEAM_AMP_SIPHON_1</mod-append:name>
@@ -100,6 +109,9 @@
         <mod-append:name>LILY_FOCUS_ION_2</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_HEAVY</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_CHAIN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_H</mod-append:name>
         <mod-append:name>LILY_BEAM_AMP_SIPHON_1</mod-append:name>
@@ -115,6 +127,9 @@
         <mod-append:name>LILY_FOCUS_ION_2</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_HEAVY</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_CHAIN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
@@ -128,6 +143,9 @@
         <mod-append:name>LILY_FOCUS_PIERCE_2</mod-append:name>
         <mod-append:name>LILY_FOCUS_HACK</mod-append:name>
         <mod-append:name>LILY_FOCUS_POINTER</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_WEAPONS_ION">
@@ -135,6 +153,9 @@
         <mod-append:name>LILY_FOCUS_ION_2</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_HEAVY</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_CHAIN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_ION">
@@ -142,6 +163,9 @@
         <mod-append:name>LILY_FOCUS_ION_2</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_HEAVY</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_CHAIN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_WEAPONS_ANCIENTS_USELESS">
@@ -153,6 +177,7 @@
 
     <mod:findName type="blueprintList" name="GIFTLIST_ANTIBIO">
         <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_WEAPONS_MEDICAL">
@@ -174,11 +199,13 @@
         <mod-append:name>LILY_FOCUS_ION_HEAVY</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_CHAIN</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_H</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_SLUG">
         <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE</mod-append:name>
         <mod-append:name>LILY_FOCUS_HACK</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_SUPPORT">
@@ -238,13 +265,13 @@
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_B</mod-append:name>
         <mod-append:name>LILY_BEAM_SHOTGUN_P</mod-append:name>
         <mod-append:name>LILY_BEAM_SHOTGUN_S</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_PARTICLE">
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_H</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_P</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_B</mod-append:name>
-        <mod-append:name>LILY_BEAM_AMP_SIPHON_0</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO">
@@ -256,6 +283,7 @@
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_H</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_P</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_B</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO_NOMISSILE">
@@ -267,6 +295,7 @@
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_H</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_P</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_B</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO_NODAMAGE">
@@ -278,6 +307,7 @@
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_H</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_P</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_B</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_FIRE_ALL">
@@ -286,6 +316,7 @@
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_B</mod-append:name>
         <mod-append:name>LILY_BEAM_SHOTGUN_P</mod-append:name>
         <mod-append:name>LILY_BEAM_SHOTGUN_S</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
     </mod:findName>
     
     <mod:findName type="blueprintList" name="BLUELIST_FIRE_NONBALLISTIC">
@@ -294,6 +325,7 @@
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_B</mod-append:name>
         <mod-append:name>LILY_BEAM_SHOTGUN_P</mod-append:name>
         <mod-append:name>LILY_BEAM_SHOTGUN_S</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_HACK">
@@ -311,6 +343,9 @@
         <mod-append:name>LILY_FOCUS_ION_CHAIN</mod-append:name>
         <mod-append:name>LILY_FOCUS_PIERCE_1</mod-append:name>
         <mod-append:name>LILY_FOCUS_PIERCE_2</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ENGI_ITEM_WEAPONS_ION">
@@ -318,11 +353,12 @@
         <mod-append:name>LILY_FOCUS_ION_2</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_HEAVY</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_CHAIN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ZOLTAN_ITEM_WEAPONS_BEAM">
         <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_H</mod-append:name>
-
     </mod:findName>
 
 

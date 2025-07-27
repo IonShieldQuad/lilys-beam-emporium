@@ -1,8 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.9.0
+Date: 2025-07-27
+  Changes:
+    - Added 3 new ion pinpoints - Thermal, Radiation and Stun
+    - Modified sprites of Heavy Ion Pinpoint and Refractors
+    - Other miscellaneous changes and fixes
+---------------------------------------------------------------------------------------------------
 Version: 0.8.0
 Date: 2025-07-21
   Changes:
-    - The Beam Emporium store is officialy there and open for business! - Spawns in sectors 3 and 6
+    - The Beam Emporium store is officially there and open for business! - Spawns in sectors 3 and 6
     - Guaranteed to sell beams from the mod, including ones not found elsewhere!
     - Added "Quake" howitzer beam
     - Lowered weapon prices across the board

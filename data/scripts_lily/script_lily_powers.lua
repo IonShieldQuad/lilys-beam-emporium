@@ -4,9 +4,9 @@ local INT_MAX = 2147483647
 
 
 LILY_POWER_BEAM_CURSOR = Hyperspace.Resources:CreateImagePrimitive(
-Hyperspace.Resources:GetImageId("mouse/mouse_lily_beam.png"), -5, -5, 0, Graphics.GL_Color(1, 1, 1, 1), 1, false)
+Hyperspace.Resources:GetImageId("mouse/mouse_lily_beam.png"), 0, 0, 0, Graphics.GL_Color(1, 1, 1, 1), 1, false)
 LILY_POWER_ION_CURSOR = Hyperspace.Resources:CreateImagePrimitive(
-Hyperspace.Resources:GetImageId("mouse/mouse_lily_ion.png"), -5, -5, 0, Graphics.GL_Color(1, 1, 1, 1), 1, false)
+Hyperspace.Resources:GetImageId("mouse/mouse_lily_ion.png"), 0, 0, 0, Graphics.GL_Color(1, 1, 1, 1), 1, false)
 
 local function offset_point_direction(oldX, oldY, angle, distance)
     local newX = oldX + (distance * math.cos(math.rad(angle)))
@@ -84,6 +84,9 @@ script.on_internal_event(Defines.InternalEvents.POWER_ON_UPDATE,
             if power.def.cooldownColor.r > 0.5 then
             else
                 --print(power.temporaryPowerActive)
+                if not power.temporaryPowerActive and Hyperspace.playerVariables.lily_ion_active > 0 then
+                    Hyperspace.Sounds:PlaySoundMix("temporalEnd", -1, false)
+                end
                 if not power.temporaryPowerActive then
                     Hyperspace.playerVariables.lily_ion_active = 0
                 end
@@ -117,12 +120,12 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
             playerCursorRestore = Hyperspace.Mouse.validPointer
             playerCursorRestoreInvalid = Hyperspace.Mouse.invalidPointer
         end
-        Hyperspace.Mouse.validPointer = Hyperspace.Resources:GetImageId("effects_lily/invisible.png")
-        Hyperspace.Mouse.invalidPointer = Hyperspace.Resources:GetImageId("effects_lily/invisible.png")
+        --Hyperspace.Mouse.validPointer = Hyperspace.Resources:GetImageId("effects_lily/invisible.png")
+        --Hyperspace.Mouse.invalidPointer = Hyperspace.Resources:GetImageId("effects_lily/invisible.png")
         Hyperspace.Mouse.animateDoor = 0
     elseif playerCursorRestore then
-        Hyperspace.Mouse.validPointer = playerCursorRestore
-        Hyperspace.Mouse.invalidPointer = playerCursorRestoreInvalid
+        --Hyperspace.Mouse.validPointer = playerCursorRestore
+        --Hyperspace.Mouse.invalidPointer = playerCursorRestoreInvalid
         playerCursorRestore = nil
         playerCursorRestoreInvalid = nil
             
@@ -181,7 +184,7 @@ script.on_internal_event(Defines.InternalEvents.ON_MOUSE_L_BUTTON_DOWN, function
                     shipAtMouse,
                     1,
                     -0.1)
-                Hyperspace.Sounds:PlaySoundMix("focus_weak", -1, false)
+                Hyperspace.Sounds:PlaySoundMix("ionShoot1", -1, false)
             end
 
             if (Hyperspace.playerVariables.lily_beam_active == 1) then
@@ -223,16 +226,19 @@ script.on_render_event(Defines.RenderEvents.MOUSE_CONTROL, function()
     if count > 0 then
         Graphics.CSurface.GL_PushMatrix()
         Graphics.CSurface.GL_Translate(mousePos.x, mousePos.y, 0)
+        Graphics.CSurface.GL_Translate(-5, -5, 0)
         if count == 2 then
-            Graphics.CSurface.GL_Translate(-1, 1, 0)
+            Graphics.CSurface.GL_Translate(-2, 2, 0)
             Graphics.CSurface.GL_RenderPrimitive(LILY_POWER_ION_CURSOR)
-            Graphics.CSurface.GL_Translate(2, -2, 0)
+            Graphics.CSurface.GL_Translate(4, -4, 0)
             Graphics.CSurface.GL_RenderPrimitive(LILY_POWER_BEAM_CURSOR)
         else
 
             if Hyperspace.playerVariables.lily_ion_active == 1 then
+                Graphics.CSurface.GL_Translate(-2, 2, 0)
                 Graphics.CSurface.GL_RenderPrimitive(LILY_POWER_ION_CURSOR)
             else
+                Graphics.CSurface.GL_Translate(2, -2, 0)
                 Graphics.CSurface.GL_RenderPrimitive(LILY_POWER_BEAM_CURSOR)
             end
 

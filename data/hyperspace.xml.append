@@ -4,6 +4,7 @@
     <mod-append:script>data/scripts_lily/script_lily_weapons.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_augments.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_powers.lua</mod-append:script>
+	<mod-append:script>data/scripts_lily/script_lily_names.lua</mod-append:script>
 </mod:findLike>
 
 <mod:findLike type="events">
@@ -135,7 +136,7 @@ Supercharges your cursor with chaotic eldritch energy. Your next click on a tile
 			<cooldown>90</cooldown>
 			<jumpCooldown>reset</jumpCooldown>
 			<powerSounds>
-				<powerSound>lily_zap_1</powerSound>
+				<powerSound>temporalFast</powerSound>
 			</powerSounds>
 			<req type="enemy">
 				<aiDisabled/>
@@ -311,6 +312,11 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<blueprint>LILY_FOCUS_ION_CHAIN</blueprint>
 				<price>-1</price>
 			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_FOCUS_ION_PHASE</blueprint>
+				<price>-1</price>
+			</item>
 		</category>
 
 		<category type="WEAPONS">
@@ -363,6 +369,11 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<blueprint>LILY_BEAM_AMP_SIPHON_1</blueprint>
 				<price>-1</price>
 			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_PARTICLE_MINI</blueprint>
+				<price>-1</price>
+			</item>
 		</category>
 
 		<category type="WEAPONS">
@@ -389,6 +400,11 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			<item>
 				<modifier flat="false">1.1</modifier>
 				<blueprint>LILY_BEAM_SHOTGUN_P</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_SHOTGUN_9_P</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
@@ -588,6 +604,11 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<blueprint>LILY_FOCUS_ION_CHAIN</blueprint>
 				<price>-1</price>
 			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_FOCUS_ION_PHASE</blueprint>
+				<price>-1</price>
+			</item>
 		</category>
 
 		<category type="WEAPONS">
@@ -640,6 +661,11 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<blueprint>LILY_BEAM_AMP_SIPHON_1</blueprint>
 				<price>-1</price>
 			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_PARTICLE_MINI</blueprint>
+				<price>-1</price>
+			</item>
 		</category>
 
 		<category type="WEAPONS">
@@ -666,6 +692,11 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			<item>
 				<modifier flat="false">1.1</modifier>
 				<blueprint>LILY_BEAM_SHOTGUN_P</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_SHOTGUN_9_P</blueprint>
 				<price>-1</price>
 			</item>
 			<item>

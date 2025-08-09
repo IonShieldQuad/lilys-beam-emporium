@@ -254,6 +254,16 @@
 
 <FTL>
 
+	<animSheet name="loot_zoltan_2" w="182" h="62" fw="26" fh="62">weapons_loot/loot_zoltan_2.png</animSheet>
+	<weaponAnim name="loot_zoltan_2">
+		<sheet>loot_zoltan_2</sheet>
+		<desc length="7" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="18" y="10"/>
+		<mountPoint x="5" y="50"/>
+		<chargeImage>weapons_loot/loot_zoltan_2_glow.png</chargeImage>
+	</weaponAnim>
 
 	<animSheet name="lily_focus_pointer" w="96" h="33" fw="24" fh="33">weapon_lily/focus_pointer.png</animSheet>
 	<weaponAnim name="lily_focus_pointer">
@@ -358,36 +368,46 @@
 		<chargeImage>weapon_lily/focus_ion_bio_glow.png</chargeImage>
 	</weaponAnim>
 
+	<animSheet name="lily_focus_ion_phase" w="280" h="90" fw="40" fh="90">weapon_lily/focus_ion_phase.png</animSheet>
+	<weaponAnim name="lily_focus_ion_phase">
+		<sheet>lily_focus_ion_phase</sheet>
+		<desc length="7" x="0" y="0" />
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="21" y="44" />
+		<mountPoint x="5" y="65" />
+		<chargeImage>weapon_lily/focus_ion_phase_glow.png</chargeImage>
+	</weaponAnim>
 </FTL>
 <FTL>
-	<animSheet name="lily_beam_toggle_sunset_h" w="456" h="77" fw="38" fh="77">weapon_lily/beam_toggle_sunset_h.png</animSheet>
+	<animSheet name="lily_beam_toggle_sunset_h" w="722" h="77" fw="38" fh="77">weapon_lily/beam_toggle_sunset_h.png</animSheet>
 	<weaponAnim name="lily_beam_toggle_sunset_h">
 		<sheet>lily_beam_toggle_sunset_h</sheet>
-		<desc length="12" x="0" y="0"/>
-		<chargedFrame>6</chargedFrame>
-		<fireFrame>7</fireFrame>
+		<desc length="19" x="0" y="0"/>
+		<chargedFrame>10</chargedFrame>
+		<fireFrame>11</fireFrame>
 		<firePoint x="22" y="23"/>
 		<mountPoint x="10" y="55"/>
 		<chargeImage>weapon_lily/beam_toggle_sunset_h_glow.png</chargeImage>
 	</weaponAnim>
 
-	<animSheet name="lily_beam_toggle_sunset_p" w="456" h="77" fw="38" fh="77">weapon_lily/beam_toggle_sunset_p.png</animSheet>
+	<animSheet name="lily_beam_toggle_sunset_p" w="722" h="77" fw="38" fh="77">weapon_lily/beam_toggle_sunset_p.png</animSheet>
 	<weaponAnim name="lily_beam_toggle_sunset_p">
 		<sheet>lily_beam_toggle_sunset_p</sheet>
-		<desc length="12" x="0" y="0"/>
-		<chargedFrame>6</chargedFrame>
-		<fireFrame>7</fireFrame>
+		<desc length="19" x="0" y="0"/>
+		<chargedFrame>10</chargedFrame>
+		<fireFrame>11</fireFrame>
 		<firePoint x="22" y="23"/>
 		<mountPoint x="10" y="55"/>
 		<chargeImage>weapon_lily/beam_toggle_sunset_p_glow.png</chargeImage>
 	</weaponAnim>
 
-	<animSheet name="lily_beam_toggle_sunset_b" w="456" h="77" fw="38" fh="77">weapon_lily/beam_toggle_sunset_b.png</animSheet>
+	<animSheet name="lily_beam_toggle_sunset_b" w="722" h="77" fw="38" fh="77">weapon_lily/beam_toggle_sunset_b.png</animSheet>
 	<weaponAnim name="lily_beam_toggle_sunset_b">
 		<sheet>lily_beam_toggle_sunset_b</sheet>
-		<desc length="12" x="0" y="0"/>
-		<chargedFrame>6</chargedFrame>
-		<fireFrame>7</fireFrame>
+		<desc length="19" x="0" y="0"/>
+		<chargedFrame>10</chargedFrame>
+		<fireFrame>11</fireFrame>
 		<firePoint x="22" y="23"/>
 		<mountPoint x="10" y="55"/>
 		<chargeImage>weapon_lily/beam_toggle_sunset_b_glow.png</chargeImage>
@@ -538,39 +558,39 @@
 
 
 <FTL>
-	<animSheet name="lily_focus_pierce_1" w="646" h="111" fw="34" fh="111">weapon_lily/focus_pierce_1.png</animSheet>
+	<animSheet name="lily_focus_pierce_1" w="512" h="95" fw="32" fh="95">weapon_lily/focus_pierce_1.png</animSheet>
 	<weaponAnim name="lily_focus_pierce_1">
 		<sheet>lily_focus_pierce_1</sheet>
-		<desc length="19" x="0" y="0"/>
-		<chargedFrame>11</chargedFrame>
-		<fireFrame>12</fireFrame>
-		<firePoint x="18" y="27"/>
-		<mountPoint x="5" y="89"/>
+		<desc length="16" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>7</fireFrame>
+		<firePoint x="20" y="53"/>
+		<mountPoint x="5" y="75"/>
 		<chargeImage>weapon_lily/focus_pierce_1_glow.png</chargeImage>
 	</weaponAnim>
-	<animSheet name="lily_focus_pierce_1_icon" w="97" h="34" fw="97" fh="34">weapon_lily/focus_pierce_1_icon.png</animSheet>
+	<!--animSheet name="lily_focus_pierce_1_icon" w="97" h="34" fw="97" fh="34">weapon_lily/focus_pierce_1_icon.png</animSheet>
 	<anim name="lily_focus_pierce_1_icon">
 		<sheet>lily_focus_pierce_1_icon</sheet>
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
-	</anim>
+	</anim-->
 
-	<animSheet name="lily_focus_pierce_2" w="882" h="167" fw="42" fh="167">weapon_lily/focus_pierce_2.png</animSheet>
+	<animSheet name="lily_focus_pierce_2" w="912" h="135" fw="48" fh="135">weapon_lily/focus_pierce_2.png</animSheet>
 	<weaponAnim name="lily_focus_pierce_2">
 		<sheet>lily_focus_pierce_2</sheet>
-		<desc length="21" x="0" y="0"/>
-		<chargedFrame>11</chargedFrame>
-		<fireFrame>12</fireFrame>
-		<firePoint x="22" y="59"/>
-		<mountPoint x="10" y="145"/>
+		<desc length="19" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>9</fireFrame>
+		<firePoint x="31" y="78"/>
+		<mountPoint x="5" y="108"/>
 		<chargeImage>weapon_lily/focus_pierce_2_glow.png</chargeImage>
 	</weaponAnim>
-	<animSheet name="lily_focus_pierce_2_icon" w="128" h="42" fw="128" fh="42">weapon_lily/focus_pierce_2_icon.png</animSheet>
+	<!--animSheet name="lily_focus_pierce_2_icon" w="128" h="42" fw="128" fh="42">weapon_lily/focus_pierce_2_icon.png</animSheet>
 	<anim name="lily_focus_pierce_2_icon">
 		<sheet>lily_focus_pierce_2_icon</sheet>
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
-	</anim>
+	</anim-->
 
 
 </FTL>
@@ -598,8 +618,28 @@
 		<mountPoint x="5" y="30"/>
 		<chargeImage>weapon_lily/beam_shotgun_glow.png</chargeImage>
 	</weaponAnim>
-	
+		
+	<animSheet name="lily_beam_shotgun_9_p" w="1378" h="64" fw="53" fh="64">weapon_lily/beam_shotgun_9_p.png</animSheet>
+	<weaponAnim name="lily_beam_shotgun_9_p">
+		<sheet>lily_beam_shotgun_9_p</sheet>
+		<desc length="26" x="0" y="0"/>
+		<chargedFrame>18</chargedFrame>
+		<fireFrame>19</fireFrame>
+		<firePoint x="21" y="10"/>
+		<mountPoint x="8" y="38"/>
+		<chargeImage>weapon_lily/beam_shotgun_9_glow.png</chargeImage>
+	</weaponAnim>
 
+	<animSheet name="lily_beam_shotgun_9_s" w="1378" h="64" fw="53" fh="64">weapon_lily/beam_shotgun_9_s.png</animSheet>
+	<weaponAnim name="lily_beam_shotgun_9_s">
+		<sheet>lily_beam_shotgun_9_s</sheet>
+		<desc length="26" x="0" y="0"/>
+		<chargedFrame>18</chargedFrame>
+		<fireFrame>19</fireFrame>
+		<firePoint x="21" y="10"/>
+		<mountPoint x="8" y="38"/>
+		<chargeImage>weapon_lily/beam_shotgun_9_glow.png</chargeImage>
+	</weaponAnim>
 
 
 </FTL>
@@ -632,6 +672,23 @@
 		<fireFrame>39</fireFrame>
 		<firePoint x="24" y="90"/>
 		<mountPoint x="5" y="115"/>
+	</weaponAnim>
+
+
+
+</FTL>
+
+<FTL>
+
+	<animSheet name="lily_beam_particle_mini" w="192" h="40" fw="24" fh="40">weapon_lily/beam_particle_mini.png</animSheet>
+	<weaponAnim name="lily_beam_particle_mini">
+		<sheet>lily_beam_particle_mini</sheet>
+		<desc length="8" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="16" y="17"/>
+		<mountPoint x="5" y="27"/>
+		<chargeImage>weapon_lily/beam_particle_mini_glow.png</chargeImage>
 	</weaponAnim>
 
 

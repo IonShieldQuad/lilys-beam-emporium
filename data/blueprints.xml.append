@@ -149,7 +149,7 @@ disable shields as well as systems.</tooltip>
         <desc>Increases weapon charge rate by 30%. However, all weapons also recieve -30% accuracy penalty.</desc>
         <cost>100</cost>
         <bp>5</bp>
-        <rarity>5</rarity>
+        <rarity>0</rarity>
         <stackable>true</stackable>
     </augBlueprint>
 
@@ -216,6 +216,36 @@ disable shields as well as systems.</tooltip>
 
 
 <FTL>
+
+    <weaponBlueprint name="LOOT_ZOLTAN_2">
+        <type>BEAM</type>
+        <tip>loot_zoltan_2</tip>
+        <title>'Lucerne' Beam</title>
+        <short>'Lucerne'</short>
+        <desc>Special loot weapon. See tooltip in the inventory to check the improvements over the base version.</desc>
+        <tooltip>Beam weapon; 1 damage; 2x damage in systemless rooms.</tooltip>
+        <damage>1</damage>
+        <sysDamage>1</sysDamage>
+        <sp>0</sp>
+        <fireChance>0</fireChance>
+        <breachChance>5</breachChance>
+        <cooldown>13</cooldown>
+        <hullBust>1</hullBust>
+        <power>2</power>
+        <cost>70</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <image>beam_contact</image>
+        <length>100</length>
+        <launchSounds>
+            <sound>beam1</sound>
+            <sound>beam1_2</sound>
+        </launchSounds>
+        <weaponArt>loot_zoltan_2</weaponArt>
+        <iconImage>beamH</iconImage>
+    </weaponBlueprint>
+
+
     <weaponBlueprint name="LILY_FOCUS_POINTER">
         <type>BEAM</type>
         <flavorType>Pinpoint</flavorType>
@@ -227,14 +257,16 @@ disable shields as well as systems.</tooltip>
         <iconReplace>lily_focus_pointer_icon</iconReplace>
         <damage>0</damage>
         <sp>10</sp>
+        <mv-conservative/>
         <color>
             <r>255</r>
             <g>0</g>
             <b>0</b>
         </color>
-        <cooldown>1</cooldown>
+        <cooldown>2</cooldown>
         <stunChance>1</stunChance>
-        <speed>100</speed>
+        <speed>1</speed>
+        <mv-aiCrewTarget>MOST_CREW</mv-aiCrewTarget>
         <fireTime>0.05</fireTime>
         <power>0</power>
         <cost>20</cost>
@@ -245,6 +277,86 @@ disable shields as well as systems.</tooltip>
         <!--launchSounds>
             <sound>focus_weak</sound>
         </launchSounds-->
+        <statBoosts>
+            <statBoost name="controllable">
+                <boostType>SET</boostType>
+                <value>false</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>false</affectsSelf>
+                <duration>10</duration>
+                <whiteList>
+                    <eldritch_cat/>
+                </whiteList>
+            </statBoost>
+            <statBoost name="moveSpeedMultiplier">
+                <boostType>MULT</boostType>
+                <amount>2.0</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+                <boostAnim>pheromones</boostAnim>
+                <whiteList>
+                    <eldritch_cat/>
+                </blackList>
+            </statBoost>
+            <statBoost name="damageMultiplier">
+                <boostType>MULT</boostType>
+                <amount>2.0</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+                <whiteList>
+                    <eldritch_cat/>
+                </blackList>
+            </statBoost>
+            <statBoost name="sabotageSpeedMultiplier">
+                <boostType>MULT</boostType>
+                <amount>2.0</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+                <whiteList>
+                    <eldritch_cat/>
+                </blackList>
+            </statBoost>
+            <statBoost name="repairSpeed">
+                <boostType>MULT</boostType>
+                <amount>2.0</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+                <whiteList>
+                    <eldritch_cat/>
+                </blackList>
+            </statBoost>
+            <statBoost name="stunMultiplier">
+                <boostType>MULT</boostType>
+                <amount>0.1</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>true</affectsSelf>
+                <maxStacks>1</maxStacks>
+                <duration>10</duration>
+                <whiteList>
+                    <eldritch_cat/>
+                </blackList>
+            </statBoost>
+        </statBoosts>
         <weaponArt>lily_focus_pointer</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
@@ -368,9 +480,9 @@ disable shields as well as systems.</tooltip>
         <sp>0</sp>
         <ionBeamFix>true</ionBeamFix>
         <color>
-            <r>0</r>
-            <g>255</g>
-            <b>255</b>
+            <r>133</r>
+            <g>231</g>
+            <b>237</b>
         </color>
         <stunChance>2</stunChance>
         <fireChance>1</fireChance>
@@ -384,8 +496,20 @@ disable shields as well as systems.</tooltip>
         <image>beam_contact</image>
         <length>1</length>
         <launchSounds>
-            <sound>focus_weak</sound>
+            <sound>ionShoot1</sound>
+            <sound>ionShoot2</sound>
+            <sound>ionShoot3</sound>
         </launchSounds>
+        <hitShipSounds>
+            <sound>ionHit1</sound>
+            <sound>ionHit2</sound>
+            <sound>ionHit3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>ionShields1</sound>
+            <sound>ionShields2</sound>
+            <sound>ionShields3</sound>
+        </hitShieldSounds>
         <weaponArt>lily_focus_ion_1</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
@@ -403,9 +527,9 @@ disable shields as well as systems.</tooltip>
         <sp>0</sp>
         <ionBeamFix>true</ionBeamFix>
         <color>
-            <r>0</r>
-            <g>255</g>
-            <b>255</b>
+            <r>133</r>
+            <g>231</g>
+            <b>237</b>
         </color>
         <stunChance>2</stunChance>
         <fireChance>1</fireChance>
@@ -419,8 +543,20 @@ disable shields as well as systems.</tooltip>
         <image>beam_contact</image>
         <length>1</length>
         <launchSounds>
-            <sound>focus_weak</sound>
+            <sound>ionShoot1</sound>
+            <sound>ionShoot2</sound>
+            <sound>ionShoot3</sound>
         </launchSounds>
+        <hitShipSounds>
+            <sound>ionHit1</sound>
+            <sound>ionHit2</sound>
+            <sound>ionHit3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>ionShields1</sound>
+            <sound>ionShields2</sound>
+            <sound>ionShields3</sound>
+        </hitShieldSounds>
         <weaponArt>lily_focus_ion_2</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
@@ -439,9 +575,9 @@ disable shields as well as systems.</tooltip>
         <ion>3</ion>
         <ionBeamFix>true</ionBeamFix>
         <color>
-            <r>0</r>
-            <g>255</g>
-            <b>255</b>
+            <r>133</r>
+            <g>231</g>
+            <b>237</b>
         </color>
         <stunChance>5</stunChance>
         <fireChance>5</fireChance>
@@ -455,8 +591,20 @@ disable shields as well as systems.</tooltip>
         <image>beam_contact</image>
         <length>1</length>
         <launchSounds>
-            <sound>focus_strong</sound>
+            <sound>ionShoot1</sound>
+            <sound>ionShoot2</sound>
+            <sound>ionShoot3</sound>
         </launchSounds>
+        <hitShipSounds>
+            <sound>ionHit1</sound>
+            <sound>ionHit2</sound>
+            <sound>ionHit3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>ionShields1</sound>
+            <sound>ionShields2</sound>
+            <sound>ionShields3</sound>
+        </hitShieldSounds>
         <weaponArt>lily_focus_ion_heavy</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
@@ -474,9 +622,9 @@ disable shields as well as systems.</tooltip>
         <sp>0</sp>
         <ionBeamFix>true</ionBeamFix>
         <color>
-            <r>0</r>
-            <g>255</g>
-            <b>255</b>
+            <r>133</r>
+            <g>231</g>
+            <b>237</b>
         </color>
         <stunChance>2</stunChance>
         <fireChance>1</fireChance>
@@ -495,8 +643,20 @@ disable shields as well as systems.</tooltip>
         </boost>
         <length>1</length>
         <launchSounds>
-            <sound>focus_weak</sound>
+            <sound>ionShoot1</sound>
+            <sound>ionShoot2</sound>
+            <sound>ionShoot3</sound>
         </launchSounds>
+        <hitShipSounds>
+            <sound>ionHit1</sound>
+            <sound>ionHit2</sound>
+            <sound>ionHit3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>ionShields1</sound>
+            <sound>ionShields2</sound>
+            <sound>ionShields3</sound>
+        </hitShieldSounds>
         <weaponArt>lily_focus_ion_chain</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
@@ -531,8 +691,20 @@ disable shields as well as systems.</tooltip>
         <image>beam_contact</image>
         <length>1</length>
         <launchSounds>
-            <sound>focus_weak</sound>
+            <sound>ionShoot1</sound>
+            <sound>ionShoot2</sound>
+            <sound>ionShoot3</sound>
         </launchSounds>
+        <hitShipSounds>
+            <sound>ionHit1</sound>
+            <sound>ionHit2</sound>
+            <sound>ionHit3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>ionShields1</sound>
+            <sound>ionShields2</sound>
+            <sound>ionShields3</sound>
+        </hitShieldSounds>
         <weaponArt>lily_focus_ion_fire</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
@@ -567,8 +739,20 @@ disable shields as well as systems.</tooltip>
         <image>beam_contact</image>
         <length>1</length>
         <launchSounds>
-            <sound>focus_weak</sound>
+            <sound>ionShoot1</sound>
+            <sound>ionShoot2</sound>
+            <sound>ionShoot3</sound>
         </launchSounds>
+        <hitShipSounds>
+            <sound>ionHit1</sound>
+            <sound>ionHit2</sound>
+            <sound>ionHit3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>ionShields1</sound>
+            <sound>ionShields2</sound>
+            <sound>ionShields3</sound>
+        </hitShieldSounds>
         <weaponArt>lily_focus_ion_stun</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
@@ -580,7 +764,7 @@ disable shields as well as systems.</tooltip>
         <title>Ionizing Radiation Pinpoint</title>
         <short>Rad Ionpoint</short>
         <desc>A modified pinpoint beam that shoots a stream of beta particles, disrupting systems and irradiating crew.</desc>
-        <tooltip>One ion damage per room beam weapon</tooltip>
+        <tooltip>Two ion damage per room beam weapon</tooltip>
         <damage>0</damage>
         <ion>1</ion>
         <persDamage>2</persDamage>
@@ -607,10 +791,75 @@ disable shields as well as systems.</tooltip>
         <rarity>5</rarity>
         <image>beam_contact</image>
         <length>1</length>
+        <mv-aiSystemTarget system="any"/>
         <launchSounds>
-            <sound>focus_weak</sound>
+            <sound>ionShoot1</sound>
+            <sound>ionShoot2</sound>
+            <sound>ionShoot3</sound>
         </launchSounds>
+        <hitShipSounds>
+            <sound>ionHit1</sound>
+            <sound>ionHit2</sound>
+            <sound>ionHit3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>ionShields1</sound>
+            <sound>ionShields2</sound>
+            <sound>ionShields3</sound>
+        </hitShieldSounds>
         <weaponArt>lily_focus_ion_bio</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+        <weaponBlueprint name="LILY_FOCUS_ION_PHASE">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_phase</tip>
+        <title>Phaser Ion Pinpoint</title>
+        <short>Ph. Ionpoint</short>
+        <desc>A modified pinpoint beam that does 2 ion damage and phases through shielding. Gradually adapts to enemy shielding, allowing it to phase through extra layers with each consecutive shot.</desc>
+        <tooltip>Two ion damage per room beam weapon</tooltip>
+        <damage>0</damage>
+        <ion>2</ion>
+        <sp>3</sp>
+        <ionBeamFix>true</ionBeamFix>
+        <color>
+            <r>229</r>
+            <g>253</g>
+            <b>255</b>
+        </color>
+        <boost>
+            <type>damage</type>
+            <amount>1</amount>
+            <count>999</count>
+        </boost>
+        <stunChance>0</stunChance>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>13</cooldown>
+        <speed>1</speed>
+        <power>3</power>
+        <cost>85</cost>
+        <bp>4</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <launchSounds>
+            <sound>ionShoot1</sound>
+            <sound>ionShoot2</sound>
+            <sound>ionShoot3</sound>
+        </launchSounds>
+        <hitShipSounds>
+            <sound>ionHit1</sound>
+            <sound>ionHit2</sound>
+            <sound>ionHit3</sound>
+        </hitShipSounds>
+        <hitShieldSounds>
+            <sound>ionShields1</sound>
+            <sound>ionShields2</sound>
+            <sound>ionShields3</sound>
+        </hitShieldSounds>
+        <weaponArt>lily_focus_ion_phase</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
 </FTL>
@@ -1090,6 +1339,8 @@ disable shields as well as systems.</tooltip>
     <speed>0</speed> 
     <fireTime>0.25</fireTime>
     <mv-stealth/>
+    <mv-conservative/>
+
 
     <shots>1</shots>
     <mv-pop>
@@ -1254,8 +1505,8 @@ disable shields as well as systems.</tooltip>
     <short>Refr. I</short>
     <desc>A pinpoint beam utilizing specialized pierce technology. While incapable of piercing shields the regular way, it allows the beam to refract through them, still hitting the ship, albeit with precision loss.</desc>
     <tooltip>Refractor beam weapon</tooltip>
-    <iconReplace>lily_focus_pierce_1_icon</iconReplace>
-    <damage>2</damage>
+    <!--iconReplace>lily_focus_pierce_1_icon</iconReplace-->
+    <damage>3</damage>
     <ion>0</ion>
     <sp>-10</sp>
     <color>
@@ -1267,10 +1518,10 @@ disable shields as well as systems.</tooltip>
     <fireChance>2</fireChance>
     <breachChance>3</breachChance>
     <hullbust>1</hullbust>
-    <cooldown>16</cooldown>
+    <cooldown>18</cooldown>
     <speed>1</speed>
     <power>2</power>
-    <cost>60</cost>
+    <cost>90</cost>
     <bp>2</bp>
     <rarity>3</rarity>
     <image>beam_contact</image>
@@ -1282,46 +1533,6 @@ disable shields as well as systems.</tooltip>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
-<!--weaponBlueprint name="LILY_FOCUS_PIERCE_1_FAKE">
-    <type>BEAM</type>
-    <flavorType>Pinpoint</flavorType>
-    <tip>tip_lily_refractor</tip>
-    <title>NO</title>
-    <short>NO</short>
-    <desc>NO</desc>
-    <tooltip>Refractor beam weapon</tooltip>
-    <iconReplace>lily_focus_pierce_1_icon</iconReplace>
-    <damage>2</damage>
-    <ion>0</ion>
-    <sp>-10</sp>
-    <color>
-        <r>255</r>
-        <g>0</g>
-        <b>0</b>
-    </color>
-    <mv-pop>
-        <countSuper>0</countSuper>
-        <countSuper>-2</countSuper>
-    </mv-pop>
-    <stunChance>0</stunChance>
-    <fireChance>0</fireChance>
-    <breachChance>0</breachChance>
-    <hullbust>0</hullbust>
-    <cooldown>16</cooldown>
-    <speed>1</speed>
-    <power>2</power>
-    <cost>80</cost>
-    <bp>2</bp>
-    <rarity>0</rarity>
-    <image>beam_contact</image>
-    <length>1</length>
-    <launchSounds>
-        <sound>focus_weak</sound>
-    </launchSounds>
-    <weaponArt>lily_focus_pierce_1</weaponArt>
-    <iconImage>beam</iconImage>
-</weaponBlueprint-->
-
 
 <weaponBlueprint name="LILY_FOCUS_PIERCE_1_R">
     <type>BEAM</type>
@@ -1331,8 +1542,8 @@ disable shields as well as systems.</tooltip>
     <short>Refr. I</short>
     <desc>YOU SHOULD NEVER SEE THIS</desc>
     <tooltip>Refractor beam weapon</tooltip>
-    <iconReplace>lily_focus_pierce_1_icon</iconReplace>
-    <damage>2</damage>
+    <!--iconReplace>lily_focus_pierce_1_icon</iconReplace-->
+    <damage>3</damage>
     <ion>0</ion>
     <sp>10</sp>
     <color>
@@ -1344,7 +1555,7 @@ disable shields as well as systems.</tooltip>
     <fireChance>2</fireChance>
     <breachChance>3</breachChance>
     <hullbust>1</hullbust>
-    <cooldown>16</cooldown>
+    <cooldown>18</cooldown>
     <speed>1</speed>
     <power>2</power>
     <cost>60</cost>
@@ -1365,7 +1576,7 @@ disable shields as well as systems.</tooltip>
     <short>Refr. II</short>
     <desc>A pinpoint beam utilizing specialized pierce technology. While incapable of piercing shields the regular way, it allows the beam to refract through them, still hitting the ship, albeit with precision loss. Stronger then the Mk I.</desc>
     <tooltip>Refractor beam weapon</tooltip>
-    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <!--iconReplace>lily_focus_pierce_2_icon</iconReplace-->
     <damage>4</damage>
     <ion>0</ion>
     <sp>-10</sp>
@@ -1400,7 +1611,7 @@ disable shields as well as systems.</tooltip>
     <short>Refr. II</short>
     <desc>YOU SHOULD NEVER SEE THIS</desc>
     <tooltip>Refractor beam weapon</tooltip>
-    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <!--iconReplace>lily_focus_pierce_2_icon</iconReplace-->
     <damage>1</damage>
     <hullbust>1</hullbust>
     <ion>0</ion>
@@ -1433,7 +1644,7 @@ disable shields as well as systems.</tooltip>
     <short>Refr. II</short>
     <desc>YOU SHOULD NEVER SEE THIS</desc>
     <tooltip>Refractor beam weapon</tooltip>
-    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <!--iconReplace>lily_focus_pierce_2_icon</iconReplace-->
     <damage>0</damage>
     <sysDamage>1</sysDamage>
     <ion>0</ion>
@@ -1466,7 +1677,7 @@ disable shields as well as systems.</tooltip>
     <short>Refr. II</short>
     <desc>YOU SHOULD NEVER SEE THIS</desc>
     <tooltip>Refractor beam weapon</tooltip>
-    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <!--iconReplace>lily_focus_pierce_2_icon</iconReplace-->
     <damage>0</damage>
     <hullbust>0</hullbust>
     <ion>0</ion>
@@ -1500,7 +1711,7 @@ disable shields as well as systems.</tooltip>
     <short>Refr. II</short>
     <desc>YOU SHOULD NEVER SEE THIS</desc>
     <tooltip>Refractor beam weapon</tooltip>
-    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <!--iconReplace>lily_focus_pierce_2_icon</iconReplace-->
     <damage>1</damage>
     <hullbust>0</hullbust>
     <ion>0</ion>
@@ -1533,7 +1744,7 @@ disable shields as well as systems.</tooltip>
     <short>Refr. II</short>
     <desc>YOU SHOULD NEVER SEE THIS</desc>
     <tooltip>Refractor beam weapon</tooltip>
-    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <!--iconReplace>lily_focus_pierce_2_icon</iconReplace-->
     <damage>0</damage>
     <hullbust>0</hullbust>
     <ion>1</ion>
@@ -1566,7 +1777,7 @@ disable shields as well as systems.</tooltip>
     <short>Refr. II</short>
     <desc>YOU SHOULD NEVER SEE THIS</desc>
     <tooltip>Refractor beam weapon</tooltip>
-    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <!--iconReplace>lily_focus_pierce_2_icon</iconReplace-->
     <damage>1</damage>
     <hullbust>0</hullbust>
     <ion>0</ion>
@@ -1599,7 +1810,7 @@ disable shields as well as systems.</tooltip>
     <short>Refr. II</short>
     <desc>YOU SHOULD NEVER SEE THIS</desc>
     <tooltip>Refractor beam weapon</tooltip>
-    <iconReplace>lily_focus_pierce_2_icon</iconReplace>
+    <!--iconReplace>lily_focus_pierce_2_icon</iconReplace-->
     <damage>0</damage>
     <hullbust>0</hullbust>
     <persDamage>4</persDamage>
@@ -1644,9 +1855,9 @@ disable shields as well as systems.</tooltip>
     <type>BEAM</type>
     <flavorType>Pinpoint</flavorType>
     <tip>tip_lily_beam_shotgun</tip>
-    <title>'Matrix' Pinpoint Array [Pattern]</title>
-    <short>'Matrix' [P]</short>
-    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak chaos on enemy ship, but is cumbersome and hard to aim. Current mode: Pattern</desc>
+    <title>'Array' Multi-Pinpoint [Pattern]</title>
+    <short>'Array' [P]</short>
+    <desc>This weapon is an array of 3 pinpoint beams clustered together, modified to be able to pop shields. Current mode: Pattern</desc>
     <tooltip>Pinpoint array weapon</tooltip>
     <damage>1</damage>
     <persDamage>2</persDamage>
@@ -1661,10 +1872,10 @@ disable shields as well as systems.</tooltip>
     <fireChance>8</fireChance>
     <breachChance>0</breachChance>
     <hullbust>0</hullbust>
-    <cooldown>25</cooldown>
+    <cooldown>17</cooldown>
     <speed>1</speed>
-    <power>4</power>
-    <cost>140</cost>
+    <power>2</power>
+    <cost>90</cost>
     <bp>8</bp>
     <rarity>0</rarity>
     <image>beam_contact</image>
@@ -1683,20 +1894,20 @@ disable shields as well as systems.</tooltip>
     <type>BURST</type>
     <flavorType>Pinpoint</flavorType>
     <tip>tip_lily_beam_shotgun</tip>
-    <title>'Matrix' Pinpoint Array [Scatter]</title>
-    <short>'Matrix' [S]</short>
-    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak chaos on enemy ship, but is cumbersome and hard to aim. Current mode: Pattern</desc>
+    <title>'Array' Multi-Pinpoint [Scatter]</title>
+    <short>'Array' [S]</short>
+    <desc>This weapon is an array of 3 pinpoint beams clustered together, modified to be able to pop shields. Current mode: Scatter</desc>
     <tooltip>Pinpoint array weapon</tooltip>
-    <!--radius>100</radius-->
+    <!--radius>60</radius-->
     <damage>1</damage>
     <persDamage>2</persDamage>
     <sp>0</sp>
     <fireChance>8</fireChance>
     <breachChance>0</breachChance>
-    <cooldown>25</cooldown>
+    <cooldown>17</cooldown>
     <hullBust>0</hullBust>
-    <power>4</power>
-    <cost>140</cost>
+    <power>2</power>
+    <cost>90</cost>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed>
@@ -1717,6 +1928,86 @@ disable shields as well as systems.</tooltip>
         <sound>focus_weak</sound>
     </launchSounds>
     <weaponArt>lily_beam_shotgun_s</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SHOTGUN_9_P">
+    <type>BEAM</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_beam_shotgun</tip>
+    <title>'Matrix' Multi-Pinpoint [Pattern]</title>
+    <short>'Matrix' [P]</short>
+    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak chaos on enemy ship, but is cumbersome and hard to aim. Current mode: Pattern</desc>
+    <tooltip>Pinpoint array weapon</tooltip>
+    <damage>1</damage>
+    <persDamage>2</persDamage>
+    <ion>0</ion>
+    <sp>0</sp>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <stunChance>0</stunChance>
+    <fireChance>8</fireChance>
+    <breachChance>0</breachChance>
+    <hullbust>0</hullbust>
+    <cooldown>20</cooldown>
+    <speed>1</speed>
+    <power>5</power>
+    <cost>140</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <length>1</length>
+    <mv-pop>
+        <count>1</count>
+        <countSuper>1</countSuper>
+    </mv-pop>
+    <launchSounds>
+        <sound>focus_strong</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_shotgun_9_p</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="LILY_BEAM_SHOTGUN_9_S">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_beam_shotgun</tip>
+    <title>'Matrix' Multi-Pinpoint [Scatter]</title>
+    <short>'Matrix' [S]</short>
+    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak chaos on enemy ship, but is cumbersome and hard to aim. Current mode: Pattern</desc>
+    <tooltip>Pinpoint array weapon</tooltip>
+    <!--radius>100</radius-->
+    <damage>1</damage>
+    <persDamage>2</persDamage>
+    <sp>0</sp>
+    <fireChance>8</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>20</cooldown>
+    <hullBust>0</hullBust>
+    <power>5</power>
+    <cost>140</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>
+    <speed>0</speed>
+    <!--fireTime>0.1</fireTime-->
+    <mv-stealth/>
+
+    <shots>1</shots>
+    <mv-pop>
+        <count>1</count>
+        <countSuper>1</countSuper>
+    </mv-pop>
+    <projectiles>
+        <projectile count="1" fake="false">laser_burst</projectile>
+    </projectiles>
+
+
+    <launchSounds>
+        <sound>focus_strong</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_shotgun_9_s</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 </FTL>
@@ -1757,7 +2048,7 @@ disable shields as well as systems.</tooltip>
         <fireChance>0</fireChance>
         <breachChance>0</breachChance>
         <hullbust>0</hullbust>
-        <cooldown>10</cooldown>
+        <cooldown>15</cooldown>
         <speed>1</speed>
         <power>2</power>
         <cost>120</cost>
@@ -1765,6 +2056,30 @@ disable shields as well as systems.</tooltip>
         <rarity>0</rarity>
         <!--image>beam_contact</image-->
         <length>1</length>
+        <statBoosts>
+            <statBoost name="controllable">
+                <boostType>SET</boostType>
+                <value>false</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ENEMIES</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>false</affectsSelf>
+                <duration>15</duration>
+                <!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
+                <blackList>
+                    <slug_hektar_box/>
+                    <unique_billy_box/>
+                    <unique_irwin_demon/>
+                    <unique_dessius/>
+                    <siren/>
+                    <siren_harpy/>
+                    <eldritch_thing/>
+                    <eldritch_thing_weak/>
+                    <eldritch_cat/>
+                    <gnome/>
+                </blackList>
+            </statBoost>
+        </statBoosts>
         <launchSounds>
             <sound>lily_dial_up_1</sound>
             <sound>lily_dial_up_2</sound>
@@ -1906,3 +2221,42 @@ disable shields as well as systems.</tooltip>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
 </FTL>
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					MISC
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+
+<weaponBlueprint name="LILY_BEAM_PARTICLE_MINI">
+    <type>BEAM</type>
+    <tip>tip_particle_beam</tip>
+    <title>Mini Particle Beam</title>
+    <short>Mini Part. B.</short>
+    <desc>Fires a small concentrated beam that damages systems and lights fires, but does no damage to the hull or crew.</desc>
+    <tooltip>Starts fires and does 1 hull damage per room.</tooltip>
+    <damage>0</damage>
+    <sysDamage>1</sysDamage>
+    <sp>1</sp>
+    <fireChance>3</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>12</cooldown>
+    <color>
+        <r>255</r>
+        <g>110</g>
+        <b>0</b>
+    </color>
+    <power>1</power>
+    <cost>40</cost>
+    <bp>8</bp>
+    <rarity>4</rarity>
+    <length>45</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_particle_mini</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>

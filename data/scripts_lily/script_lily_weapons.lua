@@ -108,13 +108,27 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
 
     end
 
+    if weapon.blueprint and weapon.blueprint.name == "LILY_FOCUS_ION_PHASE" then
+
+        local damage = projectile.damage
+        damage.iShieldPiercing = damage.iIonDamage + 1
+        damage.iIonDamage = 2 + (damage.iShieldPiercing > 10 and (damage.iShieldPiercing - 10) / 10 or 0)
+        --print(projectile.damage.iIonDamage)
+        --print(projectile.damage.iShieldPiercing)
+    end
+
     if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SHOTGUN_P" then
-        local offsets = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}}
-        local offsets2 = { 6, 6, 6, 0, 0, -6, -6, -6 }
+        local offsets = {{-1, 0}, {1, 0}}
+        local offsets2 = { 6, -6 }
         local gap = 35 * 2
         while #offsets > 0 do
             local idx = math.random(#offsets)
             local offset = table.remove(offsets, idx)
+            local vertical = math.random() < 0.5
+            if vertical then
+                offset[2] = offset[1]
+                offset[1] = 0
+            end
             idx = math.random(#offsets2)
             local offset2 = table.remove(offsets2, idx)
             local tgt1 = Hyperspace.Pointf(projectile.target.x + offset[1] * gap, projectile.target.y + offset[2] * gap)
@@ -140,17 +154,18 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
                 1,
                 -0.1)
             ---@diagnostic disable-next-line: undefined-field
-            beam.sub_start = projectile.sub_start--offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+            beam.sub_start = projectile.sub_start
+            --offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
 
         end
     end
 
     if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SHOTGUN_S" then
-        local offsets2 = { 6, 6, 6, 0, 0, 0, -6, -6, -6 }
+        local offsets2 = { 6, 0, -6 }
         while #offsets2 > 0 do
             local idx = math.random(#offsets2)
             local offset2 = table.remove(offsets2, idx)
-            local tgt1 = get_random_point_in_radius(projectile.target, 100)
+            local tgt1 = get_random_point_in_radius(projectile.target, 45)
             local tgt2 = Hyperspace.Pointf(tgt1.x, tgt1.y + 1)
 
             local spaceManager = Hyperspace.App.world.space
@@ -174,6 +189,75 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
                 -0.1)
             beam.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
 
+        end
+        projectile:Kill()
+    end
+
+    if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SHOTGUN_9_P" then
+        local offsets = { { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 }, { 0, 1 }, { 1, -1 }, { 1, 0 }, { 1, 1 } }
+        local offsets2 = { 8, 8, 8, 0, 0, -8, -8, -8 }
+        local gap = 35 * 2
+        while #offsets > 0 do
+            local idx = math.random(#offsets)
+            local offset = table.remove(offsets, idx)
+            idx = math.random(#offsets2)
+            local offset2 = table.remove(offsets2, idx)
+            local tgt1 = Hyperspace.Pointf(projectile.target.x + offset[1] * gap, projectile.target.y + offset[2] * gap)
+            local tgt2 = Hyperspace.Pointf(tgt1.x, tgt1.y + 1)
+
+            local spaceManager = Hyperspace.App.world.space
+
+            local pos = projectile.position
+            if projectile.currentSpace == 0 then
+                pos = Hyperspace.Pointf(projectile.position.x, projectile.position.y + offset2)
+            else
+                pos = Hyperspace.Pointf(projectile.position.x + offset2, projectile.position.y)
+            end
+
+            local beam = spaceManager:CreateBeam(
+                Hyperspace.Blueprints:GetWeaponBlueprint("LILY_BEAM_SHOTGUN_9_P"),
+                pos,
+                projectile.currentSpace,
+                projectile.ownerId,
+                tgt1,
+                tgt2,
+                projectile.destinationSpace,
+                1,
+                -0.1)
+            ---@diagnostic disable-next-line: undefined-field
+            beam.sub_start = projectile.sub_start
+            --offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+        end
+    end
+
+    if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SHOTGUN_9_S" then
+        local offsets2 = { 8, 8, 8, 0, 0, 0, -8, -8, -8 }
+        while #offsets2 > 0 do
+            local idx = math.random(#offsets2)
+            local offset2 = table.remove(offsets2, idx)
+            local tgt1 = get_random_point_in_radius(projectile.target, 80)
+            local tgt2 = Hyperspace.Pointf(tgt1.x, tgt1.y + 1)
+
+            local spaceManager = Hyperspace.App.world.space
+
+            local pos = projectile.position
+            if projectile.currentSpace == 0 then
+                pos = Hyperspace.Pointf(projectile.position.x, projectile.position.y + offset2)
+            else
+                pos = Hyperspace.Pointf(projectile.position.x + offset2, projectile.position.y)
+            end
+
+            local beam = spaceManager:CreateBeam(
+                Hyperspace.Blueprints:GetWeaponBlueprint("LILY_BEAM_SHOTGUN_9_P"),
+                pos,
+                projectile.currentSpace,
+                projectile.ownerId,
+                tgt1,
+                tgt2,
+                projectile.destinationSpace,
+                1,
+                -0.1)
+            beam.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
         end
         projectile:Kill()
     end

@@ -302,7 +302,7 @@ disable shields as well as systems.</tooltip>
                 <boostAnim>pheromones</boostAnim>
                 <whiteList>
                     <eldritch_cat/>
-                </blackList>
+                </whiteList>
             </statBoost>
             <statBoost name="damageMultiplier">
                 <boostType>MULT</boostType>
@@ -315,7 +315,7 @@ disable shields as well as systems.</tooltip>
                 <duration>10</duration>
                 <whiteList>
                     <eldritch_cat/>
-                </blackList>
+                </whiteList>
             </statBoost>
             <statBoost name="sabotageSpeedMultiplier">
                 <boostType>MULT</boostType>
@@ -328,7 +328,7 @@ disable shields as well as systems.</tooltip>
                 <duration>10</duration>
                 <whiteList>
                     <eldritch_cat/>
-                </blackList>
+                </whiteList>
             </statBoost>
             <statBoost name="repairSpeed">
                 <boostType>MULT</boostType>
@@ -341,7 +341,7 @@ disable shields as well as systems.</tooltip>
                 <duration>10</duration>
                 <whiteList>
                     <eldritch_cat/>
-                </blackList>
+                </whiteList>
             </statBoost>
             <statBoost name="stunMultiplier">
                 <boostType>MULT</boostType>
@@ -354,7 +354,7 @@ disable shields as well as systems.</tooltip>
                 <duration>10</duration>
                 <whiteList>
                     <eldritch_cat/>
-                </blackList>
+                </whiteList>
             </statBoost>
         </statBoosts>
         <weaponArt>lily_focus_pointer</weaponArt>

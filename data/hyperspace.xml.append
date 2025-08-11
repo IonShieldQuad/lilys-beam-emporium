@@ -59,7 +59,8 @@
 		<suffocationModifier>0.0</suffocationModifier>
         <canSuffocate>false</canSuffocate>
         <canBurn>false</canBurn>
-        <isAnaerobic>true</isAnaerobic>
+        <!--isAnaerobic>true</isAnaerobic>
+		<oxygenChangeSpeed>0.0</oxygenChangeSpeed-->
 
         <passiveHealAmount>10</passiveHealAmount>
 		<passiveHealDelay>5</passiveHealDelay>

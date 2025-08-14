@@ -1,0 +1,140 @@
+
+
+<mod:findName type="event" name="SYLVAN_PRIME_QUESTIONS">
+    <mod-append:choice req="LILY_PATRONAGE" blue="false">
+        <text>(Lily) "You are nothing but an obstacle to our goals that should be desroyed.--"</text>
+        <event>
+            <text>Ssstranger, what obssstacle are you talking about? Dessstroyed? Do you have a ssslighest idea what are you sssaying?</text>
+            <choice>
+                <text>"Oh, I know *precisely* what I'm doing and what I'm talking about-- Not even you can endure forever, trying to stop what was meant to be, Prime--"</text>
+                <event>
+                    <text>Sylvan Prime looks somewhat shocked at Lily's reply. "I refussse to believe thisss... but if you are really ssserving Her... Then I have no choice but to dessstroy you at onssse!"</text>
+                    <choice hidden="true" blue="false" req="PRIME_SUPPORT_CHECK" lvl="0" max_lvl="0">
+                        <text>Continue...</text>
+                        <event>
+                            <text>As Prime's hulking ship lurks closer, you shut your eyes and pray for help to come. But help isn't coming. You're all on your own for this fight.</text>
+                            <playMusic>sylvan</playMusic>
+                            <deathEvent thisFight="true">DEATH_PRIME</deathEvent>
+                            <boarders min="3" max="3" class="nexus_sylvan_cel"/>
+                            <ship hostile="true"/>
+                            <choice hidden="true">
+                                <text>Continue...</text>
+                                <event load="COMBAT_CHECK"/>
+                            </choice>
+                        </event>
+                    </choice>
+                    <choice hidden="true" blue="false" req="PRIME_SUPPORT_CHECK" lvl="1">
+                        <text>Continue...</text>
+                        <event>
+                            <text>As Prime's hulking ship lurks closer, a salvo of lasers erupts from behind you, pattering against his shield! A familiar ship jumps in... it's Sylvan - YOUR Sylvan! "Ssstranger, the cavalry hasss arrived!" There's no more time for words to be exchanged, you have to fight! You aren't sure how effective Sylvan will be, but if you can combine your firepower and his, you might just stand a chance!
+
+[To order Sylvan to unleash a salvo, use the new button located under the "Toggle Equipment" one.]</text>
+                            <playMusic>sylvan</playMusic>
+                            <deathEvent thisFight="true">DEATH_PRIME</deathEvent>
+
+                            <eventButton name="UI_SYLVAN_BUTTON">
+                                <event load="PRIME_FIRE_SUPPORT_CHECK"/>
+                                <image>statusUI/top_sylvan</image>
+                                <customLocation x="105" y="170"/>
+                                <tooltip>Call in fire support.</tooltip>
+                                <inactiveTooltip>Sylvan cannot provide fire at this time.</inactiveTooltip>
+                                <req lvl="1">fire_support_ready</req>
+                                <noDanger>false</noDanger>
+                            </eventButton>
+                            <triggeredEvent event="PRIME_FIRE_SUPPORT_READY" thisFight="true" time="14.0">
+                                <triggeredEventBox load="DEFAULT_TIMER" pos="default">
+                                    <warning time="0" flash="false"/>
+                                    <tooltip>Time until Sylvan's fire support is ready again.</tooltip>
+                                </triggeredEventBox>
+                                <timerSounds load="DEFAULT_TIMER_SOUNDS"/>
+                            </triggeredEvent>
+                            <superBarrage player="true" name="SYLVAN_FIRE_SUPPORT"/>
+
+                            <boarders min="3" max="3" class="nexus_sylvan_cel"/>
+                            <ship hostile="true"/>
+                            <choice hidden="true">
+                                <text>Continue...</text>
+                                <event load="COMBAT_CHECK"/>
+                            </choice>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </mod-append:choice>
+
+</mod:findName>
+
+
+
+<event name="SHE_IS_DEFEATED_NOT">
+    <text>To your surprise, a stealth ship armed with a huge beam weapon uncloaks nearby.
+"Too bad, you betrayal at the last moment has only spelled doom for you, Renegade--"
+"And alas, it didn't even change a trace, as I'm the plan B right for this case--"
+"Here to succeed where you fail--"
+"But thanks for opening the portal and leading me right here, by the way--"</text>
+    <playSound>decloak</playSound>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="NEXUS_ENDING_NOTGOOD_FADE"/>
+    </choice>
+</event>
+
+
+
+<event name="NEXUS_ENDING_NOTGOOD_FADE">
+    <triggeredEvent event="NEXUS_ENDING_NOTGOOD" time="3.0"/>
+    <enemyDamage amount="999"/>
+</event>
+<event name="NEXUS_ENDING_NOTGOOD">
+    <text>With the Prime no more, She is unleashed, and you only have mere moments before your imminent destruction...</text>
+    <changeBackground>BACK_EVENT_CENTER</changeBackground>
+    <damage amount="999"/>
+    <playMusic>paragon</playMusic>    <!--needs its own music probably-->
+    <win ach="nexus" music="her_credits" creditsText="credit_victory_nexus_bad_save" text="Your legacy will be remembered." creditsBackground="BACKGROUND_HER"/>
+</event>
+
+
+
+<event name="NEXUS_HER_REVEAL_FADE_LILY">
+    <triggeredEvent event="NEXUS_HER_HELP_LILY" time="3.7"/>
+</event>
+
+<event name="NEXUS_HER_HELP_LILY">
+    <text>When the maddening red has subsided, you awake on your ship and find yourself all alone save for Prime's now empty ship. With Prime now gone and Her having recovered all three pieces of Her power, the C.E.L. is likely going to be too weak now to fight Her. Your only choice now is to wait for the inevitable.</text>
+    <choice>
+    <text>Continue...</text>
+        <event>
+            <text>"Or maybe not--"
+You notice Lily is communicating to you.
+"She won. WE won!--" - You haven't heard her so excited before.
+"Great job to you by the way, carrying the Gnome ALL the way here, AND defeating the Prime on top!--"
+"She has probably returned to her (and my) home cluster, probably to gather forces and unleah hell on what remains of Nexus and C.E.L. So Exciting--"
+"We don't want to stay here though, so come on, Renegade, let's not be rude and go join Her too--"</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>"Oh, and feel free to grab some stuff too while we are at it--"</text>
+                    <store>STORE_LILY_EMPORIUM_RHYME</store>
+                    <damage amount="-999"/>
+                    <jumpEvent loop="true">NEXUS_HER_DEPART_LILY</jumpEvent>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<event name="NEXUS_HER_DEPART_LILY">
+    <text>"So, are you all packed up for the trip?--"</text>
+    <choice hidden="true">
+        <text>Yes, let's go.</text>
+        <event>
+            <secretSector>SECRET_HER</secretSector>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Not yet.</text>
+        <event/>
+    </choice>
+</event>
+

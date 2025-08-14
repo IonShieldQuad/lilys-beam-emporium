@@ -26,6 +26,17 @@
     </choice>
 </event>
 
+<event name="LILY_MAD_FIGHT">
+    <ship hostile="true"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="MORALITY_UPDATE_NEXUS_FIGHT"/>
+    </choice>
+</event>
+
+<event name="LILY_MAD_SURRENDER">
+</event>
+
 <ship name="SHIP_BEAM_EMPORIUM_STATION" auto_blueprint="SHIP_BEAM_EMPORIUM_STATION">
     <destroyed>
     <text>Somehow, you have destroyed the station. It breaks into flickering colorful pieces, which then proceed to fade out of existence.
@@ -95,7 +106,12 @@ Unfortunately, there's nothing left to scrap.</text>
 
 <event name="LILY_EMPORIUM_CHECK_CEL">
     <loadEventList first="true" default="LILY_EMPORIUM_SHIP">
+        <event name="LILY_EMPORIUM_TOWR_SHIP" req="eldritch_cat" lvl="1"/>
+        <event name="LILY_EMPORIUM_SHIP" req="LILY_PATRONAGE" lvl="1"/>
         <event name="LILY_EMPORIUM_CEL_FOUND" req="LIST_CREW_SYLVAN" lvl="1"/>
+        <event name="LILY_EMPORIUM_SHIP" req="LIST_CREW_SIREN" lvl="1"/>
+        <event name="LILY_EMPORIUM_SHIP" req="LIST_CREW_ELDRITCH" lvl="1"/>
+        <event name="LILY_EMPORIUM_SHIP" req="LILY_MYSTERIOUS_NOTE" lvl="1"/>
         <event name="LILY_EMPORIUM_CEL_FOUND" req="JUDGELIST_ROCK_NEXUS_LOOT" lvl="1"/>
     </loadEventList>
 </event>
@@ -111,7 +127,103 @@ Unfortunately, there's nothing left to scrap.</text>
 
 <event name="LILY_EMPORIUM_SHIP">
     <ship load="SHIP_BEAM_EMPORIUM_STATION" hostile="false"/>
-    <loadEvent>LILY_EMPORIUM_REAL</loadEvent>
+    <achievement>LILY_ACH_GEN_STORE</achievement>
+    <loadEventList first="true" default="LILY_EMPORIUM_REAL">
+        <event name="LILY_EMPORIUM_AGAIN" req="lily_resolved" lvl="1"/>
+        <event name="LILY_EMPORIUM_AGAIN" req="LILY_PATRONAGE" lvl="1"/>
+    </loadEventList>
+</event>
+
+<event name="LILY_EMPORIUM_TOWR_SHIP">
+    <ship load="SHIP_BEAM_EMPORIUM_STATION" hostile="false"/>
+    <achievement>LILY_ACH_GEN_STORE</achievement>
+    <loadEventList first="true" default="LILY_EMPORIUM_TOWR">
+        <event name="LILY_EMPORIUM_AGAIN" req="lily_resolved" lvl="1"/>
+        <event name="LILY_EMPORIUM_AGAIN" req="LILY_PATRONAGE" lvl="1"/>
+    </loadEventList>
+</event>
+
+<event name="LILY_EMPORIUM_TOWR">
+    <text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
+It hails you: "Welcome to the Lily's Beam Emporium!--
+... Wait. Is this The one Who Rhymes themselves?!
+As a renegade, no less?! Hold on I must be dreaming, am I?
+Didn't expect you again... much less in this circumstances--
+Feel free to take anything from my store of course, and let's have fun and make chaos!--</text>
+    <choice>
+        <text>Continue...</text>
+        
+        <event>
+            <metaVariable name="lily_mysterious_note_unlocked" op="set" value="1" />
+            <variable name="lily_questioned" op="set" value="1" />
+            <variable name="lily_resolved" op="set" value="1" />
+            <achievement>LILY_ACH_GEN_RHYMES</achievement>
+            <loadEventList first="true" default="LILY_EMPORIUM_TOWR_1">
+                <event name="LILY_EMPORIUM_TOWR_SENSORS" req="sensors" lvl="-999" max_lvl="0"/>
+            </loadEventList>
+        </event>
+    </choice>
+
+</event>
+
+<event name="LILY_EMPORIUM_TOWR_SENSORS">
+    <system name="sensors"/>
+    <loadEvent>LILY_EMPORIUM_TOWR_1</loadEvent>
+</event>
+
+<event name="LILY_EMPORIUM_TOWR_1">
+    <text>From Lily you are bestown a gift!</text>
+    <autoReward level="HIGH">standard_no_item</autoReward>
+    <weapon name="BEAM_MADNESS_CHAOS"/>
+    <!--loadEvent>LILY_EMPORIUM_TOWR_2</loadEvent-->
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_EMPORIUM_TOWR_2"/>
+    </choice>
+    <!--choice>
+        <text>Continue...</text>
+        <event>
+            <loadEvent>LILY_EMPORIUM_TOWR_2</loadEvent>
+        </event>
+    </choice-->
+</event>
+<event name="LILY_EMPORIUM_TOWR_2">
+    <text>And another one, for sating your appetite!</text>
+    <autoReward level="HIGH">standard_no_item</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <!--loadEvent>LILY_EMPORIUM_TOWR_3</loadEvent-->
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_EMPORIUM_TOWR_3"/>
+    </choice>
+    <!--choice>
+        <text>Continue...</text>
+        <event>
+            <loadEvent>LILY_EMPORIUM_TOWR_3</loadEvent>
+        </event>
+    </choice-->
+</event>
+
+<event name="LILY_EMPORIUM_TOWR_3">
+    <text>Oh, and hope I can join with you on your adventure! I bet would be a spectacular venture! Won't you mind?--</text>
+    <choice hidden="true">
+        <text>That would be quite a delight!</text>
+        <event>
+            <text>Let us go, then, ready to fight!</text>
+            <hiddenAug>LILY_PATRONAGE</hiddenAug>
+            <achievement>LILY_ACH_GEN_AVATAR</achievement>
+            <store>STORE_LILY_EMPORIUM_RHYME</store>
+            <modifyPursuit amount="-2"/>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Sorry to disappoint, but I can't you for this appoint.</text>
+        <event>
+            <text>That's a shame, I have to say. But feel free to browse my store anyway--</text>
+            <store>STORE_LILY_EMPORIUM_RHYME</store>
+            <modifyPursuit amount="-2"/>
+        </event>
+    </choice>
 </event>
 
 <event name="LILY_EMPORIUM_REAL">
@@ -127,9 +239,112 @@ You are pretty sure it wasn't there minites ago...</text>
         </event>
     </choice>
 
-    <choice hidden="true">
+    <choice req="LILY_MYSTERIOUS_NOTE" lvl="1" hidden="true">
+        <text>Your remember about the mysterious note you found.</text>
+        <event>
+            <text>You give the mysterious note to Lily and wait her to respond.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>"This note... in your possession. Well, that only mean one thing - you are one of Her chosen to complete the mission. Which mission - only She knows. But I happen to be one of Her servants as well and - as such I'll be assisting from here on--
+Oh, and have something to help on your travels.</text>
+                    <variable name="lily_questioned" op="set" value="1" />
+                    <variable name="lily_resolved" op="set" value="1" />
+                    <autoReward level="MED">stuff</autoReward>
+                    <weapon name="GIFTLIST_LILY"/>
+                    <choice hidden="true">
+                        <text>Sure!</text>
+                        <event>
+                            <text>Let us go, then!</text>
+                            <hiddenAug>LILY_PATRONAGE</hiddenAug>
+                            <achievement>LILY_ACH_GEN_AVATAR</achievement>
+                            <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
+                        </event>
+                    </choice>
+                    <!--choice hidden="true">
+                        <text>Sorry, but not this time.</text>
+                        <event>
+                            <text>That's a shame. But feel free to browse my store regardless</text>
+                            <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
+                        </event>
+                    </choice-->
+                </event>
+            </choice>
+        </event>
+    </choice>
+
+    <choice req="LIST_CREW_SIREN" lvl="1" hidden="true">
+        <text>Your siren recognizes the odd energy shield on the station.</text>
+        <event>
+            <text>You siren happens to recognize the Eldrich chaos energy on the station very well, and uses their powers to send a remote message to Lily about it.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>"A Siren like you on a Renegade vessel? It's so rare to see one of you lately. Let me give you something for your travels and feel free to shop!"
+"Oh, and before you go - would you mind letting me join on your adventure? I think it will benefit both of ours goals--"</text>
+                    <variable name="lily_questioned" op="set" value="1" />
+                    <variable name="lily_resolved" op="set" value="1" />
+                    <autoReward level="MED">stuff</autoReward>
+                    <modifyPursuit amount="-1"/>
+                    <choice hidden="true">
+                        <text>Sure!</text>
+                        <event>
+                            <text>Let us go, then!</text>
+                            <hiddenAug>LILY_PATRONAGE</hiddenAug>
+                            <achievement>LILY_ACH_GEN_AVATAR</achievement>
+                            <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
+                        </event>
+                    </choice>
+                    <choice hidden="true">
+                        <text>Sorry, but not this time.</text>
+                        <event>
+                            <text>That's a shame. But feel free to browse my store regardless--</text>
+                            <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+
+    <choice req="LIST_CREW_ELDRITCH" lvl="1" hidden="true">
+        <text>Your eldritch being recognizes the odd energy shield on the station.</text>
+        <event>
+            <text>You eldritch being happens to recognize the Eldrich chaos energy on the station very well, and uses their powers to send a remote message to Lily about it.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>"An Eldritch being like you on a Renegade vessel? It's so rare to see one of you lately. Let me give you something for your travels and feel free to shop!"
+"Oh, and before you go - would you mind letting me join on your adventure? I think it will benefit both of ours goals--"</text>
+                    <variable name="lily_questioned" op="set" value="1" />
+                    <variable name="lily_resolved" op="set" value="1" />
+                    <autoReward level="MED">stuff</autoReward>
+                    <modifyPursuit amount="-1"/>
+                    <choice hidden="true">
+                        <text>Sure!</text>
+                        <event>
+                            <text>Let us go, then!</text>
+                            <hiddenAug>LILY_PATRONAGE</hiddenAug>
+                            <achievement>LILY_ACH_GEN_AVATAR</achievement>
+                            <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
+                        </event>
+                    </choice>
+                    <choice hidden="true">
+                        <text>Sorry, but not this time.</text>
+                        <event>
+                            <text>That's a shame. But feel free to browse my store regardless--</text>
+                            <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+
+    <choice req="lily_questioned" lvl="-999" max_lvl="0" blue="false" hidden="true">
         <text>Question her about the anomalies.</text>
         <event>
+            <variable name="lily_questioned" op="set" value="1" />
             <text>You question her about the anomalies.
 "Your systems glitched out, you say?--
 That's very odd, you are the first one to complain about this--
@@ -137,7 +352,7 @@ Mind if I take a look on them? For free even--"</text>
             <choice hidden="true">
                 <text>Sure.</text>
                 <event>
-                    <loadEventList>
+                    <loadEventList first="true">
                         <event name="LILY_EMPORIUM_INSTALL_SENSORS" req="sensors" lvl="-999" max_lvl="0"/>
                         <event name="LILY_EMPORIUM_UPGRADE_SENSORS" req="sensors" lvl="1" max_lvl="2"/>
                         <event name="LILY_EMPORIUM_UPGRADE_REACTOR" />
@@ -205,10 +420,106 @@ Besides, I'm actually an optional boss and you definitely aren't ready to fight 
                     <loadEvent>LILY_EMPORIUM_ATTACK</loadEvent>
                 </event>
             </choice>
+        </event>
+    </choice>
+</event>
+
+
+
+<event name="LILY_EMPORIUM_AGAIN">
+    <text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
+Pretty sure you have already seen the exact same station before, lightyears away.
+It hails you: "Oh, It's you! Welcome to the Lily's Beam Emporium!--
+Want to restock and rearm?--
+A wide collection of beam and pinpoint weapons available for sale--
+And have some freebie, on the house--"</text>
+    <autoReward level="MED">stuff</autoReward>
+    <choice hidden="true">
+        <text>Just shop.</text>
+        <event>
+            <text>Before you shop, you still have some time to do something else aboard the ship.</text>
+            <choice>
+                <text>Do something onboard the ship.</text>
+                <event load="STORAGE_CHECK"/>
+            </choice>
+            <choice>
+                <text>Do nothing.</text>
+                <event/>
+            </choice>
+            <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
+        </event>
+    </choice>
+
+    <choice req="LILY_PATRONAGE" lvl="-999" max_lvl="0">
+        <text>Ask Lily to join you.</text>
+        <event>
+            <text>So you have changed your mind after all?--
+Sure, I'm in--</text>
+            <hiddenAug>LILY_PATRONAGE</hiddenAug>
+            <achievement>LILY_ACH_GEN_AVATAR</achievement>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>Before you shop, you still have some time to do something else aboard the ship.</text>
+                    <choice>
+                        <text>Do something onboard the ship.</text>
+                        <event load="STORAGE_CHECK"/>
+                    </choice>
+                    <choice>
+                        <text>Do nothing.</text>
+                        <event/>
+                    </choice>
+                    <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
+                </event>
+            </choice>
+        </event>
+    </choice>
+
+    <choice>
+        <text>Attack the station, we can get some goods by force!</text>
+        <event>
+            <text>"Wait wait wait wait wait!--
+Are you really just going to attack a civilian station?
+You will get notoriety for this, don't you know? 2x even!--
+Besides, I'm actually an optional boss and you definitely aren't ready to fight me yet!--"</text>
+            <choice hidden="true">
+                <text>Change your mind and go back.</text>
+                <event>
+                    <loadEvent>LILY_EMPORIUM_REAL</loadEvent>
+                </event>
+            </choice>
+            <choice hidden="true">
+                <text>Choose the option above.</text>
+                <event load="OPTION_INVALID"/>
+            </choice>
+            <choice hidden="true">
+                <text>@%#$$#$$@$</text>
+                <event load="OPTION_INVALID"/>
+            </choice>
+            <choice hidden="true">
+                <text>#0#@%%*@$%</text>
+                <event load="OPTION_INVALID"/>
+            </choice>
+            <choice hidden="true">
+                <text>Nope.</text>
+                <event load="OPTION_INVALID"/>
+            </choice>
+            <choice hidden="true">
+                <text>I said NOPE.</text>
+                <event load="OPTION_INVALID"/>
+            </choice>
+            <choice hidden="true">
+                <text>Continue and attack her anyway.</text>
+                <event>
+                    <ship hostile="true" />
+                    <loadEvent>LILY_EMPORIUM_ATTACK</loadEvent>
+                </event>
+            </choice>
 
         </event>
     </choice>
 </event>
+
 
 
 <event name="LILY_EMPORIUM_INSTALL_SENSORS">

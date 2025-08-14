@@ -409,6 +409,24 @@
     </mod:findName>
 
 
+    <blueprintList name="GIFTLIST_LILY">
+        <mod-append:name>LILY_FOCUS_ION_HEAVY</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_CHAIN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_FIRE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_PHASE</mod-append:name>
+        <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE</mod-append:name>
+        <mod-append:name>LILY_BEAM_TOGGLE_SUNSET_H</mod-append:name>
+        <mod-append:name>LILY_BEAM_AMP_SIPHON_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SHOTGUN_P</mod-append:name>
+        <mod-append:name>LILY_BEAM_SHOTGUN_9_P</mod-append:name>
+        <mod-append:name>LILY_FOCUS_PIERCE_1</mod-append:name>
+        <mod-append:name>LILY_FOCUS_PIERCE_2</mod-append:name>
+        <mod-append:name>LILY_FOCUS_HACK</mod-append:name>
+    </blueprintList>
+
+
     <mod:findName type="blueprintList" name="SHOP_ITEM_SYLVAN_LOOT">
         <mod-append:name>LOOT_ZOLTAN_2</mod-append:name>
     </mod:findName>

@@ -374,7 +374,19 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
 
 end)
 
-
+script.on_internal_event(Defines.InternalEvents.WEAPON_RENDERBOX, function(weapon, cooldown, maxCooldown, firstLine, secondLine, thirdLine)
+    if weapon.blueprint and weapon.blueprint.name == "LILY_FOCUS_ION_PHASE" then
+        --print(firstLine)
+        --print(secondLine)
+        --print(thirdLine)
+        local sp = weapon.boostLevel + 3
+        local dmg = 2 + (sp > 10 and (sp - 10.0) / 10 or 0)
+        local l2 = (sp - 1.0) .. " Pierce"
+        local l3 = (dmg + 0.0) .. " Damage"
+        return Defines.Chain.CONTINUE, firstLine, l2, l3
+    end
+    return Defines.Chain.CONTINUE, firstLine, secondLine, thirdLine
+end)
 --[[script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
     for key, value in pairs(ignoreProj) do
         ignoreProj[key] = value - Hyperspace.FPS.SpeedFactor / 16

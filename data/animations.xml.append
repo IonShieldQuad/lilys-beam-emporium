@@ -242,6 +242,23 @@
 		<desc length="1" x="0" y="0"/>
 		<time>1</time>
 	</anim>
+
+
+	
+<animSheet name="lily_paper" w="18" h="22" fw="18" fh="22">decor/lily_paper.png</animSheet>
+<anim name="lily_paper">
+	<sheet>lily_paper</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>1</time>
+</anim>
+
+<animSheet name="lily_paper_hover" w="18" h="22" fw="18" fh="22">decor/lily_paper_hover.png</animSheet>
+<anim name="lily_paper_hover">
+	<sheet>lily_paper_hover</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>1</time>
+</anim>
+
 </FTL>
 
 

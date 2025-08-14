@@ -3,7 +3,7 @@
 
 <mod:findName type="event" name="STORAGE_CHECK_BUTTON">
     <mod-append:choice req="LILY_PATRONAGE" blue="false">
-        <text>(Lily's Patronage) Contact Lily.</text>
+        <text>(Lily) Contact Lily.</text>
         <event load="STORAGE_CHECK_LILY_MENU"/>
     </mod-append:choice>
 
@@ -16,6 +16,10 @@
 <event name="STORAGE_CHECK_LILY_MENU">
     <text>You manage to remotely contact Lily. 
 What do you want to ask?</text>
+    <choice>
+        <text>Ask her to remind you about her past.</text>
+        <event load="STORAGE_CHECK_LILY_LOREDUMP_1"/>
+    </choice>
     <choice>
         <text>Ask her about special beam weapons.</text>
         <event load="STORAGE_CHECK_LILY_QUESTS"/>
@@ -143,7 +147,7 @@ But alright, just bring me some materials and I'll make one for you--
             <text id="lily_aether_submit"/>
             <remove name="ANCIENT_MISSILES"/>
             
-            <variable name="lily_aether_points" op="add" val="1"/>
+            <variable name="lily_aether_points" op="add" val="2"/>
             <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
         </event>
     </choice>
@@ -257,12 +261,12 @@ But alright, just bring me some materials and I'll make one for you--
 <event name="STORAGE_CHECK_LILY_QUESTS_AETHER_REDEEM">
     <text>Select what do you want her to craft:</text>
 
-    <choice hidden="true" req="lily_aether_points" lvl="3">
+    <choice req="lily_aether_points" lvl="3">
         <text>Craft a Royal Beam.</text>
         <event>
             <text id="lily_aether_submit"/>
             <weapon name="ROYAL_BEAM_3"/>
-
+            <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
             <variable name="lily_aether_points" op="add" val="-3"/>
             <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
         </event>
@@ -272,12 +276,12 @@ But alright, just bring me some materials and I'll make one for you--
         <event load="OPTION_INVALID"/>
     </choice>
     
-    <choice hidden="true" req="lily_aether_points" lvl="2">
+    <choice req="lily_aether_points" lvl="2">
         <text>Craft a Royal Pinpoint.</text>
         <event>
             <text id="lily_aether_submit"/>
             <weapon name="ROYAL_FOCUS"/>
-
+            <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
             <variable name="lily_aether_points" op="add" val="-2"/>
             <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
         </event>
@@ -287,12 +291,12 @@ But alright, just bring me some materials and I'll make one for you--
         <event load="OPTION_INVALID"/>
     </choice>
 
-    <choice hidden="true" req="lily_aether_points" lvl="2">
+    <choice req="lily_aether_points" lvl="2">
         <text>Craft a Royal Havoceizer.</text>
         <event>
             <text id="lily_aether_submit"/>
             <weapon name="ROYAL_HAVOC"/>
-
+            <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
             <variable name="lily_aether_points" op="add" val="-2"/>
             <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
         </event>
@@ -313,6 +317,8 @@ But alright, just bring me some materials and I'll make one for you--
     <loadEventList first="true" default="STORAGE_CHECK_LILY_JOIN_PAY">
         <event name="STORAGE_CHECK_LILY_JOIN_FIRST" req="lily_times_summoned" lvl="-999" max_lvl="0"/>
         <event name="STORAGE_CHECK_LILY_JOIN_SECOND" req="lily_times_summoned" lvl="1"  max_lvl="1"/>
+        <event name="STORAGE_CHECK_LILY_JOIN_RHYMES" req="eldritch_cat" lvl="1"/>
+
     </loadEventList>
 </event>
 
@@ -323,7 +329,7 @@ Think of it as a kind of remotely controlled drone, except that it's not--
 Oh, and don't dare to think of it as expendable, or I will make you pay--
     </text>
 
-    <choice>
+    <choice blue="false" hidden="true">
         <text>Continue...</text>
         <event>
             <text>A rift in space suddenly opens near you, materializing... a quite normal looking human. Although if feels like there's something off...</text>
@@ -346,13 +352,34 @@ Oh, and don't dare to think of it as expendable, or I will make you pay--
 Fine, I'll consider this an accident... But only this time--
     </text>
 
-    <choice>
+    <choice blue="false" hidden="true">
         <text>Continue...</text>
         <event>
             <text>A rift in space suddenly opens near you, materializing the avatar once again. It seems like she can't actually die.</text>
             <crewMember amount="1" class="unique_lily_avatar">Lily</crewMember>
 
             <variable name="lily_times_summoned" op="set" val="2"/>
+            <event load="STORAGE_CHECK"/>
+        </event>
+    </choice>
+
+    <choice>
+        <text>Nevermind.</text>
+        <event load="STORAGE_CHECK"/>
+    </choice>
+</event>
+
+<event name="STORAGE_CHECK_LILY_JOIN_RHYMES">
+    <text>Hey! Didn't I tell you NOT to treat my avatar as expendable?--
+But, seeing The One Who Rhymes here with you I'll make an exception, don't want to miss on the fun--
+    </text>
+
+    <choice blue="false" hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>A rift in space suddenly opens near you, materializing the avatar once again. It seems like she can't actually die.</text>
+            <crewMember amount="1" class="unique_lily_avatar">Lily</crewMember>
+
             <event load="STORAGE_CHECK"/>
         </event>
     </choice>
@@ -406,6 +433,119 @@ What do Renegades value... Scrap? Well, you can give me some or I can take it ri
     </choice>
 </event>
 
+<event name="STORAGE_CHECK_LILY_LOREDUMP_1">
+    <text>So, you want to know my story?--
+Well, where do we even start?...
+I suppose, about the structure of the multiverse?--</text>
+    <choice>
+        <text>Continue...</text>
+        <event name="STORAGE_CHECK_LILY_LOREDUMP_2">
+            <text>As you already know, being a Multiverse Renegade, there are multiple universes that you can travel between by using MV drive. And there are infinite number of them--
+In some of them, Federation wins (and if you complete your mission, thhis universe will be one of them), is some Rebellion wins, hell, I've seen the universes when Orchids and Vampweeds somehow allied with slugs and took the galaxy for themself...
+But overall, there are still similar, there are spaceships, Federation, Rebellion, Mantis, Rocks, all that kind of stuff...
+And that collection of similar universes is typically called a "cluster". Your cluster might contain infinite universes, but it is not the only one--</text>
+            <choice>
+                <text>Continue...</text>
+                <event name="STORAGE_CHECK_LILY_LOREDUMP_3">
+                    <text>However, other clusters can be very, very different from yours. For example, I've once been in cluster where is no humans, no rebellion, no traditional life at all. Instead, the only living inhabitants were humongous swarms of intelligent machines, who spent all the matter and energy they could get to make mountains of something resembling ... paperclips?
+Certainly not a nice place for a vacation-- Unlike a cluster where rivers are made of fuzzy drinks, ground made of marshmellows and plants of black and white chocolate--
+And there are many, many possibilities of what different clusters might contain--</text>
+                    <choice>
+                    <text>Continue...</text>
+                        <event name="STORAGE_CHECK_LILY_LOREDUMP_4">
+                        <text>And as you might have guessed, I'm not from this cluster either--
+I'm from a place far, far, far away. And very dangerous, that place was, rile with constant infighting.
+So knowing better, I "self-exiled" myself, so to speak, and went ahead exploring other clusters--</text>
+                            <choice>
+                                <text>Continue...</text>
+                                <event name="STORAGE_CHECK_LILY_LOREDUMP_5">
+                                <text>And it was quite a wonderful time! I've explored what there was to explore, learned countless technologies, experimented...
+...I might have caused a couple realities to implode on themselves as the result, of course--
+Whoops--
+But it was great fun, and let bygones be bygones--</text>
+                                    <choice>
+                                        <text>Continue...</text>
+                                        <event name="STORAGE_CHECK_LILY_LOREDUMP_6">
+                                        <text>But, of course, everything changed, when those damned Slugs with gray and green ships arrived...
+You know, with weird number "8" as their logo.
+Not only they have captured my Mistress somehow - through their dirty Slug tricks, no doubt!; They now keep harrassing me too as soon as I try to do anything fun!
+Which is why I'm limited to mostly just selling some beam weapons lately...
+And all for what? For some "Order" and "Multiversal Continuity"? Bah! As if Slugs could ever know anything about "order" in the first place?! Absurd!</text>
+                                            <choice>
+                                                <text>Continue...</text>
+                                                <event name="STORAGE_CHECK_LILY_LOREDUMP_7">
+                                                    <text>And I'm not letting those slimy basards get away with it - they are going down!
+...Well, as soon as I find a way to actually defeat them... A special beam weapon seems like a good candidate, or perhaps some WMD...
+...And as soon as I find their hideout too, of course. But I've heard that there's a passway in this universe, something related to "heart of the storm"...</text>
+                                                    <choice>
+                                                        <text>Continue...</text>
+                                                        <event name="STORAGE_CHECK_LILY_LOREDUMP_8">
+                                                        <text>...Luckily my Mistress is patient and cunning... and so am I.
+We surely will figure it out eventually-- 
+...But that doesn't mean you can't help-- We will surely reward you if you actually succeed.
+Oh, and you will get hands on all kind of prototype weapons I'm gonna be testing and developing - doesn't it sound exciting?--
+...And if not... the data collected on you travels will further our goal regardless. Maybe the next Renegade will be successful then, if not you?</text>
+                                                            <choice>
+                                                                <text>Continue...</text>
+                                                                <event name="STORAGE_CHECK_LILY_LOREDUMP_9">
+                                                                <text>Well, that was quite a paragraph of text. I hope you now understand and will be more motivated to help us...
+Not only it will benefit me, but you as well!-- Call it a win-win--
+Anyway, was there anything else you wanted to ask?
+(P.S. Good job if you actually have read all of this--)</text>
+                                                                    <achievement>LILY_ACH_GEN_LORE</achievement>
+                                                                    <choice>
+                                                                        <text>Continue...</text>
+                                                                        <event load="STORAGE_CHECK_LILY_MENU_LOAD"/>
+                                                                    </choice>
+                                                                </event>
+                                                            </choice>
+                                                            <choice>
+                                                                <text>I hope you are finished?</text>
+                                                                <event load="STORAGE_CHECK_LILY_MENU_LOAD"/>
+                                                            </choice>
+                                                        </event>
+                                                    </choice>
+                                                    <choice>
+                                                        <text>Stop.</text>
+                                                        <event load="STORAGE_CHECK_LILY_MENU_LOAD"/>
+                                                    </choice>
+                                                </event>
+                                            </choice>
+                                            <choice>
+                                                <text>Please stop already.</text>
+                                                <event load="STORAGE_CHECK_LILY_MENU_LOAD"/>
+                                            </choice>
+                                        </event>
+                                    </choice>
+                                    <choice>
+                                        <text>Enough!</text>
+                                        <event load="STORAGE_CHECK_LILY_MENU_LOAD"/>
+                                    </choice>
+                                </event>
+                            </choice>
+                            <choice>
+                                <text>Stop listening.</text>
+                                <event load="STORAGE_CHECK_LILY_MENU_LOAD"/>
+                            </choice>
+                        </event>
+                    </choice>
+                    <choice>
+                        <text>Head out of the room.</text>
+                        <event load="STORAGE_CHECK_LILY_MENU_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+            <choice>
+                <text>Please stop talking.</text>
+                <event load="STORAGE_CHECK_LILY_MENU_LOAD"/>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Actually, I'm not in a mood for this.</text>
+        <event load="STORAGE_CHECK_LILY_MENU_LOAD"/>
+    </choice>
+</event>
 
 
 
@@ -414,9 +554,15 @@ What do Renegades value... Scrap? Well, you can give me some or I can take it ri
 
 
 
-
-
-
+<mod:findName type="event" name="STORAGE_CHECK_AUG">
+    <mod-append:choice req="LILY_PATRONAGE">
+        <text>(Lily) Summon Lily's Emporium. [1 fleet boost]</text>
+        <event>
+            <modifyPursuit amount="1"/>
+			<store>STORE_LILY_EMPORIUM_UNLOCKED</store>
+        </event>
+    </mod-append:choice>
+</mod:findName>
 <mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
     <mod-append:choice req="LILY_BEAM_TOGGLE_SUNSET_H" blue="false">
         <text>('Sunset' Beam) Set the state of the weapon. [Current mode: Hullbust]</text>

@@ -188,7 +188,15 @@ disable shields as well as systems.</tooltip>
         <rarity>0</rarity>
         <stackable>false</stackable>
     </augBlueprint>
-
+    
+    <augBlueprint name="LILY_MYSTERIOUS_NOTE">
+        <title>???</title>
+        <desc>You aren't supposed to see this.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
 
     
     <crewBlueprint name="unique_lily_avatar">
@@ -629,7 +637,7 @@ disable shields as well as systems.</tooltip>
         <stunChance>2</stunChance>
         <fireChance>1</fireChance>
         <breachChance>0</breachChance>
-        <cooldown>9</cooldown>
+        <cooldown>8</cooldown>
         <speed>1</speed>
         <power>3</power>
         <cost>90</cost>

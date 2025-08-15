@@ -1,9 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2025-08-15
+  Changes:
+    - Fixed some tpyos.
+    - Changed implementation for multi-pinpoints to display their radius correctly.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2025-08-14
   Changes:
-    - Finally: Added an option to make a deal and bring Lily, the Beam Emporium oner, with you!
-    - Doing so will give you a scrong crewmwmber, access to quests, but beware of possible consequences!
+    - Finally: Added an option to make a deal and bring Lily, the Beam Emporium owner, with you!
+    - Doing so will give you a strong crewmember, access to quests, but beware of possible consequences!
     - Also added achievements and a certain metaprogression unlock.
 ---------------------------------------------------------------------------------------------------
 Version: 0.10.1

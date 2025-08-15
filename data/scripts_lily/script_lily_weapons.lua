@@ -2,6 +2,9 @@
 local vter = mods.multiverse.vter
 local INT_MAX = 2147483647
 
+if mods.lilybeams == nil then
+    mods.lilybeams = {}
+end
 
 local function offset_point_direction(oldX, oldY, angle, distance)
     local newX = oldX + (distance * math.cos(math.rad(angle)))
@@ -55,6 +58,18 @@ burstPinpoints["LILY_BEAM_AMP_SIPHON_2"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_3"] = "LILY_BEAM_AMP_SIPHON"
 local howitzers = {}
 howitzers["LILY_HOWITZER_1"] = { dmg = 4, primary = "LILY_HOWITZER_1_BEAM_P", secondary = "LILY_HOWITZER_1_BEAM_S" }
+
+mods.lilybeams.burstMultiBarrel = {}
+local lilyBurstMultiBarrel = mods.lilybeams.burstMultiBarrel
+lilyBurstMultiBarrel["LILY_BEAM_SHOTGUN_S"] = {
+    barrelOffset = 6,
+    barrelCount = 3
+}
+lilyBurstMultiBarrel["LILY_BEAM_SHOTGUN_9_S"] = {
+    barrelOffset = 8,
+    barrelCount = 3
+}
+
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     if weapon.blueprint and burstPinpoints[weapon.blueprint.name] then
@@ -161,7 +176,33 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
     end
 
     if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SHOTGUN_S" then
-        local offsets2 = { 6, 0, -6 }
+        local burstBarrelData = lilyBurstMultiBarrel[weapon and weapon.blueprint and weapon.blueprint.name]
+        local offset2 = ((burstBarrelData.barrelCount - weapon.queuedProjectiles:size() % burstBarrelData.barrelCount - 1) - 1) *
+            burstBarrelData.barrelOffset
+        if weapon.mount.mirror then offset2 = -offset2 end
+        if weapon.mount.rotate then
+            projectile.position.y = projectile.position.y + offset2
+        else
+            projectile.position.x = projectile.position.x + offset2
+        end
+        
+        local spaceManager = Hyperspace.App.world.space
+        local tgt1 = projectile.target
+        local tgt2 = Hyperspace.Pointf(tgt1.x, tgt1.y + 1)
+        local pos = projectile.position
+        local beam = spaceManager:CreateBeam(
+            Hyperspace.Blueprints:GetWeaponBlueprint("LILY_BEAM_SHOTGUN_P"),
+            pos,
+            projectile.currentSpace,
+            projectile.ownerId,
+            tgt1,
+            tgt2,
+            projectile.destinationSpace,
+            1,
+            -0.1)
+        beam.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+        projectile:Kill()
+        --[[local offsets2 = { 6, 0, -6 }
         while #offsets2 > 0 do
             local idx = math.random(#offsets2)
             local offset2 = table.remove(offsets2, idx)
@@ -191,6 +232,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
 
         end
         projectile:Kill()
+        --]]
     end
 
     if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SHOTGUN_9_P" then
@@ -231,6 +273,34 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
     end
 
     if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SHOTGUN_9_S" then
+        local burstBarrelData = lilyBurstMultiBarrel[weapon and weapon.blueprint and weapon.blueprint.name]
+        local offset2 = ((burstBarrelData.barrelCount - weapon.queuedProjectiles:size() % burstBarrelData.barrelCount - 1) - 1) *
+            burstBarrelData.barrelOffset
+        if weapon.mount.mirror then offset2 = -offset2 end
+        if weapon.mount.rotate then
+            projectile.position.y = projectile.position.y + offset2
+        else
+            projectile.position.x = projectile.position.x + offset2
+        end
+
+        local spaceManager = Hyperspace.App.world.space
+        local tgt1 = projectile.target
+        local tgt2 = Hyperspace.Pointf(tgt1.x, tgt1.y + 1)
+        local pos = projectile.position
+        local beam = spaceManager:CreateBeam(
+            Hyperspace.Blueprints:GetWeaponBlueprint("LILY_BEAM_SHOTGUN_P"),
+            pos,
+            projectile.currentSpace,
+            projectile.ownerId,
+            tgt1,
+            tgt2,
+            projectile.destinationSpace,
+            1,
+            -0.1)
+        beam.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+        projectile:Kill()
+
+        --[[
         local offsets2 = { 8, 8, 8, 0, 0, 0, -8, -8, -8 }
         while #offsets2 > 0 do
             local idx = math.random(#offsets2)
@@ -260,6 +330,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
             beam.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
         end
         projectile:Kill()
+        --]]
     end
 
 end)

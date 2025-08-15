@@ -230,7 +230,7 @@ Feel free to take anything from my store of course, and let's have fun and make 
     <text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
 It hails you: "Welcome to the Lily's Beam Emporium!--
 A wide collection of beam and pinpoint weapons available for sale--"
-You are pretty sure it wasn't there minites ago...</text>
+You are pretty sure it wasn't there minutes ago...</text>
     <choice hidden="true">
         <text>Just shop.</text>
         <event>

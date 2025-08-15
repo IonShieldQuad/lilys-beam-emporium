@@ -428,6 +428,30 @@ disable shields as well as systems.</tooltip>
                 </blackList>
                 <boostAnim>madness</boostAnim>
             </statBoost>
+            <statBoost name="resistsMindControl">
+                <boostType>SET</boostType>
+                <value>false</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <affectsSelf>false</affectsSelf>
+                <duration>25</duration>
+                <!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
+                <blackList>
+                    <slug_hektar_box/>
+                    <unique_billy_box/>
+                    <unique_irwin_demon/>
+                    <unique_dessius/>
+                    <siren/>
+                    <siren_harpy/>
+                    <eldritch_thing/>
+                    <eldritch_thing_weak/>
+                    <eldritch_cat/>
+                    <gnome/>
+                    <unique_lily_avatar/>
+                </blackList>
+                <boostAnim>madness</boostAnim>
+            </statBoost>
         </statBoosts>
     </weaponBlueprint>
 
@@ -1906,7 +1930,7 @@ disable shields as well as systems.</tooltip>
     <short>'Array' [S]</short>
     <desc>This weapon is an array of 3 pinpoint beams clustered together, modified to be able to pop shields. Current mode: Scatter</desc>
     <tooltip>Pinpoint array weapon</tooltip>
-    <!--radius>60</radius-->
+    <radius>45</radius>
     <damage>1</damage>
     <persDamage>2</persDamage>
     <sp>0</sp>
@@ -1923,13 +1947,14 @@ disable shields as well as systems.</tooltip>
     <mv-stealth/>
 
     <shots>1</shots>
+    <projectiles>
+        <projectile count="3" fake="false">debris_small</projectile>
+    </projectiles>
     <mv-pop>
         <count>1</count>
         <countSuper>1</countSuper>
     </mv-pop>
-    <projectiles>
-        <projectile count="1" fake="false">laser_burst</projectile>
-    </projectiles>
+
 
 
     <launchSounds>
@@ -1984,9 +2009,9 @@ disable shields as well as systems.</tooltip>
     <tip>tip_lily_beam_shotgun</tip>
     <title>'Matrix' Multi-Pinpoint [Scatter]</title>
     <short>'Matrix' [S]</short>
-    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak chaos on enemy ship, but is cumbersome and hard to aim. Current mode: Pattern</desc>
+    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak chaos on enemy ship, but is cumbersome and hard to aim. Current mode: Scatter</desc>
     <tooltip>Pinpoint array weapon</tooltip>
-    <!--radius>100</radius-->
+    <radius>80</radius>
     <damage>1</damage>
     <persDamage>2</persDamage>
     <sp>0</sp>
@@ -2003,13 +2028,13 @@ disable shields as well as systems.</tooltip>
     <mv-stealth/>
 
     <shots>1</shots>
+    <projectiles>
+        <projectile count="9" fake="false">debris_small</projectile>
+    </projectiles>
     <mv-pop>
         <count>1</count>
         <countSuper>1</countSuper>
     </mv-pop>
-    <projectiles>
-        <projectile count="1" fake="false">laser_burst</projectile>
-    </projectiles>
 
 
     <launchSounds>

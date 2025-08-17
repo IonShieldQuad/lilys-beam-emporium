@@ -30,7 +30,7 @@
 			2.4.1 Hi-res Bkgs
 			1.0 for FTL 1.03.1
 	-->
-	<version><![CDATA[ 1.0.1 ]]></version>
+	<version><![CDATA[ 1.1.0 ]]></version>
 
 
 	<description>
@@ -46,6 +46,7 @@ Addon sponsored by: Her - :)
 
 Special thanks to: 
 Arc, sillysandvich, for help with scripting;
+Willow, for help with writing;
 Kix, and everyone else who have worked on creating FTL: Multiverse (and Hyperspace);
 ]]>
 	</description>

@@ -1,8 +1,8 @@
 
 
 <mod:findName type="event" name="SYLVAN_PRIME_QUESTIONS">
-    <mod-append:choice req="LILY_PATRONAGE" blue="false">
-        <text>(Lily) "You are nothing but an obstacle to our goals that should be desroyed.--"</text>
+    <mod-append:choice req="LILY_PATRONAGE" blue="true">
+        <text>(Lily) "You are nothing but an obstacle to our goals that should be destroyed.--"</text>
         <event>
             <text>Ssstranger, what obssstacle are you talking about? Dessstroyed? Do you have a ssslighest idea what are you sssaying?</text>
             <choice>

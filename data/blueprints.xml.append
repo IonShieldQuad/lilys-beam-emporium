@@ -162,12 +162,13 @@ disable shields as well as systems.</tooltip>
         <stackable>false</stackable>
     </augBlueprint>
 
-    <augBlueprint name="LILY_AFTERBURNER">
+    <augBlueprint name="LILY_COMBAT_AFTERBURNER">
         <title>Afterburner</title>
-        <desc>A fusion powered afterburner for you engines, provides great thrust but guzzles through fuel. Can be activated before combat for the cost of 3 fuel to either increase your evasion or deal damage to enemy.</desc>
-        <cost>120</cost>
+        <desc>A fusion powered afterburner for you engines, provides great thrust but guzzles fuel. 
+[3 Fuel, +20% evasion for 60 seconds OR damage enemy by your engine level]</desc>
+        <cost>60</cost>
         <bp>5</bp>
-        <rarity>0</rarity>
+        <rarity>5</rarity>
         <stackable>false</stackable>
     </augBlueprint>
 
@@ -527,6 +528,7 @@ disable shields as well as systems.</tooltip>
         <rarity>3</rarity>
         <image>beam_contact</image>
         <length>1</length>
+        <mv-aiSystemTarget system="shields"/>
         <launchSounds>
             <sound>ionShoot1</sound>
             <sound>ionShoot2</sound>
@@ -574,6 +576,7 @@ disable shields as well as systems.</tooltip>
         <rarity>4</rarity>
         <image>beam_contact</image>
         <length>1</length>
+        <mv-aiSystemTarget system="shields"/>
         <launchSounds>
             <sound>ionShoot1</sound>
             <sound>ionShoot2</sound>
@@ -622,6 +625,7 @@ disable shields as well as systems.</tooltip>
         <rarity>5</rarity>
         <image>beam_contact</image>
         <length>1</length>
+        <mv-aiSystemTarget system="shields"/>
         <launchSounds>
             <sound>ionShoot1</sound>
             <sound>ionShoot2</sound>
@@ -674,6 +678,7 @@ disable shields as well as systems.</tooltip>
             <count>5</count>
         </boost>
         <length>1</length>
+        <mv-aiSystemTarget system="shields"/>
         <launchSounds>
             <sound>ionShoot1</sound>
             <sound>ionShoot2</sound>
@@ -722,6 +727,7 @@ disable shields as well as systems.</tooltip>
         <rarity>5</rarity>
         <image>beam_contact</image>
         <length>1</length>
+        <mv-aiSystemTarget system="shields"/>
         <launchSounds>
             <sound>ionShoot1</sound>
             <sound>ionShoot2</sound>
@@ -770,6 +776,7 @@ disable shields as well as systems.</tooltip>
         <rarity>5</rarity>
         <image>beam_contact</image>
         <length>1</length>
+        <mv-aiSystemTarget system="shields"/>
         <launchSounds>
             <sound>ionShoot1</sound>
             <sound>ionShoot2</sound>
@@ -823,7 +830,7 @@ disable shields as well as systems.</tooltip>
         <rarity>5</rarity>
         <image>beam_contact</image>
         <length>1</length>
-        <mv-aiSystemTarget system="any"/>
+        <mv-aiSystemTarget system="shields"/>
         <launchSounds>
             <sound>ionShoot1</sound>
             <sound>ionShoot2</sound>
@@ -876,6 +883,7 @@ disable shields as well as systems.</tooltip>
         <rarity>5</rarity>
         <image>beam_contact</image>
         <length>1</length>
+        <mv-aiSystemTarget system="any"/>
         <launchSounds>
             <sound>ionShoot1</sound>
             <sound>ionShoot2</sound>
@@ -957,6 +965,7 @@ disable shields as well as systems.</tooltip>
         <bp>8</bp>
         <rarity>0</rarity>
         <length>100</length>
+        <mv-aiSystemTarget system="any"/>
         <image>beam_contact</image>
         <launchSounds>
             <sound>beam2</sound>
@@ -983,6 +992,7 @@ disable shields as well as systems.</tooltip>
             <g>8</g>
             <b>200</b>
         </color>
+        <mv-aiCrewTarget>MOST_CREW</mv-aiCrewTarget>
         <statBoosts>
             <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
             <statBoost name="stunMultiplier" load="RAD_STUN"/>
@@ -1224,6 +1234,7 @@ disable shields as well as systems.</tooltip>
             <g>200</g>
             <b>255</b>
         </color>
+        <mv-aiCrewTarget>MOST_CREW</mv-aiCrewTarget>
         <statBoosts>
             <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
             <statBoost name="stunMultiplier" load="RAD_STUN"/>
@@ -1274,6 +1285,7 @@ disable shields as well as systems.</tooltip>
             <g>255</g>
             <b>200</b>
         </color>
+        <mv-aiCrewTarget>MOST_CREW</mv-aiCrewTarget>
         <mv-tileDamage method="2"/>
         <erosion>
             <speed>0.5</speed>
@@ -2067,7 +2079,10 @@ disable shields as well as systems.</tooltip>
         <mv-mindControl>
             <duration>15</duration>
         </mv-mindControl>
+        <mv-aiSystemTarget system="any"/>
+        <!--
         <mv-aiCrewTarget>MOST_CREW</mv-aiCrewTarget>
+        -->
         <damage>0</damage>
         <persDamage>0</persDamage>
         <ion>0</ion>
@@ -2262,34 +2277,231 @@ disable shields as well as systems.</tooltip>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
+<FTL>
 
-<weaponBlueprint name="LILY_BEAM_PARTICLE_MINI">
-    <type>BEAM</type>
-    <tip>tip_particle_beam</tip>
-    <title>Mini Particle Beam</title>
-    <short>Mini Part. B.</short>
-    <desc>Fires a small concentrated beam that damages systems and lights fires, but does no damage to the hull or crew.</desc>
-    <tooltip>Starts fires and does 1 hull damage per room.</tooltip>
-    <damage>0</damage>
-    <sysDamage>1</sysDamage>
-    <sp>1</sp>
-    <fireChance>3</fireChance>
-    <breachChance>0</breachChance>
-    <cooldown>12</cooldown>
-    <color>
-        <r>255</r>
-        <g>110</g>
-        <b>0</b>
-    </color>
-    <power>1</power>
-    <cost>40</cost>
-    <bp>8</bp>
-    <rarity>4</rarity>
-    <length>45</length>
-    <image>beam_contact</image>
-    <launchSounds>
-        <sound>beam2</sound>
-    </launchSounds>
-    <weaponArt>lily_beam_particle_mini</weaponArt>
-    <iconImage>beam</iconImage>
+    <weaponBlueprint name="LILY_BEAM_PARTICLE_MINI">
+        <type>BEAM</type>
+        <tip>tip_particle_beam</tip>
+        <title>Mini Particle Beam</title>
+        <short>Mini Part. B.</short>
+        <desc>Fires a small concentrated beam that damages systems and lights fires, but does no damage to the hull or crew.</desc>
+        <tooltip>Starts fires and does 1 hull damage per room.</tooltip>
+        <damage>0</damage>
+        <sysDamage>1</sysDamage>
+        <sp>1</sp>
+        <fireChance>3</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>12</cooldown>
+        <color>
+            <r>255</r>
+            <g>110</g>
+            <b>0</b>
+        </color>
+        <mv-aiSystemTarget system="any"/>
+
+        <power>1</power>
+        <cost>40</cost>
+        <bp>8</bp>
+        <rarity>4</rarity>
+        <length>45</length>
+        <image>beam_contact</image>
+        <launchSounds>
+            <sound>beam2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_particle_mini</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_CYCLOTRON">
+        <type>BEAM</type>
+        <tip>tip_bio</tip>
+        <title>Cyclotron Magnifier Beam</title>
+        <short>Cyclotron</short>
+        <tooltip>Deals system damage and harms crew.</tooltip>
+        <desc>YOU SHOULD NEVER SEE THIS</desc>
+        <descriptionOverride>Magnifiers use special technology to enhance their power with each charge, rather than gaining additional projectiles. Each charge increases damage output and status effect chances. Charges become progressively faster.
+This particle collider design uses this technology to create an utterly devastating particle beam when allowed to fully charge.
+
+Stats:
+Required Power: 3
+Charge Time: 12 seconds
+
+Max Charges: 4
+Bonus Charging Speed: x1.5 per charge
+		
+Total System Damage: 1/2/3/4
+Shield Piercing: 0/1/2/3
+Total Crew Damage: 30/60/90/120
+		
+Breach Chance: 20/50/80/110% 
+
+Default Price: 70~   -   Selling Price: 35~
+        </descriptionOverride>
+        <tooltipOverride>Required Power: 3
+Charge Time: 12 seconds
+
+Max Charges: 4
+Bonus Charging Speed: x1.5 per charge
+		
+Total System Damage: 1/2/3/4
+Shield Piercing: 0/1/2/3
+Total Crew Damage: 30/60/90/120
+		
+Breach Chance: 20/50/80/110% </tooltipOverride>
+        <tooltip>Beam; damages systems and crew.</tooltip>
+        <chargeLevels>4</chargeLevels>
+        <damage>0</damage>
+        <sysDamage>1</sysDamage>
+        <persDamage>2</persDamage>
+        <sp>1</sp>
+        <fireChance>0</fireChance>
+        <breachChance>2</breachChance>
+        <cooldown>12</cooldown>
+        <color>
+            <r>255</r>
+            <g>8</g>
+            <b>200</b>
+        </color>
+        <statBoosts>
+            <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
+            <statBoost name="stunMultiplier" load="RAD_STUN"/>
+            <statBoost name="repairSpeed" load="RAD_REPAIR"/>
+        </statBoosts>
+        <mv-aiSystemTarget system="any"/>
+
+        <power>3</power>
+        <cost>70</cost>
+        <bp>5</bp>
+        <rarity>4</rarity>
+        <length>25</length>
+        <speed>6</speed>
+        <image>beam_contact</image>
+        <launchSounds>
+            <sound>beam2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_cyclotron</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+
+    <weaponBlueprint name="LILY_BEAM_FROST">
+        <type>BEAM</type>
+        <tip>tip_frost</tip>
+        <title>'Polaris' Frost Beam</title>
+        <short>'Polaris'</short>
+        <desc>This chilling weapon fires a beam of liquid nitrogen. Capable of locking down rooms, keeping most crew from entering or leaving.
+The excessive nitrogen gas also upsets the atmospheric balance.</desc>
+        <tooltip>Starts fires and does 1 hull damage per room.</tooltip>
+        <damage>0</damage>
+        <sysDamage>1</sysDamage>
+        <persDamage>2</persDamage>
+        <sp>3</sp>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <stun>3</stun>
+        <lockdown>1</lockdown>
+        <cooldown>15</cooldown>
+        <color>
+            <r>50</r>
+            <g>167</g>
+            <b>255</b>
+        </color>
+        <roomStatBoosts>
+            <statBoost name="trueHealAmount">
+                <boostType>FLAT</boostType>
+                <amount>0</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ALL</crewTarget>
+                <duration>20</duration>
+                <roomAnim renderLayer="3">
+                    <anim animType="center">snowman_walk_down</anim>
+                </roomAnim>
+            </statBoost>
+            <statBoost name="moveSpeedMultiplier">
+                <boostType>MULT</boostType>
+                <amount>0.5</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ENEMIES</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <duration>12</duration>
+                <maxStacks>1</maxStacks>
+                <fireCount min="0"/>
+            </statBoost>
+            <statBoost name="repairSpeed">
+                <boostType>MULT</boostType>
+                <amount>0.5</amount>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ENEMIES</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <duration>12</duration>
+                <maxStacks>1</maxStacks>
+                <fireCount min="0"/>
+            </statBoost>
+            <statBoost name="silenced">
+                <boostType>SET</boostType>
+                <value>true</value>
+                <shipTarget>ALL</shipTarget>
+                <crewTarget>ENEMIES</crewTarget>
+                <droneTarget>CREW</droneTarget>
+                <duration>12</duration>
+                <maxStacks>1</maxStacks>
+                <boostAnim>lily_frost_debuff</boostAnim>
+                <fireCount min="0"/>
+            </statBoost>
+        </roomStatBoosts>
+
+
+
+        <power>2</power>
+        <cost>70</cost>
+        <bp>4</bp>
+        <rarity>4</rarity>
+        <length>80</length>
+        <image>beam_contact</image>
+        <launchSounds>
+            <sound>lily_frost_beam_1</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_frost</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+
+    <weaponBlueprint name="LILY_BEAM_POPPER">
+        <type>BEAM</type>
+        <tip>tip_particle_beam</tip>
+        <title>Shield Popper Beam</title>
+        <short>Popper</short>
+        <desc>Fires a small concentrated beam that does no damage but pops shields and can't miss.</desc>
+        <tooltip>Pops shields.</tooltip>
+        <damage>0</damage>
+        <sysDamage>0</sysDamage>
+        <sp>-10</sp>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>12</cooldown>
+        <color>
+            <r>255</r>
+            <g>255</g>
+            <b>255</b>
+        </color>
+        <mv-pop>
+            <count>1</count>
+            <countSuper>1</countSuper>
+        </mv-pop>
+        <ionBeamFix/>
+        <power>1</power>
+        <cost>40</cost>
+        <bp>2</bp>
+        <rarity>0</rarity>
+        <length>200</length>
+        <image>beam_contact</image>
+        <launchSounds>
+            <sound>beam1</sound>
+            <sound>beam1_2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_particle_mini</weaponArt>
+        <iconImage>beam</iconImage>
 </weaponBlueprint>
+
+
+</FTL>

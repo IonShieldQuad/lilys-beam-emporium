@@ -17,7 +17,7 @@
 </mod:findName>
 
 <event name="LILY_MYSTERIOUS_NOTE_CLICKED">
-<text>As you approach the note you can't halp but notice otherworldy energy imbued in it, as well its blue and red shimmer.
+<text>As you approach the note, you can't help but notice otherworldy energy imbued in it, as well its blue and red shimmer.
 The note iself says:
 
 "Hey, Renegade. Yes, you. Take this note and show it to the 'Beam Emporium' owner. Consider it as a password of sorts. She will know what to do next.""
@@ -36,7 +36,7 @@ The note iself says:
 	<choice hidden="true" req="LILY_PATRONAGE" blue="false">
 		<text>Continue...</text>
 		<event>
-			<text>"Oh. it must be for me then--" Lily says. Saved you the journey--
+			<text>"Oh. It must be for me then--" Lily says. Saved you the journey--
             Anyway, it means that She considers you worthy and directed us to work together. And I'll gladly oblige--</text>
 			<autoReward level="MED">stuff</autoReward>
 			<weapon name="GIFTLIST_LILY"/>

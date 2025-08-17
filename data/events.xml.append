@@ -148,8 +148,8 @@ Unfortunately, there's nothing left to scrap.</text>
 It hails you: "Welcome to the Lily's Beam Emporium!--
 ... Wait. Is this The one Who Rhymes themselves?!
 As a renegade, no less?! Hold on I must be dreaming, am I?
-Didn't expect you again... much less in this circumstances--
-Feel free to take anything from my store of course, and let's have fun and make chaos!--</text>
+Didn't expect you again... much less in these circumstances--
+Feel free to take anything from my store, of course. Let's have fun and make chaos!--</text>
     <choice>
         <text>Continue...</text>
         
@@ -172,7 +172,7 @@ Feel free to take anything from my store of course, and let's have fun and make 
 </event>
 
 <event name="LILY_EMPORIUM_TOWR_1">
-    <text>From Lily you are bestown a gift!</text>
+    <text>From Lily, you are bestown a gift!--</text>
     <autoReward level="HIGH">standard_no_item</autoReward>
     <weapon name="BEAM_MADNESS_CHAOS"/>
     <!--loadEvent>LILY_EMPORIUM_TOWR_2</loadEvent-->
@@ -188,7 +188,7 @@ Feel free to take anything from my store of course, and let's have fun and make 
     </choice-->
 </event>
 <event name="LILY_EMPORIUM_TOWR_2">
-    <text>And another one, for sating your appetite!</text>
+    <text>And another one, for sating your appetite!--</text>
     <autoReward level="HIGH">standard_no_item</autoReward>
     <weapon name="GIFTLIST_LILY"/>
     <!--loadEvent>LILY_EMPORIUM_TOWR_3</loadEvent-->
@@ -209,7 +209,7 @@ Feel free to take anything from my store of course, and let's have fun and make 
     <choice hidden="true">
         <text>That would be quite a delight!</text>
         <event>
-            <text>Let us go, then, ready to fight!</text>
+            <text>Let us hurry, then! Ready to fight!</text>
             <hiddenAug>LILY_PATRONAGE</hiddenAug>
             <achievement>LILY_ACH_GEN_AVATAR</achievement>
             <store>STORE_LILY_EMPORIUM_RHYME</store>
@@ -229,7 +229,7 @@ Feel free to take anything from my store of course, and let's have fun and make 
 <event name="LILY_EMPORIUM_REAL">
     <text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
 It hails you: "Welcome to the Lily's Beam Emporium!--
-A wide collection of beam and pinpoint weapons available for sale--"
+A wide collection of beam and pinpoint weapons is available for sale--"
 You are pretty sure it wasn't there minutes ago...</text>
     <choice hidden="true">
         <text>Just shop.</text>
@@ -246,16 +246,17 @@ You are pretty sure it wasn't there minutes ago...</text>
             <choice hidden="true">
                 <text>Continue...</text>
                 <event>
-                    <text>"This note... in your possession. Well, that only mean one thing - you are one of Her chosen to complete the mission. Which mission - only She knows. But I happen to be one of Her servants as well and - as such I'll be assisting from here on--
-Oh, and have something to help on your travels.</text>
+                    <text>"This note... in your possession? Well, that only mean one thing - you are one of Her chosen to complete the mission. Which mission - only She knows. But I happen to be one of Her servants as well and - as such I'll be assisting from here on--
+Oh, and have this to help on your travels.</text>
                     <variable name="lily_questioned" op="set" value="1" />
                     <variable name="lily_resolved" op="set" value="1" />
                     <autoReward level="MED">stuff</autoReward>
                     <weapon name="GIFTLIST_LILY"/>
                     <choice hidden="true">
-                        <text>Sure!</text>
+                        <text>Continue...</text>
                         <event>
-                            <text>Let us go, then!</text>
+                            <text>Let's go then!
+(Note: Lily can be contacted in the storage menu)</text>
                             <hiddenAug>LILY_PATRONAGE</hiddenAug>
                             <achievement>LILY_ACH_GEN_AVATAR</achievement>
                             <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
@@ -276,12 +277,12 @@ Oh, and have something to help on your travels.</text>
     <choice req="LIST_CREW_SIREN" lvl="1" hidden="true">
         <text>Your siren recognizes the odd energy shield on the station.</text>
         <event>
-            <text>You siren happens to recognize the Eldrich chaos energy on the station very well, and uses their powers to send a remote message to Lily about it.</text>
+            <text>Your siren happens to recognize the Eldritch chaos energy on the station very well, and uses their powers to send a remote message to Lily about it.</text>
             <choice hidden="true">
                 <text>Continue...</text>
                 <event>
                     <text>"A Siren like you on a Renegade vessel? It's so rare to see one of you lately. Let me give you something for your travels and feel free to shop!"
-"Oh, and before you go - would you mind letting me join on your adventure? I think it will benefit both of ours goals--"</text>
+"Would you mind letting me join you on your adventure? I think it will benefit both of our goals--"</text>
                     <variable name="lily_questioned" op="set" value="1" />
                     <variable name="lily_resolved" op="set" value="1" />
                     <autoReward level="MED">stuff</autoReward>
@@ -289,7 +290,8 @@ Oh, and have something to help on your travels.</text>
                     <choice hidden="true">
                         <text>Sure!</text>
                         <event>
-                            <text>Let us go, then!</text>
+                            <text>Let us hurry then!
+(Note: Lily can be contacted in the storage menu)</text>
                             <hiddenAug>LILY_PATRONAGE</hiddenAug>
                             <achievement>LILY_ACH_GEN_AVATAR</achievement>
                             <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
@@ -298,7 +300,7 @@ Oh, and have something to help on your travels.</text>
                     <choice hidden="true">
                         <text>Sorry, but not this time.</text>
                         <event>
-                            <text>That's a shame. But feel free to browse my store regardless--</text>
+                            <text>That's a shame, but feel free to browse my store regardless--</text>
                             <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
                         </event>
                     </choice>
@@ -310,12 +312,12 @@ Oh, and have something to help on your travels.</text>
     <choice req="LIST_CREW_ELDRITCH" lvl="1" hidden="true">
         <text>Your eldritch being recognizes the odd energy shield on the station.</text>
         <event>
-            <text>You eldritch being happens to recognize the Eldrich chaos energy on the station very well, and uses their powers to send a remote message to Lily about it.</text>
+            <text>You eldritch being happens to recognize the Eldritch chaos energy on the station very well, and uses their powers to send a remote message to Lily about it.</text>
             <choice hidden="true">
                 <text>Continue...</text>
                 <event>
                     <text>"An Eldritch being like you on a Renegade vessel? It's so rare to see one of you lately. Let me give you something for your travels and feel free to shop!"
-"Oh, and before you go - would you mind letting me join on your adventure? I think it will benefit both of ours goals--"</text>
+"Would you mind letting me join you on your adventure? I think it will benefit both of our goals--"</text>
                     <variable name="lily_questioned" op="set" value="1" />
                     <variable name="lily_resolved" op="set" value="1" />
                     <autoReward level="MED">stuff</autoReward>
@@ -323,7 +325,8 @@ Oh, and have something to help on your travels.</text>
                     <choice hidden="true">
                         <text>Sure!</text>
                         <event>
-                            <text>Let us go, then!</text>
+                            <text>Let us hurry then!
+(Note: Lily can be contacted in the storage menu)</text>
                             <hiddenAug>LILY_PATRONAGE</hiddenAug>
                             <achievement>LILY_ACH_GEN_AVATAR</achievement>
                             <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
@@ -332,7 +335,7 @@ Oh, and have something to help on your travels.</text>
                     <choice hidden="true">
                         <text>Sorry, but not this time.</text>
                         <event>
-                            <text>That's a shame. But feel free to browse my store regardless--</text>
+                            <text>That's a shame, but feel free to browse my store regardless--</text>
                             <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
                         </event>
                     </choice>
@@ -431,7 +434,7 @@ Besides, I'm actually an optional boss and you definitely aren't ready to fight 
 Pretty sure you have already seen the exact same station before, lightyears away.
 It hails you: "Oh, It's you! Welcome to the Lily's Beam Emporium!--
 Want to restock and rearm?--
-A wide collection of beam and pinpoint weapons available for sale--
+A wide collection of beam and pinpoint weapons is available for sale--
 And have some freebie, on the house--"</text>
     <autoReward level="MED">stuff</autoReward>
     <choice hidden="true">

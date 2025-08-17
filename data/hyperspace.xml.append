@@ -40,7 +40,7 @@
     <aug name="LILY_ASB_SCRAMBLER">
         <function name="PDS_DISABLE" value="1" useForReqs="true" warning="true" />
     </aug>
-	<aug name="LILY_AFTERBURNER">
+	<aug name="LILY_COMBAT_AFTERBURNER">
 	</aug>
 	<aug name="LILY_ANTI_CEL">
 	</aug>
@@ -390,6 +390,20 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<blueprint>LILY_BEAM_AMP_SIPHON_1</blueprint>
 				<price>-1</price>
 			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>STATUS</customTitle>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_CYCLOTRON</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_FROST</blueprint>
+				<price>-1</price>
+			</item>
 			<item>
 				<modifier flat="false">1.1</modifier>
 				<blueprint>LILY_BEAM_PARTICLE_MINI</blueprint>
@@ -467,6 +481,11 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			<item>
 				<modifier flat="false">1.0</modifier>
 				<blueprint>LILY_ASB_SCRAMBLER</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.0</modifier>
+				<blueprint>LILY_COMBAT_AFTERBURNER</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -688,6 +707,20 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<blueprint>LILY_BEAM_AMP_SIPHON_1</blueprint>
 				<price>-1</price>
 			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>STATUS</customTitle>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_CYCLOTRON</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_FROST</blueprint>
+				<price>-1</price>
+			</item>
 			<item>
 				<modifier flat="false">1.1</modifier>
 				<blueprint>LILY_BEAM_PARTICLE_MINI</blueprint>
@@ -795,6 +828,11 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			<item>
 				<modifier flat="false">1.0</modifier>
 				<blueprint>LILY_ASB_SCRAMBLER</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.0</modifier>
+				<blueprint>LILY_COMBAT_AFTERBURNER</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -1029,6 +1067,20 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<blueprint>LILY_BEAM_AMP_SIPHON_1</blueprint>
 				<price>-1</price>
 			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>STATUS</customTitle>
+			<item>
+				<modifier flat="false">0.2</modifier>
+				<blueprint>LILY_BEAM_CYCLOTRON</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.2</modifier>
+				<blueprint>LILY_BEAM_FROST</blueprint>
+				<price>-1</price>
+			</item>
 			<item>
 				<modifier flat="false">0.2</modifier>
 				<blueprint>LILY_BEAM_PARTICLE_MINI</blueprint>
@@ -1177,6 +1229,18 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<blueprint>LILY_ASB_SCRAMBLER</blueprint>
 				<price>-1</price>
 			</item>
+			<item>
+				<modifier flat="false">0.1</modifier>
+				<blueprint>LILY_COMBAT_AFTERBURNER</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+		<category type="AUGMENTS">
+			<item>
+				<modifier flat="false">0.1</modifier>
+				<blueprint>LILY_ANTI_CEL</blueprint>
+				<price>-1</price>
+			</item>
 		</category>
 	</mod-append:customStore>
 
@@ -1216,7 +1280,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
             </mod-append:achievement>
 			<mod-append:achievement name="LILY_ACH_GEN_EXCHANGE">
                 <name>Equivalent Exchange</name>
-                <description>Craft a Royal Beam from salveged Aether technology with Lily's help.</description>
+                <description>Craft a Royal Beam from salvaged Aether technology with Lily's help.</description>
                 <secretDescription>Aether in, Aether out.</secretDescription>
                 <icon>general/lily_ach_generic_exchange</icon>
                 <lockImage>ach_locked</lockImage>
@@ -1226,7 +1290,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
             <mod-append:achievement name="LILY_ACH_GEN_RHYMES">
                 <name>A Chaotic Reunion</name>
                 <description>Visit the Beam Emporium with The One Who Rhymes and unlock the Mysterious Note.</description>
-                <secretDescription>Lead a certain otherworldly cat to the largest collections of laser pointers in the galaxy.</secretDescription>
+                <secretDescription>Lead a certain otherworldly cat with a very fancy hat to the largest collections of laser pointers in the galaxy.</secretDescription>
                 <icon>general/lily_ach_generic_rhymes</icon>
                 <lockImage>ach_locked</lockImage>
                 <multiDifficulty>false</multiDifficulty>
@@ -1235,7 +1299,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
             <mod-append:achievement name="LILY_ACH_GEN_NUKED">
                 <name>NUKED!</name>
                 <description>Get a nuclear surprise from a very pissed third party while trying to fight Her.</description>
-                <secretDescription>Be on the receiving end of nuclear weapon at possibly the worst possible moment.</secretDescription>
+                <secretDescription>Be on the receiving end of nuclear weapon at possibly the worst possible moment in history.</secretDescription>
                 <icon>general/lily_ach_generic_nuked</icon>
                 <lockImage>ach_locked</lockImage>
                 <multiDifficulty>false</multiDifficulty>

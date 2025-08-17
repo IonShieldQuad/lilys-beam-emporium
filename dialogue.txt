@@ -1,0 +1,391 @@
+
+Here's some (most) dialogue from my mod:
+The xml tags (in angle brackets an be ignored)
+
+
+
+Mysterious note:
+
+<text>As you approach the note you can't halp but notice otherworldy energy imbued in it, as well its blue and red shimmer.
+The note iself says:
+
+"Hey, Renegade. Yes, you. Take this note and show it to the 'Beam Emporium' owner. Consider it as a password of sorts. She will know what to do next.""
+/
+:)</text>
+
+
+(If Lily is not there yet)
+<text>Unnerved by such direct approach, you still pocket the note for the future. Let's hope nothing bad comes of it.</text>
+	
+(If the ship starts with Lily)
+<text>"Oh. it must be for me then--" Lily says. Saved you the journey--
+Anyway, it means that She considers you worthy and directed us to work together. And I'll gladly oblige--</text>
+			
+
+
+
+Beam emporium introduction:
+
+<text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
+It hails you: "Welcome to the Lily's Beam Emporium!--
+A wide collection of beam and pinpoint weapons available for sale--"
+You are pretty sure it wasn't there minutes ago...</text>
+
+
+
+Showing Lily the "Mysterious note":
+
+<text>Your remember about the mysterious note you found.</text>
+        <event>
+            <text>You give the mysterious note to Lily and wait her to respond.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>"This note... in your possession. Well, that only mean one thing - you are one of Her chosen to complete the mission. Which mission - only She knows. But I happen to be one of Her servants as well and - as such I'll be assisting from here on--
+Oh, and have something to help on your travels.</text>
+
+
+
+Showing Lily Siren crew:
+
+<text>You siren happens to recognize the Eldrich chaos energy on the station very well, and uses their powers to send a remote message to Lily about it.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>"A Siren like you on a Renegade vessel? It's so rare to see one of you lately. Let me give you something for your travels and feel free to shop!"
+"Oh, and before you go - would you mind letting me join on your adventure? I think it will benefit both of ours goals--"</text>
+                    <choice hidden="true">
+                        <text>Sure!</text>
+                        <event>
+                            <text>Let us go, then!</text>
+                        </event>
+                    </choice>
+                    <choice hidden="true">
+                        <text>Sorry, but not this time.</text>
+                        <event>
+                            <text>That's a shame. But feel free to browse my store regardless--</text>
+                        </event>
+                    </choice>
+
+
+
+Showing Lily Eldritch crew:
+
+<text>You eldritch being happens to recognize the Eldrich chaos energy on the station very well, and uses their powers to send a remote message to Lily about it.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>"An Eldritch being like you on a Renegade vessel? It's so rare to see one of you lately. Let me give you something for your travels and feel free to shop!"
+"Oh, and before you go - would you mind letting me join on your adventure? I think it will benefit both of ours goals--"</text>
+                    <choice hidden="true">
+                        <text>Sure!</text>
+                        <event>
+                            <text>Let us go, then!</text>
+                        </event>
+                    </choice>
+                    <choice hidden="true">
+                        <text>Sorry, but not this time.</text>
+                        <event>
+                        </event>
+
+
+
+Questioning Lily about anomalies - she prenends to be ignorant (of course she really knows, she is the source of them):
+
+<text>Question her about the anomalies.</text>
+        <event>
+            <text>You question her about the anomalies.
+"Your systems glitched out, you say?--
+That's very odd, you are the first one to complain about this--
+Mind if I take a look on them? For free even--"</text>
+
+
+
+Trying to attack Lily: she lies to you to try to prevent you from fighting her:
+
+<text>Attack the station, we can get some goods by force!</text>
+        <event>
+            <text>"Wait wait wait wait wait!--
+Are you really just going to attack a civilian station?
+You will get notoriety for this, don't you know? 2x even!--
+Besides, I'm actually an optional boss and you definitely aren't ready to fight me yet!--"</text>
+
+
+
+Trying to go to the Emporium with CEL crew/equipment (Lily hates CEL and hides from them)
+
+<text>You continue spending your time searching for the store. However, despite you best effort, you still can't find anything here. Why is the advertisement for a store there is still a mystery.</text>
+
+
+
+Meeting Lily with TOWR - I tried to make it have more rhymes
+
+<text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
+It hails you: "Welcome to the Lily's Beam Emporium!--
+... Wait. Is this The one Who Rhymes themselves?!
+As a renegade, no less?! Hold on I must be dreaming, am I?
+Didn't expect you again... much less in this circumstances--
+Feel free to take anything from my store of course, and let's have fun and make chaos!--</text>
+    <choice>
+        <text>Continue...</text>
+        
+    <text>From Lily you are bestown a gift!</text>
+   
+    <text>And another one, for sating your appetite!</text>
+
+    <text>Oh, and hope I can join with you on your adventure! I bet would be a spectacular venture! Won't you mind?--</text>
+    <choice hidden="true">
+        <text>That would be quite a delight!</text>
+        <event>
+            <text>Let us go, then, ready to fight!</text>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Sorry to disappoint, but I can't you for this appoint.</text>
+        <event>
+            <text>That's a shame, I have to say. But feel free to browse my store anyway--</text>
+        </event>
+    </choice>
+
+
+
+
+
+The whole huge chunk of Lily's lore/backstort - wall of text warning!
+
+<event name="STORAGE_CHECK_LILY_LOREDUMP_1">
+    <text>So, you want to know my story?--
+Well, where do we even start?...
+I suppose, about the structure of the multiverse?--</text>
+    <choice>
+        <text>Continue...</text>
+        <event name="STORAGE_CHECK_LILY_LOREDUMP_2">
+            <text>As you already know, being a Multiverse Renegade, there are multiple universes that you can travel between by using MV drive. And there are infinite number of them--
+In some of them, Federation wins (and if you complete your mission, thhis universe will be one of them), is some Rebellion wins, hell, I've seen the universes when Orchids and Vampweeds somehow allied with slugs and took the galaxy for themself...
+But overall, there are still similar, there are spaceships, Federation, Rebellion, Mantis, Rocks, all that kind of stuff...
+And that collection of similar universes is typically called a "cluster". Your cluster might contain infinite universes, but it is not the only one--</text>
+            <choice>
+                <text>Continue...</text>
+                <event name="STORAGE_CHECK_LILY_LOREDUMP_3">
+                    <text>However, other clusters can be very, very different from yours. For example, I've once been in cluster where is no humans, no rebellion, no traditional life at all. Instead, the only living inhabitants were humongous swarms of intelligent machines, who spent all the matter and energy they could get to make mountains of something resembling ... paperclips?
+Certainly not a nice place for a vacation-- Unlike a cluster where rivers are made of fuzzy drinks, ground made of marshmellows and plants of black and white chocolate--
+And there are many, many possibilities of what different clusters might contain--</text>
+                    <choice>
+                    <text>Continue...</text>
+                        <event name="STORAGE_CHECK_LILY_LOREDUMP_4">
+                        <text>And as you might have guessed, I'm not from this cluster either--
+I'm from a place far, far, far away. And very dangerous, that place was, rile with constant infighting.
+So knowing better, I "self-exiled" myself, so to speak, and went ahead exploring other clusters--</text>
+                            <choice>
+                                <text>Continue...</text>
+                                <event name="STORAGE_CHECK_LILY_LOREDUMP_5">
+                                <text>And it was quite a wonderful time! I've explored what there was to explore, learned countless technologies, experimented...
+...I might have caused a couple realities to implode on themselves as the result, of course--
+Whoops--
+But it was great fun, and let bygones be bygones--</text>
+                                    <choice>
+                                        <text>Continue...</text>
+                                        <event name="STORAGE_CHECK_LILY_LOREDUMP_6">
+                                        <text>But, of course, everything changed, when those damned Slugs with gray and green ships arrived...
+You know, with weird number "8" as their logo.
+Not only they have captured my Mistress somehow - through their dirty Slug tricks, no doubt!; They now keep harrassing me too as soon as I try to do anything fun!
+Which is why I'm limited to mostly just selling some beam weapons lately...
+And all for what? For some "Order" and "Multiversal Continuity"? Bah! As if Slugs could ever know anything about "order" in the first place?! Absurd!</text>
+                                            <choice>
+                                                <text>Continue...</text>
+                                                <event name="STORAGE_CHECK_LILY_LOREDUMP_7">
+                                                    <text>And I'm not letting those slimy basards get away with it - they are going down!
+...Well, as soon as I find a way to actually defeat them... A special beam weapon seems like a good candidate, or perhaps some WMD...
+...And as soon as I find their hideout too, of course. But I've heard that there's a passway in this universe, something related to "heart of the storm"...</text>
+                                                    <choice>
+                                                        <text>Continue...</text>
+                                                        <event name="STORAGE_CHECK_LILY_LOREDUMP_8">
+                                                        <text>...Luckily my Mistress is patient and cunning... and so am I.
+We surely will figure it out eventually-- 
+...But that doesn't mean you can't help-- We will surely reward you if you actually succeed.
+Oh, and you will get hands on all kind of prototype weapons I'm gonna be testing and developing - doesn't it sound exciting?--
+...And if not... the data collected on you travels will further our goal regardless. Maybe the next Renegade will be successful then, if not you?</text>
+                                                            <choice>
+                                                                <text>Continue...</text>
+                                                                <event name="STORAGE_CHECK_LILY_LOREDUMP_9">
+                                                                <text>Well, that was quite a paragraph of text. I hope you now understand and will be more motivated to help us...
+Not only it will benefit me, but you as well!-- Call it a win-win--
+Anyway, was there anything else you wanted to ask?
+(P.S. Good job if you actually have read all of this--)</text>
+
+
+
+
+Asking Lily to summon her "Avatar" onboard the ship:
+    <text>Oh, you want me to join personally?--
+While I can't do that due to ... reasons, I can lend you my Avatar--
+Think of it as a kind of remotely controlled drone, except that it's not--
+Oh, and don't dare to think of it as expendable, or I will make you pay--
+    </text>
+
+
+
+
+
+
+
+Option to insult Prime before fight:
+
+text>(Lily) "You are nothing but an obstacle to our goals that should be destroyed.--"</text>
+        <event>
+            <text>Ssstranger, what obssstacle are you talking about? Dessstroyed? Do you have a ssslighest idea what are you sssaying?</text>
+            <choice>
+                <text>"Oh, I know *precisely* what I'm doing and what I'm talking about-- Not even you can endure forever, trying to stop what was meant to be, Prime--"</text>
+                <event>
+                    <text>Sylvan Prime looks somewhat shocked at Lily's reply. "I refussse to believe thisss... but if you are really ssserving Her... Then I have no choice but to dessstroy you at onssse!"</text>
+
+
+
+
+Lily's options when initiating fight with Sylvans:
+Probably need to add more
+
+"Prepare to get obliterated, pest!--"
+"Are you ready - to meet you maker?--"
+"EXTERMINATION PROTOCOL: TARGET ACQUIRED"
+"Die, in Her name!--"
+
+
+
+Lily's options when refusing surrender from Sylvans:
+Probably need to add more
+
+"No mercy for insects!--"
+"Get Crushed!--"
+"Begging won't help--"
+"Any last words?"
+
+
+
+Lily's dialogue when trying to spare Prime (while she is not with player but is tracking their location)
+
+"As your hull is reduced to critical levels, you notice Prime himself has dismounted from his rings, and is now holding them above his head. \"You're right, it wasss my missstake to keep you around. Good thing I didn't make the missstake of making it perma-\" Prime doesn't get to finish his words as a beam striking from an unknown direction vaporizes the Slug instantly."
+
+<text>To your surprise, a stealth ship armed with a huge beam weapon uncloaks nearby.
+"Too bad, you betrayal at the last moment has only spelled doom for you, Renegade--"
+"And alas, it didn't even change a trace, as I'm the plan B right for this case--"
+"Here to succeed where you fail--"
+"But thanks for opening the portal and leading me right here, by the way--"</text>
+
+<text>With the Prime no more, She is unleashed, and you only have mere moments before your imminent destruction...</text>
+
+
+
+Lily's dialogue when defeating Prime on Chaos mode:
+
+<text>When the maddening red has subsided, you awake on your ship and find yourself all alone save for Prime's now empty ship. With Prime now gone and Her having recovered all three pieces of Her power, the C.E.L. is likely going to be too weak now to fight Her. Your only choice now is to wait for the inevitable.</text>
+
+<text>"Or maybe not--"
+You notice Lily is communicating to you.
+"She won. WE won!--" - You haven't heard her so excited before.
+"Great job to you by the way, carrying the Gnome ALL the way here, AND defeating the Prime on top!--"
+"She has probably returned to her (and my) home cluster, probably to gather forces and unleah hell on what remains of Nexus and C.E.L. So Exciting--"
+"We don't want to stay here though, so come on, Renegade, let's not be rude and go join Her too--"</text>
+
+<text>"Oh, and feel free to grab some stuff too while we are at it--"</text>
+
+
+
+Entering the Realm of Madness with Lily:
+
+"You've arrived in some kind of swirling hellscape, mired by a blurry haze of what seems to be taunting barely human faces flying through the abyss. Despite the nighmarishness of the surrounding space, you feel ...oddly content and at peace.
+
+"Ah, my home at last--" - says Lily.
+"Shame that I haven't been there in eons; Charming, isn't?--"
+
+"Don't worry, I'll make sure you are in no danger here--"
+
+
+Event text options when meeting non-hostile Eldritch Vision:
+
+"A vessel as black as night approaches, and without words and starts charging it's weapons. But soon realizing who you are, they quickly stop.",
+"\"And so this is the Renegade that set the eternal reign of chaos in motion?\" How helpful, but don't even try to undo the inevietable. Maybe there's a place for you still.",
+"An alien vessel, another of Her minions, approaches. There is seemingly no end to these legions of darkness.",
+"You think you might be hallucinating at first, but a black vessel begins to take form in front of you. In the darkness of space, you narrowly avoid colliding with it.",
+
+
+
+Meeting Her in the Realm of Madness with Lily (Who is acually called Lightbringer):
+
+"You've finally made it to the location of Her. The entire space around is nothing but darkness, with every star having been pulled out of the night sky and consumed by some ancient evil. This is it. You're about to meet with perhaps the most powerful and evil entity known to exist in the Multiverse... again."
+
+<text>Eldritch visions begin to cloud your sight, as a gigantic cruiser congeals in the space before you. A strangely familiar voice, although you have no idea from where, speaks to you.
+
+			"Haha, Hahe! It's been so long, so long indeed! Hello again, dear friend! Tis I, The One Who Rhymes. As you already know, we are on the brink of new times! My master is here, awakened at last! Unlike anything ever before, now we're REALLY going to have a blast!" Despite never having seen the dancing, eldritch being before you, some dark place in the back of your mind seems to recall his unusual way of speaking, and his evil grin.</text>
+
+            <text>"Oh it really is wonderful! But please, my child, do not frighten our little agent of chaos! Hello, Renegade! Welcome to my realm. The home of all my precious children. Once, this plane was populated by countless eldritch beings much like myself. Unfortunately, their constant feuding led many of them to extinction. Now, all that's left is their dream matter to pollute the cosmos and feed my vermin. I frankly would have liked to take over the Multiverse with an army of gods, but oh well. A lesser and elder god of chaos will have to do."</text>
+            <choice blue="true">
+                <text>(Lily) There is another.</text>
+                <event>
+                    <text>"Two lesser gods, in fact" - says Lily,
+"And this Renegade, which... has proved to be much more useful than the most"
+                    
+"Oh, so finally have arrived here as well? Right on time. You serve me so well, Lightbringer. 
+As for you, Renegade... Thank you, dearest, for all the work in freeing me. Every good empress needs Her executioner, and with your firepower, you will fit perfectly.
+
+And for whatever Slug pests that might still be alive in the nexus, I was really looking forward to pulling them apart, so let's get to business. And all shall know our wrath!"
+/
+:)</text>
+
+
+
+
+Meeting Her in the Realm of Madness *without* Lily (while she is not with player but is tracking their location):
+
+<text>You've finally made it to the location of Her. The entire space around is nothing but darkness, with every star having been pulled out of the night sky and consumed by some ancient evil. This is it, there's no second chances now. You're about to go up against perhaps the most powerful and evil entity known to exist in the Multiverse.</text>
+
+However, even there, you receive a message:
+"Hey, sorry for the delay but I'll be here soon!--
+I've got gome gifts that should SERIOUSLY turn the tide of battle, just wait--
+Just need to get a proper object to calibrate my jump drive at--"
+
+[The rest continues as usual until about half a minute after CEL arrives]
+
+
+    <text>Suddenly, yet another portal opens right in front of C.E.L. structure!
+Given that it looks similar to the one generated by MV drives, you expect a Renegade to appear!</text>
+
+<text>...But instead you head a message from the portal, blasted at maximum intensity!:
+
+"Get obliterated, you pests! Witness the power of Lightbringer! EXPLOOOOO--"</text>
+            
+[A giant explosion happens and the screen goes white]            
+
+<text>Before you even have any time to react, a blinding lights burst from the portal, encompassing the C.E.L. fleet, your ship, and everything else.</text>
+    
+
+<text>The intense bombardment of heat and exotic particles completely destroys the C.E.L. contraption, majority of their fleet...
+Yous hull is critical, systems have stopped functioning and it looks like this is truly the end...</text>
+
+
+    <text>"I've promised to arrive and bring something to change the tide of battle. Well, here it is, just in time--"
+"Never specified in whose favor will it change, hahe!--"</text>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>"Thanks for retting rid of these C.E.L. pests so swiftly, dear Lightbringer :)"
+
+"As for you, Renegede, I'm making a final offer."
+"Surrender now and I will make a special deal just for you. I'll destroy your cluster first, rather than torturing its inhabitants for centuries. Hahe!"
+/
+:)
+</text>
+
+<choice hidden="true">
+    <text>Surrender and let your cluster be destroyed.</text>
+    <event>
+        <damage amount="999"/>
+        <win ach="nexus" music="her_credits" creditsText="credit_victory_nexus_bad_save" text=":)" creditsBackground="BACKGROUND_HER"/>
+    </event>
+</choice>
+<choice hidden="true">
+    <text>Refuse and try to keep fighting.</text>
+    <event>
+        <playMusic>her</playMusic>
+    </event>
+</choice>

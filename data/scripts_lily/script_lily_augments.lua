@@ -3,9 +3,25 @@ local INT_MAX = 2147483647
 
 
 
+script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, function(ship)
+    if ship.ship.iShipId == 0 then
+        Hyperspace.playerVariables.lily_afterburner_active = 0
+    end
+end)
+
+script.on_internal_event(Defines.InternalEvents.GET_DODGE_FACTOR, function(ship, value)
+    if ship.ship.iShipId == 0 and ship:HasAugmentation("LILY_COMBAT_AFTERBURNER") then
+        if value == 0 then
+            return Defines.Chain.CONTINUE, value
+        end
+        return Defines.Chain.CONTINUE, value + Hyperspace.playerVariables.lily_afterburner_active * 20
+    end
+    return Defines.Chain.CONTINUE, value
+end)
+
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local ship = Hyperspace.ships(projectile.ownerId)
-    if ship and ship:HasAugmentation("LILY_TARGETING_BYPASS") > 0 then
+    if ship and ship:HasAugmentation("LILY_TARGETING_BYPASS") > 0 and projectile.destinationSpace ~= projectile.currentSpace then
         projectile.extend.customDamage.accuracyMod = projectile.extend.customDamage.accuracyMod - 30
     end
 end)
@@ -26,6 +42,8 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_INITIALIZE, function(
     end
 end)
 
+
+
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA,
     function(ship, projectile, location, damage, forceHit, shipFriendlyFire)
         --damage.iDamage = 0
@@ -45,14 +63,174 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA,
         if projectile and ship and otherShip and otherShip:HasAugmentation("LILY_ANTI_CEL") > 0 then
             --ship.weaponSystem.weapons
             local celFound = false
-            --for crew in vter(ship.vCrewList) do
-                
+            local crewList = Hyperspace.Blueprints:GetBlueprintList("LIST_CREW_SYLVAN")
+            local itemList = Hyperspace.Blueprints:GetBlueprintList("JUDGELIST_ROCK_NEXUS_LOOT")
+            for crew in vter(ship.vCrewList) do
+                for crewl in vter(crewList) do
+                    --print("C: " .. crew.blueprint.name)
+                    --print("L: " .. crewl)
+                    if crew.blueprint.name == crewl then
+                        celFound = true
+                        break
+                    end
 
-
-            --end
+                    if celFound then
+                        break
+                    end
+                end
+                if celFound then
+                    break
+                end
+            end
             
+            if not celFound then
+                local weapons = ship and ship.weaponSystem and ship.weaponSystem.weapons
+                if weapons then
+                    for weapon in vter(weapons) do
+                        if weapon and weapon.blueprint and weapon.blueprint.name and weapon.blueprint.name then
+                            local wname = weapon.blueprint.name
+
+                            for item in vter(itemList) do
+                                if item == wname then
+                                    celFound = true
+                                    break
+                                end
+                            end
+                        end
+                        if celFound then
+                            break
+                        end
+                    end
+                end
+            end
+
+            if not celFound then
+                local drones = ship and ship.droneSystem and ship.droneSystem.drones
+                if drones then
+                    for drone in vter(drones) do
+                        if drone and drone.blueprint and drone.blueprint.name and drone.blueprint.name then
+                            local dname = drone.blueprint.name
+
+                            for item in vter(itemList) do
+                                if item == dname then
+                                    celFound = true
+                                    break
+                                end
+                            end
+                        end
+                        if celFound then
+                            break
+                        end
+                    end
+                end
+            end
+            
+            if celFound then
+                if damage.iDamage > 0 then
+                    damage.iDamage = damage.iDamage * 2
+                end
+                if damage.iSystemDamage > 0 then
+                    damage.iSystemDamage = damage.iSystemDamage * 2
+                end
+                if damage.iPersDamage > 0 then
+                    damage.iPersDamage = damage.iPersDamage * 2
+                end
+                if damage.iIonDamage > 0 then
+                    damage.iIonDamage = damage.iIonDamage * 2
+                end
+            end
+
 
         end
 
         return Defines.Chain.CONTINUE, forceHit, shipFriendlyFire
+    end)
+
+
+
+script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
+    function(ship, projectile, location, damage, newTile, beamHit)
+        local otherShip = Hyperspace.ships(1 - ship.iShipId)
+       
+        if projectile and ship and otherShip and otherShip:HasAugmentation("LILY_ANTI_CEL") > 0 then
+            local celFound = false
+            local crewList = Hyperspace.Blueprints:GetBlueprintList("LIST_CREW_SYLVAN")
+            local itemList = Hyperspace.Blueprints:GetBlueprintList("JUDGELIST_ROCK_NEXUS_LOOT")
+            for crew in vter(ship.vCrewList) do
+                for crewl in vter(crewList) do
+                    --print("C: " .. crew.blueprint.name)
+                    --print("L: " .. crewl)
+                    if crew.blueprint.name == crewl then
+                        celFound = true
+                        break
+                    end
+
+                    if celFound then
+                        break
+                    end
+                end
+                if celFound then
+                    break
+                end
+            end
+
+            if not celFound then
+                local weapons = ship and ship.weaponSystem and ship.weaponSystem.weapons
+                if weapons then
+                    for weapon in vter(weapons) do
+                        if weapon and weapon.blueprint and weapon.blueprint.name and weapon.blueprint.name then
+                            local wname = weapon.blueprint.name
+
+                            for item in vter(itemList) do
+                                if item == wname then
+                                    celFound = true
+                                    break
+                                end
+                            end
+                        end
+                        if celFound then
+                            break
+                        end
+                    end
+                end
+            end
+
+            if not celFound then
+                local drones = ship and ship.droneSystem and ship.droneSystem.drones
+                if drones then
+                    for drone in vter(drones) do
+                        if drone and drone.blueprint and drone.blueprint.name and drone.blueprint.name then
+                            local dname = drone.blueprint.name
+
+                            for item in vter(itemList) do
+                                if item == dname then
+                                    celFound = true
+                                    break
+                                end
+                            end
+                        end
+                        if celFound then
+                            break
+                        end
+                    end
+                end
+            end
+
+            if celFound then
+                if damage.iDamage > 0 then
+                    damage.iDamage = damage.iDamage * 2
+                end
+                if damage.iSystemDamage > 0 then
+                    damage.iSystemDamage = damage.iSystemDamage * 2
+                end
+                if damage.iPersDamage > 0 then
+                    damage.iPersDamage = damage.iPersDamage * 2
+                end
+                if damage.iIonDamage > 0 then
+                    damage.iIonDamage = damage.iIonDamage * 2
+                end
+            end
+        end
+
+        return Defines.Chain.CONTINUE, beamHit
     end)

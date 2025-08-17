@@ -462,6 +462,13 @@
 	<time>1.0</time>
 </anim>
 
+<animSheet name="lily_frost_debuff" w="35" h="33" fw="35" fh="33">people_lily/frost_debuff.png</animSheet>
+<anim name="lily_frost_debuff">
+	<sheet>lily_frost_debuff</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
 </FTL>
 
 
@@ -708,6 +715,32 @@
 		<chargeImage>weapon_lily/beam_particle_mini_glow.png</chargeImage>
 	</weaponAnim>
 
+	<animSheet name="lily_cyclotron_charges" w="212" h="64" fw="53" fh="64">weapon_lily/beam_cyclotron_chargeglow.png</animSheet>
+	<anim name="lily_cyclotron_charges">
+		<sheet>lily_cyclotron_charges</sheet>
+		<desc length="4" x="0" y="0"/>
+		<time>1.0</time>
+	</anim>
+	<animSheet name="lily_beam_cyclotron" w="2120" h="64" fw="53" fh="64">weapon_lily/beam_cyclotron.png</animSheet>
+	<weaponAnim name="lily_beam_cyclotron">
+		<sheet>lily_beam_cyclotron</sheet>
+		<desc length="40" x="0" y="0"/>
+		<chargedFrame>33</chargedFrame>
+		<fireFrame>34</fireFrame>
+		<firePoint x="40" y="32" charge="0"/>
+		<mountPoint x="4" y="45"/>
+		<boost>lily_cyclotron_charges</boost>
+	</weaponAnim>
 
+	<animSheet name="lily_beam_frost" w="1000" h="70" fw="50" fh="70">weapon_lily/beam_frost.png</animSheet>
+	<weaponAnim name="lily_beam_frost">
+		<sheet>lily_beam_frost</sheet>
+		<desc length="20" x="0" y="0"/>
+		<chargedFrame>10</chargedFrame>
+		<fireFrame>11</fireFrame>
+		<firePoint x="24" y="34"/>
+		<mountPoint x="4" y="45"/>
+		<chargeImage>weapon_lily/beam_frost_glow.png</chargeImage>
+	</weaponAnim>
 
 </FTL>

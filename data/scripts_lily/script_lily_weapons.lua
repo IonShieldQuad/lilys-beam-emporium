@@ -1,5 +1,6 @@
 
 local vter = mods.multiverse.vter
+local userdata_table = mods.multiverse.userdata_table
 local INT_MAX = 2147483647
 
 if mods.lilybeams == nil then
@@ -42,6 +43,21 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                 for drone in vter(otherShip.spaceDrones) do
                     drone.targetLocation = location
                 end
+            end
+            if weaponName == "LILY_BEAM_FROST" then
+
+                if beamHit == Defines.BeamHit.NEW_ROOM or beamHit == Defines.BeamHit.NEW_TILE then
+                    local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
+                    shipManager.oxygenSystem:ModifyRoomOxygen(roomId, -999)
+                    local fire = shipManager:GetFireAtPoint(location)
+                    fire.fDeathTimer = 0
+                    fire.fOxygen = 0
+                    fire:OnLoop()
+                    if beamHit == Defines.BeamHit.NEW_ROOM then
+                        shipManager.ship:LockdownRoom(roomId, location)
+                    end
+                end
+
             end
         end
         return Defines.Chain.CONTINUE, beamHit
@@ -456,6 +472,17 @@ script.on_internal_event(Defines.InternalEvents.WEAPON_RENDERBOX, function(weapo
         local l3 = (dmg + 0.0) .. " Damage"
         return Defines.Chain.CONTINUE, firstLine, l2, l3
     end
+    if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_CYCLOTRON" then
+        local sp = math.max(weapon.weaponVisual.boostLevel, 0)
+            local dmg = 1.0 + math.max(weapon.weaponVisual.boostLevel, 0)
+            local pdmg = 30.0 + 30 * math.max(weapon.weaponVisual.boostLevel, 0)
+        local l3 = string.format("%.0f Pierce", sp)
+        local l2 = string.format("%.0f / %.0f Damage", dmg, pdmg)
+        --print(l2)
+        --print(l3)
+        return Defines.Chain.CONTINUE, firstLine, l2, l3
+    end
+
     return Defines.Chain.CONTINUE, firstLine, secondLine, thirdLine
 end)
 --[[script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
@@ -467,3 +494,88 @@ end)
     end
 end)--]]
 
+
+
+
+--Magnifiers
+--Uses code from TRC
+mods.lilybeams.statChargers = {}
+local statChargers = mods.lilybeams.statChargers
+statChargers["LILY_BEAM_CYCLOTRON"] = { { stat = "iSystemDamage" }, { stat = "iPersDamage" }, { stat = "iPersDamage" }, { stat = "iShieldPiercing" }, { stat = "breachChance" }, { stat = "breachChance" }, { stat = "breachChance" }}
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
+    local statBoosts = statChargers[weapon and weapon.blueprint and weapon.blueprint.name]
+    if statBoosts then
+        local boost = weapon.weaponVisual.boostLevel --weapon.queuedProjectiles:size()
+        --print("boost: " .. boost)-- Gets how many projectiles are charged up (doesn't include the one that was already shot)
+        weapon.queuedProjectiles:clear()              -- Delete all other projectiles
+        for _, statBoost in ipairs(statBoosts) do     -- Apply all stat boosts
+            --print(statBoost.stat)
+            if statBoost.calc then
+                projectile.damage[statBoost.stat] = statBoost.calc(boost, projectile.damage[statBoost.stat])
+            else
+                projectile.damage[statBoost.stat] = boost + projectile.damage[statBoost.stat]
+            end
+        end
+    end
+end)
+
+mods.lilybeams.cooldownChargers = {}
+local cooldownChargers = mods.lilybeams.cooldownChargers
+cooldownChargers["LILY_BEAM_CYCLOTRON"] = 1.5
+
+mods.lilybeams.chargersMaxCharges = {}
+local chargersMaxCharges = {}
+chargersMaxCharges["LILY_BEAM_CYCLOTRON"] = 4
+
+script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
+    local weapons = ship and ship.weaponSystem and ship.weaponSystem.weapons
+    if weapons then
+        for weapon in vter(weapons) do
+            --print(weapon and weapon.blueprint and weapon.blueprint.name .. ": iChargeLevels: " .. weapon.weaponVisual.iChargeLevels)
+            -- print(weapon and weapon.blueprint and weapon.blueprint.name ..": boostLevel: " .. weapon.weaponVisual.boostLevel)
+            --if weapon.chargeLevel ~= 0 and weapon.chargeLevel < weapon.weaponVisual.iChargeLevels then
+            if weapon.weaponVisual.boostLevel + 1 ~= 0 and weapon.weaponVisual.boostLevel + 1 < chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] then
+                local cdBoost = cooldownChargers[weapon and weapon.blueprint and weapon.blueprint.name]
+                if cdBoost then
+                    local cdLast = userdata_table(weapon, "mods.lilybeams.weaponStuff").cdLast
+                    if cdLast and weapon.cooldown.first > cdLast then
+                        -- Calculate the new charge level from number of charges and charge level from last frame
+                        local chargeUpdate = weapon.cooldown.first - cdLast
+                        --local chargeNew = weapon.cooldown.first - chargeUpdate + cdBoost ^ weapon.chargeLevel * chargeUpdate
+                        local chargeNew = weapon.cooldown.first - chargeUpdate +
+                            cdBoost ^ (weapon.weaponVisual.boostLevel + 1) * chargeUpdate
+                        --print(chargeNew)
+                        -- Apply the new charge level
+                        if chargeNew >= weapon.cooldown.second then
+                            weapon.weaponVisual.boostLevel = weapon.weaponVisual.boostLevel + 1
+                            weapon.chargeLevel = weapon.chargeLevel + 1
+                            --if weapon.chargeLevel == weapon.weaponVisual.iChargeLevels then
+                            if weapon.weaponVisual.boostLevel + 1 == chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] then
+                                weapon.cooldown.first = weapon.cooldown.second
+                            else
+                                weapon.cooldown.first = 0
+                            end
+                        else
+                            weapon.cooldown.first = chargeNew
+                        end
+                    end
+                    userdata_table(weapon, "mods.lilybeams.weaponStuff").cdLast = weapon.cooldown.first
+                end
+            end
+        end
+    end
+end)
+
+script.on_internal_event(Defines.InternalEvents.WEAPON_RENDERBOX,
+    function(weapon, cooldown, maxCooldown, chargeString, damageString, shotLimitString)
+        local chargerBoost = cooldownChargers[weapon and weapon.blueprint and weapon.blueprint.name]
+        if chargerBoost then
+            local first, second = chargeString:match("([%d%.]+)%s*/%s*([%d%.]+)")
+            local boostLevel = math.min(weapon.weaponVisual.boostLevel + 1,
+            chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] - 1)
+            first = first / chargerBoost ^ boostLevel
+            second = second / chargerBoost ^ boostLevel
+            chargeString = string.format("%.1f / %.1f", first, second)
+        end
+        return Defines.Chain.CONTINUE, chargeString, damageString, shotLimitString
+    end)

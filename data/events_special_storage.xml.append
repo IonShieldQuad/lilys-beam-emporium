@@ -1175,6 +1175,188 @@ Anyway, was there anything else you wanted to ask?
 
 
 
+<mod:findName type="event" name="COMBAT_CHECK_REAL">
+    <mod-append:choice req="LILY_COMBAT_AFTERBURNER" hidden="true">
+        <text>(Afterburner) Activate the afterburner!</text>
+        <event load="COMBAT_CHECK_AFTERBURNER"/>
+    </mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="COMBAT_CHECK_FAIL_REAL">
+    <mod-append:choice req="LILY_COMBAT_AFTERBURNER" hidden="true">
+        <text>(Afterburner) Activate the afterburner!</text>
+        <event load="COMBAT_CHECK_AFTERBURNER"/>
+    </mod-append:choice>
+</mod:findName>
+
+<event name="COMBAT_CHECK_AFTERBURNER">
+    <text>How would you like to use the augment?</text>
+    <choice blue="false">
+        <text>Maximum throttle!
+[Evasion +20%, -3{, lasts 60 seconds.]</text>
+        <event>
+            <text>You activate the combat augment.</text>
+            <variable name="lily_afterburner_active" op="set" val="1"/>
+            <item_modify>
+                <item type="fuel" min="-3" max="-3"/>
+            </item_modify>
+            <triggeredEvent event="COMBAT_CHECK_AFTERBURNER_POWERDOWN" time="60" thisFight="true">
+                <triggeredEventBox load="DEFAULT_SMALL">
+                    <tooltip>Your afterburner will shutdown in this amount of time.</tooltip>
+                </triggeredEventBox>
+                <timerSounds load="DEFAULT_TIMER_SOUNDS"/>
+            </triggeredEvent>
+            <choice>
+                <text>Continue to the fight!</text>
+                <event/>
+            </choice>
+        </event>
+    </choice>
+    <choice req="DEBUG_GENERATOR">
+        <text>Maximum throttle! (Using Emergency Generator)
+[Evasion +20%, -2{, lasts 90 seconds.]</text>
+        <event>
+            <text>You activate the combat augment.</text>
+            <variable name="lily_afterburner_active" op="set" val="1"/>
+            <item_modify>
+                <item type="fuel" min="-2" max="-2"/>
+            </item_modify>
+            <triggeredEvent event="COMBAT_CHECK_AFTERBURNER_POWERDOWN" time="90" thisFight="true">
+                <triggeredEventBox load="DEFAULT_SMALL">
+                    <tooltip>Your afterburner will shutdown in this amount of time.</tooltip>
+                </triggeredEventBox>
+                <timerSounds load="DEFAULT_TIMER_SOUNDS"/>
+            </triggeredEvent>
+            <choice>
+                <text>Continue to the fight!</text>
+                <event/>
+            </choice>
+        </event>
+    </choice>
+    <choice blue="false">
+        <text>Burn the enemy! (Using Emergency Generator)
+[-3{, deals damage to enemy equals to your engine level, starts fires]</text>
+        <event>
+            <text>You activate the combat augment.</text>
+            <item_modify>
+                <item type="fuel" min="-3" max="-3"/>
+            </item_modify>
+            <loadEventList first="true" default="COMBAT_CHECK_AFTERBURNER_BURN_1">
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_8" req="engines" lvl="8"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_7" req="engines" lvl="7"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_6" req="engines" lvl="6"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_5" req="engines" lvl="5"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_4" req="engines" lvl="4"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_3" req="engines" lvl="3"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_2" req="engines" lvl="2"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_1" req="engines" lvl="1"/>
+            </loadEventList>
+        </event>
+    </choice>
+    <choice req="DEBUG_GENERATOR">
+        <text>Burn the enemy!
+[-2{, deals damage to enemy equals to your engine level, starts fires]</text>
+        <event>
+            <text>You activate the combat augment.</text>
+            <item_modify>
+                <item type="fuel" min="-2" max="-2"/>
+            </item_modify>
+            <loadEventList first="true" default="COMBAT_CHECK_AFTERBURNER_BURN_1">
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_8" req="engines" lvl="8"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_7" req="engines" lvl="7"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_6" req="engines" lvl="6"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_5" req="engines" lvl="5"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_4" req="engines" lvl="4"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_3" req="engines" lvl="3"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_2" req="engines" lvl="2"/>
+                <event load="COMBAT_CHECK_AFTERBURNER_BURN_1" req="engines" lvl="1"/>
+            </loadEventList>
+        </event>
+    </choice>
+    <choice>
+        <text>Do something else instead.</text>
+        <event load="COMBAT_CHECK"/>
+    </choice>
+    <choice>
+        <text>Nevermind, let's fight!</text>
+        <event>
+            <text>You decide not to do anything and prepare to fight.</text>
+        </event>
+    </choice>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_POWERDOWN">
+    <text>Your afterburner has overheated and shutdown. Your evasion have returned to normal.</text>
+    <variable name="lily_afterburner_active" op="set" val="0"/>
+    <choice hidden="true">
+        <text>Continue with the fight...</text>
+        <event>
+            <status type="clear" target="player" system="reactor" amount="100"/>
+        </event>
+    </choice>
+</event>
+
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_8">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_7">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_6">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_5">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_4">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_3">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_2">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_1">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+</event>
+
 
 <mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
     <mod-append:choice req="LILY_BEAM_SHOTGUN_P" blue="false">

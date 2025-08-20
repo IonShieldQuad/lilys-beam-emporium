@@ -246,7 +246,8 @@ script.on_internal_event(Defines.InternalEvents.PRE_CREATE_CHOICEBOX, function(e
     if (ShipManager and ShipManager:HasAugmentation("LILY_PATRONAGE") <= 0) and (Hyperspace.playerVariables.lily_backdoor > 0) then
         -- Prime gets sniped
         if event.eventName == "SHE_IS_DEFEATED" then
-            event.text.data = "As your hull is reduced to critical levels, you notice Prime himself has dismounted from his rings, and is now holding them above his head. \"You're right, it wasss my missstake to keep you around. Good thing I didn't make the missstake of making it perma-\" Prime doesn't get to finish his words as a beam striking from an unknown direction vaporizes the Slug instantly."
+            event.text.data =
+            "As your hull is reduced to critical levels, you notice Prime himself has dismounted from his rings, and is now holding them above his head. \"You're right, it wasss my missstake to keep you around. Good thing I didn't make the missstake of making it perma-\" Prime doesn't get to finish his words as a beam striking from an unknown direction vaporizes him instantly."
             Hyperspace.Sounds:PlaySoundMix("focus_strong", -1, false)
             local replace3 = Hyperspace.Event:GetBaseEvent("SHE_IS_DEFEATED_NOT",
                 Hyperspace.App.world.starMap.worldLevel, true,

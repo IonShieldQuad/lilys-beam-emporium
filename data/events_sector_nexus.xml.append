@@ -8,7 +8,7 @@
             <choice>
                 <text>"Oh, I know *precisely* what I'm doing and what I'm talking about-- Not even you can endure forever, trying to stop what was meant to be, Prime--"</text>
                 <event>
-                    <text>Sylvan Prime looks somewhat shocked at Lily's reply. "I refussse to believe thisss... but if you are really ssserving Her... Then I have no choice but to dessstroy you at onssse!"</text>
+                    <text>Sylvan Prime looks somewhat shocked at Lily's reply. "I refussse to believe thisss... but if you are really ssserving Her... Then I have no choice but to dessstroy you at once!"</text>
                     <choice hidden="true" blue="false" req="PRIME_SUPPORT_CHECK" lvl="0" max_lvl="0">
                         <text>Continue...</text>
                         <event>
@@ -69,7 +69,7 @@
 
 <event name="SHE_IS_DEFEATED_NOT">
     <text>To your surprise, a stealth ship armed with a huge beam weapon uncloaks nearby.
-"Too bad, you betrayal at the last moment has only spelled doom for you, Renegade--"
+"Too bad, your betrayal at the last moment has only spelled doom for you, Renegade--"
 "And alas, it didn't even change a trace, as I'm the plan B right for this case--"
 "Here to succeed where you fail--"
 "But thanks for opening the portal and leading me right here, by the way--"</text>
@@ -87,7 +87,7 @@
     <enemyDamage amount="999"/>
 </event>
 <event name="NEXUS_ENDING_NOTGOOD">
-    <text>With the Prime no more, She is unleashed, and you only have mere moments before your imminent destruction...</text>
+    <text>With the Sylvan Prime gone, She is unleashed, and you have mere moments before your demise.</text>
     <changeBackground>BACK_EVENT_CENTER</changeBackground>
     <damage amount="999"/>
     <playMusic>paragon</playMusic>    <!--needs its own music probably-->
@@ -101,7 +101,7 @@
 </event>
 
 <event name="NEXUS_HER_HELP_LILY">
-    <text>When the maddening red has subsided, you awake on your ship and find yourself all alone save for Prime's now empty ship. With Prime now gone and Her having recovered all three pieces of Her power, the C.E.L. is likely going to be too weak now to fight Her. Your only choice now is to wait for the inevitable.</text>
+    <text>The maddening red hue finally subsides, you wake up on your ship and find yourself all alone, save for Prime's now empty flagship. With Prime now gone and Her having recovered all three pieces of Her power, the C.E.L. is likely going to be too weak now to fight Her. Your only choice now is to wait for the inevitable.</text>
     <choice>
     <text>Continue...</text>
         <event>

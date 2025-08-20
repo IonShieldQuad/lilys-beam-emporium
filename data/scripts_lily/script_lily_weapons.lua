@@ -534,7 +534,11 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
             --print(weapon and weapon.blueprint and weapon.blueprint.name .. ": iChargeLevels: " .. weapon.weaponVisual.iChargeLevels)
             -- print(weapon and weapon.blueprint and weapon.blueprint.name ..": boostLevel: " .. weapon.weaponVisual.boostLevel)
             --if weapon.chargeLevel ~= 0 and weapon.chargeLevel < weapon.weaponVisual.iChargeLevels then
-            if weapon.weaponVisual.boostLevel + 1 ~= 0 and weapon.weaponVisual.boostLevel + 1 < chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] then
+            local valid = true
+            if not chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] then
+                valid = false
+            end 
+            if valid and weapon.weaponVisual.boostLevel + 1 ~= 0 and weapon.weaponVisual.boostLevel + 1 < chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] then
                 local cdBoost = cooldownChargers[weapon and weapon.blueprint and weapon.blueprint.name]
                 if cdBoost then
                     local cdLast = userdata_table(weapon, "mods.lilybeams.weaponStuff").cdLast

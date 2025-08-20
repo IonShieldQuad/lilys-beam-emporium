@@ -2,7 +2,7 @@
 <FTL>
     <event name="ADDON_LILYBEAMS">
         <hover-text>Lily's Beam Emporium 
-	Click to see more info.</hover-text>
+Click to see more info.</hover-text>
         <text>Lily's Beam Emporium
 Developed by: MsBinaryLily
 Currently Enabled.
@@ -25,4 +25,20 @@ Kix, and everyone else who have worked on creating FTL: Multiverse (and Hyperspa
 To enable Lily's Beam Emporium, go to the Multiverse Forums and visit the addon section!.</text>
     </event>
 
+    <event name="ADDON_LILYINNO_DISABLED">
+        <hover-text>Lily's Innovations
+Click to see more info.</hover-text>
+        <text>Lily's Innovations
+Developed by: MsBinaryLily
+Currently Disabled.
+        
+An addon that add new and alternative SHIP SYSTEMS to allow for new and interesting playstyles.
+
+
+Special thanks to: 
+Arc, sillysandvich, for help with scripting;
+Kix, and everyone else who have worked on creating FTL: Multiverse (and Hyperspace);
+        
+To enable Lily's Innovations, go to the Multiverse Forums and visit the addon section!.</text>
+    </event>
 </FTL>

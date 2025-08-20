@@ -31,6 +31,20 @@
 			</req>
 		</req>
 	</mod-append:req>
+
+	<mod-append:req name="LILY_AVATAR_SUMMON_CHECK" type="all">
+		<req lvl="1">
+			<name>LILY_PATRONAGE</name>
+		</req>
+		<req type="any">
+			<req lvl="1" >
+				<name>LILY_AVATAR_LINKER</name>
+			</req>
+			<req lvl="1">
+				<name>eldritch_cat</name>
+			</req>
+		</req>
+	</mod-append:req>
 </mod:findLike>
 
 <augments>
@@ -46,6 +60,8 @@
 	</aug>
 	<aug name="LILY_PATRONAGE">
 		<locked/>
+	</aug>
+	<aug name="LILY_AVATAR_LINKER">
 	</aug>
 	<aug name="LILY_MYSTERIOUS_NOTE">
 	</aug>
@@ -804,17 +820,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			<allowDuplicates/>
 			<item>
 				<modifier flat="false">1.0</modifier>
-				<blueprint>LIST_CREW_SIREN</blueprint>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">1.0</modifier>
-				<blueprint>LIST_CREW_SIREN</blueprint>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">1.0</modifier>
-				<blueprint>LIST_CREW_SIREN</blueprint>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
 			<chance>100</chance>
@@ -1183,17 +1199,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			<allowDuplicates/>
 			<item>
 				<modifier flat="false">0.1</modifier>
-				<blueprint>LIST_CREW_SIREN</blueprint>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">0.1</modifier>
-				<blueprint>LIST_CREW_SIREN</blueprint>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">0.1</modifier>
-				<blueprint>LIST_CREW_SIREN</blueprint>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
 			<chance>100</chance>
@@ -1203,17 +1219,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			<allowDuplicates/>
 			<item>
 				<modifier flat="false">0.1</modifier>
-				<blueprint>LIST_CREW_SIREN</blueprint>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">0.1</modifier>
-				<blueprint>LIST_CREW_SIREN</blueprint>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">0.1</modifier>
-				<blueprint>LIST_CREW_SIREN</blueprint>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
 			<chance>100</chance>

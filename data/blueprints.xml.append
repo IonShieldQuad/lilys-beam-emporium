@@ -144,6 +144,54 @@ disable shields as well as systems.</tooltip>
 </weaponBlueprint>
 </FTL-->
 <FTL>
+
+    <mod:findLike type="weaponBlueprint">
+        <!-- mark the statBoost -->
+        <mod:findLike type="statBoosts">
+            <mod:findWithChildLike type="statBoost" child-type="boostAnim">
+                <mod:selector>madness</mod:selector>
+                <mod:setAttributes lilys="beam_emporium" />
+            </mod:findWithChildLike>
+        </mod:findLike>
+        <!-- find the statBoosts via the marked statBoost -->
+        <mod:findWithChildLike type="statBoosts" child-type="statBoost">
+            <mod:selector lilys="beam_emporium" />
+            <mod:findLike>            <!-- every statBoost -->
+                <mod:findLike type="blackList">
+                    <mod-append:unique_lily_avatar/>
+                </mod:findLike>
+            </mod:findLike>
+            <mod:findLike>            <!-- the marked statBoost -->
+                <mod:selector lilys="beam_emporium" />
+                <mod:removeAttributes lilys="" />
+            </mod:findLike>
+        </mod:findWithChildLike>
+    </mod:findLike>
+
+    <mod:findLike type="weaponBlueprint">
+        <!-- mark the statBoost -->
+        <mod:findLike type="statBoosts">
+            <mod:findWithChildLike type="statBoost" child-type="boostAnim">
+                <mod:selector>madness_elite</mod:selector>
+                <mod:setAttributes lilys="beam_emporium" />
+            </mod:findWithChildLike>
+        </mod:findLike>
+        <!-- find the statBoosts via the marked statBoost -->
+        <mod:findWithChildLike type="statBoosts" child-type="statBoost">
+            <mod:selector lilys="beam_emporium" />
+            <mod:findLike>            <!-- every statBoost -->
+                <mod:findLike type="blackList">
+                    <mod-append:unique_lily_avatar/>
+                </mod:findLike>
+            </mod:findLike>
+            <mod:findLike>            <!-- the marked statBoost -->
+                <mod:selector lilys="beam_emporium" />
+                <mod:removeAttributes lilys="" />
+            </mod:findLike>
+        </mod:findWithChildLike>
+    </mod:findLike>
+
+
     <augBlueprint name="LILY_TARGETING_BYPASS">
         <title>Weap. Targeting Bypass</title>
         <desc>Increases weapon charge rate by 30%. However, all weapons also recieve -30% accuracy penalty.</desc>
@@ -182,6 +230,15 @@ disable shields as well as systems.</tooltip>
     </augBlueprint>
 
     <augBlueprint name="LILY_PATRONAGE">
+        <title>???</title>
+        <desc>You aren't supposed to see this.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_AVATAR_LINKER">
         <title>???</title>
         <desc>You aren't supposed to see this.</desc>
         <cost>0</cost>
@@ -858,6 +915,37 @@ disable shields as well as systems.</tooltip>
         <short>Ph. Ionpoint</short>
         <desc>A modified pinpoint beam that does 2 ion damage and phases through shielding. Gradually adapts to enemy shielding, allowing it to phase through extra layers with each consecutive shot.</desc>
         <tooltip>Two ion damage per room beam weapon</tooltip>
+        <descriptionOverride>A modified pinpoint beam that does 2 ion damage and phases through shielding. 
+Gradually adapts to enemy shielding, allowing it to phase through extra layers with each consecutive shot.
+
+Stats:
+Required Power: 3
+Charge Time: 13 seconds
+
+Chain Effect: Increases Shield Piercing by 1
+Chain Effect: If Shield Piercing is greater than 10, increases Ion Damage by 0.1
+Chain Cap: 999 chains
+
+Beam Length: Pinpoint
+Beam Speed: 1
+
+Ion Damage: 2
+Shield Piercing: 2
+
+Default Price: 85~   -   Selling Price: 42~
+        </descriptionOverride>
+        <tooltipOverride>Required Power: 3
+Charge Time: 13 seconds
+
+Chain Effect: Increases Shield Piercing by 1
+Chain Effect: If Shield Piercing is greater than 10, increases Ion Damage by 0.1
+Chain Cap: 999 chains
+
+Beam Length: Pinpoint
+Beam Speed: 1
+
+Ion Damage: 2
+Shield Piercing: 2</tooltipOverride>
         <damage>0</damage>
         <ion>2</ion>
         <sp>3</sp>
@@ -2332,6 +2420,9 @@ Bonus Charging Speed: x1.5 per charge
 Total System Damage: 1/2/3/4
 Shield Piercing: 0/1/2/3
 Total Crew Damage: 30/60/90/120
+
+Beam Length: 25
+Beam Speed: 6
 		
 Breach Chance: 20/50/80/110% 
 
@@ -2347,6 +2438,9 @@ Total System Damage: 1/2/3/4
 Shield Piercing: 0/1/2/3
 Total Crew Damage: 30/60/90/120
 		
+Beam Length: 25
+Beam Speed: 6
+
 Breach Chance: 20/50/80/110% </tooltipOverride>
         <tooltip>Beam; damages systems and crew.</tooltip>
         <chargeLevels>4</chargeLevels>

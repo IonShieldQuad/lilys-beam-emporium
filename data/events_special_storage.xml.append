@@ -327,10 +327,12 @@ But alright, just bring me some materials and I'll make one for you--
 While I can't do that due to ... reasons, I can lend you my Avatar--
 Think of it as a kind of remotely controlled drone, except that it's not--
 Oh, and don't dare to think of it as expendable, or I will make you pay--
+
+You are going to need a special piece of equipment for me to do so though...
     </text>
 
-    <choice blue="false" hidden="true">
-        <text>Continue...</text>
+    <choice req="LILY_AVATAR_LINKER" lvl="1" blue="false" hidden="true">
+        <text>Summon Lily's Avatar...</text>
         <event>
             <text>A rift in space suddenly opens near you, materializing... a quite normal looking human. Although if feels like there's something off...</text>
             <crewMember amount="1" class="unique_lily_avatar">Lily</crewMember>
@@ -339,8 +341,43 @@ Oh, and don't dare to think of it as expendable, or I will make you pay--
             <event load="STORAGE_CHECK"/>
         </event>
     </choice>
-
-    <choice>
+    <choice req="eldritch_cat" lvl="1" blue="false" hidden="true">
+        <text>(The One Who Rhymes) Allow me to count: three, two, one...</text>
+        <event>
+            <text>And everything that's needed is all done!</text>
+            <hiddenAug>LILY_AVATAR_LINKER</hiddenAug>
+            <event load="STORAGE_CHECK"/>
+        </event>
+    </choice>
+    <choice req="BLUELIST_AETHER" lvl="1" blue="false" hidden="true">
+        <text>(Aether Tech) Install the technology [30~, 5|]</text>
+        <event>
+            <text>You install the required technology...</text>
+            <item_modify>
+                <item type="scrap" min="-30" max="-30"/>
+                <item type="drones" min="-5" max="-5"/>
+            </item_modify>
+            <hiddenAug>LILY_AVATAR_LINKER</hiddenAug>
+            <event load="STORAGE_CHECK"/>
+        </event>
+    </choice>
+    <choice req="lily_aether_points" lvl="1" blue="false" hidden="true">
+        <text>(Aether Points) Install the technology [30~, 5|]</text>
+        <event>
+            <text>You install the required technology...</text>
+            <item_modify>
+                <item type="scrap" min="-30" max="-30"/>
+                <item type="drones" min="-5" max="-5"/>
+            </item_modify>
+            <hiddenAug>LILY_AVATAR_LINKER</hiddenAug>
+            <event load="STORAGE_CHECK"/>
+        </event>
+    </choice>
+    <choice req="LILY_AVATAR_LINKER" lvl="0" max_lvl="0" blue="false" hidden="true">
+        <text>You need to be in possession of Aether Tech (or some alternative) for installation.</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true">
         <text>Nevermind.</text>
         <event load="STORAGE_CHECK"/>
     </choice>
@@ -440,21 +477,21 @@ I suppose, about the structure of the multiverse?--</text>
     <choice>
         <text>Continue...</text>
         <event name="STORAGE_CHECK_LILY_LOREDUMP_2">
-            <text>As you already know, being a Multiverse Renegade, there are multiple universes that you can travel between by using MV drive. And there are infinite number of them--
-In some of them, Federation wins (and if you complete your mission, thhis universe will be one of them), is some Rebellion wins, hell, I've seen the universes when Orchids and Vampweeds somehow allied with slugs and took the galaxy for themself...
-But overall, there are still similar, there are spaceships, Federation, Rebellion, Mantis, Rocks, all that kind of stuff...
+            <text>As you already know, being a Multiverse Renegade, there are multiple universes that you can travel between by using MV drive. And there is an infinite number of them.--
+In some of them, Federation wins (and if you complete your mission, this universe will be one of them). In some, the Rebellion wins. Hell, I've seen the universes where the Orchids and the Vampweeds somehow allied with the Slugs and took galaxies for themselves...
+But overall, they are still similar. There are spaceships, Federation, Rebellion, Mantises, Rocks and all that kind of stuff...
 And that collection of similar universes is typically called a "cluster". Your cluster might contain infinite universes, but it is not the only one--</text>
             <choice>
                 <text>Continue...</text>
                 <event name="STORAGE_CHECK_LILY_LOREDUMP_3">
-                    <text>However, other clusters can be very, very different from yours. For example, I've once been in cluster where is no humans, no rebellion, no traditional life at all. Instead, the only living inhabitants were humongous swarms of intelligent machines, who spent all the matter and energy they could get to make mountains of something resembling ... paperclips?
-Certainly not a nice place for a vacation-- Unlike a cluster where rivers are made of fuzzy drinks, ground made of marshmellows and plants of black and white chocolate--
+                    <text>However, other clusters can be very, very different from yours. I've once been in a cluster where there are no humans, no traditional life at all. Instead, the only living inhabitants were humongous swarms of intelligent machines, who spent all the matter and energy they could get to make mountains of something resembling ... paperclips?
+Certainly, not a nice place for vacation-- Unlike a cluster where rivers are made of fuzzy drinks, ground made of marshmellows and plants of black and white chocolate--
 And there are many, many possibilities of what different clusters might contain--</text>
                     <choice>
                     <text>Continue...</text>
                         <event name="STORAGE_CHECK_LILY_LOREDUMP_4">
                         <text>And as you might have guessed, I'm not from this cluster either--
-I'm from a place far, far, far away. And very dangerous, that place was, rile with constant infighting.
+I'm from a place far, far, far away. And very dangerous, that place was... riddled with constant infighting.
 So knowing better, I "self-exiled" myself, so to speak, and went ahead exploring other clusters--</text>
                             <choice>
                                 <text>Continue...</text>
@@ -467,28 +504,28 @@ But it was great fun, and let bygones be bygones--</text>
                                         <text>Continue...</text>
                                         <event name="STORAGE_CHECK_LILY_LOREDUMP_6">
                                         <text>But, of course, everything changed, when those damned Slugs with gray and green ships arrived...
-You know, with weird number "8" as their logo.
-Not only they have captured my Mistress somehow - through their dirty Slug tricks, no doubt!; They now keep harrassing me too as soon as I try to do anything fun!
+You know, with weird number "8" as their insignia--
+Not only they have captured my Mistress somehow - through their dirty Slug tricks, no doubt! They now keep harrassing me too as soon as I try to do anything fun!
 Which is why I'm limited to mostly just selling some beam weapons lately...
 And all for what? For some "Order" and "Multiversal Continuity"? Bah! As if Slugs could ever know anything about "order" in the first place?! Absurd!</text>
                                             <choice>
                                                 <text>Continue...</text>
                                                 <event name="STORAGE_CHECK_LILY_LOREDUMP_7">
-                                                    <text>And I'm not letting those slimy basards get away with it - they are going down!
-...Well, as soon as I find a way to actually defeat them... A special beam weapon seems like a good candidate, or perhaps some WMD...
+                                                    <text>And I'm not letting those slimy bastards get away with it - they are going down!
+...Well, as soon as I find a way to actually defeat them... A special beam weapon seems like a good candidate, or perhaps some W.M.D...
 ...And as soon as I find their hideout too, of course. But I've heard that there's a passway in this universe, something related to "heart of the storm"...</text>
                                                     <choice>
                                                         <text>Continue...</text>
                                                         <event name="STORAGE_CHECK_LILY_LOREDUMP_8">
-                                                        <text>...Luckily my Mistress is patient and cunning... and so am I.
-We surely will figure it out eventually-- 
+                                                        <text>...Luckily, my Mistress is patient and cunning... and so am I.
+We will figure it out eventually-- 
 ...But that doesn't mean you can't help-- We will surely reward you if you actually succeed.
-Oh, and you will get hands on all kind of prototype weapons I'm gonna be testing and developing - doesn't it sound exciting?--
-...And if not... the data collected on you travels will further our goal regardless. Maybe the next Renegade will be successful then, if not you?</text>
+Oh, and you will get your hands on all kids of prototype weapons I'm gonna be testing and developing - doesn't it sound exciting?--
+...And if not... the data collected on your travels will further assist our goal regardless. Maybe the next Renegade will be successful then, if not you?</text>
                                                             <choice>
                                                                 <text>Continue...</text>
                                                                 <event name="STORAGE_CHECK_LILY_LOREDUMP_9">
-                                                                <text>Well, that was quite a paragraph of text. I hope you now understand and will be more motivated to help us...
+                                                                <text>Well, that was quite the tale, wasn't it?-- I hope you now understand and will be more motivated to help us...
 Not only it will benefit me, but you as well!-- Call it a win-win--
 Anyway, was there anything else you wanted to ask?
 (P.S. Good job if you actually have read all of this--)</text>

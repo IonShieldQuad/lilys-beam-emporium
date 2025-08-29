@@ -1010,7 +1010,7 @@ Shield Piercing: 2</tooltipOverride>
         <desc>This Beam boasts an unique multimodal power core, allowing it to be effective against hull, systems and crew, though not at once. Current mode: Anti-hull.</desc>
         <tooltip>Beam weapon; 1 damage; 2x damage in systemless rooms.</tooltip>
         <damage>1</damage>
-        <persDamage>-1</persDamage>
+        <noPersDamage>true</noPersDamage>
         <sp>0</sp>
         <fireChance>0</fireChance>
         <breachChance>3</breachChance>
@@ -1100,7 +1100,393 @@ Shield Piercing: 2</tooltipOverride>
     </weaponBlueprint>
 </FTL>
 
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					TOGGLE - EVENTIDE
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
 
+<FTL>
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_EVENTIDE_L">
+        <type>BEAM</type>
+        <tip>tip_beams</tip>
+        <title>'Eventide' Beam [Long]</title>
+        <short>'Eventide' [L]</short>
+        <desc>A bigger sister of 'Sunset', this Beam's core is not only more powerful, but has an extra mode as well! Current mode: Long, Pure damage.</desc>
+        <tooltip>Beam weapon; 2 damage;</tooltip>
+        <damage>2</damage>
+        <noPersDamage>true</noPersDamage>
+        <sp>0</sp>
+        <fireChance>0</fireChance>
+        <breachChance>1</breachChance>
+        <cooldown>20</cooldown>
+        <hullBust>0</hullBust>
+        <power>4</power>
+        <cost>120</cost>
+        <bp>8</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>200</length>
+        <launchSounds>
+            <sound>beam1</sound>
+            <sound>beam1_2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_eventide_l</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_EVENTIDE_B">
+        <type>BEAM</type>
+        <tip>tip_bio</tip>
+        <title>'Eventide' Beam [Shred]</title>
+        <short>'Eventide' [S]</short>
+        <desc>A bigger sister of 'Sunset', this Beam's core is not only more powerful, but has an extra mode as well! Current mode: Shred, High breach, system and crew damage .</desc>
+        <tooltip>Beam weapon; 2 damage;</tooltip>
+        <damage>1</damage>
+        <sysDamage>1</sysDamage>
+        <persDamage>5</persDamage>
+        <statBoosts>
+            <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
+            <statBoost name="stunMultiplier" load="RAD_STUN"/>
+            <statBoost name="repairSpeed" load="RAD_REPAIR"/>
+        </statBoosts>
+        <sp>1</sp>
+        <fireChance>0</fireChance>
+        <breachChance>10</breachChance>
+        <cooldown>20</cooldown>
+        <hullBust>0</hullBust>
+        <power>4</power>
+        <cost>120</cost>
+        <bp>8</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>110</length>
+        <color>
+            <r>255</r>
+            <g>8</g>
+            <b>200</b>
+        </color>
+        <mv-aiCrewTarget>MOST_CREW</mv-aiCrewTarget>
+        <launchSounds>
+            <sound>beam2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_eventide_b</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_EVENTIDE_P">
+        <type>BEAM</type>
+        <tip>tip_particle_beam</tip>
+        <title>'Eventide' Beam [Thermal]</title>
+        <short>'Eventide' [T]</short>
+        <desc>A bigger sister of 'Sunset', this Beam's core is not only more powerful, but has an extra mode as well! Current mode: Thermal particle, high system damage, guaranteed fire.</desc>
+        <tooltip>Beam weapon; 2 damage;</tooltip>
+        <damage>0</damage>
+        <sysDamage>4</sysDamage>
+        <persDamage>0</persDamage>
+        <sp>1</sp>
+        <fireChance>10</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>20</cooldown>
+        <hullBust>0</hullBust>
+        <power>4</power>
+        <cost>120</cost>
+        <bp>8</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>110</length>
+        <color>
+            <r>255</r>
+            <g>110</g>
+            <b>0</b>
+        </color>
+        <mv-aiSystemTarget system="any"/>
+        <launchSounds>
+            <sound>beam2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_eventide_p</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_EVENTIDE_H">
+        <type>BEAM</type>
+        <tip>tip_beams</tip>
+        <title>'Eventide' Beam [Hack]</title>
+        <short>'Eventide' [H]</short>
+        <desc>A bigger sister of 'Sunset', this Beam's core is not only more powerful, but has an extra mode as well! Current mode: Hack, applies hacking effect to any system hit.</desc>
+        <tooltip>Beam weapon; 2 damage;</tooltip>
+        <damage>1</damage>
+        <persDamage>0</persDamage>
+        <sp>2</sp>
+        <noSysDamage>true</noSysDamage>
+        <stun>10</stun>
+        <mv-hack duration="8"/>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>20</cooldown>
+        <hullBust>0</hullBust>
+        <power>4</power>
+        <cost>120</cost>
+        <bp>8</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>110</length>
+        <color>
+            <r>191</r>
+            <g>36</g>
+            <b>255</b>
+        </color>
+        <mv-aiSystemTarget system="any"/>
+        <launchSounds>
+            <sound>beam2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_eventide_h</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+</FTL>
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					TOGGLE - AKATSUKI
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+<FTL>
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_AKATSUKI_B">
+        <type>BEAM</type>
+        <tip>tip_beams</tip>
+        <title>'Akatsuki' [Beam]</title>
+        <short>'Akatsuki' [B]</short>
+        <desc>A special beam weapon that can toggle it's firing pattern on the fly, trading off between length and damage. Current mode: Beam.</desc>
+        <tooltip>Beam weapon; 2 damage;</tooltip>
+        <damage>2</damage>
+        <sp>1</sp>
+        <fireChance>0</fireChance>
+        <breachChance>4</breachChance>
+        <cooldown>15</cooldown>
+        <hullBust>0</hullBust>
+        <power>3</power>
+        <cost>90</cost>
+        <bp>8</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>30</length>
+        <launchSounds>
+            <sound>beam2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_akatsuki_b</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_AKATSUKI_F">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_focus</tip>
+        <title>'Akatsuki' [Focus]</title>
+        <short>'Akatsuki' [F]</short>
+        <desc>A special beam weapon that can toggle it's firing pattern on the fly, trading off between length and damage. Current mode: Pinpoint.</desc>
+        <tooltip>Beam weapon; 2 damage;</tooltip>
+        <damage>4</damage>
+        <sp>0</sp>
+        <fireChance>0</fireChance>
+        <breachChance>10</breachChance>
+        <cooldown>15</cooldown>
+        <hullBust>1</hullBust>
+        <power>3</power>
+        <cost>90</cost>
+        <bp>8</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <launchSounds>
+            <sound>focus_strong</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_akatsuki_f</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_AKATSUKI_S">
+        <type>BURST</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_focus</tip>
+        <title>'Akatsuki' [Scatter]</title>
+        <short>'Akatsuki' [S]</short>
+        <desc>A special beam weapon that can toggle it's firing pattern on the fly, trading off between length and damage. Current mode: Scatter.</desc>
+        <tooltip>Beam weapon; 2 damage;</tooltip>
+        <damage>2</damage>
+        <radius>65</radius>
+        <shots>1</shots>
+        <sp>0</sp>
+        <projectiles>
+            <projectile count="4" fake="false">laser_burst</projectile>            <!-- Fake projectiles which LUA replaces with beams -->
+        </projectiles>
+        <fireChance>5</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>15</cooldown>
+        <hullBust>0</hullBust>
+        <speed>0</speed>
+        <power>3</power>
+        <cost>90</cost>
+        <bp>8</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <fireTime>0.2</fireTime>
+        <launchSounds>
+            <sound>focus_weak</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_akatsuki_s</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_TOGGLE_AKATSUKI_S_BEAM">
+        <type>BEAM</type>
+        <flavorType>Pinpoint</flavorType>
+        <tip>tip_focus</tip>
+        <title>---</title>
+        <short>---</short>
+        <desc>YOU SHOULD NEVER SEE THIS</desc>
+        <tooltip>---</tooltip>
+        <damage>2</damage>
+        <sp>0</sp>
+        <fireChance>5</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>15</cooldown>
+        <hullBust>0</hullBust>
+        <length>1</length>
+        <speed>1</speed>
+        <power>3</power>
+        <cost>90</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <image>beam_contact</image>
+        <length>1</length>
+        <launchSounds>
+            <sound>focus_weak</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_toggle_akatsuki_s</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+</FTL>
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					SCISSORS
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+<FTL>
+    <weaponBlueprint name="LILY_BEAM_SCISSORS">
+        <type>BEAM</type>
+        <tip>tip_beams</tip>
+        <title>Beam 'Scissors'</title>
+        <short>'Scissors'</short>
+        <desc>An unique weapon capable of firing a pair of converging beams at once.</desc>
+        <tooltip>One ion damage per room beam weapon</tooltip>
+        <descriptionOverride>An unique weapon capable of firing a pair of converging beams at once.
+
+Stats:
+Required Power: 4
+Charge Time: 20 seconds
+
+Beam Length: 80
+Beam Speed:5
+
+(Primary Beam)
+Ion Damage: 2
+Fire Chance: 20%
+Stun Chance: 100% (3 seconds long)
+
+(Secondary Beam)
+2x hull damage on systemlesss rooms.
+Base Hull Damage: 1
+Total System Damage: 2
+Total Crew Damage: 30
+Breach Chance: 20% (Adjusted: 20%)
+
+Default Price: 100~   -   Selling Price: 50~</descriptionOverride>
+        <tooltipOverride>Required Power: 4
+Charge Time: 20 seconds
+
+Beam Length: 80
+Beam Speed:5
+
+(Primary Beam)
+Ion Damage: 2
+Fire Chance: 20%
+Stun Chance: 100% (3 seconds long)
+
+(Secondary Beam)
+2x hull damage on systemlesss rooms.
+Base Hull Damage: 1
+Total System Damage: 2
+Total Crew Damage: 30
+Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
+        <damage>0</damage>
+        <ion>2</ion>
+        <sp>0</sp>
+        <ionBeamFix>true</ionBeamFix>
+        <color>
+            <r>133</r>
+            <g>231</g>
+            <b>237</b>
+        </color>
+        <stunChance>10</stunChance>
+        <fireChance>2</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>20</cooldown>
+        <power>4</power>
+        <cost>100</cost>
+        <bp>4</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>80</length>
+        <mv-aiSystemTarget system="shields"/>
+        <launchSounds>
+            <sound>beam2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_scissors</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+    <weaponBlueprint name="LILY_BEAM_SCISSORS_SEC">
+        <type>BEAM</type>
+        <tip>tip_beams</tip>
+        <title>Beam 'Scissors'</title>
+        <short>'Scissors'</short>
+        <desc>An unique weapon capable of firing a pair of converging beams at once.</desc>
+        <tooltip>One damage per room beam weapon</tooltip>
+        <damage>1</damage>
+        <sysDamage>1</sysDamage>
+        <persDamage>1</persDamage>
+        <hullBust>1</hullBust>
+        <ion>0</ion>
+        <sp>0</sp>
+        <fireChance>0</fireChance>
+        <breachChance>2</breachChance>
+        <cooldown>20</cooldown>
+        <power>4</power>
+        <cost>100</cost>
+        <bp>4</bp>
+        <rarity>5</rarity>
+        <image>beam_contact</image>
+        <length>80</length>
+        <mv-aiSystemTarget system="shields"/>
+        <launchSounds>
+            <sound>beam2</sound>
+        </launchSounds>
+        <weaponArt>lily_beam_scissors</weaponArt>
+        <iconImage>beam</iconImage>
+    </weaponBlueprint>
+
+</FTL>
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -1337,6 +1723,56 @@ Shield Piercing: 2</tooltipOverride>
                 <affectsSelf>true</affectsSelf>
                 <duration>25</duration>
                 <boostAnim>lily_poison_effect</boostAnim>
+                <blackList>
+                <!--blueprintList name="LIST_CREW_GAS"-->                    <!-- Shell Gas whitelist-->
+                    <name>shell</name>
+                    <name>shell_mechanic</name>
+                    <name>shell_scientist</name>
+                    <name>shell_guardian</name>
+                    <name>shell_radiant</name>
+                    <name>unique_alkali</name>
+
+                    <name>orchid_vampweed</name>
+                    <name>orchid_cultivator</name>
+                    <name>unique_tyerel</name>
+                    <name>unique_ivar</name>
+
+                    <name>phantom</name>
+                    <name>phantom_alpha</name>
+                    <name>phantom_goul</name>
+                    <name>phantom_goul_alpha</name>
+                    <name>phantom_mare</name>
+                    <name>phantom_mare_alpha</name>
+                    <name>phantom_wraith</name>
+                    <name>phantom_wraith_alpha</name>
+                    <name>unique_dessius</name>
+
+                    <name>gbeleanor</name>
+                    <name>gbgozer</name>
+                    <name>gbpsych</name>
+                    <name>gbscoleri</name>
+                    <name>gbslimer</name>
+                    <name>gbvinz</name>
+                    <name>gbzuul</name>
+
+                    <name>lanius</name>
+                    <name>lanius_welder</name>
+                    <name>lanius_augmented</name>
+                    <name>unique_anointed</name>
+                    <name>unique_eater</name>
+
+                    <name>zoltan_osmian_hologram</name>
+                    <name>hologram</name>
+
+                    <name>sylvansans</name>
+
+                    <name>drone_battle</name>
+                    <name>atom</name>
+                    <name>human_technician_drone</name>
+
+                    <name>bucket</name>
+                    <name>gnome</name>
+                </blackList>
             </statBoost>
         </statBoosts>
         <launchSounds>
@@ -1465,7 +1901,7 @@ Shield Piercing: 2</tooltipOverride>
     <cooldown>18</cooldown>
     <hullBust>0</hullBust>
     <power>0</power>
-    <cost>100</cost>
+    <cost>70</cost>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed> 
@@ -1507,7 +1943,7 @@ Shield Piercing: 2</tooltipOverride>
     <cooldown>14</cooldown>
     <hullBust>0</hullBust>
     <power>1</power>
-    <cost>100</cost>
+    <cost>70</cost>
     <bp>8</bp>
     <rarity>6</rarity>
     <speed>0</speed>
@@ -1549,7 +1985,7 @@ Shield Piercing: 2</tooltipOverride>
     <cooldown>14</cooldown>
     <hullBust>0</hullBust>
     <power>2</power>
-    <cost>100</cost>
+    <cost>70</cost>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed>
@@ -1590,7 +2026,7 @@ Shield Piercing: 2</tooltipOverride>
     <cooldown>14</cooldown>
     <hullBust>0</hullBust>
     <power>3</power>
-    <cost>100</cost>
+    <cost>70</cost>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed>
@@ -2596,6 +3032,88 @@ The excessive nitrogen gas also upsets the atmospheric balance.</desc>
         <weaponArt>lily_beam_particle_mini</weaponArt>
         <iconImage>beam</iconImage>
 </weaponBlueprint>
+
+
+
+<shipBlueprint name="LILY_PLAYER_WRECKED_SIREN_TRANSPORT" layout="lily_player_wrecked_siren_transport" img="lily_player_wrecked_siren_transport">
+    <class>Wrecked Siren Transport</class>
+    <name>The Broken Dream</name>
+    <desc>A wreck of the Siren ship recovered from the Stargrove. Beaten up and with no oxygen, it is now crewed by Lanius and an Orchid, who liked "pretty colors". The special Siren weapon still remains, however.</desc>
+    <unlock id="ship_LILY_WRECKED_SIREN_TRANSPORT_unlock"/>
+    <systemList>
+        <cloaking power="1" room="8" start="false" img="room_cloaking_4" />
+        <doors power="1" room="2" start="true" img="room_doors_9">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </doors>
+        <drones power="2" max="8" room="7" start="false" img="room_drones_12" />
+        <engines power="2" max="6" room="6" start="true" img="room_engines_2">
+            <slot>
+                <direction>down</direction>
+                <number>2</number>
+            </slot>
+        </engines>
+        <hacking power="1" room="9" start="false" img="room_hacking_7" />
+        <medbay power="1" room="3" start="true" img="room_medbay_7">
+            <slot>
+                <number>2</number>
+            </slot>
+        </medbay>
+        <clonebay power="1" room="3" start="false">
+            <slot>
+                <number>2</number>
+            </slot>
+        </clonebay>
+        <mind power="1" max="4" room="11" start="true" img="room_mind_2" />
+        <pilot power="1" room="0" start="true" img="room_pilot_2">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </pilot>
+        <sensors power="1" room="12" start="false" img="room_sensors_3">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </sensors>
+        <shields power="2" max="8" room="5" start="true" img="room_shields">
+            <slot>
+                <direction>left</direction>
+                <number>0</number>
+            </slot>
+        </shields>
+        <teleporter power="1" room="4" start="true" />
+        <temporal power="1" room="10" start="true" img="room_temporal_3" />
+        <weapons power="3" room="1" start="true" img="room_weapons">
+            <slot>
+                <direction>up</direction>
+                <number>1</number>
+            </slot>
+        </weapons>
+    </systemList>
+    <weaponSlots>3</weaponSlots>
+    <droneSlots>3</droneSlots>
+    <weaponList missiles="5" count="3">
+        <weapon name="BEAM_MADNESS" />
+        <weapon name="LASER_BURST_1" />
+    </weaponList>
+    <droneList drones="0" count="0" />
+    <health amount="15" />
+    <maxPower amount="9" />
+    <crewCount amount="1" class="siren" />
+    <crewCount amount="1" class="orchid_caretaker" />
+    <crewCount amount="1" class="lanius" />
+
+    <aug name="EX_O2_MASKS" />
+    <aug name="REPAIR_ARM" />
+
+    <shieldImage>mup_disk</shieldImage>
+    <mv-mapImage>map_icon_lily_player_wrecked_siren_transport</mv-mapImage>
+</shipBlueprint>
+
 
 
 </FTL>

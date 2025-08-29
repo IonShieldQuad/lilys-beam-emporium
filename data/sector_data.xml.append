@@ -30,6 +30,14 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_PHASE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_L" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_B" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_P" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_H" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_B" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_F" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_S" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_SCISSORS" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_PIERCE_1" rarity="0" />
@@ -56,6 +64,14 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_PHASE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_L" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_B" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_P" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_H" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_B" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_F" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_S" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_SCISSORS" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_PIERCE_1" rarity="0" />
@@ -83,6 +99,14 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_PHASE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_L" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_B" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_P" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_H" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_B" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_F" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_S" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_SCISSORS" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_PIERCE_1" rarity="0" />
@@ -110,6 +134,14 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_ION_PHASE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_L" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_B" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_P" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_H" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_B" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_F" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_S" rarity="0" />
+        <mod-append:blueprint name="LILY_BEAM_SCISSORS" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SYRINGE" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="0" />
         <mod-append:blueprint name="LILY_FOCUS_PIERCE_1" rarity="0" />
@@ -218,6 +250,9 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="4" />
         <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="3" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_L" rarity="4" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_B" rarity="4" />
+        <mod-append:blueprint name="LILY_BEAM_SCISSORS" rarity="4" />
 
 
 
@@ -233,6 +268,9 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="3" />
         <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="3" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="3" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_L" rarity="4" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_B" rarity="4" />
+        <mod-append:blueprint name="LILY_BEAM_SCISSORS" rarity="3" />
 
 
     </mod:findLike>
@@ -247,6 +285,10 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="4" />
         <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="3" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_L" rarity="4" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_B" rarity="4" />
+        <mod-append:blueprint name="LILY_BEAM_SCISSORS" rarity="4" />
+
 
 
     </mod:findLike>
@@ -261,6 +303,10 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_FIRE" rarity="4" />
         <mod-append:blueprint name="LILY_FOCUS_ION_STUN" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_TOGGLE_SUNSET_H" rarity="3" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_EVENTIDE_L" rarity="3" />
+        <mod-append:blueprint name="LILY_BEAM_TOGGLE_AKATSUKI_B" rarity="3" />
+        <mod-append:blueprint name="LILY_BEAM_SCISSORS" rarity="4" />
+
 
 
     </mod:findLike>

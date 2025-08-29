@@ -66,7 +66,7 @@ Get the necessarry materials and knowledge for them and I'd gladly share--</text
     <loadEvent>STORAGE_CHECK_LILY_QUESTS_AETHER</loadEvent>
 </event>
 <event name="STORAGE_CHECK_LILY_QUESTS_AETHER">
-<text>Ah, a clasic--
+<text>Ah, a classic--
 This kind of weapons has been around for millenias, and they still remain one of the strongest--
 Not strong enough to do the thing I was hoping to...
 But alright, just bring me some materials and I'll make one for you--
@@ -332,7 +332,7 @@ You are going to need a special piece of equipment for me to do so though...
     </text>
 
     <choice req="LILY_AVATAR_LINKER" lvl="1" blue="false" hidden="true">
-        <text>Summon Lily's Avatar...</text>
+        <text>You altready have the tech, use it to summon the Lily's Avatar...</text>
         <event>
             <text>A rift in space suddenly opens near you, materializing... a quite normal looking human. Although if feels like there's something off...</text>
             <crewMember amount="1" class="unique_lily_avatar">Lily</crewMember>
@@ -344,37 +344,44 @@ You are going to need a special piece of equipment for me to do so though...
     <choice req="eldritch_cat" lvl="1" blue="false" hidden="true">
         <text>(The One Who Rhymes) Allow me to count: three, two, one...</text>
         <event>
-            <text>And everything that's needed is all done!</text>
+            <text>And everything that's needed is all done!
+
+A rift in space suddenly opens near you, materializing... a quite normal looking human. Although if feels like there's something off...</text>
+
+            <crewMember amount="1" class="unique_lily_avatar">Lily</crewMember>
+            <variable name="lily_times_summoned" op="set" val="1"/>
             <hiddenAug>LILY_AVATAR_LINKER</hiddenAug>
             <event load="STORAGE_CHECK"/>
         </event>
     </choice>
     <choice req="BLUELIST_AETHER" lvl="1" blue="false" hidden="true">
-        <text>(Aether Tech) Install the technology [30~, 5|]</text>
-        <event>
+        <text>(Aether Tech) Install the technology and use it [30~, 5|]</text>
+        <event name="STORAGE_CHECK_LILY_LINKER_INSTALL">
             <text>You install the required technology...</text>
             <item_modify>
                 <item type="scrap" min="-30" max="-30"/>
                 <item type="drones" min="-5" max="-5"/>
             </item_modify>
             <hiddenAug>LILY_AVATAR_LINKER</hiddenAug>
-            <event load="STORAGE_CHECK"/>
+            <choice>
+                <text>Continue...</text>
+                <event>
+                    <text>And activate it!
+
+A rift in space suddenly opens near you, materializing... a quite normal looking human. Although if feels like there's something off...</text>
+                    <crewMember amount="1" class="unique_lily_avatar">Lily</crewMember>
+                    <variable name="lily_times_summoned" op="set" val="1"/>
+                    <event load="STORAGE_CHECK"/>
+                </event>
+            </choice>
         </event>
     </choice>
     <choice req="lily_aether_points" lvl="1" blue="false" hidden="true">
-        <text>(Aether Points) Install the technology [30~, 5|]</text>
-        <event>
-            <text>You install the required technology...</text>
-            <item_modify>
-                <item type="scrap" min="-30" max="-30"/>
-                <item type="drones" min="-5" max="-5"/>
-            </item_modify>
-            <hiddenAug>LILY_AVATAR_LINKER</hiddenAug>
-            <event load="STORAGE_CHECK"/>
-        </event>
+        <text>(Aether Points) Install the technology and use it [30~, 5|]</text>
+        <event load="STORAGE_CHECK_LILY_LINKER_INSTALL"/>
     </choice>
     <choice req="LILY_AVATAR_LINKER" lvl="0" max_lvl="0" blue="false" hidden="true">
-        <text>You need to be in possession of Aether Tech (or some alternative) for installation.</text>
+        <text>Note: You need to be in possession of Aether Tech (or some alternative) for installation.</text>
         <event load="OPTION_INVALID"/>
     </choice>
     <choice hidden="true">
@@ -600,6 +607,7 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </mod-append:choice>
 </mod:findName>
+
 <mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
     <mod-append:choice req="LILY_BEAM_TOGGLE_SUNSET_H" blue="false">
         <text>('Sunset' Beam) Set the state of the weapon. [Current mode: Hullbust]</text>
@@ -749,6 +757,433 @@ Anyway, was there anything else you wanted to ask?
         <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
     </choice>
 </event>
+
+
+
+<mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+    <mod-append:choice req="LILY_BEAM_TOGGLE_EVENTIDE_L" blue="false">
+        <text>('Eventide' Beam) Set the state of the weapon. [Current mode: Long]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_EVENTIDE_L"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_TOGGLE_EVENTIDE_B" blue="false">
+        <text>('Eventide' Beam) Set the state of the weapon. [Current mode: Shred]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_EVENTIDE_B"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_TOGGLE_EVENTIDE_P" blue="false">
+        <text>('Eventide' Beam) Set the state of the weapon. [Current mode: Thermal]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_EVENTIDE_P"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_TOGGLE_EVENTIDE_H" blue="false">
+        <text>('Eventide' Beam) Set the state of the weapon. [Current mode: Hack]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_EVENTIDE_H"/>
+    </mod-append:choice>
+</mod:findName>
+
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_EVENTIDE_L">
+    <text>What mode do you want to set the weapon to?
+	Current mode: Long.</text>
+    <choice hidden="true">
+        <text>Switch to Shred mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_L"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_B"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Thermal mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_L"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_P"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Hack mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_L"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_H"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_EVENTIDE_B">
+    <text>What mode do you want to set the weapon to?
+	Current mode: Shred.</text>
+    <choice hidden="true">
+        <text>Switch to Long mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_B"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_L"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Thermal mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_B"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_P"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Hack mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_B"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_H"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+
+
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_EVENTIDE_P">
+    <text>What mode do you want to set the weapon to?
+	Current mode: Thermal.</text>
+    <choice hidden="true">
+        <text>Switch to Long mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_P"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_L"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Shred mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_P"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_B"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Hack mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_P"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_H"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_EVENTIDE_H">
+    <text>What mode do you want to set the weapon to?
+	Current mode: Hack.</text>
+    <choice hidden="true">
+        <text>Switch to Long mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_H"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_L"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Shred mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_H"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_B"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Thermal mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_EVENTIDE_H"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_EVENTIDE_P"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+
+
+
+
+<mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+    <mod-append:choice req="LILY_BEAM_TOGGLE_AKATSUKI_B" blue="false">
+        <text>('Akatsuki') Set the state of the weapon. [Current mode: Beam]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_AKATSUKI_B"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_TOGGLE_AKATSUKI_F" blue="false">
+        <text>('Akatsuki') Set the state of the weapon. [Current mode: Focus]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_AKATSUKI_F"/>
+    </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_TOGGLE_AKATSUKI_S" blue="false">
+        <text>('Akatsuki') Set the state of the weapon. [Current mode: Scatter]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_TOGGLE_AKATSUKI_S"/>
+    </mod-append:choice>
+</mod:findName>
+
+
+
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_AKATSUKI_B">
+    <text>What mode do you want to set the weapon to?
+	Current mode: Beam.</text>
+    <choice hidden="true">
+        <text>Switch to Focus mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_AKATSUKI_B"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_AKATSUKI_F"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Scatter mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_AKATSUKI_B"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_AKATSUKI_S"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_AKATSUKI_F">
+    <text>What mode do you want to set the weapon to?
+	Current mode: Focus.</text>
+    <choice hidden="true">
+        <text>Switch to Beam mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_AKATSUKI_F"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_AKATSUKI_B"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Scatter mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_AKATSUKI_F"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_AKATSUKI_S"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+<event name="COMBAT_CHECK_LILY_BEAM_TOGGLE_AKATSUKI_S">
+    <text>What mode do you want to set the weapon to?
+	Current mode: Scatter.</text>
+    <choice hidden="true">
+        <text>Switch to Beam mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_AKATSUKI_S"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_AKATSUKI_B"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Switch to Focus mode.</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_TOGGLE_AKATSUKI_S"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_TOGGLE_AKATSUKI_F"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+
 
 
 

@@ -76,6 +76,36 @@ script.on_internal_event(Defines.InternalEvents.PRE_CREATE_CHOICEBOX, function(e
 
     -- If player visited Lily and made a deal
     if ShipManager and ShipManager:HasAugmentation("LILY_PATRONAGE") > 0 then
+
+    
+        if event.eventName == "TRANSPORT_CAPTURE_STARGROVE" then
+            local replace = Hyperspace.Event:GetBaseEvent("TRANSPORT_CAPTURE_STARGROVE_LILY",
+                Hyperspace.App.world.starMap.worldLevel, true,
+                Hyperspace.Global.currentSeed);
+            local req = Hyperspace.ChoiceReq()
+            req.object = "LILY_PATRONAGE"
+            req.min_level = 1
+            req.max_level = 999
+            req.max_group = 0
+            req.blue = false
+            Choices = event:GetChoices()
+            for choice in vter(Choices) do
+                choice.event = replace
+                choice.textv = "Continue..."
+            end
+        end
+
+
+
+
+
+
+
+
+
+
+
+        --Nexus stuff ahead
         if LILY_SYLVAN_HATER[event.eventName] ~= nil then
             LilyForceFight(event)
         end

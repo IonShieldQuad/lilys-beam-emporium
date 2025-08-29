@@ -404,7 +404,7 @@
 		<chargedFrame>10</chargedFrame>
 		<fireFrame>11</fireFrame>
 		<firePoint x="22" y="23"/>
-		<mountPoint x="10" y="55"/>
+		<mountPoint x="6" y="55"/>
 		<chargeImage>weapon_lily/beam_toggle_sunset_h_glow.png</chargeImage>
 	</weaponAnim>
 
@@ -415,7 +415,7 @@
 		<chargedFrame>10</chargedFrame>
 		<fireFrame>11</fireFrame>
 		<firePoint x="22" y="23"/>
-		<mountPoint x="10" y="55"/>
+		<mountPoint x="6" y="55"/>
 		<chargeImage>weapon_lily/beam_toggle_sunset_p_glow.png</chargeImage>
 	</weaponAnim>
 
@@ -426,11 +426,97 @@
 		<chargedFrame>10</chargedFrame>
 		<fireFrame>11</fireFrame>
 		<firePoint x="22" y="23"/>
-		<mountPoint x="10" y="55"/>
+		<mountPoint x="6" y="55"/>
 		<chargeImage>weapon_lily/beam_toggle_sunset_b_glow.png</chargeImage>
 	</weaponAnim>
 
 
+	<animSheet name="lily_beam_toggle_eventide_l" w="1080" h="140" fw="54" fh="140">weapon_lily/beam_toggle_eventide_l.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_eventide_l">
+		<sheet>lily_beam_toggle_eventide_l</sheet>
+		<desc length="20" x="0" y="0"/>
+		<chargedFrame>10</chargedFrame>
+		<fireFrame>11</fireFrame>
+		<firePoint x="26" y="80"/>
+		<mountPoint x="6" y="112"/>
+		<chargeImage>weapon_lily/beam_toggle_eventide_l_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_toggle_eventide_b" w="1080" h="140" fw="54" fh="140">weapon_lily/beam_toggle_eventide_b.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_eventide_b">
+		<sheet>lily_beam_toggle_eventide_b</sheet>
+		<desc length="20" x="0" y="0"/>
+		<chargedFrame>10</chargedFrame>
+		<fireFrame>11</fireFrame>
+		<firePoint x="26" y="80"/>
+		<mountPoint x="6" y="112"/>
+		<chargeImage>weapon_lily/beam_toggle_eventide_b_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_toggle_eventide_p" w="1080" h="140" fw="54" fh="140">weapon_lily/beam_toggle_eventide_p.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_eventide_p">
+		<sheet>lily_beam_toggle_eventide_p</sheet>
+		<desc length="20" x="0" y="0"/>
+		<chargedFrame>10</chargedFrame>
+		<fireFrame>11</fireFrame>
+		<firePoint x="26" y="80"/>
+		<mountPoint x="6" y="112"/>
+		<chargeImage>weapon_lily/beam_toggle_eventide_p_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_toggle_eventide_h" w="1080" h="140" fw="54" fh="140">weapon_lily/beam_toggle_eventide_h.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_eventide_h">
+		<sheet>lily_beam_toggle_eventide_h</sheet>
+		<desc length="20" x="0" y="0"/>
+		<chargedFrame>10</chargedFrame>
+		<fireFrame>11</fireFrame>
+		<firePoint x="26" y="80"/>
+		<mountPoint x="6" y="112"/>
+		<chargeImage>weapon_lily/beam_toggle_eventide_h_glow.png</chargeImage>
+	</weaponAnim>
+
+
+	<animSheet name="lily_beam_toggle_akatsuki_b" w="1365" h="95" fw="35" fh="95">weapon_lily/beam_toggle_akatsuki_b.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_akatsuki_b">
+		<sheet>lily_beam_toggle_akatsuki_b</sheet>
+		<desc length="39" x="0" y="0"/>
+		<chargedFrame>16</chargedFrame>
+		<fireFrame>20</fireFrame>
+		<firePoint x="20" y="43"/>
+		<mountPoint x="6" y="71"/>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_toggle_akatsuki_f" w="1365" h="95" fw="35" fh="95">weapon_lily/beam_toggle_akatsuki_f.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_akatsuki_f">
+		<sheet>lily_beam_toggle_akatsuki_f</sheet>
+		<desc length="39" x="0" y="0"/>
+		<chargedFrame>16</chargedFrame>
+		<fireFrame>20</fireFrame>
+		<firePoint x="20" y="43"/>
+		<mountPoint x="6" y="71"/>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_toggle_akatsuki_s" w="1365" h="95" fw="35" fh="95">weapon_lily/beam_toggle_akatsuki_s.png</animSheet>
+	<weaponAnim name="lily_beam_toggle_akatsuki_s">
+		<sheet>lily_beam_toggle_akatsuki_s</sheet>
+		<desc length="39" x="0" y="0"/>
+		<chargedFrame>16</chargedFrame>
+		<fireFrame>20</fireFrame>
+		<firePoint x="20" y="43"/>
+		<mountPoint x="6" y="71"/>
+	</weaponAnim>
+
+	<animSheet name="lily_beam_scissors" w="405" h="93" fw="45" fh="93">weapon_lily/beam_scissors.png</animSheet>
+	<weaponAnim name="lily_beam_scissors">
+		<sheet>lily_beam_scissors</sheet>
+		<desc length="9" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="21" y="38"/>
+		<!--firePoint x="34" y="38"/-->
+		<mountPoint x="6" y="72"/>
+		<chargeImage>weapon_lily/beam_scissors_glow.png</chargeImage>
+	</weaponAnim>
 </FTL>
 
 <FTL>
@@ -742,5 +828,84 @@
 		<mountPoint x="4" y="45"/>
 		<chargeImage>weapon_lily/beam_frost_glow.png</chargeImage>
 	</weaponAnim>
+
+</FTL>
+
+<animSheet name="lily_siren_transport_column_light_damaged" w="19000" h="129" fw="190" fh="129">thrusters/lily_siren_transport_column_light_damaged.png</animSheet>
+<anim name="lily_siren_transport_column_light_damaged">
+	<sheet>lily_siren_transport_column_light_damaged</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>2</time>	<!-- 5 or so for normal-->
+</anim>
+<animSheet name="lily_siren_transport_column_light_damaged_a" w="9500" h="129" fw="95" fh="129">thrusters/lily_siren_transport_column_light_damaged_a.png</animSheet>
+<anim name="lily_siren_transport_column_light_damaged_a">
+	<sheet>lily_siren_transport_column_light_damaged_a</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>2</time>	<!-- 5 or so for normal-->
+</anim>
+<animSheet name="lily_siren_transport_column_light_damaged_b" w="9500" h="129" fw="95" fh="129">thrusters/lily_siren_transport_column_light_damaged_b.png</animSheet>
+<anim name="lily_siren_transport_column_light_damaged_b">
+	<sheet>lily_siren_transport_column_light_damaged_b</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>2</time>	<!-- 5 or so for normal-->
+</anim>
+<animSheet name="lily_siren_transport_bands_bottom_center" w="5100" h="13" fw="51" fh="13">thrusters/lily_siren_transport_bands_bottom_center.png</animSheet>
+<anim name="lily_siren_transport_bands_bottom_center">
+	<sheet>lily_siren_transport_bands_bottom_center</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_siren_transport_bands_bottom_left_damaged" w="5500" h="9" fw="55" fh="9">thrusters/lily_siren_transport_bands_bottom_left_damaged.png</animSheet>
+<anim name="lily_siren_transport_bands_bottom_left_damaged">
+	<sheet>lily_siren_transport_bands_bottom_left_damaged</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_siren_transport_bands_bottom_right" w="5500" h="9" fw="55" fh="9">thrusters/lily_siren_transport_bands_bottom_right.png</animSheet>
+<anim name="lily_siren_transport_bands_bottom_right">
+	<sheet>lily_siren_transport_bands_bottom_right</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_siren_transport_bands_top_center_damaged" w="8200" h="11" fw="82" fh="11">thrusters/lily_siren_transport_bands_top_center_damaged.png</animSheet>
+<anim name="lily_siren_transport_bands_top_center_damaged">
+	<sheet>lily_siren_transport_bands_top_center_damaged</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_siren_transport_bands_top_left" w="10100" h="35" fw="101" fh="35">thrusters/lily_siren_transport_bands_top_left.png</animSheet>
+<anim name="lily_siren_transport_bands_top_left">
+	<sheet>lily_siren_transport_bands_top_left</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_siren_transport_bands_top_right_damaged" w="10100" h="35" fw="101" fh="35">thrusters/lily_siren_transport_bands_top_right_damaged.png</animSheet>
+<anim name="lily_siren_transport_bands_top_right_damaged">
+	<sheet>lily_siren_transport_bands_top_right_damaged</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+
+
+<FTL>
+
+<animSheet name="lily_siren_transport_thruster_center" w="2920" h="67" fw="73" fh="67">thrusters/lily_siren_transport_thruster_center.png</animSheet>
+<anim name="lily_siren_transport_thruster_center">
+	<sheet>lily_siren_transport_thruster_center</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
+<animSheet name="lily_siren_transport_thruster_side" w="3720" h="81" fw="93" fh="80">thrusters/lily_siren_transport_thruster_side.png</animSheet>
+<anim name="lily_siren_transport_thruster_side">
+	<sheet>lily_siren_transport_thruster_side</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
+<animSheet name="lily_siren_transport_thruster_side_damaged" w="3720" h="81" fw="93" fh="81">thrusters/lily_siren_transport_thruster_side_damaged.png</animSheet>
+<anim name="lily_siren_transport_thruster_side_damaged">
+	<sheet>lily_siren_transport_thruster_side_damaged</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
 
 </FTL>

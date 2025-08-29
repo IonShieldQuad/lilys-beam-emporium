@@ -612,4 +612,14 @@ Whoever the mysterious shop owner is, they clearly don't want you messing with t
     </choice>
 </event>
 
+<event name="TRANSPORT_CAPTURE_STARGROVE_LILY">
+    <text>Such a beautiful vessel, of Siren design no less--
+And in such disrepair...
+It would be a shame to just leave it here burning up...
+So, how about I deliver it (well, whatever remains of it) to your hanger instead, as a gift?--
+You have a lot of space, right? And surely it can be patched up, eventually--</text>
+<unlockCustomShip silent="false">LILY_PLAYER_WRECKED_SIREN_TRANSPORT</unlockCustomShip>
+</event>
+
+
 </FTL>

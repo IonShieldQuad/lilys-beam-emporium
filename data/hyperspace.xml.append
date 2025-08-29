@@ -8,6 +8,39 @@
 	<mod-append:script>data/scripts_lily/script_lily_events.lua</mod-append:script>
 </mod:findLike>
 
+<mod:findLike type="ships" limit="1">
+	<mod:findLike type="shipOrder" limit="1">
+		<mod-append:ship>LILY_PLAYER_WRECKED_SIREN_TRANSPORT</mod-append:ship>
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+
+		<mod-append:empty/>
+		<mod-append:empty/>
+	</mod:findLike>
+
+	<mod-append:ship name="LILY_PLAYER_WRECKED_SIREN_TRANSPORT" a="true" b="false" c="false" >
+		<unlock variant="a" silent="true">
+			<type>4</type>
+		</unlock>
+	</mod-append:ship>
+	<mod-append:customShip name="LILY_PLAYER_WRECKED_SIREN_TRANSPORT">
+		<hiddenAug>SHIP_SIREN</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<crewLimit>10</crewLimit>
+		<systemLimit>8</systemLimit>
+	</mod-append:customShip>
+</mod:findLike>
+
+<unlock variant="a" silent="true">
+	<type>4</type>
+</unlock>
+
 <mod:findLike type="events">
 	<mod-append:variable name="lily_backdoor" op="set" value="0" />
 	<mod-append:variable name="lily_aether_points" op="set" value="0" />
@@ -45,6 +78,9 @@
 			</req>
 		</req>
 	</mod-append:req>
+
+
+	<mod-append:bossShip yOffset="100">SHIP_BEAM_EMPORIUM_STATION</mod-append:bossShip>
 </mod:findLike>
 
 <augments>
@@ -67,9 +103,11 @@
 	</aug>
 </augments>
 
-<mod:findName type="req" name="LIST_CHECK_AUGMENTS">
-	<mod-append:name>LILY_PATRONAGE</mod-append:name>
-</mod:findName>
+<mod:findLike type="events" limit="1">
+	<mod:findName type="req" name="LIST_CHECK_AUGMENTS">
+		<mod-append:name>LILY_PATRONAGE</mod-append:name>
+	</mod:findName>
+</mod:findLike>
 
 <crew>
     <race name="unique_lily_avatar">
@@ -447,7 +485,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		</category>
 
 		<category type="WEAPONS">
-			<customTitle>MULTIMODE</customTitle>
+			<customTitle>MULTISHOT</customTitle>
 			<item>
 				<modifier flat="false">1.1</modifier>
 				<blueprint>LILY_BEAM_SHOTGUN_P</blueprint>
@@ -460,7 +498,26 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_SCISSORS</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>HIGH TECH</customTitle>
+			<item>
+				<modifier flat="false">1.1</modifier>
 				<blueprint>LILY_BEAM_TOGGLE_SUNSET_H</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_TOGGLE_EVENTIDE_L</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_TOGGLE_AKATSUKI_B</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -764,7 +821,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		</category>
 
 		<category type="WEAPONS">
-			<customTitle>MULTIMODE</customTitle>
+			<customTitle>MULTISHOT</customTitle>
 			<item>
 				<modifier flat="false">1.1</modifier>
 				<blueprint>LILY_BEAM_SHOTGUN_P</blueprint>
@@ -777,7 +834,26 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_SCISSORS</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>HIGH TECH</customTitle>
+			<item>
+				<modifier flat="false">1.1</modifier>
 				<blueprint>LILY_BEAM_TOGGLE_SUNSET_H</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_TOGGLE_EVENTIDE_L</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_BEAM_TOGGLE_AKATSUKI_B</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -1124,7 +1200,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		</category>
 
 		<category type="WEAPONS">
-			<customTitle>MULTIMODE</customTitle>
+			<customTitle>MULTISHOT</customTitle>
 			<item>
 				<modifier flat="false">0.2</modifier>
 				<blueprint>LILY_BEAM_SHOTGUN_P</blueprint>
@@ -1137,7 +1213,26 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">0.2</modifier>
+				<blueprint>LILY_BEAM_SCISSORS</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>HIGH TECH</customTitle>
+			<item>
+				<modifier flat="false">0.2</modifier>
 				<blueprint>LILY_BEAM_TOGGLE_SUNSET_H</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.2</modifier>
+				<blueprint>LILY_BEAM_TOGGLE_EVENTIDE_L</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.2</modifier>
+				<blueprint>LILY_BEAM_TOGGLE_AKATSUKI_B</blueprint>
 				<price>-1</price>
 			</item>
 		</category>

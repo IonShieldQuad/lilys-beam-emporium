@@ -48,11 +48,13 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
 
                 if beamHit == Defines.BeamHit.NEW_ROOM or beamHit == Defines.BeamHit.NEW_TILE then
                     local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
-                    shipManager.oxygenSystem:ModifyRoomOxygen(roomId, -999)
-                    local fire = shipManager:GetFireAtPoint(location)
-                    fire.fDeathTimer = 0
-                    fire.fOxygen = 0
-                    fire:OnLoop()
+                    if roomId >= 0 then
+                        shipManager.oxygenSystem:ModifyRoomOxygen(roomId, -999)
+                        local fire = shipManager:GetFireAtPoint(location)
+                        fire.fDeathTimer = 0
+                        fire.fOxygen = 0
+                        fire:OnLoop()
+                    end
                     if beamHit == Defines.BeamHit.NEW_ROOM then
                         shipManager.ship:LockdownRoom(roomId, location)
                     end
@@ -72,6 +74,7 @@ burstPinpoints["LILY_BEAM_AMP_SIPHON_0"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_1"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_2"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_3"] = "LILY_BEAM_AMP_SIPHON"
+burstPinpoints["LILY_BEAM_TOGGLE_AKATSUKI_S"] = "LILY_BEAM_TOGGLE_AKATSUKI_S_BEAM"
 local howitzers = {}
 howitzers["LILY_HOWITZER_1"] = { dmg = 4, primary = "LILY_HOWITZER_1_BEAM_P", secondary = "LILY_HOWITZER_1_BEAM_S" }
 
@@ -349,6 +352,46 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
         --]]
     end
 
+
+    if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SCISSORS" then
+    
+        local offset2 = Hyperspace.Pointf(13, 0)
+        if weapon.mount.mirror then offset2.x = -offset2.x end
+        if weapon.mount.rotate then
+            offset2.y = offset2.x
+            offset2.x = 0
+        end
+        local spaceManager = Hyperspace.App.world.space
+        ---@type Hyperspace.BeamWeapon
+        ---@diagnostic disable-next-line: assign-type-mismatch
+        local beam1 = projectile
+
+        local tgt1 = beam1.target2 + (beam1.target2 - beam1.target1)
+        local tgt2 = beam1.target2
+        local pos = projectile.position + offset2
+
+        --print("TGT1 x: " .. beam1.target1.x .. ", y: " .. beam1.target1.y)
+        --print("TGT2 x: " .. beam1.target2.x .. ", y: " .. beam1.target2.y)
+        --print("TGT3 x: " .. tgt1.x .. ", y: " .. tgt1.y)
+
+        local beam2 = spaceManager:CreateBeam(
+            Hyperspace.Blueprints:GetWeaponBlueprint("LILY_BEAM_SCISSORS_SEC"),
+            pos,
+            projectile.currentSpace,
+            projectile.ownerId,
+            tgt1,
+            tgt2,
+            projectile.destinationSpace,
+            beam1.length,
+            -0.1)
+        beam2.sub_start = beam1.sub_start
+        --beam2.lifespan = beam1.lifespan
+        --beam2.timer = beam1.timer
+
+        --print("B1  x: " .. tgt1.x .. ", y: " .. tgt1.y)
+
+    end
+
 end)
 
 
@@ -360,6 +403,8 @@ refractors["LILY_FOCUS_PIERCE_2"] = { num = 7, beams = { "LILY_FOCUS_PIERCE_2_V"
 local burstPins = {}
 burstPins["LILY_BEAM_AMP_SIPHON"] = { count = 1, countSuper = 1, siphon = true }
 burstPins["LILY_BEAM_SHOTGUN_P"] = { count = 1, countSuper = 1, siphon = false }
+burstPins["LILY_BEAM_SHOTGUN_9_P"] = { count = 1, countSuper = 1, siphon = false }
+
 -- Pop shield bubbles
 script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
     local shieldPower = shipManager.shieldSystem.shields.power
@@ -538,31 +583,69 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(ship)
             if not chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] then
                 valid = false
             end 
-            if valid and weapon.weaponVisual.boostLevel + 1 ~= 0 and weapon.weaponVisual.boostLevel + 1 < chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] then
+            if valid then--and weapon.weaponVisual.boostLevel + 1 ~= 0 and weapon.weaponVisual.boostLevel + 1 < chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] then
                 local cdBoost = cooldownChargers[weapon and weapon.blueprint and weapon.blueprint.name]
                 if cdBoost then
+                    --print(weapon.cooldownModifier)
                     local cdLast = userdata_table(weapon, "mods.lilybeams.weaponStuff").cdLast
+                    --print(cdLast)
+                    --print("CD: " .. weapon.cooldown.first .. " / " .. weapon.cooldown.second)
+                    --print("SCD: " .. weapon.subCooldown.first .. " / " .. weapon.cooldown.second)
                     if cdLast and weapon.cooldown.first > cdLast then
                         -- Calculate the new charge level from number of charges and charge level from last frame
-                        local chargeUpdate = weapon.cooldown.first - cdLast
+                        local deltaCharge = weapon.cooldown.first - cdLast
+                        weapon.cooldown.first = weapon.cooldown.first - deltaCharge
                         --local chargeNew = weapon.cooldown.first - chargeUpdate + cdBoost ^ weapon.chargeLevel * chargeUpdate
-                        local chargeNew = weapon.cooldown.first - chargeUpdate +
-                            cdBoost ^ (weapon.weaponVisual.boostLevel + 1) * chargeUpdate
-                        --print(chargeNew)
-                        -- Apply the new charge level
-                        if chargeNew >= weapon.cooldown.second then
-                            weapon.weaponVisual.boostLevel = weapon.weaponVisual.boostLevel + 1
+                        local deltaChargeN = deltaCharge * (cdBoost ^ (weapon.weaponVisual.boostLevel + 1))
+                        --print((cdBoost ^ (weapon.weaponVisual.boostLevel + 1)))
+                        --print("----")
+                        --print(deltaChargeN)
+                        --print(weapon.weaponVisual.boostLevel)
+                        --print(weapon.chargeLevel)
+                        weapon.cooldown.first = weapon.cooldown.first + deltaChargeN--]]
+                        --local extraCharge = nil--userdata_table(weapon, "mods.lilybeams.weaponStuff").extraCharge
+                        --if extraCharge and extraCharge > 0 then
+                        --    deltaChargeN = deltaChargeN + extraCharge
+                    end
+                    if weapon.chargeLevel >= chargersMaxCharges[weapon.blueprint.name] then
+                        weapon.cooldown.first = math.max(weapon.cooldown.first, weapon.cooldown.second)
+                    end
+                    if weapon.cooldown.first >= weapon.cooldown.second then
+                        if weapon.chargeLevel >= chargersMaxCharges[weapon.blueprint.name] then
+                            weapon.cooldown.first = weapon.cooldown.second
+                        else
                             weapon.chargeLevel = weapon.chargeLevel + 1
-                            --if weapon.chargeLevel == weapon.weaponVisual.iChargeLevels then
-                            if weapon.weaponVisual.boostLevel + 1 == chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] then
+                            weapon.weaponVisual.boostLevel = weapon.chargeLevel - 1
+                            if weapon.chargeLevel >= chargersMaxCharges[weapon.blueprint.name] then
                                 weapon.cooldown.first = weapon.cooldown.second
                             else
                                 weapon.cooldown.first = 0
                             end
-                        else
-                            weapon.cooldown.first = chargeNew
                         end
                     end
+
+                        --userdata_table(weapon, "mods.lilybeams.weaponStuff").extraCharge = math.max(0,
+                        --weapon.cooldown.first + deltaChargeN - weapon.cooldown.second)
+
+                        --print(chargeNew)
+                        -- Apply the new charge level
+                        --print("----")
+                        --print(weapon.weaponVisual.boostLevel)
+                        --print(weapon.chargeLevel)
+                        --print("--")
+                        --if chargeNew >= weapon.cooldown.second then
+                            --weapon.weaponVisual.boostLevel = weapon.weaponVisual.boostLevel + 1
+                            --weapon.chargeLevel = weapon.chargeLevel + 1
+                            --if weapon.chargeLevel == weapon.weaponVisual.iChargeLevels then
+                         --   if weapon.weaponVisual.boostLevel + 1 == chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] then
+                          --      weapon.cooldown.first = weapon.cooldown.second
+                           -- else
+                             --   weapon.cooldown.first = 0
+                          --  end
+                       -- else
+                         --   weapon.cooldown.first = math.min(chargeNew, weapon.cooldown.second)
+                       -- end
+                    --end
                     userdata_table(weapon, "mods.lilybeams.weaponStuff").cdLast = weapon.cooldown.first
                 end
             end

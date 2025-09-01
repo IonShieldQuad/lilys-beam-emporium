@@ -193,8 +193,8 @@ disable shields as well as systems.</tooltip>
 
 
     <augBlueprint name="LILY_TARGETING_BYPASS">
-        <title>Weap. Targeting Bypass</title>
-        <desc>Increases weapon charge rate by 30%. However, all weapons also recieve -30% accuracy penalty.</desc>
+        <title>Hyper Reloader</title>
+        <desc>Increases weapon charge rate by 30%. However, interferrence causes all weapons to also recieve -30% accuracy penalty when targeting other ship.</desc>
         <cost>100</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -1301,6 +1301,7 @@ Shield Piercing: 2</tooltipOverride>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
+        <speed>1</speed>
         <length>1</length>
         <launchSounds>
             <sound>focus_strong</sound>
@@ -1358,7 +1359,6 @@ Shield Piercing: 2</tooltipOverride>
         <breachChance>0</breachChance>
         <cooldown>15</cooldown>
         <hullBust>0</hullBust>
-        <length>1</length>
         <speed>1</speed>
         <power>3</power>
         <cost>90</cost>
@@ -1397,7 +1397,7 @@ Required Power: 4
 Charge Time: 20 seconds
 
 Beam Length: 80
-Beam Speed:5
+Beam Speed: 5
 
 (Primary Beam)
 Ion Damage: 2
@@ -1416,7 +1416,7 @@ Default Price: 100~   -   Selling Price: 50~</descriptionOverride>
 Charge Time: 20 seconds
 
 Beam Length: 80
-Beam Speed:5
+Beam Speed: 5
 
 (Primary Beam)
 Ion Damage: 2
@@ -1911,10 +1911,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
 
 
     <shots>1</shots>
-    <mv-pop>
-        <count>1</count>
-        <countSuper>1</countSuper>
-    </mv-pop>
+
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
     </projectiles>
@@ -1951,10 +1948,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <mv-stealth/>
 
     <shots>2</shots>
-    <mv-pop>
-        <count>1</count>
-        <countSuper>1</countSuper>
-    </mv-pop>
+
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
     </projectiles>
@@ -1993,10 +1987,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <mv-stealth/>
 
     <shots>3</shots>
-    <mv-pop>
-        <count>1</count>
-        <countSuper>1</countSuper>
-    </mv-pop>
+
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
     </projectiles>
@@ -2034,10 +2025,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <mv-stealth/>
 
     <shots>5</shots>
-    <mv-pop>
-        <count>1</count>
-        <countSuper>1</countSuper>
-    </mv-pop>
+
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
     </projectiles>
@@ -2448,10 +2436,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <rarity>0</rarity>
     <image>beam_contact</image>
     <length>1</length>
-    <mv-pop>
-        <count>1</count>
-        <countSuper>1</countSuper>
-    </mv-pop>
+
     <launchSounds>
         <sound>focus_weak</sound>
     </launchSounds>
@@ -2486,10 +2471,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <projectiles>
         <projectile count="3" fake="false">debris_small</projectile>
     </projectiles>
-    <mv-pop>
-        <count>1</count>
-        <countSuper>1</countSuper>
-    </mv-pop>
+
 
 
 
@@ -2529,10 +2511,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <rarity>0</rarity>
     <image>beam_contact</image>
     <length>1</length>
-    <mv-pop>
-        <count>1</count>
-        <countSuper>1</countSuper>
-    </mv-pop>
+
     <launchSounds>
         <sound>focus_strong</sound>
     </launchSounds>
@@ -2567,10 +2546,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <projectiles>
         <projectile count="9" fake="false">debris_small</projectile>
     </projectiles>
-    <mv-pop>
-        <count>1</count>
-        <countSuper>1</countSuper>
-    </mv-pop>
+
 
 
     <launchSounds>
@@ -2845,6 +2821,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
         <desc>YOU SHOULD NEVER SEE THIS</desc>
         <descriptionOverride>Magnifiers use special technology to enhance their power with each charge, rather than gaining additional projectiles. Each charge increases damage output and status effect chances. Charges become progressively faster.
 This particle collider design uses this technology to create an utterly devastating particle beam when allowed to fully charge.
+There has been rumours that this weapon has been tampered with by eldritch entities... But let rumors be rumors.
 
 Stats:
 Required Power: 3
@@ -3014,10 +2991,10 @@ The excessive nitrogen gas also upsets the atmospheric balance.</desc>
             <g>255</g>
             <b>255</b>
         </color>
-        <mv-pop>
+        <!--mv-pop>
             <count>1</count>
             <countSuper>1</countSuper>
-        </mv-pop>
+        </mv-pop-->
         <ionBeamFix/>
         <power>1</power>
         <cost>40</cost>

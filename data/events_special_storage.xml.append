@@ -1706,7 +1706,7 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </choice>
     <choice blue="false">
-        <text>Burn the enemy! (Using Emergency Generator)
+        <text>Burn the enemy!
 [-3{, deals damage to enemy equals to your engine level, starts fires]</text>
         <event>
             <text>You activate the combat augment.</text>
@@ -1726,7 +1726,7 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </choice>
     <choice req="DEBUG_GENERATOR">
-        <text>Burn the enemy!
+        <text>Burn the enemy! (Using Emergency Generator)
 [-2{, deals damage to enemy equals to your engine level, starts fires]</text>
         <event>
             <text>You activate the combat augment.</text>

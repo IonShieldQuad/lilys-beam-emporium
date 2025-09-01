@@ -1,0 +1,26 @@
+
+<FTL>
+    <mod:findName type="eventList" name="CRYSTAL_CACHE_MV_LIST">
+        <mod:findWithChildLike type="event" child-type="choice">
+            <mod:selector req="engines"/>
+            <mod-append:choice hidden="true" req="LILY_COMBAT_AFTERBURNER" lvl="1">
+                <text>(Afterburner) Rescue your crewmember and the cargo. [3{]</text>
+                <event>
+                    <text>Afterburner engaged!</text>
+                    <item_modify>
+                        <item type="fuel" min="-3" max="-3"/>
+                    </item_modify>
+                    <choice>
+                        <text>Continue...</text>
+                        <event>
+                            <text>You swoop into the heart of the distortion and pick up your crewmember and the cargo. Your engines with afterburner are barely able to get your ship out of the gravity well before the whole ship is consumed. That was close.</text>
+                            <weapon name="RANDOM"/>
+                            <autoReward level="LOW">stuff</autoReward>
+                        </event>
+                    </choice>
+                </event>
+            </mod-append:choice>
+        </mod:findWithChildLike>
+    </mod:findName>
+
+</FTL>

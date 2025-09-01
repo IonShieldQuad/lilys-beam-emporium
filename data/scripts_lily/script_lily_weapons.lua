@@ -70,11 +70,13 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
 -----------------------------------------------------------------
 
 local burstPinpoints = {}
+local burstPinpointsAnim = {}
 burstPinpoints["LILY_BEAM_AMP_SIPHON_0"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_1"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_2"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_3"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_TOGGLE_AKATSUKI_S"] = "LILY_BEAM_TOGGLE_AKATSUKI_S_BEAM"
+burstPinpointsAnim["LILY_BEAM_TOGGLE_AKATSUKI_S"] = true
 local howitzers = {}
 howitzers["LILY_HOWITZER_1"] = { dmg = 4, primary = "LILY_HOWITZER_1_BEAM_P", secondary = "LILY_HOWITZER_1_BEAM_S" }
 
@@ -89,8 +91,108 @@ lilyBurstMultiBarrel["LILY_BEAM_SHOTGUN_9_S"] = {
     barrelCount = 3
 }
 
+local longPins = {}
+longPins["LILY_FOCUS_ION_1"] = 10
+longPins["LILY_FOCUS_ION_2"] = 10
+longPins["LILY_FOCUS_ION_HEAVY"] = 15
+longPins["LILY_FOCUS_ION_CHAIN"] = 5
+longPins["LILY_FOCUS_ION_FIRE"] = 10
+longPins["LILY_FOCUS_ION_STUN"] = 10
+longPins["LILY_FOCUS_ION_BIO"] = 10
+longPins["LILY_FOCUS_ION_PHASE"] = 10
+longPins["LILY_BEAM_TOGGLE_AKATSUKI_F"] = 5
+longPins["LILY_BEAM_TOGGLE_AKATSUKI_S"] = 5
+longPins["LILY_BEAM_TOGGLE_AKATSUKI_S_BEAM"] = 5
+longPins["LILY_FOCUS_PIERCE_1"] = 5
+longPins["LILY_FOCUS_PIERCE_1_R"] = 5
+longPins["LILY_FOCUS_PIERCE_2"] = 5
+longPins["LILY_FOCUS_PIERCE_2_R"] = 5
+longPins["LILY_FOCUS_PIERCE_2_O"] = 5
+longPins["LILY_FOCUS_PIERCE_2_Y"] = 5
+longPins["LILY_FOCUS_PIERCE_2_G"] = 5
+longPins["LILY_FOCUS_PIERCE_2_B"] = 5
+longPins["LILY_FOCUS_PIERCE_2_I"] = 5
+longPins["LILY_FOCUS_PIERCE_2_V"] = 5
+longPins["LILY_FOCUS_HACK"] = 15
+longPins["LILY_BEAM_AMP_SIPHON"] = 10
+longPins["LILY_BEAM_SHOTGUN_P"] = 5
+longPins["LILY_BEAM_SHOTGUN_9_P"] = 5
+
+--[[
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_UPDATE_PRE, function(projectile)
+
+    if projectile and projectile.ownerId == 0 then
+        local name = projectile.extend.name
+        ---@type Hyperspace.BeamWeapon
+        ---@diagnostic disable-next-line: assign-type-mismatch
+        local bm = projectile
+        if bm and bm.length then
+            print("UPDATE:")
+            print(name .. ": Lifespan = " .. (bm.lifespan or "nil"))
+            print(name .. ": Length = " .. (bm.length or "nil"))
+            print(name .. ": Speed = " .. (bm.speed.x or "nil") .. "/" .. (bm.speed.y or "nil"))
+            print(name .. ": SpeedMag = " .. (bm.speed_magnitude or "nil"))
+            print(name .. ": Timer = " .. (bm.timer or "nil"))
+            print(name .. ": AnimTimer = " .. (bm.animationTimer or "nil"))
+            print(name .. ": Anim = " .. (bm.weapAnimation and "true" or "false"))
+            if bm.weapAnimation then
+                
+                print(name .. ": AnimDelayTime = " .. (bm.weapAnimation.fDelayChargeTime or "nil"))
+                print(name .. ": AnimFrame = " .. (bm.weapAnimation.anim.currentFrame or "nil"))
+                print(name .. ": AnimTime = " .. (bm.weapAnimation.anim.tracker.time or "nil"))
+                print(name .. ": AnimCurrTime = " .. (bm.weapAnimation.anim.tracker.current_time or "nil"))
+            end
+        end
+
+    end
+end)
+--]]
+script.on_internal_event(Defines.InternalEvents.PROJECTILE_INITIALIZE, function(projectile, blueprint)
+
+    if blueprint and longPins[blueprint.name] then
+        projectile.speed_magnitude = 1 / longPins[blueprint.name]
+    end
+
+end)
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
+
+    --[[if projectile and weapon then
+        ---@type Hyperspace.BeamWeapon
+        ---@diagnostic disable-next-line: assign-type-mismatch
+        local bm = projectile
+        if bm and bm.length then
+            print("FIRE:")
+            --bm.lifespan = 20
+            --bm.length = bm.length * 100
+            print(weapon.blueprint.name .. ": Lifespan = " .. (bm.lifespan or "nil"))
+            print(weapon.blueprint.name .. ": Length = " .. (bm.length or "nil"))
+            print(weapon.blueprint.name .. ": Speed = " .. (bm.speed.x or "nil") .. "/" .. (bm.speed.y or "nil"))
+            print(weapon.blueprint.name .. ": Timer = " .. (bm.timer or "nil"))
+            print(weapon.blueprint.name .. ": AnimTimer = " .. (bm.animationTimer or "nil"))
+            print(weapon.blueprint.name .. ": Anim = " .. (bm.weapAnimation and "true" or "false"))
+            if bm.weapAnimation then
+                --bm.weapAnimation:SetFireTime(10)
+                print(weapon.blueprint.name .. ": AnimDelayTime = " .. (bm.weapAnimation.fDelayChargeTime or "nil"))
+                print(weapon.blueprint.name .. ": AnimFrame = " .. (bm.weapAnimation.anim.currentFrame or "nil"))
+                print(weapon.blueprint.name .. ": AnimTime = " .. (bm.weapAnimation.anim.tracker.time or "nil"))
+                print(weapon.blueprint.name .. ": AnimCurrTime = " .. (bm.weapAnimation.anim.tracker.current_time or "nil"))
+            end
+        end
+    end--]]
+    --[[
+    if weapon.blueprint and longPins[weapon.blueprint.name] then
+        projectile.speed_magnitude = 1 / longPins[weapon.blueprint.name]
+        ---@type Hyperspace.BeamWeapon
+        ---@diagnostic disable-next-line: assign-type-mismatch
+        local bm = projectile
+        if bm and bm.length then
+            bm.length = longPins[weapon.blueprint.name]
+            bm.target2 = get_random_point_on_radius(bm.target1, bm.length)
+        end
+    end
+    --]]
+    
     if weapon.blueprint and burstPinpoints[weapon.blueprint.name] then
         local burstPinpointBlueprint = Hyperspace.Blueprints:GetWeaponBlueprint(burstPinpoints[weapon.blueprint.name])
 
@@ -106,6 +208,9 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
             1,
             -0.1)
         beam.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+        if burstPinpointsAnim[weapon.blueprint.name] then
+            beam:SetWeaponAnimation(weapon.weaponVisual)
+        end
         projectile:Kill()
     end
 
@@ -189,6 +294,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
                 -0.1)
             ---@diagnostic disable-next-line: undefined-field
             beam.sub_start = projectile.sub_start
+            beam:SetWeaponAnimation(weapon.weaponVisual)
             --offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
 
         end
@@ -220,6 +326,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
             1,
             -0.1)
         beam.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+        beam:SetWeaponAnimation(weapon.weaponVisual)
         projectile:Kill()
         --[[local offsets2 = { 6, 0, -6 }
         while #offsets2 > 0 do
@@ -287,6 +394,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
                 -0.1)
             ---@diagnostic disable-next-line: undefined-field
             beam.sub_start = projectile.sub_start
+            beam:SetWeaponAnimation(weapon.weaponVisual)
             --offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
         end
     end
@@ -317,6 +425,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
             1,
             -0.1)
         beam.sub_start = offset_point_direction(projectile.target.x, projectile.target.y, projectile.entryAngle, 600)
+        beam:SetWeaponAnimation(weapon.weaponVisual)
         projectile:Kill()
 
         --[[
@@ -385,6 +494,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
             beam1.length,
             -0.1)
         beam2.sub_start = beam1.sub_start
+        beam2:SetWeaponAnimation(beam1.weapAnimation)
         --beam2.lifespan = beam1.lifespan
         --beam2.timer = beam1.timer
 
@@ -404,6 +514,7 @@ local burstPins = {}
 burstPins["LILY_BEAM_AMP_SIPHON"] = { count = 1, countSuper = 1, siphon = true }
 burstPins["LILY_BEAM_SHOTGUN_P"] = { count = 1, countSuper = 1, siphon = false }
 burstPins["LILY_BEAM_SHOTGUN_9_P"] = { count = 1, countSuper = 1, siphon = false }
+burstPins["LILY_BEAM_POPPER"] = { count = 1, countSuper = 1, siphon = false }
 
 -- Pop shield bubbles
 script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
@@ -412,7 +523,20 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
     local popData = burstPins[projectile and projectile.extend and projectile.extend.name]
     local otherShip = Hyperspace.ships(1 - shipManager.iShipId)
     local otherShieldPower = otherShip and otherShip.shieldSystem.shields.power or nil
-    if popData then
+
+    --[[if weaponName == "LILY_BEAM_POPPER" then
+        ---@type Hyperspace.BeamWeapon
+        ---@diagnostic disable-next-line: assign-type-mismatch
+        local beam = projectile
+        if beam.bDamageSuperShield then
+            popData = { count = 1, countSuper = 1, siphon = true }
+        end
+    end--]]
+    ---@type Hyperspace.BeamWeapon
+    ---@diagnostic disable-next-line: assign-type-mismatch
+    local beam = projectile
+
+    if popData and beam and beam.bDamageSuperShield then
         if shieldPower.super.first > 0 then
             if popData.countSuper > 0 then
                 shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(),
@@ -446,12 +570,12 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
                 end
             end
         end
-        projectile:Kill()
+        --projectile:Kill()
     end
 
 
     -- refractors
-    if shieldPower.first > 0 and shieldPower.super.first == 0 and refractors[weaponName] ~= nil then
+    if shieldPower.first > 0 and shieldPower.super.first == 0 and refractors[weaponName] ~= nil and beam and beam.bDamageSuperShield then
         local theta = math.random() * 2 * math.pi
         --LILY_IGNORE_PROJ[projectile] = 50.0
         local refrData = refractors[weaponName]
@@ -486,7 +610,7 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
                 projectile.target.y + math.sin(theta) * offset_per_layer * shieldPower.first + 1)
 
             local spaceManager = Hyperspace.App.world.space
-            local beam = spaceManager:CreateBeam(
+            local beam1 = spaceManager:CreateBeam(
                 weaponBlueprint,
                 response.point,
                 projectile.destinationSpace,
@@ -501,7 +625,13 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
 
             i = i + 1
         end
-        projectile:Kill()
+        --projectile.damage.iDamage = 0
+        --projectile.damage.iIonDamage = 0
+        --projectile.damage.iSystemDamage = 0
+        --projectile.damage.iPersDamage = 0
+        --projectile.damage.iStun = 0
+        --projectile.damage.fireChance = 0
+        --projectile.damage.breachChance = 0
     end
 
 end)

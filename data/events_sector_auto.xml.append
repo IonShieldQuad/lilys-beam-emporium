@@ -1,0 +1,28 @@
+
+<FTL>
+<mod:findName type="event" name="AUTO_POWERCORE_ESCAPE">
+    <mod-append:choice hidden="true" req="LILY_COMBAT_AFTERBURNER" lvl="1">
+        <text>(Afterburner) Maximum throttle! [3{]</text>
+        <event load="AUTO_POWERCORE_BIGBOOM_ESCAPE_AFTERBURNER"/>
+    </mod-append:choice>
+
+</mod:findName>
+
+<mod:findName type="event" name="AUTO_POWERCORE_DEFEAT">
+    <mod-append:choice hidden="true" req="LILY_COMBAT_AFTERBURNER" lvl="1">
+        <text>(Afterburner) Maximum throttle! [3{]</text>
+        <event load="AUTO_POWERCORE_BIGBOOM_ESCAPE_AFTERBURNER"/>
+    </mod-append:choice>
+
+</mod:findName>
+
+
+
+<event name="AUTO_POWERCORE_BIGBOOM_ESCAPE_AFTERBURNER">
+    <item_modify>
+        <item type="fuel" min="-3" max="-3"/>
+    </item_modify>
+    <loadEvent>AUTO_POWERCORE_BIGBOOM_ESCAPE_GOOD</loadEvent>
+</event>
+
+</FTL>

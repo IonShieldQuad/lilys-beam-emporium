@@ -1,0 +1,33 @@
+<FTL>
+    <mod:findName type="event" name="ESTATE_STATUE">
+        <mod:findLike type="choice">
+            <mod:findWithChildLike type="event" child-type="choice">
+                <mod:selector req="engines"/>
+
+                <mod-append:choice hidden="true" req="LILY_COMBAT_AFTERBURNER" lvl="1">
+                    <text>(Afterburner) Bring the statue on a collision course with the planet's military installment. [3{]</text>
+                    <event>
+                        <text>Afterburner engaged</text>
+                        <item_modify>
+                            <item type="fuel" min="-3" max="-3"/>
+                        </item_modify>
+                        <choice>
+                            <text>Continue...</text>
+                            <event>
+                                <text>With the statue grappled to your hull, you fire up your afterburner and slingshot it towards the planet. Hurtling towards the surface, the impact stirs up a giant cloud of dust and debris that blocks your vision for several long minutes. Once it settles, you find the impact has decimated much more than the military settlement. The city, reduced to rubble by the shockwave, ends up providing tremendous spoils. At least those children won't have to worry about poor sleep any longer.</text>
+                                <autoReward level="HIGH">augment</autoReward>
+                                <choice>
+                                    <text>Continue...</text>
+                                    <event load="MORALITY_UPDATE_GENERAL"/>
+                                </choice>
+                            </event>
+                        </choice>
+                    </event>
+                </mod-append:choice>
+
+            </mod:findWithChildLike>
+        </mod:findLike>
+    </mod:findName>
+
+
+</FTL>

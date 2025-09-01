@@ -79,6 +79,15 @@
 		</req>
 	</mod-append:req>
 
+	<mod-append:req name="SUPER_AFTERBURNER_ENGINES_CHEECK" type="all">
+		<req lvl="1">
+			<name>LILY_COMBAT_AFTERBURNER</name>
+		</req>
+		<req lvl="7">
+			<name>engines</name>
+		</req>
+	</mod-append:req>
+
 
 	<mod-append:bossShip yOffset="100">SHIP_BEAM_EMPORIUM_STATION</mod-append:bossShip>
 </mod:findLike>

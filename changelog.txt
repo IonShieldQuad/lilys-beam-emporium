@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.1
+Date: 2025-08-31
+  Changes:
+    - Added some new events including an anomaly
+    - Changed lua behaviour of many beams, including shield popping and animations
+    - Fixed some things
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2025-08-29
   Changes:

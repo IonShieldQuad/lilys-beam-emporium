@@ -546,8 +546,6 @@
         <mod-append:name>LILY_BEAM_PARTICLE_MINI</mod-append:name>
         <mod-append:name>LILY_BEAM_CYCLOTRON</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_B</mod-append:name>
-        <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_F</mod-append:name>
-        <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_S</mod-append:name>
     </mod:findName>
 
 

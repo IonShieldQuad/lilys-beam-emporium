@@ -1,0 +1,523 @@
+<FTL>
+
+
+
+<mod:findName type="event" name="ANOMALY_QUESTIONS_2">
+    <mod-append:choice hidden="true" req="LILY_BEAM_CYCLOTRON" lvl="1">
+        <text>(Cyclotron) Possibly.</text>
+        <event>
+            <text>"Oh... Thank you for informing me. This weapon is indeed... Quite anomalousss. I'm afraid I will have to... confissscate thisss, but allow me to offer fair compensssation. Now, let'sss move on."</text>
+            <remove name="LILY_BEAM_CYCLOTRON"/>
+            <item_modify>
+                <item type="scrap" min="70" max="100"/>
+            </item_modify>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="ANOMALY_QUESTIONS_3"/>
+            </choice>
+        </event>
+    </mod-append:choice>
+    <mod-append:choice hidden="true" req="BEAM_MADNESS" lvl="1">
+        <text>('Seuss') Possibly.</text>
+        <event>
+            <text>"Oh... Thank you for informing me. This weapon is indeed... Eldritch. I'm afraid I will have to... confissscate thisss, but allow me to offer fair compensssation. Now, let'sss move on."</text>
+            <remove name="BEAM_MADNESS"/>
+            <item_modify>
+                <item type="scrap" min="60" max="100"/>
+            </item_modify>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="ANOMALY_QUESTIONS_3"/>
+            </choice>
+        </event>
+    </mod-append:choice>
+    <mod-append:choice hidden="true" req="BEAM_MADNESS_CHAOS" lvl="1">
+        <text>('Seuss'™) Possibly.</text>
+        <event>
+            <text>"Oh... Thank you for informing me. This weapon is indeed... Eldritch. I'm afraid I will have to... confissscate thisss, but allow me to offer fair compensssation. Now, let'sss move on."</text>
+            <remove name="BEAM_MADNESS_CHAOS"/>
+            <item_modify>
+                <item type="scrap" min="100" max="150"/>
+            </item_modify>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="ANOMALY_QUESTIONS_3"/>
+            </choice>
+        </event>
+    </mod-append:choice>
+    <mod-append:choice hidden="true" req="BEAM_MADNESS_ELITE" lvl="1">
+        <text>(€'Seuss') Possibly.</text>
+        <event>
+            <text>"Oh... Thank you for informing me. This weapon is indeed... Eldritch. I'm afraid I will have to... confissscate thisss, but allow me to offer fair compensssation. Now, let'sss move on."</text>
+            <remove name="BEAM_MADNESS_ELITE"/>
+            <item_modify>
+                <item type="scrap" min="120" max="160"/>
+            </item_modify>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="ANOMALY_QUESTIONS_3"/>
+            </choice>
+        </event>
+    </mod-append:choice>
+    <mod-append:choice hidden="true" req="BEAM_MADNESS_VISION" lvl="1">
+        <text>(€'Seuss') Possibly.</text>
+        <event>
+            <text>"Oh... Thank you for informing me. This weapon is indeed... Eldritch. I'm afraid I will have to... confissscate thisss, but allow me to offer fair compensssation. Now, let'sss move on."</text>
+            <remove name="BEAM_MADNESS_VISION"/>
+            <item_modify>
+                <item type="scrap" min="120" max="160"/>
+            </item_modify>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event load="ANOMALY_QUESTIONS_3"/>
+            </choice>
+        </event>
+    </mod-append:choice>
+</mod:findName>
+
+
+<ship name="LILY_CHAOS_POLICE" auto_blueprint="LILY_CHAOS_POLICE">
+    <destroyed>
+        <text></text>
+        <autoReward level="MED">standard</autoReward>
+    </destroyed>
+    <deadCrew>
+        <text></text>
+        <autoReward level="HIGH">standard</autoReward>
+    </deadCrew>
+</ship>
+
+
+<mod:findName type="eventList" name="ANOMALY_SPAWNER_CEL">
+    <mod-append:event load="ANOMALY_CHAOS_POLICE" req="end_nexus" lvl="1" />
+</mod:findName>
+
+
+
+<event name="ANOMALY_CHAOS_POLICE">
+    <text>The first thing you see when observing your surroundings, is a ship looking like Militia Investigator, except black like void itself, and shimmering with red and blue colors. They immediately contact you: "This is the Chaos Police Enforcer Unit. Submit yourself and your ship for inspection immediately."</text>
+    <ship load="LILY_CHAOS_POLICE" hostile="false"/>
+    <variable name="loc_found_anomaly" op="set" val="1"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>"Let's see what kind of crimes have you been committing..."
+The ship begins some sort of scan, and you feel an overwhelming sense of dread and unease.</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <loadEventList first="true" default="LILY_CHAOS_POLICE_NO_CRIMES">
+                        <event name="LILY_CHAOS_POLICE_GNOME" req="gnome" lvl="1"/>
+                        <event name="LILY_CHAOS_POLICE_GENERAL_HIGH" req="rep_general" lvl="4"/>
+                        <event name="LILY_CHAOS_POLICE_UNION_HIGH" req="rep_union" lvl="4"/>
+                        <event name="LILY_CHAOS_POLICE_ENGI_HIGH" req="rep_engi" lvl="4"/>
+                        <event name="LILY_CHAOS_POLICE_ZOLTAN_HIGH" req="rep_zoltan" lvl="4"/>
+                        <event name="LILY_CHAOS_POLICE_ORCHID_HIGH" req="rep_orchid" lvl="4"/>
+                        <event name="LILY_CHAOS_POLICE_VAMPWEED_HIGH" req="rep_vampweed" lvl="4"/>
+                        <event name="LILY_CHAOS_POLICE_FREEMANTIS_HIGH" req="rep_freemantis" lvl="4"/>
+                        <event name="LILY_CHAOS_POLICE_CRYSTAL_HIGH" req="rep_crystal" lvl="4"/>
+                        <event name="LILY_CHAOS_POLICE_OUTCAST_HIGH" req="rep_outcast" lvl="4"/>
+                        <event name="LILY_CHAOS_POLICE_SHELL_HIGH" req="rep_shell" lvl="4"/>
+                        <event name="LILY_CHAOS_POLICE_GENERAL" req="rep_general" lvl="2"/>
+                        <event name="LILY_CHAOS_POLICE_UNION" req="rep_union" lvl="2"/>
+                        <event name="LILY_CHAOS_POLICE_ENGI" req="rep_engi" lvl="2"/>
+                        <event name="LILY_CHAOS_POLICE_ZOLTAN" req="rep_zoltan" lvl="2"/>
+                        <event name="LILY_CHAOS_POLICE_ORCHID" req="rep_orchid" lvl="2"/>
+                        <event name="LILY_CHAOS_POLICE_VAMPWEED" req="rep_vampweed" lvl="2"/>
+                        <event name="LILY_CHAOS_POLICE_FREEMANTIS" req="rep_freemantis" lvl="2"/>
+                        <event name="LILY_CHAOS_POLICE_CRYSTAL" req="rep_crystal" lvl="2"/>
+                        <event name="LILY_CHAOS_POLICE_OUTCAST" req="rep_outcast" lvl="2"/>
+                        <event name="LILY_CHAOS_POLICE_SHELL" req="rep_shell" lvl="2"/>
+                    </loadEventList>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_NO_CRIMES">
+    <text>"And according to your records... Wait, your record is pretty much clean!"
+"Which mean that you any yor ship are to be put under arrest!"</text>
+    <choice hidden="true">
+        <text>Try to bribe the Enforcer. [50~]</text>
+        <event>
+            <text>You try to bribe the Enforcer into letting you go with scrap and hope that this is enough...</text>
+            <item_modify>
+                <item type="scrap" min="-50" max="-50"/>
+            </item_modify>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>"What's this? A bribe? Don't you know that bribing police officers is a crime?!"
+
+...Soo, great job! You shall be rewarded for this."
+
+"Remember to always commit crimes and cause more chaos! Hahe!"</text>
+                    <item_modify>
+                        <item type="scrap" min="80" max="150"/>
+                    </item_modify>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event>
+                            <text>After this, the odd vessel immediately leaves.</text>
+                            <instantEscape/>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+
+    <choice hidden="true" req="weapons" lvl="5">
+        <text>(Adv. Weapons) Threaten the Enforcer. </text>
+        <event>
+            <text>You try to threaten the Enforcer into leaving you alone with your advanced weaponry...</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>"Are you threatening me!? Don't you know that threatening police officers is a crime?!"
+
+...Soo, great job! You shall be rewarded for this."
+
+"Remember to always commit crimes and cause more chaos! Hahe!"</text>
+                    <autoReward level="HIGH">no_item</autoReward>
+                    <weapon name="LIST_WEAPONS_ALL_CRAPBUCKET"/>
+                    <choice>
+                        <text>Continue...</text>
+                        <event>
+                            <text>After this, the odd vessel immediately leaves.</text>
+                            <instantEscape/>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+
+    <choice hidden="true">
+        <text>Simply attack the Enforcer. </text>
+        <event>
+            <ship hostile="true"/>
+            <text>You charge your weapons and prepare to attack the the Enforcer...</text>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>"Are you ATTACKING me!? Don't you know that attack on a police officer is a SERIOUS crime?!"
+
+...Soo, great job! You shall be rewarded for this."
+
+"Remember to always commit crimes and cause more chaos! Hahe!"</text>
+                    <autoReward level="HIGH">stuff</autoReward>
+                    <weapon name="GIFTLIST_LILY"/>
+                    <choice>
+                        <text>Continue...</text>
+                        <event>
+                            <text>After this, the odd vessel immediately leaves.</text>
+                            <instantEscape/>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+
+<event name="LILY_CHAOS_POLICE_GNOME">
+    <text>"And according to your records... Wait, are you carrying the gnome?... THE GNOME?!"
+"This thing will put this whole universe into chaos! Hahe!"
+"Most excellent, you shall be rewarded!"
+</text>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>"And you know, I actually might know a place which where you should deliver it..."
+"Let me join to help you get there."</text>
+            <variable name="coords_hektar" op="set" val="1"/>
+            <autoReward level="HIGH">scrap_only</autoReward>
+            <weapon name="LIST_WEAPONS_ALL_CRAPBUCKET"/>
+            <crewMember amount="1" class="siren_harpy">Officer Ialera</crewMember>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>After this, the odd vessel immediately leaves.</text>
+                    <instantEscape/>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>
+                    
+
+<event name="LILY_CHAOS_POLICE_GENERAL_HIGH">
+    <text>"And according to your records... You are indeed a very notorious criminal in whole of the federation!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event name="LILY_CHAOS_POLICE_REWARD_HIGH">
+            <text>"Remember to always commit crimes and cause more chaos! Hahe!"</text>
+            <autoReward level="HIGH">stuff</autoReward>
+            <weapon name="LIST_WEAPONS_ALL_CRAPBUCKET"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>After this, the odd vessel immediately leaves.</text>
+                    <instantEscape/>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_UNION_HIGH">
+    <text>"And according to your records... You are indeed a very notorious criminal in the Galactic Union!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD_HIGH"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_ENGI_HIGH">
+    <text>"And according to your records... You are indeed a very notorious criminal in the Engi Harmony!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD_HIGH"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_ZOLTAN_HIGH">
+    <text>"And according to your records... You are indeed a very notorious criminal in the Zoltan Ministry!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD_HIGH"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_ORCHID_HIGH">
+    <text>"And according to your records... You are indeed a very notorious criminal in the Floral Gathering!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD_HIGH"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_VAMPWEED_HIGH">
+    <text>"And according to your records... You are indeed a very notorious criminal in the Vampweed Confederacy!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD_HIGH"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_FREEMANTIS_HIGH">
+    <text>"And according to your records... You are indeed a very notorious criminal in the Free Mantis Clans!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD_HIGH"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_CRYSTAL_HIGH">
+    <text>"And according to your records... You are indeed a very notorious criminal in the Crystalline Empire!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD_HIGH"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_OUTCAST_HIGH">
+    <text>"And according to your records... You are indeed a very notorious criminal according to Rock Outcasts!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD_HIGH"/>
+    </choice>
+</event>
+
+
+<event name="LILY_CHAOS_POLICE_SHELL_HIGH">
+    <text>"And according to your records... You are indeed a very notorious criminal in the Shell Geniocracy!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD_HIGH"/>
+    </choice>
+</event>
+
+
+
+<event name="LILY_CHAOS_POLICE_GENERAL">
+    <text>"And according to your records... You are indeed a criminal according to the federation!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event name="LILY_CHAOS_POLICE_REWARD">
+            <text>"Remember to always commit crimes and cause more chaos! Hahe!"</text>
+            <autoReward level="low">stuff</autoReward>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>After this, the odd vessel immediately leaves.</text>
+                    <instantEscape/>
+                </event>
+            </choice>
+        </event>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_UNION">
+    <text>"And according to your records... You are indeed a criminal in the Galactic Union!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_ENGI">
+    <text>"And according to your records... You are indeed a criminal in the Engi Harmony!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_ZOLTAN">
+    <text>"And according to your records... You are indeed a criminal in the Zoltan Ministry!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_ORCHID">
+    <text>"And according to your records... You are indeed a criminal in the Floral Gathering!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_VAMPWEED">
+    <text>"And according to your records... You are indeed a criminal in the Vampweed Confederacy!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_FREEMANTIS">
+    <text>"And according to your records... You are indeed a criminal in the Free Mantis Clans!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_OUTCAST">
+    <text>"And according to your records... You are indeed a criminal according to Rock Outcasts!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_CRYSTAL">
+    <text>"And according to your records... You are indeed a criminal in the Crystalline Empire!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD"/>
+    </choice>
+</event>
+
+<event name="LILY_CHAOS_POLICE_SHELL">
+    <text>"And according to your records... You are indeed a criminal in the Shell Geniocracy!..."
+...Soo, great job! You shall be rewarded for this."</text>
+
+    <autoReward level="HIGH">scrap_only</autoReward>
+    <weapon name="GIFTLIST_LILY"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event load="LILY_CHAOS_POLICE_REWARD"/>
+    </choice>
+</event>
+
+
+
+
+
+
+
+
+</FTL>

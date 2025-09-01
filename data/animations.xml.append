@@ -908,4 +908,12 @@
 	<time>2</time>
 </anim>
 
+
+<animSheet name="lily_chaos_police_thruster" w="108" h="24" fw="27" fh="24">thrusters/lily_chaos_police_thruster.png</animSheet>
+<anim name="lily_chaos_police_thruster">
+	<sheet>lily_chaos_police_thruster</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>4</time>
+</anim>
+
 </FTL>

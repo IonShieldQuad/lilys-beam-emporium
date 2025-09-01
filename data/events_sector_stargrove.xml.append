@@ -1,0 +1,51 @@
+<FTL>
+    <mod:findName type="event" name="STARGROVE_CONTACT_MAFAN_REAL">
+        <mod-append:choice hidden="true" req="LILY_COMBAT_AFTERBURNER" lvl="1" max_group="7">
+            <text>(Afterburner) Risk your ship by flying close enough to scrap the ship and save its sole crew. [3{]</text>
+            <event>
+                <text>Afterburner engaged</text>
+                <item_modify>
+                    <item type="fuel" min="-3" max="-3"/>
+                </item_modify>
+                <choice hidden="true">
+                    <text>Continue...</text>
+                    <event>
+                        <text>Your ship's afterburned engines fight the extreme gravitation as it inches closer. Time scales more and more, but your ship can handle it without much damage. As a bonus, not only do you save Mafan, but you have the opportunity to scrap the ship before you return from within the gravity well. Unfortunately, the time dilation has allowed the fleet to advance, but not by much.</text>
+                        <modifyPursuit amount="1"/>
+                        <damage amount="1" effect="breach" system="random"/>
+                        <damage amount="1" effect="breach" system="random"/>
+                        <autoReward level="LOW">scrap_only</autoReward>
+                        <choice hidden="true">
+                            <text>Contact science vessel...</text>
+                            <event load="STARGROVE_INVITE_MAFAN"/>
+                        </choice>
+                    </event>
+                </choice>
+            </event>
+        </mod-append:choice>
+    </mod:findName>
+    <mod:findName type="event" name="STARGROVE_CONTACT_MAFAN_REAL">
+        <mod-append:choice hidden="true" req="SUPER_AFTERBURNER_ENGINES_CHEECK" max_group="7">
+            <text>(Adv. Engines + Afterburner) Engage the afterburned advanced engines to fly close enough to scrap the ship and save its sole crew. [3{]</text>
+            <event>
+                <text>Afterburner engaged</text>
+                <item_modify>
+                    <item type="fuel" min="-3" max="-3"/>
+                </item_modify>
+                <choice hidden="true">
+                    <text>Continue...</text>
+                    <event>
+                        <text>Your ship's advanced afterburned engines fight the extreme gravitation as it inches closer. Time scales more and more, but your ship can handle it easily. As a bonus, not only do you save Mafan, but you have the opportunity to scrap the ship before you return from within the gravity well. You were even fast enough to not let time dilation advance the fleet.</text>
+                        <autoReward level="LOW">scrap_only</autoReward>
+                        <choice hidden="true">
+                            <text>Contact science vessel...</text>
+                            <event load="STARGROVE_INVITE_MAFAN"/>
+                        </choice>
+                    </event>
+                </choice>
+            </event>
+        </mod-append:choice>
+    </mod:findName>
+
+
+</FTL>

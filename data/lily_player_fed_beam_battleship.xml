@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+<img x="-34" y="-12" w="497" h="306" />
+<offsets>
+	<floor x="28" y="6" />
+	<cloak x="-8" y="-8" />
+</offsets>
+<weaponMounts>
+	<mount x="315" y="9" rotate="true" mirror="true" gib="-1" slide="up" />
+	<mount x="315" y="297" rotate="true" mirror="false" gib="-1" slide="down" />
+	<mount x="425" y="242" rotate="true" mirror="false" gib="-1" slide="right" />
+	<mount x="425" y="66" rotate="true" mirror="true" gib="-1" slide="right" />
+	<mount x="482" y="167" rotate="true" mirror="true" gib="-1" slide="no" />
+</weaponMounts>
+<thrusters sync="false">
+	<thruster y="114" x="-15">lily_mu_fed_light</thruster>
+	<thruster y="170" x="-15">lily_mu_fed_light</thruster>
+	<thruster y="27" x="24">lily_mu_fed_light</thruster>
+	<thruster y="257" x="24">lily_mu_fed_light</thruster>
+	<thruster y="53" x="27">lily_mu_militia_bombard_thruster</thruster>
+	<thruster y="220" x="27">lily_mu_militia_bombard_thruster</thruster>
+	<thruster y="32" x="41">lily_mu_fed_fighter_small_thruster</thruster>
+	<thruster y="257" x="41">lily_mu_fed_fighter_small_thruster</thruster>
+	<thruster y="56" x="45">lily_mu_fed_bomber_small_thruster</thruster>
+	<thruster y="236" x="45">lily_mu_fed_bomber_small_thruster</thruster>
+</thrusters>
+<explosion />
+

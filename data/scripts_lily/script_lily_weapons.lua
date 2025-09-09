@@ -3,6 +3,55 @@ local vter = mods.multiverse.vter
 local userdata_table = mods.multiverse.userdata_table
 local INT_MAX = 2147483647
 
+local function dot(a, b)
+    return a.X * b.X + a.Y * b.Y;
+end
+local function magnitude(vec)
+    return math.sqrt(vec.X * vec.X + vec.Y * vec.Y);
+end
+local function angleBetween(b, c)
+    return math.acos(dot(b, c) / (magnitude(b) * magnitude(c)));
+end
+local function addVec(a, b)
+    return { X = a.X + b.X, Y = a.Y + b.Y }
+end
+local function subVec(a, b)
+    return { X = a.X + b.X, Y = a.Y + b.Y }
+end
+local function mulVec(a, k)
+    return { X = a.X * k, Y = a.Y * k }
+end
+
+local function toPointF(vec)
+    return Hyperspace.Pointf(vec.X, vec.Y)
+end
+
+local function toVec(point)
+    return { X = point.x, Y = point.y }
+end
+
+local function find_collision_point(target_pos, target_vel, interceptor_pos, interceptor_speed)
+    local k = magnitude(target_vel) / interceptor_speed;
+    local distance_to_target = magnitude(subVec(interceptor_pos, target_pos));
+
+    local BA_vel = target_vel
+    local CB = subVec(target_pos, interceptor_pos)
+
+    local alpha = angleBetween(BA_vel, CB)
+    local gamma = math.asin(k * math.sin(alpha))
+    local beta = math.pi - alpha - gamma
+
+    local ratio = distance_to_target / math.sin(beta)
+
+    local kx = ratio * math.sin(gamma)
+    local tti = kx / magnitude(target_vel)
+    --local BA = mulVec(mulVec(target_vel, 1.0 / magnitude(target_vel))) * kx
+
+    local intercept = addVec(target_pos, mulVec(target_vel, tti))
+
+    return intercept;
+end
+
 if mods.lilybeams == nil then
     mods.lilybeams = {}
 end
@@ -61,6 +110,18 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                 end
 
             end
+
+            if weaponName == "LILY_BEAM_AMP_SIPHON" or weaponName == "LILY_BEAM_AMP_SIPHON_O" then
+                if beamHit == Defines.BeamHit.NEW_ROOM then
+                    local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
+                    if roomId >= 0 then
+                        local sys = shipManager:GetSystemInRoom(roomId)
+                        if sys then
+                            sys:ForceDecreasePower(1)
+                        end
+                    end
+                end
+            end
         end
         return Defines.Chain.CONTINUE, beamHit
     end)
@@ -75,6 +136,7 @@ burstPinpoints["LILY_BEAM_AMP_SIPHON_0"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_1"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_2"] = "LILY_BEAM_AMP_SIPHON"
 burstPinpoints["LILY_BEAM_AMP_SIPHON_3"] = "LILY_BEAM_AMP_SIPHON"
+burstPinpoints["LILY_BEAM_AMP_SIPHON_OD"] = "LILY_BEAM_AMP_SIPHON_O"
 burstPinpoints["LILY_BEAM_TOGGLE_AKATSUKI_S"] = "LILY_BEAM_TOGGLE_AKATSUKI_S_BEAM"
 burstPinpointsAnim["LILY_BEAM_TOGGLE_AKATSUKI_S"] = true
 local howitzers = {}
@@ -92,14 +154,14 @@ lilyBurstMultiBarrel["LILY_BEAM_SHOTGUN_9_S"] = {
 }
 
 local longPins = {}
-longPins["LILY_FOCUS_ION_1"] = 10
-longPins["LILY_FOCUS_ION_2"] = 10
-longPins["LILY_FOCUS_ION_HEAVY"] = 15
+longPins["LILY_FOCUS_ION_1"] = 5
+longPins["LILY_FOCUS_ION_2"] = 5
+longPins["LILY_FOCUS_ION_HEAVY"] = 10
 longPins["LILY_FOCUS_ION_CHAIN"] = 5
-longPins["LILY_FOCUS_ION_FIRE"] = 10
+longPins["LILY_FOCUS_ION_FIRE"] = 5
 longPins["LILY_FOCUS_ION_STUN"] = 10
-longPins["LILY_FOCUS_ION_BIO"] = 10
-longPins["LILY_FOCUS_ION_PHASE"] = 10
+longPins["LILY_FOCUS_ION_BIO"] = 5
+longPins["LILY_FOCUS_ION_PHASE"] = 8
 longPins["LILY_BEAM_TOGGLE_AKATSUKI_F"] = 5
 longPins["LILY_BEAM_TOGGLE_AKATSUKI_S"] = 5
 longPins["LILY_BEAM_TOGGLE_AKATSUKI_S_BEAM"] = 5
@@ -117,6 +179,7 @@ longPins["LILY_FOCUS_HACK"] = 15
 longPins["LILY_BEAM_AMP_SIPHON"] = 10
 longPins["LILY_BEAM_SHOTGUN_P"] = 5
 longPins["LILY_BEAM_SHOTGUN_9_P"] = 5
+longPins["LILY_FOCUS_POPPER"] = 3
 
 --[[
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_UPDATE_PRE, function(projectile)
@@ -192,7 +255,39 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
         end
     end
     --]]
-    
+    --[[if weapon.blueprint and weapon.blueprint.name == "LILY_FOCUS_CIWS" then
+       if projectile then
+            print("P: ", projectile.position.x, projectile.position.y)
+            print("FMV", weapon.weaponVisual.fireMountVector.x, weapon.weaponVisual.fireMountVector.y)
+            print("FP", weapon.weaponVisual.fireLocation.x, weapon.weaponVisual.fireLocation.y)
+            print("MP", weapon.weaponVisual.mountPoint.x, weapon.weaponVisual.mountPoint.y)
+            print("MP2", weapon.mount.position.x, weapon.mount.position.y)
+            print("LP", weapon.localPosition.x, weapon.localPosition.y)
+            print("AN", weapon.weaponVisual.anim.position.x, weapon.weaponVisual.anim.position.y)
+            print("AN2", weapon.weaponVisual.renderPoint.x, weapon.weaponVisual.renderPoint.y)
+            local f = weapon.mount.position + weapon.localPosition + weapon.weaponVisual.fireMountVector
+            print("F:", f.x, f.y)
+       end
+    end--]]
+
+    if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_AMP_SIPHON_OD" then
+        if math.random() <= 0.02 then
+            local sm = Hyperspace.ships(weapon.iShipId)
+
+            if weapon.isArtillery then
+                if sm:HasSystem(Hyperspace.ShipSystem.NameToSystemId("artillery")) then
+                    local artis = sm.artillerySystems
+                    artis:size()
+                    sm:StartFire(artis[math.random(artis:size()) - 1].roomId)
+                end
+            else                 
+                if sm:HasSystem(Hyperspace.ShipSystem.NameToSystemId("weapons")) then
+                    sm:StartFire(sm.weaponSystem.roomId)
+                end
+            end 
+        end
+    end
+
     if weapon.blueprint and burstPinpoints[weapon.blueprint.name] then
         local burstPinpointBlueprint = Hyperspace.Blueprints:GetWeaponBlueprint(burstPinpoints[weapon.blueprint.name])
 
@@ -512,9 +607,10 @@ refractors["LILY_FOCUS_PIERCE_2"] = { num = 7, beams = { "LILY_FOCUS_PIERCE_2_V"
 
 local burstPins = {}
 burstPins["LILY_BEAM_AMP_SIPHON"] = { count = 1, countSuper = 1, siphon = true }
+burstPins["LILY_BEAM_AMP_SIPHON_O"] = { count = 1, countSuper = 1, siphon = true }
 burstPins["LILY_BEAM_SHOTGUN_P"] = { count = 1, countSuper = 1, siphon = false }
 burstPins["LILY_BEAM_SHOTGUN_9_P"] = { count = 1, countSuper = 1, siphon = false }
-burstPins["LILY_BEAM_POPPER"] = { count = 1, countSuper = 1, siphon = false }
+burstPins["LILY_FOCUS_POPPER"] = { count = 2, countSuper = 4, siphon = false }
 
 -- Pop shield bubbles
 script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)
@@ -524,7 +620,7 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
     local otherShip = Hyperspace.ships(1 - shipManager.iShipId)
     local otherShieldPower = otherShip and otherShip.shieldSystem.shields.power or nil
 
-    --[[if weaponName == "LILY_BEAM_POPPER" then
+    --[[if weaponName == "LILY_FOCUS_POPPER" then
         ---@type Hyperspace.BeamWeapon
         ---@diagnostic disable-next-line: assign-type-mismatch
         local beam = projectile
@@ -796,3 +892,104 @@ script.on_internal_event(Defines.InternalEvents.WEAPON_RENDERBOX,
         end
         return Defines.Chain.CONTINUE, chargeString, damageString, shotLimitString
     end)
+
+script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager) 
+
+    if shipManager:HasSystem(Hyperspace.ShipSystem.NameToSystemId("weapons")) then
+        for weapon in vter(shipManager.weaponSystem.weapons) do
+            ---@type Hyperspace.ProjectileFactory
+            weapon = weapon
+            if weapon and weapon.powered and weapon.blueprint.name == "LILY_FOCUS_CIWS" then
+                if not userdata_table(weapon, "mods.lilybeams.ciws").delay then
+                    userdata_table(weapon, "mods.lilybeams.ciws").delay = 0
+                end
+                local delay = userdata_table(weapon, "mods.lilybeams.ciws").delay
+                delay = delay - (Hyperspace.FPS.SpeedFactor / 16)
+                userdata_table(weapon, "mods.lilybeams.ciws").delay = delay
+                local ready = weapon.weaponVisual.anim.currentFrame >= 4 and delay <= 0
+
+                
+                local firingPoint = weapon.mount.position + weapon.localPosition + weapon.weaponVisual.fireMountVector
+                local firingPointf = Hyperspace.Pointf(firingPoint.x, firingPoint.y)
+                
+                if ready then
+                    local spaceManager = Hyperspace.App.world.space
+                    local targets = {}
+                    if spaceManager.drones then
+                        for drone in vter(spaceManager.drones) do
+                            ---@type Hyperspace.SpaceDrone
+                            drone = drone
+                            if drone.deployed and drone._collideable and drone._targetable and drone.currentSpace == shipManager.iShipId and drone.iShipId ~= shipManager.iShipId then
+                                if firingPointf:RelativeDistance(drone.currentLocation) < 350 then 
+                                    targets[#targets + 1] = { location = drone.currentLocation, velocity = drone.speedVector }
+                                end
+                            end
+                        end
+                    end
+                    if spaceManager.projectiles then
+                        for proj in vter(spaceManager.projectiles) do
+                            ---@type Hyperspace.Projectile
+                            proj = proj
+                            if proj._targetable and (not proj.startedDeath) and (proj:GetType() == 2 or proj:GetType() == 3) and proj.currentSpace == shipManager.iShipId and proj.ownerId ~= shipManager.iShipId and not proj.passedTarget then
+                                if firingPointf:RelativeDistance(proj.position) < 350 then
+                                    targets[#targets + 1] = { location = proj.position, velocity = proj.speed }
+                                end
+                            end
+                        end
+                    end
+
+
+
+                    if #targets > 0 then
+                        local target = targets[math.random(#targets)]
+                        ---@type Hyperspace.Pointf
+                        local location = target.location
+                        local intercept = find_collision_point(toVec(target.location), toVec(target.velocity),
+                            toVec(location), 100000.0)
+                        intercept = Hyperspace.Pointf(intercept.X, intercept.Y)
+                        local beam = spaceManager:CreateBeam(
+                            Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_PIERCE_1"),
+                            firingPointf, 
+                            shipManager.iShipId,
+                            shipManager.iShipId,
+                            location,
+                            Hyperspace.Pointf(location.x, location.y + 10),
+                            shipManager.iShipId,
+                            1, 0.1
+                        )
+                        beam:ComputeHeading()
+                        --beam:OnRenderSpecific(shipManager.iShipId)
+                        beam.speed_magnitude = beam.speed_magnitude * 0.1
+                        Hyperspace.Sounds:PlaySoundMix("focus_weak", -1, false)
+                        local p = spaceManager:CreateBurstProjectile(
+                            Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_CIWS_PROJ"),
+                            "lily_invisible",
+                            false,
+                            location, 
+                            shipManager.iShipId,
+                            shipManager.iShipId,
+                            intercept,
+                            shipManager.iShipId,
+                            1
+                        )
+                        p:ComputeHeading()
+                        --print(firingPoint.x, firingPoint.y)
+                        local cd = math.max(0, weapon.cooldown.first - weapon.cooldown.second / 5)
+                        weapon.cooldown.first = cd
+                        userdata_table(weapon, "mods.lilybeams.ciws").delay = 0.5
+                    end
+
+
+                end
+
+            
+            end
+
+        end
+
+    end
+
+
+
+    
+end)

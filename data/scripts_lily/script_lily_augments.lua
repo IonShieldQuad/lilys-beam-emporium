@@ -21,9 +21,9 @@ end)
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
     local ship = Hyperspace.ships(projectile.ownerId)
-    if ship and ship:HasAugmentation("LILY_TARGETING_BYPASS") > 0 and projectile.destinationSpace ~= projectile.currentSpace then
+    if ship and (ship:HasAugmentation("LILY_TARGETING_BYPASS") > 0 or ship:HasAugmentation("LILY_TARGETING_BYPASS_LOCKED") > 0) and projectile.destinationSpace ~= projectile.currentSpace then
         projectile.extend.customDamage.accuracyMod = projectile.extend.customDamage.accuracyMod -
-        30 * ship:HasAugmentation("LILY_TARGETING_BYPASS")
+            20 * (ship:HasAugmentation("LILY_TARGETING_BYPASS") + ship:HasAugmentation("LILY_TARGETING_BYPASS_LOCKED"))
     end
 end)
 

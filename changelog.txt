@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.2
+Date: 2025-09-08
+  Changes:
+    - Added WIP Fed Beam Battleship
+    - 'Edison' siphon beam now removes power from enemy systems on direct hit. And is also massively buffed.
+    - Added 'Poppy' shield popper beam.
+    - Added C.I.W.S. beam.
+    - Altered palette of high tech beams to differentiate them more.
+    - Hyper Reloader no longer stacks, increased price to 120 scrap, lowered accuracy penalty to 20%
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 2025-08-31
   Changes:

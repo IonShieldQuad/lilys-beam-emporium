@@ -46,6 +46,7 @@
         <mod-append:blueprint name="LILY_BEAM_PARTICLE_MINI" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_CYCLOTRON" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_FROST" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_POPPER" rarity="0" />
         <mod-append:blueprint name="LILY_COMBAT_AFTERBURNER" rarity="0" />
 
 
@@ -79,6 +80,7 @@
         <mod-append:blueprint name="LILY_BEAM_PARTICLE_MINI" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_CYCLOTRON" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_FROST" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_POPPER" rarity="0" />
         <mod-append:blueprint name="LILY_COMBAT_AFTERBURNER" rarity="0" />
 
 
@@ -114,6 +116,7 @@
         <mod-append:blueprint name="LILY_BEAM_PARTICLE_MINI" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_CYCLOTRON" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_FROST" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_POPPER" rarity="0" />
         <mod-append:blueprint name="LILY_COMBAT_AFTERBURNER" rarity="0" />
 
 
@@ -149,6 +152,7 @@
         <mod-append:blueprint name="LILY_BEAM_PARTICLE_MINI" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_CYCLOTRON" rarity="0" />
         <mod-append:blueprint name="LILY_BEAM_FROST" rarity="0" />
+        <mod-append:blueprint name="LILY_FOCUS_POPPER" rarity="0" />
         <mod-append:blueprint name="LILY_COMBAT_AFTERBURNER" rarity="0" />
 
 
@@ -193,6 +197,7 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="4" />
         <mod-append:blueprint name="LILY_FOCUS_ION_PHASE" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_CIWS" rarity="3" />
 
 
 
@@ -226,6 +231,7 @@
         <mod-append:blueprint name="LILY_FOCUS_ION_BIO" rarity="4" />
         <mod-append:blueprint name="LILY_FOCUS_ION_PHASE" rarity="4" />
         <mod-append:blueprint name="LILY_BEAM_AMP_SIPHON_1" rarity="3" />
+        <mod-append:blueprint name="LILY_FOCUS_CIWS" rarity="3" />
 
 
 

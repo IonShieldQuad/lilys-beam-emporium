@@ -113,6 +113,9 @@
         <mod-append:name>LILY_BEAM_PARTICLE_MINI</mod-append:name>
         <mod-append:name>LILY_BEAM_CYCLOTRON</mod-append:name>
         <mod-append:name>LILY_BEAM_FROST</mod-append:name>
+        <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
+        
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
@@ -140,6 +143,8 @@
         <mod-append:name>LILY_BEAM_PARTICLE_MINI</mod-append:name>
         <mod-append:name>LILY_BEAM_CYCLOTRON</mod-append:name>
         <mod-append:name>LILY_BEAM_FROST</mod-append:name>
+        <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET_EE">
@@ -167,6 +172,8 @@
         <mod-append:name>LILY_BEAM_PARTICLE_MINI</mod-append:name>
         <mod-append:name>LILY_BEAM_CYCLOTRON</mod-append:name>
         <mod-append:name>LILY_BEAM_FROST</mod-append:name>
+        <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="JUDGELIST_ROCK_TRANSPORT_LOOT">
@@ -198,6 +205,8 @@
         <mod-append:name>LILY_BEAM_PARTICLE_MINI</mod-append:name>
         <mod-append:name>LILY_BEAM_CYCLOTRON</mod-append:name>
         <mod-append:name>LILY_BEAM_FROST</mod-append:name>
+        <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ION">
@@ -233,6 +242,8 @@
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_B</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_F</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_S</mod-append:name>
+        <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ITEM_WEAPONS_ION">
@@ -279,6 +290,8 @@
 
     <mod:findName type="blueprintList" name="GIFTLIST_UTILITY">
         <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_BIG_BEAM">
@@ -322,6 +335,8 @@
         <mod-append:name>LILY_BEAM_AMP_SIPHON_3</mod-append:name>
         <mod-append:name>LILY_FOCUS_HACK</mod-append:name>
         <mod-append:name>LILY_FOCUS_POINTER</mod-append:name>
+        <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_BEAMS_ALL">
@@ -372,6 +387,7 @@
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_B</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_F</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_S</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_BEAM_POWERFUL">
@@ -529,6 +545,9 @@
         <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_PHASE</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_B</mod-append:name>
+        <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
+        <mod-append:name>LILY_BEAM_AMP_SIPHON_1</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="SHOP_ENGI_ITEM_WEAPONS_ION">
@@ -546,6 +565,8 @@
         <mod-append:name>LILY_BEAM_PARTICLE_MINI</mod-append:name>
         <mod-append:name>LILY_BEAM_CYCLOTRON</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_B</mod-append:name>
+        <mod-append:name>LILY_BEAM_AMP_SIPHON_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SCISSORS</mod-append:name>
     </mod:findName>
 
 
@@ -565,9 +586,10 @@
         <name>LILY_FOCUS_PIERCE_2</name>
         <name>LILY_FOCUS_HACK</name>
         <name>LILY_BEAM_CYCLOTRON</name>
-        <name>LILY_BEAM_TOGGLE_EVENTIDE_L</name>
+        <name>LILY_BEAM_AMP_SIPHON_1</name>
         <name>LILY_BEAM_TOGGLE_AKATSUKI_B</name>
         <name>LILY_BEAM_SCISSORS</name>
+        <name>LILY_FOCUS_CIWS</name>
     </blueprintList>
 
 
@@ -613,6 +635,7 @@
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_F</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_S</mod-append:name>
         <mod-append:name>LILY_BEAM_SCISSORS</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_RHYME">
@@ -643,6 +666,7 @@
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_F</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_S</mod-append:name>
         <mod-append:name>LILY_BEAM_SCISSORS</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_BEAM_MASTER">
@@ -669,6 +693,9 @@
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_F</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_S</mod-append:name>
         <mod-append:name>LILY_BEAM_SCISSORS</mod-append:name>
+        <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
+        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_DUSKBRINGER">

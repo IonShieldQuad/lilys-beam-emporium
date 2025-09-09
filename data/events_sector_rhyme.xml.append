@@ -31,7 +31,7 @@
         <text>Continue...</text>
         <event>
             <text>"Oh it really is wonderful! But please, my child, do not frighten our little agent of chaos! Hello, Renegade! Welcome to my realm. The home of all my precious children. Once, this plane was populated by countless eldritch beings much like myself. Unfortunately, their constant feuding led many of them to extinction. Now, all that's left is their dream matter to pollute the cosmos and feed my vermin. I frankly would have liked to take over the Multiverse with an army of gods, but oh well. A lesser and elder god of chaos will have to do."</text>
-            <choice blue="true">
+            <choice req="LILY_PATRONAGE" hidden="true" blue="true">
                 <text>(Lily) There is another.</text>
                 <event>
                     <text>"Two lesser gods, in fact" - says Lily,

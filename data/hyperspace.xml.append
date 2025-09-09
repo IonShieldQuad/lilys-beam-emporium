@@ -18,7 +18,7 @@
 		<mod-append:empty/>
 		<mod-append:empty/>
 		<mod-append:empty/>
-		<mod-append:empty/>
+		<mod-append:ship>LILY_PLAYER_FED_BEAM_BATTLESHIP</mod-append:ship>
 
 		<mod-append:empty/>
 		<mod-append:empty/>
@@ -35,11 +35,31 @@
 		<crewLimit>10</crewLimit>
 		<systemLimit>8</systemLimit>
 	</mod-append:customShip>
+
+	<mod-append:ship name="LILY_PLAYER_FED_BEAM_BATTLESHIP" a="true" b="false" c="false" />
+	<mod-append:customShip name="LILY_PLAYER_FED_BEAM_BATTLESHIP">
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>SHIP_FEDERATION</hiddenAug>
+		<hiddenAug>UPG_ARTILLERY_TARGETING</hiddenAug>
+		<hiddenAug>LILY_PATRONAGE</hiddenAug>
+		<crewLimit>12</crewLimit>
+		<systemLimit>12</systemLimit>
+		<exclusivityOverride>
+			<exclusivityGroup>
+				<cloaking/>
+				<lily_ablative_armor/>
+				<aea_super_shields/>
+			</exclusivityGroup>
+			<exclusivityGroup>
+				<medbay/>
+				<clonebay/>
+				<lily_infusion_bay/>
+			</exclusivityGroup>
+		</exclusivityOverride>
+	</mod-append:customShip>
+
 </mod:findLike>
 
-<unlock variant="a" silent="true">
-	<type>4</type>
-</unlock>
 
 <mod:findLike type="events">
 	<mod-append:variable name="lily_backdoor" op="set" value="0" />
@@ -96,6 +116,10 @@
     <aug name="LILY_TARGETING_BYPASS">
         <function name="AUTO_COOLDOWN" value="0.3" useForReqs="false" warning="false" />
     </aug>
+	<aug name="LILY_TARGETING_BYPASS_LOCKED">
+		<function name="AUTO_COOLDOWN" value="0.3" useForReqs="false" warning="false" />
+		<locked/>
+	</aug>
     <aug name="LILY_ASB_SCRAMBLER">
         <function name="PDS_DISABLE" value="1" useForReqs="true" warning="true" />
     </aug>
@@ -431,7 +455,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">1.1</modifier>
-				<blueprint>LILY_FOCUS_HACK</blueprint>
+				<blueprint>LILY_FOCUS_POPPER</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
@@ -450,7 +474,12 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">1.1</modifier>
-				<blueprint>LILY_BEAM_AMP_SIPHON_1</blueprint>
+				<blueprint>LILY_FOCUS_HACK</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_FOCUS_CIWS</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -767,7 +796,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">1.1</modifier>
-				<blueprint>LILY_FOCUS_HACK</blueprint>
+				<blueprint>LILY_FOCUS_POPPER</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
@@ -786,7 +815,12 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">1.1</modifier>
-				<blueprint>LILY_BEAM_AMP_SIPHON_1</blueprint>
+				<blueprint>LILY_FOCUS_HACK</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.1</modifier>
+				<blueprint>LILY_FOCUS_CIWS</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -1146,7 +1180,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">0.2</modifier>
-				<blueprint>LILY_FOCUS_HACK</blueprint>
+				<blueprint>LILY_FOCUS_POPPER</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
@@ -1165,9 +1199,15 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">0.2</modifier>
-				<blueprint>LILY_BEAM_AMP_SIPHON_1</blueprint>
+				<blueprint>LILY_FOCUS_HACK</blueprint>
 				<price>-1</price>
 			</item>
+			<item>
+				<modifier flat="false">0.2</modifier>
+				<blueprint>LILY_FOCUS_CIWS</blueprint>
+				<price>-1</price>
+			</item>
+			
 		</category>
 
 		<category type="WEAPONS">

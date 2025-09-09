@@ -1387,15 +1387,19 @@ Anyway, was there anything else you wanted to ask?
         <text>('Edison' Beam) Set weapon power. [Current power: 3]</text>
         <event load="COMBAT_CHECK_LILY_BEAM_AMP_SIPHON_3"/>
     </mod-append:choice>
+    <mod-append:choice req="LILY_BEAM_AMP_SIPHON_OD" blue="false">
+        <text>('Edison' Beam) Set weapon power. [Current power: OVERDRIVE]</text>
+        <event load="COMBAT_CHECK_LILY_BEAM_AMP_SIPHON_OD"/>
+    </mod-append:choice>
 </mod:findName>
 
 
 
 <event name="COMBAT_CHECK_LILY_BEAM_AMP_SIPHON_0">
     <text>What power do you want to set the weapon to?
-	Current: [Power: 0; Shots: 1].</text>
+	Current: [Power: 0; Shots: 2].</text>
     <choice hidden="true">
-        <text>Set to: [Power: 1; Shots: 2]</text>
+        <text>Set to: [Power: 1; Shots: 3]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_0"/>
@@ -1413,7 +1417,7 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </choice>
     <choice hidden="true">
-        <text>Set to: [Power: 2; Shots: 3]</text>
+        <text>Set to: [Power: 2; Shots: 5]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_0"/>
@@ -1431,7 +1435,7 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </choice>
     <choice hidden="true">
-        <text>Set to: [Power: 3; Shots: 5]</text>
+        <text>Set to: [Power: 3; Shots: 8]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_0"/>
@@ -1440,6 +1444,24 @@ Anyway, was there anything else you wanted to ask?
                 <event>
                     <text>You finish calibrating the weapon successfully.</text>
                     <weapon name="LILY_BEAM_AMP_SIPHON_3"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Set to: [OVERDRIVE]</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_AMP_SIPHON_0"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_AMP_SIPHON_OD"/>
                     <choice hidden="true">
                         <text>Continue...</text>
                         <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
@@ -1457,9 +1479,9 @@ Anyway, was there anything else you wanted to ask?
 
 <event name="COMBAT_CHECK_LILY_BEAM_AMP_SIPHON_1">
     <text>What power do you want to set the weapon to?
-	Current: [Power: 1; Shots: 2].</text>
+	Current: [Power: 1; Shots: 3].</text>
     <choice hidden="true">
-        <text>Set to: [Power: 0; Shots: 1]</text>
+        <text>Set to: [Power: 0; Shots: 2]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_1"/>
@@ -1477,7 +1499,7 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </choice>
     <choice hidden="true">
-        <text>Set to: [Power: 2; Shots: 3]</text>
+        <text>Set to: [Power: 2; Shots: 5]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_1"/>
@@ -1495,7 +1517,7 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </choice>
     <choice hidden="true">
-        <text>Set to: [Power: 3; Shots: 5]</text>
+        <text>Set to: [Power: 3; Shots: 8]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_1"/>
@@ -1504,6 +1526,24 @@ Anyway, was there anything else you wanted to ask?
                 <event>
                     <text>You finish calibrating the weapon successfully.</text>
                     <weapon name="LILY_BEAM_AMP_SIPHON_3"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Set to: [OVERDRIVE]</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_AMP_SIPHON_1"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_AMP_SIPHON_OD"/>
                     <choice hidden="true">
                         <text>Continue...</text>
                         <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
@@ -1520,9 +1560,9 @@ Anyway, was there anything else you wanted to ask?
 
 <event name="COMBAT_CHECK_LILY_BEAM_AMP_SIPHON_2">
     <text>What power do you want to set the weapon to?
-	Current: [Power: 2; Shots: 3].</text>
+	Current: [Power: 2; Shots: 5].</text>
     <choice hidden="true">
-        <text>Set to: [Power: 0; Shots: 1]</text>
+        <text>Set to: [Power: 0; Shots: 2]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_2"/>
@@ -1540,7 +1580,7 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </choice>
     <choice hidden="true">
-        <text>Set to: [Power: 1; Shots: 2]</text>
+        <text>Set to: [Power: 1; Shots: 3]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_2"/>
@@ -1558,7 +1598,7 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </choice>
     <choice hidden="true">
-        <text>Set to: [Power: 3; Shots: 5]</text>
+        <text>Set to: [Power: 3; Shots: 8]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_2"/>
@@ -1576,6 +1616,24 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </choice>
     <choice hidden="true">
+        <text>Set to: [OVERDRIVE]</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_AMP_SIPHON_2"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_AMP_SIPHON_OD"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
         <text>Return to the toggle menu.</text>
         <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
     </choice>
@@ -1583,9 +1641,9 @@ Anyway, was there anything else you wanted to ask?
 
 <event name="COMBAT_CHECK_LILY_BEAM_AMP_SIPHON_3">
     <text>What power do you want to set the weapon to?
-	Current: [Power: 3; Shots: 5].</text>
+	Current: [Power: 3; Shots: 8].</text>
     <choice hidden="true">
-        <text>Set to: [Power: 0; Shots: 1]</text>
+        <text>Set to: [Power: 0; Shots: 2]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_3"/>
@@ -1603,7 +1661,7 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </choice>
     <choice hidden="true">
-        <text>Set to: [Power: 1; Shots: 2]</text>
+        <text>Set to: [Power: 1; Shots: 3]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_3"/>
@@ -1621,7 +1679,7 @@ Anyway, was there anything else you wanted to ask?
         </event>
     </choice>
     <choice hidden="true">
-        <text>Set to: [Power: 2; Shots: 3]</text>
+        <text>Set to: [Power: 2; Shots: 5]</text>
         <event>
             <text>You start calibrating the weapon...</text>
             <remove name="LILY_BEAM_AMP_SIPHON_3"/>
@@ -1630,6 +1688,105 @@ Anyway, was there anything else you wanted to ask?
                 <event>
                     <text>You finish calibrating the weapon successfully.</text>
                     <weapon name="LILY_BEAM_AMP_SIPHON_2"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Set to: [OVERDRIVE]</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_AMP_SIPHON_3"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_AMP_SIPHON_OD"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Return to the toggle menu.</text>
+        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+    </choice>
+</event>
+
+<event name="COMBAT_CHECK_LILY_BEAM_AMP_SIPHON_OD">
+    <text>What power do you want to set the weapon to?
+	Current: [OVERDRIVE].</text>
+    <choice hidden="true">
+        <text>Set to: [Power: 0; Shots: 2]</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_AMP_SIPHON_OD"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_AMP_SIPHON_0"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Set to: [Power: 1; Shots: 3]</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_AMP_SIPHON_OD"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_AMP_SIPHON_1"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Set to: [Power: 2; Shots: 5]</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_AMP_SIPHON_OD"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_AMP_SIPHON_2"/>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="COMBAT_CHECK_TOGGLE_LOAD"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice hidden="true">
+        <text>Set to: [Power: 3; Shots: 8]</text>
+        <event>
+            <text>You start calibrating the weapon...</text>
+            <remove name="LILY_BEAM_AMP_SIPHON_OD"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>You finish calibrating the weapon successfully.</text>
+                    <weapon name="LILY_BEAM_AMP_SIPHON_3"/>
                     <choice hidden="true">
                         <text>Continue...</text>
                         <event load="COMBAT_CHECK_TOGGLE_LOAD"/>

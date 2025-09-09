@@ -194,11 +194,20 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_TARGETING_BYPASS">
         <title>Hyper Reloader</title>
-        <desc>Increases weapon charge rate by 30%. However, interferrence causes all weapons to also recieve -30% accuracy penalty when targeting other ship.</desc>
-        <cost>100</cost>
+        <desc>Increases weapon charge rate by 30%. However, interference causes all weapons to also recieve a -20% accuracy penalty when targeting other ships.</desc>
+        <cost>120</cost>
         <bp>5</bp>
         <rarity>0</rarity>
-        <stackable>true</stackable>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_TARGETING_BYPASS_LOCKED">
+        <title>Hyper Reloader</title>
+        <desc>Increases weapon charge rate by 30%. However, interference causes all weapons to also recieve a -20% accuracy penalty when targeting other ships.</desc>
+        <cost>120</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
     </augBlueprint>
 
     <augBlueprint name="LILY_ASB_SCRAMBLER">
@@ -1884,6 +1893,40 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <weaponArt>lily_beam_amp_siphon_0</weaponArt>
 </weaponBlueprint>
 
+<weaponBlueprint name="LILY_BEAM_AMP_SIPHON_O">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Burst Beam Projectile</title>
+    <short>Burst Beam Projectile</short>
+    <desc>YOU SHOULD NEVER SEE THIS</desc>
+    <tooltip>YOU SHOULD NEVER SEE THIS</tooltip>
+    <damage>0</damage>
+
+    <sysDamage>0</sysDamage>
+    <sp>-10</sp>
+    <fireChance>2</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>14</cooldown>
+    <speed>1</speed>
+    <length>5</length>
+    <power>0</power>
+    <cost>100</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <color>
+        <r>255</r>
+        <g>150</g>
+        <b>0</b>
+    </color>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_zap_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_amp_siphon_0</weaponArt>
+</weaponBlueprint>
+
+
+
 
 <weaponBlueprint name="LILY_BEAM_AMP_SIPHON_0">
     <type>BURST</type>
@@ -1891,7 +1934,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <tip>tip_lily_siphon</tip>
     <title>'Edison' Siphon Beam [0]</title>
     <short>'Edison' [0]</short>
-    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. More power allows for longer burst. Current power: 0 (Conservative).</desc>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for longer burst. Current power: 0 (Conservative).</desc>
     <tooltip>A shield draining burst beam.</tooltip>
     <damage>0</damage>
     <persDamage>0</persDamage>
@@ -1905,12 +1948,12 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed> 
-    <fireTime>0.25</fireTime>
+    <fireTime>0.15</fireTime>
     <mv-stealth/>
     <mv-conservative/>
 
 
-    <shots>1</shots>
+    <shots>2</shots>
 
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
@@ -1930,7 +1973,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <tip>tip_lily_siphon</tip>
     <title>'Edison' Siphon Beam [1]</title>
     <short>'Edison' [1]</short>
-    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. More power allows for longer burst. Current power: 1.</desc>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for longer burst. Current power: 1.</desc>
     <tooltip>A shield draining burst beam.</tooltip>
     <damage>0</damage>
     <persDamage>0</persDamage>
@@ -1944,10 +1987,10 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <bp>8</bp>
     <rarity>6</rarity>
     <speed>0</speed>
-    <fireTime>0.25</fireTime>
+    <fireTime>0.15</fireTime>
     <mv-stealth/>
 
-    <shots>2</shots>
+    <shots>3</shots>
 
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
@@ -1969,7 +2012,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <tip>tip_lily_siphon</tip>
     <title>'Edison' Siphon Beam [2]</title>
     <short>'Edison' [2]</short>
-    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. More power allows for longer burst. Current power: 2.</desc>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for longer burst. Current power: 2.</desc>
     <tooltip>A shield draining burst beam.</tooltip>
     <damage>0</damage>
     <persDamage>0</persDamage>
@@ -1983,10 +2026,10 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed>
-    <fireTime>0.25</fireTime>
+    <fireTime>0.15</fireTime>
     <mv-stealth/>
 
-    <shots>3</shots>
+    <shots>5</shots>
 
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
@@ -2007,7 +2050,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <tip>tip_lily_siphon</tip>
     <title>'Edison' Siphon Beam [3]</title>
     <short>'Edison' [3]</short>
-    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. More power allows for longer burst. Current power: 3.</desc>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for longer burst. Current power: 3.</desc>
     <tooltip>A shield draining burst beam.</tooltip>
     <damage>0</damage>
     <persDamage>0</persDamage>
@@ -2021,10 +2064,10 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed>
-    <fireTime>0.25</fireTime>
+    <fireTime>0.15</fireTime>
     <mv-stealth/>
 
-    <shots>5</shots>
+    <shots>8</shots>
 
     <projectiles>
         <projectile count="1" fake="false">laser_burst</projectile>
@@ -2035,6 +2078,44 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
         <sound>lily_zap_1</sound>
     </launchSounds>
     <weaponArt>lily_beam_amp_siphon_3</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_AMP_SIPHON_OD">
+    <type>BURST</type>
+    <flavorType>Pinpoint</flavorType>
+    <tip>tip_lily_siphon</tip>
+    <title>'Edison' Siphon Beam [OVERDRIVE]</title>
+    <short>'Edison' [OD]</short>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for longer burst. Current power: OVERDRIVE.</desc>
+    <tooltip>A shield draining burst beam.</tooltip>
+    <damage>0</damage>
+    <persDamage>0</persDamage>
+    <sp>0</sp>
+    <radius>5</radius>
+    <fireChance>2</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>30</cooldown>
+    <hullBust>0</hullBust>
+    <power>6</power>
+    <cost>70</cost>
+    <bp>8</bp>
+    <rarity>0</rarity>
+    <speed>0</speed>
+    <fireTime>0.05</fireTime>
+    <mv-stealth/>
+
+    <shots>80</shots>
+
+    <projectiles>
+        <projectile count="1" fake="false">laser_burst</projectile>
+    </projectiles>
+
+
+    <launchSounds>
+        <sound>lily_zap_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_amp_siphon_od</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -2655,7 +2736,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
         <tip>tip_lily_howitzers</tip>
         <title>'Quake' Howitzer</title>
         <short>'Quake'</short>
-        <desc>The lighest out of howitzer series, this weapon is nevertheless capable of inflicting heavy damage to a system it hits, and has decent accuracy and reload speed.</desc>
+        <desc>The lightest out of howitzer series, this weapon is nevertheless capable of inflicting heavy damage to a system it hits, and has decent accuracy and reload speed.</desc>
         <tooltip>Howitzer 1</tooltip>
         <missiles>1</missiles>
         <radius>20</radius>
@@ -2973,41 +3054,96 @@ The excessive nitrogen gas also upsets the atmospheric balance.</desc>
     </weaponBlueprint>
 
 
-    <weaponBlueprint name="LILY_BEAM_POPPER">
+    <weaponBlueprint name="LILY_FOCUS_POPPER">
         <type>BEAM</type>
-        <tip>tip_particle_beam</tip>
+        <tip>tip_conservative</tip>
         <title>Shield Popper Beam</title>
-        <short>Popper</short>
-        <desc>Fires a small concentrated beam that does no damage but pops shields and can't miss.</desc>
+        <short>'Poppy'</short>
+        <desc>Fires a small concentrated beam that does no damage but pops 2 layers of shields. Has an unusual property of also putting affected crew in a daze.
+Conservative weapons use no power on their own but require the system itself to be powered.</desc>
         <tooltip>Pops shields.</tooltip>
         <damage>0</damage>
         <sysDamage>0</sysDamage>
-        <sp>-10</sp>
         <fireChance>0</fireChance>
         <breachChance>0</breachChance>
-        <cooldown>12</cooldown>
+        <cooldown>14</cooldown>
+        <fireTime>0.25</fireTime>
+        <stun>10</stun>
+        <mv-conservative/>
         <color>
             <r>255</r>
-            <g>255</g>
-            <b>255</b>
+            <g>200</g>
+            <b>100</b>
         </color>
         <!--mv-pop>
             <count>1</count>
             <countSuper>1</countSuper>
         </mv-pop-->
-        <ionBeamFix/>
-        <power>1</power>
+        <power>0</power>
         <cost>40</cost>
         <bp>2</bp>
-        <rarity>0</rarity>
-        <length>200</length>
+        <rarity>3</rarity>
+        <length>1</length>
         <image>beam_contact</image>
         <launchSounds>
-            <sound>beam1</sound>
-            <sound>beam1_2</sound>
+            <sound>focus_weak</sound>
         </launchSounds>
-        <weaponArt>lily_beam_particle_mini</weaponArt>
+        <weaponArt>lily_focus_popper</weaponArt>
         <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="LILY_FOCUS_CIWS">
+    <type>BEAM</type>
+    <tip>tip_focus</tip>
+    <title>Beam C.I.W.S.</title>
+    <short>C.I.W.S.</short>
+    <desc>This beam weapon in equipped with unique omnidirectional infrared emitter as well as advanced targeting suite. It's effective at shooting down incoming missiles and drones, but performs poorly against other ships.</desc>
+    <tooltip>1 Damage pinpoint.</tooltip>
+    <damage>1</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <power>2</power>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>1</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>focus_weak</sound>
+    </launchSounds>
+    <weaponArt>lily_focus_ciws</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_FOCUS_CIWS_PROJ">
+    <type>BURST</type>
+    <tip>tip_focus</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>---</desc>
+    <tooltip>1 Damage pinpoint.</tooltip>
+    <damage>1</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <power>2</power>
+    <cost>70</cost>
+    <bp>2</bp>
+    <shots>1</shots>
+    <rarity>0</rarity>
+    <speed>100000</speed>
+    <projectiles>
+        <projectile count="1" fake="false">lily_invisible</projectile>
+    </projectiles>
+    <launchSounds>
+        <sound>focus_weak</sound>
+    </launchSounds>
+    <weaponArt>lily_focus_ciws</weaponArt>
+    <iconImage>beam</iconImage>
 </weaponBlueprint>
 
 
@@ -3089,6 +3225,218 @@ The excessive nitrogen gas also upsets the atmospheric balance.</desc>
 
     <shieldImage>mup_disk</shieldImage>
     <mv-mapImage>map_icon_lily_player_wrecked_siren_transport</mv-mapImage>
+</shipBlueprint>
+
+
+
+<!--shipBlueprint name="LILY_PLAYER_FED_BEAM_BATTLESHIP" layout="lily_player_fed_beam_battleship" img="lily_player_fed_beam_battleship">
+    <class>Unity Beam Battleship</class>
+    <name>Project Excalibur</name>
+    <desc>Lily has decided to cooperate with Federation, with her providing a huge beam cannon, and the Fereration providing an appropriate ship to mount it on. This elite battleship has a powerful beam weapon and great potential, but budget has ran out for anything else anything else.  [Note: This ship is WIP and will be reworked later.]</desc>
+    <systemList>
+        <artillery power="2" max="5" room="16" start="true" weapon="ROYAL_ARTILLERY" img="room_artillery_3" >
+            <slot>
+                <direction>right</direction>
+                <number>0</number>
+            </slot>
+        </artillery>
+        <battery power="2" room="2" start="true" img="room_battery_3" />
+        <cloaking power="1" room="7" start="false" img="room_cloaking_3" >
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </cloaking>
+        <clonebay power="1" room="13" start="false">
+            <slot>
+                <number>2</number>
+            </slot>
+        </clonebay>
+        <doors power="1" room="10" start="true" img="room_doors_7">
+            <slot>
+                <direction>up</direction>
+                <number>1</number>
+            </slot>
+        </doors>
+        <drones power="2" max="8" room="9" start="false" img="room_drones_5" >
+            <slot>
+                <direction>right</direction>
+                <number>3</number>
+            </slot>
+        </drones>
+        <engines power="2" room="14" start="true" img="room_engines_2">
+            <slot>
+                <direction>down</direction>
+                <number>2</number>
+            </slot>
+        </engines>
+        <hacking power="1" room="8" start="false" img="room_hacking_4" >
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </hacking>
+        <medbay power="1" room="13" start="true" img="room_medbay_10">
+            <slot>
+                <number>-2</number>
+            </slot>
+        </medbay>
+        <lily_infusion_bay power="1" room="13" start="true" img="room_lily_infusion_5">
+            <slot>
+                <number>-2</number>
+            </slot>
+        </lily_infusion_bay>
+        <mind power="1" room="6" start="false" img="room_mind_8" >
+            <slot>
+                <direction>down</direction>
+                <number>1</number>
+            </slot>
+        </mind>
+        <oxygen power="1" room="1" start="true" img="room_oxygen_2" >
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </oxygen>
+        <pilot power="1" room="0" start="true" img="room_pilot_5">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </pilot>
+        <sensors power="1" room="12" start="true" img="room_sensors">
+            <slot>
+                <direction>down</direction>
+                <number>1</number>
+            </slot>
+        </sensors>
+        <shields power="4" max="8" room="5" start="true" img="room_shields_14">
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </shields>
+        <teleporter power="1" room="11" start="false" />
+        <temporal power="1" room="15" start="false" img="room_temporal_3" >
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </temporal>
+        <weapons power="2" room="3" start="false" img="room_weapons_3">
+            <slot>
+                <direction>up</direction>
+                <number>1</number>
+            </slot>
+        </weapons>
+        <lily_ablative_armor power="2" max="8" room="7" start="false" img="room_lily_ablative_armor_16">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </lily_ablative_armor>
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>3</droneSlots>
+    <weaponList missiles="5" count="4" />
+    <droneList drones="0" count="2" />
+    <health amount="45" />
+    <maxPower amount="5" />
+    <crewCount amount="1" class="LIST_CREW_FEDERATION_ELITE" />
+    <crewCount amount="1" class="LIST_CREW_FEDERATION_ELITE" />
+    <crewCount amount="1" class="LIST_CREW_FEDERATION_ELITE_RANDOM" />
+    <crewCount amount="1" class="LIST_CREW_FEDERATION" />
+    <aug name="LOCKED_ANCIENT_SHIELD" />
+    <aug name="LILY_TARGETING_BYPASS_LOCKED" />
+    <aug name="EX_AUTO_COOLDOWN" />
+</shipBlueprint-->
+
+
+<shipBlueprint name="LILY_PLAYER_FED_BEAM_BATTLESHIP" layout="lily_player_fed_beam_battleship" img="lily_player_fed_beam_battleship">
+    <class>Unity Beam Battleship</class>
+    <name>Project Excalibur</name>
+    <desc>Lily has decided to cooperate with Federation, with her providing a huge beam cannon, and the Fereration providing an appropriate ship to mount it on. This elite battleship has a powerful beam weapon and great potential, but budget has ran out for anything else anything else.  [Note: This ship is WIP and will be reworked later.]</desc>
+    <systemList>
+        <artillery power="2" max="5" room="4" start="true" weapon="ROYAL_ARTILLERY" img="room_artillery_3" />
+        <battery power="2" room="2" start="true" img="room_battery_3" />
+        <cloaking power="1" room="8" start="false" img="room_cloaking_3" />
+        <clonebay power="1" room="14" start="false">
+            <slot>
+                <number>2</number>
+            </slot>
+        </clonebay>
+        <doors power="1" room="11" start="true" img="room_doors_7">
+            <slot>
+                <direction>up</direction>
+                <number>1</number>
+            </slot>
+        </doors>
+        <drones power="2" max="8" room="10" start="false" img="room_drones_5" />
+        <engines power="2" room="15" start="true" img="room_engines_2">
+            <slot>
+                <direction>down</direction>
+                <number>2</number>
+            </slot>
+        </engines>
+        <hacking power="1" room="9" start="false" img="room_hacking_4" />
+        <medbay power="1" room="14" start="true" img="room_medbay_10">
+            <slot>
+                <number>-2</number>
+            </slot>
+        </medbay>
+        <lily_infusion_bay power="1" room="14" start="true" img="room_lily_infusion_5">
+            <slot>
+                <number>-2</number>
+            </slot>
+        </lily_infusion_bay>
+        <mind power="1" room="7" start="false" img="room_mind_8" />
+        <oxygen power="1" room="1" start="true" img="room_oxygen_2" />
+        <pilot power="1" room="0" start="true" img="room_pilot_5">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </pilot>
+        <sensors power="1" room="13" start="true" img="room_sensors">
+            <slot>
+                <direction>down</direction>
+                <number>1</number>
+            </slot>
+        </sensors>
+        <shields power="4" max="8" room="6" start="true" img="room_shields_14">
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </shields>
+        <teleporter power="1" room="12" start="false" />
+        <temporal power="1" room="16" start="false" img="room_temporal_3" />
+        <weapons power="2" room="3" start="false" img="room_weapons_3">
+            <slot>
+                <direction>up</direction>
+                <number>1</number>
+            </slot>
+        </weapons>
+        <lily_ablative_armor power="2" max="8" room="8" start="false" img="room_lily_ablative_armor_16">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </lily_ablative_armor>
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>2</droneSlots>
+    <weaponList missiles="5" count="4" />
+    <droneList drones="0" count="2" />
+    <health amount="45" />
+    <maxPower amount="5" />
+    <crewCount amount="1" class="LIST_CREW_FEDERATION_ELITE" />
+    <crewCount amount="1" class="LIST_CREW_FEDERATION_ELITE" />
+    <crewCount amount="1" class="LIST_CREW_FEDERATION_ELITE_RANDOM" />
+    <crewCount amount="1" class="LIST_CREW_FEDERATION" />
+    <aug name="LOCKED_ANCIENT_SHIELD" />
+    <aug name="LILY_TARGETING_BYPASS_LOCKED" />
+    <aug name="EX_AUTO_COOLDOWN" />
 </shipBlueprint>
 
 

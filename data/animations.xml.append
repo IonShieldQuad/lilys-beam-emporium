@@ -664,6 +664,17 @@
 		<mountPoint x="6" y="64"/>
 		<chargeImage>weapon_lily/beam_amp_siphon_glow.png</chargeImage>
 	</weaponAnim>
+
+	<animSheet name="lily_beam_amp_siphon_od" w="1280" h="100" fw="40" fh="100">weapon_lily/beam_amp_siphon_od.png</animSheet>
+	<weaponAnim name="lily_beam_amp_siphon_od">
+		<sheet>lily_beam_amp_siphon_od</sheet>
+		<desc length="32" x="0" y="0"/>
+		<chargedFrame>13</chargedFrame>
+		<fireFrame>14</fireFrame>
+		<firePoint x="20" y="64"/>
+		<mountPoint x="6" y="64"/>
+		<chargeImage>weapon_lily/beam_amp_siphon_glow.png</chargeImage>
+	</weaponAnim>
 </FTL>
 
 
@@ -801,6 +812,26 @@
 		<chargeImage>weapon_lily/beam_particle_mini_glow.png</chargeImage>
 	</weaponAnim>
 
+	<animSheet name="lily_focus_popper" w="875" h="55" fw="35" fh="55">weapon_lily/focus_popper.png</animSheet>
+	<weaponAnim name="lily_focus_popper">
+		<sheet>lily_focus_popper</sheet>
+		<desc length="25" x="0" y="0"/>
+		<chargedFrame>11</chargedFrame>
+		<fireFrame>17</fireFrame>
+		<firePoint x="17" y="30"/>
+		<mountPoint x="5" y="40"/>
+	</weaponAnim>
+
+	<animSheet name="lily_focus_ciws" w="1960" h="78" fw="70" fh="78">weapon_lily/focus_ciws.png</animSheet>
+	<weaponAnim name="lily_focus_ciws">
+		<sheet>lily_focus_ciws</sheet>
+		<desc length="28" x="0" y="0"/>
+		<chargedFrame>24</chargedFrame>
+		<fireFrame>25</fireFrame>
+		<firePoint x="31" y="39"/>
+		<mountPoint x="5" y="39"/>
+	</weaponAnim>
+
 	<animSheet name="lily_cyclotron_charges" w="212" h="64" fw="53" fh="64">weapon_lily/beam_cyclotron_chargeglow.png</animSheet>
 	<anim name="lily_cyclotron_charges">
 		<sheet>lily_cyclotron_charges</sheet>
@@ -831,12 +862,6 @@
 
 </FTL>
 
-<animSheet name="lily_siren_transport_column_light_damaged" w="19000" h="129" fw="190" fh="129">thrusters/lily_siren_transport_column_light_damaged.png</animSheet>
-<anim name="lily_siren_transport_column_light_damaged">
-	<sheet>lily_siren_transport_column_light_damaged</sheet>
-	<desc length="100" x="0" y="0"/>
-	<time>2</time>	<!-- 5 or so for normal-->
-</anim>
 <animSheet name="lily_siren_transport_column_light_damaged_a" w="9500" h="129" fw="95" fh="129">thrusters/lily_siren_transport_column_light_damaged_a.png</animSheet>
 <anim name="lily_siren_transport_column_light_damaged_a">
 	<sheet>lily_siren_transport_column_light_damaged_a</sheet>
@@ -914,6 +939,31 @@
 	<sheet>lily_chaos_police_thruster</sheet>
 	<desc length="4" x="0" y="0"/>
 	<time>4</time>
+</anim>
+
+<animSheet name="lily_mu_fed_light" w="88" h="22" fw="22" fh="22">thrusters/lily_mu_fed_light.png</animSheet>
+<anim name="lily_mu_fed_light">
+	<sheet>lily_mu_fed_light</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+<animSheet name="lily_mu_militia_bombard_thruster" w="100" h="33" fw="25" fh="33">thrusters/lily_mu_militia_bombard_thruster.png</animSheet>
+<anim name="lily_mu_militia_bombard_thruster">
+	<sheet>lily_mu_militia_bombard_thruster</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+<animSheet name="lily_mu_fed_fighter_small_thruster" w="64" h="17" fw="16" fh="17">thrusters/lily_mu_fed_fighter_small_thruster.png</animSheet>
+<anim name="lily_mu_fed_fighter_small_thruster">
+	<sheet>lily_mu_fed_fighter_small_thruster</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+<animSheet name="lily_mu_fed_bomber_small_thruster" w="60" h="14" fw="15" fh="14">thrusters/lily_mu_fed_bomber_small_thruster.png</animSheet>
+<anim name="lily_mu_fed_bomber_small_thruster">
+	<sheet>lily_mu_fed_bomber_small_thruster</sheet>
+	<desc length="4" x="0" y="0"/>
+	<time>0.5</time>
 </anim>
 
 </FTL>

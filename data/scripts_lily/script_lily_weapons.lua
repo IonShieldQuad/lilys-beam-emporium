@@ -3,6 +3,22 @@ local vter = mods.multiverse.vter
 local userdata_table = mods.multiverse.userdata_table
 local INT_MAX = 2147483647
 
+-- Returns a table of all crew belonging to the given ship on the room tile at the given point
+local function get_ship_crew_point(shipManager, x, y, maxCount)
+    local res = {}
+    x = x // 35
+    y = y // 35
+    for crewmem in vter(shipManager.vCrewList) do
+        if crewmem.iShipId == shipManager.iShipId and x == crewmem.x // 35 and y == crewmem.y // 35 then
+            table.insert(res, crewmem)
+            if maxCount and #res >= maxCount then
+                return res
+            end
+        end
+    end
+    return res
+end
+
 local function dot(a, b)
     return a.X * b.X + a.Y * b.Y;
 end
@@ -88,12 +104,12 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
             local otherShip = Hyperspace.ships(1 - shipManager.iShipId)
 
             -- Make drones target the location the target painter laser hit
-            if weaponName == "LILY_FOCUS_POINTER" then
+            if otherShip and  weaponName == "LILY_FOCUS_POINTER" then
                 for drone in vter(otherShip.spaceDrones) do
                     drone.targetLocation = location
                 end
             end
-            if weaponName == "LILY_BEAM_FROST" then
+            if otherShip and weaponName == "LILY_BEAM_FROST" then
 
                 if beamHit == Defines.BeamHit.NEW_ROOM or beamHit == Defines.BeamHit.NEW_TILE then
                     local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
@@ -111,7 +127,7 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
 
             end
 
-            if weaponName == "LILY_BEAM_AMP_SIPHON" or weaponName == "LILY_BEAM_AMP_SIPHON_O" then
+            if otherShip and (weaponName == "LILY_BEAM_AMP_SIPHON" or weaponName == "LILY_BEAM_AMP_SIPHON_O") then
                 if beamHit == Defines.BeamHit.NEW_ROOM then
                     local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
                     if roomId >= 0 then
@@ -119,6 +135,36 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                         if sys then
                             sys:ForceDecreasePower(1)
                         end
+                    end
+                end
+            end
+
+            if otherShip and weaponName == "LILY_SIREN_TRANSPORT_A_ARTILLERY" then
+                --print("!!!")
+                if otherShip.teleportSystem and otherShip.teleportSystem:GetEffectivePower() > 0 then
+                    if beamHit == Defines.BeamHit.NEW_ROOM or beamHit == Defines.BeamHit.NEW_TILE then
+                        for i, crewmem in ipairs(get_ship_crew_point(shipManager, location.x, location.y)) do
+                            crewmem.extend:InitiateTeleport(otherShip.iShipId, otherShip.teleportSystem.roomId)
+                            if crewmem.iShipId == otherShip.iShipId then
+                                crewmem.fStunTime = 0
+                            end
+                        end
+                        --[[
+                        local crew1 = shipManager:GetSelectedCrewPoint(location.x, location.y, false)
+                        local crew2 = shipManager:GetSelectedCrewPoint(location.x, location.y, true)
+                        if crew1 then
+                            crew1.extend:InitiateTeleport(otherShip.iShipId, otherShip.teleportSystem.roomId)
+                            if crew1.iShipId == otherShip.iShipId then
+                                crew1.fStunTime = 0
+                            end
+                        end
+                        if crew2 then
+                            crew2.extend:InitiateTeleport(otherShip.iShipId, otherShip.teleportSystem.roomId)
+                            if crew2.iShipId == otherShip.iShipId then
+                                crew2.fStunTime = 0
+                            end
+                        end
+                        --]]
                     end
                 end
             end
@@ -920,9 +966,9 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                             ---@type Hyperspace.SpaceDrone
                             drone = drone
                             if drone.deployed and drone._collideable and drone._targetable and drone.currentSpace == shipManager.iShipId and drone.iShipId ~= shipManager.iShipId then
-                                if firingPointf:RelativeDistance(drone.currentLocation) < 350 then 
+                                --if firingPointf:RelativeDistance(drone.currentLocation) < 350 then 
                                     targets[#targets + 1] = { location = drone.currentLocation, velocity = drone.speedVector }
-                                end
+                                --end
                             end
                         end
                     end
@@ -931,9 +977,9 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                             ---@type Hyperspace.Projectile
                             proj = proj
                             if proj._targetable and (not proj.startedDeath) and (proj:GetType() == 2 or proj:GetType() == 3) and proj.currentSpace == shipManager.iShipId and proj.ownerId ~= shipManager.iShipId and not proj.passedTarget then
-                                if firingPointf:RelativeDistance(proj.position) < 350 then
+                                --if firingPointf:RelativeDistance(proj.position) < 350 then
                                     targets[#targets + 1] = { location = proj.position, velocity = proj.speed }
-                                end
+                                --end
                             end
                         end
                     end
@@ -945,19 +991,20 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                         ---@type Hyperspace.Pointf
                         local location = target.location
                         local intercept = find_collision_point(toVec(target.location), toVec(target.velocity),
-                            toVec(location), 100000.0)
+                            toVec(location), 1000.0)
                         intercept = Hyperspace.Pointf(intercept.X, intercept.Y)
                         local beam = spaceManager:CreateBeam(
-                            Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_PIERCE_1"),
+                            Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_CIWS"),
                             firingPointf, 
                             shipManager.iShipId,
                             shipManager.iShipId,
                             location,
-                            Hyperspace.Pointf(location.x, location.y + 10),
+                            Hyperspace.Pointf(location.x, location.y + 1),
                             shipManager.iShipId,
                             1, 0.1
                         )
                         beam:ComputeHeading()
+                        beam:OnUpdate()
                         --beam:OnRenderSpecific(shipManager.iShipId)
                         beam.speed_magnitude = beam.speed_magnitude * 0.1
                         Hyperspace.Sounds:PlaySoundMix("focus_weak", -1, false)
@@ -969,6 +1016,36 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                             shipManager.iShipId,
                             shipManager.iShipId,
                             intercept,
+                            shipManager.iShipId,
+                            1
+                        )
+                        p:ComputeHeading()
+                        for i = 1, 10, 1 do
+                            local theta = 2 * math.random() * math.pi
+                            local r = 5 * math.random()
+                            p = spaceManager:CreateBurstProjectile(
+                                Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_CIWS_PROJ"),
+                                "lily_invisible",
+                                false,
+                                location,
+                                shipManager.iShipId,
+                                shipManager.iShipId,
+                                Hyperspace.Pointf(intercept.x + r * math.cos(theta), intercept.y + r * math.sin(theta)),
+                                shipManager.iShipId,
+                                1
+                            )
+                            p:ComputeHeading()
+                        end
+                        local theta = 2 * math.random() * math.pi
+                        local r = 5 * math.random()
+                        p = spaceManager:CreateBurstProjectile(
+                            Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_CIWS_PROJ_2"),
+                            "lily_invisible",
+                            false,
+                            Hyperspace.Pointf(location.x + target.velocity.x, location.y + target.velocity.y) ,
+                            shipManager.iShipId,
+                            shipManager.iShipId,
+                            location,
                             shipManager.iShipId,
                             1
                         )

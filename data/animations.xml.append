@@ -860,7 +860,18 @@
 		<chargeImage>weapon_lily/beam_frost_glow.png</chargeImage>
 	</weaponAnim>
 
-</FTL>
+	<animSheet name="lily_siren_transport_a_artillery" w="1111" h="82" fw="11" fh="82">weapon_lily/siren_transport_a_artillery.png</animSheet>
+	<weaponAnim name="lily_siren_transport_a_artillery">
+		<sheet>lily_siren_transport_a_artillery</sheet>
+		<desc length="101" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="6" y="2"/>
+		<mountPoint x="6" y="82"/>
+		<chargeImage>weapon_lily/siren_transport_a_artillery_glow.png</chargeImage>
+	</weaponAnim>
+
+
 
 <animSheet name="lily_siren_transport_column_light_damaged_a" w="9500" h="129" fw="95" fh="129">thrusters/lily_siren_transport_column_light_damaged_a.png</animSheet>
 <anim name="lily_siren_transport_column_light_damaged_a">
@@ -911,8 +922,68 @@
 	<time>5</time>
 </anim>
 
+<animSheet name="lily_siren_transport_a_column_light_1" w="9600" h="129" fw="96" fh="129">thrusters/lily_siren_transport_a_column_light_1.png</animSheet>
+<anim name="lily_siren_transport_a_column_light_1">
+	<sheet>lily_siren_transport_a_column_light_1</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>	
+</anim>
+<animSheet name="lily_siren_transport_a_column_light_2" w="9400" h="129" fw="94" fh="129">thrusters/lily_siren_transport_a_column_light_2.png</animSheet>
+<anim name="lily_siren_transport_a_column_light_2">
+	<sheet>lily_siren_transport_a_column_light_2</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>	
+</anim>
+<animSheet name="lily_siren_transport_a_bands_center_back" w="5100" h="13" fw="51" fh="13">thrusters/lily_siren_transport_a_bands_center_back.png</animSheet>
+<anim name="lily_siren_transport_a_bands_center_back">
+	<sheet>lily_siren_transport_a_bands_center_back</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_siren_transport_a_bands_top_back" w="5500" h="9" fw="55" fh="9">thrusters/lily_siren_transport_a_bands_top_back.png</animSheet>
+<anim name="lily_siren_transport_a_bands_top_back">
+	<sheet>lily_siren_transport_a_bands_top_back</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_siren_transport_a_bands_bottom_back" w="5500" h="9" fw="55" fh="9">thrusters/lily_siren_transport_a_bands_bottom_back.png</animSheet>
+<anim name="lily_siren_transport_a_bands_bottom_back">
+	<sheet>lily_siren_transport_a_bands_bottom_back</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_siren_transport_a_bands_center_front" w="8200" h="11" fw="82" fh="11">thrusters/lily_siren_transport_a_bands_center_front.png</animSheet>
+<anim name="lily_siren_transport_a_bands_center_front">
+	<sheet>lily_siren_transport_a_bands_center_front</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_siren_transport_a_bands_top_front" w="10100" h="35" fw="101" fh="35">thrusters/lily_siren_transport_a_bands_top_front.png</animSheet>
+<anim name="lily_siren_transport_a_bands_top_front">
+	<sheet>lily_siren_transport_a_bands_top_front</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_siren_transport_a_bands_bottom_front" w="10100" h="35" fw="101" fh="35">thrusters/lily_siren_transport_a_bands_bottom_front.png</animSheet>
+<anim name="lily_siren_transport_a_bands_bottom_front">
+	<sheet>lily_siren_transport_a_bands_bottom_front</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
 
-<FTL>
+<animSheet name="lily_siren_transport_a_thruster_center" w="2920" h="67" fw="73" fh="67">thrusters/lily_siren_transport_a_thruster_center.png</animSheet>
+<anim name="lily_siren_transport_a_thruster_center">
+	<sheet>lily_siren_transport_a_thruster_center</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
+<animSheet name="lily_siren_transport_a_thruster_side" w="3720" h="81" fw="93" fh="80">thrusters/lily_siren_transport_a_thruster_side.png</animSheet>
+<anim name="lily_siren_transport_a_thruster_side">
+	<sheet>lily_siren_transport_a_thruster_side</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
+
 
 <animSheet name="lily_siren_transport_thruster_center" w="2920" h="67" fw="73" fh="67">thrusters/lily_siren_transport_thruster_center.png</animSheet>
 <anim name="lily_siren_transport_thruster_center">

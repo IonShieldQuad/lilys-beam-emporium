@@ -7,6 +7,7 @@
 <lily_shockwave_1_2 volume="10">weapons_lily/shockwave_1_2.wav</lily_shockwave_1_2>
 <lily_shockwave_1_3 volume="10">weapons_lily/shockwave_1_3.wav</lily_shockwave_1_3>
 <lily_frost_beam_1 volume="10">weapons_lily/frost_beam_1.wav</lily_frost_beam_1>
+<lily_abduction_beam_1 volume="10">weapons_lily/abduction_beam_1.wav</lily_abduction_beam_1>
 
 <lily_page_flip_4 volume="10">effects_lily/page-flip-4.wav</lily_page_flip_4>
 <lily_ringing_boom_1 volume="10">effects_lily/ringing_boom_1.wav</lily_ringing_boom_1>

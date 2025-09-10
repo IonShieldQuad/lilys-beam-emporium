@@ -264,7 +264,7 @@ But alright, just bring me some materials and I'll make one for you--
     <choice req="lily_aether_points" lvl="3">
         <text>Craft a Royal Beam.</text>
         <event>
-            <text id="lily_aether_submit"/>
+            <text id="lily_aether_redeem"/>
             <weapon name="ROYAL_BEAM_3"/>
             <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
             <variable name="lily_aether_points" op="add" val="-3"/>
@@ -279,7 +279,7 @@ But alright, just bring me some materials and I'll make one for you--
     <choice req="lily_aether_points" lvl="2">
         <text>Craft a Royal Pinpoint.</text>
         <event>
-            <text id="lily_aether_submit"/>
+            <text id="lily_aether_redeem"/>
             <weapon name="ROYAL_FOCUS"/>
             <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
             <variable name="lily_aether_points" op="add" val="-2"/>
@@ -294,7 +294,7 @@ But alright, just bring me some materials and I'll make one for you--
     <choice req="lily_aether_points" lvl="2">
         <text>Craft a Royal Havoceizer.</text>
         <event>
-            <text id="lily_aether_submit"/>
+            <text id="lily_aether_redeem"/>
             <weapon name="ROYAL_HAVOC"/>
             <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
             <variable name="lily_aether_points" op="add" val="-2"/>

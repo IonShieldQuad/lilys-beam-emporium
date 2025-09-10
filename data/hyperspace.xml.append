@@ -11,7 +11,7 @@
 <mod:findLike type="ships" limit="1">
 	<mod:findLike type="shipOrder" limit="1">
 		<mod-append:ship>LILY_PLAYER_WRECKED_SIREN_TRANSPORT</mod-append:ship>
-		<mod-append:empty/>
+		<mod-append:ship>LILY_PLAYER_SIREN_TRANSPORT</mod-append:ship>
 		<mod-append:empty/>
 		<mod-append:empty/>
 
@@ -25,6 +25,7 @@
 	</mod:findLike>
 
 	<mod-append:ship name="LILY_PLAYER_WRECKED_SIREN_TRANSPORT" a="true" b="false" c="false" >
+		<arrow variant="a" direction="right" tooltip="ship_unlock_victory" image="arrow_v_right.png" unlockedImage="arrow_v_right_on.png">LILY_PLAYER_SIREN_TRANSPORT</arrow>
 		<unlock variant="a" silent="true">
 			<type>4</type>
 		</unlock>
@@ -34,6 +35,20 @@
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crewLimit>10</crewLimit>
 		<systemLimit>8</systemLimit>
+	</mod-append:customShip>
+
+	<mod-append:ship name="LILY_PLAYER_SIREN_TRANSPORT" a="true" b="false" c="false" >
+		<unlock variant="a" silent="false">
+			<type>2</type>
+			<shipReq>LILY_PLAYER_WRECKED_SIREN_TRANSPORT</shipReq>
+		</unlock>
+	</mod-append:ship>
+	<mod-append:customShip name="LILY_PLAYER_SIREN_TRANSPORT">
+		<hiddenAug>SHIP_SIREN</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>UPG_ARTILLERY_TARGETING</hiddenAug>
+		<crewLimit>10</crewLimit>
+		<systemLimit>10</systemLimit>
 	</mod-append:customShip>
 
 	<mod-append:ship name="LILY_PLAYER_FED_BEAM_BATTLESHIP" a="true" b="false" c="false" />

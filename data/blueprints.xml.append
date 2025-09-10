@@ -3135,7 +3135,7 @@ Conservative weapons use no power on their own but require the system itself to 
     <bp>2</bp>
     <shots>1</shots>
     <rarity>0</rarity>
-    <speed>100000</speed>
+    <speed>1000</speed>
     <projectiles>
         <projectile count="1" fake="false">lily_invisible</projectile>
     </projectiles>
@@ -3143,6 +3143,64 @@ Conservative weapons use no power on their own but require the system itself to 
         <sound>focus_weak</sound>
     </launchSounds>
     <weaponArt>lily_focus_ciws</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+<weaponBlueprint name="LILY_FOCUS_CIWS_PROJ_2">
+    <type>BURST</type>
+    <tip>tip_focus</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>---</desc>
+    <tooltip>1 Damage pinpoint.</tooltip>
+    <damage>1</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <power>2</power>
+    <cost>70</cost>
+    <bp>2</bp>
+    <shots>1</shots>
+    <rarity>0</rarity>
+    <speed>10</speed>
+    <projectiles>
+        <projectile count="1" fake="false">lily_invisible</projectile>
+    </projectiles>
+    <launchSounds>
+        <sound>focus_weak</sound>
+    </launchSounds>
+    <weaponArt>lily_focus_ciws</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_A_ARTILLERY">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>Siren Abductor Artillery</title>
+    <short>Abductor</short>
+    <desc>A beam weapon designed by Sirems, it pierces all shields and abduct crew it hits to the teleporter room, as well as putting them in a daze. Requires teleporter system to function. [Base cooldown: 15]</desc>
+    <tooltip>Siren Abductor Artillery. [Base cooldown: 15]</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <stun>30</stun>
+    <sp>100</sp>
+    <length>100</length>
+    <power>1</power>
+    <mv-prideBeam/>
+    <cost>70</cost>
+    <bp>2</bp>
+    <shots>1</shots>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+   
+    <launchSounds>
+        <sound>lily_abduction_beam_1</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
@@ -3226,6 +3284,87 @@ Conservative weapons use no power on their own but require the system itself to 
     <shieldImage>mup_disk</shieldImage>
     <mv-mapImage>map_icon_lily_player_wrecked_siren_transport</mv-mapImage>
 </shipBlueprint>
+
+<shipBlueprint name="LILY_PLAYER_SIREN_TRANSPORT" layout="lily_player_siren_transport" img="lily_player_siren_transport">
+    <class>Siren Transport</class>
+    <name>Thelxiope</name>
+    <desc>A fully restored and refitted siren transport ship, and is now a combat ready vessel. Its unique Artillery Beam dazes and abducts any crew hit, making them easy prey.</desc>
+    <unlock id="ship_LILY_SIREN_TRANSPORT_unlock"/>
+    <systemList>
+        <artillery power="2" room="13" start="true" weapon="LILY_SIREN_TRANSPORT_A_ARTILLERY" img="room_artillery" />
+        <battery power="1" room="17" start="false" img="room_battery_6" />
+        <cloaking power="1" room="8" start="false" img="room_cloaking_4" />
+        <clonebay power="1" room="3" start="false">
+            <slot>
+                <number>2</number>
+            </slot>
+        </clonebay>
+        <doors power="3" room="2" start="true" img="room_doors_9">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </doors>
+        <drones power="2" max="8" room="7" start="false" img="room_drones_12" />
+        <engines power="2" room="6" start="true" img="room_engines_2">
+            <slot>
+                <direction>down</direction>
+                <number>2</number>
+            </slot>
+        </engines>
+        <hacking power="1" room="9" start="false" img="room_hacking_7" />
+        <medbay power="2" room="3" start="true" img="room_medbay_7">
+            <slot>
+                <number>2</number>
+            </slot>
+        </medbay>
+        <mind power="1" max="4" room="11" start="true" img="room_mind_2" />
+        <oxygen power="1" room="14" start="true" img="room_oxygen_4" />
+        <pilot power="1" room="0" start="true" img="room_pilot_2">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </pilot>
+        <sensors power="1" room="12" start="true" img="room_sensors_3">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </sensors>
+        <shields power="2" max="8" room="5" start="true" img="room_shields">
+            <slot>
+                <direction>left</direction>
+                <number>0</number>
+            </slot>
+        </shields>
+        <teleporter power="1" room="4" start="true" />
+        <temporal power="1" room="10" start="true" img="room_temporal_3" />
+        <weapons power="2" room="1" start="true" img="room_weapons">
+            <slot>
+                <direction>up</direction>
+                <number>1</number>
+            </slot>
+        </weapons>
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>3</droneSlots>
+    <weaponList missiles="5" count="4">
+        <weapon name="BEAM_MADNESS" />
+    </weaponList>
+    <droneList drones="0" count="3" />
+    <health amount="25" />
+    <maxPower amount="12" />
+    <crewCount amount="1" class="siren_harpy" />
+    <crewCount amount="1" class="siren" />
+    <crewCount amount="1" class="siren" />
+    <crewCount amount="1" class="siren" />
+    <aug name="EX_LIFE_SCANNER" />
+    <shieldImage>mup_disk</shieldImage>
+    <mv-mapImage>map_icon_lily_player_siren_transport</mv-mapImage>
+</shipBlueprint>
+
+
 
 
 
@@ -3355,7 +3494,7 @@ Conservative weapons use no power on their own but require the system itself to 
 <shipBlueprint name="LILY_PLAYER_FED_BEAM_BATTLESHIP" layout="lily_player_fed_beam_battleship" img="lily_player_fed_beam_battleship">
     <class>Unity Beam Battleship</class>
     <name>Project Excalibur</name>
-    <desc>Lily has decided to cooperate with Federation, with her providing a huge beam cannon, and the Fereration providing an appropriate ship to mount it on. This elite battleship has a powerful beam weapon and great potential, but budget has ran out for anything else anything else.  [Note: This ship is WIP and will be reworked later.]</desc>
+    <desc>Lily has decided to cooperate with Federation for her weapon testing, with her providing a huge beam cannon, and the Federation providing an appropriate ship to mount it on. This elite battleship has a powerful beam weapon and great potential, but budget has ran out for anything else anything else.  [Note: This ship is WIP and will be reworked later.]</desc>
     <systemList>
         <artillery power="2" max="5" room="4" start="true" weapon="ROYAL_ARTILLERY" img="room_artillery_3" />
         <battery power="2" room="2" start="true" img="room_battery_3" />

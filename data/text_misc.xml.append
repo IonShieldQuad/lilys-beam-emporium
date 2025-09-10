@@ -21,6 +21,8 @@
 
 <text name="lily_aether_submit">You watch as a rift in space opens and consumes the item you have given.
 "Nice find, this will do perfectly--"</text>
+<text name="lily_aether_redeem">You watch as a rift in space opens and gives you a brand new Aether weapon!
+"And here's a reward for all your troubles--"</text>
 
 <text name="loot_zoltan_2">ZOLTAN LOOT
 Does additional damage to systems

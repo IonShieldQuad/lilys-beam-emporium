@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 
+<FTL>
 <!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
 <img x="-34" y="-12" w="497" h="306" />
 <offsets>
@@ -26,4 +26,4 @@
 	<thruster y="236" x="45">lily_mu_fed_bomber_small_thruster</thruster>
 </thrusters>
 <explosion />
-
+</FTL>

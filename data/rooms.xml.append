@@ -26,6 +26,9 @@
 	<computerGlow x="40" y="0" dir="UP" />
 </roomLayout>
 
+<roomLayout name="engines_lily_1">
+	<computerGlow x="5" y="1" dir="UP" />
+</roomLayout>
 
 </FTL>
 

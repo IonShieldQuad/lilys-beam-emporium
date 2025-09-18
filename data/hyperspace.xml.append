@@ -1,11 +1,14 @@
 <FTL>
 
+<version>^1.20.0</version>
+
 <mod:findLike type="scripts">
     <mod-append:script>data/scripts_lily/script_lily_weapons.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_augments.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_powers.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_names.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_events.lua</mod-append:script>
+	<mod-append:script>data/scripts_lily/script_lily_chromatic.lua</mod-append:script>
 </mod:findLike>
 
 <mod:findLike type="ships" limit="1">
@@ -37,7 +40,7 @@
 		<systemLimit>8</systemLimit>
 	</mod-append:customShip>
 
-	<mod-append:ship name="LILY_PLAYER_SIREN_TRANSPORT" a="true" b="false" c="false" >
+	<mod-append:ship name="LILY_PLAYER_SIREN_TRANSPORT" a="true" b="true" c="true" >
 		<unlock variant="a" silent="false">
 			<type>2</type>
 			<shipReq>LILY_PLAYER_WRECKED_SIREN_TRANSPORT</shipReq>
@@ -49,6 +52,24 @@
 		<hiddenAug>UPG_ARTILLERY_TARGETING</hiddenAug>
 		<crewLimit>10</crewLimit>
 		<systemLimit>10</systemLimit>
+	</mod-append:customShip>
+	<mod-append:customShip name="LILY_PLAYER_SIREN_TRANSPORT_2">
+		<hiddenAug>SHIP_SIREN</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>UPG_LILY_INFUSION_CHAOTIC_UNLOCK</hiddenAug>
+		<crewLimit>12</crewLimit>
+		<systemLimit>10</systemLimit>
+	</mod-append:customShip>
+	<mod-append:customShip name="LILY_PLAYER_SIREN_TRANSPORT_3">
+		<hiddenAug>SHIP_SIREN</hiddenAug>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>LILY_ESTROGEN_DISPERSAL</hiddenAug>
+		<crewLimit>10</crewLimit>
+		<systemLimit>12</systemLimit>
+		<crew>
+			<siren_harpy room="0" name="Liliana" male="false" />
+			<siren_harpy room="6" name="Katherine" male="false"/>
+		</crew>
 	</mod-append:customShip>
 
 	<mod-append:ship name="LILY_PLAYER_FED_BEAM_BATTLESHIP" a="true" b="false" c="false" />
@@ -149,6 +170,9 @@
 	</aug>
 	<aug name="LILY_MYSTERIOUS_NOTE">
 	</aug>
+
+	<aug name="LILY_ESTROGEN_DISPERSAL">
+	</aug>
 </augments>
 
 <mod:findLike type="events" limit="1">
@@ -223,6 +247,15 @@
 				</blackList>
 				<duration>10</duration>
 				<boostAnim>madness</boostAnim>
+			</statBoost>
+			<statBoost name="trueHealAmount">
+				<boostType>MAX</boostType>
+				<amount>0</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>SELF</crewTarget>
+				<droneTarget>ALL</droneTarget>
+				<affectsSelf>true</affectsSelf>
+				<priority>100000</priority>
 			</statBoost>
 		</passiveStatBoosts>
 
@@ -930,6 +963,42 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 		</category>
 
+		<category type="AUGMENTS">
+			<item>
+				<modifier flat="false">1.0</modifier>
+				<blueprint>LILY_TARGETING_BYPASS</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.0</modifier>
+				<blueprint>LILY_ASB_SCRAMBLER</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.0</modifier>
+				<blueprint>LILY_COMBAT_AFTERBURNER</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+		<category type="SYSTEMS">
+			<item>
+				<modifier flat="false">1.0</modifier>
+				<blueprint>STORE_LIST_SYSTEMS_LILY</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.0</modifier>
+				<blueprint>STORE_LIST_SYSTEMS_LILY</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.0</modifier>
+				<blueprint>STORE_LIST_SYSTEMS_LILY</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+		
+
 		<category type="WEAPONS">
 			<customTitle>CHAOS :)</customTitle>
 			<item>
@@ -967,22 +1036,42 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
-			<chance>100</chance>
 		</category>
-		<category type="AUGMENTS">
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
 			<item>
-				<modifier flat="false">1.0</modifier>
-				<blueprint>LILY_TARGETING_BYPASS</blueprint>
+				<modifier flat="false">1.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.0</modifier>
-				<blueprint>LILY_ASB_SCRAMBLER</blueprint>
+				<modifier flat="false">1.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_2</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.0</modifier>
-				<blueprint>LILY_COMBAT_AFTERBURNER</blueprint>
+				<modifier flat="false">1.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_3</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier flat="false">1.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_4</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_FIRE</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">1.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_LOCK</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -1353,46 +1442,6 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 		</category>
 
-		<category type="CREW">
-			<customTitle>CHAOS :)</customTitle>
-			<allowDuplicates/>
-			<item>
-				<modifier flat="false">0.1</modifier>
-				<blueprint>STORE_LIST_CREW_LILY</blueprint>
-				<price>-1</price>
-			</item>
-			<item>
-				<modifier flat="false">0.1</modifier>
-				<blueprint>STORE_LIST_CREW_LILY</blueprint>
-				<price>-1</price>
-			</item>
-			<item>
-				<modifier flat="false">0.1</modifier>
-				<blueprint>STORE_LIST_CREW_LILY</blueprint>
-				<price>-1</price>
-			</item>
-			<chance>100</chance>
-		</category>
-		<category type="CREW">
-			<customTitle>CHAOS :)</customTitle>
-			<allowDuplicates/>
-			<item>
-				<modifier flat="false">0.1</modifier>
-				<blueprint>STORE_LIST_CREW_LILY</blueprint>
-				<price>-1</price>
-			</item>
-			<item>
-				<modifier flat="false">0.1</modifier>
-				<blueprint>STORE_LIST_CREW_LILY</blueprint>
-				<price>-1</price>
-			</item>
-			<item>
-				<modifier flat="false">0.1</modifier>
-				<blueprint>STORE_LIST_CREW_LILY</blueprint>
-				<price>-1</price>
-			</item>
-			<chance>100</chance>
-		</category>
 		<category type="AUGMENTS">
 			<item>
 				<modifier flat="false">0.1</modifier>
@@ -1417,6 +1466,100 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<price>-1</price>
 			</item>
 		</category>
+		<category type="SYSTEMS">
+			<item>
+				<modifier flat="false">0.1</modifier>
+				<blueprint>STORE_LIST_SYSTEMS_LILY</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.1</modifier>
+				<blueprint>STORE_LIST_SYSTEMS_LILY</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.1</modifier>
+				<blueprint>STORE_LIST_SYSTEMS_LILY</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="CREW">
+			<customTitle>CHAOS :)</customTitle>
+			<allowDuplicates/>
+			<item>
+				<modifier flat="false">0.1</modifier>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.1</modifier>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.1</modifier>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+		<category type="CREW">
+			<customTitle>CHAOS :)</customTitle>
+			<allowDuplicates/>
+			<item>
+				<modifier flat="false">0.1</modifier>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.1</modifier>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.1</modifier>
+				<blueprint>STORE_LIST_CREW_LILY</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_1</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_2</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_3</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_4</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_FIRE</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_LOCK</blueprint>
+				<price>-1</price>
+			</item>
+
 	</mod-append:customStore>
 
 </mod:findLike>

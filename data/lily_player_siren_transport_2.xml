@@ -1,0 +1,35 @@
+<FTL>
+
+<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+<img x="-60" y="-34" w="460" h="383" />
+<offsets>
+	<floor x="54" y="28" />
+	<cloak x="-7" y="-8" />
+</offsets>
+<weaponMounts>
+	<mount x="318" y="46" rotate="true" mirror="true" gib="-1" slide="up" />
+	<mount x="318" y="337" rotate="true" mirror="false" gib="-1" slide="down" />
+	<mount x="378" y="118" rotate="true" mirror="true" gib="-1" slide="right" />
+	<mount x="378" y="262" rotate="true" mirror="false" gib="-1" slide="right" />
+	<mount x="314" y="191" rotate="true" mirror="true" gib="-1" slide="no" />
+</weaponMounts>
+<thrusters sync="true">
+	<thruster y="158" x="-51">lily_siren_transport_thruster_center</thruster>
+	<thruster y="6" x="62">lily_siren_transport_thruster_side</thruster>
+	<thruster y="158" x="-51">lily_siren_transport_thruster_center</thruster>
+	<thruster y="298" x="62">lily_siren_transport_thruster_side</thruster>
+</thrusters>
+<mv-hullAnims sync="true">
+	<hullAnim y="185" x="109">lily_siren_transport_a_bands_center_back</hullAnim>
+	<hullAnim y="87" x="59">lily_siren_transport_a_bands_top_back</hullAnim>
+	<hullAnim y="287" x="59">lily_siren_transport_a_bands_bottom_back</hullAnim>
+	<!--hullAnim y="186" x="314">lily_siren_transport_a_bands_center_front</hullAnim-->
+	<hullAnim y="108" x="338">lily_siren_transport_a_bands_top_front</hullAnim>
+	<hullAnim y="240" x="338">lily_siren_transport_a_bands_bottom_front</hullAnim>
+	<hullAnim y="127" x="210">lily_siren_transport_a_column_light_1</hullAnim>
+	<hullAnim y="127" x="306">lily_siren_transport_a_column_light_2</hullAnim>
+</mv-hullAnims>
+<explosion />
+</FTL>
+
+

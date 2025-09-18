@@ -1,6 +1,7 @@
 
 local vter = mods.multiverse.vter
 local userdata_table = mods.multiverse.userdata_table
+local time_increment = mods.multiverse.time_increment
 local INT_MAX = 2147483647
 
 -- Returns a table of all crew belonging to the given ship on the room tile at the given point
@@ -91,9 +92,49 @@ local function get_random_point_on_radius(center, radius)
 end
 
 -----------------------------------------------------------------
--- LASER POINTER --
+-- BEAM HIT --
 -----------------------------------------------------------------
 
+local disintegrators = {}
+disintegrators["LILY_BEAM_SIREN_1"] = 1
+disintegrators["LILY_BEAM_SIREN_2"] = 1
+disintegrators["LILY_BEAM_SIREN_3"] = 2
+disintegrators["LILY_BEAM_SIREN_4"] = 3
+disintegrators["LILY_BEAM_SIREN_FIRE"] = 0
+disintegrators["LILY_BEAM_SIREN_LOCK"] = 0
+disintegrators["LILY_BEAM_SIREN_1_CHAOS"] = 1
+disintegrators["LILY_BEAM_SIREN_2_CHAOS"] = 1
+disintegrators["LILY_BEAM_SIREN_3_CHAOS"] = 2
+disintegrators["LILY_BEAM_SIREN_4_CHAOS"] = 3
+disintegrators["LILY_BEAM_SIREN_FIRE_CHAOS"] = 0
+disintegrators["LILY_BEAM_SIREN_LOCK_CHAOS"] = 0
+disintegrators["LILY_BEAM_SIREN_1_ELITE"] = 2
+disintegrators["LILY_BEAM_SIREN_2_ELITE"] = 2
+disintegrators["LILY_BEAM_SIREN_3_ELITE"] = 3
+disintegrators["LILY_BEAM_SIREN_4_ELITE"] = 4
+disintegrators["LILY_BEAM_SIREN_FIRE_ELITE"] = 1
+disintegrators["LILY_BEAM_SIREN_LOCK_ELITE"] = 1
+local chaosfire = {}
+chaosfire["LILY_SIREN_TRANSPORT_C_ARTILLERY"] = 60
+chaosfire["LILY_BEAM_SIREN_FIRE"] = 30
+chaosfire["LILY_BEAM_SIREN_FIRE_CHAOS"] = 45
+chaosfire["LILY_BEAM_SIREN_FIRE_ELITE"] = 60
+local chaoslock = {}
+chaosfire["LILY_BEAM_SIREN_LOCK"] = 30
+chaosfire["LILY_BEAM_SIREN_LOCK_CHAOS"] = 45
+chaosfire["LILY_BEAM_SIREN_LOCK_ELITE"] = 60
+
+local frostBeams = {}
+frostBeams["LILY_BEAM_FROST"] = true
+frostBeams["LILY_SIREN_TRANSPORT_B_ARTILLERY_I"] = true
+
+local specalWidthBeams = {}
+specalWidthBeams["LILY_BEAM_SIREN_3"] = {2, 0}
+specalWidthBeams["LILY_BEAM_SIREN_4"] = {3, 0}
+specalWidthBeams["LILY_BEAM_SIREN_3_CHAOS"] = { 2, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_4_CHAOS"] = { 3, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_3_ELITE"] = { 2, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_4_ELITE"] = { 3, 0 }
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
     function(shipManager, projectile, location, damage, newTile, beamHit)
@@ -109,7 +150,49 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                     drone.targetLocation = location
                 end
             end
-            if otherShip and weaponName == "LILY_BEAM_FROST" then
+
+            if specalWidthBeams[weaponName] then
+                damage.iDamage = specalWidthBeams[weaponName][2]
+            end
+
+            if chaosfire[weaponName] then
+                local effect_time = chaosfire[weaponName]
+                local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
+                if effect_time ~= nil and roomId ~= -1 then
+                    local table = userdata_table(shipManager.ship.vRoomList[roomId], "mods.lilybeams.chaosfire")
+                    table.timer = math.max(table.timer, effect_time)
+                end
+            end
+
+            if disintegrators[weaponName] then
+                if beamHit == Defines.BeamHit.NEW_ROOM then
+                    local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
+                    if roomId >= 0 then
+                        --[[
+                        local sys = shipManager:GetSystemInRoom(roomId)
+                        if sys and sys:CompletelyDestroyed() then
+                            shipManager:DamageHull(disintegrators[weaponName], false)
+                        end
+                        --]]
+                        
+                        local breaches = shipManager.ship:GetHullBreaches(true)
+                        local found = false
+                        for breach in vter(breaches) do
+                            ---@type Hyperspace.Repairable
+                            breach = breach
+                            if breach.roomId == roomId then
+                                found = true
+                                break
+                            end
+                        end
+                        if found then
+                            shipManager:DamageHull(disintegrators[weaponName], false)
+                        end
+                        --]]
+                    end
+                end
+            end
+            if otherShip and frostBeams[weaponName] then
 
                 if beamHit == Defines.BeamHit.NEW_ROOM or beamHit == Defines.BeamHit.NEW_TILE then
                     local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
@@ -125,6 +208,10 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                     end
                 end
 
+            end
+
+            if weaponName == "LILY_SIREN_TRANSPORT_B_ARTILLERY_L" then
+                damage.iDamage = -3
             end
 
             if otherShip and (weaponName == "LILY_BEAM_AMP_SIPHON" or weaponName == "LILY_BEAM_AMP_SIPHON_O") then
@@ -227,6 +314,18 @@ longPins["LILY_BEAM_SHOTGUN_P"] = 5
 longPins["LILY_BEAM_SHOTGUN_9_P"] = 5
 longPins["LILY_FOCUS_POPPER"] = 3
 
+local caleidoscopeBeams = {}
+caleidoscopeBeams[1]  = "LILY_SIREN_TRANSPORT_B_ARTILLERY_R"
+caleidoscopeBeams[2]  = "LILY_SIREN_TRANSPORT_B_ARTILLERY_O"
+caleidoscopeBeams[3]  = "LILY_SIREN_TRANSPORT_B_ARTILLERY_Y"
+caleidoscopeBeams[4]  = "LILY_SIREN_TRANSPORT_B_ARTILLERY_L"
+caleidoscopeBeams[5]  = "LILY_SIREN_TRANSPORT_B_ARTILLERY_G"
+caleidoscopeBeams[6]  = "LILY_SIREN_TRANSPORT_B_ARTILLERY_C"
+caleidoscopeBeams[7]  = "LILY_SIREN_TRANSPORT_B_ARTILLERY_B"
+caleidoscopeBeams[8]  = "LILY_SIREN_TRANSPORT_B_ARTILLERY_I"
+caleidoscopeBeams[9]  = "LILY_SIREN_TRANSPORT_B_ARTILLERY_V"
+caleidoscopeBeams[10] = "LILY_SIREN_TRANSPORT_B_ARTILLERY_M"
+
 --[[
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_UPDATE_PRE, function(projectile)
 
@@ -315,6 +414,53 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
             print("F:", f.x, f.y)
        end
     end--]]
+    if weapon.blueprint and weapon.blueprint.name and specalWidthBeams[weapon.blueprint.name] then
+        projectile.damage.iDamage = specalWidthBeams[weapon.blueprint.name][1]
+    end
+
+    if weapon.blueprint and weapon.blueprint.name == "LILY_SIREN_TRANSPORT_B_ARTILLERY" then
+        local blueprint = Hyperspace.Blueprints:GetWeaponBlueprint(caleidoscopeBeams[math.random(#caleidoscopeBeams)])
+
+        local theta = 2 * math.random() * math.pi
+        local r = 100
+        local target2 = Hyperspace.Pointf(projectile.target.x + r * math.cos(theta), projectile.target.y + r * math.sin(theta))
+
+        local spaceManager = Hyperspace.App.world.space
+        local beam = spaceManager:CreateBeam(
+            blueprint,
+            projectile.position,
+            projectile.currentSpace,
+            projectile.ownerId,
+            projectile.target,
+            target2,
+            projectile.destinationSpace,
+            r,
+            -0.1)
+        ---@type Hyperspace.BeamWeapon
+        projectile = projectile
+        if projectile.sub_start then
+            beam.sub_start = projectile.sub_start
+        end
+
+        ---@type Hyperspace.BeamWeapon
+        local origBeam = projectile
+
+        if origBeam.target2 then
+            origBeam.target1 = beam.target1
+            origBeam.target2 = beam.target2
+            origBeam.length = beam.length
+            origBeam.speed_magnitude = beam.speed_magnitude
+            origBeam.color = beam.color            
+        else
+            projectile.speed_magnitude = beam.speed_magnitude / beam.length
+        end
+
+
+        beam:SetWeaponAnimation(weapon.weaponVisual)
+        --projectile:Kill()
+    end
+
+
 
     if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_AMP_SIPHON_OD" then
         if math.random() <= 0.02 then
@@ -941,6 +1087,29 @@ script.on_internal_event(Defines.InternalEvents.WEAPON_RENDERBOX,
 
 script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager) 
 
+
+    --Thanhs Nauter for this code :)
+    for room in vter(shipManager.ship.vRoomList) do
+        ---@type Hyperspace.Room
+        room = room
+        local table = userdata_table(room, "mods.lilybeams.chaosfire")
+        if table.timer == nil then table.timer = 0 end
+        if table.timer > 0 then
+            table.timer = math.max(table.timer - time_increment(), 0)
+            local shape = room.rect
+            local startX = shape.x // 35
+            local startY = shape.y // 35
+            local endX = startX + (shape.w // 35) - 1
+            local endY = startY + (shape.h // 35) - 1
+            for x = startX, endX do
+                for y = startY, endY do
+                    shipManager:GetFire(x, y).fOxygen = 100
+                end
+            end
+        end
+    end
+
+
     if shipManager:HasSystem(Hyperspace.ShipSystem.NameToSystemId("weapons")) then
         for weapon in vter(shipManager.weaponSystem.weapons) do
             ---@type Hyperspace.ProjectileFactory
@@ -1001,10 +1170,11 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                             location,
                             Hyperspace.Pointf(location.x, location.y + 1),
                             shipManager.iShipId,
-                            1, 0.1
+                            1, -1
                         )
-                        beam:ComputeHeading()
-                        beam:OnUpdate()
+                        
+                        --beam:ComputeHeading()
+                        --beam:Initialize(weapon.blueprint)
                         --beam:OnRenderSpecific(shipManager.iShipId)
                         beam.speed_magnitude = beam.speed_magnitude * 0.1
                         Hyperspace.Sounds:PlaySoundMix("focus_weak", -1, false)

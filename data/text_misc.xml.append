@@ -6,6 +6,8 @@
 <text name="tip_lily_beam_shotgun">Tip: The pinpoint array fires 9 pinpoint beams at once. Has 2 modes: [Pattern] fires beams in 3x3 grid with 1 tile spacing, while [Scatter] fires them randomly in a radius.</text>
 <text name="tip_lily_focus_hack">Tip: This beam can't pierce any shields, but it can effectively keep a system under constant hack if shields are down. Also mind controls any crew hit!</text>
 <text name="tip_lily_howitzers">Tip: Howitzers are a cross between beam and missile weapons. They use missiles to fire, target in a radius similar to flak, can partially pierce shields and generally inflict heavy damage.</text>
+<text name="tip_lily_disintegrators">Tip: Disintegrators are special beams designed by Lily using Eldritch technology. They apply their damage over time to crew and systems, as well as severely impeding healing and repairs, and will damage hull when hitting breached rooms. The effects apply even to resistant rooms or when hitting shield bubbles!</text>
+<text name="tip_lily_disintegrators_alt">Tip: Disintegrators are special beams designed by Lily using Eldritch technology. They apply their damage over time to crew and systems, as well as severely impeding healing and repairs, and will damage hull when hitting fully destroyed systems. The effects apply even to resistant rooms or when hitting shield bubbles!</text>
 
 <text name="tip_lily_syringe">Tip: Special beam weapon. Need to be configured before use.</text>
 <text name="tip_lily_syringe_m">Tip: Applies 4/s healing for 15 second for allied crew. Also halves damage taken from hazards for the duration.</text>

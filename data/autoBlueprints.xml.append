@@ -115,6 +115,12 @@
         <mod-append:name>LILY_BEAM_FROST</mod-append:name>
         <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
         <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         
     </mod:findName>
 
@@ -145,6 +151,12 @@
         <mod-append:name>LILY_BEAM_FROST</mod-append:name>
         <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
         <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET_EE">
@@ -174,6 +186,12 @@
         <mod-append:name>LILY_BEAM_FROST</mod-append:name>
         <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
         <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="JUDGELIST_ROCK_TRANSPORT_LOOT">
@@ -207,6 +225,12 @@
         <mod-append:name>LILY_BEAM_FROST</mod-append:name>
         <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
         <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ION">
@@ -219,6 +243,7 @@
         <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_PHASE</mod-append:name>
         <mod-append:name>LILY_BEAM_SCISSORS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
@@ -302,6 +327,10 @@
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_L</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_B</mod-append:name>
         <mod-append:name>LILY_BEAM_SCISSORS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="GIFTLIST_ZOLTAN_BEAM">
@@ -360,6 +389,12 @@
         <mod-append:name>LILY_BEAM_PARTICLE_MINI</mod-append:name>
         <mod-append:name>LILY_BEAM_CYCLOTRON</mod-append:name>
         <mod-append:name>LILY_BEAM_FROST</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_BEAMS_DAMAGE">
@@ -375,6 +410,12 @@
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_F</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_S</mod-append:name>
         <mod-append:name>LILY_BEAM_SCISSORS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_FOCUS_DAMAGE">
@@ -398,6 +439,8 @@
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_B</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_P</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_H</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_HEAVY">
@@ -413,6 +456,10 @@
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_B</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_F</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_S</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_FIRE_ALL">
@@ -429,6 +476,7 @@
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_B</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_P</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_H</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_PARTICLE">
@@ -457,6 +505,12 @@
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_B</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_P</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_H</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO_NOMISSILE">
@@ -474,6 +528,12 @@
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_B</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_P</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_H</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO_NODAMAGE">
@@ -503,6 +563,9 @@
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_B</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_P</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_H</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
+        
     </mod:findName>
     
     <mod:findName type="blueprintList" name="BLUELIST_FIRE_NONBALLISTIC">
@@ -519,6 +582,8 @@
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_B</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_P</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_EVENTIDE_H</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_HACK">
@@ -590,6 +655,8 @@
         <name>LILY_BEAM_TOGGLE_AKATSUKI_B</name>
         <name>LILY_BEAM_SCISSORS</name>
         <name>LILY_FOCUS_CIWS</name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
     </blueprintList>
 
 
@@ -636,6 +703,18 @@
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_S</mod-append:name>
         <mod-append:name>LILY_BEAM_SCISSORS</mod-append:name>
         <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_RHYME">
@@ -667,6 +746,18 @@
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_S</mod-append:name>
         <mod-append:name>LILY_BEAM_SCISSORS</mod-append:name>
         <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_BEAM_MASTER">
@@ -695,7 +786,12 @@
         <mod-append:name>LILY_BEAM_SCISSORS</mod-append:name>
         <mod-append:name>LILY_FOCUS_POPPER</mod-append:name>
         <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
-        <mod-append:name>LILY_FOCUS_CIWS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_DUSKBRINGER">
@@ -762,6 +858,12 @@
         <name>siren</name>
         <name>siren</name>
         <name>siren_harpy</name>
+    </blueprintList>
+
+    <blueprintList name="STORE_LIST_SYSTEMS_LILY">
+        <name>pilot</name>
+        <name>engines</name>
+        <name>temporal</name>
     </blueprintList>
 
 

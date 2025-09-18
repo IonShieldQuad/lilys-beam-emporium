@@ -265,6 +265,16 @@ disable shields as well as systems.</tooltip>
         <stackable>false</stackable>
     </augBlueprint>
 
+    <augBlueprint name="LILY_ESTROGEN_DISPERSAL">
+        <title>E</title>
+        <desc>"They are putting chemicals into our air that turn everyone into lesbians!.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+
     
     <crewBlueprint name="unique_lily_avatar">
         <desc>A multiverse traveller, beam saleswoman, and a loyal servant of the Supreme Eldritch Goddess of True Chaos. Yes, that's me--</desc>
@@ -1026,7 +1036,7 @@ Shield Piercing: 2</tooltipOverride>
         <cooldown>15</cooldown>
         <hullBust>1</hullBust>
         <power>2</power>
-        <cost>70</cost>
+        <cost>80</cost>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -1058,7 +1068,7 @@ Shield Piercing: 2</tooltipOverride>
             <b>0</b>
         </color>
         <power>2</power>
-        <cost>70</cost>
+        <cost>80</cost>
         <bp>8</bp>
         <rarity>0</rarity>
         <length>100</length>
@@ -1096,7 +1106,7 @@ Shield Piercing: 2</tooltipOverride>
             <statBoost name="repairSpeed" load="RAD_REPAIR"/>
         </statBoosts>
         <power>2</power>
-        <cost>70</cost>
+        <cost>80</cost>
         <bp>8</bp>
         <rarity>0</rarity>
         <length>100</length>
@@ -1133,7 +1143,7 @@ Shield Piercing: 2</tooltipOverride>
         <cooldown>20</cooldown>
         <hullBust>0</hullBust>
         <power>4</power>
-        <cost>120</cost>
+        <cost>140</cost>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -1167,7 +1177,7 @@ Shield Piercing: 2</tooltipOverride>
         <cooldown>20</cooldown>
         <hullBust>0</hullBust>
         <power>4</power>
-        <cost>120</cost>
+        <cost>140</cost>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -1201,7 +1211,7 @@ Shield Piercing: 2</tooltipOverride>
         <cooldown>20</cooldown>
         <hullBust>0</hullBust>
         <power>4</power>
-        <cost>120</cost>
+        <cost>140</cost>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -1237,7 +1247,7 @@ Shield Piercing: 2</tooltipOverride>
         <cooldown>20</cooldown>
         <hullBust>0</hullBust>
         <power>4</power>
-        <cost>120</cost>
+        <cost>140</cost>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -1279,7 +1289,7 @@ Shield Piercing: 2</tooltipOverride>
         <cooldown>15</cooldown>
         <hullBust>0</hullBust>
         <power>3</power>
-        <cost>90</cost>
+        <cost>110</cost>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -1306,7 +1316,7 @@ Shield Piercing: 2</tooltipOverride>
         <cooldown>15</cooldown>
         <hullBust>1</hullBust>
         <power>3</power>
-        <cost>90</cost>
+        <cost>110</cost>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -1341,7 +1351,7 @@ Shield Piercing: 2</tooltipOverride>
         <hullBust>0</hullBust>
         <speed>0</speed>
         <power>3</power>
-        <cost>90</cost>
+        <cost>110</cost>
         <bp>8</bp>
         <rarity>5</rarity>
         <image>beam_contact</image>
@@ -3174,12 +3184,601 @@ Conservative weapons use no power on their own but require the system itself to 
 </weaponBlueprint>
 
 
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					SIREN
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+
+
+<weaponBlueprint name="LILY_BEAM_SIREN_1">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>'Ira' Disintegrator Beam</title>
+    <short>'Ira'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 1.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>12</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>1</power>
+    <speed>2</speed>
+    <mv-prideBeam/>
+    <erosion>
+        <speed>0.75</speed>
+        <maxSpeed>0.75</maxSpeed>
+        <time>10.0</time>
+        <maxTime>20.0</maxTime>
+        <systemRepairMultiplier>0.75</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_str1</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-3</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+            <boostAnim>lily_siren_dot_debuff_2</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.75</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.75</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>35</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_1</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_2">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>'Angoris' Disintegrator Beam</title>
+    <short>'Angoris'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 2.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>16</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>2</power>
+    <speed>5</speed>
+    <mv-prideBeam/>
+    <erosion>
+        <speed>1</speed>
+        <maxSpeed>1</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.5</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_str1</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-4</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_2</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>100</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>120</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_2</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_3">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>'Dolor' Disintegrator Beam</title>
+    <short>'Dolor'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 3.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>18</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>3</power>
+    <speed>3</speed>
+    <mv-prideBeam/>
+    <erosion>
+        <speed>2</speed>
+        <maxSpeed>2</maxSpeed>
+        <time>10.0</time>
+        <maxTime>20.0</maxTime>
+        <systemRepairMultiplier>0.25</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_str2</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-8</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+            <boostAnim>lily_siren_dot_debuff_1</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>120</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>80</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_2</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_3</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_4">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>'Tormentum' Disintegrator Beam</title>
+    <short>'Tormentum'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 4.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>22</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>4</power>
+    <speed>3</speed>
+    <mv-prideBeam/>
+    <erosion>
+        <speed>3</speed>
+        <maxSpeed>3</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.0</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_str3</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-12</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_1</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>150</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>75</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_2</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_4</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_FIRE">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>'Arde' Chaosfire Disintegrator Beam</title>
+    <short>'Arde'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any typeof crew and burn without oxygen.</desc>
+    <tooltip>Chaosfire Disintegrator.</tooltip>
+    <damage>0</damage>
+    <sysDamage>1</sysDamage>
+    <fireChance>100</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>18</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>3</power>
+    <speed>2</speed>
+    <lily-chaosfire/>
+    <erosion>
+        <speed>1</speed>
+        <maxSpeed>1</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.5</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_fire</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-3</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_2</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <roomStatBoosts>
+        <statBoost name="canBurn">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+            <roomAnim renderLayer="1">
+                <anim animType="default" animBorder="2">lily_invisible</anim>
+                <wallAnim>lily_siren_erosion_wall_fire_weak</wallAnim>
+            </roomAnim>
+            <boostAnim>lily_chaosfire_debuff</boostAnim>
+        </statBoost>
+        <statBoost name="canBurn">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+        </statBoost>
+        <statBoost name="canSuffocate">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+        </statBoost>
+        <statBoost name="fireDamageMultiplier">
+            <boostType>MAX</boostType>
+            <amount>1.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+        </statBoost>
+        <statBoost name="fireDamageMultiplier">
+            <boostType>MIN</boostType>
+            <amount>-1</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+        </statBoost>
+        <statBoost name="fireRepairMultiplier">
+            <boostType>SET</boostType>
+            <amount>0.05</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+        </statBoost>
+    </roomStatBoosts>
+    <cost>135</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>65</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_3</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_fire</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_LOCK">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>'Impetus' Chaoslock Disintegrator Beam</title>
+    <short>'Impetus'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from moving, manning, fighing, sabotaging and repairing.</desc>
+    <tooltip>Chaosfire Disintegrator.</tooltip>
+    <damage>0</damage>
+    <ion>1</ion>
+    <ionBeamFix>true</ionBeamFix>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <stun>20</stun>
+    <cooldown>18</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>3</power>
+    <speed>2</speed>
+    <lily-chaoslock/>
+    <erosion>
+        <speed>1</speed>
+        <maxSpeed>1</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.5</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_lock</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-3</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_2</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <roomStatBoosts>
+        <statBoost name="canMove">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+        </statBoost>
+        <statBoost name="controllable">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+        </statBoost>
+        <statBoost name="canFight">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+        </statBoost>
+        <statBoost name="canSabotage">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+        </statBoost>
+        <statBoost name="canRepair">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+        </statBoost>
+        <statBoost name="canMan">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+            <roomAnim renderLayer="1">
+                <anim animType="default" animBorder="2">lily_invisible</anim>
+                <wallAnim>lily_siren_erosion_wall_lock_weak</wallAnim>
+            </roomAnim>
+            <boostAnim>lily_chaoslock_debuff</boostAnim>
+        </statBoost>
+        <statBoost name="moveSpeedMultiplier">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+        </statBoost>
+    </roomStatBoosts>
+    <cost>135</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>65</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_3</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_lock</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					SIREN ARTILLERY
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
+
+
+
 <weaponBlueprint name="LILY_SIREN_TRANSPORT_A_ARTILLERY">
     <type>BEAM</type>
     <tip>tip_beams</tip>
     <title>Siren Abductor Artillery</title>
     <short>Abductor</short>
-    <desc>A beam weapon designed by Sirems, it pierces all shields and abduct crew it hits to the teleporter room, as well as putting them in a daze. Requires teleporter system to function. [Base cooldown: 15]</desc>
+    <desc>A beam weapon designed by Sirens, it pierces all shields and abduct crew it hits to the teleporter room, as well as putting them in a daze. Requires teleporter system to function. [Base cooldown: 15]</desc>
     <tooltip>Siren Abductor Artillery. [Base cooldown: 15]</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -3193,7 +3792,6 @@ Conservative weapons use no power on their own but require the system itself to 
     <mv-prideBeam/>
     <cost>70</cost>
     <bp>2</bp>
-    <shots>1</shots>
     <rarity>0</rarity>
     <image>beam_contact</image>
    
@@ -3204,7 +3802,580 @@ Conservative weapons use no power on their own but require the system itself to 
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_B_ARTILLERY">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>Siren Kaleidoscope Artillery</title>
+    <short>Kaleidoscope</short>
+    <desc>A beam weapon designed by Sirens, it embraces chaos by firing one of 10 different beams at random. [Base cooldown: 16] Possible effects: Fire, Particle, Repair, Stun, Breach, Energy, Ion, Frost, Hack, Radiation</desc>
+    <tooltip>Siren Kaleidoscope Artillery. [Base cooldown: 16] ROYLGCBIVM</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>16</cooldown>
+    <stun>0</stun>
+    <sp>0</sp>
+    <length>1</length>
+    <power>1</power>
+    <color>
+        <r>255</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <!--image>beam_contact</image-->
 
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_C_ARTILLERY">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>Siren Chaosfire Artillery</title>
+    <short>Chaosfire</short>
+    <desc>A beam weapon designed by Sirens, it fires a beam of chaotic energy that ignites everything it touches with chaosflames. Unlike normal fire, chaosflames can burn with no oxygen and damage even fireproof crew. Pierces 2 shields. [Base cooldown: 40]</desc>
+    <tooltip>Siren Chaosfire Artillery. [Base cooldown: 40]</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>10</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>40</cooldown>
+    <stun>0</stun>
+    <sp>3</sp>
+    <length>200</length>
+    <power>1</power>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+
+    <lily-chaosfire/>
+
+    <erosion>
+        <speed>1</speed>
+        <maxSpeed>1</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.5</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="2">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_fire</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-4</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_2</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <roomStatBoosts>
+        <statBoost name="canBurn">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+            <roomAnim renderLayer="1">
+                <anim animType="default" animBorder="2">lily_invisible</anim>
+                <wallAnim>lily_siren_erosion_wall_fire_weak</wallAnim>
+            </roomAnim>
+            <boostAnim>lily_chaosfire_debuff</boostAnim>
+        </statBoost>
+        <statBoost name="canBurn">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+        </statBoost>
+        <statBoost name="canSuffocate">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+        </statBoost>
+        <statBoost name="fireDamageMultiplier">
+            <boostType>MAX</boostType>
+            <amount>1.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+        </statBoost>
+        <statBoost name="fireDamageMultiplier">
+            <boostType>MIN</boostType>
+            <amount>-1</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+        </statBoost>
+        <statBoost name="fireRepairMultiplier">
+            <boostType>SET</boostType>
+            <amount>0.05</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+        </statBoost>
+    </roomStatBoosts>
+
+    <launchSounds>
+        <sound>lily_disintegrator_3</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_c_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_B_ARTILLERY_R">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>YOU SHOULD NEVER SEE THIS IN GAME</desc>
+    <tooltip>---</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>10</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <stun>0</stun>
+    <sp>2</sp>
+    <length>100</length>
+    <power>1</power>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_B_ARTILLERY_O">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>YOU SHOULD NEVER SEE THIS IN GAME</desc>
+    <tooltip>---</tooltip>
+    <damage>0</damage>
+    <sysDamage>2</sysDamage>
+    <fireChance>4</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <stun>0</stun>
+    <sp>0</sp>
+    <length>100</length>
+    <power>1</power>
+    <color>
+        <r>255</r>
+        <g>128</g>
+        <b>0</b>
+    </color>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_B_ARTILLERY_Y">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>YOU SHOULD NEVER SEE THIS IN GAME</desc>
+    <tooltip>---</tooltip>
+    <damage>0</damage>
+    <ion>1</ion>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <stun>20</stun>
+    <sp>0</sp>
+    <length>100</length>
+    <power>1</power>
+    <color>
+        <r>255</r>
+        <g>255</g>
+        <b>0</b>
+    </color>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+
+    <ionBeamFix>true</ionBeamFix>
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_B_ARTILLERY_L">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>YOU SHOULD NEVER SEE THIS IN GAME</desc>
+    <tooltip>---</tooltip>
+    <damage>1</damage>
+    <ion>0</ion>
+    <sysDamage>1</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>2</breachChance>
+    <cooldown>10</cooldown>
+    <stun>0</stun>
+    <sp>10</sp>
+    <length>100</length>
+    <power>1</power>
+    <color>
+        <r>128</r>
+        <g>255</g>
+        <b>0</b>
+    </color>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_B_ARTILLERY_G">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>YOU SHOULD NEVER SEE THIS IN GAME</desc>
+    <tooltip>---</tooltip>
+    <damage>0</damage>
+    <sysDamage>1</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>10</breachChance>
+    <cooldown>10</cooldown>
+    <stun>0</stun>
+    <sp>3</sp>
+    <length>100</length>
+    <power>1</power>
+    <color>
+        <r>0</r>
+        <g>255</g>
+        <b>0</b>
+    </color>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_B_ARTILLERY_C">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>YOU SHOULD NEVER SEE THIS IN GAME</desc>
+    <tooltip>---</tooltip>
+    <ion>1</ion>
+    <damage>1</damage>
+    <noSysDamage>true</noSysDamage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <stun>0</stun>
+    <sp>3</sp>
+    <length>100</length>
+    <power>1</power>
+    <color>
+        <r>0</r>
+        <g>255</g>
+        <b>128</b>
+    </color>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+
+    <ionBeamFix>true</ionBeamFix>
+
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_B_ARTILLERY_B">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>YOU SHOULD NEVER SEE THIS IN GAME</desc>
+    <tooltip>---</tooltip>
+    <ion>3</ion>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <stun>5</stun>
+    <sp>0</sp>
+    <length>100</length>
+    <power>1</power>
+    <color>
+        <r>0</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+
+    <ionBeamFix>true</ionBeamFix>
+
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_B_ARTILLERY_I">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>YOU SHOULD NEVER SEE THIS IN GAME</desc>
+    <tooltip>---</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <persDamage>2</persDamage>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <stun>0</stun>
+    <sp>3</sp>
+    <length>100</length>
+    <power>1</power>
+    <color>
+        <r>0</r>
+        <g>0</g>
+        <b>255</b>
+    </color>
+    <lockdown>1</lockdown>
+    <roomStatBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <duration>20</duration>
+            <roomAnim renderLayer="3">
+                <anim animType="center">snowman_walk_down</anim>
+            </roomAnim>
+        </statBoost>
+        <statBoost name="moveSpeedMultiplier">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>12</duration>
+            <maxStacks>1</maxStacks>
+            <fireCount min="0"/>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>12</duration>
+            <maxStacks>1</maxStacks>
+            <fireCount min="0"/>
+        </statBoost>
+        <statBoost name="silenced">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>12</duration>
+            <maxStacks>1</maxStacks>
+            <boostAnim>lily_frost_debuff</boostAnim>
+            <fireCount min="0"/>
+        </statBoost>
+    </roomStatBoosts>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_B_ARTILLERY_V">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>YOU SHOULD NEVER SEE THIS IN GAME</desc>
+    <tooltip>---</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>10</cooldown>
+    <stun>0</stun>
+    <sp>10</sp>
+    <mv-hack duration="10"/>
+    <length>100</length>
+    <power>1</power>
+    <color>
+        <r>128</r>
+        <g>0</g>
+        <b>255</b>
+    </color>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_B_ARTILLERY_M">
+    <type>BEAM</type>
+    <tip>tip_beams</tip>
+    <title>---</title>
+    <short>---</short>
+    <desc>YOU SHOULD NEVER SEE THIS IN GAME</desc>
+    <tooltip>---</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <persDamage>6</persDamage>
+    <fireChance>0</fireChance>
+    <breachChance>3</breachChance>
+    <cooldown>10</cooldown>
+    <stun>0</stun>
+    <sp>3</sp>
+    <length>100</length>
+    <power>1</power>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>255</b>
+    </color>
+    <statBoosts>
+        <statBoost name="moveSpeedMultiplier" load="RAD_MOVE"/>
+        <statBoost name="stunMultiplier" load="RAD_STUN"/>
+        <statBoost name="repairSpeed" load="RAD_REPAIR"/>
+    </statBoosts>
+    <mv-aiCrewTarget/>
+
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_a_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					SHIPS
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
 
 <shipBlueprint name="LILY_PLAYER_WRECKED_SIREN_TRANSPORT" layout="lily_player_wrecked_siren_transport" img="lily_player_wrecked_siren_transport">
     <class>Wrecked Siren Transport</class>
@@ -3288,7 +4459,7 @@ Conservative weapons use no power on their own but require the system itself to 
 <shipBlueprint name="LILY_PLAYER_SIREN_TRANSPORT" layout="lily_player_siren_transport" img="lily_player_siren_transport">
     <class>Siren Transport</class>
     <name>Thelxiope</name>
-    <desc>A fully restored and refitted siren transport ship, and is now a combat ready vessel. Its unique Artillery Beam dazes and abducts any crew hit, making them easy prey.</desc>
+    <desc>A fully restored and refitted siren transport ship, and is now a combat ready vessel. Its unique Artillery Beam dazes and abducts any crew hit, making them easy prey - one of the favourite Siren tactics.</desc>
     <unlock id="ship_LILY_SIREN_TRANSPORT_unlock"/>
     <systemList>
         <artillery power="2" room="13" start="true" weapon="LILY_SIREN_TRANSPORT_A_ARTILLERY" img="room_artillery" />
@@ -3365,6 +4536,168 @@ Conservative weapons use no power on their own but require the system itself to 
 </shipBlueprint>
 
 
+
+<shipBlueprint name="LILY_PLAYER_SIREN_TRANSPORT_2" layout="lily_player_siren_transport_2" img="lily_player_siren_transport_2">
+    <class>Siren Transport</class>
+    <name>Parthenope</name>
+    <desc>Fully embracing chaos, this ship is equipped with artillery that fires one out of 8 different beams completely at random.</desc>
+    <systemList>
+        <artillery power="1" room="15" start="true" weapon="LILY_SIREN_TRANSPORT_B_ARTILLERY" img="room_artillery" />
+        <battery power="1" room="4" start="true" img="room_battery_14" />
+        <cloaking power="1" room="17" start="false" img="room_cloaking_7" />
+        <clonebay power="1" room="14" start="true">
+            <slot>
+                <number>0</number>
+            </slot>
+        </clonebay>
+        <lily_infusion_bay power="1" room="14" start="true" img="room_lily_infusion_5"/>
+        <doors power="1" room="8" start="true" img="room_doors_9">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </doors>
+        <drones power="2" max="8" room="10" start="false" img="room_drones_18" />
+        <engines power="2" room="6" start="true" img="room_engines_lily_1">
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </engines>
+        <hacking power="1" room="1" start="false" img="room_hacking" />
+        <medbay power="2" room="14" start="false" img="room_medbay_12">
+            <slot>
+                <number>-2</number>
+            </slot>
+        </medbay>
+        <mind power="1" max="4" room="12" start="true" img="room_mind_2" />
+        <oxygen power="1" room="13" start="true" img="room_oxygen_2" />
+        <pilot power="1" room="0" start="true" img="room_pilot_2">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </pilot>
+        <sensors power="2" room="16" start="true" img="room_sensors_3">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </sensors>
+        <shields power="1" max="8" room="7" start="true" img="room_shields_14">
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </shields>
+        <lily_ablative_armor power="2" max="8" room="7" start="true" img="room_lily_ablative_armor_13">
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </lily_ablative_armor>
+        <teleporter power="1" room="11" start="true" />
+        <temporal power="1" room="5" start="true" img="room_temporal_3" />
+        <weapons power="3" room="9" start="true" img="room_weapons_12">
+            <slot>
+                <direction>right</direction>
+                <number>2</number>
+            </slot>
+        </weapons>
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>3</droneSlots>
+    <weaponList missiles="5" count="4">
+        <weapon name="LILY_BEAM_SIREN_LOCK" />
+    </weaponList>
+    <droneList drones="0" count="3" />
+    <health amount="25" />
+    <maxPower amount="10" />
+    <crewCount amount="1" class="siren_harpy" />
+    <crewCount amount="1" class="siren" />
+    <crewCount amount="1" class="siren" />
+    <shieldImage>mup_disk</shieldImage>
+    <mv-mapImage>map_icon_lily_player_siren_transport</mv-mapImage>
+</shipBlueprint>
+
+<shipBlueprint name="LILY_PLAYER_SIREN_TRANSPORT_3" layout="lily_player_siren_transport_3" img="lily_player_siren_transport_3">
+    <class>Siren Transport</class>
+    <name>Himerope</name>
+    <desc>How do the dreams taste if you cook them? This couple of Siren harpies has decided to find out, by installing an artillery beam capable of burning everything in its path.</desc>
+
+    <systemList>
+        <artillery power="2" room="14" start="true" weapon="LILY_SIREN_TRANSPORT_C_ARTILLERY" img="room_artillery" />
+        <battery power="1" room="18" start="false" img="room_battery_6" />
+        <cloaking power="1" room="10" start="true" img="room_cloaking_4" />
+        <clonebay power="1" room="4" start="true">
+            <slot>
+                <number>0</number>
+            </slot>
+        </clonebay>
+        <doors power="2" room="5" start="false" img="room_doors_9">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </doors>
+        <drones power="2" max="8" room="9" start="false" img="room_drones_12" />
+        <engines power="4" room="7" start="true" img="room_engines_lily_1">
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </engines>
+        <hacking power="1" room="11" start="false" img="room_hacking_7" />
+        <medbay power="2" room="4" start="false" img="room_medbay_16">
+            <slot>
+                <number>-2</number>
+            </slot>
+        </medbay>
+        <mind power="1" max="4" room="8" start="true" img="room_mind_8" />
+        <oxygen power="1" room="15" start="true" img="room_oxygen_4" />
+        <pilot power="1" room="0" start="true" img="room_pilot_2">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </pilot>
+        <sensors power="1" room="6" start="true" img="room_sensors">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </sensors>
+        <shields power="2" max="8" room="3" start="false" img="room_shields">
+            <slot>
+                <direction>left</direction>
+                <number>0</number>
+            </slot>
+        </shields>
+        <teleporter power="1" room="19" start="true" />
+        <temporal power="1" room="20" start="true" img="room_temporal_3" />
+        <weapons power="2" room="1" start="true" img="room_weapons">
+            <slot>
+                <direction>up</direction>
+                <number>1</number>
+            </slot>
+        </weapons>
+
+        <lily_system_bracers power="3" room="13" start="true" img="room_bracers_2" />
+
+
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>3</droneSlots>
+    <weaponList missiles="5" count="4">
+        <weapon name="LILY_BEAM_SIREN_2" />
+    </weaponList>
+    <droneList drones="0" count="3" />
+    <health amount="25" />
+    <maxPower amount="12" />
+    <aug name="EX_FIRE_EXTINGUISHERS" />
+    <shieldImage>mup_disk</shieldImage>
+    <mv-mapImage>map_icon_lily_player_siren_transport</mv-mapImage>
+</shipBlueprint>
 
 
 
@@ -3494,7 +4827,7 @@ Conservative weapons use no power on their own but require the system itself to 
 <shipBlueprint name="LILY_PLAYER_FED_BEAM_BATTLESHIP" layout="lily_player_fed_beam_battleship" img="lily_player_fed_beam_battleship">
     <class>Unity Beam Battleship</class>
     <name>Project Excalibur</name>
-    <desc>Lily has decided to cooperate with Federation for her weapon testing, with her providing a huge beam cannon, and the Federation providing an appropriate ship to mount it on. This elite battleship has a powerful beam weapon and great potential, but budget has ran out for anything else anything else.  [Note: This ship is WIP and will be reworked later.]</desc>
+    <desc>Lily has decided to cooperate with Federation for her weapon testing, with her providing a huge beam cannon, and the Federation providing an appropriate ship to mount it on. This elite battleship has a powerful beam weapon and great potential, but budget has ran out for anything else.  [Note: This ship is WIP and will be reworked later.]</desc>
     <systemList>
         <artillery power="2" max="5" room="4" start="true" weapon="ROYAL_ARTILLERY" img="room_artillery_3" />
         <battery power="2" room="2" start="true" img="room_battery_3" />

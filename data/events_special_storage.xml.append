@@ -91,8 +91,32 @@ But alright, just bring me some materials and I'll make one for you--
         <text>[Current parts: 4]</text>
         <event load="OPTION_INVALID"/>
     </choice>
-    <choice hidden="true" req="lily_aether_points" lvl="5">
-        <text>[Current parts: 5+]</text>
+    <choice hidden="true" req="lily_aether_points" lvl="5" max_lvl="5">
+        <text>[Current parts: 5]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="6" max_lvl="6">
+        <text>[Current parts: 6]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="7" max_lvl="7">
+        <text>[Current parts: 7]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="8" max_lvl="8">
+        <text>[Current parts: 8]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="9" max_lvl="9">
+        <text>[Current parts: 9]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="10" max_lvl="10">
+        <text>[Current parts: 10]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="11">
+        <text>[Current parts: 10+]</text>
         <event load="OPTION_INVALID"/>
     </choice>
     <choice>
@@ -261,48 +285,138 @@ But alright, just bring me some materials and I'll make one for you--
 <event name="STORAGE_CHECK_LILY_QUESTS_AETHER_REDEEM">
     <text>Select what do you want her to craft:</text>
 
-    <choice req="lily_aether_points" lvl="3">
-        <text>Craft a Royal Beam.</text>
+    <choice req="lily_aether_points" lvl="5">
+        <text>Craft a Royal Eradicator III. [5 pts]</text>
         <event>
             <text id="lily_aether_redeem"/>
             <weapon name="ROYAL_BEAM_3"/>
+            <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
+            <variable name="lily_aether_points" op="add" val="-5"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="4">
+        <text>Craft a Royal Eradicator III. [5 pts]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    
+    <choice req="lily_aether_points" lvl="4">
+        <text>Craft a Royal Purifier. [4 pts]</text>
+        <event>
+            <text id="lily_aether_redeem"/>
+            <weapon name="ROYAL_FOCUS"/>
+            <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
+            <variable name="lily_aether_points" op="add" val="-4"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="3">
+        <text>Craft a Royal Purifier. [4 pts]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+
+    <choice req="lily_aether_points" lvl="4">
+        <text>Craft a Royal Havoceizer. [4 pts]</text>
+        <event>
+            <text id="lily_aether_redeem"/>
+            <weapon name="ROYAL_HAVOC"/>
+            <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
+            <variable name="lily_aether_points" op="add" val="-4"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="3">
+        <text>Craft a Royal Havoceizer. [4 pts]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+
+    <choice req="lily_aether_points" lvl="4">
+        <text>Craft an Eradicator III. [4 pts]</text>
+        <event>
+            <text id="lily_aether_redeem"/>
+            <weapon name="ANCIENT_BEAM_3"/>
+            <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
+            <variable name="lily_aether_points" op="add" val="-4"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="3">
+        <text>Craft an Eradicator III. [4 pts]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+
+    <choice req="lily_aether_points" lvl="4">
+        <text>Craft an Eradicator II. [3 pts]</text>
+        <event>
+            <text id="lily_aether_redeem"/>
+            <weapon name="ANCIENT_BEAM_2"/>
             <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
             <variable name="lily_aether_points" op="add" val="-3"/>
             <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
         </event>
     </choice>
     <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="2">
-        <text>Craft a Royal Beam.</text>
-        <event load="OPTION_INVALID"/>
-    </choice>
-    
-    <choice req="lily_aether_points" lvl="2">
-        <text>Craft a Royal Pinpoint.</text>
-        <event>
-            <text id="lily_aether_redeem"/>
-            <weapon name="ROYAL_FOCUS"/>
-            <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
-            <variable name="lily_aether_points" op="add" val="-2"/>
-            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
-        </event>
-    </choice>
-    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="1">
-        <text>Craft a Royal Pinpoint.</text>
+        <text>Craft an Eradicator II. [3 pts]</text>
         <event load="OPTION_INVALID"/>
     </choice>
 
     <choice req="lily_aether_points" lvl="2">
-        <text>Craft a Royal Havoceizer.</text>
+        <text>Craft an Eradicator I. [2 pts]</text>
         <event>
             <text id="lily_aether_redeem"/>
-            <weapon name="ROYAL_HAVOC"/>
+            <weapon name="ANCIENT_BEAM"/>
             <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
             <variable name="lily_aether_points" op="add" val="-2"/>
             <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
         </event>
     </choice>
     <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="1">
-        <text>Craft a Royal Havoceizer.</text>
+        <text>Craft an Eradicator I. [2 pts]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+
+    <choice req="lily_aether_points" lvl="3">
+        <text>Craft a Purifier II. [3 pts]</text>
+        <event>
+            <text id="lily_aether_redeem"/>
+            <weapon name="ANCIENT_FOCUS_2"/>
+            <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
+            <variable name="lily_aether_points" op="add" val="-3"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="2">
+        <text>Craft a Purifier II. [3 pts]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+
+    <choice req="lily_aether_points" lvl="2">
+        <text>Craft a Purifier I. [2 pts]</text>
+        <event>
+            <text id="lily_aether_redeem"/>
+            <weapon name="ANCIENT_FOCUS"/>
+            <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
+            <variable name="lily_aether_points" op="add" val="-2"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="1">
+        <text>Craft a Purifier I. [2 pts]</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+
+    <choice req="lily_aether_points" lvl="2">
+        <text>Craft a Havoceizer. [2 pts]</text>
+        <event>
+            <text id="lily_aether_redeem"/>
+            <weapon name="ANCIENT_HAVOC"/>
+            <achievement>LILY_ACH_GEN_EXCHANGE</achievement>
+            <variable name="lily_aether_points" op="add" val="-2"/>
+            <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
+        </event>
+    </choice>
+    <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="1">
+        <text>Craft a Havoceizer. [2 pts]</text>
         <event load="OPTION_INVALID"/>
     </choice>
 

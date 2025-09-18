@@ -37,7 +37,7 @@ The note iself says:
 		<text>Continue...</text>
 		<event>
 			<text>"Oh. It must be for me then--" Lily says. Saved you the journey--
-            Anyway, it means that She considers you worthy and directed us to work together. And I'll gladly oblige--</text>
+Anyway, it means that She considers you worthy and directed us to work together. And I'll gladly oblige--</text>
 			<autoReward level="MED">stuff</autoReward>
 			<weapon name="GIFTLIST_LILY"/>
 			<variable name="lily_questioned" op="set" value="1" />

@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.0
+Date: 2025-09-18
+  Changes:
+    - Added Siren Transport Slot B and C.
+    - Added 6 new Siren-themed disintegrator beams.
+    - Rebalanced crafting of Aether weapons with Lily.
+    - Lily's store will now sell a very special system if you ship happens to support it.
+---------------------------------------------------------------------------------------------------
 Version: 1.3.0
 Date: 2025-09-11
   Changes:

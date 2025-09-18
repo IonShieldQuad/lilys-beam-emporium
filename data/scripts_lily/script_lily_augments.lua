@@ -235,3 +235,17 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
 
         return Defines.Chain.CONTINUE, beamHit
     end)
+
+
+    script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager) 
+        if shipManager and shipManager:HasAugmentation("LILY_ESTROGEN_DISPERSAL") > 0 then
+            for crew in vter(shipManager.vCrewList) do
+                ---@type Hyperspace.CrewMember
+                crew = crew
+                if crew and (crew.iShipId == shipManager.iShipId) then
+                    crew:SetSex(false)
+                end
+            end 
+        end
+    end)
+

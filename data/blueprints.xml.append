@@ -3415,7 +3415,7 @@ Conservative weapons use no power on their own but require the system itself to 
     <sysDamage>0</sysDamage>
     <fireChance>0</fireChance>
     <breachChance>0</breachChance>
-    <cooldown>22</cooldown>
+    <cooldown>24</cooldown>
     <fireTime>0.25</fireTime>
     <power>4</power>
     <speed>3</speed>
@@ -3462,7 +3462,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <duration>15</duration>
         </statBoost>
     </statBoosts>
-    <cost>150</cost>
+    <cost>200</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <length>75</length>
@@ -3809,7 +3809,7 @@ Conservative weapons use no power on their own but require the system itself to 
     <short>Kaleidoscope</short>
     <desc>A beam weapon designed by Sirens, it embraces chaos by firing one of 10 different beams at random. [Base cooldown: 16] Possible effects: Fire, Particle, Repair, Stun, Breach, Energy, Ion, Frost, Hack, Radiation</desc>
     <tooltip>Siren Kaleidoscope Artillery. [Base cooldown: 16] ROYLGCBIVM</tooltip>
-    <damage>0</damage>
+    <damage>0</damage><unlock id="ship_PLAYER_SHIP_KESTREL_2_unlock"/>
     <sysDamage>0</sysDamage>
     <fireChance>0</fireChance>
     <breachChance>0</breachChance>
@@ -4541,6 +4541,7 @@ Conservative weapons use no power on their own but require the system itself to 
     <class>Siren Transport</class>
     <name>Parthenope</name>
     <desc>Fully embracing chaos, this ship is equipped with artillery that fires one out of 8 different beams completely at random.</desc>
+    <unlock id="ship_LILY_SIREN_TRANSPORT_2_unlock"/>
     <systemList>
         <artillery power="1" room="15" start="true" weapon="LILY_SIREN_TRANSPORT_B_ARTILLERY" img="room_artillery" />
         <battery power="1" room="4" start="true" img="room_battery_14" />
@@ -4624,7 +4625,7 @@ Conservative weapons use no power on their own but require the system itself to 
     <class>Siren Transport</class>
     <name>Himerope</name>
     <desc>How do the dreams taste if you cook them? This couple of Siren harpies has decided to find out, by installing an artillery beam capable of burning everything in its path.</desc>
-
+    <unlock id="ship_LILY_SIREN_TRANSPORT_3_unlock"/>
     <systemList>
         <artillery power="2" room="14" start="true" weapon="LILY_SIREN_TRANSPORT_C_ARTILLERY" img="room_artillery" />
         <battery power="1" room="18" start="false" img="room_battery_6" />

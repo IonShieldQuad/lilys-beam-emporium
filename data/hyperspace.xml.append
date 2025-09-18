@@ -45,6 +45,20 @@
 			<type>2</type>
 			<shipReq>LILY_PLAYER_WRECKED_SIREN_TRANSPORT</shipReq>
 		</unlock>
+		<unlock variant="b" silent="false">
+			<type>1</type>
+			<shipReq>LILY_PLAYER_SIREN_TRANSPORT</shipReq>
+			<value>5</value>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>1</type>
+			<shipReq>LILY_PLAYER_SIREN_TRANSPORT_2</shipReq>
+			<value>5</value>
+		</unlock>
+		<unlock variant="c" silent="false">
+			<type>2</type>
+			<shipReq>LILY_PLAYER_SIREN_TRANSPORT</shipReq>
+		</unlock>
 	</mod-append:ship>
 	<mod-append:customShip name="LILY_PLAYER_SIREN_TRANSPORT">
 		<hiddenAug>SHIP_SIREN</hiddenAug>

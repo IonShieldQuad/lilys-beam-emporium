@@ -1573,7 +1573,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<blueprint>LILY_BEAM_SIREN_LOCK</blueprint>
 				<price>-1</price>
 			</item>
-
+		</category>
 	</mod-append:customStore>
 
 </mod:findLike>

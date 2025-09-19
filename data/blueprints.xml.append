@@ -3252,7 +3252,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <duration>10</duration>
         </statBoost>
     </statBoosts>
-    <cost>70</cost>
+    <cost>80</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <length>35</length>
@@ -3322,7 +3322,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <duration>15</duration>
         </statBoost>
     </statBoosts>
-    <cost>100</cost>
+    <cost>120</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <length>120</length>
@@ -3392,7 +3392,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <duration>10</duration>
         </statBoost>
     </statBoosts>
-    <cost>120</cost>
+    <cost>140</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <length>80</length>
@@ -3421,8 +3421,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <speed>3</speed>
     <mv-prideBeam/>
     <erosion>
-        <speed>3</speed>
-        <maxSpeed>3</maxSpeed>
+        <speed>2</speed>
+        <maxSpeed>2</maxSpeed>
         <time>15.0</time>
         <maxTime>30.0</maxTime>
         <systemRepairMultiplier>0.0</systemRepairMultiplier>
@@ -3435,7 +3435,7 @@ Conservative weapons use no power on their own but require the system itself to 
     <statBoosts>
         <statBoost name="trueHealAmount">
             <boostType>FLAT</boostType>
-            <amount>-12</amount>
+            <amount>-8</amount>
             <shipTarget>ALL</shipTarget>
             <crewTarget>ALL</crewTarget>
             <droneTarget>ALL</droneTarget>
@@ -3479,7 +3479,7 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>'Arde' Chaosfire Disintegrator Beam</title>
     <short>'Arde'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any typeof crew and burn without oxygen.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew and burn without oxygen.</desc>
     <tooltip>Chaosfire Disintegrator.</tooltip>
     <damage>0</damage>
     <sysDamage>1</sysDamage>
@@ -3599,7 +3599,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <duration>30</duration>
         </statBoost>
     </roomStatBoosts>
-    <cost>135</cost>
+    <cost>145</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <length>65</length>
@@ -3750,7 +3750,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <duration>30</duration>
         </statBoost>
     </roomStatBoosts>
-    <cost>135</cost>
+    <cost>145</cost>
     <bp>2</bp>
     <rarity>0</rarity>
     <length>65</length>

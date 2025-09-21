@@ -15,7 +15,7 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
         local blueprintIon1 = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_1")
         local shortDescIon2 = stability >= 100 and "Ionpoint II" or "Pinion II"
         local blueprintIon2 = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_2")
-        local shortDescIonHeavy = stability >= 100 and "Hv. Ionpoint I" or "Hv. Pinion"
+        local shortDescIonHeavy = stability >= 100 and "Hv. Ionpoint" or "Hv. Pinion"
         local blueprintIonHeavy = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_HEAVY")
         local shortDescIonChain = stability >= 100 and "Ch. Ionpoint" or "Ch. Pinion"
         local blueprintIonChain = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_CHAIN")

@@ -27,7 +27,7 @@
 </event>
 
 <event name="LILY_MAD_FIGHT">
-    <ship hostile="true"/>
+    <text>It seems Lily is quite mad. There's no option but to fight this ship!</text>
     <choice hidden="true">
         <text>Continue...</text>
         <event load="MORALITY_UPDATE_NEXUS_FIGHT"/>
@@ -38,11 +38,21 @@
 </event>
 
 <ship name="SHIP_BEAM_EMPORIUM_STATION" auto_blueprint="SHIP_BEAM_EMPORIUM_STATION">
-    <destroyed>
-    <text>Somehow, you have destroyed the station. It breaks into flickering colorful pieces, which then proceed to fade out of existence.
-Unfortunately, there's nothing left to scrap.</text>
-    </destroyed>
+    <destroyed load="LILY_EMPORIUM_DESTROYED"/>
 </ship>
+
+<event name="LILY_EMPORIUM_DESTROYED">
+    <text>Somehow, you have destroyed the station. It breaks into flickering colorful pieces, which then proceed to fade out of existence.
+Unfortunately, there's nothing left to scrap of the station itself.</text>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <text>Howewer, one of the weapons on the station semms to have survived the fight and is floating in space now! You hastily pick it up.</text>
+            <weapon name="LIST_LILY_STATION_LOOT"/>
+        </event>
+    </choice>
+</event>
+
 
 <event name="LILY_EMPORIUM_QUEST_START" unique="true">
     <beaconType id="map_icon_beam_emporium" global="true">
@@ -573,7 +583,31 @@ It was probably nothing, just ignore it--"</text>
     </choice>
 </event>
 
+
 <event name="LILY_EMPORIUM_ATTACK">
+    <loadEventList>
+        <event name="LILY_EMPORIUM_ATTACK_FAIL"/>
+        <event name="LILY_EMPORIUM_ATTACK_REAL"/>
+        <event name="LILY_EMPORIUM_ATTACK_REAL" req="lily_mysterious_note_unlocked"/>
+        <event name="LILY_EMPORIUM_ATTACK_REAL" req="lily_mysterious_note_unlocked"/>
+        <event name="LILY_EMPORIUM_ATTACK_REAL" req="lily_mysterious_note_unlocked"/>
+    </loadEventList>
+</event>
+
+<event name="LILY_EMPORIUM_ATTACK_REAL">
+    <text>"So you have decided to still attack me?"
+"You know what, this is fine. The weapons need some testing anyway--"
+"So bring it on, hahe!"</text>
+    <choice>
+        <text>Continue...</text>
+        <event>
+            <text>"Also, what is a combat check?--"
+"Haven't seen any around here--"</text>
+        </event>
+    </choice>
+</event>
+
+<event name="LILY_EMPORIUM_ATTACK_FAIL">
     <variable name="loc_protomv_drive_block" op="set" val="1"/>
     <status type="limit" target="player" system="sensors" amount="0"/>
     <backgroundObject name="GLITCH">

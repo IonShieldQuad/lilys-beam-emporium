@@ -275,6 +275,14 @@ disable shields as well as systems.</tooltip>
     </augBlueprint>
 
 
+    <augBlueprint name="LILY_MYSTERIOUS_SHIELDS">
+        <title>Mysterious Shield</title>
+        <desc>A barrier of eldritch chaotic energy that provides a 42 hitpoints Super Shield. Its power source seems to be... not even on the ship?.</desc>
+        <cost>80</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
     
     <crewBlueprint name="unique_lily_avatar">
         <desc>A multiverse traveller, beam saleswoman, and a loyal servant of the Supreme Eldritch Goddess of True Chaos. Yes, that's me--</desc>
@@ -1420,15 +1428,15 @@ Beam Speed: 5
 
 (Primary Beam)
 Ion Damage: 2
-Fire Chance: 20%
+Fire Chance: 30%
 Stun Chance: 100% (3 seconds long)
 
 (Secondary Beam)
 2x hull damage on systemlesss rooms.
-Base Hull Damage: 1
-Total System Damage: 2
-Total Crew Damage: 30
-Breach Chance: 20% (Adjusted: 20%)
+Base Hull Damage: 2
+Total System Damage: 3
+Total Crew Damage: 45
+Breach Chance: 30% (Adjusted: 30%)
 
 Default Price: 100~   -   Selling Price: 50~</descriptionOverride>
         <tooltipOverride>Required Power: 4
@@ -1439,15 +1447,15 @@ Beam Speed: 5
 
 (Primary Beam)
 Ion Damage: 2
-Fire Chance: 20%
+Fire Chance: 30%
 Stun Chance: 100% (3 seconds long)
 
 (Secondary Beam)
 2x hull damage on systemlesss rooms.
-Base Hull Damage: 1
-Total System Damage: 2
-Total Crew Damage: 30
-Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
+Base Hull Damage: 2
+Total System Damage: 3
+Total Crew Damage: 45
+Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <damage>0</damage>
         <ion>2</ion>
         <sp>0</sp>
@@ -1458,7 +1466,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
             <b>237</b>
         </color>
         <stunChance>10</stunChance>
-        <fireChance>2</fireChance>
+        <fireChance>3</fireChance>
         <breachChance>0</breachChance>
         <cooldown>20</cooldown>
         <power>4</power>
@@ -1482,14 +1490,14 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
         <short>'Scissors'</short>
         <desc>An unique weapon capable of firing a pair of converging beams at once.</desc>
         <tooltip>One damage per room beam weapon</tooltip>
-        <damage>1</damage>
+        <damage>2</damage>
         <sysDamage>1</sysDamage>
         <persDamage>1</persDamage>
         <hullBust>1</hullBust>
         <ion>0</ion>
         <sp>0</sp>
         <fireChance>0</fireChance>
-        <breachChance>2</breachChance>
+        <breachChance>3</breachChance>
         <cooldown>20</cooldown>
         <power>4</power>
         <cost>100</cost>
@@ -1870,7 +1878,7 @@ Breach Chance: 20% (Adjusted: 20%)</tooltipOverride>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
-</FTL>
+<FTL>
 <weaponBlueprint name="LILY_BEAM_AMP_SIPHON">
     <type>BEAM</type>
     <tip>tip_focus</tip>
@@ -3122,7 +3130,7 @@ Conservative weapons use no power on their own but require the system itself to 
     <length>1</length>
     <image>beam_contact</image>
     <launchSounds>
-        <sound>focus_weak</sound>
+        <sound>lily_lams_1</sound>
     </launchSounds>
     <weaponArt>lily_focus_ciws</weaponArt>
     <iconImage>beam</iconImage>
@@ -3150,7 +3158,7 @@ Conservative weapons use no power on their own but require the system itself to 
         <projectile count="1" fake="false">lily_invisible</projectile>
     </projectiles>
     <launchSounds>
-        <sound>focus_weak</sound>
+        <sound>lily_lams_1</sound>
     </launchSounds>
     <weaponArt>lily_focus_ciws</weaponArt>
     <iconImage>beam</iconImage>
@@ -3177,7 +3185,7 @@ Conservative weapons use no power on their own but require the system itself to 
         <projectile count="1" fake="false">lily_invisible</projectile>
     </projectiles>
     <launchSounds>
-        <sound>focus_weak</sound>
+        <sound>lily_lams_1</sound>
     </launchSounds>
     <weaponArt>lily_focus_ciws</weaponArt>
     <iconImage>beam</iconImage>
@@ -3395,7 +3403,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <cost>140</cost>
     <bp>2</bp>
     <rarity>0</rarity>
-    <length>80</length>
+    <length>60</length>
+    <mv-aiSystemTarget system="weapons"/>
     <image>beam_contact</image>
     <launchSounds>
         <sound>lily_disintegrator_2</sound>
@@ -3465,7 +3474,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <cost>200</cost>
     <bp>2</bp>
     <rarity>0</rarity>
-    <length>75</length>
+    <length>100</length>
+    <mv-aiSystemTarget system="weapons"/>
     <image>beam_contact</image>
     <launchSounds>
         <sound>lily_disintegrator_2</sound>
@@ -3490,6 +3500,658 @@ Conservative weapons use no power on their own but require the system itself to 
     <power>3</power>
     <speed>2</speed>
     <lily-chaosfire/>
+    <erosion>
+        <speed>1</speed>
+        <maxSpeed>1</maxSpeed>
+        <time>10.0</time>
+        <maxTime>20.0</maxTime>
+        <systemRepairMultiplier>0.5</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_fire</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-3</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+            <boostAnim>lily_siren_dot_debuff_2</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+        </statBoost>
+    </statBoosts>
+    <roomStatBoosts>
+        <statBoost name="canBurn">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+            <roomAnim renderLayer="1">
+                <anim animType="default" animBorder="2">lily_invisible</anim>
+                <wallAnim>lily_siren_erosion_wall_fire_weak</wallAnim>
+            </roomAnim>
+            <boostAnim>lily_chaosfire_debuff</boostAnim>
+        </statBoost>
+        <statBoost name="canBurn">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+            <whiteList>
+                <blueprintList load="LIST_CREW_SIREN"/>
+                <blueprintList load="LIST_CREW_ELDRITCH"/>
+            </whiteList>
+        </statBoost>
+        <statBoost name="canSuffocate">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+            <whiteList>
+                <blueprintList load="LIST_CREW_SIREN"/>
+                <blueprintList load="LIST_CREW_ELDRITCH"/>
+            </whiteList>
+        </statBoost>
+        <statBoost name="fireDamageMultiplier">
+            <boostType>MAX</boostType>
+            <amount>1.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+        </statBoost>
+        <statBoost name="fireDamageMultiplier">
+            <boostType>MIN</boostType>
+            <amount>-1</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+            <whiteList>
+                <blueprintList load="LIST_CREW_SIREN"/>
+                <blueprintList load="LIST_CREW_ELDRITCH"/>
+            </whiteList>
+        </statBoost>
+        <statBoost name="fireRepairMultiplier">
+            <boostType>SET</boostType>
+            <amount>0.05</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+        </statBoost>
+    </roomStatBoosts>
+    <cost>145</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>65</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_3</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_fire</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_LOCK">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>'Impetus' Chaoslock Disintegrator Beam</title>
+    <short>'Impetus'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighing, sabotaging and repairing.</desc>
+    <tooltip>Chaoslock Disintegrator.</tooltip>
+    <damage>0</damage>
+    <ion>1</ion>
+    <ionBeamFix>true</ionBeamFix>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <stun>20</stun>
+    <cooldown>18</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>3</power>
+    <speed>2</speed>
+    <lily-chaoslock/>
+    <erosion>
+        <speed>1</speed>
+        <maxSpeed>1</maxSpeed>
+        <time>10.0</time>
+        <maxTime>20.0</maxTime>
+        <systemRepairMultiplier>0.5</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_lock</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-3</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+            <boostAnim>lily_siren_dot_debuff_2</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>10</duration>
+        </statBoost>
+    </statBoosts>
+    <roomStatBoosts>
+        <!--statBoost name="controllable">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+        </statBoost-->
+        <statBoost name="canFight">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+        </statBoost>
+        <statBoost name="canSabotage">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+        </statBoost>
+        <statBoost name="canRepair">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+        </statBoost>
+        <statBoost name="canMan">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <roomAnim renderLayer="1">
+                <anim animType="default" animBorder="2">lily_invisible</anim>
+                <wallAnim>lily_siren_erosion_wall_lock_weak</wallAnim>
+            </roomAnim>
+            <boostAnim>lily_chaoslock_debuff</boostAnim>
+        </statBoost>
+        <statBoost name="moveSpeedMultiplier">
+            <boostType>SET</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+        </statBoost>
+    </roomStatBoosts>
+    <cost>145</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>65</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_3</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_lock</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+
+
+<weaponBlueprint name="LILY_BEAM_SIREN_1_CHAOS">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Chaotic 'Ira' Disintegrator Beam</title>
+    <short>'Ira'™</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 1.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>12</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>1</power>
+    <speed>2</speed>
+    <sp>3</sp>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <erosion>
+        <speed>0.75</speed>
+        <maxSpeed>0.75</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.75</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_chaos_str1</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-3</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_2</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.75</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.75</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>100</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>45</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_1_chaos</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_2_CHAOS">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Chaotic 'Angoris' Disintegrator Beam</title>
+    <short>'Angoris'™</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 2.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>16</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>2</power>
+    <speed>5</speed>
+    <sp>3</sp>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <erosion>
+        <speed>1</speed>
+        <maxSpeed>1</maxSpeed>
+        <time>20</time>
+        <maxTime>40</maxTime>
+        <systemRepairMultiplier>0.5</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_chaos_str1</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-4</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+            <boostAnim>lily_siren_dot_debuff_2</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>150</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>150</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_2_chaos</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_3_CHAOS">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Chaotic 'Dolor' Disintegrator Beam</title>
+    <short>'Dolor'™</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 3.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>18</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>3</power>
+    <speed>3</speed>
+    <sp>3</sp>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <erosion>
+        <speed>2</speed>
+        <maxSpeed>2</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.25</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_chaos_str2</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-8</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_1</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>175</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>75</length>
+    <mv-aiSystemTarget system="weapons"/>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_2</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_3_chaos</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_4_CHAOS">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Chaotic 'Tormentum' Disintegrator Beam</title>
+    <short>'Tormentum'™</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 4.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>24</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>4</power>
+    <speed>3</speed>
+    <sp>3</sp>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <erosion>
+        <speed>2</speed>
+        <maxSpeed>2</maxSpeed>
+        <time>20.0</time>
+        <maxTime>40.0</maxTime>
+        <systemRepairMultiplier>0.0</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_chaos_str3</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-8</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+            <boostAnim>lily_siren_dot_debuff_1</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>250</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>125</length>
+    <mv-aiSystemTarget system="weapons"/>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_2</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_4_chaos</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_FIRE_CHAOS">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Chaotic 'Arde' Chaosfire Disintegrator Beam</title>
+    <short>'Arde'™</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew and burn without oxygen.</desc>
+    <tooltip>Chaosfire Disintegrator.</tooltip>
+    <damage>0</damage>
+    <sysDamage>2</sysDamage>
+    <fireChance>100</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>18</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>3</power>
+    <speed>2</speed>
+    <sp>3</sp>
+    <color>
+        <r>255</r>
+        <g>128</g>
+        <b>0</b>
+    </color>
     <erosion>
         <speed>1</speed>
         <maxSpeed>1</maxSpeed>
@@ -3541,7 +4203,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <droneTarget>ALL</droneTarget>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>40</duration>
             <roomAnim renderLayer="1">
                 <anim animType="default" animBorder="2">lily_invisible</anim>
                 <wallAnim>lily_siren_erosion_wall_fire_weak</wallAnim>
@@ -3556,7 +4218,11 @@ Conservative weapons use no power on their own but require the system itself to 
             <droneTarget>ALL</droneTarget>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>40</duration>
+            <whiteList>
+                <blueprintList load="LIST_CREW_SIREN"/>
+                <blueprintList load="LIST_CREW_ELDRITCH"/>
+            </whiteList>
         </statBoost>
         <statBoost name="canSuffocate">
             <boostType>SET</boostType>
@@ -3566,7 +4232,11 @@ Conservative weapons use no power on their own but require the system itself to 
             <droneTarget>ALL</droneTarget>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>40</duration>
+            <whiteList>
+                <blueprintList load="LIST_CREW_SIREN"/>
+                <blueprintList load="LIST_CREW_ELDRITCH"/>
+            </whiteList>
         </statBoost>
         <statBoost name="fireDamageMultiplier">
             <boostType>MAX</boostType>
@@ -3576,7 +4246,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <droneTarget>ALL</droneTarget>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>40</duration>
         </statBoost>
         <statBoost name="fireDamageMultiplier">
             <boostType>MIN</boostType>
@@ -3586,7 +4256,11 @@ Conservative weapons use no power on their own but require the system itself to 
             <droneTarget>ALL</droneTarget>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>40</duration>
+            <whiteList>
+                <blueprintList load="LIST_CREW_SIREN"/>
+                <blueprintList load="LIST_CREW_ELDRITCH"/>
+            </whiteList>
         </statBoost>
         <statBoost name="fireRepairMultiplier">
             <boostType>SET</boostType>
@@ -3596,30 +4270,30 @@ Conservative weapons use no power on their own but require the system itself to 
             <droneTarget>ALL</droneTarget>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>40</duration>
         </statBoost>
     </roomStatBoosts>
-    <cost>145</cost>
+    <cost>180</cost>
     <bp>2</bp>
     <rarity>0</rarity>
-    <length>65</length>
+    <length>80</length>
     <image>beam_contact</image>
     <launchSounds>
         <sound>lily_disintegrator_3</sound>
     </launchSounds>
-    <weaponArt>lily_beam_siren_fire</weaponArt>
+    <weaponArt>lily_beam_siren_fire_chaos</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
-<weaponBlueprint name="LILY_BEAM_SIREN_LOCK">
+<weaponBlueprint name="LILY_BEAM_SIREN_LOCK_CHAOS">
     <type>BEAM</type>
     <tip>tip_lily_disintegrators</tip>
-    <title>'Impetus' Chaoslock Disintegrator Beam</title>
-    <short>'Impetus'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from moving, manning, fighing, sabotaging and repairing.</desc>
-    <tooltip>Chaosfire Disintegrator.</tooltip>
+    <title>Chaotic 'Impetus' Chaoslock Disintegrator Beam</title>
+    <short>'Impetus'™</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighing, sabotaging and repairing.</desc>
+    <tooltip>Chaoslock Disintegrator.</tooltip>
     <damage>0</damage>
-    <ion>1</ion>
+    <ion>2</ion>
     <ionBeamFix>true</ionBeamFix>
     <sysDamage>0</sysDamage>
     <fireChance>0</fireChance>
@@ -3629,7 +4303,12 @@ Conservative weapons use no power on their own but require the system itself to 
     <fireTime>0.25</fireTime>
     <power>3</power>
     <speed>2</speed>
-    <lily-chaoslock/>
+    <sp>3</sp>
+    <color>
+        <r>0</r>
+        <g>255</g>
+        <b>128</b>
+    </color>
     <erosion>
         <speed>1</speed>
         <maxSpeed>1</maxSpeed>
@@ -3673,16 +4352,691 @@ Conservative weapons use no power on their own but require the system itself to 
         </statBoost>
     </statBoosts>
     <roomStatBoosts>
-        <statBoost name="canMove">
+        <!--statBoost name="controllable">
             <boostType>SET</boostType>
             <value>false</value>
             <shipTarget>ALL</shipTarget>
             <crewTarget>ENEMIES</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>40</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+        </statBoost-->
+        <statBoost name="canFight">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>40</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+        </statBoost>
+        <statBoost name="canSabotage">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>40</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+        </statBoost>
+        <statBoost name="canRepair">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>40</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+        </statBoost>
+        <statBoost name="canMan">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>40</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <roomAnim renderLayer="1">
+                <anim animType="default" animBorder="2">lily_invisible</anim>
+                <wallAnim>lily_siren_erosion_wall_lock_weak</wallAnim>
+            </roomAnim>
+            <boostAnim>lily_chaoslock_debuff</boostAnim>
+        </statBoost>
+        <statBoost name="moveSpeedMultiplier">
+            <boostType>SET</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>40</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+        </statBoost>
+    </roomStatBoosts>
+    <cost>180</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>80</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_3</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_lock_chaos</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+
+
+<weaponBlueprint name="LILY_BEAM_SIREN_1_ELITE">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Elite 'Ira' Disintegrator Beam</title>
+    <short>€ 'Ira'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 1.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>12</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>1</power>
+    <speed>2</speed>
+    <sp>3</sp>
+    <color>
+        <r>255</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <erosion>
+        <speed>1.125</speed>
+        <maxSpeed>1.125</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.5</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_elite_str1</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-4</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_2_elite</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>125</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>45</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_1_elite</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_2_ELITE">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Elite 'Angoris' Disintegrator Beam</title>
+    <short>€ 'Angoris'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 2.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>16</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>2</power>
+    <speed>5</speed>
+    <sp>3</sp>
+    <color>
+        <r>255</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <erosion>
+        <speed>1.5</speed>
+        <maxSpeed>1.5</maxSpeed>
+        <time>20</time>
+        <maxTime>40</maxTime>
+        <systemRepairMultiplier>0.25</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_elite_str1</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-6</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+            <boostAnim>lily_siren_dot_debuff_2_elite</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>190</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>150</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_1</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_2_elite</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_3_ELITE">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Elite 'Dolor' Disintegrator Beam</title>
+    <short>€ 'Dolor'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 3.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>18</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>3</power>
+    <speed>3</speed>
+    <sp>3</sp>
+    <color>
+        <r>255</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <erosion>
+        <speed>3</speed>
+        <maxSpeed>3</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.0</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_elite_str2</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-12</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_1_elite</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>220</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>75</length>
+    <mv-aiSystemTarget system="weapons"/>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_2</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_3_elite</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_4_ELITE">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Elite 'Tormentum' Disintegrator Beam</title>
+    <short>€ 'Tormentum'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <tooltip>Disintegrator 4.</tooltip>
+    <damage>0</damage>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>24</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>4</power>
+    <speed>3</speed>
+    <sp>3</sp>
+    <color>
+        <r>255</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <erosion>
+        <speed>3</speed>
+        <maxSpeed>3</maxSpeed>
+        <time>20.0</time>
+        <maxTime>40.0</maxTime>
+        <systemRepairMultiplier>0.0</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_elite_str3</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-12</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+            <boostAnim>lily_siren_dot_debuff_1_elite</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+        </statBoost>
+        <statBoost name="canRepair">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>20</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>325</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>90</length>
+    <mv-aiSystemTarget system="weapons"/>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_2</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_4_elite</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_FIRE_ELITE">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Elite 'Arde' Chaosfire Disintegrator Beam</title>
+    <short>€ 'Arde'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew and burn without oxygen.</desc>
+    <tooltip>Chaosfire Disintegrator.</tooltip>
+    <damage>0</damage>
+    <sysDamage>3</sysDamage>
+    <fireChance>100</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>18</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>3</power>
+    <speed>2</speed>
+    <sp>3</sp>
+    <color>
+        <r>255</r>
+        <g>0</g>
+        <b>0</b>
+    </color>
+    <erosion>
+        <speed>1.5</speed>
+        <maxSpeed>1.5</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.25</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_elite_fire</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-4</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_2_elite</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <roomStatBoosts>
+        <statBoost name="canBurn">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+            <roomAnim renderLayer="1">
+                <anim animType="default" animBorder="2">lily_invisible</anim>
+                <wallAnim>lily_siren_erosion_wall_elite_fire_weak</wallAnim>
+            </roomAnim>
+            <boostAnim>lily_chaosfire_debuff_elite</boostAnim>
+        </statBoost>
+        <statBoost name="canBurn">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+            <whiteList>
+                <blueprintList load="LIST_CREW_SIREN"/>
+                <blueprintList load="LIST_CREW_ELDRITCH"/>
+            </whiteList>
+        </statBoost>
+        <statBoost name="canSuffocate">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+            <whiteList>
+                <blueprintList load="LIST_CREW_SIREN"/>
+                <blueprintList load="LIST_CREW_ELDRITCH"/>
+            </whiteList>
+        </statBoost>
+        <statBoost name="fireDamageMultiplier">
+            <boostType>MAX</boostType>
+            <amount>3</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+        </statBoost>
+        <statBoost name="fireDamageMultiplier">
+            <boostType>MIN</boostType>
+            <amount>-2</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+            <whiteList>
+                <blueprintList load="LIST_CREW_SIREN"/>
+                <blueprintList load="LIST_CREW_ELDRITCH"/>
+            </whiteList>
+        </statBoost>
+        <statBoost name="fireRepairMultiplier">
+            <boostType>SET</boostType>
+            <amount>0.05</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>1000</priority>
+            <maxStacks>1</maxStacks>
+            <duration>60</duration>
+        </statBoost>
+    </roomStatBoosts>
+    <cost>225</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>80</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_3</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_fire_elite</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_BEAM_SIREN_LOCK_ELITE">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Elite 'Impetus' Chaoslock Disintegrator Beam</title>
+    <short>€ 'Impetus'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from moving, manning, fighing, sabotaging and repairing.</desc>
+    <tooltip>Chaoslock Disintegrator.</tooltip>
+    <damage>0</damage>
+    <ion>3</ion>
+    <ionBeamFix>true</ionBeamFix>
+    <sysDamage>0</sysDamage>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <stun>20</stun>
+    <cooldown>18</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>3</power>
+    <speed>2</speed>
+    <sp>3</sp>
+    <color>
+        <r>0</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <erosion>
+        <speed>1.5</speed>
+        <maxSpeed>1.5</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.25</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_elite_lock</wallAnim>
+        </roomAnim>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-4</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_2_elite</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <roomStatBoosts>
+        <statBoost name="canMove">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
             <droneTarget>ALL</droneTarget>
             <affectsSelf>false</affectsSelf>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>60</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
         </statBoost>
         <statBoost name="controllable">
             <boostType>SET</boostType>
@@ -3692,73 +5046,127 @@ Conservative weapons use no power on their own but require the system itself to 
             <affectsSelf>false</affectsSelf>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>60</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
         </statBoost>
         <statBoost name="canFight">
             <boostType>SET</boostType>
             <value>false</value>
             <shipTarget>ALL</shipTarget>
-            <crewTarget>ENEMIES</crewTarget>
+            <crewTarget>ALL</crewTarget>
             <affectsSelf>false</affectsSelf>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>60</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
         </statBoost>
         <statBoost name="canSabotage">
             <boostType>SET</boostType>
             <value>false</value>
             <shipTarget>ALL</shipTarget>
-            <crewTarget>ENEMIES</crewTarget>
+            <crewTarget>ALL</crewTarget>
             <affectsSelf>false</affectsSelf>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>60</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
         </statBoost>
         <statBoost name="canRepair">
             <boostType>SET</boostType>
             <value>false</value>
             <shipTarget>ALL</shipTarget>
-            <crewTarget>ENEMIES</crewTarget>
+            <crewTarget>ALL</crewTarget>
             <affectsSelf>false</affectsSelf>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>60</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
         </statBoost>
         <statBoost name="canMan">
             <boostType>SET</boostType>
             <value>false</value>
             <shipTarget>ALL</shipTarget>
-            <crewTarget>ENEMIES</crewTarget>
+            <crewTarget>ALL</crewTarget>
             <affectsSelf>false</affectsSelf>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>60</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
             <roomAnim renderLayer="1">
                 <anim animType="default" animBorder="2">lily_invisible</anim>
-                <wallAnim>lily_siren_erosion_wall_lock_weak</wallAnim>
+                <wallAnim>lily_siren_erosion_wall_elite_lock_weak</wallAnim>
             </roomAnim>
-            <boostAnim>lily_chaoslock_debuff</boostAnim>
+            <boostAnim>lily_chaoslock_debuff_elite</boostAnim>
         </statBoost>
         <statBoost name="moveSpeedMultiplier">
             <boostType>SET</boostType>
             <amount>0</amount>
             <shipTarget>ALL</shipTarget>
-            <crewTarget>ENEMIES</crewTarget>
+            <crewTarget>ALL</crewTarget>
             <affectsSelf>false</affectsSelf>
             <priority>1000</priority>
             <maxStacks>1</maxStacks>
-            <duration>30</duration>
+            <duration>60</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
         </statBoost>
     </roomStatBoosts>
-    <cost>145</cost>
+    <cost>225</cost>
     <bp>2</bp>
     <rarity>0</rarity>
-    <length>65</length>
+    <length>80</length>
     <image>beam_contact</image>
     <launchSounds>
         <sound>lily_disintegrator_3</sound>
     </launchSounds>
-    <weaponArt>lily_beam_siren_lock</weaponArt>
+    <weaponArt>lily_beam_siren_lock_elite</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 

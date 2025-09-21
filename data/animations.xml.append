@@ -569,6 +569,34 @@
 	<time>1.0</time>
 </anim>
 
+<animSheet name="lily_siren_dot_debuff_1_elite" w="384" h="32" fw="32" fh="32">people_lily/lily_siren_dot_debuff_1_elite.png</animSheet>
+<anim name="lily_siren_dot_debuff_1_elite">
+	<sheet>lily_siren_dot_debuff_1_elite</sheet>
+	<desc length="12" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="lily_siren_dot_debuff_2_elite" w="352" h="32" fw="32" fh="32">people_lily/lily_siren_dot_debuff_2_elite.png</animSheet>
+<anim name="lily_siren_dot_debuff_2_elite">
+	<sheet>lily_siren_dot_debuff_2_elite</sheet>
+	<desc length="11" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="lily_chaosfire_debuff_elite" w="1225" h="33" fw="35" fh="33">people_lily/chaosfire_debuff_elite.png</animSheet>
+<anim name="lily_chaosfire_debuff_elite">
+	<sheet>lily_chaosfire_debuff_elite</sheet>
+	<desc length="35" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+
+<animSheet name="lily_chaoslock_debuff_elite" w="1715" h="33" fw="35" fh="33">people_lily/chaoslock_debuff_elite.png</animSheet>
+<anim name="lily_chaoslock_debuff_elite">
+	<sheet>lily_chaoslock_debuff_elite</sheet>
+	<desc length="49" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
 <animSheet name="lily_chaosfire_debuff" w="1225" h="33" fw="35" fh="33">people_lily/chaosfire_debuff.png</animSheet>
 <anim name="lily_chaosfire_debuff">
 	<sheet>lily_chaosfire_debuff</sheet>
@@ -624,6 +652,48 @@
 	<time>0.5</time>
 </anim>
 
+<animSheet name="lily_siren_erosion_wall_chaos_str1" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_chaos_str1.png</animSheet>
+<anim name="lily_siren_erosion_wall_chaos_str1">
+	<sheet>lily_siren_erosion_wall_chaos_str1</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="lily_siren_erosion_wall_chaos_str2" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_chaos_str2.png</animSheet>
+<anim name="lily_siren_erosion_wall_chaos_str2">
+	<sheet>lily_siren_erosion_wall_chaos_str2</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<animSheet name="lily_siren_erosion_wall_chaos_str3" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_chaos_str3.png</animSheet>
+<anim name="lily_siren_erosion_wall_chaos_str3">
+	<sheet>lily_siren_erosion_wall_chaos_str3</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+
+<animSheet name="lily_siren_erosion_wall_elite_str1" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_elite_str1.png</animSheet>
+<anim name="lily_siren_erosion_wall_elite_str1">
+	<sheet>lily_siren_erosion_wall_elite_str1</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="lily_siren_erosion_wall_elite_str2" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_elite_str2.png</animSheet>
+<anim name="lily_siren_erosion_wall_elite_str2">
+	<sheet>lily_siren_erosion_wall_elite_str2</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<animSheet name="lily_siren_erosion_wall_elite_str3" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_elite_str3.png</animSheet>
+<anim name="lily_siren_erosion_wall_elite_str3">
+	<sheet>lily_siren_erosion_wall_elite_str3</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>0.5</time>
+</anim>
+
 
 <animSheet name="lily_siren_erosion_wall_fire" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_fire.png</animSheet>
 <anim name="lily_siren_erosion_wall_fire">
@@ -646,6 +716,31 @@
 <animSheet name="lily_siren_erosion_wall_lock_weak" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_lock_weak.png</animSheet>
 <anim name="lily_siren_erosion_wall_lock_weak">
 	<sheet>lily_siren_erosion_wall_lock_weak</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+
+<animSheet name="lily_siren_erosion_wall_elite_fire" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_elite_fire.png</animSheet>
+<anim name="lily_siren_erosion_wall_elite_fire">
+	<sheet>lily_siren_erosion_wall_elite_fire</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+<animSheet name="lily_siren_erosion_wall_elite_fire_weak" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_elite_fire_weak.png</animSheet>
+<anim name="lily_siren_erosion_wall_elite_fire_weak">
+	<sheet>lily_siren_erosion_wall_elite_fire_weak</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+<animSheet name="lily_siren_erosion_wall_elite_lock" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_elite_lock.png</animSheet>
+<anim name="lily_siren_erosion_wall_elite_lock">
+	<sheet>lily_siren_erosion_wall_elite_lock</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>0.75</time>
+</anim>
+<animSheet name="lily_siren_erosion_wall_elite_lock_weak" w="3500" h="35" fw="35" fh="35">effects_lily/lily_siren_erosion_wall_elite_lock_weak.png</animSheet>
+<anim name="lily_siren_erosion_wall_elite_lock_weak">
+	<sheet>lily_siren_erosion_wall_elite_lock_weak</sheet>
 	<desc length="100" x="0" y="0"/>
 	<time>0.75</time>
 </anim>
@@ -715,6 +810,138 @@
 	<firePoint x="22" y="45"/>
 	<mountPoint x="3" y="68"/>
 	<chargeImage>weapon_lily/beam_siren_lock_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_1_chaos" w="720" h="45" fw="30" fh="45">weapon_lily/beam_siren_1_chaos.png</animSheet>
+<weaponAnim name="lily_beam_siren_1_chaos">
+	<sheet>lily_beam_siren_1_chaos</sheet>
+	<desc length="24" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>11</fireFrame>
+	<firePoint x="20" y="23"/>
+	<mountPoint x="3" y="30"/>
+	<chargeImage>weapon_lily/beam_siren_1_chaos_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_2_chaos" w="1476" h="80" fw="41" fh="80">weapon_lily/beam_siren_2_chaos.png</animSheet>
+<weaponAnim name="lily_beam_siren_2_chaos">
+	<sheet>lily_beam_siren_2_chaos</sheet>
+	<desc length="36" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>12</fireFrame>
+	<firePoint x="22" y="45"/>
+	<mountPoint x="4" y="60"/>
+	<chargeImage>weapon_lily/beam_siren_2_chaos_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_3_chaos" w="1640" h="95" fw="41" fh="95">weapon_lily/beam_siren_3_chaos.png</animSheet>
+<weaponAnim name="lily_beam_siren_3_chaos">
+	<sheet>lily_beam_siren_3_chaos</sheet>
+	<desc length="40" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>15</fireFrame>
+	<firePoint x="22" y="45"/>
+	<mountPoint x="3" y="68"/>
+	<chargeImage>weapon_lily/beam_siren_3_chaos_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_4_chaos" w="2912" h="120" fw="56" fh="120">weapon_lily/beam_siren_4_chaos.png</animSheet>
+<weaponAnim name="lily_beam_siren_4_chaos">
+	<sheet>lily_beam_siren_4_chaos</sheet>
+	<desc length="52" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>27</fireFrame>
+	<firePoint x="31" y="62"/>
+	<mountPoint x="4" y="85"/>
+	<chargeImage>weapon_lily/beam_siren_4_chaos_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_fire_chaos" w="1640" h="95" fw="41" fh="95">weapon_lily/beam_siren_fire_chaos.png</animSheet>
+<weaponAnim name="lily_beam_siren_fire_chaos">
+	<sheet>lily_beam_siren_fire_chaos</sheet>
+	<desc length="40" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>15</fireFrame>
+	<firePoint x="22" y="45"/>
+	<mountPoint x="3" y="68"/>
+	<chargeImage>weapon_lily/beam_siren_fire_chaos_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_lock_chaos" w="1640" h="95" fw="41" fh="95">weapon_lily/beam_siren_lock_chaos.png</animSheet>
+<weaponAnim name="lily_beam_siren_lock_chaos">
+	<sheet>lily_beam_siren_lock_chaos</sheet>
+	<desc length="40" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>15</fireFrame>
+	<firePoint x="22" y="45"/>
+	<mountPoint x="3" y="68"/>
+	<chargeImage>weapon_lily/beam_siren_lock_chaos_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_1_elite" w="720" h="45" fw="30" fh="45">weapon_lily/beam_siren_1_elite.png</animSheet>
+<weaponAnim name="lily_beam_siren_1_elite">
+	<sheet>lily_beam_siren_1_elite</sheet>
+	<desc length="24" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>11</fireFrame>
+	<firePoint x="20" y="23"/>
+	<mountPoint x="3" y="30"/>
+	<chargeImage>weapon_lily/beam_siren_1_elite_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_2_elite" w="1476" h="80" fw="41" fh="80">weapon_lily/beam_siren_2_elite.png</animSheet>
+<weaponAnim name="lily_beam_siren_2_elite">
+	<sheet>lily_beam_siren_2_elite</sheet>
+	<desc length="36" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>12</fireFrame>
+	<firePoint x="22" y="45"/>
+	<mountPoint x="4" y="60"/>
+	<chargeImage>weapon_lily/beam_siren_2_elite_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_3_elite" w="1640" h="95" fw="41" fh="95">weapon_lily/beam_siren_3_elite.png</animSheet>
+<weaponAnim name="lily_beam_siren_3_elite">
+	<sheet>lily_beam_siren_3_elite</sheet>
+	<desc length="40" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>15</fireFrame>
+	<firePoint x="22" y="45"/>
+	<mountPoint x="3" y="68"/>
+	<chargeImage>weapon_lily/beam_siren_3_elite_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_4_elite" w="2912" h="120" fw="56" fh="120">weapon_lily/beam_siren_4_elite.png</animSheet>
+<weaponAnim name="lily_beam_siren_4_elite">
+	<sheet>lily_beam_siren_4_elite</sheet>
+	<desc length="52" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>27</fireFrame>
+	<firePoint x="31" y="62"/>
+	<mountPoint x="4" y="85"/>
+	<chargeImage>weapon_lily/beam_siren_4_elite_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_fire_elite" w="1640" h="95" fw="41" fh="95">weapon_lily/beam_siren_fire_elite.png</animSheet>
+<weaponAnim name="lily_beam_siren_fire_elite">
+	<sheet>lily_beam_siren_fire_elite</sheet>
+	<desc length="40" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>15</fireFrame>
+	<firePoint x="22" y="45"/>
+	<mountPoint x="3" y="68"/>
+	<chargeImage>weapon_lily/beam_siren_fire_elite_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="lily_beam_siren_lock_elite" w="1640" h="95" fw="41" fh="95">weapon_lily/beam_siren_lock_elite.png</animSheet>
+<weaponAnim name="lily_beam_siren_lock_elite">
+	<sheet>lily_beam_siren_lock_elite</sheet>
+	<desc length="40" x="0" y="0"/>
+	<chargedFrame>1</chargedFrame>
+	<fireFrame>15</fireFrame>
+	<firePoint x="22" y="45"/>
+	<mountPoint x="3" y="68"/>
+	<chargeImage>weapon_lily/beam_siren_lock_elite_glow.png</chargeImage>
 </weaponAnim>
 
 

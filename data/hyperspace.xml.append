@@ -82,7 +82,7 @@
 		<systemLimit>12</systemLimit>
 		<crew>
 			<siren_harpy room="0" name="Liliana" male="false" />
-			<siren_harpy room="6" name="Katherine" male="false"/>
+			<siren_harpy room="7" name="Katherine" male="false"/>
 		</crew>
 	</mod-append:customShip>
 
@@ -106,6 +106,24 @@
 				<lily_infusion_bay/>
 			</exclusivityGroup>
 		</exclusivityOverride>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="SHIP_BEAM_EMPORIUM_STATION">
+		<shipIcons>
+			<shipIcon>icon_station</shipIcon>
+			<shipIcon>icon_no2</shipIcon>
+			<shipIcon>icon_auto</shipIcon>
+		</shipIcons>
+		<noFuelStalemate/>
+		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
+		<hiddenAug>UPG_SHIELD_ION</hiddenAug>
+		<hiddenAug>UPG_TECH_EXTINGUISHERS</hiddenAug>
+		<hiddenAug>UPG_TECH_SEALANT</hiddenAug>
+		<hiddenAug>UPG_TECH_RESPIRATOR</hiddenAug>
+		<hiddenAug>LILY_TARGETING_BYPASS_LOCKED</hiddenAug>
+		<crewLimit>12</crewLimit>
+		<systemLimit>12</systemLimit>
+		<augSlots>12</augSlots>
 	</mod-append:customShip>
 
 </mod:findLike>
@@ -186,6 +204,17 @@
 	</aug>
 
 	<aug name="LILY_ESTROGEN_DISPERSAL">
+	</aug>
+
+	<aug name="LILY_MYSTERIOUS_SHIELDS">
+		<function name="ENERGY_SHIELD" value="0" useForReqs="true" stackable="false"/>
+		<superShield>
+			<value>42</value>
+			<color r="255" g="255" b="255" a="1"/>
+			<shieldImage>ship/lily_rainbowshield.png</shieldImage>
+		</superShield>
+		<icon>icon_zoltan_shield</icon>
+		<locked/>
 	</aug>
 </augments>
 
@@ -1540,17 +1569,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>CHAOS :)</customTitle>
 			<item>
-				<modifier flat="false">0.25</modifier>
+				<modifier flat="false">0.5</modifier>
 				<blueprint>LILY_BEAM_SIREN_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">0.25</modifier>
+				<modifier flat="false">0.5</modifier>
 				<blueprint>LILY_BEAM_SIREN_2</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">0.25</modifier>
+				<modifier flat="false">0.5</modifier>
 				<blueprint>LILY_BEAM_SIREN_3</blueprint>
 				<price>-1</price>
 			</item>
@@ -1574,6 +1603,83 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<price>-1</price>
 			</item>
 		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_1_CHAOS</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_2_CHAOS</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_3_CHAOS</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_4_CHAOS</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_FIRE_CHAOS</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_LOCK_CHAOS</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier flat="false">0.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_1_ELITE</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_2_ELITE</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_3_ELITE</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier flat="false">0.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_4_ELITE</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_FIRE_ELITE</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_LOCK_ELITE</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
 	</mod-append:customStore>
 
 </mod:findLike>

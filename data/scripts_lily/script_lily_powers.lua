@@ -247,3 +247,13 @@ script.on_render_event(Defines.RenderEvents.MOUSE_CONTROL, function()
     end
 
 end, function() end)
+
+
+script.on_internal_event(Defines.InternalEvents.SYSTEM_BOX_MOUSE_CLICK, function (systemBox, shift)
+    --[[print("***************************************************************")
+    print(Hyperspace.ShipSystem.SystemIdToName(systemBox.pSystem:GetId()), systemBox.pSystem._shipObj.iShipId)
+    print("Mou", Hyperspace.Mouse.position.x, Hyperspace.Mouse.position.y)
+    print("Sys", systemBox.location.x, systemBox.location.y)
+    print("Diff1", systemBox.location:Distance(Hyperspace.Mouse.position))
+    print("Diff2", systemBox.location:RelativeDistance(Hyperspace.Mouse.position))--]]
+end, INT_MAX)

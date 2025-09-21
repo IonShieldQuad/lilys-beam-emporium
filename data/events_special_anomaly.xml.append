@@ -137,7 +137,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_NO_CRIMES">
     <text>"And according to your records... Wait, your record is pretty much clean!"
-"Which mean that you any yor ship are to be put under arrest!"</text>
+"Which mean that you any your ship are to be put under arrest!"</text>
     <choice hidden="true">
         <text>Try to bribe the Enforcer. [50~]</text>
         <event>
@@ -150,7 +150,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
                 <event>
                     <text>"What's this? A bribe? Don't you know that bribing police officers is a crime?!"
 
-...Soo, great job! You shall be rewarded for this."
+"...Soo, great job! You shall be rewarded for this."
 
 "Remember to always commit crimes and cause more chaos! Hahe!"</text>
                     <item_modify>
@@ -177,7 +177,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
                 <event>
                     <text>"Are you threatening me!? Don't you know that threatening police officers is a crime?!"
 
-...Soo, great job! You shall be rewarded for this."
+"...Soo, great job! You shall be rewarded for this."
 
 "Remember to always commit crimes and cause more chaos! Hahe!"</text>
                     <autoReward level="HIGH">no_item</autoReward>
@@ -204,7 +204,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
                 <event>
                     <text>"Are you ATTACKING me!? Don't you know that attack on a police officer is a SERIOUS crime?!"
 
-...Soo, great job! You shall be rewarded for this."
+"...Soo, great job! You shall be rewarded for this."
 
 "Remember to always commit crimes and cause more chaos! Hahe!"</text>
                     <autoReward level="HIGH">stuff</autoReward>
@@ -251,7 +251,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_GENERAL_HIGH">
     <text>"And according to your records... You are indeed a very notorious criminal in whole of the federation!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -274,7 +274,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_UNION_HIGH">
     <text>"And according to your records... You are indeed a very notorious criminal in the Galactic Union!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -286,7 +286,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_ENGI_HIGH">
     <text>"And according to your records... You are indeed a very notorious criminal in the Engi Harmony!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -298,7 +298,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_ZOLTAN_HIGH">
     <text>"And according to your records... You are indeed a very notorious criminal in the Zoltan Ministry!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -310,7 +310,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_ORCHID_HIGH">
     <text>"And according to your records... You are indeed a very notorious criminal in the Floral Gathering!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -322,7 +322,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_VAMPWEED_HIGH">
     <text>"And according to your records... You are indeed a very notorious criminal in the Vampweed Confederacy!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -334,7 +334,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_FREEMANTIS_HIGH">
     <text>"And according to your records... You are indeed a very notorious criminal in the Free Mantis Clans!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -346,7 +346,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_CRYSTAL_HIGH">
     <text>"And according to your records... You are indeed a very notorious criminal in the Crystalline Empire!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -358,7 +358,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_OUTCAST_HIGH">
     <text>"And according to your records... You are indeed a very notorious criminal according to Rock Outcasts!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -371,7 +371,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_SHELL_HIGH">
     <text>"And according to your records... You are indeed a very notorious criminal in the Shell Geniocracy!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -385,7 +385,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_GENERAL">
     <text>"And according to your records... You are indeed a criminal according to the federation!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -407,7 +407,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_UNION">
     <text>"And according to your records... You are indeed a criminal in the Galactic Union!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -419,7 +419,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_ENGI">
     <text>"And according to your records... You are indeed a criminal in the Engi Harmony!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -431,7 +431,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_ZOLTAN">
     <text>"And according to your records... You are indeed a criminal in the Zoltan Ministry!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -443,7 +443,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_ORCHID">
     <text>"And according to your records... You are indeed a criminal in the Floral Gathering!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -455,7 +455,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_VAMPWEED">
     <text>"And according to your records... You are indeed a criminal in the Vampweed Confederacy!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -467,7 +467,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_FREEMANTIS">
     <text>"And according to your records... You are indeed a criminal in the Free Mantis Clans!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -479,7 +479,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_OUTCAST">
     <text>"And according to your records... You are indeed a criminal according to Rock Outcasts!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -491,7 +491,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_CRYSTAL">
     <text>"And according to your records... You are indeed a criminal in the Crystalline Empire!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>
@@ -503,7 +503,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 <event name="LILY_CHAOS_POLICE_SHELL">
     <text>"And according to your records... You are indeed a criminal in the Shell Geniocracy!..."
-...Soo, great job! You shall be rewarded for this."</text>
+"...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
     <weapon name="GIFTLIST_LILY"/>

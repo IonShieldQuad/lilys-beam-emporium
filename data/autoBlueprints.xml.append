@@ -410,6 +410,10 @@
         <mod-append:name>LILY_COMBAT_AFTERBURNER</mod-append:name>
     </mod:findName>
 
+    <mod:findName type="blueprintList" name="BLUELIST_AETHER">
+        <mod-append:name>LILY_AVATAR_LINKER</mod-append:name>
+    </mod:findName>
+
     <mod:findName type="blueprintList" name="BLUELIST_SUPPORT">
         <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE_M</mod-append:name>
         <mod-append:name>LILY_BEAM_TOGGLE_SYRINGE_S</mod-append:name>
@@ -465,6 +469,12 @@
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_A_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_C_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_RHYME_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_MV_SIREN_TRANSPORT_ARTILLERY</mod-append:name>
+        
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_BEAMS_DAMAGE">
@@ -498,6 +508,7 @@
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_FOCUS_DAMAGE">
@@ -570,6 +581,8 @@
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_C_ARTILLERY</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_PARTICLE">
@@ -616,6 +629,10 @@
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_C_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_RHYME_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_MV_SIREN_TRANSPORT_ARTILLERY</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO_NOMISSILE">
@@ -651,6 +668,10 @@
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_C_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_RHYME_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_MV_SIREN_TRANSPORT_ARTILLERY</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_ANTIBIO_NODAMAGE">
@@ -668,6 +689,9 @@
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_C_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_SIREN_TRANSPORT_RHYME_ARTILLERY</mod-append:name>
+        <mod-append:name>LILY_MV_SIREN_TRANSPORT_ARTILLERY</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_FIRE_ALL">
@@ -709,6 +733,14 @@
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
+    </mod:findName>
+
+
+    <mod:findName type="blueprintList" name="BLUELIST_CRYSTAL">
+        <mod-append:name>LILY_MV_SIREN_TRANSPORT_ARTILLERY</mod-append:name>
+    </mod:findName>
+    <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_CRYSTAL">
+        <mod-append:name>LILY_MV_SIREN_TRANSPORT_ARTILLERY</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_WEAPONS_HACK">

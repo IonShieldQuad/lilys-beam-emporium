@@ -1,0 +1,23 @@
+<FTL>
+
+    <mod:findName type="event" name="THE_JUDGES_ZOLTAN">
+        <mod-append:choice req="LIST_CREW_SIREN" lvl="1" blue="false">
+            <text>Present a Siren.</text>
+            <event>
+                <text>"Sirens... a mysterious race of unknown origins... and with powers that can break someone's mind with their mere presence... And yet... you have made one of them your ally... Yes, I am... very impressed. Well done, traveler. Expect... rewards before your next journey."</text>
+                <achievement>ACH_BOON_LILY_SIREN</achievement>
+                <metaVariable name="prof_z_boon_lily_siren" op="set" val="1"/>
+                <variable name="ach_boon_lily_siren" op="set" val="1"/>
+                <choice hidden="true">
+                    <text>Continue...</text>
+                    <event load="THE_JUDGES_ZOLTAN_ADVICE"/>
+                </choice>
+            </event>
+        </mod-append:choice>
+    </mod:findName>
+    
+    <mod:findName type="event" name="THE_JUDGES_VARIABLE_CLEAR">
+        <mod-append:metaVariable name="prof_z_boon_lily_siren" op="set" val="0"/>
+    </mod:findName>
+
+</FTL>

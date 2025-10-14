@@ -1,0 +1,12 @@
+<FTL>
+<event name="BOON_SELECT_LILY_SIREN">
+    <text>From nowhere, you hear a voice speaking to you. "The Boon... of Utopia. Your Siren crew... reveal adjacent rooms, become immune to stuns, and... don't lose skills when cloned. You may... thank the previous challenger. Or maybe you... do not? Who can say..."</text>
+    <hiddenAug>BOON_LILY_SIREN</hiddenAug>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <loadEvent>BOON_SELECT_CONTINUE</loadEvent>
+        </event>
+    </choice>
+</event>
+</FTL>

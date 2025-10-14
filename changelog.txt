@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.0
+Date: 2025-10-14
+  Changes:
+    - Added Rhyme Siren Transport.
+    - Added MV Siren Transport (Thanks Nauter!)
+    - Added Lily's Crewser - Note that it is unlocked differently than other crewsers!
+    - Fixed cloak offset for ships
+    - Buffed 'Ira' disintegrator beams.
+    - Changed Lily's sprite (to look cooler IMO).
+    - Changed Lily's attacks - now she attacks much slower, but each shot deals a lot more damage! Also she uses her ranged attacks even in melee now.
+    - Changed Lily's effect on target from madness to captivity.
+    - Added 4 Lab upgrades for Siren crew.
+    - Added Judge Boon for Siren crew.
+    - Removed WIP Beam Battleship for now as it was reportedly causing crashes - will be readded later!
+    - Many various fixes.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.3
 Date: 2025-09-20
   Changes:

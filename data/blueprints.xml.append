@@ -1,4 +1,4 @@
-
+<FTL>
 <!--weaponBlueprint name="ION_2">
 	<type>LASER</type>
 	<flavorType>Ion Blast</flavorType>
@@ -143,7 +143,7 @@ disable shields as well as systems.</tooltip>
 	<iconImage>ion</iconImage>
 </weaponBlueprint>
 </FTL-->
-<FTL>
+
 
     <mod:findLike type="weaponBlueprint">
         <!-- mark the statBoost -->
@@ -231,7 +231,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_ANTI_CEL">
         <title>Anti-C.E.L. Resonator</title>
-        <desc>This odd device seem to somehow cause your weapons to resonate with C.E.L tech on enemy ships, sausing them to deal double damage. An attached note says "Some help for you to deal with those pests - :)"</desc>
+        <desc>This odd device seem to somehow cause your weapons to resonate with C.E.L tech on enemy ships, causing them to deal double damage. An attached note says "Some help for you to deal with those pests - :)"</desc>
         <cost>120</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -239,7 +239,7 @@ disable shields as well as systems.</tooltip>
     </augBlueprint>
 
     <augBlueprint name="LILY_PATRONAGE">
-        <title>???</title>
+        <title>Lily</title>
         <desc>You aren't supposed to see this.</desc>
         <cost>0</cost>
         <bp>5</bp>
@@ -248,7 +248,7 @@ disable shields as well as systems.</tooltip>
     </augBlueprint>
 
     <augBlueprint name="LILY_AVATAR_LINKER">
-        <title>???</title>
+        <title>Lily Avatar</title>
         <desc>You aren't supposed to see this.</desc>
         <cost>0</cost>
         <bp>5</bp>
@@ -257,7 +257,7 @@ disable shields as well as systems.</tooltip>
     </augBlueprint>
     
     <augBlueprint name="LILY_MYSTERIOUS_NOTE">
-        <title>???</title>
+        <title>Note?</title>
         <desc>You aren't supposed to see this.</desc>
         <cost>0</cost>
         <bp>5</bp>
@@ -283,6 +283,146 @@ disable shields as well as systems.</tooltip>
         <rarity>0</rarity>
         <stackable>false</stackable>
     </augBlueprint>
+
+    <augBlueprint name="LILY_CHAOS_ELITE">
+        <title>Intense Chaotic Energy</title>
+        <desc>Non-siren crew lose their active abilities, ability to fight, man, repair or sabotage, and move at quarter speed while within intense chaotic energy fields.</desc>
+        <cost>0</cost>
+        <bp>4</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+
+    <augBlueprint name="LILY_CHAOS_AZURE">
+        <title>Azure Energy</title>
+        <desc>Enemy non-siren crew onboard the ship have their movement and sabotage speed halved, lose their active abilities and mind control immunity, and allied crew onboard the ship will gain mind contol and stun immunity, and heal 1 hp/s within Azure Energy Fields.</desc>
+        <cost>0</cost>
+        <bp>4</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_AZURE_ARMOR">
+        <title>Azure Armor</title>
+        <desc>Every time your ship takes damage, a cloaked crystal shard breaks off that flies at your enemy which pierces all shields, deals 1 hull and system damage, locks down rooms, and mind controls enemy crew for 20 seconds.</desc>
+        <cost>60</cost>
+        <bp>8</bp>
+        <rarity>0</rarity>
+        <stackable>true</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LAB_LILY_SIREN_INSTALLED">
+        <title>Siren Lab Upgrade Installed</title>
+        <desc>Siren Lab Upgrade Installed.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+
+    <augBlueprint name="LAB_LILY_SIREN_VAMP">
+        <title>Soul Siphon</title>
+        <desc>Sirens now heal by the damage they deal, however, their damage is halved.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+    <augBlueprint name="LAB_LILY_SIREN_BUFF">
+        <title>Colorful Dreams</title>
+        <desc>Allied Non-Siren crew in the same room as Sirens now take 30% less damage, repair 50% faster and become immune to mind control, but lose 50% of their movement speed.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+    <augBlueprint name="LAB_LILY_SIREN_DAMAGE">
+        <title>Withering Gaze</title>
+        <desc>Enemies directly targeted by Sirens take 30% more damage from all sources and lose their mind control immunity if they had any. Doesn't affect other Sirens or Eldritch beings.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+    <augBlueprint name="LAB_LILY_SIREN_HARPY_MIND">
+        <title>Mind Overtake</title>
+        <desc>Siren Harpies gain a new ability: Mind control a random enemy crew in the current room for 10 seconds. 30 seconds cooldown.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+
+
+    <augBlueprint name="EX_LAB_LILY_SIREN_VAMP">
+        <title>[L] Soul Siphon</title>
+        <desc>Sirens now heal by the damage they deal, however, their damage is halved.
+        
+[L] - As an external lab upgrade, this augment will provide its normal effect but take up an augment slot. It cannot be converted into an actual lab upgrade, but will not consume your primary slot. Does not stack with itself.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+    <augBlueprint name="EX_LAB_LILY_SIREN_BUFF">
+        <title>[L] Colorful Dreams</title>
+        <desc>Allied Non-Siren crew in the same room as Sirens now take 30% less damage, repair 50% faster and become immune to mind control, but lose 50% of their movement speed.
+        
+[L] - As an external lab upgrade, this augment will provide its normal effect but take up an augment slot. It cannot be converted into an actual lab upgrade, but will not consume your primary slot. Does not stack with itself.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+    <augBlueprint name="EX_LAB_LILY_SIREN_DAMAGE">
+        <title>[L] Withering Gaze</title>
+        <desc>Enemies directly targeted by Sirens take 30% more damage from all sources and lose their mind control immunity if they had any. Doesn't affect other Sirens or Eldritch beings.
+        
+[L] - As an external lab upgrade, this augment will provide its normal effect but take up an augment slot. It cannot be converted into an actual lab upgrade, but will not consume your primary slot. Does not stack with itself.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+    <augBlueprint name="EX_LAB_LILY_SIREN_HARPY_MIND">
+        <title>[L] Mind Overtake</title>
+        <desc>Siren Harpies gain a new ability: Mind control a random enemy crew in the current room for 10 seconds. 30 seconds cooldown.
+        
+[L] - As an external lab upgrade, this augment will provide its normal effect but take up an augment slot. It cannot be converted into an actual lab upgrade, but will not consume your primary slot. Does not stack with itself.</desc>
+        <cost>0</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="BOON_LILY_SIREN">
+        <title>Boon of Utopia</title>
+        <desc>YOU SHOULD NEVER SEE THIS</desc>
+        <cost>0</cost>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_HER_EMPOWERMENT">
+        <title>Her Empowerment</title>
+        <desc>This ship is empowered by Her Eldritch powers. It will function as an auto-ship with enhanced manning and repairs, rapidly repair hull, and receive 20 point energy shield. Your Eldritch and Siren Crew are also empowered, granting them damage resistance and hazard immunity.</desc>
+        <cost>2468</cost>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_SHIP_HER">
+        <title>Her Cruiser</title>
+        <desc>YOU SHOULD NEVER SEE THIS</desc>
+        <cost>0</cost>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+
     
     <crewBlueprint name="unique_lily_avatar">
         <desc>A multiverse traveller, beam saleswoman, and a loyal servant of the Supreme Eldritch Goddess of True Chaos. Yes, that's me--</desc>
@@ -304,11 +444,11 @@ disable shields as well as systems.</tooltip>
             <power>Totally 100% human, trust me-</power-->
         </powerList>
     </crewBlueprint>
-</FTL>
 
 
 
-<FTL>
+
+
 
     <weaponBlueprint name="LOOT_ZOLTAN_2">
         <type>BEAM</type>
@@ -453,9 +593,9 @@ disable shields as well as systems.</tooltip>
         <weaponArt>lily_focus_pointer</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
-</FTL>
 
-<FTL>
+
+
     <weaponBlueprint name="LILY_POWER_BEAM">
         <type>BEAM</type>
         <flavorType>Pinpoint</flavorType>
@@ -573,7 +713,7 @@ disable shields as well as systems.</tooltip>
         <weaponArt>lily_focus_pointer</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
-</FTL>
+
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -583,7 +723,7 @@ disable shields as well as systems.</tooltip>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
 
-<FTL>
+
     <weaponBlueprint name="LILY_FOCUS_ION_1">
         <type>BEAM</type>
         <flavorType>Pinpoint</flavorType>
@@ -1017,7 +1157,7 @@ Shield Piercing: 2</tooltipOverride>
         <weaponArt>lily_focus_ion_phase</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
-</FTL>
+
 
 
 <!-- 
@@ -1028,7 +1168,7 @@ Shield Piercing: 2</tooltipOverride>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
 
-<FTL>
+
     <weaponBlueprint name="LILY_BEAM_TOGGLE_SUNSET_H">
         <type>BEAM</type>
         <tip>tip_beams</tip>
@@ -1125,7 +1265,7 @@ Shield Piercing: 2</tooltipOverride>
         <weaponArt>lily_beam_toggle_sunset_b</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
-</FTL>
+
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -1135,7 +1275,7 @@ Shield Piercing: 2</tooltipOverride>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
 
-<FTL>
+
     <weaponBlueprint name="LILY_BEAM_TOGGLE_EVENTIDE_L">
         <type>BEAM</type>
         <tip>tip_beams</tip>
@@ -1187,7 +1327,7 @@ Shield Piercing: 2</tooltipOverride>
         <power>4</power>
         <cost>140</cost>
         <bp>8</bp>
-        <rarity>5</rarity>
+        <rarity>0</rarity>
         <image>beam_contact</image>
         <length>110</length>
         <color>
@@ -1221,7 +1361,7 @@ Shield Piercing: 2</tooltipOverride>
         <power>4</power>
         <cost>140</cost>
         <bp>8</bp>
-        <rarity>5</rarity>
+        <rarity>0</rarity>
         <image>beam_contact</image>
         <length>110</length>
         <color>
@@ -1257,7 +1397,7 @@ Shield Piercing: 2</tooltipOverride>
         <power>4</power>
         <cost>140</cost>
         <bp>8</bp>
-        <rarity>5</rarity>
+        <rarity>0</rarity>
         <image>beam_contact</image>
         <length>110</length>
         <color>
@@ -1273,7 +1413,7 @@ Shield Piercing: 2</tooltipOverride>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
 
-</FTL>
+
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -1282,7 +1422,7 @@ Shield Piercing: 2</tooltipOverride>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
-<FTL>
+
     <weaponBlueprint name="LILY_BEAM_TOGGLE_AKATSUKI_B">
         <type>BEAM</type>
         <tip>tip_beams</tip>
@@ -1326,7 +1466,7 @@ Shield Piercing: 2</tooltipOverride>
         <power>3</power>
         <cost>110</cost>
         <bp>8</bp>
-        <rarity>5</rarity>
+        <rarity>0</rarity>
         <image>beam_contact</image>
         <speed>1</speed>
         <length>1</length>
@@ -1361,7 +1501,7 @@ Shield Piercing: 2</tooltipOverride>
         <power>3</power>
         <cost>110</cost>
         <bp>8</bp>
-        <rarity>5</rarity>
+        <rarity>0</rarity>
         <image>beam_contact</image>
         <length>1</length>
         <fireTime>0.2</fireTime>
@@ -1400,7 +1540,7 @@ Shield Piercing: 2</tooltipOverride>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
 
-</FTL>
+
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -1409,7 +1549,7 @@ Shield Piercing: 2</tooltipOverride>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
-<FTL>
+
     <weaponBlueprint name="LILY_BEAM_SCISSORS">
         <type>BEAM</type>
         <tip>tip_beams</tip>
@@ -1502,7 +1642,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <power>4</power>
         <cost>100</cost>
         <bp>4</bp>
-        <rarity>5</rarity>
+        <rarity>0</rarity>
         <image>beam_contact</image>
         <length>80</length>
         <mv-aiSystemTarget system="shields"/>
@@ -1513,7 +1653,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
 
-</FTL>
+
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -1523,7 +1663,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
 
-<FTL>
+
     <weaponBlueprint name="LILY_BEAM_TOGGLE_SYRINGE">
         <type>BEAM</type>
         <tip>tip_lily_syringe</tip>
@@ -1869,7 +2009,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <weaponArt>lily_beam_toggle_syringe_a</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
-</FTL>
+
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -1878,7 +2018,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
-<FTL>
+
 <weaponBlueprint name="LILY_BEAM_AMP_SIPHON">
     <type>BEAM</type>
     <tip>tip_focus</tip>
@@ -2137,7 +2277,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
-</FTL>
+
 
 
 
@@ -2150,7 +2290,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
 -->
 
 
-<FTL>
+
 
 <weaponBlueprint name="LILY_FOCUS_PIERCE_1">
     <type>BEAM</type>
@@ -2495,7 +2635,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <weaponArt>lily_focus_pierce_2</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
-</FTL>
+
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -2505,7 +2645,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
 
-<FTL>
+
 <weaponBlueprint name="LILY_BEAM_SHOTGUN_P">
     <type>BEAM</type>
     <flavorType>Pinpoint</flavorType>
@@ -2654,7 +2794,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <weaponArt>lily_beam_shotgun_9_s</weaponArt>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
-</FTL>
+
 
 
 <!-- 
@@ -2665,7 +2805,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
 
-<FTL>
+
     <weaponBlueprint name="LILY_FOCUS_HACK">
         <type>BEAM</type>
         <flavorType>Pinpoint</flavorType>
@@ -2724,6 +2864,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
                     <eldritch_thing_weak/>
                     <eldritch_cat/>
                     <gnome/>
+                    <unique_lily_avatar/>
                 </blackList>
             </statBoost>
         </statBoosts>
@@ -2735,7 +2876,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <weaponArt>lily_focus_hack</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
-</FTL>
+
 
 
 
@@ -2747,7 +2888,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
 
-<FTL>
+
     <weaponBlueprint name="LILY_HOWITZER_1">
         <type>BURST</type>
         <flavorType>Pinpoint</flavorType>
@@ -2867,7 +3008,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <weaponArt>lily_howitzer_1</weaponArt>
         <iconImage>beam</iconImage>
     </weaponBlueprint>
-</FTL>
+
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -2876,7 +3017,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
-<FTL>
+
 
     <weaponBlueprint name="LILY_BEAM_PARTICLE_MINI">
         <type>BEAM</type>
@@ -3014,7 +3155,7 @@ The excessive nitrogen gas also upsets the atmospheric balance.</desc>
         </color>
         <roomStatBoosts>
             <statBoost name="trueHealAmount">
-                <boostType>FLAT</boostType>
+                <boostType>MIN</boostType>
                 <amount>0</amount>
                 <shipTarget>ALL</shipTarget>
                 <crewTarget>ALL</crewTarget>
@@ -3219,21 +3360,22 @@ Conservative weapons use no power on their own but require the system itself to 
     <speed>2</speed>
     <mv-prideBeam/>
     <erosion>
-        <speed>0.75</speed>
-        <maxSpeed>0.75</maxSpeed>
+        <speed>1</speed>
+        <maxSpeed>1</maxSpeed>
         <time>10.0</time>
         <maxTime>20.0</maxTime>
-        <systemRepairMultiplier>0.75</systemRepairMultiplier>
+        <systemRepairMultiplier>0.5</systemRepairMultiplier>
         <erodeShields>true</erodeShields>
         <roomAnim renderLayer="1">
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_str1</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
             <boostType>FLAT</boostType>
-            <amount>-3</amount>
+            <amount>-4</amount>
             <shipTarget>ALL</shipTarget>
             <crewTarget>ALL</crewTarget>
             <droneTarget>ALL</droneTarget>
@@ -3243,7 +3385,7 @@ Conservative weapons use no power on their own but require the system itself to 
         </statBoost>
         <statBoost name="healSpeed">
             <boostType>MULT</boostType>
-            <amount>0.75</amount>
+            <amount>0.5</amount>
             <shipTarget>ALL</shipTarget>
             <crewTarget>ALL</crewTarget>
             <droneTarget>ALL</droneTarget>
@@ -3252,7 +3394,7 @@ Conservative weapons use no power on their own but require the system itself to 
         </statBoost>
         <statBoost name="repairSpeed">
             <boostType>MULT</boostType>
-            <amount>0.75</amount>
+            <amount>0.5</amount>
             <shipTarget>ALL</shipTarget>
             <crewTarget>ALL</crewTarget>
             <droneTarget>ALL</droneTarget>
@@ -3299,6 +3441,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_str1</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -3369,6 +3512,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_str2</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -3440,6 +3584,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_str3</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -3511,6 +3656,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_fire</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -3636,9 +3782,9 @@ Conservative weapons use no power on their own but require the system itself to 
 <weaponBlueprint name="LILY_BEAM_SIREN_LOCK">
     <type>BEAM</type>
     <tip>tip_lily_disintegrators</tip>
-    <title>'Impetus' Chaoslock Disintegrator Beam</title>
-    <short>'Impetus'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighing, sabotaging and repairing.</desc>
+    <title>'Impedio' Chaoslock Disintegrator Beam</title>
+    <short>'Impedio'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighting, sabotaging and repairing.</desc>
     <tooltip>Chaoslock Disintegrator.</tooltip>
     <damage>0</damage>
     <ion>1</ion>
@@ -3663,6 +3809,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_lock</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -3851,21 +3998,22 @@ Conservative weapons use no power on their own but require the system itself to 
         <b>0</b>
     </color>
     <erosion>
-        <speed>0.75</speed>
-        <maxSpeed>0.75</maxSpeed>
+        <speed>1</speed>
+        <maxSpeed>1</maxSpeed>
         <time>15.0</time>
         <maxTime>30.0</maxTime>
-        <systemRepairMultiplier>0.75</systemRepairMultiplier>
+        <systemRepairMultiplier>0.5</systemRepairMultiplier>
         <erodeShields>true</erodeShields>
         <roomAnim renderLayer="1">
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_chaos_str1</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
             <boostType>FLAT</boostType>
-            <amount>-3</amount>
+            <amount>-4</amount>
             <shipTarget>ALL</shipTarget>
             <crewTarget>ALL</crewTarget>
             <droneTarget>ALL</droneTarget>
@@ -3875,7 +4023,7 @@ Conservative weapons use no power on their own but require the system itself to 
         </statBoost>
         <statBoost name="healSpeed">
             <boostType>MULT</boostType>
-            <amount>0.75</amount>
+            <amount>0.5</amount>
             <shipTarget>ALL</shipTarget>
             <crewTarget>ALL</crewTarget>
             <droneTarget>ALL</droneTarget>
@@ -3884,7 +4032,7 @@ Conservative weapons use no power on their own but require the system itself to 
         </statBoost>
         <statBoost name="repairSpeed">
             <boostType>MULT</boostType>
-            <amount>0.75</amount>
+            <amount>0.5</amount>
             <shipTarget>ALL</shipTarget>
             <crewTarget>ALL</crewTarget>
             <droneTarget>ALL</droneTarget>
@@ -3936,6 +4084,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_chaos_str1</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -4011,6 +4160,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_chaos_str2</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -4087,6 +4237,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_chaos_str3</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -4163,6 +4314,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_fire</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -4288,9 +4440,9 @@ Conservative weapons use no power on their own but require the system itself to 
 <weaponBlueprint name="LILY_BEAM_SIREN_LOCK_CHAOS">
     <type>BEAM</type>
     <tip>tip_lily_disintegrators</tip>
-    <title>Chaotic 'Impetus' Chaoslock Disintegrator Beam</title>
-    <short>'Impetus'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighing, sabotaging and repairing.</desc>
+    <title>Chaotic 'Impedio' Chaoslock Disintegrator Beam</title>
+    <short>'Impedio'™</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighting, sabotaging and repairing.</desc>
     <tooltip>Chaoslock Disintegrator.</tooltip>
     <damage>0</damage>
     <ion>2</ion>
@@ -4320,6 +4472,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_lock</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -4508,21 +4661,22 @@ Conservative weapons use no power on their own but require the system itself to 
         <b>255</b>
     </color>
     <erosion>
-        <speed>1.125</speed>
-        <maxSpeed>1.125</maxSpeed>
+        <speed>1.5</speed>
+        <maxSpeed>1.5</maxSpeed>
         <time>15.0</time>
         <maxTime>30.0</maxTime>
-        <systemRepairMultiplier>0.5</systemRepairMultiplier>
+        <systemRepairMultiplier>0.25</systemRepairMultiplier>
         <erodeShields>true</erodeShields>
         <roomAnim renderLayer="1">
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_elite_str1</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
             <boostType>FLAT</boostType>
-            <amount>-4</amount>
+            <amount>-6</amount>
             <shipTarget>ALL</shipTarget>
             <crewTarget>ALL</crewTarget>
             <droneTarget>ALL</droneTarget>
@@ -4532,7 +4686,7 @@ Conservative weapons use no power on their own but require the system itself to 
         </statBoost>
         <statBoost name="healSpeed">
             <boostType>MULT</boostType>
-            <amount>0.5</amount>
+            <amount>0.25</amount>
             <shipTarget>ALL</shipTarget>
             <crewTarget>ALL</crewTarget>
             <droneTarget>ALL</droneTarget>
@@ -4541,7 +4695,7 @@ Conservative weapons use no power on their own but require the system itself to 
         </statBoost>
         <statBoost name="repairSpeed">
             <boostType>MULT</boostType>
-            <amount>0.5</amount>
+            <amount>0.25</amount>
             <shipTarget>ALL</shipTarget>
             <crewTarget>ALL</crewTarget>
             <droneTarget>ALL</droneTarget>
@@ -4593,6 +4747,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_elite_str1</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -4668,6 +4823,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_elite_str2</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -4744,6 +4900,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_elite_str3</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -4829,6 +4986,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_elite_fire</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -4954,9 +5112,9 @@ Conservative weapons use no power on their own but require the system itself to 
 <weaponBlueprint name="LILY_BEAM_SIREN_LOCK_ELITE">
     <type>BEAM</type>
     <tip>tip_lily_disintegrators</tip>
-    <title>Elite 'Impetus' Chaoslock Disintegrator Beam</title>
-    <short>€ 'Impetus'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from moving, manning, fighing, sabotaging and repairing.</desc>
+    <title>Elite 'Impedio' Chaoslock Disintegrator Beam</title>
+    <short>€ 'Impedio'</short>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from moving, manning, fighting, sabotaging and repairing.</desc>
     <tooltip>Chaoslock Disintegrator.</tooltip>
     <damage>0</damage>
     <ion>3</ion>
@@ -4986,6 +5144,7 @@ Conservative weapons use no power on their own but require the system itself to 
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_elite_lock</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -5273,10 +5432,11 @@ Conservative weapons use no power on their own but require the system itself to 
         <maxTime>30.0</maxTime>
         <systemRepairMultiplier>0.5</systemRepairMultiplier>
         <erodeShields>true</erodeShields>
-        <roomAnim renderLayer="2">
+        <roomAnim renderLayer="1">
             <anim animType="default" animBorder="2">lily_invisible</anim>
             <wallAnim>lily_siren_erosion_wall_fire</wallAnim>
         </roomAnim>
+        <canDilate>true</canDilate>
     </erosion>
     <statBoosts>
         <statBoost name="trueHealAmount">
@@ -5777,6 +5937,431 @@ Conservative weapons use no power on their own but require the system itself to 
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_RHYME_ARTILLERY">
+    <type>BEAM</type>
+    <tip>tip_madness</tip>
+    <title>Chaotic 'Seuss' Artillery</title>
+    <short>'Seuss'™</short>
+    <desc>An artillery version of the infamous weapon, this long beam devastates enemy systems and crew, as well as temporarily induces madness on the crew it hits, disabling their active abilities. Allied Eldritch beings and Sirens are healed instead. [Base cooldown: 30]</desc>
+    <tooltip>Chaotic 'Seuss' Artillery. [Base cooldown: 30]</tooltip>
+    <damage>0</damage>
+    <sysDamage>2</sysDamage>
+    <persDamage>3</persDamage>
+    <fireChance>5</fireChance>
+    <breachChance>2</breachChance>
+    <cooldown>30</cooldown>
+    <stun>5</stun>
+    <sp>4</sp>
+    <length>250</length>
+    <power>1</power>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <color>
+        <r>255</r>
+        <g>53</g>
+        <b>52</b>
+    </color>
+    <statBoosts>
+        <statBoost name="silenced">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <duration>25</duration>
+            <!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
+            <blackList>
+                <slug_hektar_box/>
+                <unique_billy_box/>
+                <unique_irwin_demon/>
+                <unique_dessius/>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <boostAnim>madness</boostAnim>
+        </statBoost>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>30</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALLIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <duration>3</duration>
+            <!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
+            <whiteList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </whiteList>
+        </statBoost>
+        <statBoost name="stunMultiplier">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALLIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <duration>2</duration>
+            <!--<blackList load="LIST_CREW_MADNESS_IMMUNE"/>-->
+            <whiteList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </whiteList>
+        </statBoost>
+    </statBoosts>
+
+    <launchSounds>
+        <sound>beam2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_rhyme_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_MV_TRANSPORT_ARTILLERY">
+    <type>BEAM</type>
+    <tip>tip_frost</tip>
+    <title>'Azure Dream Blade'</title>
+    <short>'Azure Blade'</short>
+    <desc>An unique beam artillery, combining Siren and Crystal technology. Pierces 3 shields, dealing 1 system, 1 ion and 30 crew (enemy only) damage and locking down rooms. Enemies in these rooms will be affected with frost debuff, while allies will gain door phasing and minor healing. [Base cooldown: 40]</desc>
+    <tooltip>'Azure Dream Blade'. [Base cooldown: 40]</tooltip>
+    <damage>0</damage>
+    <ion>1</ion>
+    <sysDamage>1</sysDamage>
+    <noPersDamage>true</noPersDamage>
+    <sp>2</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <stun>5</stun>
+    <lockdown>1</lockdown>
+    <color>
+        <r>0</r>
+        <g>170</g>
+        <b>255</b>
+    </color>
+    <roomStatBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>MIN</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <duration>20</duration>
+            <roomAnim renderLayer="3">
+                <anim animType="center">snowman_walk_down</anim>
+            </roomAnim>
+        </statBoost>
+        <statBoost name="moveSpeedMultiplier">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>20</duration>
+            <maxStacks>1</maxStacks>
+            <fireCount min="0"/>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>20</duration>
+            <maxStacks>1</maxStacks>
+            <fireCount min="0"/>
+        </statBoost>
+        <statBoost name="silenced">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ENEMIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>20</duration>
+            <maxStacks>1</maxStacks>
+            <boostAnim>lily_frost_debuff</boostAnim>
+            <fireCount min="0"/>
+        </statBoost>
+        <statBoost name="stunMultiplier">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>20</duration>
+            <maxStacks>1</maxStacks>
+        </statBoost>
+        <statBoost name="healAmount">
+            <boostType>FLAT</boostType>
+            <amount>1</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>20</duration>
+            <maxStacks>1</maxStacks>
+        </statBoost>
+        <statBoost name="canPhaseThroughDoors">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>20</duration>
+            <maxStacks>1</maxStacks>
+        </statBoost>
+    </roomStatBoosts>
+    <cooldown>40</cooldown>
+    <length>250</length>
+    <power>1</power>
+    <cost>70</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <image>beam_contact</image>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-30</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <duration>1</duration>
+            <priority>100</priority>
+        </statBoost>
+        <statBoost name="canPhaseThroughDoors">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <duration>20</duration>
+            <maxStacks>1</maxStacks>
+        </statBoost>
+        <statBoost name="stunMultiplier">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <duration>2</duration>
+        </statBoost>
+    </statBoosts>
+
+    <launchSounds>
+        <sound>lily_frost_beam_1</sound>
+    </launchSounds>
+    <weaponArt>lily_mv_siren_transport_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
+<weaponBlueprint name="LILY_SIREN_TRANSPORT_HER_ARTILLERY">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Her 'Tormentum' Disintegrator Artillery :)</title>
+    <short>€ 'Tormentum' :)</short>
+    <desc>Harnessing Her eldritch power, this weapon a devastating beam of chaotic eldritch energy that causes all touched matter to disintegrate rapidly. Applies Erosion effect to rooms and damage over time to all crew hit, and completely prevents healing and repairs. [Base cooldown: 60]</desc>
+    <tooltip>Her 'Tormentum' Artillery :) [Base cooldown: 60]</tooltip>
+    <damage>0</damage>
+    <sysDamage>3</sysDamage>
+    <ion>3</ion>
+    <ionBeamFix>true</ionBeamFix>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>60</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>4</power>
+    <speed>5</speed>
+    <sp>10</sp>
+    <color>
+        <r>255</r>
+        <g>255</g>
+        <b>255</b>
+    </color>
+    <erosion>
+        <speed>3</speed>
+        <maxSpeed>6</maxSpeed>
+        <time>20.0</time>
+        <maxTime>120.0</maxTime>
+        <systemRepairMultiplier>0.0</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_elite_str3</wallAnim>
+        </roomAnim>
+        <canDilate>true</canDilate>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-12</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>9999</priority>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <fr_watcher/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <duration>20</duration>
+            <boostAnim>lily_siren_dot_debuff_1_elite</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>9999</priority>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <fr_watcher/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <duration>20</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>9999</priority>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <fr_watcher/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <duration>20</duration>
+        </statBoost>
+        <statBoost name="canRepair">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>9999</priority>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <fr_watcher/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <duration>20</duration>
+        </statBoost>
+        <statBoost name="allDamageTakenMultiplier">
+            <boostType>MULT</boostType>
+            <amount>1.3</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>0</priority>
+            <boostAnim>lily_siren_withering_debuff_1</boostAnim>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <fr_watcher/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <duration>20</duration>
+        </statBoost>
+        <statBoost name="resistsMindControl">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>9999</priority>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <fr_watcher/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <duration>20</duration>
+        </statBoost>
+        <statBoost name="isTelepathic">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <priority>9999</priority>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <fr_watcher/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <duration>20</duration>
+        </statBoost>
+    </statBoosts>
+    <cost>325</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>300</length>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_2</sound>
+    </launchSounds>
+    <weaponArt>lily_siren_transport_her_artillery</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -5784,6 +6369,244 @@ Conservative weapons use no power on their own but require the system itself to 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 -->
+
+<weaponBlueprint name="LILY_AZURE_ARMOR_PROJ">
+    <type>MISSILES</type>
+    <title>Azure Shard</title>
+    <short>Azure</short>
+    <desc>AZURE CRYSTAL VENG PROJECTILE</desc>
+    <tooltip>Should Never See This Description.</tooltip>
+    <cost>0</cost>
+    <damage>1</damage>
+    <noPersDamage>true</noPersDamage>
+    <lockdown>1</lockdown>
+    <drone_targetable>0</drone_targetable>
+    <accuracyMod>100</accuracyMod>
+    <missiles>0</missiles>
+    <shots>1</shots>
+    <sp>10</sp>
+    <fireChance>0</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>0</cooldown>
+    <power>0</power>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <mv-mindControl>
+        <duration>20</duration>
+    </mv-mindControl>
+    <roomStatBoosts>
+        <statBoost name="stunMultiplier">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>20</duration>
+            <maxStacks>1</maxStacks>
+        </statBoost>
+        <statBoost name="healAmount">
+            <boostType>FLAT</boostType>
+            <amount>1</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>20</duration>
+            <maxStacks>1</maxStacks>
+        </statBoost>
+        <statBoost name="canPhaseThroughDoors">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>CREW</droneTarget>
+            <duration>20</duration>
+            <maxStacks>1</maxStacks>
+        </statBoost>
+    </roomStatBoosts>
+    <statBoosts>
+        <statBoost name="silenced">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <blackList>
+                <slug_hektar_box/>
+                <unique_billy_box/>
+                <unique_irwin_demon/>
+                <unique_dessius/>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <duration>20</duration>
+            <boostAnim>lily_madness_azure</boostAnim>
+        </statBoost>
+        <statBoost name="resistsMindControl">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <duration>20</duration>
+            <blackList>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <priority>50</priority>
+        </statBoost>
+        <!--statBoost name="controllable">
+            <boostType>SET</boostType>
+            <value>false</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ENEMIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <duration>20</duration>
+            <blackList>
+                <slug_hektar_box/>
+                <unique_billy_box/>
+                <unique_irwin_demon/>
+                <unique_dessius/>
+                <siren/>
+                <siren_harpy/>
+                <eldritch_thing/>
+                <eldritch_thing_weak/>
+                <eldritch_cat/>
+                <gnome/>
+                <unique_lily_avatar/>
+            </blackList>
+            <priority>50</priority>
+        </statBoost-->
+        <statBoost name="canPhaseThroughDoors">
+            <boostType>SET</boostType>
+            <value>true</value>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ORIGINAL_ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <duration>20</duration>
+            <maxStacks>1</maxStacks>
+        </statBoost>
+        <statBoost name="stunMultiplier">
+            <boostType>SET</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALLIES</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>false</affectsSelf>
+            <duration>2</duration>
+        </statBoost>
+    </statBoosts>
+    <image>lily_crystal_shard_azure</image>
+    <launchSounds>
+        <sound>smallMissile1</sound>
+        <sound>smallMissile2</sound>
+    </launchSounds>
+    <hitShipSounds>
+        <sound>crystalExplosion_small</sound>
+    </hitShipSounds>
+    <hitShieldSounds>
+        <sound>hitShield1</sound>
+        <sound>hitShield2</sound>
+        <sound>hitShield3</sound>
+    </hitShieldSounds>
+    <missSounds>
+        <sound>miss</sound>
+    </missSounds>
+    <explosion>lily_explosion_crystal_azure</explosion>
+    <weaponArt>lily_crystal_shard_azure</weaponArt>
+</weaponBlueprint>
+
+
+<shipBlueprint name="LILY_PLAYER_MV_SIREN_TRANSPORT" layout="lily_player_mv_siren_transport" img="lily_player_mv_siren_transport">
+    <class>MV Siren Transport</class>
+    <name>Aoi Yume</name>
+    <desc>Sirens are not typically known to be cooperative with other races. However, the Multiverse is a big place, and this ship's siren and crystal crew working together proves to be an exception to that stereotype.</desc>
+    <unlock id="ship_LILY_MV_SIREN_TRANSPORT_unlock"/>
+    <systemList>
+        <artillery power="2" room="14" start="true" weapon="LILY_SIREN_MV_TRANSPORT_ARTILLERY" img="room_artillery" />
+        <battery power="1" room="4" start="false" img="room_battery_6" />
+        <cloaking power="1" room="9" start="false" img="room_cloaking_4" />
+        <clonebay power="2" room="7" start="true">
+            <slot>
+                <number>0</number>
+            </slot>
+        </clonebay>
+        <doors power="1" room="2" start="true" img="room_doors_9">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </doors>
+        <drones power="2" max="8" room="3" start="false" img="room_drones_16" />
+        <engines power="2" room="8" start="true" img="room_engines_2">
+            <slot>
+                <direction>down</direction>
+                <number>2</number>
+            </slot>
+        </engines>
+        <hacking power="1" room="10" start="false" img="room_hacking_7" />
+        <medbay power="2" room="7" start="false" img="room_medbay_16">
+            <slot>
+                <number>-2</number>
+            </slot>
+        </medbay>
+        <mind power="1" max="3" room="12" start="false" img="room_mind_2" />
+        <oxygen power="1" room="15" start="true" img="room_oxygen_4" />
+        <pilot power="1" room="0" start="true" img="room_pilot_2">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </pilot>
+        <sensors power="2" room="13" start="true" img="room_sensors_3">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </sensors>
+        <shields power="2" max="8" room="1" start="true" img="room_shields_7">
+            <slot>
+                <direction>up</direction>
+                <number>1</number>
+            </slot>
+        </shields>
+        <teleporter power="1" room="5" start="true" />
+        <temporal power="1" room="11" start="true" img="room_temporal_3" />
+        <weapons power="3" room="6" start="true" img="room_weapons">
+            <slot>
+                <direction>up</direction>
+                <number>1</number>
+            </slot>
+        </weapons>
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>3</droneSlots>
+    <weaponList missiles="5" count="4">
+        <weapon name="CRYSTAL_HEAVY_2" />
+        <weapon name="CRYSTAL_STUN" />
+    </weaponList>
+    <droneList drones="0" count="3" />
+    <health amount="15" />
+    <maxPower amount="12" />
+    <shieldImage>mup_disk</shieldImage>
+    <mv-mapImage>map_icon_lily_player_siren_transport</mv-mapImage>
+    <aug name="FTL_JUMPER_SCANNER" />
+    <aug name="LILY_AZURE_ARMOR" />
+    <aug name="EX_LAB_LILY_SIREN_BUFF" />
+
+</shipBlueprint>
+
+
 
 <shipBlueprint name="LILY_PLAYER_WRECKED_SIREN_TRANSPORT" layout="lily_player_wrecked_siren_transport" img="lily_player_wrecked_siren_transport">
     <class>Wrecked Siren Transport</class>
@@ -6110,6 +6933,162 @@ Conservative weapons use no power on their own but require the system itself to 
 
 
 
+<shipBlueprint name="LILY_PLAYER_SIREN_RHYME_TRANSPORT" layout="lily_player_siren_transport_rhyme" img="lily_player_siren_transport_rhyme">
+    <class>Rhymer Transport</class>
+    <name>Yidhra</name>
+    <desc>A ship acquired by followers of The One Who Rhymes, that now "transports" a terrifyingly large and powerful beam cannon. However, it comes at the expense of its reactor and defenses beyond its Eldritch shield.</desc>
+    <unlock id="ship_LILY_SIREN_RHYME_TRANSPORT_unlock"/>
+    <systemList>
+        <artillery power="2" max="5" room="13" start="true" weapon="LILY_SIREN_TRANSPORT_RHYME_ARTILLERY" img="room_artillery" />
+        <battery power="2" max="3" room="20" start="true" img="room_battery_15" />
+        <cloaking power="1" room="9" start="false" img="room_cloaking_4" />
+        <clonebay power="1" room="3" start="true">
+            <slot>
+                <number>0</number>
+            </slot>
+        </clonebay>
+        <doors power="1" room="12" start="false" img="room_doors_6">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </doors>
+        <drones power="2" max="8" room="8" start="false" img="room_drones_12" />
+        <engines power="1" room="19" start="true" img="room_engines_lily_1">
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </engines>
+        <hacking power="1" room="10" start="false" img="room_hacking_7" />
+        <medbay power="1" room="3" start="false" img="room_medbay_16">
+            <slot>
+                <number>-2</number>
+            </slot>
+        </medbay>
+        <mind power="2" max="4" room="2" start="false" img="room_mind_2" />
+        <oxygen power="1" room="18" start="true" img="room_oxygen_18" />
+        <pilot power="1" room="14" start="true" img="room_pilot_2">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </pilot>
+        <sensors power="1" room="1" start="false" img="room_sensors_6">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </sensors>
+        <shields power="1" max="8" room="4" start="true" img="room_shields_11">
+            <slot>
+                <direction>down</direction>
+                <number>1</number>
+            </slot>
+        </shields>
+        <teleporter power="1" room="6" start="true" />
+        <temporal power="1" max="4" room="11" start="true" img="room_temporal_3" />
+        <weapons power="4" room="5" start="true" img="room_weapons">
+            <slot>
+                <direction>up</direction>
+                <number>1</number>
+            </slot>
+        </weapons>
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>2</droneSlots>
+    <weaponList missiles="10" count="4">
+        <weapon name="LILY_BEAM_SIREN_4_CHAOS" />
+    </weaponList>
+    <droneList drones="5" count="2" />
+    <health amount="20" />
+    <maxPower amount="2" />
+    <crewCount amount="1" class="siren_harpy" />
+    <crewCount amount="1" class="siren_harpy" />
+    <crewCount amount="1" class="siren_harpy" />
+    <aug name="RHYME_SHIELDS" />
+    <aug name="EX_LAB_LILY_SIREN_DAMAGE" />
+    <mv-mapImage>map_icon_lily_player_siren_transport_rhyme</mv-mapImage>
+</shipBlueprint>
+
+
+<shipBlueprint name="LILY_PLAYER_SIREN_HER_TRANSPORT" layout="lily_player_siren_transport_her" img="lily_player_siren_transport_her">
+    <class>Lily's Crewser</class>
+    <name>Void Star</name>
+    <desc>A ship empowered by Her eldritch powers themselves, it is a perfect vessel for Lily to enact Her will.</desc>
+    <unlock id="ship_LILY_SIREN_HER_TRANSPORT_unlock"/>
+    <systemList>
+        <artillery power="2" max="5" room="13" start="true" weapon="LILY_SIREN_TRANSPORT_HER_ARTILLERY" img="room_artillery" />
+        <battery power="2" max="4" room="0" start="false" img="room_battery_19" />
+        <cloaking power="1" room="9" start="false" img="room_cloaking_4" />
+        <clonebay power="1" room="3" start="true">
+            <slot>
+                <number>0</number>
+            </slot>
+        </clonebay>
+        <doors power="1" room="17" start="false" img="room_doors">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </doors>
+        <drones power="2" max="16" room="5" start="false" img="room_drones_12" />
+        <engines power="2" room="19" start="true" img="room_engines_lily_1">
+            <slot>
+                <direction>up</direction>
+                <number>0</number>
+            </slot>
+        </engines>
+        <hacking power="1" room="10" start="false" img="room_hacking_7" />
+        <medbay power="1" room="3" start="false" img="room_medbay_16">
+            <slot>
+                <number>-2</number>
+            </slot>
+        </medbay>
+        <mind power="2" max="4" room="2" start="true" img="room_mind_2" />
+        <oxygen power="1" room="18" start="false" img="room_oxygen_18" />
+        <pilot power="1" room="14" start="true" img="room_pilot_2">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </pilot>
+        <sensors power="2" room="16" start="true" img="room_sensors">
+            <slot>
+                <direction>right</direction>
+                <number>1</number>
+            </slot>
+        </sensors>
+        <shields power="2" max="16" room="7" start="false" img="room_shields_13">
+            <slot>
+                <direction>down</direction>
+                <number>3</number>
+            </slot>
+        </shields>
+        <teleporter power="1" room="21" start="true" />
+        <temporal power="1" max="4" room="11" start="true" img="room_temporal_3" />
+        <weapons power="4" max="16" room="6" start="true" img="room_weapons">
+            <slot>
+                <direction>up</direction>
+                <number>1</number>
+            </slot>
+        </weapons>
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>2</droneSlots>
+    <weaponList missiles="10" count="4">
+        <weapon name="LILY_BEAM_SIREN_LOCK_ELITE" />
+        <weapon name="LILY_BEAM_SIREN_FIRE_ELITE" />
+    </weaponList>
+    <droneList drones="5" count="2" />
+    <health amount="15" />
+    <maxPower amount="12" />
+    <aug name="LILY_HER_EMPOWERMENT" />
+    <mv-mapImage>map_icon_lily_player_siren_transport_her</mv-mapImage>
+</shipBlueprint>
+
+
+
 <!--shipBlueprint name="LILY_PLAYER_FED_BEAM_BATTLESHIP" layout="lily_player_fed_beam_battleship" img="lily_player_fed_beam_battleship">
     <class>Unity Beam Battleship</class>
     <name>Project Excalibur</name>
@@ -6232,7 +7211,7 @@ Conservative weapons use no power on their own but require the system itself to 
     <aug name="EX_AUTO_COOLDOWN" />
 </shipBlueprint-->
 
-
+<!--
 <shipBlueprint name="LILY_PLAYER_FED_BEAM_BATTLESHIP" layout="lily_player_fed_beam_battleship" img="lily_player_fed_beam_battleship">
     <class>Unity Beam Battleship</class>
     <name>Project Excalibur</name>
@@ -6319,7 +7298,7 @@ Conservative weapons use no power on their own but require the system itself to 
     <aug name="LILY_TARGETING_BYPASS_LOCKED" />
     <aug name="EX_AUTO_COOLDOWN" />
 </shipBlueprint>
-
+-->
 
 
 </FTL>

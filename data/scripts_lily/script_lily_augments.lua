@@ -1,6 +1,6 @@
 local vter = mods.multiverse.vter
 local INT_MAX = 2147483647
-
+local userdata_table = mods.multiverse.userdata_table
 
 
 script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, function(ship)
@@ -247,5 +247,45 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                 end
             end 
         end
+
+        if shipManager and shipManager:HasAugmentation("LILY_HER_EMPOWERMENT") > 0 then
+
+            --Man and repair systems
+            for sys in vter(shipManager.vSystemList) do
+                ---@type Hyperspace.ShipSystem
+                sys = sys
+                if sys then
+                    sys:PartialRepair(3, true)
+                    sys.iActiveManned = math.max(sys.iActiveManned, 3)
+                end
+            end
+
+            --Repair hull by a random amount every second
+            if not userdata_table(shipManager, "mods.lilybeams.her_regen").timer then
+                userdata_table(shipManager, "mods.lilybeams.her_regen").timer = Hyperspace.TimerHelper(true)
+            end
+            ---@type Hyperspace.TimerHelper
+            local timer = userdata_table(shipManager, "mods.lilybeams.her_regen").timer
+            if timer then
+                if not timer:Running() then
+                    timer.currTime = 0
+                    timer:Start_Float(1.0)
+                end
+                timer:Update()
+
+                if timer:Done() then
+                    if shipManager.ship.hullIntegrity.first <= shipManager.ship.hullIntegrity.second / 2.0 then
+                        shipManager:DamageHull(-math.random(1, math.random(2, math.random(7))), true)
+                    end
+                    shipManager:DamageHull(-math.random(0, math.random(1, math.random(5))), true)
+                    timer:Stop()
+                    timer.currTime = 0
+                    timer:Start_Float(1.0)
+                end
+
+            end
+
+        end
+    
     end)
 

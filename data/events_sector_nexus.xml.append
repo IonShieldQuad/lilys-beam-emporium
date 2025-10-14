@@ -1,4 +1,136 @@
 
+<mod:findName name="START_NEXUS" type="event">
+    <mod:findLike type="choice">
+        <mod:findLike type="event">            <!-- START_NEXUS_2 -->
+            <mod:findLike type="choice">
+                <mod:findLike type="event">                    <!-- START_NEXUS_3 -->
+                    <mod:findLike type="choice">                        <!-- 'We were sent by ...' choices -->
+                        <mod:findLike type="event">
+                            <mod:findLike type="choice">
+                                <mod:findLike type="event">                                    <!-- START_NEXUS_4 -->
+                                    <mod:findLike type="choice">                                        <!-- deeper chain than other paths -->
+                                        <mod:findLike type="event">
+                                            <mod:findWithChildLike type="choice" child-type="text">                                                <!-- Yes please or No thanks -->
+                                                <mod:selector>Yes please.</mod:selector>
+                                                <mod:findLike type="event">
+                                                    <mod-append:choice hidden="true" req="LILY_PATRONAGE">
+                                                        <text>(Lily) "So this is indeed the place..."</text>
+                                                        <event>
+                                                            <text>Lily seems completely unfazed by Slug's speech, as if it was all well known to her. "So, this is indeed the place. Not much different from the expectations... Now, if you excuse me, I have business to do here, with your employee, and you will NOT stand in my way."
+		
+G-Van seems utterly confused at her speech. "Um... You have businesss here?... With Prime himself?! I'm afraid I don't know who you... are... Neither do you stand a chance against Prime... Unless...? If She hasss decided to... flip the tables and send you here... No... I refussse to believe thissss."
+
+"And your lovely 'toy' pointed at our ship wont do much help to you either..."
+
+Lily does nothing but grins and snaps her fingers, with a flash of red and blue energy sparking between them.</text>
+                                                            <choice hidden="true">
+                                                                <text>Continue...</text>
+                                                                <event>
+                                                                <text>Suddenly, whatever limits your systems had are lifted in an instant... Get ready to fight!</text>
+                                                                    <status type="clear" target="player" system="weapons" amount="100"/>
+                                                                    <status type="clear" target="player" system="shields" amount="100"/>
+                                                                    <status type="clear" target="player" system="engines" amount="100"/>
+                                                                    <status type="clear" target="player" system="cloaking" amount="100"/>
+                                                                    <status type="clear" target="player" system="drones" amount="100"/>
+                                                                    <status type="clear" target="player" system="doors" amount="100"/>
+                                                                    <status type="clear" target="player" system="sensors" amount="100"/>
+                                                                    <status type="clear" target="player" system="hacking" amount="100"/>
+                                                                    <status type="clear" target="player" system="mind" amount="100"/>
+                                                                    <status type="clear" target="player" system="temporal" amount="100"/>
+                                                                    <status type="clear" target="player" system="teleporter" amount="100"/>
+                                                                    <status type="clear" target="player" system="artillery" amount="100"/>
+                                                                    <status type="clear" target="player" system="reactor" amount="100"/>
+                                                                    <triggeredEvent event="NEXUS_ENTER_GLITCH_LILY" time="2"/>
+                                                                    <ship hostile="true"/>
+                                                                    <choice hidden="true">
+                                                                        <text>Continue...</text>
+                                                                        <event load="COMBAT_CHECK"/>
+                                                                    </choice>
+                                                                </event>
+                                                            </choice>
+                                                        </event>
+                                                    </mod-append:choice>
+                                                </mod:findLike>
+                                            </mod:findWithChildLike>
+                                            <mod:findWithChildLike type="choice" child-type="text">                                                <!-- Yes please or No thanks -->
+                                                <mod:selector>No thanks.</mod:selector>
+                                                <mod:findLike type="event">
+                                                    <mod-append:choice hidden="true" req="LILY_PATRONAGE">
+                                                        <text>(Lily) "There is..."</text>
+                                                        <event>
+                                                            <text>Lily seems completely unfazed by Slug's speech, with unusually stern look in her eyes. 
+
+"And by Her eldritch authority that I enforce, prepare to get obliterated, pest."
+
+Lily does nothing but grins and snaps her fingers, with a flash of red and blue energy sparking between them.</text>
+                                                            <choice hidden="true">
+                                                                <text>Continue...</text>
+                                                                <event>
+                                                                    <text>Suddenly, whatever limits your systems had are lifted in an instant... Get ready to fight!</text>
+                                                                    <status type="clear" target="player" system="weapons" amount="100"/>
+                                                                    <status type="clear" target="player" system="shields" amount="100"/>
+                                                                    <status type="clear" target="player" system="engines" amount="100"/>
+                                                                    <status type="clear" target="player" system="cloaking" amount="100"/>
+                                                                    <status type="clear" target="player" system="drones" amount="100"/>
+                                                                    <status type="clear" target="player" system="doors" amount="100"/>
+                                                                    <status type="clear" target="player" system="sensors" amount="100"/>
+                                                                    <status type="clear" target="player" system="hacking" amount="100"/>
+                                                                    <status type="clear" target="player" system="mind" amount="100"/>
+                                                                    <status type="clear" target="player" system="temporal" amount="100"/>
+                                                                    <status type="clear" target="player" system="teleporter" amount="100"/>
+                                                                    <status type="clear" target="player" system="artillery" amount="100"/>
+                                                                    <status type="clear" target="player" system="reactor" amount="100"/>
+                                                                    <triggeredEvent event="NEXUS_ENTER_GLITCH_LILY" time="2"/>
+                                                                    <ship hostile="true"/>
+                                                                    <choice hidden="true">
+                                                                        <text>Continue...</text>
+                                                                        <event load="COMBAT_CHECK"/>
+                                                                    </choice>
+                                                                </event>
+                                                            </choice>
+                                                        </event>
+                                                    </mod-append:choice>
+                                                </mod:findLike>
+                                            </mod:findWithChildLike>
+                                        </mod:findLike>
+                                    </mod:findLike>
+                                </mod:findLike>
+                            </mod:findLike>
+                        </mod:findLike>
+                    </mod:findLike>
+                </mod:findLike>
+            </mod:findLike>
+        </mod:findLike>
+    </mod:findLike>
+</mod:findName>
+
+<event name="NEXUS_ENTER_GLITCH_LILY">
+    <backgroundObject name="GLITCH">
+        <layer z="0">front</layer>
+        <spawnArea x="295" y="188" w="0" h="0" center="true"/>
+        <anim>glitch</anim>
+        <active>true</active>
+    </backgroundObject>
+    <playSound>glitch</playSound>
+    <triggeredEvent event="NEXUS_ENTER_GLITCH_LILY_CONTINUE" time="1" clearOnJump="true"/>
+</event>
+<event name="NEXUS_ENTER_GLITCH_LILY_CONTINUE">
+    <text>To your surprise, G-Vans systems are suddenly starting to malfunction! You suspect that whetever Lily has done has redirected the jamming to him! It looks like he's isn't going to be much of a threat in a state like this!</text>
+    <clearBackgroundObject name="GLITCH"/>
+    <status type="limit" target="enemy" system="weapons" amount="0"/>
+    <status type="limit" target="enemy" system="shields" amount="8"/>
+    <status type="limit" target="enemy" system="engines" amount="4"/>
+    <status type="limit" target="enemy" system="cloaking" amount="1"/>
+    <status type="limit" target="enemy" system="drones" amount="0"/>
+    <status type="limit" target="enemy" system="doors" amount="1"/>
+    <status type="limit" target="enemy" system="sensors" amount="2"/>
+    <status type="limit" target="enemy" system="hacking" amount="0"/>
+    <status type="limit" target="enemy" system="mind" amount="0"/>
+    <status type="limit" target="enemy" system="temporal" amount="2"/>
+    <status type="limit" target="enemy" system="teleporter" amount="1"/>
+    <status type="limit" target="enemy" system="artillery" amount="0"/>
+    <status type="limit" target="enemy" system="reactor" amount="15"/>
+</event>
 
 <mod:findName type="event" name="SYLVAN_PRIME_QUESTIONS">
     <mod-append:choice req="LILY_PATRONAGE" blue="true">

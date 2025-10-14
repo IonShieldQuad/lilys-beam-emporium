@@ -1,0 +1,17 @@
+<mod:findName type="event" name="TRUE_LAST_STAND_START">
+    <mod:findLike type="choice">
+        <mod:selector lvl="-999"/>
+        <mod:findLike type="event">
+            <mod-append:choice hidden="true" max_group="1" req="LILY_SHIP_HER" blue="false">
+                <text>Contact Federation command.</text>
+                <event>
+                    <text>On the vidscreen appears several Federation and Engi officers, as well as Admiral Tully in the center. They appear to recoil in fear at the sigh of your ship. "The pure blackness of your ship, it's like it's made from pure evil... And just looking at these lights makes my head hurt... Who in the Newton's name ARE you?!!". After you explain that you are not hostile, they seem somewhat relieved. "In this case... please g-go and destroy that Flagship... I'm certain that the rebels stand no chance agaist you."</text>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event load="LAST_STAND_START_2"/>
+                    </choice>
+                </event>
+            </mod-append:choice>
+        </mod:findLike>
+    </mod:findLike>
+</mod:findName>

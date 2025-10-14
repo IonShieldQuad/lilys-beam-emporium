@@ -27,7 +27,7 @@ Anyway, it means that She considers you worthy and directed us to work together.
 Beam emporium introduction:
 
 <text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
-It hails you: "Welcome to the Lily's Beam Emporium!--
+It hails you: "Welcome to Lily's Beam Emporium!--
 A wide collection of beam and pinpoint weapons available for sale--"
 You are pretty sure it wasn't there minutes ago...</text>
 
@@ -35,7 +35,7 @@ You are pretty sure it wasn't there minutes ago...</text>
 
 Showing Lily the "Mysterious note":
 
-<text>Your remember about the mysterious note you found.</text>
+<text>You remember about the mysterious note you found.</text>
         <event>
             <text>You give the mysterious note to Lily and wait her to respond.</text>
             <choice hidden="true">
@@ -121,7 +121,7 @@ Trying to go to the Emporium with CEL crew/equipment (Lily hates CEL and hides f
 Meeting Lily with TOWR - I tried to make it have more rhymes
 
 <text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
-It hails you: "Welcome to the Lily's Beam Emporium!--
+It hails you: "Welcome to Lily's Beam Emporium!--
 ... Wait. Is this The one Who Rhymes themselves?!
 As a renegade, no less?! Hold on I must be dreaming, am I?
 Didn't expect you again... much less in this circumstances--

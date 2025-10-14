@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Copyright (c) 2012 by Subset Games. All rights reserved.-->
+<img x="-60" y="-34" w="460" h="383" />
+<offsets>
+	<floor x="54" y="28" />
+	<cloak x="-8" y="-8" />
+</offsets>
+<weaponMounts>
+	<mount x="318" y="46" rotate="true" mirror="true" gib="-1" slide="up" />
+	<mount x="318" y="337" rotate="true" mirror="false" gib="-1" slide="down" />
+	<mount x="378" y="118" rotate="true" mirror="true" gib="-1" slide="right" />
+	<mount x="378" y="262" rotate="true" mirror="false" gib="-1" slide="right" />
+	<mount x="314" y="191" rotate="true" mirror="true" gib="-1" slide="no" />
+</weaponMounts>
+<thrusters sync="true">
+	<thruster y="158" x="-54">lily_siren_transport_rhyme_thruster_center</thruster>
+	<thruster y="6" x="42">lily_siren_transport_rhyme_thruster_top</thruster>
+	<thruster y="298" x="42">lily_siren_transport_rhyme_thruster_bot</thruster>
+</thrusters>
+<mv-hullAnims sync="true">
+	<hullAnim y="127" x="210">lily_siren_transport_rhyme_column_light_1</hullAnim>
+	<hullAnim y="127" x="306">lily_siren_transport_rhyme_column_light_2</hullAnim>
+</mv-hullAnims>
+<explosion />
+

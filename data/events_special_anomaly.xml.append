@@ -250,7 +250,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
                     
 
 <event name="LILY_CHAOS_POLICE_GENERAL_HIGH">
-    <text>"And according to your records... You are indeed a very notorious criminal in whole of the federation!..."
+    <text>"And according to your records... You are indeed a very notorious criminal in whole of the Federation!..."
 "...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
@@ -384,7 +384,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 
 
 <event name="LILY_CHAOS_POLICE_GENERAL">
-    <text>"And according to your records... You are indeed a criminal according to the federation!..."
+    <text>"And according to your records... You are indeed a criminal according to the Federation!..."
 "...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>

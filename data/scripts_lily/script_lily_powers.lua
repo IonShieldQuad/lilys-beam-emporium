@@ -172,18 +172,55 @@ script.on_internal_event(Defines.InternalEvents.ON_MOUSE_L_BUTTON_DOWN, function
             local target2 = Hyperspace.Pointf(mousePosLocal.x, mousePosLocal.y + 1)
             --print("target_ok")
 
+            local lilyArr = {}
+
+            local playerShipManager = Hyperspace.ships.player
+            local enemyShipManager = Hyperspace.ships.player
+
+            if playerShipManager then
+                for crew in vter(playerShipManager.vCrewList) do
+                    ---@type Hyperspace.CrewMember
+                    crew = crew
+                    if crew.species == "unique_lily_avatar" and crew.iShipId == 0 and not (crew.bOutOfGame or crew.bMindControlled or crew.bDead) then
+                        lilyArr[#lilyArr+1] = crew
+                    end
+                end
+            end
+
+            if enemyShipManager then
+                for crew in vter(enemyShipManager.vCrewList) do
+                    ---@type Hyperspace.CrewMember
+                    crew = crew
+                    if crew.species == "unique_lily_avatar" and crew.iShipId == 0 and not (crew.bOutOfGame or crew.bMindControlled or crew.bDead) then
+                        lilyArr[#lilyArr + 1] = crew
+                    end
+                end
+            end
+
+            local start = get_random_point_on_radius(target1, 600)
+            local startSpace = shipAtMouse
+
+
+
+            if lilyArr and #lilyArr > 0 then
+                ---@type Hyperspace.CrewMember
+                local avatar = lilyArr[math.random(#lilyArr)]
+
+                start = Hyperspace.Pointf(avatar.x, avatar.y)
+                startSpace = avatar.currentShipId
+            end
+
             if (Hyperspace.playerVariables.lily_ion_active == 1) then
-                local start = get_random_point_on_radius(target1, 600)
                 local beam = spaceManager:CreateBeam(
                     Hyperspace.Blueprints:GetWeaponBlueprint("LILY_POWER_ION"),
                     start,
-                    shipAtMouse,
+                    startSpace,
                     1 - shipAtMouse,
                     target1,
                     target2,
                     shipAtMouse,
                     1,
-                    -0.1)
+                    math.random() * 720 - 360)
                 Hyperspace.Sounds:PlaySoundMix("ionShoot1", -1, false)
             end
 
@@ -191,7 +228,7 @@ script.on_internal_event(Defines.InternalEvents.ON_MOUSE_L_BUTTON_DOWN, function
                 --print("beam_ok")
                 --print(spaceManager)
                 --print(spaceManager ~= nil)
-                local start = get_random_point_on_radius(target1, 600)
+                --local start = get_random_point_on_radius(target1, 600)
                 --offset_point_direction(mousePosLocal.x, mousePosLocal.y, math.random * 360, 600)
                 --print(start.x .. " | " .. start.y)
                 --print(target1.x .. " | " .. target1.x)
@@ -199,13 +236,13 @@ script.on_internal_event(Defines.InternalEvents.ON_MOUSE_L_BUTTON_DOWN, function
                 local beam = spaceManager:CreateBeam(
                     Hyperspace.Blueprints:GetWeaponBlueprint("LILY_POWER_BEAM"),
                     start,
-                    shipAtMouse,
+                    startSpace,
                     1 - shipAtMouse,
                     target1,
                     target2,
                     shipAtMouse,
                     1,
-                    -0.1)
+                    math.random() * 720 - 360)
                 --print("beam_ok3")
                 Hyperspace.Sounds:PlaySoundMix("focus_weak", -1, false)
                 Hyperspace.playerVariables.lily_beam_active = 0
@@ -257,3 +294,60 @@ script.on_internal_event(Defines.InternalEvents.SYSTEM_BOX_MOUSE_CLICK, function
     print("Diff1", systemBox.location:Distance(Hyperspace.Mouse.position))
     print("Diff2", systemBox.location:RelativeDistance(Hyperspace.Mouse.position))--]]
 end, INT_MAX)
+
+
+
+-- Mind control ability (by arc)
+
+
+local resists_mind_control = mods.multiverse.resists_mind_control
+local can_be_mind_controlled = mods.multiverse.can_be_mind_controlled
+
+script.on_internal_event(Defines.InternalEvents.ACTIVATE_POWER, function(power, ship)
+    if power.crew.blueprint.name ~= "siren_harpy" then
+        return
+    end
+    local roomId = power.crew.iRoomId
+    local mindControlledCrew = 0
+    local cancelled = false
+
+    --Try to cancel mind control on allies first
+    for crewmem in vter(ship.vCrewList) do
+        ---@type Hyperspace.CrewMember
+        crewmem = crewmem
+        local doControl = crewmem.iRoomId == roomId and
+            crewmem.currentShipId == ship.iShipId and
+            crewmem.iShipId == power.crew.iShipId and
+            crewmem ~= power.crew and
+            crewmem.bMindControlled
+        if doControl then
+            crewmem:SetMindControl(false)
+            cancelled = true
+        end
+        if cancelled then
+            break
+        end
+    end
+
+    --Try to mind control enemies
+    if not cancelled then
+        for crewmem in vter(ship.vCrewList) do
+            local doControl = crewmem.iRoomId == roomId and
+            crewmem.currentShipId == ship.iShipId and
+            crewmem.iShipId ~= power.crew.iShipId and
+            crewmem ~= power.crew and
+            crewmem.bMindControlled == false
+            if doControl then
+                if can_be_mind_controlled(crewmem) then
+                    crewmem:SetMindControl(true)
+                    local mcTable = userdata_table(crewmem, "mods.mv.crewStuff")
+                    mcTable.mcTime = math.max(10, mcTable.mcTime or 0)
+                    mindControlledCrew = mindControlledCrew + 1
+                    if mindControlledCrew >= 1 then break end
+                elseif resists_mind_control(crewmem) then
+                    crewmem.bResisted = true
+                end
+            end
+        end
+    end
+end)

@@ -160,22 +160,22 @@
 	<anim name="unique_lily_avatar_shoot_down">
 		<sheet>unique_lily_avatar</sheet>
 		<desc length="6" x="0" y="10"/>
-		<time>0.2</time>
+		<time>2</time>
 	</anim>
 	<anim name="unique_lily_avatar_shoot_right">
 		<sheet>unique_lily_avatar</sheet>
 		<desc length="6" x="6" y="10"/>
-		<time>0.2</time>
+		<time>2</time>
 	</anim>
 	<anim name="unique_lily_avatar_shoot_up">
 		<sheet>unique_lily_avatar</sheet>
 		<desc length="6" x="0" y="9"/>
-		<time>0.2</time>
+		<time>2</time>
 	</anim>
 	<anim name="unique_lily_avatar_shoot_left">
 		<sheet>unique_lily_avatar</sheet>
 		<desc length="6" x="6" y="9"/>
-		<time>0.2</time>
+		<time>2</time>
 	</anim>
 	<anim name="unique_lily_avatar_fire_down">
 		<sheet>unique_lily_avatar</sheet>
@@ -552,6 +552,127 @@
 <anim name="lily_frost_debuff">
 	<sheet>lily_frost_debuff</sheet>
 	<desc length="1" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="lily_chaos_her_1x1" w="35" h="35" fw="35" fh="35">effects_lily/chaos_her_1x1.png</animSheet>
+<anim name="lily_chaos_her_1x1">
+	<sheet>lily_chaos_her_1x1</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_her_1x2" w="35" h="70" fw="35" fh="70">effects_lily/chaos_her_1x2.png</animSheet>
+<anim name="lily_chaos_her_1x2">
+	<sheet>lily_chaos_her_1x2</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_her_1x3" w="35" h="105" fw="35" fh="105">effects_lily/chaos_her_1x3.png</animSheet>
+<anim name="lily_chaos_her_1x3">
+	<sheet>lily_chaos_her_1x3</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_her_2x1" w="70" h="35" fw="70" fh="35">effects_lily/chaos_her_2x1.png</animSheet>
+<anim name="lily_chaos_her_2x1">
+	<sheet>lily_chaos_her_2x1</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_her_3x1" w="105" h="35" fw="105" fh="35">effects_lily/chaos_her_3x1.png</animSheet>
+<anim name="lily_chaos_her_3x1">
+	<sheet>lily_chaos_her_3x1</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_her_2x2" w="70" h="70" fw="70" fh="70">effects_lily/chaos_her_2x2.png</animSheet>
+<anim name="lily_chaos_her_2x2">
+	<sheet>lily_chaos_her_2x2</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_her_2x3" w="70" h="105" fw="70" fh="105">effects_lily/chaos_her_2x3.png</animSheet>
+<anim name="lily_chaos_her_2x3">
+	<sheet>lily_chaos_her_2x3</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="lily_chaos_azure_1x1" w="35" h="35" fw="35" fh="35">effects_lily/chaos_azure_1x1.png</animSheet>
+<anim name="lily_chaos_azure_1x1">
+	<sheet>lily_chaos_azure_1x1</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_azure_1x2" w="35" h="70" fw="35" fh="70">effects_lily/chaos_azure_1x2.png</animSheet>
+<anim name="lily_chaos_azure_1x2">
+	<sheet>lily_chaos_azure_1x2</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_azure_1x3" w="35" h="105" fw="35" fh="105">effects_lily/chaos_azure_1x3.png</animSheet>
+<anim name="lily_chaos_azure_1x3">
+	<sheet>lily_chaos_azure_1x3</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_azure_2x1" w="70" h="35" fw="70" fh="35">effects_lily/chaos_azure_2x1.png</animSheet>
+<anim name="lily_chaos_azure_2x1">
+	<sheet>lily_chaos_azure_2x1</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_azure_3x1" w="105" h="35" fw="105" fh="35">effects_lily/chaos_azure_3x1.png</animSheet>
+<anim name="lily_chaos_azure_3x1">
+	<sheet>lily_chaos_azure_3x1</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_azure_2x2" w="70" h="70" fw="70" fh="70">effects_lily/chaos_azure_2x2.png</animSheet>
+<anim name="lily_chaos_azure_2x2">
+	<sheet>lily_chaos_azure_2x2</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+<animSheet name="lily_chaos_azure_2x3" w="70" h="105" fw="70" fh="105">effects_lily/chaos_azure_2x3.png</animSheet>
+<anim name="lily_chaos_azure_2x3">
+	<sheet>lily_chaos_azure_2x3</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>1</time>
+</anim>
+
+<animSheet name="lily_siren_dream_buff_1" w="455" h="33" fw="35" fh="33">people_lily/siren_dream_buff_1.png</animSheet>
+<anim name="lily_siren_dream_buff_1">
+	<sheet>lily_siren_dream_buff_1</sheet>
+	<desc length="13" x="0" y="0"/>
+	<time>2.0</time>
+</anim>
+
+<animSheet name="lily_siren_dream_buff_2" w="280" h="33" fw="35" fh="33">people_lily/siren_dream_buff_2.png</animSheet>
+<anim name="lily_siren_dream_buff_2">
+	<sheet>lily_siren_dream_buff_2</sheet>
+	<desc length="8" x="0" y="0"/>
+	<time>2.0</time>
+</anim>
+
+<animSheet name="lily_siren_withering_debuff_1" w="280" h="33" fw="35" fh="33">people_lily/siren_withering_debuff_1.png</animSheet>
+<anim name="lily_siren_withering_debuff_1">
+	<sheet>lily_siren_withering_debuff_1</sheet>
+	<desc length="8" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="lily_madness_elite2" w="70" h="14" fw="14" fh="14">people_lily/madness_elite2.png</animSheet>
+<anim name="lily_madness_elite2">
+	<sheet>lily_madness_elite2</sheet>
+	<desc length="5" x="0" y="0"/>
+	<time>1.0</time>
+</anim>
+
+<animSheet name="lily_madness_azure" w="70" h="14" fw="14" fh="14">people_lily/madness_azure.png</animSheet>
+<anim name="lily_madness_azure">
+	<sheet>lily_madness_azure</sheet>
+	<desc length="5" x="0" y="0"/>
 	<time>1.0</time>
 </anim>
 
@@ -1272,6 +1393,53 @@
 		<chargeImage>weapon_lily/siren_transport_c_artillery_glow.png</chargeImage>
 	</weaponAnim>
 
+	<animSheet name="lily_siren_transport_rhyme_artillery" w="1111" h="82" fw="11" fh="82">weapon_lily/siren_transport_rhyme_artillery.png</animSheet>
+	<weaponAnim name="lily_siren_transport_rhyme_artillery">
+		<sheet>lily_siren_transport_rhyme_artillery</sheet>
+		<desc length="101" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="6" y="2"/>
+		<mountPoint x="6" y="82"/>
+		<chargeImage>weapon_lily/siren_transport_rhyme_artillery_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_mv_siren_transport_artillery" w="1111" h="82" fw="11" fh="82">weapon_lily/mv_siren_transport_artillery.png</animSheet>
+	<weaponAnim name="lily_mv_siren_transport_artillery">
+		<sheet>lily_mv_siren_transport_artillery</sheet>
+		<desc length="101" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="6" y="2"/>
+		<mountPoint x="6" y="82"/>
+		<chargeImage>weapon_lily/mv_siren_transport_artillery_glow.png</chargeImage>
+	</weaponAnim>
+
+	<animSheet name="lily_crystal_shard_azure" w="32" h="80" fw="32" fh="80">projectiles/lily_crystal_azure.png</animSheet>
+	<anim name="lily_crystal_shard_azure">
+		<sheet>lily_crystal_shard_azure</sheet>
+		<desc length="1" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+	<animSheet name="lily_explosion_crystal_azure" w="288" h="48" fw="48" fh="48">effects/lily_explosion_crystal_azure.png</animSheet>
+	<anim name="lily_explosion_crystal_azure">
+		<sheet>lily_explosion_crystal_azure</sheet>
+		<desc length="6" x="0" y="0"/>
+		<time>1.0</time>
+	</anim>
+
+	<animSheet name="lily_siren_transport_her_artillery" w="1717" h="100" fw="17" fh="100">weapon_lily/siren_transport_her_artillery.png</animSheet>
+	<weaponAnim name="lily_siren_transport_her_artillery">
+		<sheet>lily_siren_transport_her_artillery</sheet>
+		<desc length="101" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="9" y="17"/>
+		<mountPoint x="9" y="97"/>
+		<chargeImage>weapon_lily/siren_transport_her_artillery_glow.png</chargeImage>
+	</weaponAnim>
+
 
 <!--Damaged-->
 <animSheet name="lily_siren_transport_column_light_damaged_a" w="9500" h="129" fw="95" fh="129">thrusters/lily_siren_transport_column_light_damaged_a.png</animSheet>
@@ -1323,6 +1491,19 @@
 	<time>5</time>
 </anim>
 
+
+<animSheet name="lily_siren_transport_rhyme_column_light_1" w="9600" h="129" fw="96" fh="129">thrusters/lily_siren_transport_rhyme_column_light_1.png</animSheet>
+<anim name="lily_siren_transport_rhyme_column_light_1">
+	<sheet>lily_siren_transport_rhyme_column_light_1</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_siren_transport_rhyme_column_light_2" w="9400" h="129" fw="94" fh="129">thrusters/lily_siren_transport_rhyme_column_light_2.png</animSheet>
+<anim name="lily_siren_transport_rhyme_column_light_2">
+	<sheet>lily_siren_transport_rhyme_column_light_2</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
 
 <!--Slot A/B-->
 <animSheet name="lily_siren_transport_a_column_light_1" w="9600" h="129" fw="96" fh="129">thrusters/lily_siren_transport_a_column_light_1.png</animSheet>
@@ -1424,6 +1605,57 @@
 	<time>5</time>
 </anim>
 
+<!--MV-->
+<animSheet name="lily_mv_siren_transport_column_light_1" w="9600" h="129" fw="96" fh="129">thrusters/lily_mv_siren_transport_column_light_1.png</animSheet>
+<anim name="lily_mv_siren_transport_column_light_1">
+	<sheet>lily_mv_siren_transport_column_light_1</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_mv_siren_transport_column_light_2" w="9400" h="129" fw="94" fh="129">thrusters/lily_mv_siren_transport_column_light_2.png</animSheet>
+<anim name="lily_mv_siren_transport_column_light_2">
+	<sheet>lily_mv_siren_transport_column_light_2</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_mv_siren_transport_bands_center_back" w="5100" h="13" fw="51" fh="13">thrusters/lily_mv_siren_transport_bands_center_back.png</animSheet>
+<anim name="lily_mv_siren_transport_bands_center_back">
+	<sheet>lily_mv_siren_transport_bands_center_back</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_mv_siren_transport_bands_top_back" w="5500" h="9" fw="55" fh="9">thrusters/lily_mv_siren_transport_bands_top_back.png</animSheet>
+<anim name="lily_mv_siren_transport_bands_top_back">
+	<sheet>lily_mv_siren_transport_bands_top_back</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_mv_siren_transport_bands_bottom_back" w="5500" h="9" fw="55" fh="9">thrusters/lily_mv_siren_transport_bands_bottom_back.png</animSheet>
+<anim name="lily_mv_siren_transport_bands_bottom_back">
+	<sheet>lily_mv_siren_transport_bands_bottom_back</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_mv_siren_transport_bands_center_front" w="8200" h="11" fw="82" fh="11">thrusters/lily_mv_siren_transport_bands_center_front.png</animSheet>
+<anim name="lily_mv_siren_transport_bands_center_front">
+	<sheet>lily_mv_siren_transport_bands_center_front</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_mv_siren_transport_bands_top_front" w="10100" h="35" fw="101" fh="35">thrusters/lily_mv_siren_transport_bands_top_front.png</animSheet>
+<anim name="lily_mv_siren_transport_bands_top_front">
+	<sheet>lily_mv_siren_transport_bands_top_front</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+<animSheet name="lily_mv_siren_transport_bands_bottom_front" w="10100" h="35" fw="101" fh="35">thrusters/lily_mv_siren_transport_bands_bottom_front.png</animSheet>
+<anim name="lily_mv_siren_transport_bands_bottom_front">
+	<sheet>lily_mv_siren_transport_bands_bottom_front</sheet>
+	<desc length="100" x="0" y="0"/>
+	<time>5</time>
+</anim>
+
+
 
 <!--Thrusters-->
 <animSheet name="lily_siren_transport_a_thruster_center" w="2920" h="67" fw="73" fh="67">thrusters/lily_siren_transport_a_thruster_center.png</animSheet>
@@ -1452,6 +1684,25 @@
 	<time>2</time>
 </anim>
 
+<animSheet name="lily_mv_siren_transport_thruster_center" w="2920" h="67" fw="73" fh="67">thrusters/lily_mv_siren_transport_thruster_center.png</animSheet>
+<anim name="lily_mv_siren_transport_thruster_center">
+	<sheet>lily_mv_siren_transport_thruster_center</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
+<animSheet name="lily_mv_siren_transport_thruster_side" w="3720" h="81" fw="93" fh="80">thrusters/lily_mv_siren_transport_thruster_side.png</animSheet>
+<anim name="lily_mv_siren_transport_thruster_side">
+	<sheet>lily_mv_siren_transport_thruster_side</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
+<animSheet name="lily_mv_siren_transport_speedlines" w="199" h="359" fw="199" fh="359">thrusters/lily_mv_siren_transport_speedlines.png</animSheet>
+<anim name="lily_mv_siren_transport_speedlines">
+	<sheet>lily_mv_siren_transport_speedlines</sheet>
+	<desc length="1" x="0" y="0"/>
+	<time>2</time>
+</anim>
+
 
 <animSheet name="lily_siren_transport_thruster_center" w="2920" h="67" fw="73" fh="67">thrusters/lily_siren_transport_thruster_center.png</animSheet>
 <anim name="lily_siren_transport_thruster_center">
@@ -1471,6 +1722,43 @@
 	<desc length="40" x="0" y="0"/>
 	<time>2</time>
 </anim>
+
+
+<animSheet name="lily_siren_transport_rhyme_thruster_center" w="3320" h="67" fw="83" fh="67">thrusters/lily_siren_transport_rhyme_thruster_center.png</animSheet>
+<anim name="lily_siren_transport_rhyme_thruster_center">
+	<sheet>lily_siren_transport_rhyme_thruster_center</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
+<animSheet name="lily_siren_transport_rhyme_thruster_top" w="4520" h="81" fw="113" fh="80">thrusters/lily_siren_transport_rhyme_thruster_top.png</animSheet>
+<anim name="lily_siren_transport_rhyme_thruster_top">
+	<sheet>lily_siren_transport_rhyme_thruster_top</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
+
+<animSheet name="lily_siren_transport_rhyme_thruster_bot" w="4520" h="81" fw="113" fh="80">thrusters/lily_siren_transport_rhyme_thruster_bot.png</animSheet>
+<anim name="lily_siren_transport_rhyme_thruster_bot">
+	<sheet>lily_siren_transport_rhyme_thruster_bot</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
+
+
+<animSheet name="lily_siren_transport_her_thruster_center" w="3320" h="67" fw="83" fh="67">thrusters/lily_siren_transport_her_thruster_center.png</animSheet>
+<anim name="lily_siren_transport_her_thruster_center">
+	<sheet>lily_siren_transport_her_thruster_center</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
+<animSheet name="lily_siren_transport_her_thruster_side" w="4520" h="81" fw="113" fh="80">thrusters/lily_siren_transport_her_thruster_side.png</animSheet>
+<anim name="lily_siren_transport_her_thruster_side">
+	<sheet>lily_siren_transport_her_thruster_side</sheet>
+	<desc length="40" x="0" y="0"/>
+	<time>2</time>
+</anim>
+
+
 
 
 <animSheet name="lily_chaos_police_thruster" w="108" h="24" fw="27" fh="24">thrusters/lily_chaos_police_thruster.png</animSheet>

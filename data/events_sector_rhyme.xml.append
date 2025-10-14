@@ -51,6 +51,7 @@ And for whatever Slug pests that might still be alive in the nexus, I was really
                     <choice hidden="true">
                         <text>Continue...</text>
                         <event>
+                            <unlockCustomShip silent="false">LILY_PLAYER_SIREN_HER_TRANSPORT</unlockCustomShip>
                             <achievement>ACH_HER_OVERTHROW</achievement>
                             <metaVariable name="juke_her" op="set" val="1"/>
                             <win ach="nexus" music="her_credits" creditsText="credit_victory_nexus_her_lily" text=":)" creditsBackground="BACKGROUND_HER"/>

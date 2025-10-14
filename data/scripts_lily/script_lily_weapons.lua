@@ -121,6 +121,7 @@ disintegrators["LILY_BEAM_SIREN_3_ELITE"] = 3
 disintegrators["LILY_BEAM_SIREN_4_ELITE"] = 4
 disintegrators["LILY_BEAM_SIREN_FIRE_ELITE"] = 1
 disintegrators["LILY_BEAM_SIREN_LOCK_ELITE"] = 1
+disintegrators["LILY_SIREN_TRANSPORT_HER_ARTILLERY"] = 4
 local chaosfire = {}
 chaosfire["LILY_SIREN_TRANSPORT_C_ARTILLERY"] = 60
 chaosfire["LILY_BEAM_SIREN_FIRE"] = 20
@@ -132,18 +133,38 @@ chaosfire["LILY_BEAM_SIREN_LOCK_CHAOS"] = 40
 chaosfire["LILY_BEAM_SIREN_LOCK_ELITE"] = 60
 
 local frostBeams = {}
-frostBeams["LILY_BEAM_FROST"] = true
-frostBeams["LILY_SIREN_TRANSPORT_B_ARTILLERY_I"] = true
+frostBeams["LILY_BEAM_FROST"] = { removeOxygen = true }
+frostBeams["LILY_SIREN_TRANSPORT_B_ARTILLERY_I"] = { removeOxygen = true }
+frostBeams["LILY_SIREN_MV_TRANSPORT_ARTILLERY"] = { removeOxygen = false }
+
 
 local specalWidthBeams = {}
 specalWidthBeams["LILY_FOCUS_ION_HEAVY"] = { 3, 0, -1 }
 specalWidthBeams["LILY_BEAM_SCISSORS"] = { 2, 0 }
-specalWidthBeams["LILY_BEAM_SIREN_3"] = {2, 0}
-specalWidthBeams["LILY_BEAM_SIREN_4"] = {3, 0}
+
+specalWidthBeams["LILY_BEAM_SIREN_1"] = { 1, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_2"] = { 1, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_3"] = { 2, 0}
+specalWidthBeams["LILY_BEAM_SIREN_4"] = { 3, 0}
+specalWidthBeams["LILY_BEAM_SIREN_FIRE"] = { 1, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_LOCK"] = { 1, 0 }
+
+specalWidthBeams["LILY_BEAM_SIREN_1_CHAOS"] = { 1, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_2_CHAOS"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_3_CHAOS"] = { 2, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_4_CHAOS"] = { 3, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_FIRE_CHAOS"] = { 1, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_LOCK_CHAOS"] = { 1, 0 }
+
+specalWidthBeams["LILY_BEAM_SIREN_1_ELITE"] = { 1, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_2_ELITE"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_3_ELITE"] = { 2, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_4_ELITE"] = { 3, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_FIRE_ELITE"] = { 1, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_LOCK_ELITE"] = { 1, 0 }
+
+specalWidthBeams["LILY_SIREN_TRANSPORT_HER_ARTILLERY"] = { 4, 0 }
+specalWidthBeams["LILY_SIREN_MV_TRANSPORT_ARTILLERY"] = { 2, 0 }
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
     function(shipManager, projectile, location, damage, newTile, beamHit)
@@ -159,7 +180,7 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                     drone.targetLocation = location
                 end
             end
-otherShip:GetSystem(Hyperspace.ShipSystem.NameToSystemId(""))
+
             if specalWidthBeams[weaponName] then
                 damage.iDamage = specalWidthBeams[weaponName][2]
             end
@@ -206,7 +227,9 @@ otherShip:GetSystem(Hyperspace.ShipSystem.NameToSystemId(""))
                 if beamHit == Defines.BeamHit.NEW_ROOM or beamHit == Defines.BeamHit.NEW_TILE then
                     local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
                     if roomId >= 0 then
-                        shipManager.oxygenSystem:ModifyRoomOxygen(roomId, -999)
+                        if frostBeams[weaponName].removeOxygen then
+                            shipManager.oxygenSystem:ModifyRoomOxygen(roomId, -999)
+                        end
                         local fire = shipManager:GetFireAtPoint(location)
                         fire.fDeathTimer = 0
                         fire.fOxygen = 0
@@ -815,6 +838,8 @@ burstPins["LILY_BEAM_AMP_SIPHON_O"] = { count = 1, countSuper = 1, siphon = true
 burstPins["LILY_BEAM_SHOTGUN_P"] = { count = 1, countSuper = 1, siphon = false }
 burstPins["LILY_BEAM_SHOTGUN_9_P"] = { count = 1, countSuper = 1, siphon = false }
 burstPins["LILY_FOCUS_POPPER"] = { count = 2, countSuper = 4, siphon = false }
+burstPins["LILY_SIREN_TRANSPORT_HER_ARTILLERY"] = { count = 0, countSuper = 100, siphon = false }
+
 
 -- Pop shield bubbles
 script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipManager, projectile, damage, response)

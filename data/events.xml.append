@@ -155,11 +155,11 @@ Unfortunately, there's nothing left to scrap of the station itself.</text>
 
 <event name="LILY_EMPORIUM_TOWR">
     <text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
-It hails you: "Welcome to the Lily's Beam Emporium!--
-... Wait. Is this The one Who Rhymes themselves?!
+It hails you: "Welcome to the Lily's Beam Emporium!--"
+"... Wait. Is this The one Who Rhymes themselves?!
 As a renegade, no less?! Hold on I must be dreaming, am I?
 Didn't expect you again... much less in these circumstances--
-Feel free to take anything from my store, of course. Let's have fun and make chaos!--</text>
+Feel free to take anything from my store, of course. Let's have fun and make chaos!--"</text>
     <choice>
         <text>Continue...</text>
         
@@ -250,14 +250,14 @@ You are pretty sure it wasn't there minutes ago...</text>
     </choice>
 
     <choice req="LILY_MYSTERIOUS_NOTE" lvl="1" hidden="true">
-        <text>Your remember about the mysterious note you found.</text>
+        <text>You remember about the mysterious note you found.</text>
         <event>
             <text>You give the mysterious note to Lily and wait her to respond.</text>
             <choice hidden="true">
                 <text>Continue...</text>
                 <event>
                     <text>"This note... in your possession? Well, that only mean one thing - you are one of Her chosen to complete the mission. Which mission - only She knows. But I happen to be one of Her servants as well and - as such I'll be assisting from here on--
-Oh, and have this to help on your travels.</text>
+Oh, and have this to help on your travels."</text>
                     <variable name="lily_questioned" op="set" value="1" />
                     <variable name="lily_resolved" op="set" value="1" />
                     <autoReward level="MED">stuff</autoReward>

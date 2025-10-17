@@ -1337,3 +1337,24 @@ script.on_render_event(Defines.RenderEvents.SHIP_SPARKS, function (ship)
 
     return Defines.Chain.CONTINUE
 end, function () end)
+
+
+local preigniteWeapons = {}
+
+preigniteWeapons["LILY_FOCUS_CIWS"] = true
+
+script.on_internal_event(Defines.InternalEvents.JUMP_ARRIVE, function (shipManager)
+    
+    if shipManager then
+        if shipManager.weaponSystem and shipManager.weaponSystem.weapons then
+            for weapon in vter(shipManager.weaponSystem.weapons) do
+                ---@type Hyperspace.ProjectileFactory
+                weapon = weapon
+                if preigniteWeapons[weapon.name] then
+                    weapon.cooldown.first = weapon.cooldown.second
+                end
+            end
+        end
+    end
+
+end)

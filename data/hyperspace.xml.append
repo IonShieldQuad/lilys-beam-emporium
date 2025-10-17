@@ -3,6 +3,7 @@
 <version>^1.20.0</version>
 
 <mod:findLike type="scripts">
+	<mod-append:script>data/scripts_lily/script_lily_lbe_init.lua</mod-append:script>
     <mod-append:script>data/scripts_lily/script_lily_weapons.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_augments.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_powers.lua</mod-append:script>
@@ -1112,6 +1113,15 @@ Mind controls a random enemy crew in the room.</tooltip>
 				<priority>9999</priority>
 				<whiteList load="LIST_CREW_SIREN"/>
 			</statBoost>
+			<statBoost name="teleportMoveOtherShip">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>9999</priority>
+				<whiteList load="LIST_CREW_SIREN"/>
+			</statBoost>
+
 			<statBoost name="canSuffocate">
 				<boostType>SET</boostType>
 				<value>false</value>
@@ -1152,6 +1162,28 @@ Mind controls a random enemy crew in the room.</tooltip>
 				<priority>9999</priority>
 				<whiteList load="LIST_CREW_ELDRITCH"/>
 			</statBoost>
+			<statBoost name="teleportMoveOtherShip">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>9999</priority>
+				<whiteList load="LIST_CREW_ELDRITCH"/>
+			</statBoost>
+
+			<statBoost name="crewSlots">
+				<boostType>SET</boostType>
+				<amount>0.0</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>9999</priority>
+				<whiteList>
+					<gnome />
+					<unique_lily_avatar />
+				</whiteList>
+			</statBoost>
+
+			
 
 			<statBoost name="trueHealAmount">
 				<boostType>FLAT</boostType>
@@ -3084,7 +3116,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
                 <sound>achievement_stupid</sound>
             </mod-append:achievement>
         </mod-append:section>
-		<mod-append:section text="Thest's Grants (LilyBeam)" hidden="false">
+		<mod-append:section text="Thest's Boons (LilyBeam)" hidden="false">
 			<mod-append:achievement name="ACH_BOON_LILY_SIREN">
 				<name>Boon of Utopia</name>
 				<secretName>Boon of ???</secretName>

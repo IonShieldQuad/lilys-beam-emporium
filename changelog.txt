@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.1
+Date: 2025-10-17
+  Changes:
+    - (Hopefully) fixed the RNG bug that this mod was causing!.
+    - Updated descriptions for disintegrator beams to be more informative.
+    - Minor graphical changes to erosion effects.
+    - Some other various fixes.
+---------------------------------------------------------------------------------------------------
 Version: 1.5.0
 Date: 2025-10-14
   Changes:

@@ -3348,7 +3348,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>'Ira' Disintegrator Beam</title>
     <short>'Ira'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 1 shield, -4 hp/s and x0.5 healing and repair to crew.</desc>
     <tooltip>Disintegrator 1.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -3419,7 +3420,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>'Angoris' Disintegrator Beam</title>
     <short>'Angoris'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 1 shield, -4 hp/s and x0.5 healing and repair to crew.</desc>
     <tooltip>Disintegrator 2.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -3490,7 +3492,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>'Dolor' Disintegrator Beam</title>
     <short>'Dolor'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 2 shields, -8 hp/s and x0.25 healing and repair to crew.</desc>
     <tooltip>Disintegrator 3.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -3562,7 +3565,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>'Tormentum' Disintegrator Beam</title>
     <short>'Tormentum'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 3 shield, -8 hp/s and x0.0 healing and repair to crew.</desc>
     <tooltip>Disintegrator 4.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -3634,7 +3638,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>'Arde' Chaosfire Disintegrator Beam</title>
     <short>'Arde'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew and burn without oxygen.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew (at 1.5x base speed or more) and burn without oxygen.
+Pierces 1 shield, -3 hp/s and x0.5 healing and repair to crew.</desc>
     <tooltip>Chaosfire Disintegrator.</tooltip>
     <damage>0</damage>
     <sysDamage>1</sysDamage>
@@ -3784,7 +3789,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>'Impedio' Chaoslock Disintegrator Beam</title>
     <short>'Impedio'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighting, sabotaging and repairing.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighting, sabotaging and repairing, and reducing their movespeed to 0.25.
+Pierces 1 shield, -3 hp/s and x0.5 healing and repair, to crew.</desc>
     <tooltip>Chaoslock Disintegrator.</tooltip>
     <damage>0</damage>
     <ion>1</ion>
@@ -3981,7 +3987,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Ira' Disintegrator Beam</title>
     <short>'Ira'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 3 shields, -4 hp/s and x0.5 healing and repair to crew.</desc>
     <tooltip>Disintegrator 1.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4057,7 +4064,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Angoris' Disintegrator Beam</title>
     <short>'Angoris'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 3 shields, -4 hp/s and x0.5 healing and repair to crew.</desc>
     <tooltip>Disintegrator 2.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4133,7 +4141,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Dolor' Disintegrator Beam</title>
     <short>'Dolor'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 4 shields, -8 hp/s and x0.25 healing and repair to crew.</desc>
     <tooltip>Disintegrator 3.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4210,7 +4219,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Tormentum' Disintegrator Beam</title>
     <short>'Tormentum'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 5 shields, -4 hp/s and x0.0 healing and repair to crew.</desc>
     <tooltip>Disintegrator 4.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4287,7 +4297,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Arde' Chaosfire Disintegrator Beam</title>
     <short>'Arde'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew and burn without oxygen.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew (at 1.5x base speed or more) and burn without oxygen.
+Pierces 3 shields, -3 hp/s and x0.5 healing and repair to crew.</desc>
     <tooltip>Chaosfire Disintegrator.</tooltip>
     <damage>0</damage>
     <sysDamage>2</sysDamage>
@@ -4442,7 +4453,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Impedio' Chaoslock Disintegrator Beam</title>
     <short>'Impedio'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighting, sabotaging and repairing.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighting, sabotaging and repairing, and reducing their movespeed to 0.25.
+Pierces 3 shields, -3 hp/s and x0.5 healing and repair to crew.</desc>
     <tooltip>Chaoslock Disintegrator.</tooltip>
     <damage>0</damage>
     <ion>2</ion>
@@ -4644,7 +4656,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Ira' Disintegrator Beam</title>
     <short>€ 'Ira'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 3 shields, -6 hp/s and x0.25 healing and repair to crew.</desc>
     <tooltip>Disintegrator 1.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4720,7 +4733,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Angoris' Disintegrator Beam</title>
     <short>€ 'Angoris'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 3 shields, -6 hp/s and x0.25 healing and repair to crew.</desc>
     <tooltip>Disintegrator 2.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4796,7 +4810,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Dolor' Disintegrator Beam</title>
     <short>€ 'Dolor'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 4 shields, -12 hp/s and x0.0 healing and repair to crew.</desc>
     <tooltip>Disintegrator 3.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4873,7 +4888,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Tormentum' Disintegrator Beam</title>
     <short>€ 'Tormentum'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 5 shields, -6 hp/s and x0.25 healing and repair to crew.</desc>
     <tooltip>Disintegrator 4.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4959,7 +4975,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Arde' Chaosfire Disintegrator Beam</title>
     <short>€ 'Arde'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew and burn without oxygen.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew (at 3x base speed or more) and burn without oxygen.
+Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
     <tooltip>Chaosfire Disintegrator.</tooltip>
     <damage>0</damage>
     <sysDamage>3</sysDamage>
@@ -5114,7 +5131,8 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Impedio' Chaoslock Disintegrator Beam</title>
     <short>€ 'Impedio'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from moving, manning, fighting, sabotaging and repairing.</desc>
+    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from moving, manning, fighting, sabotaging and repairing.
+Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
     <tooltip>Chaoslock Disintegrator.</tooltip>
     <damage>0</damage>
     <ion>3</ion>
@@ -7019,9 +7037,9 @@ Conservative weapons use no power on their own but require the system itself to 
     <unlock id="ship_LILY_SIREN_HER_TRANSPORT_unlock"/>
     <systemList>
         <artillery power="2" max="5" room="13" start="true" weapon="LILY_SIREN_TRANSPORT_HER_ARTILLERY" img="room_artillery" />
-        <battery power="2" max="4" room="0" start="false" img="room_battery_19" />
+        <battery power="2" max="3" room="0" start="false" img="room_battery_19" />
         <cloaking power="1" room="9" start="false" img="room_cloaking_4" />
-        <clonebay power="1" room="3" start="true">
+        <clonebay power="1" max="4" room="3" start="true">
             <slot>
                 <number>0</number>
             </slot>
@@ -7040,13 +7058,13 @@ Conservative weapons use no power on their own but require the system itself to 
             </slot>
         </engines>
         <hacking power="1" room="10" start="false" img="room_hacking_7" />
-        <medbay power="1" room="3" start="false" img="room_medbay_16">
+        <medbay power="1" max="4" room="3" start="false" img="room_medbay_16">
             <slot>
                 <number>-2</number>
             </slot>
         </medbay>
         <mind power="2" max="4" room="2" start="true" img="room_mind_2" />
-        <oxygen power="1" room="18" start="false" img="room_oxygen_18" />
+        <oxygen power="1" max="4" room="18" start="false" img="room_oxygen_18" />
         <pilot power="1" room="14" start="true" img="room_pilot_2">
             <slot>
                 <direction>right</direction>

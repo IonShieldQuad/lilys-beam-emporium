@@ -650,8 +650,7 @@ But, seeing The One Who Rhymes here with you I'll make an exception, don't want 
 </event>
 
 <event name="STORAGE_CHECK_LILY_JOIN_FREE">
-    <text>Sure--
-    </text>
+    <text>Sure--</text>
 
     <choice blue="false" hidden="true">
         <text>Continue...</text>

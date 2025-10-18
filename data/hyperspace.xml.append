@@ -1182,6 +1182,26 @@ Mind controls a random enemy crew in the room.</tooltip>
 					<unique_lily_avatar />
 				</whiteList>
 			</statBoost>
+			<statBoost name="powerRechargeMultiplier">
+				<boostType>MULT</boostType>
+				<amount>10</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>9999</priority>
+				<whiteList>
+					<unique_lily_avatar />
+				</whiteList>
+			</statBoost>
+			<statBoost name="silenced">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>9999</priority>
+				<whiteList>
+					<unique_lily_avatar />
+				</whiteList>
+			</statBoost>
 
 			
 
@@ -1245,7 +1265,10 @@ Mind controls a random enemy crew in the room.</tooltip>
 				<crewTarget>ALL</crewTarget>
 				<droneTarget>CREW</droneTarget>
 				<affectsSelf>false</affectsSelf>
-				<blackList load="LIST_CREW_MADNESS_IMMUNE"/>
+				<blackList>
+					<blueprintList load="LIST_CREW_MADNESS_IMMUNE"/>
+					<blueprintList load="LIST_CREW_COGNITIVE_ALL"/>
+				</blackList>
 				<boostAnim>lily_madness_elite2</boostAnim>
 			</statBoost>
 			<statBoost name="canFight">
@@ -1256,7 +1279,10 @@ Mind controls a random enemy crew in the room.</tooltip>
 				<droneTarget>CREW</droneTarget>
 				<affectsSelf>false</affectsSelf>
 				<priority>-100</priority>
-				<blackList load="LIST_CREW_MADNESS_IMMUNE"/>
+				<blackList>
+					<blueprintList load="LIST_CREW_MADNESS_IMMUNE"/>
+					<blueprintList load="LIST_CREW_COGNITIVE_ALL"/>
+				</blackList>
 			</statBoost>
 			<statBoost name="canSabotage">
 				<boostType>SET</boostType>
@@ -1266,7 +1292,10 @@ Mind controls a random enemy crew in the room.</tooltip>
 				<droneTarget>CREW</droneTarget>
 				<affectsSelf>false</affectsSelf>
 				<priority>-100</priority>
-				<blackList load="LIST_CREW_MADNESS_IMMUNE"/>
+				<blackList>
+					<blueprintList load="LIST_CREW_MADNESS_IMMUNE"/>
+					<blueprintList load="LIST_CREW_COGNITIVE_ALL"/>
+				</blackList>
 			</statBoost>
 			<statBoost name="canRepair">
 				<boostType>SET</boostType>
@@ -1276,7 +1305,10 @@ Mind controls a random enemy crew in the room.</tooltip>
 				<droneTarget>CREW</droneTarget>
 				<affectsSelf>false</affectsSelf>
 				<priority>-100</priority>
-				<blackList load="LIST_CREW_MADNESS_IMMUNE"/>
+				<blackList>
+					<blueprintList load="LIST_CREW_MADNESS_IMMUNE"/>
+					<blueprintList load="LIST_CREW_COGNITIVE_ALL"/>
+				</blackList>
 			</statBoost>
 			<statBoost name="canMan">
 				<boostType>SET</boostType>
@@ -1286,7 +1318,10 @@ Mind controls a random enemy crew in the room.</tooltip>
 				<droneTarget>CREW</droneTarget>
 				<affectsSelf>false</affectsSelf>
 				<priority>-100</priority>
-				<blackList load="LIST_CREW_MADNESS_IMMUNE"/>
+				<blackList>
+					<blueprintList load="LIST_CREW_MADNESS_IMMUNE"/>
+					<blueprintList load="LIST_CREW_COGNITIVE_ALL"/>
+				</blackList>
 			</statBoost>
 			<statBoost name="moveSpeedMultiplier">
 				<boostType>MAX</boostType>
@@ -1296,7 +1331,10 @@ Mind controls a random enemy crew in the room.</tooltip>
 				<droneTarget>CREW</droneTarget>
 				<affectsSelf>false</affectsSelf>
 				<priority>-100</priority>
-				<blackList load="LIST_CREW_MADNESS_IMMUNE"/>
+				<blackList>
+					<blueprintList load="LIST_CREW_MADNESS_IMMUNE"/>
+					<blueprintList load="LIST_CREW_COGNITIVE_ALL"/>
+				</blackList>
 			</statBoost>
 			<statBoost name="moveSpeedMultiplier">
 				<boostType>MULT</boostType>
@@ -1306,7 +1344,10 @@ Mind controls a random enemy crew in the room.</tooltip>
 				<droneTarget>CREW</droneTarget>
 				<affectsSelf>false</affectsSelf>
 				<priority>-50</priority>
-				<blackList load="LIST_CREW_MADNESS_IMMUNE"/>
+				<blackList>
+					<blueprintList load="LIST_CREW_MADNESS_IMMUNE"/>
+					<blueprintList load="LIST_CREW_COGNITIVE_ALL"/>
+				</blackList>
 			</statBoost>
 		</statBoosts>
 		
@@ -1494,7 +1535,8 @@ Mind controls a random enemy crew in the room.</tooltip>
 		<rangedDamageMultiplier>1</rangedDamageMultiplier>
         <repairSpeed>2.0</repairSpeed>
 		<moveSpeedMultiplier>1.5</moveSpeedMultiplier>
-		<sabotageSpeedMultiplier>2</sabotageSpeedMultiplier>
+		<sabotageSpeedMultiplier>3</sabotageSpeedMultiplier>
+		<doorDamageMultiplier>50</doorDamageMultiplier>
 		<damageTakenMultiplier>0.7</damageTakenMultiplier>
 		<fireDamageMultiplier>0.0</fireDamageMultiplier>
 		<suffocationModifier>0.0</suffocationModifier>

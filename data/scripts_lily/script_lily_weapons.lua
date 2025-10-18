@@ -7,9 +7,9 @@ local INT_MAX = 2147483647
 
 local ciwsRenderBeams = {}
 
-script.on_init(function ()
-    ciwsRenderBeams = {}
-end)
+--script.on_init(function ()
+--    ciwsRenderBeams = {}
+--end)
 
 -- Returns a table of all crew belonging to the given ship on the room tile at the given point
 local function get_ship_crew_point(shipManager, x, y, maxCount)

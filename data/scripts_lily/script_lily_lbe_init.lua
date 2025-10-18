@@ -1,5 +1,5 @@
 
-if not mods.lilybeas then
+if not mods.lilybeams then
     mods.lilybeams = {}
 end
 

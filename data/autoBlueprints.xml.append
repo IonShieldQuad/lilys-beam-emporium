@@ -1047,6 +1047,11 @@
         <mod-append:name>unique_lily_avatar</mod-append:name>
     </mod:findName>
 
+    <blueprintList name="LIST_CREW_LILY_AVATAR">
+        <name>unique_lily_avatar</name>
+    </blueprintList>
+    
+
     <blueprintList name="STORE_LIST_CREW_LILY">
         <name>siren</name>
         <name>siren</name>
@@ -1059,6 +1064,43 @@
         <name>engines</name>
         <name>temporal</name>
     </blueprintList>
+
+    <blueprintList name="JUDGELIST_ROCK_SPECTRUM">
+        <name>LILY_BEAM_TOGGLE_SUNSET_H</name>
+        <name>LILY_BEAM_TOGGLE_SUNSET_P</name>
+        <name>LILY_BEAM_TOGGLE_SUNSET_B</name>
+        <name>LILY_BEAM_TOGGLE_EVENTIDE_L</name>
+        <name>LILY_BEAM_TOGGLE_EVENTIDE_B</name>
+        <name>LILY_BEAM_TOGGLE_EVENTIDE_P</name>
+        <name>LILY_BEAM_TOGGLE_EVENTIDE_H</name>
+        <name>LILY_BEAM_TOGGLE_AKATSUKI_B</name>
+        <name>LILY_BEAM_TOGGLE_AKATSUKI_F</name>
+        <name>LILY_BEAM_TOGGLE_AKATSUKI_S</name>
+        <name>LILY_SIREN_TRANSPORT_B_ARTILLERY</name>
+    </blueprintList>
+
+    <blueprintList name="JUDGELIST_ROCK_DISINTEGRATOR">
+        <name>LILY_BEAM_SIREN_1</name>
+        <name>LILY_BEAM_SIREN_2</name>
+        <name>LILY_BEAM_SIREN_3</name>
+        <name>LILY_BEAM_SIREN_4</name>
+        <name>LILY_BEAM_SIREN_FIRE</name>
+        <name>LILY_BEAM_SIREN_LOCK</name>
+        <name>LILY_BEAM_SIREN_1_CHAOS</name>
+        <name>LILY_BEAM_SIREN_2_CHAOS</name>
+        <name>LILY_BEAM_SIREN_3_CHAOS</name>
+        <name>LILY_BEAM_SIREN_4_CHAOS</name>
+        <name>LILY_BEAM_SIREN_FIRE_CHAOS</name>
+        <name>LILY_BEAM_SIREN_LOCK_CHAOS</name>
+        <name>LILY_BEAM_SIREN_1_ELITE</name>
+        <name>LILY_BEAM_SIREN_2_ELITE</name>
+        <name>LILY_BEAM_SIREN_3_ELITE</name>
+        <name>LILY_BEAM_SIREN_4_ELITE</name>
+        <name>LILY_BEAM_SIREN_FIRE_ELITE</name>
+        <name>LILY_BEAM_SIREN_LOCK_ELITE</name>
+        <name>LILY_SIREN_TRANSPORT_HER_ARTILLERY</name>
+    </blueprintList>
+
 
 
 </FTL>

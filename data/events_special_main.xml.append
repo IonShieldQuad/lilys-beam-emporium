@@ -19,6 +19,11 @@
 <mod:findName type="event" name="BOON_SELECT">
 	<mod:findLike type="loadEventList">
 		<mod-append:event name="BOON_SELECT_LILY_SIREN" req="prof_z_boon_lily_siren" />
+		<mod-append:event name="BOON_SELECT_LILY_AVATAR" req="prof_z_boon_lily_avatar" />
+
+		<mod-append:event name="BOON_SELECT_LILY_SPECTRUM" req="prof_r_boon_lily_spectrum" />
+		<mod-append:event name="BOON_SELECT_LILY_DISINTEGRATOR" req="prof_r_boon_lily_disintegrator" />
+
 	</mod:findLike>
 </mod:findName>
 

@@ -5,6 +5,16 @@ local time_increment = mods.multiverse.time_increment
 local check_paused = mods.multiverse.check_paused
 local INT_MAX = 2147483647
 
+--1 = MISSILES, 2 = FLAK, 3 = DRONES, 4 = PROJECTILES, 5 = HACKING
+local defense_types = {
+    DRONES = { [3] = true, [5] = true, name = "Drones" },
+    MISSILES = { [1] = true, [2] = true, [5] = true, name = "All Solid Projectiles" },
+    DRONES_MISSILES = { [1] = true, [2] = true, [3] = true, [5] = true, name = "All Solid Projectiles and Drones" },
+    PROJECTILES = { [4] = true, name = "Non-Solid Projectiles" },
+    PROJECTILES_MISSILES = { [1] = true, [2] = true, [4] = true, [5] = true, name = "All Projectiles" },
+    ALL = { [1] = true, [2] = true, [3] = true, [4] = true, [5] = true, name = "All" },
+}
+
 local ciwsRenderBeams = {}
 
 --script.on_init(function ()
@@ -449,7 +459,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
     if weapon.blueprint and weapon.blueprint.name and specalWidthBeams[weapon.blueprint.name] then
         projectile.damage.iDamage = specalWidthBeams[weapon.blueprint.name][1]
         if specalWidthBeams[weapon.blueprint.name][3] then
-            projectile.damage.iShieldPiercing = specalWidthBeams[weapon.blueprint.name][3]
+            projectile.damage.iShieldPiercing = projectile.damage.iShieldPiercing + specalWidthBeams[weapon.blueprint.name][3]
         end
     end
 
@@ -1173,7 +1183,7 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                             ---@type Hyperspace.SpaceDrone
                             drone = drone
                             
-                            if drone.deployed and drone._collideable and drone._targetable and drone.currentSpace == shipManager.iShipId and drone.iShipId ~= shipManager.iShipId and drone:ValidTarget() then
+                            if drone.deployed and drone._collideable and drone._targetable and defense_types.DRONES_MISSILES[drone._targetable.type] and drone.currentSpace == shipManager.iShipId and drone.iShipId ~= shipManager.iShipId and drone:ValidTarget() then
                                     if otherShipManager and otherShipManager.hackingSystem and otherShipManager.hackingSystem.drone.currentLocation == drone.currentLocation then
                                         targets[#targets + 1] = { location = drone.currentLocation, velocity = drone.speedVector, isHackingDrone = true }
                                     else
@@ -1188,7 +1198,7 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                         for proj in vter(spaceManager.projectiles) do
                             ---@type Hyperspace.Projectile
                             proj = proj
-                            if proj._targetable and (not proj.startedDeath) and (proj:GetType() == 2 or proj:GetType() == 3) and proj.currentSpace == shipManager.iShipId and proj.ownerId ~= shipManager.iShipId and not proj.passedTarget and proj:ValidTarget() then
+                            if proj._targetable and defense_types.DRONES_MISSILES[proj._targetable.type] and (not proj.startedDeath) and proj.currentSpace == shipManager.iShipId and proj.ownerId ~= shipManager.iShipId and not proj.passedTarget and proj:ValidTarget() then
                                 --if firingPointf:RelativeDistance(proj.position) < 350 then
                                     targets[#targets + 1] = { location = proj.position, velocity = proj.speed }
                                 --end
@@ -1196,8 +1206,13 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                         end
                     end
 
-
-
+                    for _, target in pairs(targets) do
+                        if target and target.velocity then
+                            target.velocity = Hyperspace.Pointf(target.velocity.x / (18.333 * time_increment(true)),
+                            target.velocity.y / (18.333 * time_increment(true)))
+                        end
+                    end
+                    
                     if #targets > 0 then
                         local target = targets[math.random(#targets)]
                         ---@type Hyperspace.Pointf

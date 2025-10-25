@@ -187,7 +187,7 @@
 		<hiddenAug>LILY_PATRONAGE</hiddenAug>
 		<crewLimit>6</crewLimit>
 		<systemLimit>12</systemLimit>
-		<customReactor maxLevel="45"/>
+		<customReactor maxLevel="69"/>
 		<autoShipForce>true</autoShipForce>
 		<crew>
 			<unique_lily_avatar room="14" name="Lily" male="false" />
@@ -1030,30 +1030,89 @@ Mind controls a random enemy crew in the room.</tooltip>
 
 
 	<aug name="BOON_LILY_SIREN">
-		<statBoost name="isTelepathic">
-			<boostType>SET</boostType>
-			<value>true</value>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALLIES</crewTarget>
-			<priority>100</priority>
-			<whiteList load="LIST_CREW_SIREN"/>
-		</statBoost>
-		<statBoost name="stunMultiplier">
-			<boostType>MULT</boostType>
-			<amount>100</amount>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALLIES</crewTarget>
-			<priority>999</priority>
-			<whiteList load="LIST_CREW_SIREN"/>
-		</statBoost>
-		<statBoost name="cloneLoseSkills">
-			<boostType>SET</boostType>
-			<value>false</value>
-			<shipTarget>ALL</shipTarget>
-			<crewTarget>ALLIES</crewTarget>
-			<priority>9999</priority>
-			<whiteList load="LIST_CREW_SIREN"/>
-		</statBoost>
+		<statBoosts>
+			<statBoost name="isTelepathic">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>100</priority>
+				<whiteList load="LIST_CREW_SIREN"/>
+			</statBoost>
+			<statBoost name="stunMultiplier">
+				<boostType>MULT</boostType>
+				<amount>100</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>999</priority>
+				<whiteList load="LIST_CREW_SIREN"/>
+			</statBoost>
+			<statBoost name="cloneLoseSkills">
+				<boostType>SET</boostType>
+				<value>false</value>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<priority>9999</priority>
+				<whiteList load="LIST_CREW_SIREN"/>
+			</statBoost>
+		</statBoosts>
+	</aug>
+
+	<aug name="BOON_LILY_SPECTRUM">
+	</aug>
+
+	<aug name="BOON_LILY_DISINTEGRATOR">
+		<statBoosts>
+			<statBoost name="healSpeed">
+				<boostType>MULT</boostType>
+				<amount>0.75</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
+				<priority>100</priority>
+			</statBoost>
+			<statBoost name="repairSpeed">
+				<boostType>MULT</boostType>
+				<amount>0.75</amount>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
+				<priority>100</priority>
+			</statBoost>
+			<statBoost name="trueHealAmount">
+				<boostType>FLAT</boostType>
+				<amount>-2</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ORIGINAL_ENEMIES</crewTarget>
+				<priority>10</priority>
+			</statBoost>
+			<statBoost name="allDamageTakenMultiplier">
+				<boostType>MAX</boostType>
+				<amount>0.25</amount>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ORIGINAL_ENEMIES</crewTarget>
+				<affectsSelf>false</affectsSelf>
+				<priority>0</priority>
+			</statBoost>
+			<statBoost name="validTarget">
+				<boostType>SET</boostType>
+				<value>true</value>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ORIGINAL_ENEMIES</crewTarget>
+				<affectsSelf>false</affectsSelf>
+				<priority>-10</priority>
+				<whiteList>
+					<eldritch_spawn/>
+				</whiteList>
+			</statBoost>
+			<statBoost name="transformRace">
+				<boostType>SET</boostType>
+				<race>eldritch_thing_noclone</race>
+				<shipTarget>ORIGINAL_SHIP</shipTarget>
+				<crewTarget>ORIGINAL_ENEMIES</crewTarget>
+				<whiteList>
+					<eldritch_thing/>
+				</whiteList>
+			</statBoost>
+		</statBoosts>
 	</aug>
 
 	<aug name="LILY_SHIP_HER">
@@ -1083,7 +1142,7 @@ Mind controls a random enemy crew in the room.</tooltip>
 			</statBoost>
 			<statBoost name="stunMultiplier">
 				<boostType>MULT</boostType>
-				<amount>100</amount>
+				<amount>0</amount>
 				<shipTarget>ALL</shipTarget>
 				<crewTarget>ALLIES</crewTarget>
 				<priority>999</priority>
@@ -1132,7 +1191,7 @@ Mind controls a random enemy crew in the room.</tooltip>
 			</statBoost>
 			<statBoost name="stunMultiplier">
 				<boostType>MULT</boostType>
-				<amount>100</amount>
+				<amount>0</amount>
 				<shipTarget>ALL</shipTarget>
 				<crewTarget>ALLIES</crewTarget>
 				<priority>999</priority>
@@ -1516,13 +1575,27 @@ Mind controls a random enemy crew in the room.</tooltip>
 
 	<mod-append:metaVariable name="prof_z_boon_lily_siren" op="set" val="0"/>
 	<mod-append:variable name="ach_boon_lily_siren" op="set" val="0"/>
+	<mod-append:metaVariable name="prof_z_boon_lily_avatar" op="set" val="0"/>
+	<mod-append:variable name="ach_boon_lily_avatar" op="set" val="0"/>
+
+	<mod-append:metaVariable name="prof_r_boon_lily_spectrum" op="set" val="0"/>
+	<mod-append:variable name="ach_boon_lily_spectrum" op="set" val="0"/>
+	<mod-append:metaVariable name="prof_r_boon_lily_disintegrator" op="set" val="0"/>
+	<mod-append:variable name="ach_boon_lily_disintegrator" op="set" val="0"/>
+
 
 
 	<mod:findName name="ANY_BOON">
 		<mod-append:name>prof_z_boon_lily_siren</mod-append:name>
+		<mod-append:name>prof_z_boon_lily_avatar</mod-append:name>
+		<mod-append:name>prof_r_boon_lily_spectrum</mod-append:name>
+		<mod-append:name>prof_r_boon_lily_disintegrator</mod-append:name>
 	</mod:findName>
 	<mod:findName name="ALL_BOON">
 		<mod-append:name>prof_z_boon_lily_siren</mod-append:name>
+		<mod-append:name>prof_z_boon_lily_avatar</mod-append:name>
+		<mod-append:name>prof_r_boon_lily_spectrum</mod-append:name>
+		<mod-append:name>prof_r_boon_lily_disintegrator</mod-append:name>
 	</mod:findName>
 </mod:findLike>
 
@@ -3169,6 +3242,41 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<lockImage>ach_locked</lockImage>
 				<multiDifficulty>false</multiDifficulty>
 				<sound>achievement</sound>
+			</mod-append:achievement>
+			<mod-append:achievement name="ACH_BOON_LILY_AVATAR">
+				<name>Boon of Anomalies</name>
+				<secretName>Boon of ???</secretName>
+				<secretDescription>Receive the Boon of ??? from Thest.</secretDescription>
+				<description>Show a Lily's Avatar to Thest. While in effect; Sets the run's stability index to 1.</description>
+				<header>Boon Received</header>
+				<icon>boons/ach_boon_lily_avatar</icon>
+				<lockImage>ach_locked</lockImage>
+				<multiDifficulty>false</multiDifficulty>
+				<sound>achievement_spooky</sound>
+			</mod-append:achievement>
+		</mod-append:section>
+		<mod-append:section text="Wakeson's Blessings (LilyBeam)" hidden="false">
+			<mod-append:achievement name="ACH_BOON_LILY_SPECTRUM">
+				<name>Blessing of Spectrum</name>
+				<secretName>Blessing of ???</secretName>
+				<secretDescription>Receive the Blessing of ??? from Wakeson.</secretDescription>
+				<description>Show a Lily's Multi-Modal beam to Wakeson. While in effect; Beam weapons pierce 1 extra shield layer.</description>
+				<header>Blessing Received</header>
+				<icon>boons/ach_boon_lily_spectrum</icon>
+				<lockImage>ach_locked</lockImage>
+				<multiDifficulty>false</multiDifficulty>
+				<sound>achievement</sound>
+			</mod-append:achievement>
+			<mod-append:achievement name="ACH_BOON_LILY_DISINTEGRATOR">
+				<name>Blessing of Disintegration</name>
+				<secretName>Blessing of ???</secretName>
+				<secretDescription>Receive the Blessing of ??? from Wakeson.</secretDescription>
+				<description>Show a Disintegrator Beam to Wakeson. While in effect; Enemy crewmembers lose 25% healing and repair speed, and take an extra 2 hp/s onboard your ship.</description>
+				<header>Blessing Received</header>
+				<icon>boons/ach_boon_lily_avatar</icon>
+				<lockImage>ach_locked</lockImage>
+				<multiDifficulty>false</multiDifficulty>
+				<sound>achievement_spooky</sound>
 			</mod-append:achievement>
 		</mod-append:section>
     </mod-append:page>

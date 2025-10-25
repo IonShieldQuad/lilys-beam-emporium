@@ -41,6 +41,11 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_INITIALIZE, function(
         --print("newY: " .. projectile.target.y)
         projectile:ComputeHeading()
     end
+
+    local ownerShip = Hyperspace.ships(projectile:GetOwnerId())
+    if projectile and projectile:GetType() == 5 and ownerShip and ownerShip:HasAugmentation("BOON_LILY_SPECTRUM") > 0 then
+        projectile.damage.iShieldPiercing = projectile.damage.iShieldPiercing + 1
+    end
 end)
 
 

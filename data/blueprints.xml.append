@@ -428,8 +428,8 @@ disable shields as well as systems.</tooltip>
         <desc>A multiverse traveller, beam saleswoman, and a loyal servant of the Supreme Eldritch Goddess of True Chaos. Yes, that's me--</desc>
         <cost>2147483647</cost>
         <bp>20</bp>
-        <title>???</title>
-        <short>???</short>
+        <title>Eldritch Avatar</title>
+        <short>Avatar</short>
         <rarity>0</rarity>
         <powerList>
             <power>Immune to fires, suffocation, stun and mind control</power>
@@ -6913,7 +6913,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
         </pilot>
         <sensors power="1" room="6" start="true" img="room_sensors">
             <slot>
-                <direction>right</direction>
+                <direction>down</direction>
                 <number>1</number>
             </slot>
         </sensors>

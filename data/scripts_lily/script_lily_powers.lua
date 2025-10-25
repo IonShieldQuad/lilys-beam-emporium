@@ -175,7 +175,7 @@ script.on_internal_event(Defines.InternalEvents.ON_MOUSE_L_BUTTON_DOWN, function
             local lilyArr = {}
 
             local playerShipManager = Hyperspace.ships.player
-            local enemyShipManager = Hyperspace.ships.player
+            local enemyShipManager = Hyperspace.ships.enemy
 
             if playerShipManager then
                 for crew in vter(playerShipManager.vCrewList) do

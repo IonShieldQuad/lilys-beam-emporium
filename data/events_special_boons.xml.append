@@ -9,4 +9,34 @@
         </event>
     </choice>
 </event>
+<event name="BOON_SELECT_LILY_AVATAR">
+    <text>You hear a voice out of nowhere speaking as if directly into your mind. "The Boon of Anomalies-- I've heard you like them, so I've set your run's stability to 1, expect a bunch!-- Hahe!-- Feel free to thank me-- Oh, and the previous challanger too, they were quite fun-- And you better not disappoint me either!--"</text>
+    <variable name="stability" op="set" val="1"/>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <loadEvent>BOON_SELECT_CONTINUE</loadEvent>
+        </event>
+    </choice>
+</event>
+<event name="BOON_SELECT_LILY_SPECTRUM">
+    <text>From nowhere, you hear a voice speaking to you. "CHALLENGER! For you, I grant the BLESSING OF SPECTRUM! All your beam weapons will pierce an additional shield layer! May your travels be BLESSED! For whom do you thank? Why, the PREVIOUS CHALLENGER! Hahah!"</text>
+    <hiddenAug>BOON_LILY_SPECTRUM</hiddenAug>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <loadEvent>BOON_SELECT_CONTINUE</loadEvent>
+        </event>
+    </choice>
+</event>
+<event name="BOON_SELECT_LILY_DISINTEGRATOR">
+    <text>From nowhere, you hear a voice speaking to you. "CHALLENGER! For you, I grant the BLESSING OF DISINTEGRATION! Enemy crew and drones will lose 25% healing and repair speed, and will take an extra 2 hp/s damage onboard your ship! May your travels be BLESSED! For whom do you thank? Why, the PREVIOUS CHALLENGER! Hahah!"</text>
+    <hiddenAug>BOON_LILY_DISINTEGRATOR</hiddenAug>
+    <choice hidden="true">
+        <text>Continue...</text>
+        <event>
+            <loadEvent>BOON_SELECT_CONTINUE</loadEvent>
+        </event>
+    </choice>
+</event>
 </FTL>

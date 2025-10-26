@@ -1183,7 +1183,7 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                             ---@type Hyperspace.SpaceDrone
                             drone = drone
                             
-                            if drone.deployed and drone._collideable and drone._targetable and defense_types.DRONES_MISSILES[drone._targetable.type] and drone.currentSpace == shipManager.iShipId and drone.iShipId ~= shipManager.iShipId and drone:ValidTarget() then
+                            if drone.deployed and drone._collideable and drone._targetable --[[and defense_types.DRONES_MISSILES[drone._targetable.type]--]] and drone.currentSpace == shipManager.iShipId and drone.iShipId ~= shipManager.iShipId and drone:ValidTarget() then
                                     if otherShipManager and otherShipManager.hackingSystem and otherShipManager.hackingSystem.drone.currentLocation == drone.currentLocation then
                                         targets[#targets + 1] = { location = drone.currentLocation, velocity = drone.speedVector, isHackingDrone = true }
                                     else
@@ -1198,7 +1198,7 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                         for proj in vter(spaceManager.projectiles) do
                             ---@type Hyperspace.Projectile
                             proj = proj
-                            if proj._targetable and defense_types.DRONES_MISSILES[proj._targetable.type] and (not proj.startedDeath) and proj.currentSpace == shipManager.iShipId and proj.ownerId ~= shipManager.iShipId and not proj.passedTarget and proj:ValidTarget() then
+                            if proj._targetable and (defense_types.DRONES_MISSILES[proj._targetable.type] or (proj:GetType() == 2 or proj:GetType() == 3)) and (proj:GetType() ~= 4 and proj:GetType() ~= 5 and proj:GetType() ~= 6) and proj._targetable:ValidTarget() and (not proj.startedDeath) and proj.currentSpace == shipManager.iShipId and proj.ownerId ~= shipManager.iShipId and not proj.passedTarget and proj:ValidTarget() then
                                 --if firingPointf:RelativeDistance(proj.position) < 350 then
                                     targets[#targets + 1] = { location = proj.position, velocity = proj.speed }
                                 --end

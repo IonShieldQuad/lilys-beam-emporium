@@ -5,41 +5,47 @@ local lilyBeamsNeedsNameGenerated = true
 
 script.on_game_event("START_BEACON", false, function() lilyBeamsNeedsNameGenerated = true end)
 script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
-    if lilyBeamsNeedsNameGenerated then
+    if Hyperspace.playerVariables and Hyperspace.playerVariables.stability > 0 and lilyBeamsNeedsNameGenerated then
         local stability = Hyperspace.playerVariables.stability
 
         -- Set up weapon data
-        local shortDescZoltan2 = stability >= 100 and "'Lucerne'" or "'Lootcerne'"
         local blueprintZoltan2 = Hyperspace.Blueprints:GetWeaponBlueprint("LOOT_ZOLTAN_2")
-        local shortDescIon1 = stability >= 100 and "Ionpoint I" or "Pinion I"
         local blueprintIon1 = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_1")
-        local shortDescIon2 = stability >= 100 and "Ionpoint II" or "Pinion II"
         local blueprintIon2 = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_2")
-        local shortDescIonHeavy = stability >= 100 and "Hv. Ionpoint" or "Hv. Pinion"
         local blueprintIonHeavy = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_HEAVY")
-        local shortDescIonChain = stability >= 100 and "Ch. Ionpoint" or "Ch. Pinion"
         local blueprintIonChain = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_CHAIN")
-        local shortDescIonPhase = stability >= 100 and "Ph. Ionpoint" or "Ph. Pinion"
         local blueprintIonPhase = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_PHASE")
-        local shortDescIonFire = stability >= 100 and "Th. Ionpoint" or "Th. Pinion"
         local blueprintIonFire = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_FIRE")
-        local shortDescIonStun = stability >= 100 and "St. Ionpoint" or "St. Pinion"
         local blueprintIonStun = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_STUN")
-        local shortDescIonBio = stability >= 100 and "Rad Ionpoint" or "Rad Pinion"
         local blueprintIonBio = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_BIO")
-
+        local blueprintIon2Player = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_2_PLAYER")
 
         -- Change the name
-        blueprintZoltan2.desc.shortTitle.data = shortDescZoltan2
-        blueprintIon1.desc.shortTitle.data = shortDescIon1
-        blueprintIon2.desc.shortTitle.data = shortDescIon2
-        blueprintIonHeavy.desc.shortTitle.data = shortDescIonHeavy
-        blueprintIonChain.desc.shortTitle.data = shortDescIonChain
-        blueprintIonPhase.desc.shortTitle.data = shortDescIonPhase
-        blueprintIonFire.desc.shortTitle.data = shortDescIonFire
-        blueprintIonStun.desc.shortTitle.data = shortDescIonStun
-        blueprintIonBio.desc.shortTitle.data = shortDescIonBio
+        if stability < 100 then
+            
+            blueprintZoltan2.desc.shortTitle.data = "lily_text_shortDescZoltan2_alt"
+            blueprintIon1.desc.shortTitle.data = "lily_text_shortDescIon1_alt"
+            blueprintIon2.desc.shortTitle.data = "lily_text_shortDescIon2_alt"
+            blueprintIonHeavy.desc.shortTitle.data = "lily_text_shortDescIonHeavy_alt"
+            blueprintIonChain.desc.shortTitle.data = "lily_text_shortDescIonChain_alt"
+            blueprintIonPhase.desc.shortTitle.data = "lily_text_shortDescIonPhase_alt"
+            blueprintIonFire.desc.shortTitle.data = "lily_text_shortDescIonFire_alt"
+            blueprintIonStun.desc.shortTitle.data = "lily_text_shortDescIonStun_alt"
+            blueprintIonBio.desc.shortTitle.data = "lily_text_shortDescIonBio_alt"
+            blueprintIon2Player.desc.shortTitle.data = "lily_text_shortDescIon2Player_alt"
 
+            blueprintZoltan2.desc.shortTitle.isLiteral = false
+            blueprintIon1.desc.shortTitle.isLiteral = false
+            blueprintIon2.desc.shortTitle.isLiteral = false
+            blueprintIonHeavy.desc.shortTitle.isLiteral = false
+            blueprintIonChain.desc.shortTitle.isLiteral = false
+            blueprintIonPhase.desc.shortTitle.isLiteral = false
+            blueprintIonFire.desc.shortTitle.isLiteral = false
+            blueprintIonStun.desc.shortTitle.isLiteral = false
+            blueprintIonBio.desc.shortTitle.isLiteral = false
+            blueprintIon2Player.desc.shortTitle.isLiteral = false
+            
+        end
         -- Don't change name until another run is started
         lilyBeamsNeedsNameGenerated = false
     end

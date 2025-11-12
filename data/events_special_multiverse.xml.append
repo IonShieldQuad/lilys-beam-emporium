@@ -59,7 +59,7 @@
     
     <mod:findName type="event" name="THE_JUDGES_VARIABLE_CLEAR">
         <mod-append:metaVariable name="prof_z_boon_lily_siren" op="set" val="0"/>
-        <mod-append:metaVariable name="prof_z_boon_lily_siren" op="set" val="0"/>
+        <mod-append:metaVariable name="prof_z_boon_lily_avatar" op="set" val="0"/>
 
         <mod-append:metaVariable name="prof_r_boon_lily_spectrum" op="set" val="0"/>
         <mod-append:metaVariable name="prof_r_boon_lily_disintegrator" op="set" val="0"/>

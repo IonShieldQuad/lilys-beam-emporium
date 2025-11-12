@@ -33,5 +33,43 @@ Does additional damage to systems
 
 
 
+<text name="lily_eventtext_continue">Continue...</text>
+
+<text name="lily_text_multiverse_crp">FTL: Multiverse :)</text>
+
+<text name="lily_eventtext_nospareprime">You may be willing to spare Prime. But I am certainly not--</text>
+<text name="lily_eventtext_lilysnipesprime">As your hull is reduced to critical levels, you notice Prime himself has dismounted from his rings, and is now holding them above his head. "You're right, it wasss my missstake to keep you around. Good thing I didn't make the missstake of making it perma-" Prime doesn't get to finish his words as a beam striking from an unknown direction vaporizes him instantly.</text>
+
+<text name="lily_eventtext_herrealm_alt">You've arrived in some kind of swirling hellscape, mired by a blurry haze of what seems to be taunting barely human faces flying through the abyss. Despite the nighmarishness of the surrounding space, you feel ...oddly content and at peace.
+
+"Ah, my home at last--" - says Lily.
+"Shame that I haven't been there in eons; Charming, isn't?--"
+
+"Don't worry, I'll make sure you are in no danger here--"</text>
+
+<text name="lily_eventtext_hernofight">You've finally made it to the location of Her. The entire space around is nothing but darkness, with every star having been pulled out of the night sky and consumed by some ancient evil. This is it. You're about to meet with perhaps the most powerful and evil entity known to exist in the Multiverse... again.</text>
+
+<text name="lily_eventtext_hernukewarning">However, even there, you receive a message:
+"Hey, sorry for the delay but I'll be here soon!--
+I've got gome gifts that should SERIOUSLY turn the tide of battle, just wait--
+Just need to get a proper object to calibrate my jump drive at--"</text>
+
+<text name="lily_eventtext_sylvanfight1">Prepare to get obliterated, pest!--</text>
+<text name="lily_eventtext_sylvanfight2">Are you ready - to meet you maker?--</text>
+<text name="lily_eventtext_sylvanfight3">EXTERMINATION PROTOCOL: TARGET ACQUIRED</text>
+<text name="lily_eventtext_sylvanfight4">Die, in Her name!--</text>
+<text name="lily_eventtext_sylvanfight5">Yet another slimy pest about to bite the dust--</text>
+
+<text name="lily_eventtext_sylvannosur1">No mercy for insects!--</text>
+<text name="lily_eventtext_sylvannosur2">Get Crushed!--</text>
+<text name="lily_eventtext_sylvannosur3">Begging won't help--</text>
+<text name="lily_eventtext_sylvannosur4">Any last words?</text>
+<text name="lily_eventtext_sylvannosur5">How pathetic--</text>
+
+<text name="lily_eventtext_visiontext1">A vessel as black as night approaches, and without words and starts charging it's weapons. But soon realizing Lily is with you, they quickly stop.</text>
+<text name="lily_eventtext_visiontext2">"And so this is the Renegade that set the eternal reign of chaos in motion?" How helpful, but don't even try to undo the inevietable. Maybe there's a place for you still.</text>
+<text name="lily_eventtext_visiontext3">An alien vessel, another of Her minions, approaches. There is seemingly no end to these legions of darkness. Luckily... it doesn't seem to attack you.</text>
+<text name="lily_eventtext_visiontext4">You think you might be hallucinating at first, but a black vessel begins to take form in front of you. In the darkness of space, you narrowly avoid colliding with it.</text>
+
 <text name="credit_victory_nexus_her_lily">Power unmatched, and with The One Who Rhymes, Lily, and yourself by Her side, She returns to the Nexus and eradicates the remaining forces of the C.E.L. Your original mission is instantly forgotten, as a new dark empire descends on the Multiverse, spreading madness through the infinite expanse of the cosmos for eternity.</text>
 </FTL>

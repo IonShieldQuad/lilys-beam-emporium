@@ -185,9 +185,10 @@
 		<hiddenAug>LILY_ANTI_CEL</hiddenAug>
 		<hiddenAug>LILY_ESTROGEN_DISPERSAL</hiddenAug>
 		<hiddenAug>LILY_PATRONAGE</hiddenAug>
+		<hiddenAug>COMBAT_HAZARD</hiddenAug>
 		<crewLimit>6</crewLimit>
 		<systemLimit>12</systemLimit>
-		<customReactor maxLevel="69"/>
+		<customReactor maxLevel="90"/>
 		<autoShipForce>true</autoShipForce>
 		<crew>
 			<unique_lily_avatar room="14" name="Lily" male="false" />
@@ -426,10 +427,8 @@
 		</req>
 	</mod-append:req>
 
-	<mod-append:req name="SUPER_AFTERBURNER_ENGINES_CHEECK" type="all">
-		<req lvl="1">
-			<name>LILY_COMBAT_AFTERBURNER</name>
-		</req>
+	<mod-append:req name="SUPER_AFTERBURNER_ENGINES_CHECK" type="all">
+		<name>LILY_COMBAT_AFTERBURNER</name>
 		<req lvl="7">
 			<name>engines</name>
 		</req>
@@ -598,6 +597,27 @@
 					<affectsSelf>false</affectsSelf>
 					<priority>0</priority>
 					<maxStacks id="siren_dream_buff_mc">1</maxStacks>
+					<blackList>
+						<siren/>
+						<siren_harpy/>
+						<fr_watcher/>
+					</blackList>
+				</statBoost>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<whiteList load="LIST_CREW_SIREN"/>
+			</statBoost>
+			<statBoost name="statBoost">
+				<statBoost name="silenced">
+					<boostType>SET</boostType>
+					<value>false</value>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<droneTarget>CREW</droneTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>110</priority>
+					<maxStacks id="siren_dream_buff_mi">1</maxStacks>
 					<blackList>
 						<siren/>
 						<siren_harpy/>
@@ -870,6 +890,27 @@ Mind controls a random enemy crew in the room.</tooltip>
 					<affectsSelf>false</affectsSelf>
 					<priority>0</priority>
 					<maxStacks id="siren_dream_buff_mc">1</maxStacks>
+					<blackList>
+						<siren/>
+						<siren_harpy/>
+						<fr_watcher/>
+					</blackList>
+				</statBoost>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>CREW</droneTarget>
+				<whiteList load="LIST_CREW_SIREN"/>
+			</statBoost>
+			<statBoost name="statBoost">
+				<statBoost name="silenced">
+					<boostType>SET</boostType>
+					<value>false</value>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<droneTarget>CREW</droneTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>110</priority>
+					<maxStacks id="siren_dream_buff_mi">1</maxStacks>
 					<blackList>
 						<siren/>
 						<siren_harpy/>

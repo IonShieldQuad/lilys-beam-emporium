@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.5
+Date: 2025-11-12
+  Changes:
+    - Moved tooltip strings from Lua code to XML to allow for easier translation.
+    - Added power efficient versions of certain weapons.
+    - Syringe [Acid] now only deals 15 damage to crew, but makes affected crew take double damage.
+    - A certain cruiser now starts with the hazard-summoning augment :)
+    - Yet another fix for the CIWS beam.
+    - Some other misc fixes.
+---------------------------------------------------------------------------------------------------
 Version: 1.5.4
 Date: 2025-10-26
   Changes:

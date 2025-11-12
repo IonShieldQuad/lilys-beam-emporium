@@ -149,8 +149,9 @@ frostBeams["LILY_SIREN_MV_TRANSPORT_ARTILLERY"] = { removeOxygen = false }
 
 
 local specalWidthBeams = {}
-specalWidthBeams["LILY_FOCUS_ION_HEAVY"] = { 3, 0, -1 }
+specalWidthBeams["LILY_FOCUS_ION_HEAVY"] = { 3, 0, -2 }
 specalWidthBeams["LILY_BEAM_SCISSORS"] = { 2, 0 }
+specalWidthBeams["LILY_BEAM_SCISSORS_PLAYER"] = { 2, 0 }
 
 specalWidthBeams["LILY_BEAM_SIREN_1"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_2"] = { 1, 0 }
@@ -331,6 +332,7 @@ lilyBurstMultiBarrel["LILY_BEAM_SHOTGUN_9_S"] = {
 local longPins = {}
 longPins["LILY_FOCUS_ION_1"] = 5
 longPins["LILY_FOCUS_ION_2"] = 5
+longPins["LILY_FOCUS_ION_2_PLAYER"] = 5
 longPins["LILY_FOCUS_ION_HEAVY"] = 10
 longPins["LILY_FOCUS_ION_CHAIN"] = 5
 longPins["LILY_FOCUS_ION_FIRE"] = 5
@@ -341,8 +343,10 @@ longPins["LILY_BEAM_TOGGLE_AKATSUKI_F"] = 5
 longPins["LILY_BEAM_TOGGLE_AKATSUKI_S"] = 5
 longPins["LILY_BEAM_TOGGLE_AKATSUKI_S_BEAM"] = 5
 longPins["LILY_FOCUS_PIERCE_1"] = 5
+longPins["LILY_FOCUS_PIERCE_1_PLAYER"] = 5
 longPins["LILY_FOCUS_PIERCE_1_R"] = 5
 longPins["LILY_FOCUS_PIERCE_2"] = 5
+longPins["LILY_FOCUS_PIERCE_2_PLAYER"] = 5
 longPins["LILY_FOCUS_PIERCE_2_R"] = 5
 longPins["LILY_FOCUS_PIERCE_2_O"] = 5
 longPins["LILY_FOCUS_PIERCE_2_Y"] = 5
@@ -794,7 +798,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
     end
 
 
-    if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_SCISSORS" then
+    if weapon.blueprint and (weapon.blueprint.name == "LILY_BEAM_SCISSORS" or weapon.blueprint.name == "LILY_BEAM_SCISSORS_PLAYER") then
     
         local offset2 = Hyperspace.Pointf(13, 0)
         if weapon.mount.mirror then offset2.x = -offset2.x end
@@ -857,7 +861,7 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
     local weaponName = projectile and projectile.extend and projectile.extend.name
     local popData = burstPins[projectile and projectile.extend and projectile.extend.name]
     local otherShip = Hyperspace.ships(1 - shipManager.iShipId)
-    local otherShieldPower = otherShip and otherShip.shieldSystem.shields.power or nil
+    local otherShieldPower = otherShip and otherShip.shieldSystem and otherShip.shieldSystem.shields.power or nil
 
     --[[if weaponName == "LILY_FOCUS_POPPER" then
         ---@type Hyperspace.BeamWeapon
@@ -1182,12 +1186,13 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                         for drone in vter(spaceManager.drones) do
                             ---@type Hyperspace.SpaceDrone
                             drone = drone
-                            
-                            if drone.deployed and drone._collideable and drone._targetable --[[and defense_types.DRONES_MISSILES[drone._targetable.type]--]] and drone.currentSpace == shipManager.iShipId and drone.iShipId ~= shipManager.iShipId and drone:ValidTarget() then
+                            if drone.deployed and drone._collideable and drone._targetable and (drone.blueprint and drone.blueprint.dodge < 10 or true) --[[and defense_types.DRONES_MISSILES[drone._targetable.type]--]] and drone.currentSpace == shipManager.iShipId and drone.iShipId ~= shipManager.iShipId and drone:ValidTarget() then
                                     if otherShipManager and otherShipManager.hackingSystem and otherShipManager.hackingSystem.drone.currentLocation == drone.currentLocation then
-                                        targets[#targets + 1] = { location = drone.currentLocation, velocity = drone.speedVector, isHackingDrone = true }
+                                        targets[#targets + 1] = { target = drone, location = drone.currentLocation, velocity = drone.speedVector, isHackingDrone = true }
+                                    elseif drone:GetBoardingDrone() and (shipManager.ship:GetSelectedRoomId(drone.currentLocation.x, drone.currentLocation.y, true) >= 0) then
+                                        --nothing
                                     else
-                                        targets[#targets + 1] = { location = drone.currentLocation, velocity = drone.speedVector }
+                                    targets[#targets + 1] = { target = drone, location = drone.currentLocation, velocity = drone.speedVector }
                                     end
                                 --if firingPointf:RelativeDistance(drone.currentLocation) < 350 then 
                                 --end
@@ -1200,7 +1205,7 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                             proj = proj
                             if proj._targetable and (defense_types.DRONES_MISSILES[proj._targetable.type] or (proj:GetType() == 2 or proj:GetType() == 3)) and (proj:GetType() ~= 4 and proj:GetType() ~= 5 and proj:GetType() ~= 6) and proj._targetable:ValidTarget() and (not proj.startedDeath) and proj.currentSpace == shipManager.iShipId and proj.ownerId ~= shipManager.iShipId and not proj.passedTarget and proj:ValidTarget() then
                                 --if firingPointf:RelativeDistance(proj.position) < 350 then
-                                    targets[#targets + 1] = { location = proj.position, velocity = proj.speed }
+                                    targets[#targets + 1] = { target = proj, location = proj.position, velocity = proj.speed }
                                 --end
                             end
                         end
@@ -1296,6 +1301,14 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                         local cd = math.max(0, weapon.cooldown.first - weapon.cooldown.second / 5)
                         weapon.cooldown.first = cd
                         userdata_table(weapon, "mods.lilybeams.ciws").delay = 0.5
+
+                        if target and target.target then
+                            if target.target.death_animation and not target.target.death_animation.tracker.running then
+                                target.target.death_animation:Start(true)
+                            elseif target.target.BlowUp then
+                                target.target:BlowUp(false)
+                            end
+                        end
                     end
 
 

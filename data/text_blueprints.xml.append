@@ -5,3 +5,17 @@
 <text name="ship_LILY_SIREN_RHYME_TRANSPORT_unlock">Win with all Siren Transport ships as well as Rhyme Cruiser A to unlock this ship.</text>
 <text name="ship_LILY_SIREN_HER_TRANSPORT_unlock">Help a certain beam saleswoman achieve her goals and return home to unlock this ship.</text>
 <text name="ship_LILY_MV_SIREN_TRANSPORT_unlock">Win the game with MV Imperial Cruiser to unlock this ship.</text>
+
+
+<text name="lily_text_shortDescZoltan2_alt">'Lootcerne'</text>
+<text name="lily_text_shortDescIon1_alt">Pinion I</text>
+<text name="lily_text_shortDescIon2_alt">Pinion II</text>
+<text name="lily_text_shortDescIonHeavy_alt">Hv. Pinion</text>
+<text name="lily_text_shortDescIonChain_alt">Ch. Pinion</text>
+<text name="lily_text_shortDescIonPhase_alt">Ph. Pinion</text>
+<text name="lily_text_shortDescIonFire_alt">Th. Pinion</text>
+<text name="lily_text_shortDescIonStun_alt">St. Pinion</text>
+<text name="lily_text_shortDescIonBio_alt">Rad Pinion</text>
+<text name="lily_text_shortDescIon2Player_alt">Pinion II†</text>
+
+

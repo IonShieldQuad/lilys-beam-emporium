@@ -1,0 +1,96 @@
+<FTL>
+
+<mod:findName type="event" name="UNION_EFFICIENCY_ENGINEER">
+    <mod:findLike type="choice">
+        <mod:selector lvl="1"/>
+        <mod:findLike type="event">
+            <mod-append:choice req="LILY_FOCUS_ION_2">
+                <text>Upgrade your Ion Pinpoint II.</text>
+                <event>
+                    <text>You give the weapon to the engineer, allowing him to work on it.</text>
+                    <remove name="LILY_FOCUS_ION_2"/>
+                    <item_modify>
+                        <item type="scrap" min="-35" max="-25"/>
+                    </item_modify>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event>
+                            <text>After a short time, your weapon is returned to you, clad with an optimization.</text>
+                            <weapon name="LILY_FOCUS_ION_2_PLAYER"/>
+                        </event>
+                    </choice>
+                </event>
+            </mod-append:choice>
+            <mod-append:choice req="LILY_BEAM_SCISSORS">
+                <text>Upgrade your Beam 'Scissors'.</text>
+                <event>
+                    <text>You give the weapon to the engineer, allowing him to work on it.</text>
+                    <remove name="LILY_BEAM_SCISSORS"/>
+                    <item_modify>
+                        <item type="scrap" min="-45" max="-35"/>
+                    </item_modify>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event>
+                            <text>After a short time, your weapon is returned to you, clad with an optimization.</text>
+                            <weapon name="LILY_BEAM_SCISSORS_PLAYER"/>
+                        </event>
+                    </choice>
+                </event>
+            </mod-append:choice>
+            <mod-append:choice req="LILY_FOCUS_PIERCE_1">
+                <text>Upgrade your Refractive Pinpoint I.</text>
+                <event>
+                    <text>You give the weapon to the engineer, allowing him to work on it.</text>
+                    <remove name="LILY_FOCUS_PIERCE_1"/>
+                    <item_modify>
+                        <item type="scrap" min="-45" max="-35"/>
+                    </item_modify>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event>
+                            <text>After a short time, your weapon is returned to you, clad with an optimization.</text>
+                            <weapon name="LILY_FOCUS_PIERCE_1_PLAYER"/>
+                        </event>
+                    </choice>
+                </event>
+            </mod-append:choice>
+            <mod-append:choice req="LILY_FOCUS_PIERCE_2">
+                <text>Upgrade your Refractive Pinpoint II.</text>
+                <event>
+                    <text>You give the weapon to the engineer, allowing him to work on it.</text>
+                    <remove name="LILY_FOCUS_PIERCE_2"/>
+                    <item_modify>
+                        <item type="scrap" min="-45" max="-35"/>
+                    </item_modify>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event>
+                            <text>After a short time, your weapon is returned to you, clad with an optimization.</text>
+                            <weapon name="LILY_FOCUS_PIERCE_2_PLAYER"/>
+                        </event>
+                    </choice>
+                </event>
+            </mod-append:choice>
+            <mod-append:choice req="LILY_BEAM_FROST">
+                <text>Upgrade your 'Polaris' Frost Beam.</text>
+                <event>
+                    <text>You give the weapon to the engineer, allowing him to work on it.</text>
+                    <remove name="LILY_BEAM_FROST"/>
+                    <item_modify>
+                        <item type="scrap" min="-35" max="-25"/>
+                    </item_modify>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event>
+                            <text>After a short time, your weapon is returned to you, clad with an optimization.</text>
+                            <weapon name="LILY_BEAM_FROST_PLAYER"/>
+                        </event>
+                    </choice>
+                </event>
+            </mod-append:choice>
+        </mod:findLike>
+    </mod:findLike>
+</mod:findName>
+
+</FTL>

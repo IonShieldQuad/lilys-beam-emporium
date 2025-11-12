@@ -1,7 +1,7 @@
 local vter = mods.multiverse.vter
 local INT_MAX = 2147483647
 local userdata_table = mods.multiverse.userdata_table
-
+local time_increment = mods.multiverse.time_increment
 
 script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, function(ship)
     if ship.ship.iShipId == 0 then
@@ -42,9 +42,12 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_INITIALIZE, function(
         projectile:ComputeHeading()
     end
 
-    local ownerShip = Hyperspace.ships(projectile:GetOwnerId())
-    if projectile and projectile:GetType() == 5 and ownerShip and ownerShip:HasAugmentation("BOON_LILY_SPECTRUM") > 0 then
-        projectile.damage.iShieldPiercing = projectile.damage.iShieldPiercing + 1
+    if projectile:GetOwnerId() and projectile:GetOwnerId() >= 0 then
+        
+        local ownerShip = Hyperspace.ships(projectile:GetOwnerId())
+        if projectile and projectile:GetType() == 5 and ownerShip and ownerShip:HasAugmentation("BOON_LILY_SPECTRUM") > 0 then
+            projectile.damage.iShieldPiercing = projectile.damage.iShieldPiercing + 1
+        end
     end
 end)
 
@@ -267,28 +270,22 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
 
             --Repair hull by a random amount every second
             if not userdata_table(shipManager, "mods.lilybeams.her_regen").timer then
-                userdata_table(shipManager, "mods.lilybeams.her_regen").timer = Hyperspace.TimerHelper(true)
+                userdata_table(shipManager, "mods.lilybeams.her_regen").timer = 0
             end
-            ---@type Hyperspace.TimerHelper
+            
             local timer = userdata_table(shipManager, "mods.lilybeams.her_regen").timer
-            if timer then
-                if not timer:Running() then
-                    timer.currTime = 0
-                    timer:Start_Float(1.0)
-                end
-                timer:Update()
+            
+            timer = timer + time_increment()
 
-                if timer:Done() then
-                    if shipManager.ship.hullIntegrity.first <= shipManager.ship.hullIntegrity.second / 2.0 then
-                        shipManager:DamageHull(-math.random(1, math.random(2, math.random(7))), true)
-                    end
-                    shipManager:DamageHull(-math.random(0, math.random(1, math.random(5))), true)
-                    timer:Stop()
-                    timer.currTime = 0
-                    timer:Start_Float(1.0)
-                end
 
+            if timer > 1 then
+                timer = timer - 1
+                if shipManager.ship.hullIntegrity.first <= shipManager.ship.hullIntegrity.second / 2.0 then
+                    shipManager:DamageHull(-math.random(1, math.random(2, math.random(7))), true)
+                end
+                shipManager:DamageHull(-math.random(0, math.random(1, math.random(5))), true)
             end
+
 
         end
     

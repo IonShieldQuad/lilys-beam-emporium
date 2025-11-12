@@ -532,6 +532,7 @@ But alright, just bring me some materials and I'll make one for you--
         <event name="STORAGE_CHECK_LILY_JOIN_FIRST" req="lily_times_summoned" lvl="-999" max_lvl="0"/>
         <event name="STORAGE_CHECK_LILY_JOIN_SECOND" req="lily_times_summoned" lvl="1"  max_lvl="1"/>
         <event name="STORAGE_CHECK_LILY_JOIN_RHYMES" req="eldritch_cat" lvl="1"/>
+        <event name="STORAGE_CHECK_LILY_JOIN_FREE" req="LILY_HER_EMPOWERMENT" lvl="1"/>
         <event name="STORAGE_CHECK_LILY_JOIN_FREE" req="SHIP_HER" lvl="1"/>
 
     </loadEventList>
@@ -836,11 +837,25 @@ Anyway, was there anything else you wanted to ask?
     <mod-append:choice req="LILY_PATRONAGE">
         <text>(Lily) Summon Lily's Emporium. [1 fleet boost]</text>
         <event>
+            <loadEventList first="true" default="LILY_EMPORIUM_SUMMON_DEFAULT">
+                <event name="LILY_EMPORIUM_SUMMON_CHAOS" req="eldritch_cat" lvl="1"/>
+                <event name="LILY_EMPORIUM_SUMMON_CHAOS" req="LILY_HER_EMPOWERMENT" lvl="1"/>
+
+                <event name="LILY_EMPORIUM_SUMMON_CHAOS" req="SHIP_HER" lvl="1"/>
+            </loadEventList>
             <modifyPursuit amount="1"/>
-			<store>STORE_LILY_EMPORIUM_UNLOCKED</store>
         </event>
     </mod-append:choice>
 </mod:findName>
+
+
+<event name="LILY_EMPORIUM_SUMMON_DEFAULT">
+    <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
+</event>
+
+<event name="LILY_EMPORIUM_SUMMON_CHAOS">
+    <store>STORE_LILY_EMPORIUM_RHYME</store>
+</event>
 
 
 
@@ -2336,6 +2351,14 @@ Anyway, was there anything else you wanted to ask?
                 <text>Continue to the fight!</text>
                 <event>
                     <loadEventList first="true" default="COMBAT_CHECK_AFTERBURNER_BURN_1">
+                        <event load="COMBAT_CHECK_AFTERBURNER_BURN_16" req="engines" lvl="16"/>
+                        <event load="COMBAT_CHECK_AFTERBURNER_BURN_15" req="engines" lvl="15"/>
+                        <event load="COMBAT_CHECK_AFTERBURNER_BURN_14" req="engines" lvl="14"/>
+                        <event load="COMBAT_CHECK_AFTERBURNER_BURN_13" req="engines" lvl="13"/>
+                        <event load="COMBAT_CHECK_AFTERBURNER_BURN_12" req="engines" lvl="12"/>
+                        <event load="COMBAT_CHECK_AFTERBURNER_BURN_11" req="engines" lvl="11"/>
+                        <event load="COMBAT_CHECK_AFTERBURNER_BURN_10" req="engines" lvl="10"/>
+                        <event load="COMBAT_CHECK_AFTERBURNER_BURN_9" req="engines" lvl="9"/>
                         <event load="COMBAT_CHECK_AFTERBURNER_BURN_8" req="engines" lvl="8"/>
                         <event load="COMBAT_CHECK_AFTERBURNER_BURN_7" req="engines" lvl="7"/>
                         <event load="COMBAT_CHECK_AFTERBURNER_BURN_6" req="engines" lvl="6"/>
@@ -2373,6 +2396,129 @@ Anyway, was there anything else you wanted to ask?
     </choice>
 </event>
 
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_16">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_15">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_14">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_13">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_12">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_11">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_10">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
+
+<event name="COMBAT_CHECK_AFTERBURNER_BURN_9">
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="room" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+    <enemyDamage amount="1" system="random" effect="fire"/>
+</event>
 
 <event name="COMBAT_CHECK_AFTERBURNER_BURN_8">
     <enemyDamage amount="1" system="room" effect="fire"/>

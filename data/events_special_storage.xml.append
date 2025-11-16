@@ -21,16 +21,20 @@ What do you want to ask?</text>
         <event load="STORAGE_CHECK_LILY_LOREDUMP_1"/>
     </choice>
     <choice>
-        <text>Ask her about special beam weapons.</text>
+        <text>Ask her about special technology.</text>
         <event load="STORAGE_CHECK_LILY_QUESTS"/>
     </choice>
-    <choice hidden="true" blue="false" req="unique_lily_avatar" lvl="-999" max_lvl="0">
+    <choice hidden="true" blue="false" req="LIST_CREW_LILY_AVATAR" lvl="-999" max_lvl="0">
         <text>Ask her to join you personally.</text>
         <event load="STORAGE_CHECK_LILY_JOIN"/>
     </choice>
-    <choice hidden="true" req="unique_lily_avatar" lvl="1">
+    <choice hidden="true" req="LIST_CREW_LILY_AVATAR" lvl="1">
         <text>She is already accompanying you.</text>
         <event load="OPTION_INVALID"/>
+    </choice>
+    <choice hidden="true" blue="false" req="LIST_CREW_LILY_AVATAR" lvl="1">
+        <text>Ask her about her powers.</text>
+        <event load="STORAGE_CHECK_LILY_ASK_POWERS_1"/>
     </choice>
     <choice>
         <text>Nevermind.</text>
@@ -44,10 +48,11 @@ What do you want to ask?</text>
 </event>
 <event name="STORAGE_CHECK_LILY_QUESTS">
     <text>Oh, you want one of those fancy beam weapons that nobody else has?--
+Or some other cool piece for your ship?--
 Well, we have someting in common then--
 Get the necessarry materials and knowledge for them and I'd gladly share--</text>
     <choice>
-        <text>Ask her about Aether beams.</text>
+        <text>Ask her about Aether.</text>
         <event load="STORAGE_CHECK_LILY_QUESTS_AETHER"/>
     </choice>
     <choice hidden="true">
@@ -571,9 +576,14 @@ A rift in space suddenly opens near you, materializing... a quite normal looking
         </event>
     </choice>
     <choice req="BLUELIST_AETHER" lvl="1" blue="false" hidden="true">
-        <text>(Aether Tech) Install the technology and use it [30~, 5|]</text>
+        <text>(Aether Tech) Aether will do - just submit Lily one of the tech pieces first. (Ask her about the tech in the menu)</text>
+        <event load="OPTION_INVALID"/>
+    </choice>
+    <choice req="lily_aether_points" lvl="1" blue="false" hidden="true">
+        <text>(Aether Points) Install the technology and use it [30~, 5|]</text>
         <event name="STORAGE_CHECK_LILY_LINKER_INSTALL">
             <text>You install the required technology...</text>
+            <variable name="lily_aether_points" op="add" val="-1"/>
             <item_modify>
                 <item type="scrap" min="-30" max="-30"/>
                 <item type="drones" min="-5" max="-5"/>
@@ -591,10 +601,6 @@ A rift in space suddenly opens near you, materializing... a quite normal looking
                 </event>
             </choice>
         </event>
-    </choice>
-    <choice req="lily_aether_points" lvl="1" blue="false" hidden="true">
-        <text>(Aether Points) Install the technology and use it [30~, 5|]</text>
-        <event load="STORAGE_CHECK_LILY_LINKER_INSTALL"/>
     </choice>
     <choice req="LILY_AVATAR_LINKER" lvl="0" max_lvl="0" blue="false" hidden="true">
         <text>Note: You need to be in possession of Aether Tech (or some alternative) for installation.</text>
@@ -830,6 +836,67 @@ Anyway, was there anything else you wanted to ask?
 
 
 
+<event name="STORAGE_CHECK_LILY_ASK_POWERS_1">
+    <text>You decide to ask Lily how she - or whatever her "Avatar" thing is - possesses such superhuman powers.
+"So, you want to know abount my powers and such?--"
+"Prying for secrets, I see--"
+"But you surely have heard of magicians, wizards, warlocks, and so on?--"
+"So it's very simple - I'm a witch--"</text>
+    <choice>
+        <text>I've heard - but that doesn't explain a thing.</text>
+        <event name="STORAGE_CHECK_LILY_ASK_POWERS_2">
+            <text>"Well, I suppose I'll have to get into... more specific details, then?--"
+"Aether, right? You've heard of it, right?--"
+"Well, how about Exonet?--"
+"I don't blame you if you don't - this material doesn't actually exist in your cluster at all - not even the most ancient empires of yours got your hand on it--"</text>
+            <choice>
+                <text>Continue...</text>
+                <event name="STORAGE_CHECK_LILY_ASK_POWERS_3">
+                    <text>"But luckily, such limitations don't apply to me!--"
+"Since I can travel between clusters, it was a matter of time before I've found a cluster in which it existed--"
+"Exonet - both material and technology - might not have such amazing structural properties of Aether - but yet it allows for truly wonderful things--"</text>
+                    <choice>
+                        <text>Continue...</text>
+                        <event name="STORAGE_CHECK_LILY_ASK_POWERS_4">
+                            <text>"It's a synthetic material with an unique property of being extremely good at conducting energy and data - and once properly synced up, it can even do it at range, wirelessly!--"
+"And what this means - a whole range of applications, from mundane to not so--"
+"Exonet can allow vehicles, ships, or even living beings integrated with it - to have access to vastly more energy, data, and processing capability than it would be normally possible!--"
+"It also makes remote contol easy - even at huge distances or through jamming that would render all radio communication useless."</text>
+                            <choice>
+                                <text>Continue...</text>
+                                <event name="STORAGE_CHECK_LILY_ASK_POWERS_5">
+                                    <text>"...Which is what lies at the core of my Avatars - an Aether made structure with a powerful Exonet link to provide it with energy, give me the ability to control it, as well as receive an extremely good reading about its surroundings--"
+"And the powers - they also are using the connection provided by the Exonet link--"</text>
+                                    <choice>
+                                        <text>Continue...</text>
+                                        <event name="STORAGE_CHECK_LILY_ASK_POWERS_6">
+                                            <text>"So I hope that have cleared things up a bit--"
+"And if you are just even more curious now, that's good too--"
+"I'm sure you want a piece of this technology for yourself now as well--"
+"Stay on my good side and maybe you'll still have an opportunity to get your hand on some later, hahe--"</text>
+                                            <choice>
+                                                <text>Continue...</text>
+                                                <event name="STORAGE_CHECK_LILY_MENU_LOAD"/>
+                                            </choice>
+                                        </event>
+                                    </choice>
+                                </event>
+                            </choice>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </choice>
+    <choice>
+        <text>Wi- what? That just makes it even more confusing.</text>
+        <event load="STORAGE_CHECK_LILY_ASK_POWERS_2"/>
+    </choice>
+    <choice>
+        <text>Umm, okay I guess? I think I got it.</text>
+        <event load="STORAGE_CHECK_LILY_MENU_LOAD"/>
+    </choice>
+</event>
 
 
 
@@ -2670,5 +2737,61 @@ Anyway, was there anything else you wanted to ask?
     </choice>
 </event>
 
+
+<mod:findName type="event" name="STORAGE_CHECK_CLONE_CANNON">
+    <mod:findLike type="choice">
+        <mod:selector req="CLONE_CANNON"/>
+        <mod:findLike type="event">
+            <mod-append:choice req="LIST_CREW_LILY_AVATAR" hidden="true" blue="true">
+                <text>Try to upload Lily's Avatar.</text>
+                <event>
+                    <text>Are you sure? You are not sure if it's even possible to clone Lily's Avatar conventionally.</text>
+                    <choice hidden="true">
+                        <text>Yes.</text>
+                        <event>
+                            <text>You start the process. It... doesn't seem to work, as expected. But suddenty there is a flash of aberrant light, and something... has changed?</text>
+                            <remove name="CLONE_CANNON"/>
+                            <choice hidden="true">
+                                <text>Continue...</text>
+                                <event>
+                                    <text>"A wonderful idea you have there, Renagade--"
+"And sadly, while it might not be what you'd expect, I took liberty to modify the cannon... myself--"
+"Just try and see the result for yourself--"</text>
+                                    <weapon name="CLONE_CANNON_LILY_BEAM"/>
+                                    <choice>
+                                        <text>Continue...</text>
+                                        <event load="STORAGE_CHECK"/>
+                                    </choice>
+                                </event>
+                            </choice>
+                        </event>
+                    </choice>
+                    <choice>
+                        <text>No.</text>
+                        <event load="STORAGE_CHECK"/>
+                    </choice>
+                </event>
+            </mod-append:choice>
+        </mod:findLike>
+    </mod:findLike>
+    <mod-append:choice req="CLONE_CANNON_LILY_BEAM" hidden="true" blue="false">
+        <text>Reset the cannon.</text>
+        <event>
+            <text>You reset the weapon.</text>
+            <remove name="CLONE_CANNON_LILY_BEAM"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>Despite the cannon modification being... very unusual, no problems occur during the resetting process.</text>
+                    <weapon name="CLONE_CANNON"/>
+                    <choice>
+                        <text>Continue...</text>
+                        <event load="STORAGE_CHECK"/>
+                    </choice>
+                </event>
+            </choice>
+        </event>
+    </mod-append:choice>
+</mod:findName>
 
 </FTL>

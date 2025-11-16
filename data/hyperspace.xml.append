@@ -6,6 +6,7 @@
 	<mod-append:script>data/scripts_lily/script_lily_lbe_init.lua</mod-append:script>
     <mod-append:script>data/scripts_lily/script_lily_weapons.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_augments.lua</mod-append:script>
+	<mod-append:script>data/scripts_lily/script_lily_exonet.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_powers.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_names.lua</mod-append:script>
 	<mod-append:script>data/scripts_lily/script_lily_events.lua</mod-append:script>
@@ -464,10 +465,10 @@
 	<aug name="LILY_ESTROGEN_DISPERSAL">
 	</aug>
 
-	<aug name="LILY_MYSTERIOUS_SHIELDS">
+	<aug name="LILY_ADV_ELDRITCH_SHIELDS">
 		<function name="ENERGY_SHIELD" value="0" useForReqs="true" stackable="false"/>
 		<superShield>
-			<value>42</value>
+			<value>20</value>
 			<color r="255" g="255" b="255" a="1"/>
 			<shieldImage>ship/lily_rainbowshield.png</shieldImage>
 		</superShield>
@@ -475,7 +476,65 @@
 		<locked/>
 	</aug>
 
+	<aug name="LILY_EXONET_SHIP_MAINFRAME_VERDANT">
+		<!--function name="AUGMENT_SLOT" value="1"/-->
+		<function name="ENERGY_SHIELD" value="0" useForReqs="true" stackable="false"/>
+		<superShield>
+			<add>3</add>
+			<color r="64" g="255" b="64" a="1"/>
+			<shieldImage>ship/lily_exonet_shield_radiant.png</shieldImage>
+		</superShield>
+		<icon>icon_zoltan_shield</icon>
+		<locked/>
+	</aug>
 
+	<aug name="LILY_EXONET_SHIP_MAINFRAME_CRIMSON">
+		<!--function name="AUGMENT_SLOT" value="2"/-->
+		<function name="ENERGY_SHIELD" value="0" useForReqs="true" stackable="false"/>
+		<superShield>
+			<add>5</add>
+			<color r="255" g="64" b="64" a="1"/>
+			<shieldImage>ship/lily_exonet_shield_radiant.png</shieldImage>
+		</superShield>
+		<icon>icon_zoltan_shield</icon>
+		<locked/>
+	</aug>
+
+	<aug name="LILY_EXONET_SHIP_MAINFRAME_AZURE">
+		<!--function name="AUGMENT_SLOT" value="3"/-->
+		<function name="ENERGY_SHIELD" value="0" useForReqs="true" stackable="false"/>
+		<superShield>
+			<add>8</add>
+			<color r="64" g="192" b="255" a="1"/>
+			<shieldImage>ship/lily_exonet_shield_radiant.png</shieldImage>
+		</superShield>
+		<icon>icon_zoltan_shield</icon>
+		<locked/>
+	</aug>
+
+	<aug name="LILY_EXONET_SHIP_MAINFRAME_RADIANT">
+		<!--function name="AUGMENT_SLOT" value="6"/-->
+		<function name="ENERGY_SHIELD" value="0" useForReqs="true" stackable="false"/>
+		<superShield>
+			<add>14</add>
+			<color r="255" g="255" b="255" a="1"/>
+			<shieldImage>ship/lily_exonet_shield_radiant.png</shieldImage>
+		</superShield>
+		<icon>icon_zoltan_shield</icon>
+		<locked/>
+	</aug>
+
+	<aug name="LILY_EXONET_SHIP_MAINFRAME_IRIDIUM">
+		<!--function name="AUGMENT_SLOT" value="9"/-->
+		<function name="ENERGY_SHIELD" value="0" useForReqs="true" stackable="false"/>
+		<superShield>
+			<add>20</add>
+			<color r="255" g="255" b="255" a="1"/>
+			<shieldImage>ship/lily_exonet_shield_iridium.png</shieldImage>
+		</superShield>
+		<icon>icon_zoltan_shield</icon>
+		<locked/>
+	</aug>
 
 
 
@@ -3244,6 +3303,15 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
                 <multiDifficulty>false</multiDifficulty>
                 <sound>achievement</sound>
             </mod-append:achievement>
+			<mod-append:achievement name="LILY_ACH_GEN_EXONET_TEST">
+				<name>This Was a Triumph</name>
+				<description>Destroy the Lily's Emporium station, getting a ton of test data for her - and some experimental equipment for you.</description>
+				<secretDescription>???</secretDescription>
+				<icon>general/lily_ach_generic_exonet_test</icon>
+				<lockImage>ach_locked</lockImage>
+				<multiDifficulty>false</multiDifficulty>
+				<sound>achievement</sound>
+			</mod-append:achievement>
 			<mod-append:achievement name="LILY_ACH_GEN_EXCHANGE">
                 <name>Equivalent Exchange</name>
                 <description>Craft a Royal Beam from salvaged Aether technology with Lily's help.</description>

@@ -37,7 +37,7 @@
         <maxPower amount="42" />
         <!--crewCount amount="4" max="10" class="human" /-->
         <boardingAI>sabotage</boardingAI>
-        <aug name="LILY_MYSTERIOUS_SHIELDS" />
+        <aug name="LILY_ADV_ELDRITCH_SHIELDS" />
         <aug name="NO_GHOST" />
         <aug name="CHAOS" />
         <aug name="UNION_JACKETS" />
@@ -150,6 +150,12 @@
         <mod-append:name>LILY_FOCUS_PIERCE_1_PLAYER</mod-append:name>
         <mod-append:name>LILY_FOCUS_PIERCE_2_PLAYER</mod-append:name>
         <mod-append:name>LILY_BEAM_FROST_PLAYER</mod-append:name>
+        <mod-append:name>CLONE_CANNON_LILY_BEAM</mod-append:name>
+        <mod-append:name>LILY_EXONET_WEAPON_CORE_VERDANT</mod-append:name>
+        <mod-append:name>LILY_EXONET_WEAPON_CORE_CRIMSON</mod-append:name>
+        <mod-append:name>LILY_EXONET_WEAPON_CORE_AZURE</mod-append:name>
+        <mod-append:name>LILY_EXONET_WEAPON_CORE_RADIANT</mod-append:name>
+        <mod-append:name>LILY_EXONET_WEAPON_CORE_IRIDIUM</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET">
@@ -1085,6 +1091,57 @@
     </blueprintList>
 
 
+
+
+
+
+
+
+    <blueprintList name="LIST_EXONET_ALL">
+        <name>LILY_EXONET_WEAPON_CORE_VERDANT</name>
+        <name>LILY_EXONET_WEAPON_CORE_CRIMSON</name>
+        <name>LILY_EXONET_WEAPON_CORE_AZURE</name>
+        <name>LILY_EXONET_WEAPON_CORE_RADIANT</name>
+        <name>LILY_EXONET_WEAPON_CORE_IRIDIUM</name>
+
+        <name>LILY_EXONET_SHIP_MAINFRAME_VERDANT</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_CRIMSON</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_AZURE</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_RADIANT</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_IRIDIUM</name>
+
+        <name>LIST_CREW_LILY_AVATAR</name>
+
+    </blueprintList>
+
+    <blueprintList name="BLUELIST_EXONET_UPGRADE">
+        <name>LILY_EXONET_WEAPON_CORE_VERDANT</name>
+        <name>LILY_EXONET_WEAPON_CORE_CRIMSON</name>
+        <name>LILY_EXONET_WEAPON_CORE_AZURE</name>
+        <name>LILY_EXONET_WEAPON_CORE_RADIANT</name>
+        <name>LILY_EXONET_WEAPON_CORE_IRIDIUM</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_VERDANT</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_CRIMSON</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_AZURE</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_RADIANT</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_IRIDIUM</name>
+    </blueprintList>
+
+    <blueprintList name="LIST_EXONET_CORES">
+        <name>LILY_EXONET_WEAPON_CORE_VERDANT</name>
+        <name>LILY_EXONET_WEAPON_CORE_CRIMSON</name>
+        <name>LILY_EXONET_WEAPON_CORE_AZURE</name>
+        <name>LILY_EXONET_WEAPON_CORE_RADIANT</name>
+        <name>LILY_EXONET_WEAPON_CORE_IRIDIUM</name>
+    </blueprintList>
+
+    <blueprintList name="LIST_EXONET_AUGMENTS">
+        <name>LILY_EXONET_SHIP_MAINFRAME_VERDANT</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_CRIMSON</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_AZURE</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_RADIANT</name>
+        <name>LILY_EXONET_SHIP_MAINFRAME_IRIDIUM</name>
+    </blueprintList>
 
 </FTL>
 

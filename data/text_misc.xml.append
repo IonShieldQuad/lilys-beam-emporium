@@ -9,6 +9,8 @@
 <text name="tip_lily_disintegrators">Tip: Disintegrators are special beams designed by Lily using Eldritch technology. They apply their damage over time to crew and systems, as well as severely impeding healing and repairs, and will damage hull when hitting breached rooms. The effects apply even to resistant rooms or when hitting shield bubbles!</text>
 <text name="tip_lily_disintegrators_alt">Tip: Disintegrators are special beams designed by Lily using Eldritch technology. They apply their damage over time to crew and systems, as well as severely impeding healing and repairs, and will damage hull when hitting fully destroyed systems. The effects apply even to resistant rooms or when hitting shield bubbles!</text>
 
+<text name="tip_lily_exonet_weapon_core">Tip: Exonet cores use specialized technology that allows them to transfer huge amout of data and energy wirelessly. This one is calibrated and set to "Recieve" mode, providing your weapons with power and data to enhance their performance.</text>
+
 <text name="tip_lily_syringe">Tip: Special beam weapon. Need to be configured before use.</text>
 <text name="tip_lily_syringe_m">Tip: Applies 4/s healing for 15 second for allied crew. Also halves damage taken from hazards for the duration.</text>
 <text name="tip_lily_syringe_s">Tip: Provides doubled movement speed and damage for 10 seconds for allied crew.</text>

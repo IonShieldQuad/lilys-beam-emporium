@@ -43,7 +43,7 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_INITIALIZE, function(
     end
 
     if projectile:GetOwnerId() and projectile:GetOwnerId() >= 0 then
-        
+
         local ownerShip = Hyperspace.ships(projectile:GetOwnerId())
         if projectile and projectile:GetType() == 5 and ownerShip and ownerShip:HasAugmentation("BOON_LILY_SPECTRUM") > 0 then
             projectile.damage.iShieldPiercing = projectile.damage.iShieldPiercing + 1
@@ -91,7 +91,7 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA,
                     break
                 end
             end
-            
+
             if not celFound then
                 local weapons = ship and ship.weaponSystem and ship.weaponSystem.weapons
                 if weapons then
@@ -133,7 +133,7 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA,
                     end
                 end
             end
-            
+
             if celFound then
                 if damage.iDamage > 0 then
                     damage.iDamage = damage.iDamage * 2
@@ -160,7 +160,7 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA,
 script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
     function(ship, projectile, location, damage, newTile, beamHit)
         local otherShip = Hyperspace.ships(1 - ship.iShipId)
-       
+
         if projectile and ship and otherShip and otherShip:HasAugmentation("LILY_ANTI_CEL") > 0 then
             local celFound = false
             local crewList = Hyperspace.Blueprints:GetBlueprintList("LIST_CREW_SYLVAN")
@@ -245,7 +245,7 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
     end)
 
 
-    script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager) 
+    script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
         if shipManager and shipManager:HasAugmentation("LILY_ESTROGEN_DISPERSAL") > 0 then
             for crew in vter(shipManager.vCrewList) do
                 ---@type Hyperspace.CrewMember
@@ -253,7 +253,7 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                 if crew and (crew.iShipId == shipManager.iShipId) then
                     crew:SetSex(false)
                 end
-            end 
+            end
         end
 
         if shipManager and shipManager:HasAugmentation("LILY_HER_EMPOWERMENT") > 0 then
@@ -272,9 +272,9 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
             if not userdata_table(shipManager, "mods.lilybeams.her_regen").timer then
                 userdata_table(shipManager, "mods.lilybeams.her_regen").timer = 0
             end
-            
+
             local timer = userdata_table(shipManager, "mods.lilybeams.her_regen").timer
-            
+
             timer = timer + time_increment()
 
 
@@ -288,6 +288,6 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
 
 
         end
-    
+
     end)
 

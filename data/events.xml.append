@@ -49,6 +49,35 @@ Unfortunately, there's nothing left to scrap of the station itself.</text>
         <event>
             <text>Howewer, one of the weapons on the station semms to have survived the fight and is floating in space now! You hastily pick it up.</text>
             <weapon name="LIST_LILY_STATION_LOOT"/>
+            <choice hidden="true">
+                <text>Continue...</text>
+                <event>
+                    <text>Shortly after, Lily contacts you, however.
+"Oh, so this stage of testing is complete!--"
+"The results are unexpected... and most impressive!--"
+"You and your ship are surely strong ones since you've managed to pull this off!--"
+"And that means - you will make excellent subject for further testing!--"</text>
+                    <choice hidden="true">
+                        <text>Continue...</text>
+                        <event>
+                            <text>"Oh, and luckily for you it won't even involve you getting shot at by experimental weapons--"
+"Only merely carrying and using some potentially volatile tech, hahe!--"
+"Alright, here we go, and no, you can't back out--"</text>
+                            <augment name="LILY_EXONET_SHIP_MAINFRAME_CRIMSON"/>
+                            <choice hidden="true">
+                                <text>Continue...</text>
+                                <event>
+                                    <text>"And take this as well--"
+"It won't kill you - probably--"</text>
+                                    <weapon name="LILY_EXONET_WEAPON_CORE_CRIMSON"/>
+                                    <achievement>LILY_ACH_GEN_EXONET_TEST</achievement>
+                                    <metaVariable name="lily_testing_allowed" op="set" val="1"/>
+                                </event>
+                            </choice>
+                        </event>
+                    </choice>
+                </event>
+            </choice>
         </event>
     </choice>
 </event>
@@ -410,6 +439,13 @@ Besides, I'm actually an optional boss and you definitely aren't ready to fight 
                 <text>Choose the option above.</text>
                 <event load="OPTION_INVALID"/>
             </choice>
+            <choice req="lily_testing_allowed" lvl="1" hidden="true">
+                <text>I'm here just to do some combat testing of your technology.</text>
+                <event>
+                    <ship hostile="true" />
+                    <loadEvent>LILY_EMPORIUM_ATTACK_TEST</loadEvent>
+                </event>
+            </choice>
             <choice hidden="true">
                 <text>@%#$$#$$@$</text>
                 <event load="OPTION_INVALID"/>
@@ -504,6 +540,13 @@ Besides, I'm actually an optional boss and you definitely aren't ready to fight 
             <choice hidden="true">
                 <text>Choose the option above.</text>
                 <event load="OPTION_INVALID"/>
+            </choice>
+            <choice req="lily_testing_allowed" lvl="1" hidden="true">
+                <text>I'm here just to do some combat testing of your technology.</text>
+                <event>
+                    <ship hostile="true" />
+                    <loadEvent>LILY_EMPORIUM_ATTACK_TEST</loadEvent>
+                </event>
             </choice>
             <choice hidden="true">
                 <text>@%#$$#$$@$</text>
@@ -604,6 +647,16 @@ It was probably nothing, just ignore it--"</text>
             <text>"Also, what is a combat check?--"
 "Haven't seen any around here--"</text>
         </event>
+    </choice>
+</event>
+
+<event name="LILY_EMPORIUM_ATTACK_TEST">
+    <text>"You know what, this is alright. The weapons need some testing anyway--"
+"And I'll reward you if you manage to win--"
+"So bring it on, hahe!"</text>
+    <choice>
+        <text>Continue...</text>
+        <event load="COMBAT_CHECK"/>
     </choice>
 </event>
 

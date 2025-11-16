@@ -1371,6 +1371,102 @@
 		<chargeImage>weapon_lily/beam_frost_glow.png</chargeImage>
 	</weaponAnim>
 
+
+
+
+
+
+
+
+
+
+
+	<animSheet name="lily_exonet_weapon_core_verdant" w="150" h="101" fw="50" fh="101">weapon_lily/exonet_weapon_core_verdant.png</animSheet>
+	<weaponAnim name="lily_exonet_weapon_core_verdant">
+		<sheet>lily_exonet_weapon_core_verdant</sheet>
+		<desc length="3" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="0" y="0" />
+		<mountPoint x="9" y="70" />
+	</weaponAnim>
+	<animSheet name="lily_exonet_weapon_core_verdant_icon" w="156" h="39" fw="78" fh="39">weapon_lily/exonet_weapon_core_verdant_icon.png</animSheet>
+	<anim name="lily_exonet_weapon_core_verdant_icon">
+		<sheet>lily_exonet_weapon_core_verdant_icon</sheet>
+		<desc length="2" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+	<animSheet name="lily_exonet_weapon_core_crimson" w="150" h="101" fw="50" fh="101">weapon_lily/exonet_weapon_core_crimson.png</animSheet>
+	<weaponAnim name="lily_exonet_weapon_core_crimson">
+		<sheet>lily_exonet_weapon_core_crimson</sheet>
+		<desc length="3" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="0" y="0" />
+		<mountPoint x="9" y="70" />
+	</weaponAnim>
+	<animSheet name="lily_exonet_weapon_core_crimson_icon" w="156" h="39" fw="78" fh="39">weapon_lily/exonet_weapon_core_crimson_icon.png</animSheet>
+	<anim name="lily_exonet_weapon_core_crimson_icon">
+		<sheet>lily_exonet_weapon_core_crimson_icon</sheet>
+		<desc length="2" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+	<animSheet name="lily_exonet_weapon_core_azure" w="150" h="101" fw="50" fh="101">weapon_lily/exonet_weapon_core_azure.png</animSheet>
+	<weaponAnim name="lily_exonet_weapon_core_azure">
+		<sheet>lily_exonet_weapon_core_azure</sheet>
+		<desc length="3" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="0" y="0" />
+		<mountPoint x="9" y="70" />
+	</weaponAnim>
+	<animSheet name="lily_exonet_weapon_core_azure_icon" w="156" h="39" fw="78" fh="39">weapon_lily/exonet_weapon_core_azure_icon.png</animSheet>
+	<anim name="lily_exonet_weapon_core_azure_icon">
+		<sheet>lily_exonet_weapon_core_azure_icon</sheet>
+		<desc length="2" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+	<animSheet name="lily_exonet_weapon_core_radiant" w="150" h="101" fw="50" fh="101">weapon_lily/exonet_weapon_core_radiant.png</animSheet>
+	<weaponAnim name="lily_exonet_weapon_core_radiant">
+		<sheet>lily_exonet_weapon_core_radiant</sheet>
+		<desc length="3" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="0" y="0" />
+		<mountPoint x="9" y="70" />
+	</weaponAnim>
+	<animSheet name="lily_exonet_weapon_core_radiant_icon" w="156" h="39" fw="78" fh="39">weapon_lily/exonet_weapon_core_radiant_icon.png</animSheet>
+	<anim name="lily_exonet_weapon_core_radiant_icon">
+		<sheet>lily_exonet_weapon_core_radiant_icon</sheet>
+		<desc length="2" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+	<animSheet name="lily_exonet_weapon_core_iridium" w="150" h="101" fw="50" fh="101">weapon_lily/exonet_weapon_core_iridium.png</animSheet>
+	<weaponAnim name="lily_exonet_weapon_core_iridium">
+		<sheet>lily_exonet_weapon_core_iridium</sheet>
+		<desc length="3" x="0" y="0"/>
+		<chargedFrame>1</chargedFrame>
+		<fireFrame>2</fireFrame>
+		<firePoint x="0" y="0" />
+		<mountPoint x="9" y="70" />
+	</weaponAnim>
+	<animSheet name="lily_exonet_weapon_core_iridium_icon" w="156" h="39" fw="78" fh="39">weapon_lily/exonet_weapon_core_iridium_icon.png</animSheet>
+	<anim name="lily_exonet_weapon_core_iridium_icon">
+		<sheet>lily_exonet_weapon_core_iridium_icon</sheet>
+		<desc length="2" x="0" y="0"/>
+		<time>1</time>
+	</anim>
+
+
+
+
+
+
+
+
+
+
+
 	<animSheet name="lily_siren_transport_a_artillery" w="1111" h="82" fw="11" fh="82">weapon_lily/siren_transport_a_artillery.png</animSheet>
 	<weaponAnim name="lily_siren_transport_a_artillery">
 		<sheet>lily_siren_transport_a_artillery</sheet>

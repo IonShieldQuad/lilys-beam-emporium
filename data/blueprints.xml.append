@@ -191,6 +191,51 @@ disable shields as well as systems.</tooltip>
         </mod:findWithChildLike>
     </mod:findLike>
 
+    <augBlueprint name="LILY_EXONET_SHIP_MAINFRAME_VERDANT">
+        <title>Exonet Mainframe (V)</title>
+        <desc>A Verdant tier Exonet-Enabled mainframe installed on your ship. Provides 3 point stackable energy shield, and 3 bonus power to engines.</desc>
+        <cost>100</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_EXONET_SHIP_MAINFRAME_CRIMSON">
+        <title>Exonet Mainframe (C)</title>
+        <desc>A Crimson tier Exonet-Enabled mainframe installed on your ship. Provides 5 point stackable energy shield, 4 bonus power to engines, 2 to shields and armor, and 1 to other systems.</desc>
+        <cost>150</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_EXONET_SHIP_MAINFRAME_AZURE">
+        <title>Exonet Mainframe (A)</title>
+        <desc>An Azure tier Exonet-Enabled mainframe installed on your ship. Provides 8 point stackable energy shield, 5 bonus power to engines, 4 to shields, armor, and ECM, and 2 to other systems. Also provides basic manning to all systems.</desc>
+        <cost>200</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_EXONET_SHIP_MAINFRAME_RADIANT">
+        <title>Exonet Mainframe (R)</title>
+        <desc>A Radiant tier Exonet-Enabled mainframe installed on your ship. Provides 14 point stackable energy shield, 6 bonus power to engines and ECM, 8 to shields and armor, and 4 to other systems. Also provides improved manning to all systems.</desc>
+        <cost>300</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
+    <augBlueprint name="LILY_EXONET_SHIP_MAINFRAME_IRIDIUM">
+        <title>Exonet Mainframe (I)</title>
+        <desc>An Iridium tier Exonet-Enabled mainframe installed on your ship. Provides 20 point stackable energy shield, 8 bonus power to engines and ECM, 16 to shields and armor, and 6 to other systems. Also provides advanced manning to all systems.</desc>
+        <cost>500</cost>
+        <bp>5</bp>
+        <rarity>0</rarity>
+        <stackable>false</stackable>
+    </augBlueprint>
+
 
     <augBlueprint name="LILY_TARGETING_BYPASS">
         <title>Hyper Reloader</title>
@@ -275,9 +320,9 @@ disable shields as well as systems.</tooltip>
     </augBlueprint>
 
 
-    <augBlueprint name="LILY_MYSTERIOUS_SHIELDS">
+    <augBlueprint name="LILY_ADV_ELDRITCH_SHIELDS">
         <title>Mysterious Shield</title>
-        <desc>A barrier of eldritch chaotic energy that provides a 42 hitpoints Super Shield. Its power source seems to be... not even on the ship?.</desc>
+        <desc>A barrier of eldritch chaotic energy that provides a 20 hitpoints Super Shield. Your scanner's can't even determine where the shield's power is coming from.</desc>
         <cost>80</cost>
         <bp>8</bp>
         <rarity>0</rarity>
@@ -478,6 +523,77 @@ disable shields as well as systems.</tooltip>
         <iconImage>beamH</iconImage>
     </weaponBlueprint>
 
+
+    <weaponBlueprint name="CLONE_CANNON_LILY_BEAM">
+        <type>BEAM</type>
+        <flavorType>Clone-Rigged Cannon</flavorType>
+        <tip>tip_clone_cannon</tip>
+        <title>Clone Cannon [???]</title>
+        <short>Cloner [???]</short>
+        <desc>No weapon has ever sparked a larger ethical controversy, but if it works it works. Apparently your attempts to upload Lily's Avatar into it has resulted in it becoming... a pinpoint?</desc>
+        <tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
+        <radius>0</radius>
+        <damage>0</damage>
+        <shots>1</shots>
+        <length>25</length>
+        <speed>5</speed>
+        <sp>10</sp>
+        <spin>720</spin>
+        <fireChance>0</fireChance>
+        <breachChance>0</breachChance>
+        <cooldown>18</cooldown>
+        <power>2</power>
+        <cost>65</cost>
+        <bp>10</bp>
+        <rarity>0</rarity>
+        <image>beam_contact</image>
+        <color>
+            <r>255</r>
+            <g>255</g>
+            <b>255</b>
+        </color>
+        <spawnCrew>
+            <number>1</number>
+            <race>STORE_LIST_CREW_LILY</race>
+            <lifetime>20</lifetime>
+            <statBoosts>
+                <statBoost name="noClone">
+                    <boostType>SET</boostType>
+                    <value>true</value>
+                    <shipTarget>ALL</shipTarget>
+                    <crewTarget>ALL</crewTarget>
+                    <priority>999999</priority>
+                </statBoost>
+                <statBoost name="noWarning">
+                    <boostType>SET</boostType>
+                    <value>true</value>
+                    <shipTarget>ALL</shipTarget>
+                    <crewTarget>ALL</crewTarget>
+                    <priority>999999</priority>
+                </statBoost>
+                <statBoost name="lowHealthThreshold">
+                    <boostType>SET</boostType>
+                    <amount>-1</amount>
+                    <shipTarget>ALL</shipTarget>
+                    <crewTarget>ALL</crewTarget>
+                    <priority>999999</priority>
+                </statBoost>
+            </statBoosts>
+            <noSlot>true</noSlot>
+        </spawnCrew>
+        <crewSpawnChance>10</crewSpawnChance>
+        <explosion>explosion_random</explosion>
+        <launchSounds>
+            <sound>hc_spawn_1</sound>
+        </launchSounds>
+        <weaponArt>clone_cannon_def</weaponArt>
+        <iconReplace>clone_cannon_icon</iconReplace>
+        <iconImage>flak</iconImage>
+    </weaponBlueprint>
+
+    <mod:findName type="blueprintList" name="LIST_CLONE_CANNON">
+        <mod-append:name>CLONE_CANNON_LILY_BEAM</mod-append:name>
+    </mod:findName>
 
     <weaponBlueprint name="LILY_FOCUS_POINTER">
         <type>BEAM</type>
@@ -3613,7 +3729,232 @@ Conservative weapons use no power on their own but require the system itself to 
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
+<!-- 
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+					CORES
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
+-->
 
+<!-- 
+Some pice of lore for whoever is reading this:
+
+Exonet technology excels at transferring data and energy - even remotely!
+In fact, its bandwith is nearly unlimited.
+However, just because Exonet can transfer a lot of data and energy, doesn't mean that whatewer is attached to it can handle it!
+As such, without any limitations, it's very common to cause an overload - crashing the servers and networks, starting electrical fires and even worse!
+
+Because of this, for safety reasons, all modern Exonet equipment has limiters installed, both to protect the users and whatever surrounds them.
+Removing or altering the limits is possible if you have the technical knowledge - but it's typically "are you sure you know what aree you doing" idea. (Not to mention, extremely illegal, unless you are authorized by the military.)
+
+The color coded "tiers" represent what kind of limiters the equipment has installed.
+-->
+
+
+
+<!-- Verdant tier - relatively common (outside of base MV universe). Considered safe to use. -->
+<weaponBlueprint name="LILY_EXONET_WEAPON_CORE_VERDANT">
+    <type>BEAM</type>
+    <tip>tip_lily_exonet_weapon_core</tip>
+    <flavorType>Exonet Core</flavorType>
+    <title>Exonet Weapon Core - Verdant</title>
+    <short>Verdant Core</short>
+    <desc>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power. "Verdant" tier.
+	[In order for weapons to function, there must be at least one normal reactor power allocated to the weapon system]</desc>
+    <tooltip>Storage Weapon</tooltip>
+    <descriptionOverride>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power.
+
+Stats:
+Tier: Verdant
+
+Provides Power: 4
+
+Bonus Reload Speed: 10%
+Bonus Accuracy: 10%
+
+
+Default Price: 100~   -   Selling Price: 50~</descriptionOverride>
+    <tooltipOverride>Provides Power: 4
+
+Bonus Reload Speed: 10%
+Bonus Accuracy: 10%</tooltipOverride>
+    <damage>0</damage>
+    <sp>0</sp>
+    <cooldown>-1</cooldown>
+    <speed>0</speed>
+    <length>0</length>
+    <rarity>0</rarity>
+    <power>-3</power>
+    <cost>100</cost>
+    <image>beam_contact</image>
+    <weaponArt>lily_exonet_weapon_core_verdant</weaponArt>
+    <iconReplace>lily_exonet_weapon_core_verdant_icon</iconReplace>
+</weaponBlueprint>
+
+<!-- Crimson tier - used for more intensive applications. "Mostly safe", if you are properly prepared, that is. -->
+<weaponBlueprint name="LILY_EXONET_WEAPON_CORE_CRIMSON">
+    <type>BEAM</type>
+    <tip>tip_lily_exonet_weapon_core</tip>
+    <flavorType>Exonet Core</flavorType>
+    <title>Exonet Weapon Core - Crimson</title>
+    <short>Crimson Core</short>
+    <desc>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power. "Crimson" tier.
+	[In order for weapons to function, there must be at least one normal reactor power allocated to the weapon system]</desc>
+    <tooltip>Storage Weapon</tooltip>
+    <descriptionOverride>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power.
+
+Stats:
+Tier: Crimson
+
+Provides Power: 6
+
+Bonus Reload Speed: 25%
+Bonus Accuracy: 20%
+
+
+Default Price: 150~   -   Selling Price: 75~</descriptionOverride>
+    <tooltipOverride>Provides Power: 6
+
+Bonus Reload Speed: 25%
+Bonus Accuracy: 20%</tooltipOverride>
+    <damage>0</damage>
+    <sp>0</sp>
+    <cooldown>-1</cooldown>
+    <speed>0</speed>
+    <length>0</length>
+    <rarity>0</rarity>
+    <power>-6</power>
+    <cost>150</cost>
+    <image>beam_contact</image>
+    <weaponArt>lily_exonet_weapon_core_crimson</weaponArt>
+    <iconReplace>lily_exonet_weapon_core_crimson_icon</iconReplace>
+</weaponBlueprint>
+
+<!-- Azure tier - used only by military or highly protected facilities by authorized personnel, like nuclear power plants. Is definitely not safe - and can kill you rather quickly if misused. Typically used only in short bursts or with heavy active cooling. -->
+<weaponBlueprint name="LILY_EXONET_WEAPON_CORE_AZURE">
+    <type>BEAM</type>
+    <tip>tip_lily_exonet_weapon_core</tip>
+    <flavorType>Exonet Core</flavorType>
+    <title>Exonet Weapon Core - Azure</title>
+    <short>Azure Core</short>
+    <desc>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power. "Azure" tier.
+	[In order for weapons to function, there must be at least one normal reactor power allocated to the weapon system]</desc>
+    <tooltip>Storage Weapon</tooltip>
+    <descriptionOverride>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power.
+
+Stats:
+Tier: Azure
+
+Provides Power: 8
+
+Bonus Reload Speed: 50%
+Bonus Accuracy: 30%
+
+
+Default Price: 200~   -   Selling Price: 100~</descriptionOverride>
+    <tooltipOverride>Provides Power: 8
+
+Bonus Reload Speed: 50%
+Bonus Accuracy: 30%</tooltipOverride>
+    <damage>0</damage>
+    <sp>0</sp>
+    <cooldown>-1</cooldown>
+    <speed>0</speed>
+    <length>0</length>
+    <rarity>0</rarity>
+    <power>-8</power>
+    <cost>200</cost>
+    <image>beam_contact</image>
+    <weaponArt>lily_exonet_weapon_core_azure</weaponArt>
+    <iconReplace>lily_exonet_weapon_core_azure_icon</iconReplace>
+</weaponBlueprint>
+
+<!-- Radiant tier - at this level, can be easily used to make a WMD akin to a highly compact tactical nuke. Actually using one to power something is typically akin to a deathwish. -->
+<weaponBlueprint name="LILY_EXONET_WEAPON_CORE_RADIANT">
+    <type>BEAM</type>
+    <tip>tip_lily_exonet_weapon_core</tip>
+    <flavorType>Exonet Core</flavorType>
+    <title>Exonet Weapon Core - Radiant</title>
+    <short>Radiant Core</short>
+    <desc>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power. "Radiant" tier.
+	[In order for weapons to function, there must be at least one normal reactor power allocated to the weapon system]</desc>
+    <tooltip>Storage Weapon</tooltip>
+    <descriptionOverride>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power.
+
+Stats:
+Tier: Radiant
+
+Provides Power: 12
+
+Bonus Reload Speed: 100%
+Bonus Accuracy: 50%
+
+Pre-Ignites all weapons
+
+
+Default Price: 300~   -   Selling Price: 150~</descriptionOverride>
+    <tooltipOverride>Provides Power: 12
+
+Pre-Ignites all weapons
+
+Bonus Reload Speed: 100%
+Bonus Accuracy: 50%</tooltipOverride>
+    <damage>0</damage>
+    <sp>0</sp>
+    <cooldown>-1</cooldown>
+    <speed>0</speed>
+    <length>0</length>
+    <rarity>0</rarity>
+    <power>-12</power>
+    <cost>300</cost>
+    <image>beam_contact</image>
+    <weaponArt>lily_exonet_weapon_core_radiant</weaponArt>
+    <iconReplace>lily_exonet_weapon_core_radiant_icon</iconReplace>
+</weaponBlueprint>
+
+<!-- Iridium tier - limiters removed. Hope that you *really* know what you are doing with this. -->
+<weaponBlueprint name="LILY_EXONET_WEAPON_CORE_IRIDIUM">
+    <type>BEAM</type>
+    <tip>tip_lily_exonet_weapon_core</tip>
+    <flavorType>Exonet Core</flavorType>
+    <title>Exonet Weapon Core - Iridium</title>
+    <short>Iridium Core</short>
+    <desc>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power. "Iridium" tier.
+	[In order for weapons to function, there must be at least one normal reactor power allocated to the weapon system]</desc>
+    <tooltip>Storage Weapon</tooltip>
+    <descriptionOverride>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power.
+
+Stats:
+Tier: Iridium
+
+Provides Power: 16
+
+Bonus Reload Speed: 200%
+Bonus Accuracy: 80%
+
+Pre-Ignites all weapons
+
+
+Default Price: 500~   -   Selling Price: 250~</descriptionOverride>
+    <tooltipOverride>Provides Power: 16
+
+Pre-Ignites all weapons
+
+Bonus Reload Speed: 200%
+Bonus Accuracy: 80%</tooltipOverride>
+    <damage>0</damage>
+    <sp>0</sp>
+    <cooldown>-1</cooldown>
+    <speed>0</speed>
+    <length>0</length>
+    <rarity>0</rarity>
+    <power>-16</power>
+    <cost>500</cost>
+    <image>beam_contact</image>
+    <weaponArt>lily_exonet_weapon_core_iridium</weaponArt>
+    <iconReplace>lily_exonet_weapon_core_iridium_icon</iconReplace>
+</weaponBlueprint>
 
 <!-- 
 [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
@@ -5241,7 +5582,7 @@ Pierces 5 shields, -6 hp/s and x0.25 healing and repair to crew.</desc>
     <cost>325</cost>
     <bp>2</bp>
     <rarity>0</rarity>
-    <length>90</length>
+    <length>125</length>
     <mv-aiSystemTarget system="weapons"/>
     <image>beam_contact</image>
     <launchSounds>

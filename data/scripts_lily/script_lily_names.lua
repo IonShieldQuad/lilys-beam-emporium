@@ -19,6 +19,7 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
         local blueprintIonStun = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_STUN")
         local blueprintIonBio = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_BIO")
         local blueprintIon2Player = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_ION_2_PLAYER")
+        local blueprintFocusCIWS = Hyperspace.Blueprints:GetWeaponBlueprint("LILY_FOCUS_CIWS")
 
         -- Change the name
         if stability < 100 then
@@ -33,6 +34,7 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
             blueprintIonStun.desc.shortTitle.data = "lily_text_shortDescIonStun_alt"
             blueprintIonBio.desc.shortTitle.data = "lily_text_shortDescIonBio_alt"
             blueprintIon2Player.desc.shortTitle.data = "lily_text_shortDescIon2Player_alt"
+            blueprintFocusCIWS.desc.shortTitle.data = "lily_text_shortDescFocusCIWS_alt"
 
             blueprintZoltan2.desc.shortTitle.isLiteral = false
             blueprintIon1.desc.shortTitle.isLiteral = false
@@ -44,6 +46,7 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
             blueprintIonStun.desc.shortTitle.isLiteral = false
             blueprintIonBio.desc.shortTitle.isLiteral = false
             blueprintIon2Player.desc.shortTitle.isLiteral = false
+            blueprintFocusCIWS.desc.shortTitle.isLiteral = false
             
         end
         -- Don't change name until another run is started

@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.0
+Date: 2025-11-16
+  Changes:
+    - Added a new material / technology with origin beyond  base cluster.
+    - Added special rewards and an achievement  for beating the fight with Lily's store, and also lowered her Energy Shield HP (42 -> 20).
+    - Added some new lore you can ask Lily about.
+    - Summoning Lily now requires you to have an Aether point (obtained by giving her aether weapons/drones) and not just having Aether Tech onboard. 
+    - Added a special interaction with Lily and the clone cannon.
+    - 'Array' and 'Matrix' weapons can now deal damage with remaining beams after popping shields. 
+    - Some other misc fixes.
+---------------------------------------------------------------------------------------------------
 Version: 1.5.5
 Date: 2025-11-12
   Changes:

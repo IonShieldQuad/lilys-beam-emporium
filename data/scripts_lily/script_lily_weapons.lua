@@ -177,6 +177,10 @@ specalWidthBeams["LILY_BEAM_SIREN_LOCK_ELITE"] = { 1, 0 }
 specalWidthBeams["LILY_SIREN_TRANSPORT_HER_ARTILLERY"] = { 4, 0 }
 specalWidthBeams["LILY_SIREN_MV_TRANSPORT_ARTILLERY"] = { 2, 0 }
 
+local popDamagePinpoints = {}
+popDamagePinpoints["LILY_BEAM_SHOTGUN_P"] = true
+popDamagePinpoints["LILY_BEAM_SHOTGUN_9_P"] = true
+
 script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
     function(shipManager, projectile, location, damage, newTile, beamHit)
         local weaponName = projectile and projectile.extend and projectile.extend.name
@@ -196,6 +200,13 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                 damage.iDamage = specalWidthBeams[weaponName][2]
             end
 
+            if popDamagePinpoints[weaponName] then
+                if (not userdata_table(projectile, "mods.lilybeams.shieldpop").poppedShield) and (not userdata_table(projectile, "mods.lilybeams.shieldpop").dealtDamage) then
+                    userdata_table(projectile, "mods.lilybeams.shieldpop").dealtDamage = true
+                    beamHit = Defines.BeamHit.NEW_ROOM
+                end
+            end
+
             if chaosfire[weaponName] then
                 local effect_time = chaosfire[weaponName]
                 local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
@@ -204,6 +215,8 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                     table.timer = math.max(table.timer, effect_time)
                 end
             end
+
+            userdata_table(projectile, "mods.lilybeams.shieldpop").poppedShield = true
 
             if disintegrators[weaponName] then
                 if beamHit == Defines.BeamHit.NEW_ROOM then
@@ -881,6 +894,7 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
                 shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(),
                     true)
                 shieldPower.super.first = math.max(0, shieldPower.super.first - popData.countSuper)
+                userdata_table(projectile, "mods.lilybeams.shieldpop").poppedShield = true
                 if otherShieldPower and popData.siphon then
                     otherShip.shieldSystem:AddSuperShield(Hyperspace.Point(projectile.position.x, projectile.position.y))
                     --otherShieldPower.super.second = math.max(otherShieldPower.super.second, 5)
@@ -892,6 +906,7 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
             shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(),
                 true)
             shieldPower.first = math.max(0, shieldPower.first - popData.count)
+            userdata_table(projectile, "mods.lilybeams.shieldpop").poppedShield = true
             if popData.siphon and otherShieldPower and hasShield then
                 if otherShieldPower.first < otherShieldPower.second then
                     otherShieldPower.first = math.min(otherShieldPower.second, otherShieldPower.first + popData.count)
@@ -1305,8 +1320,8 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                         if target and target.target then
                             if target.target.death_animation and not target.target.death_animation.tracker.running then
                                 target.target.death_animation:Start(true)
-                            elseif target.target.BlowUp then
-                                target.target:BlowUp(false)
+                            --elseif target.target.BlowUp then
+                            --    target.target:BlowUp(false)
                             end
                         end
                     end
@@ -1378,8 +1393,8 @@ script.on_internal_event(Defines.InternalEvents.JUMP_ARRIVE, function (shipManag
             for weapon in vter(shipManager.weaponSystem.weapons) do
                 ---@type Hyperspace.ProjectileFactory
                 weapon = weapon
-                if preigniteWeapons[weapon.name] then
-                    weapon.cooldown.first = weapon.cooldown.second
+                if weapon and preigniteWeapons[weapon.blueprint.name] and weapon.powered then
+                    weapon:ForceCoolup()
                 end
             end
         end

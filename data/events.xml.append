@@ -47,16 +47,16 @@ Unfortunately, there's nothing left to scrap of the station itself.</text>
     <choice hidden="true">
         <text>Continue...</text>
         <event>
-            <text>Howewer, one of the weapons on the station semms to have survived the fight and is floating in space now! You hastily pick it up.</text>
+            <text>However, one of the weapons on the station seems to have survived the fight and is floating in space now! You hastily pick it up.</text>
             <weapon name="LIST_LILY_STATION_LOOT"/>
             <choice hidden="true">
                 <text>Continue...</text>
                 <event>
-                    <text>Shortly after, Lily contacts you, however.
+                    <text>Shortly after, Lily contacts you.
 "Oh, so this stage of testing is complete!--"
 "The results are unexpected... and most impressive!--"
 "You and your ship are surely strong ones since you've managed to pull this off!--"
-"And that means - you will make excellent subject for further testing!--"</text>
+"And that means - you will make excellent subjects for further testing!--"</text>
                     <choice hidden="true">
                         <text>Continue...</text>
                         <event>
@@ -95,7 +95,7 @@ Unfortunately, there's nothing left to scrap of the station itself.</text>
         <nextSector>true</nextSector>
         <aggressive>2</aggressive>
     </quest>
-    <text>You have arrived at the advertised location of the advertised "Beam Emporium" store. However, the beacon appears to be empty, with no ships there. However, you feel a strange sense of unease, as if someone was watching you...</text>
+    <text>You have arrived at the advertised location of the "Beam Emporium" store. Oddly, the beacon appears to be empty, with no ships there. However, you feel a strange sense of unease, as if someone was watching you...</text>
     <choice hidden="true">
         <text>Investigate further.</text>
         <event>
@@ -139,7 +139,7 @@ Unfortunately, there's nothing left to scrap of the station itself.</text>
     <clearBackgroundObject name="GLITCH"/>
 
 
-    <text>You continue you search for the store, as your systems suddenly glitch out and reboot!</text>
+    <text>You continue your search for the store, as your systems suddenly glitch out and reboot!</text>
     <loadEvent>LILY_EMPORIUM_CHECK_CEL</loadEvent>
 </event>
 
@@ -157,7 +157,7 @@ Unfortunately, there's nothing left to scrap of the station itself.</text>
 
 
 <event name="LILY_EMPORIUM_CEL_FOUND">
-    <text>You continue spending your time searching for the store. However, despite you best effort, you still can't find anything here. Why is the advertisement for a store there is still a mystery.</text>
+    <text>You continue spending your time searching for the store. However, despite your best effort, you still can't find anything here. Why the advertisement for a store is there is a mystery.</text>
     <modifyPursuit amount="1"/>
     <!--choice hidden="true">
         <text>Continue...</text>
@@ -184,8 +184,8 @@ Unfortunately, there's nothing left to scrap of the station itself.</text>
 
 <event name="LILY_EMPORIUM_TOWR">
     <text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
-It hails you: "Welcome to the Lily's Beam Emporium!--"
-"... Wait. Is this The one Who Rhymes themselves?!
+It hails you: "Welcome to Lily's Beam Emporium!--"
+"... Wait. Is this The One Who Rhymes themselves?!
 As a renegade, no less?! Hold on I must be dreaming, am I?
 Didn't expect you again... much less in these circumstances--
 Feel free to take anything from my store, of course. Let's have fun and make chaos!--"</text>
@@ -211,7 +211,7 @@ Feel free to take anything from my store, of course. Let's have fun and make cha
 </event>
 
 <event name="LILY_EMPORIUM_TOWR_1">
-    <text>From Lily, you are bestown a gift!--</text>
+    <text>"From Lily, you are bestowed a gift!--"</text>
     <autoReward level="HIGH">standard_no_item</autoReward>
     <weapon name="BEAM_MADNESS_CHAOS"/>
     <!--loadEvent>LILY_EMPORIUM_TOWR_2</loadEvent-->
@@ -227,7 +227,7 @@ Feel free to take anything from my store, of course. Let's have fun and make cha
     </choice-->
 </event>
 <event name="LILY_EMPORIUM_TOWR_2">
-    <text>And another one, for sating your appetite!--</text>
+    <text>"And another one, to sate your appetite!--"</text>
     <autoReward level="HIGH">standard_no_item</autoReward>
     <weapon name="GIFTLIST_LILY"/>
     <!--loadEvent>LILY_EMPORIUM_TOWR_3</loadEvent-->
@@ -244,11 +244,11 @@ Feel free to take anything from my store, of course. Let's have fun and make cha
 </event>
 
 <event name="LILY_EMPORIUM_TOWR_3">
-    <text>Oh, and hope I can join with you on your adventure! I bet would be a spectacular venture! Won't you mind?--</text>
+    <text>"And I hope I can join with you on your run! I'd come along up until its done! Would you mind?--"</text>
     <choice hidden="true">
         <text>That would be quite a delight!</text>
         <event>
-            <text>Let us hurry, then! Ready to fight!</text>
+            <text>"Let us hurry, then! Ready to fight!--"</text>
             <hiddenAug>LILY_PATRONAGE</hiddenAug>
             <achievement>LILY_ACH_GEN_AVATAR</achievement>
             <store>STORE_LILY_EMPORIUM_RHYME</store>
@@ -256,9 +256,9 @@ Feel free to take anything from my store, of course. Let's have fun and make cha
         </event>
     </choice>
     <choice hidden="true">
-        <text>Sorry to disappoint, but I can't you for this appoint.</text>
+        <text>Sorry to disappoint, but for this, you I can't appoint.</text>
         <event>
-            <text>That's a shame, I have to say. But feel free to browse my store anyway--</text>
+            <text>"That's a shame, I have to say. But feel free to browse my store anyway--"</text>
             <store>STORE_LILY_EMPORIUM_RHYME</store>
             <modifyPursuit amount="-2"/>
         </event>
@@ -267,13 +267,13 @@ Feel free to take anything from my store, of course. Let's have fun and make cha
 
 <event name="LILY_EMPORIUM_REAL">
     <text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
-It hails you: "Welcome to the Lily's Beam Emporium!--
+It hails you: "Welcome to Lily's Beam Emporium!--
 A wide collection of beam and pinpoint weapons is available for sale--"
 You are pretty sure it wasn't there minutes ago...</text>
     <choice hidden="true">
         <text>Just shop.</text>
         <event>
-            <text>You ignore the odd things that have been happening and continue to the store. Luckily everything goes without further incidents.</text>
+            <text>You ignore the odd things that have been happening and continue to the store. Luckily everything goes without further incident.</text>
             <store>STORE_LILY_EMPORIUM</store>
         </event>
     </choice>
@@ -281,11 +281,11 @@ You are pretty sure it wasn't there minutes ago...</text>
     <choice req="LILY_MYSTERIOUS_NOTE" lvl="1" hidden="true">
         <text>You remember about the mysterious note you found.</text>
         <event>
-            <text>You give the mysterious note to Lily and wait her to respond.</text>
+            <text>You give the mysterious note to Lily and wait for her to respond.</text>
             <choice hidden="true">
                 <text>Continue...</text>
                 <event>
-                    <text>"This note... in your possession? Well, that only mean one thing - you are one of Her chosen to complete the mission. Which mission - only She knows. But I happen to be one of Her servants as well and - as such I'll be assisting from here on--
+                    <text>"This note... in your possession? Well, that can only mean one thing - you are one of Her chosen to complete the mission. Which mission - only She knows. But I happen to be one of Her servants as well and - as such I'll be assisting from here on--
 Oh, and have this to help on your travels."</text>
                     <variable name="lily_questioned" op="set" value="1" />
                     <variable name="lily_resolved" op="set" value="1" />
@@ -329,7 +329,7 @@ Oh, and have this to help on your travels."</text>
                     <choice hidden="true">
                         <text>Sure!</text>
                         <event>
-                            <text>Let us hurry then!
+                            <text>"Let us hurry then!"
 (Note: Lily can be contacted in the storage menu)</text>
                             <hiddenAug>LILY_PATRONAGE</hiddenAug>
                             <achievement>LILY_ACH_GEN_AVATAR</achievement>
@@ -339,7 +339,7 @@ Oh, and have this to help on your travels."</text>
                     <choice hidden="true">
                         <text>Sorry, but not this time.</text>
                         <event>
-                            <text>That's a shame, but feel free to browse my store regardless--</text>
+                            <text>"That's a shame, but feel free to browse my store regardless--"</text>
                             <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
                         </event>
                     </choice>
@@ -364,7 +364,7 @@ Oh, and have this to help on your travels."</text>
                     <choice hidden="true">
                         <text>Sure!</text>
                         <event>
-                            <text>Let us hurry then!
+                            <text>"Let us hurry then!--"
 (Note: Lily can be contacted in the storage menu)</text>
                             <hiddenAug>LILY_PATRONAGE</hiddenAug>
                             <achievement>LILY_ACH_GEN_AVATAR</achievement>
@@ -374,7 +374,7 @@ Oh, and have this to help on your travels."</text>
                     <choice hidden="true">
                         <text>Sorry, but not this time.</text>
                         <event>
-                            <text>That's a shame, but feel free to browse my store regardless--</text>
+                            <text>"That's a shame, but feel free to browse my store regardless--"</text>
                             <store>STORE_LILY_EMPORIUM_UNLOCKED</store>
                         </event>
                     </choice>
@@ -390,7 +390,7 @@ Oh, and have this to help on your travels."</text>
             <text>You question her about the anomalies.
 "Your systems glitched out, you say?--
 That's very odd, you are the first one to complain about this--
-Mind if I take a look on them? For free even--"</text>
+Mind if I take a look at them? For free even--"</text>
             <choice hidden="true">
                 <text>Sure.</text>
                 <event>
@@ -477,11 +477,11 @@ Besides, I'm actually an optional boss and you definitely aren't ready to fight 
 
 <event name="LILY_EMPORIUM_AGAIN">
     <text>You finally notice a relatively normal looking space station, although it seems to be protected by an unusual energy shield.
-Pretty sure you have already seen the exact same station before, lightyears away.
-It hails you: "Oh, It's you! Welcome to the Lily's Beam Emporium!--
+You are pretty sure you have already seen the exact same station before, lightyears away.
+It hails you: "Oh, it's you! Welcome to Lily's Beam Emporium!--
 Want to restock and rearm?--
 A wide collection of beam and pinpoint weapons is available for sale--
-And have some freebie, on the house--"</text>
+And have some freebies, on the house--"</text>
     <autoReward level="MED">stuff</autoReward>
     <choice hidden="true">
         <text>Just shop.</text>
@@ -700,11 +700,11 @@ Whoever the mysterious shop owner is, they clearly don't want you messing with t
 </event>
 
 <event name="TRANSPORT_CAPTURE_STARGROVE_LILY">
-    <text>Such a beautiful vessel, of Siren design no less--
+    <text>"Such a beautiful vessel, of Siren design no less--
 And in such disrepair...
 It would be a shame to just leave it here burning up...
-So, how about I deliver it (well, whatever remains of it) to your hanger instead, as a gift?--
-You have a lot of space, right? And surely it can be patched up, eventually--</text>
+So, how about I deliver it (well, whatever remains of it) to your hangar instead, as a gift?--
+You have a lot of space, right? And surely it can be patched up, eventually--"</text>
 <unlockCustomShip silent="false">LILY_PLAYER_WRECKED_SIREN_TRANSPORT</unlockCustomShip>
 </event>
 

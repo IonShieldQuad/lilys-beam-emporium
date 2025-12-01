@@ -44,12 +44,20 @@ DATA & PARSER
 
 local chaosfireBeams = {}
 local chaoslockBeams = {}
+local chaosshockBeams = {}
+local chaosshockEliteBeams = {}
 table.insert(weaponTagParsers, function(weaponNode)
     if weaponNode:first_node("lily-chaosfire") then
         chaosfireBeams[weaponNode:first_attribute("name"):value()] = true
     end
     if weaponNode:first_node("lily-chaoslock") then
         chaoslockBeams[weaponNode:first_attribute("name"):value()] = true
+    end
+    if weaponNode:first_node("lily-chaosshock") then
+        chaosshockBeams[weaponNode:first_attribute("name"):value()] = true
+    end
+    if weaponNode:first_node("lily-chaosshock-elite") then
+        chaosshockEliteBeams[weaponNode:first_attribute("name"):value()] = true
     end
 end)
 
@@ -102,12 +110,41 @@ script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projec
         projectile.color.g = 127
         projectile.color.b = 255
     end
+    if chaosshockBeams[weapon.blueprint.name] then
+        local speed = (weapon.blueprint.speed > 0) and weapon.blueprint.speed or 5
+        local beamTime = weapon.blueprint.length / (speed * 16)
+        local projData = {}
+        projectile.table["mods.lilybeams.chromatic.shock"] = projData
+        projData.lifetime = beamTime
+        projData.lifetimeCurrent = beamTime
+
+        -- Set initial color
+        projectile.color.r = 0
+        projectile.color.g = 85
+        projectile.color.b = 255
+    end
+    if chaosshockEliteBeams[weapon.blueprint.name] then
+        local speed = (weapon.blueprint.speed > 0) and weapon.blueprint.speed or 5
+        local beamTime = weapon.blueprint.length / (speed * 16)
+        local projData = {}
+        projectile.table["mods.lilybeams.chromatic.shockelite"] = projData
+        projData.lifetime = beamTime
+        projData.lifetimeCurrent = beamTime
+
+        -- Set initial color
+        projectile.color.r = 0
+        projectile.color.g = 255
+        projectile.color.b = 255
+    end
 end)
 
 -- Change color for pride pride beams
 script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
     if not check_paused() then
         for projectile in vter(Hyperspace.App.world.space.projectiles) do
+            ---@type Hyperspace.Projectile
+            projectile = projectile
+            if not projectile or projectile:GetType() ~= 5 then goto continue end
             local projData = projectile.table["mods.lilybeams.chromatic.fire"]
             if projData then
                 -- Tick timer
@@ -130,6 +167,39 @@ script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
                 projectile.color.g = g * 255
                 projectile.color.b = b * 255
             end
+            projData = projectile.table["mods.lilybeams.chromatic.shock"]
+            if projData then
+                -- Tick timer
+                projData.lifetimeCurrent = projData.lifetimeCurrent - time_increment()
+
+                -- Calculate color
+                local r, g, b = hue2rgb(1.0 - (140.0 / 360.0) + (120 / 360) * (1 - projData.lifetimeCurrent / projData.lifetime))
+                projectile.color.r = r * 255
+                projectile.color.g = g * 255
+                projectile.color.b = b * 255
+            end
+            projData = projectile.table["mods.lilybeams.chromatic.shockelite"]
+            if projData then
+                -- Tick timer
+                projData.lifetimeCurrent = projData.lifetimeCurrent - time_increment()
+
+                -- Calculate color
+                local light = 1 - 2 * math.abs(0.5 - (projData.lifetimeCurrent / projData.lifetime))
+                local r, g, b = 0, 0, 0
+                if projData.lifetimeCurrent / projData.lifetime < 0.5 then
+                    r = 1
+                else
+                    g = 1
+                    b = 1
+                end
+                r = math.min(1, r + light * light)
+                g = math.min(1, g + light * light)
+                b = math.min(1, b + light * light)
+                projectile.color.r = r * 255
+                projectile.color.g = g * 255
+                projectile.color.b = b * 255
+            end
+            ::continue::
         end
     end
 end)

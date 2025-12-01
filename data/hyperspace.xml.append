@@ -187,8 +187,9 @@
 		<hiddenAug>LILY_ESTROGEN_DISPERSAL</hiddenAug>
 		<hiddenAug>LILY_PATRONAGE</hiddenAug>
 		<hiddenAug>COMBAT_HAZARD</hiddenAug>
+		<hiddenAug>ARTILLERY_ORDER</hiddenAug>
 		<crewLimit>6</crewLimit>
-		<systemLimit>12</systemLimit>
+		<systemLimit>14</systemLimit>
 		<customReactor maxLevel="90"/>
 		<autoShipForce>true</autoShipForce>
 		<crew>
@@ -1973,30 +1974,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>BEAMS</customTitle>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
-				<price>-1</price>
-			</item>
-		</category>
-
-		<category type="WEAPONS">
-			<customTitle>BEAMS</customTitle>
-			<item>
-				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
-				<price>-1</price>
-			</item>
-			<item>
-				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
-				<price>-1</price>
-			</item>
-			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
@@ -2005,14 +1993,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>BEAMS</customTitle>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
@@ -2021,14 +2012,36 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>BEAMS</customTitle>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
+				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>BEAMS</customTitle>
+			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
+				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
+				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
@@ -2037,14 +2050,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>PINPOINTS</customTitle>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
@@ -2053,14 +2069,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>PINPOINTS</customTitle>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
@@ -2069,17 +2088,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>ION PINPOINTS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_2</blueprint>
 				<price>-1</price>
 			</item>
@@ -2089,17 +2108,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>ION PINPOINTS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_HEAVY</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_CHAIN</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_PHASE</blueprint>
 				<price>-1</price>
 			</item>
@@ -2108,17 +2127,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>ION PINPOINTS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_FIRE</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_STUN</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_BIO</blueprint>
 				<price>-1</price>
 			</item>
@@ -2127,17 +2146,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>UTILITY</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_POINTER</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_POPPER</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_TOGGLE_SYRINGE</blueprint>
 				<price>-1</price>
 			</item>
@@ -2146,17 +2165,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>UTILITY</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_AMP_SIPHON_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_HACK</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_CIWS</blueprint>
 				<price>-1</price>
 			</item>
@@ -2165,17 +2184,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>STATUS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_CYCLOTRON</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_FROST</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_PARTICLE_MINI</blueprint>
 				<price>-1</price>
 			</item>
@@ -2184,17 +2203,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>REFRACTORS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_PIERCE_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_PIERCE_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_PIERCE_2</blueprint>
 				<price>-1</price>
 			</item>
@@ -2203,17 +2222,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>MULTISHOT</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_SHOTGUN_P</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_SHOTGUN_9_P</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_SCISSORS</blueprint>
 				<price>-1</price>
 			</item>
@@ -2222,17 +2241,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>HIGH TECH</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_TOGGLE_SUNSET_H</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_TOGGLE_EVENTIDE_L</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_TOGGLE_AKATSUKI_B</blueprint>
 				<price>-1</price>
 			</item>
@@ -2241,12 +2260,12 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>HOWITZERS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_HOWITZER_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_HOWITZER_1</blueprint>
 				<price>-1</price>
 			</item>
@@ -2263,17 +2282,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		</category-->
 		<category type="AUGMENTS">
 			<item>
-				<modifier flat="false">1.0</modifier>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>LILY_TARGETING_BYPASS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.0</modifier>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>LILY_ASB_SCRAMBLER</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.0</modifier>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>LILY_COMBAT_AFTERBURNER</blueprint>
 				<price>-1</price>
 			</item>
@@ -2314,30 +2333,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>BEAMS</customTitle>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
-				<price>-1</price>
-			</item>
-		</category>
-
-		<category type="WEAPONS">
-			<customTitle>BEAMS</customTitle>
-			<item>
-				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
-				<price>-1</price>
-			</item>
-			<item>
-				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
-				<price>-1</price>
-			</item>
-			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
@@ -2346,14 +2352,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>BEAMS</customTitle>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
@@ -2362,14 +2371,36 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>BEAMS</customTitle>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
+				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>BEAMS</customTitle>
+			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
+				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
+				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ZOLTAN_ITEM_WEAPONS_BEAM</blueprint>
 				<price>-1</price>
 			</item>
@@ -2378,14 +2409,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>PINPOINTS</customTitle>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
@@ -2394,14 +2428,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>PINPOINTS</customTitle>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>SHOP_ITEM_WEAPONS_FOCUS</blueprint>
 				<price>-1</price>
 			</item>
@@ -2410,17 +2447,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>ION PINPOINTS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_2</blueprint>
 				<price>-1</price>
 			</item>
@@ -2430,17 +2467,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>ION PINPOINTS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_HEAVY</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_CHAIN</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_PHASE</blueprint>
 				<price>-1</price>
 			</item>
@@ -2449,17 +2486,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>ION PINPOINTS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_FIRE</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_STUN</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_ION_BIO</blueprint>
 				<price>-1</price>
 			</item>
@@ -2468,17 +2505,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>UTILITY</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_POINTER</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_POPPER</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_TOGGLE_SYRINGE</blueprint>
 				<price>-1</price>
 			</item>
@@ -2487,17 +2524,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>UTILITY</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_AMP_SIPHON_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_HACK</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_CIWS</blueprint>
 				<price>-1</price>
 			</item>
@@ -2506,17 +2543,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>STATUS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_CYCLOTRON</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_FROST</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_PARTICLE_MINI</blueprint>
 				<price>-1</price>
 			</item>
@@ -2525,17 +2562,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>REFRACTORS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_PIERCE_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_PIERCE_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_FOCUS_PIERCE_2</blueprint>
 				<price>-1</price>
 			</item>
@@ -2544,17 +2581,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>MULTISHOT</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_SHOTGUN_P</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_SHOTGUN_9_P</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_SCISSORS</blueprint>
 				<price>-1</price>
 			</item>
@@ -2563,17 +2600,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>HIGH TECH</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_TOGGLE_SUNSET_H</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_TOGGLE_EVENTIDE_L</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_BEAM_TOGGLE_AKATSUKI_B</blueprint>
 				<price>-1</price>
 			</item>
@@ -2582,12 +2619,12 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>HOWITZERS</customTitle>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_HOWITZER_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.1</modifier>
+				<modifier min="0.8" max="1.4" flat="false"/>
 				<blueprint>LILY_HOWITZER_1</blueprint>
 				<price>-1</price>
 			</item>
@@ -2595,17 +2632,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 
 		<category type="AUGMENTS">
 			<item>
-				<modifier flat="false">1.0</modifier>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>LILY_TARGETING_BYPASS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.0</modifier>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>LILY_ASB_SCRAMBLER</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.0</modifier>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>LILY_COMBAT_AFTERBURNER</blueprint>
 				<price>-1</price>
 			</item>
@@ -2632,17 +2669,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>CHAOS :)</customTitle>
 			<item>
-				<modifier flat="false">1.5</modifier>
+				<modifier min="1" max="2" flat="false"/>
 				<blueprint>BEAM_MADNESS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">2</modifier>
+				<modifier min="1.5" max="2.5" flat="false"/>
 				<blueprint>BEAM_MADNESS_CHAOS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">2.5</modifier>
+				<modifier min="2" max="3" flat="false"/>
 				<blueprint>BEAM_MADNESS_ELITE</blueprint>
 				<price>-1</price>
 			</item>
@@ -2652,17 +2689,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			<customTitle>CHAOS :)</customTitle>
 			<allowDuplicates/>
 			<item>
-				<modifier flat="false">1.0</modifier>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.0</modifier>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.0</modifier>
+				<modifier min="0.8" max="1.2" flat="false"/>
 				<blueprint>STORE_LIST_CREW_LILY</blueprint>
 				<price>-1</price>
 			</item>
@@ -2671,37 +2708,56 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>CHAOS :)</customTitle>
 			<item>
-				<modifier flat="false">1.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_1</blueprint>
-				<price>-1</price>
-			</item>
-			<item>
-				<modifier flat="false">1.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_2</blueprint>
-				<price>-1</price>
-			</item>
-			<item>
-				<modifier flat="false">1.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_3</blueprint>
-				<price>-1</price>
-			</item>
-		</category>
-
-		<category type="WEAPONS">
-			<customTitle>CHAOS :)</customTitle>
-			<item>
-				<modifier flat="false">1.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_4</blueprint>
-				<price>-1</price>
-			</item>
-			<item>
-				<modifier flat="false">1.5</modifier>
+				<modifier min="1" max="2" flat="false"/>
 				<blueprint>LILY_BEAM_SIREN_FIRE</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">1.5</modifier>
+				<modifier min="1" max="2" flat="false"/>
 				<blueprint>LILY_BEAM_SIREN_LOCK</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier min="1" max="2" flat="false"/>
+				<blueprint>LILY_BEAM_SIREN_PLASMA</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier min="1" max="2" flat="false"/>
+				<blueprint>LILY_BEAM_SIREN_4</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier min="1" max="2" flat="false"/>
+				<blueprint>LILY_BEAM_SIREN_3</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier min="1" max="2" flat="false"/>
+				<blueprint>LILY_BEAM_SIREN_2</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier min="1" max="2" flat="false"/>
+				<blueprint>LILY_BEAM_SIREN_2</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier min="1" max="2" flat="false"/>
+				<blueprint>LILY_BEAM_SIREN_1</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier min="1" max="2" flat="false"/>
+				<blueprint>LILY_BEAM_SIREN_1</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -3156,18 +3212,18 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 		<category type="WEAPONS">
 			<customTitle>CHAOS :)</customTitle>
 			<item>
-				<modifier flat="false">0.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_1</blueprint>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_FIRE</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">0.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_2</blueprint>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_LOCK</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
-				<modifier flat="false">0.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_3</blueprint>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_PLASMA</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -3181,12 +3237,12 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">0.25</modifier>
-				<blueprint>LILY_BEAM_SIREN_FIRE</blueprint>
+				<blueprint>LILY_BEAM_SIREN_3</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">0.25</modifier>
-				<blueprint>LILY_BEAM_SIREN_LOCK</blueprint>
+				<blueprint>LILY_BEAM_SIREN_2</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -3195,17 +3251,36 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			<customTitle>CHAOS :)</customTitle>
 			<item>
 				<modifier flat="false">0.25</modifier>
-				<blueprint>LILY_BEAM_SIREN_1_CHAOS</blueprint>
+				<blueprint>LILY_BEAM_SIREN_2</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">0.25</modifier>
-				<blueprint>LILY_BEAM_SIREN_2_CHAOS</blueprint>
+				<blueprint>LILY_BEAM_SIREN_1</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">0.25</modifier>
-				<blueprint>LILY_BEAM_SIREN_3_CHAOS</blueprint>
+				<blueprint>LILY_BEAM_SIREN_1</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_FIRE_CHAOS</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_LOCK_CHAOS</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_PLASMA_CHAOS</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -3219,12 +3294,31 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">0.25</modifier>
-				<blueprint>LILY_BEAM_SIREN_FIRE_CHAOS</blueprint>
+				<blueprint>LILY_BEAM_SIREN_3_CHAOS</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">0.25</modifier>
-				<blueprint>LILY_BEAM_SIREN_LOCK_CHAOS</blueprint>
+				<blueprint>LILY_BEAM_SIREN_2_CHAOS</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_2_CHAOS</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_1_CHAOS</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.25</modifier>
+				<blueprint>LILY_BEAM_SIREN_1_CHAOS</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -3233,17 +3327,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			<customTitle>CHAOS :)</customTitle>
 			<item>
 				<modifier flat="false">0.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_1_ELITE</blueprint>
+				<blueprint>LILY_BEAM_SIREN_FIRE_ELITE</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">0.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_2_ELITE</blueprint>
+				<blueprint>LILY_BEAM_SIREN_LOCK_ELITE</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">0.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_3_ELITE</blueprint>
+				<blueprint>LILY_BEAM_SIREN_PLASMA_ELITE</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -3257,12 +3351,31 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 			</item>
 			<item>
 				<modifier flat="false">0.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_FIRE_ELITE</blueprint>
+				<blueprint>LILY_BEAM_SIREN_3_ELITE</blueprint>
 				<price>-1</price>
 			</item>
 			<item>
 				<modifier flat="false">0.5</modifier>
-				<blueprint>LILY_BEAM_SIREN_LOCK_ELITE</blueprint>
+				<blueprint>LILY_BEAM_SIREN_2_ELITE</blueprint>
+				<price>-1</price>
+			</item>
+		</category>
+
+		<category type="WEAPONS">
+			<customTitle>CHAOS :)</customTitle>
+			<item>
+				<modifier flat="false">0.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_2_ELITE</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_1_ELITE</blueprint>
+				<price>-1</price>
+			</item>
+			<item>
+				<modifier flat="false">0.5</modifier>
+				<blueprint>LILY_BEAM_SIREN_1_ELITE</blueprint>
 				<price>-1</price>
 			</item>
 		</category>
@@ -3275,17 +3388,17 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 <!-- /// ACHIEVEMENTS /// -->
 <mod:findLike type="achievements" limit="1">
     <mod-append:page>
-        <mod-append:section text="Lily's Achievements" hidden="false">
-			<mod-append:achievement name="LILY_ACH_GEN_STORE">
+        <section text="Lily's Achievements" hidden="false">
+			<achievement name="LILY_ACH_GEN_STORE">
                 <name>The Beam Emporium</name>
-                <description>Visit the Beam Emporium store.</description>
+                <description>Visit the Beam Emporium.</description>
                 <secretDescription>Find a mysterious store selling a ton of beams.</secretDescription>
                 <icon>general/lily_ach_generic_store</icon>
                 <lockImage>ach_locked</lockImage>
                 <multiDifficulty>false</multiDifficulty>
                 <sound>achievement</sound>
-            </mod-append:achievement>
-            <mod-append:achievement name="LILY_ACH_GEN_AVATAR">
+            </achievement>
+            <achievement name="LILY_ACH_GEN_AVATAR">
                 <name>Woman of Many Titles</name>
                 <description>Accept Lily's offer to join you after presenting her a special item or crew.</description>
                 <secretDescription>Have the owner of mysterious store join you.</secretDescription>
@@ -3293,8 +3406,8 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
                 <lockImage>ach_locked</lockImage>
                 <multiDifficulty>false</multiDifficulty>
                 <sound>achievement</sound>
-            </mod-append:achievement>
-			<mod-append:achievement name="LILY_ACH_GEN_LORE">
+            </achievement>
+			<achievement name="LILY_ACH_GEN_LORE">
                 <name>Instruction Manual</name>
                 <description>Ask Lily about her story.</description>
                 <secretDescription>Read.</secretDescription>
@@ -3302,8 +3415,8 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
                 <lockImage>ach_locked</lockImage>
                 <multiDifficulty>false</multiDifficulty>
                 <sound>achievement</sound>
-            </mod-append:achievement>
-			<mod-append:achievement name="LILY_ACH_GEN_EXONET_TEST">
+            </achievement>
+			<achievement name="LILY_ACH_GEN_EXONET_TEST">
 				<name>This Was a Triumph</name>
 				<description>Destroy the Lily's Emporium station, getting a ton of test data for her - and some experimental equipment for you.</description>
 				<secretDescription>???</secretDescription>
@@ -3311,8 +3424,8 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<lockImage>ach_locked</lockImage>
 				<multiDifficulty>false</multiDifficulty>
 				<sound>achievement</sound>
-			</mod-append:achievement>
-			<mod-append:achievement name="LILY_ACH_GEN_EXCHANGE">
+			</achievement>
+			<achievement name="LILY_ACH_GEN_EXCHANGE">
                 <name>Equivalent Exchange</name>
                 <description>Craft a Royal Beam from salvaged Aether technology with Lily's help.</description>
                 <secretDescription>Aether in, Aether out.</secretDescription>
@@ -3320,8 +3433,8 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
                 <lockImage>ach_locked</lockImage>
                 <multiDifficulty>false</multiDifficulty>
                 <sound>achievement</sound>
-            </mod-append:achievement>
-            <mod-append:achievement name="LILY_ACH_GEN_RHYMES">
+            </achievement>
+            <achievement name="LILY_ACH_GEN_RHYMES">
                 <name>A Chaotic Reunion</name>
                 <description>Visit the Beam Emporium with The One Who Rhymes and unlock the Mysterious Note.</description>
                 <secretDescription>Lead a certain otherworldly cat with a very fancy hat to the largest collections of laser pointers in the galaxy.</secretDescription>
@@ -3329,43 +3442,43 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
                 <lockImage>ach_locked</lockImage>
                 <multiDifficulty>false</multiDifficulty>
                 <sound>achievement_spooky</sound>
-            </mod-append:achievement>
-            <mod-append:achievement name="LILY_ACH_GEN_NUKED">
+            </achievement>
+            <achievement name="LILY_ACH_GEN_NUKED">
                 <name>NUKED!</name>
                 <description>Get a nuclear surprise from a very pissed third party while trying to fight Her.</description>
-                <secretDescription>Be on the receiving end of nuclear weapon at possibly the worst possible moment in history.</secretDescription>
+                <secretDescription>Be on the receiving end of a nuclear weapon at possibly the worst possible moment in history.</secretDescription>
                 <icon>general/lily_ach_generic_nuked</icon>
                 <lockImage>ach_locked</lockImage>
                 <multiDifficulty>false</multiDifficulty>
                 <sound>achievement_stupid</sound>
-            </mod-append:achievement>
-        </mod-append:section>
-		<mod-append:section text="Thest's Boons (LilyBeam)" hidden="false">
-			<mod-append:achievement name="ACH_BOON_LILY_SIREN">
+            </achievement>
+        </section>
+		<section text="Thest's Boons (LilyBeam)" hidden="false">
+			<achievement name="ACH_BOON_LILY_SIREN">
 				<name>Boon of Utopia</name>
 				<secretName>Boon of ???</secretName>
 				<secretDescription>Receive the Boon of ??? from Thest.</secretDescription>
-				<description>Show a Siren to Thest. While in effect; Siren crew gains vision of adjecent rooms, immunity to stuns, and loses no skills when cloned.</description>
+				<description>Show a Siren to Thest. While in effect; Siren crew gain vision of adjecent rooms, immunity to stuns, and loses no skills when cloned.</description>
 				<header>Boon Received</header>
 				<icon>boons/ach_boon_lily_siren</icon>
 				<lockImage>ach_locked</lockImage>
 				<multiDifficulty>false</multiDifficulty>
 				<sound>achievement</sound>
-			</mod-append:achievement>
-			<mod-append:achievement name="ACH_BOON_LILY_AVATAR">
+			</achievement>
+			<achievement name="ACH_BOON_LILY_AVATAR">
 				<name>Boon of Anomalies</name>
 				<secretName>Boon of ???</secretName>
 				<secretDescription>Receive the Boon of ??? from Thest.</secretDescription>
-				<description>Show a Lily's Avatar to Thest. While in effect; Sets the run's stability index to 1.</description>
+				<description>Show Lily's Avatar to Thest. While in effect; Sets the run's stability value to 1.</description>
 				<header>Boon Received</header>
 				<icon>boons/ach_boon_lily_avatar</icon>
 				<lockImage>ach_locked</lockImage>
 				<multiDifficulty>false</multiDifficulty>
 				<sound>achievement_spooky</sound>
-			</mod-append:achievement>
-		</mod-append:section>
-		<mod-append:section text="Wakeson's Blessings (LilyBeam)" hidden="false">
-			<mod-append:achievement name="ACH_BOON_LILY_SPECTRUM">
+			</achievement>
+		</section>
+		<section text="Wakeson's Blessings (LilyBeam)" hidden="false">
+			<achievement name="ACH_BOON_LILY_SPECTRUM">
 				<name>Blessing of Spectrum</name>
 				<secretName>Blessing of ???</secretName>
 				<secretDescription>Receive the Blessing of ??? from Wakeson.</secretDescription>
@@ -3375,19 +3488,19 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<lockImage>ach_locked</lockImage>
 				<multiDifficulty>false</multiDifficulty>
 				<sound>achievement</sound>
-			</mod-append:achievement>
-			<mod-append:achievement name="ACH_BOON_LILY_DISINTEGRATOR">
+			</achievement>
+			<achievement name="ACH_BOON_LILY_DISINTEGRATOR">
 				<name>Blessing of Disintegration</name>
 				<secretName>Blessing of ???</secretName>
 				<secretDescription>Receive the Blessing of ??? from Wakeson.</secretDescription>
-				<description>Show a Disintegrator Beam to Wakeson. While in effect; Enemy crewmembers lose 25% healing and repair speed, and take an extra 2 hp/s onboard your ship.</description>
+				<description>Show a Disintegrator Beam to Wakeson. While in effect; Enemy crewmembers lose 25% healing and repair speed, and take an extra 2 hp/s in damage onboard your ship.</description>
 				<header>Blessing Received</header>
 				<icon>boons/ach_boon_lily_avatar</icon>
 				<lockImage>ach_locked</lockImage>
 				<multiDifficulty>false</multiDifficulty>
 				<sound>achievement_spooky</sound>
-			</mod-append:achievement>
-		</mod-append:section>
+			</achievement>
+		</section>
     </mod-append:page>
 </mod:findLike>
 

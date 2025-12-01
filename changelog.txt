@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.1
+Date: 2025-12-01
+  Changes:
+    - A lot of typo fixes. Including ones in the code.
+    - Added the new 'Fulmen' plasma beam.
+    - Changed starting weapons of Lily's crewser to be artilleries, added 2 system slots to compensate. Ship no longer starts with a weapon system.
+---------------------------------------------------------------------------------------------------
 Version: 1.6.0
 Date: 2025-11-16
   Changes:

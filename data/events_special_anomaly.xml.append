@@ -95,7 +95,7 @@
 
 
 <event name="ANOMALY_CHAOS_POLICE">
-    <text>The first thing you see when observing your surroundings, is a ship looking like Militia Investigator, except black like void itself, and shimmering with red and blue colors. They immediately contact you: "This is the Chaos Police Enforcer Unit. Submit yourself and your ship for inspection immediately."</text>
+    <text>The first thing you see when observing your surroundings, is a ship that looks like a militia investigator, except black like the void itself, and shimmering with red and blue colors. They immediately contact you: "This is the Chaos Police Enforcer Unit. Submit yourself and your ship for inspection immediately."</text>
     <ship load="LILY_CHAOS_POLICE" hostile="false"/>
     <variable name="loc_found_anomaly" op="set" val="1"/>
     <choice hidden="true">
@@ -136,8 +136,8 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 </event>
 
 <event name="LILY_CHAOS_POLICE_NO_CRIMES">
-    <text>"And according to your records... Wait, your record is pretty much clean!"
-"Which mean that you any your ship are to be put under arrest!"</text>
+    <text>"And according to your records... wait, your record is pretty much clean!"
+"Which means that you and your ship are to be put under arrest!"</text>
     <choice hidden="true">
         <text>Try to bribe the Enforcer. [50~]</text>
         <event>
@@ -198,7 +198,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
         <text>Simply attack the Enforcer. </text>
         <event>
             <ship hostile="true"/>
-            <text>You charge your weapons and prepare to attack the the Enforcer...</text>
+            <text>You charge your weapons and prepare to attack the Enforcer...</text>
             <choice hidden="true">
                 <text>Continue...</text>
                 <event>
@@ -231,7 +231,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
     <choice hidden="true">
         <text>Continue...</text>
         <event>
-            <text>"And you know, I actually might know a place which where you should deliver it..."
+            <text>"And you know, I actually might know a place where you should deliver it..."
 "Let me join to help you get there."</text>
             <variable name="coords_hektar" op="set" val="1"/>
             <autoReward level="HIGH">scrap_only</autoReward>
@@ -250,7 +250,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
                     
 
 <event name="LILY_CHAOS_POLICE_GENERAL_HIGH">
-    <text>"And according to your records... You are indeed a very notorious criminal in whole of the Federation!..."
+    <text>"And according to your records... You are indeed a very notorious criminal in the whole of the Federation!..."
 "...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
@@ -333,7 +333,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 </event>
 
 <event name="LILY_CHAOS_POLICE_FREEMANTIS_HIGH">
-    <text>"And according to your records... You are indeed a very notorious criminal in the Free Mantis Clans!..."
+    <text>"And according to your records... You are indeed a very notorious criminal according to the Free Mantis Clans!..."
 "...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
@@ -357,7 +357,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 </event>
 
 <event name="LILY_CHAOS_POLICE_OUTCAST_HIGH">
-    <text>"And according to your records... You are indeed a very notorious criminal according to Rock Outcasts!..."
+    <text>"And according to your records... You are indeed a very notorious criminal according to the Rock Outcasts!..."
 "...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
@@ -466,7 +466,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 </event>
 
 <event name="LILY_CHAOS_POLICE_FREEMANTIS">
-    <text>"And according to your records... You are indeed a criminal in the Free Mantis Clans!..."
+    <text>"And according to your records... You are indeed a criminal according to the Free Mantis Clans!..."
 "...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>
@@ -478,7 +478,7 @@ The ship begins some sort of scan, and you feel an overwhelming sense of dread a
 </event>
 
 <event name="LILY_CHAOS_POLICE_OUTCAST">
-    <text>"And according to your records... You are indeed a criminal according to Rock Outcasts!..."
+    <text>"And according to your records... You are indeed a criminal according to the Rock Outcasts!..."
 "...Soo, great job! You shall be rewarded for this."</text>
 
     <autoReward level="HIGH">scrap_only</autoReward>

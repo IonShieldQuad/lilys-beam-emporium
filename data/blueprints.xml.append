@@ -193,7 +193,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_EXONET_SHIP_MAINFRAME_VERDANT">
         <title>Exonet Mainframe (V)</title>
-        <desc>A Verdant tier Exonet-Enabled mainframe installed on your ship. Provides 3 point stackable energy shield, and 3 bonus power to engines.</desc>
+        <desc>A Verdant tier Exonet-Enabled mainframe installed on your ship. Provides a 3 point stackable energy shield, and 3 bonus power to engines.</desc>
         <cost>100</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -202,7 +202,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_EXONET_SHIP_MAINFRAME_CRIMSON">
         <title>Exonet Mainframe (C)</title>
-        <desc>A Crimson tier Exonet-Enabled mainframe installed on your ship. Provides 5 point stackable energy shield, 4 bonus power to engines, 2 to shields and armor, and 1 to other systems.</desc>
+        <desc>A Crimson tier Exonet-Enabled mainframe installed on your ship. Provides a 5 point stackable energy shield, 4 bonus power to engines, 2 to shields and armor, and 1 to other systems.</desc>
         <cost>150</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -211,7 +211,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_EXONET_SHIP_MAINFRAME_AZURE">
         <title>Exonet Mainframe (A)</title>
-        <desc>An Azure tier Exonet-Enabled mainframe installed on your ship. Provides 8 point stackable energy shield, 5 bonus power to engines, 4 to shields, armor, and ECM, and 2 to other systems. Also provides basic manning to all systems.</desc>
+        <desc>An Azure tier Exonet-Enabled mainframe installed on your ship. Provides a 8 point stackable energy shield, 5 bonus power to engines, 4 to shields, armor, and ECM, and 2 to other systems. Also provides basic (lvl 0) manning to all systems.</desc>
         <cost>200</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -220,7 +220,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_EXONET_SHIP_MAINFRAME_RADIANT">
         <title>Exonet Mainframe (R)</title>
-        <desc>A Radiant tier Exonet-Enabled mainframe installed on your ship. Provides 14 point stackable energy shield, 6 bonus power to engines and ECM, 8 to shields and armor, and 4 to other systems. Also provides improved manning to all systems.</desc>
+        <desc>A Radiant tier Exonet-Enabled mainframe installed on your ship. Provides a 14 point stackable energy shield, 6 bonus power to engines and ECM, 8 to shields and armor, and 4 to other systems. Also provides improved (lvl 1) manning to all systems.</desc>
         <cost>300</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -229,7 +229,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_EXONET_SHIP_MAINFRAME_IRIDIUM">
         <title>Exonet Mainframe (I)</title>
-        <desc>An Iridium tier Exonet-Enabled mainframe installed on your ship. Provides 20 point stackable energy shield, 8 bonus power to engines and ECM, 16 to shields and armor, and 6 to other systems. Also provides advanced manning to all systems.</desc>
+        <desc>An Iridium tier Exonet-Enabled mainframe installed on your ship. Provides a 20 point stackable energy shield, 8 bonus power to engines and ECM, 16 to shields and armor, and 6 to other systems. Also provides advanced (lvl 2) manning to all systems.</desc>
         <cost>500</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -266,8 +266,8 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_COMBAT_AFTERBURNER">
         <title>Afterburner</title>
-        <desc>A fusion powered afterburner for you engines, provides great thrust but guzzles fuel. 
-[3 Fuel, +20% evasion for 60 seconds OR damage enemy by your engine level]</desc>
+        <desc>A fusion powered afterburner for your engines, which provides great thrust but guzzles fuel. 
+[3 Fuel, gain +20% evasion for 60 seconds OR [deal 1 damage and start fires in a random enemy room] amount of times equal to your engine level]</desc>
         <cost>60</cost>
         <bp>5</bp>
         <rarity>5</rarity>
@@ -276,7 +276,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_ANTI_CEL">
         <title>Anti-C.E.L. Resonator</title>
-        <desc>This odd device seem to somehow cause your weapons to resonate with C.E.L tech on enemy ships, causing them to deal double damage. An attached note says "Some help for you to deal with those pests - :)"</desc>
+        <desc>This odd device seem to somehow cause your weapons to resonate with C.E.L. tech on enemy ships, causing them to deal double damage. An attached note says "Some help for you to deal with those pests - :)"</desc>
         <cost>120</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -312,7 +312,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_ESTROGEN_DISPERSAL">
         <title>E</title>
-        <desc>"They are putting chemicals into our air that turn everyone into lesbians!.</desc>
+        <desc>"They are putting chemicals into our air that turn everyone into lesbians!"</desc>
         <cost>0</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -322,7 +322,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_ADV_ELDRITCH_SHIELDS">
         <title>Mysterious Shield</title>
-        <desc>A barrier of eldritch chaotic energy that provides a 20 hitpoints Super Shield. Your scanner's can't even determine where the shield's power is coming from.</desc>
+        <desc>A barrier of Eldritch chaotic energy that provides a 20 hitpoint Super Shield. Your sensors can't even determine where the shield's power is coming from.</desc>
         <cost>80</cost>
         <bp>8</bp>
         <rarity>0</rarity>
@@ -341,7 +341,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_CHAOS_AZURE">
         <title>Azure Energy</title>
-        <desc>Enemy non-siren crew onboard the ship have their movement and sabotage speed halved, lose their active abilities and mind control immunity, and allied crew onboard the ship will gain mind contol and stun immunity, and heal 1 hp/s within Azure Energy Fields.</desc>
+        <desc>Enemy non-siren crew onboard the ship have their movement and sabotage speed halved, lose their active abilities and mind control immunity, and allied crew onboard the ship will gain mind control and stun immunity, and heal 1 hp/s while within Azure Energy Fields.</desc>
         <cost>0</cost>
         <bp>4</bp>
         <rarity>0</rarity>
@@ -369,7 +369,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LAB_LILY_SIREN_VAMP">
         <title>Soul Siphon</title>
-        <desc>Sirens now heal by the damage they deal, however, their damage is halved.</desc>
+        <desc>Sirens / Harpies now heal by 1.0 / 2.0 HP/s per enemy in the room, however, their damage is halved.</desc>
         <cost>0</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -377,7 +377,7 @@ disable shields as well as systems.</tooltip>
     </augBlueprint>
     <augBlueprint name="LAB_LILY_SIREN_BUFF">
         <title>Colorful Dreams</title>
-        <desc>Allied Non-Siren crew in the same room as Sirens now take 30% less damage, repair 50% faster and become immune to mind control, but lose 50% of their movement speed.</desc>
+        <desc>Allied non-Siren crew in the same room as Sirens now take 30% less damage, repair 50% faster and become immune to mind control, but lose 50% of their movement speed.</desc>
         <cost>0</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -385,7 +385,7 @@ disable shields as well as systems.</tooltip>
     </augBlueprint>
     <augBlueprint name="LAB_LILY_SIREN_DAMAGE">
         <title>Withering Gaze</title>
-        <desc>Enemies directly targeted by Sirens take 30% more damage from all sources and lose their mind control immunity if they had any. Doesn't affect other Sirens or Eldritch beings.</desc>
+        <desc>Enemies captivated by the Sirens take 30% more damage from all sources and lose their mind control immunity if they had any. Doesn't affect other Sirens or Eldritch beings.</desc>
         <cost>0</cost>
         <bp>5</bp>
         <rarity>0</rarity>
@@ -404,7 +404,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="EX_LAB_LILY_SIREN_VAMP">
         <title>[L] Soul Siphon</title>
-        <desc>Sirens now heal by the damage they deal, however, their damage is halved.
+        <desc>Sirens / Harpies now heal by 1.0 / 2.0 HP/s per enemy in the room, however, their damage is halved.
         
 [L] - As an external lab upgrade, this augment will provide its normal effect but take up an augment slot. It cannot be converted into an actual lab upgrade, but will not consume your primary slot. Does not stack with itself.</desc>
         <cost>0</cost>
@@ -414,7 +414,7 @@ disable shields as well as systems.</tooltip>
     </augBlueprint>
     <augBlueprint name="EX_LAB_LILY_SIREN_BUFF">
         <title>[L] Colorful Dreams</title>
-        <desc>Allied Non-Siren crew in the same room as Sirens now take 30% less damage, repair 50% faster and become immune to mind control, but lose 50% of their movement speed.
+        <desc>Allied non-Siren crew in the same room as Sirens now take 30% less damage, repair 50% faster and become immune to mind control, but lose 50% of their movement speed.
         
 [L] - As an external lab upgrade, this augment will provide its normal effect but take up an augment slot. It cannot be converted into an actual lab upgrade, but will not consume your primary slot. Does not stack with itself.</desc>
         <cost>0</cost>
@@ -424,7 +424,7 @@ disable shields as well as systems.</tooltip>
     </augBlueprint>
     <augBlueprint name="EX_LAB_LILY_SIREN_DAMAGE">
         <title>[L] Withering Gaze</title>
-        <desc>Enemies directly targeted by Sirens take 30% more damage from all sources and lose their mind control immunity if they had any. Doesn't affect other Sirens or Eldritch beings.
+        <desc>Enemies captivated by the Sirens take 30% more damage from all sources and lose their mind control immunity if they had any. Doesn't affect other Sirens or Eldritch beings.
         
 [L] - As an external lab upgrade, this augment will provide its normal effect but take up an augment slot. It cannot be converted into an actual lab upgrade, but will not consume your primary slot. Does not stack with itself.</desc>
         <cost>0</cost>
@@ -453,7 +453,7 @@ disable shields as well as systems.</tooltip>
 
     <augBlueprint name="LILY_HER_EMPOWERMENT">
         <title>Her Empowerment</title>
-        <desc>This ship is empowered by Her Eldritch powers. It will function as an auto-ship with enhanced manning and repairs, rapidly repair hull, and receive 20 point energy shield. Your Eldritch and Siren Crew are also empowered, granting them damage resistance and hazard immunity.</desc>
+        <desc>This ship is empowered by Her Eldritch powers. It will function as an auto-ship with enhanced (lvl 2) manning and repairs, rapidly repair hull, and receive a 20 point energy shield. Your Eldritch and Siren Crew are also empowered, granting them damage resistance and hazard immunity.</desc>
         <cost>2468</cost>
         <rarity>0</rarity>
         <stackable>false</stackable>
@@ -479,7 +479,7 @@ disable shields as well as systems.</tooltip>
         <powerList>
             <power>Immune to fires, suffocation, stun and mind control</power>
             <power>Can teleport anywhere on current ship</power>
-            <power>Wields a large arsenal of eldritch powers</power>
+            <power>Wields a large arsenal of Eldritch powers</power>
             <power>Only 100 Max Health, but regenerates automatically after 5 seconds</power>
             <power>Cannot permanently die, instead can be respawned from the storage menu for a fee</power>
             <!--power>I got beams-</power>
@@ -847,7 +847,7 @@ disable shields as well as systems.</tooltip>
         <title>Ion Pinpoint I</title>
         <short>Ionpoint I</short>
         <desc>A modified pinpoint beam that does 1 ion damage. Charges slower than regular ions.</desc>
-        <tooltip>One ion damage per room beam weapon</tooltip>
+        <tooltip>Does 1 ion damage per room</tooltip>
         <damage>0</damage>
         <ion>1</ion>
         <sp>0</sp>
@@ -895,7 +895,7 @@ disable shields as well as systems.</tooltip>
         <title>Ion Pinpoint II</title>
         <short>Ionpoint II</short>
         <desc>A modified pinpoint beam that does 1 ion damage. Charges faster than previous model.</desc>
-        <tooltip>One ion damage per room beam weapon</tooltip>
+        <tooltip>Does 1 ion damage per room</tooltip>
         <damage>0</damage>
         <ion>1</ion>
         <sp>0</sp>
@@ -943,7 +943,7 @@ disable shields as well as systems.</tooltip>
         <title>Ion Pinpoint II†</title>
         <short>Ionpoint II†</short>
         <desc>A modified pinpoint beam that does 1 ion damage. Charges faster than previous model.</desc>
-        <tooltip>One ion damage per room beam weapon</tooltip>
+        <tooltip>Does 1 ion damage per room</tooltip>
         <damage>0</damage>
         <ion>1</ion>
         <sp>0</sp>
@@ -991,7 +991,7 @@ disable shields as well as systems.</tooltip>
         <title>Heavy Ion Pinpoint</title>
         <short>Hv. Ionpoint</short>
         <desc>A modified pinpoint beam that does 3 ion damage, but is slow to charge.</desc>
-        <tooltip>Three ion damage per room beam weapon</tooltip>
+        <tooltip>Does 3 ion damage per room</tooltip>
         <damage>0</damage>
         <!--<sysDamage>1</sysDamage>-->
         <sp>0</sp>
@@ -1039,8 +1039,8 @@ disable shields as well as systems.</tooltip>
         <tip>tip_chain_beam</tip>
         <title>Chain Ion Pinpoint</title>
         <short>Ch. Ionpoint</short>
-        <desc>This modified Pinpoint weapon only does a small amount of ion damage, but quickly ramps up its fire rate until it becomes able to keep multiple systems down by itself.</desc>
-        <tooltip>One ion damage, ramping fire rate.</tooltip>
+        <desc>This modified pinpoint weapon only does a small amount of ion damage, but quickly ramps up its fire rate until it becomes able to keep multiple systems down by itself.</desc>
+        <tooltip>Does 1 ion damage per room</tooltip>
         <damage>0</damage>
         <ion>1</ion>
         <sp>0</sp>
@@ -1094,7 +1094,7 @@ disable shields as well as systems.</tooltip>
         <title>Thermal Ion Pinpoint</title>
         <short>Th. Ionpoint</short>
         <desc>A modified pinpoint beam that shoots a stream of superheated ions. Does 1 ion damage and is guaranteed to ignite the tile hit.</desc>
-        <tooltip>One ion damage per room beam weapon</tooltip>
+        <tooltip>Does 1 ion damage per room</tooltip>
         <damage>0</damage>
         <ion>1</ion>
         <sp>0</sp>
@@ -1142,7 +1142,7 @@ disable shields as well as systems.</tooltip>
         <title>Stunner Ion Pinpoint</title>
         <short>St. Ionpoint</short>
         <desc>A modified pinpoint beam that does 2 ion damage and stuns crew hit.</desc>
-        <tooltip>One ion damage per room beam weapon</tooltip>
+        <tooltip>Does 2 ion damage per room</tooltip>
         <damage>0</damage>
         <ion>2</ion>
         <sp>0</sp>
@@ -1191,7 +1191,7 @@ disable shields as well as systems.</tooltip>
         <title>Ionizing Radiation Pinpoint</title>
         <short>Rad Ionpoint</short>
         <desc>A modified pinpoint beam that shoots a stream of beta particles, disrupting systems and irradiating crew.</desc>
-        <tooltip>Two ion damage per room beam weapon</tooltip>
+        <tooltip>Does 1 ion damage per room</tooltip>
         <damage>0</damage>
         <ion>1</ion>
         <persDamage>2</persDamage>
@@ -1245,7 +1245,7 @@ disable shields as well as systems.</tooltip>
         <title>Phaser Ion Pinpoint</title>
         <short>Ph. Ionpoint</short>
         <desc>A modified pinpoint beam that does 2 ion damage and phases through shielding. Gradually adapts to enemy shielding, allowing it to phase through extra layers with each consecutive shot.</desc>
-        <tooltip>Two ion damage per room beam weapon</tooltip>
+        <tooltip>Does 2 ion damage per room</tooltip>
         <descriptionOverride>A modified pinpoint beam that does 2 ion damage and phases through shielding. 
 Gradually adapts to enemy shielding, allowing it to phase through extra layers with each consecutive shot.
 
@@ -1338,7 +1338,7 @@ Shield Piercing: 2</tooltipOverride>
         <tip>tip_beams</tip>
         <title>'Sunset' Beam [Hullbust]</title>
         <short>'Sunset' [H]</short>
-        <desc>This Beam boasts an unique multimodal power core, allowing it to be effective against hull, systems and crew, though not at once. Current mode: Anti-hull.</desc>
+        <desc>This beam boasts an unique multimodal power core, allowing it to be effective against hull, systems and crew, though not all at once. Current mode: Anti-hull.</desc>
         <tooltip>Beam weapon; 1 damage; 2x damage in systemless rooms.</tooltip>
         <damage>1</damage>
         <noPersDamage>true</noPersDamage>
@@ -1367,7 +1367,7 @@ Shield Piercing: 2</tooltipOverride>
         <title>'Sunset' Beam [Particle]</title>
         <short>'Sunset' [P]</short>
         <desc>This Beam boasts an unique multimodal power core, allowing it to be effective against hull, systems and crew, though not at once. Current mode: Anti-system.</desc>
-        <tooltip>Starts fires and does 1 hull damage per room.</tooltip>
+        <tooltip>Starts fires and does 1 system damage per room.</tooltip>
         <damage>0</damage>
         <sysDamage>1</sysDamage>
         <sp>2</sp>
@@ -1474,7 +1474,7 @@ Shield Piercing: 2</tooltipOverride>
         <title>'Eventide' Beam [Shred]</title>
         <short>'Eventide' [S]</short>
         <desc>A bigger sister of 'Sunset', this Beam's core is not only more powerful, but has an extra mode as well! Current mode: Shred, High breach, system and crew damage .</desc>
-        <tooltip>Beam weapon; 2 damage;</tooltip>
+        <tooltip>Beam weapon; 1 hull, 2 system and 90 crew damage;</tooltip>
         <damage>1</damage>
         <sysDamage>1</sysDamage>
         <persDamage>5</persDamage>
@@ -1513,7 +1513,7 @@ Shield Piercing: 2</tooltipOverride>
         <title>'Eventide' Beam [Thermal]</title>
         <short>'Eventide' [T]</short>
         <desc>A bigger sister of 'Sunset', this Beam's core is not only more powerful, but has an extra mode as well! Current mode: Thermal particle, high system damage, guaranteed fire.</desc>
-        <tooltip>Beam weapon; 2 damage;</tooltip>
+        <tooltip>Beam weapon; 4 system damage;</tooltip>
         <damage>0</damage>
         <sysDamage>4</sysDamage>
         <persDamage>0</persDamage>
@@ -1547,7 +1547,7 @@ Shield Piercing: 2</tooltipOverride>
         <title>'Eventide' Beam [Hack]</title>
         <short>'Eventide' [H]</short>
         <desc>A bigger sister of 'Sunset', this Beam's core is not only more powerful, but has an extra mode as well! Current mode: Hack, applies hacking effect to any system hit.</desc>
-        <tooltip>Beam weapon; 2 damage;</tooltip>
+        <tooltip>Beam weapon; 1 damage;</tooltip>
         <damage>1</damage>
         <persDamage>0</persDamage>
         <sp>2</sp>
@@ -1905,8 +1905,8 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <tip>tip_lily_syringe</tip>
         <title>'Syringe' Beam [Empty]</title>
         <short>'Syringe' [-]</short>
-        <desc>This weapon is less of traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Empty, need to be configured before use.</desc>
-        <tooltip>Special beam weapon. Need to be configured before use.</tooltip>
+        <desc>This weapon is less of a traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Empty, needs to be configured before use.</desc>
+        <tooltip>Special beam weapon. Needs to be configured before use.</tooltip>
         <iconReplace>lily_beam_toggle_syringe_icon</iconReplace>
         <damage>0</damage>
         <persDamage>0</persDamage>
@@ -1942,7 +1942,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <title>'Syringe' Beam [Medicine]</title>
         <short>'Syringe' [M]</short>
         <desc>This weapon is less of traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Medicine.</desc>
-        <tooltip>Applies 4/s healing for 10 second for allied crew.</tooltip>
+        <tooltip>Applies 4 hp/s healing for 10 seconds for allied crew.</tooltip>
         <damage>0</damage>
         <persDamage>0</persDamage>
         <sp>3</sp>
@@ -2192,7 +2192,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <title>'Syringe' Beam [Acid]</title>
         <short>'Syringe' [A]</short>
         <desc>This weapon is less of traditional beam and more of an oversized medical device. Automatic chemical synthesis lab included. Current mode: Acid.</desc>
-        <tooltip>Applies erosion effect for every tile hit. Also does 5 hp/s damage for 3 seconds for any crew hit and doubles damage taken by them for 10 seconds.</tooltip>
+        <tooltip>Applies an erosion effect for every tile hit. Also does 5 hp/s damage for 3 seconds for any crew hit and doubles damage taken by them for 10 seconds.</tooltip>
         <damage>0</damage>
         <persDamage>0</persDamage>
         <sp>3</sp>
@@ -2338,7 +2338,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <tip>tip_lily_siphon</tip>
     <title>'Edison' Siphon Beam [0]</title>
     <short>'Edison' [0]</short>
-    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for longer burst. Current power: 0 (Conservative).</desc>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for a longer burst. Current power: 0 (Conservative).</desc>
     <tooltip>A shield draining burst beam.</tooltip>
     <damage>0</damage>
     <persDamage>0</persDamage>
@@ -2377,7 +2377,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <tip>tip_lily_siphon</tip>
     <title>'Edison' Siphon Beam [1]</title>
     <short>'Edison' [1]</short>
-    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for longer burst. Current power: 1.</desc>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for a longer burst. Current power: 1.</desc>
     <tooltip>A shield draining burst beam.</tooltip>
     <damage>0</damage>
     <persDamage>0</persDamage>
@@ -2416,7 +2416,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <tip>tip_lily_siphon</tip>
     <title>'Edison' Siphon Beam [2]</title>
     <short>'Edison' [2]</short>
-    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for longer burst. Current power: 2.</desc>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for a longer burst. Current power: 2.</desc>
     <tooltip>A shield draining burst beam.</tooltip>
     <damage>0</damage>
     <persDamage>0</persDamage>
@@ -2454,7 +2454,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <tip>tip_lily_siphon</tip>
     <title>'Edison' Siphon Beam [3]</title>
     <short>'Edison' [3]</short>
-    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for longer burst. Current power: 3.</desc>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for a longer burst. Current power: 3.</desc>
     <tooltip>A shield draining burst beam.</tooltip>
     <damage>0</damage>
     <persDamage>0</persDamage>
@@ -2491,7 +2491,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <tip>tip_lily_siphon</tip>
     <title>'Edison' Siphon Beam [OVERDRIVE]</title>
     <short>'Edison' [OD]</short>
-    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for longer burst. Current power: OVERDRIVE.</desc>
+    <desc>This unique beam weapon is capable of siphoning enemy shields and recharging your own in the process. Forcibly decreases system power by one on direct hit, but doesn't lock it. More power allows for a longer burst. Current power: OVERDRIVE.</desc>
     <tooltip>A shield draining burst beam.</tooltip>
     <damage>0</damage>
     <persDamage>0</persDamage>
@@ -2651,7 +2651,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <tip>tip_lily_refractor</tip>
     <title>Refractive Pinpoint II</title>
     <short>Refr. II</short>
-    <desc>A pinpoint beam utilizing specialized pierce technology. While incapable of piercing shields the regular way, it allows the beam to refract through them, still hitting the ship, albeit with precision loss. Stronger then the Mk I.</desc>
+    <desc>A pinpoint beam utilizing specialized pierce technology. While incapable of piercing shields the regular way, it allows the beam to refract through them, still hitting the ship, albeit with precision loss. Stronger than the Mk I and splits into a rainbow of colors on refraction.</desc>
     <tooltip>Refractor beam weapon</tooltip>
     <!--iconReplace>lily_focus_pierce_2_icon</iconReplace-->
     <damage>4</damage>
@@ -2686,7 +2686,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <tip>tip_lily_refractor</tip>
     <title>Refractive Pinpoint II†</title>
     <short>Refr. II†</short>
-    <desc>A pinpoint beam utilizing specialized pierce technology. While incapable of piercing shields the regular way, it allows the beam to refract through them, still hitting the ship, albeit with precision loss. Stronger then the Mk I.</desc>
+    <desc>A pinpoint beam utilizing specialized pierce technology. While incapable of piercing shields the regular way, it allows the beam to refract through them, still hitting the ship, albeit with precision loss. Stronger than the Mk I and splits into a rainbow of colors on refraction.</desc>
     <tooltip>Refractor beam weapon</tooltip>
     <!--iconReplace>lily_focus_pierce_2_icon</iconReplace-->
     <damage>4</damage>
@@ -2969,7 +2969,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <tip>tip_lily_beam_shotgun</tip>
     <title>'Array' Multi-Pinpoint [Pattern]</title>
     <short>'Array' [P]</short>
-    <desc>This weapon is an array of 3 pinpoint beams clustered together, modified to be able to pop shields. Current mode: Pattern</desc>
+    <desc>This weapon is an array of 3 pinpoint beams clustered together, modified to be able to pop shields. Current mode: Pattern (vertical or horizontal line with 2 tile spacing)</desc>
     <tooltip>Pinpoint array weapon</tooltip>
     <damage>1</damage>
     <persDamage>2</persDamage>
@@ -3044,7 +3044,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <tip>tip_lily_beam_shotgun</tip>
     <title>'Matrix' Multi-Pinpoint [Pattern]</title>
     <short>'Matrix' [P]</short>
-    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak chaos on enemy ship, but is cumbersome and hard to aim. Current mode: Pattern</desc>
+    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak havoc on enemy ship, but is cumbersome and hard to aim. Current mode: Pattern (Grid with 2 tile spacing)</desc>
     <tooltip>Pinpoint array weapon</tooltip>
     <damage>1</damage>
     <persDamage>2</persDamage>
@@ -3080,7 +3080,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <tip>tip_lily_beam_shotgun</tip>
     <title>'Matrix' Multi-Pinpoint [Scatter]</title>
     <short>'Matrix' [S]</short>
-    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak chaos on enemy ship, but is cumbersome and hard to aim. Current mode: Scatter</desc>
+    <desc>This weapon is an array of 9 pinpoint beams clustered together, modified to be able to pop shields. Can take down shields and wreak havoc on enemy ship, but is cumbersome and hard to aim. Current mode: Scatter</desc>
     <tooltip>Pinpoint array weapon</tooltip>
     <radius>80</radius>
     <damage>1</damage>
@@ -3129,7 +3129,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <tip>tip_lily_focus_hack</tip>
         <title>Datalink Pinpoint</title>
         <short>D-Link</short>
-        <desc>This weapon projects a beam that allows for wireless transfer of data, hacking systems and mind controling any crew hit. However, it requires enemy shields to be down.</desc>
+        <desc>This weapon projects a beam that allows for wireless transfer of data, hacking systems and mind controlling any crew hit. However, it requires enemy shields to be down.</desc>
         <tooltip>Hacking beam</tooltip>
         <mv-hack duration="10"/>
         <mv-mindControl>
@@ -3212,7 +3212,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <tip>tip_lily_howitzers</tip>
         <title>'Quake' Howitzer</title>
         <short>'Quake'</short>
-        <desc>The lightest out of howitzer series, this weapon is nevertheless capable of inflicting heavy damage to a system it hits, and has decent accuracy and reload speed.</desc>
+        <desc>The lightest out of the howitzer series, this weapon is nevertheless capable of inflicting heavy damage to a system it hits, and has decent accuracy and reload speed.</desc>
         <tooltip>Howitzer 1</tooltip>
         <missiles>1</missiles>
         <radius>20</radius>
@@ -3378,7 +3378,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <desc>YOU SHOULD NEVER SEE THIS</desc>
         <descriptionOverride>Magnifiers use special technology to enhance their power with each charge, rather than gaining additional projectiles. Each charge increases damage output and status effect chances. Charges become progressively faster.
 This particle collider design uses this technology to create an utterly devastating particle beam when allowed to fully charge.
-There has been rumours that this weapon has been tampered with by eldritch entities... But let rumors be rumors.
+There have been rumors that this weapon has been tampered with by Eldritch entities... but let rumors be rumors.
 
 Stats:
 Required Power: 3
@@ -3455,7 +3455,7 @@ Breach Chance: 20/50/80/110% </tooltipOverride>
         <short>'Polaris'</short>
         <desc>This chilling weapon fires a beam of liquid nitrogen. Capable of locking down rooms, keeping most crew from entering or leaving.
 The excessive nitrogen gas also upsets the atmospheric balance.</desc>
-        <tooltip>Starts fires and does 1 hull damage per room.</tooltip>
+        <tooltip>Puts out fires and does 1 system damage per room.</tooltip>
         <damage>0</damage>
         <sysDamage>1</sysDamage>
         <persDamage>2</persDamage>
@@ -3536,7 +3536,7 @@ The excessive nitrogen gas also upsets the atmospheric balance.</desc>
         <short>'Polaris'†</short>
         <desc>This chilling weapon fires a beam of liquid nitrogen. Capable of locking down rooms, keeping most crew from entering or leaving.
     The excessive nitrogen gas also upsets the atmospheric balance.</desc>
-        <tooltip>Starts fires and does 1 hull damage per room.</tooltip>
+        <tooltip>Puts out fires and does 1 system damage per room.</tooltip>
         <damage>0</damage>
         <sysDamage>1</sysDamage>
         <persDamage>2</persDamage>
@@ -3654,7 +3654,7 @@ Conservative weapons use no power on their own but require the system itself to 
     <tip>tip_focus</tip>
     <title>Beam C.I.W.S.</title>
     <short>C.I.W.S.</short>
-    <desc>This beam weapon in equipped with unique omnidirectional infrared emitter as well as advanced targeting suite. It's effective at shooting down incoming missiles and drones, but performs poorly against other ships.</desc>
+    <desc>This beam weapon is equipped with a unique omnidirectional infrared emitter as well as an advanced targeting suite. It's effective at shooting down incoming missiles and drones, but performs poorly against other ships.</desc>
     <tooltip>1 Damage pinpoint.</tooltip>
     <damage>1</damage>
     <sysDamage>0</sysDamage>
@@ -3760,7 +3760,7 @@ The color coded "tiers" represent what kind of limiters the equipment has instal
     <flavorType>Exonet Core</flavorType>
     <title>Exonet Weapon Core - Verdant</title>
     <short>Verdant Core</short>
-    <desc>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power. "Verdant" tier.
+    <desc>This unusual device uses some alien technology to recieve power and information remotely from an unknown source, greatly boosting your weapon performance and providing power. "Verdant" tier.
 	[In order for weapons to function, there must be at least one normal reactor power allocated to the weapon system]</desc>
     <tooltip>Storage Weapon</tooltip>
     <descriptionOverride>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power.
@@ -3799,7 +3799,7 @@ Bonus Accuracy: 10%</tooltipOverride>
     <flavorType>Exonet Core</flavorType>
     <title>Exonet Weapon Core - Crimson</title>
     <short>Crimson Core</short>
-    <desc>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power. "Crimson" tier.
+    <desc>This unusual device uses some alien technology to recieve power and information remotely from an unknown source, greatly boosting your weapon performance and providing power. "Crimson" tier.
 	[In order for weapons to function, there must be at least one normal reactor power allocated to the weapon system]</desc>
     <tooltip>Storage Weapon</tooltip>
     <descriptionOverride>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power.
@@ -3838,7 +3838,7 @@ Bonus Accuracy: 20%</tooltipOverride>
     <flavorType>Exonet Core</flavorType>
     <title>Exonet Weapon Core - Azure</title>
     <short>Azure Core</short>
-    <desc>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power. "Azure" tier.
+    <desc>This unusual device uses some alien technology to recieve power and information remotely from an unknown source, greatly boosting your weapon performance and providing power. "Azure" tier.
 	[In order for weapons to function, there must be at least one normal reactor power allocated to the weapon system]</desc>
     <tooltip>Storage Weapon</tooltip>
     <descriptionOverride>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power.
@@ -3877,7 +3877,7 @@ Bonus Accuracy: 30%</tooltipOverride>
     <flavorType>Exonet Core</flavorType>
     <title>Exonet Weapon Core - Radiant</title>
     <short>Radiant Core</short>
-    <desc>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power. "Radiant" tier.
+    <desc>This unusual device uses some alien technology to recieve power and information remotely from an unknown source, greatly boosting your weapon performance and providing power. "Radiant" tier.
 	[In order for weapons to function, there must be at least one normal reactor power allocated to the weapon system]</desc>
     <tooltip>Storage Weapon</tooltip>
     <descriptionOverride>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power.
@@ -3920,7 +3920,7 @@ Bonus Accuracy: 50%</tooltipOverride>
     <flavorType>Exonet Core</flavorType>
     <title>Exonet Weapon Core - Iridium</title>
     <short>Iridium Core</short>
-    <desc>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power. "Iridium" tier.
+    <desc>This unusual device uses some alien technology to recieve power and information remotely from an unknown source, greatly boosting your weapon performance and providing power. "Iridium" tier.
 	[In order for weapons to function, there must be at least one normal reactor power allocated to the weapon system]</desc>
     <tooltip>Storage Weapon</tooltip>
     <descriptionOverride>This unusual device uses some alien technology to recieve power and information remotely from unknown source, greatly boosting your weapon performance and providing power.
@@ -3970,8 +3970,9 @@ Bonus Accuracy: 80%</tooltipOverride>
     <tip>tip_lily_disintegrators</tip>
     <title>'Ira' Disintegrator Beam</title>
     <short>'Ira'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 1 shield, -4 hp/s and x0.5 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 1 shield, -4 hp/s and x0.5 healing and repair to crew.
+Deals 1 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 1.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4042,8 +4043,9 @@ Pierces 1 shield, -4 hp/s and x0.5 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>'Angoris' Disintegrator Beam</title>
     <short>'Angoris'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 1 shield, -4 hp/s and x0.5 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 1 shield, -4 hp/s and x0.5 healing and repair to crew.
+Deals 1 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 2.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4114,8 +4116,9 @@ Pierces 1 shield, -4 hp/s and x0.5 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>'Dolor' Disintegrator Beam</title>
     <short>'Dolor'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 2 shields, -8 hp/s and x0.25 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 2 shields, -8 hp/s and x0.25 healing and repair to crew.
+Deals 2 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 3.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4187,8 +4190,9 @@ Pierces 2 shields, -8 hp/s and x0.25 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>'Tormentum' Disintegrator Beam</title>
     <short>'Tormentum'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 3 shield, -8 hp/s and x0.0 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 3 shields, -8 hp/s and x0.0 healing and repair to crew.
+Deals 3 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 4.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4255,13 +4259,106 @@ Pierces 3 shield, -8 hp/s and x0.0 healing and repair to crew.</desc>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="LILY_BEAM_SIREN_PLASMA">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>'Fulmen' Chaosshock Disintegrator Beam</title>
+    <short>'Fulmen'</short>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaosshock effect to systems, which makes ion effect dissipate at 50% of normal rate.
+Pierces 2 shields, -5 hp/s and x0.25 healing and repair to crew.
+Deals 1 hull damage to breached rooms.</desc>
+    <tooltip>Chaosshock Disintegrator.</tooltip>
+    <damage>0</damage>
+    <sysDamage>2</sysDamage>
+    <ion>2</ion>
+    <ionBeamFix>true</ionBeamFix>
+    <fireChance>4</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>24</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>4</power>
+    <speed>3</speed>
+    <lily-chaosshock/>
+    <erosion>
+        <speed>1.5</speed>
+        <maxSpeed>1.5</maxSpeed>
+        <time>10.0</time>
+        <maxTime>20.0</maxTime>
+        <systemRepairMultiplier>0.25</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_electro</wallAnim>
+        </roomAnim>
+        <canDilate>true</canDilate>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_1</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <roomStatBoosts>
+        <statBoost name="healAmount">
+            <boostType>FLAT</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>0</priority>
+            <maxStacks>1</maxStacks>
+            <duration>20</duration>
+            <roomAnim renderLayer="1">
+                <anim animType="default" animBorder="2">lily_invisible</anim>
+                <wallAnim>lily_siren_erosion_wall_electro_weak</wallAnim>
+            </roomAnim>
+        </statBoost>
+    </roomStatBoosts>
+    <cost>200</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>100</length>
+    <mv-aiSystemTarget system="shields"/>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_3</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_plasma</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="LILY_BEAM_SIREN_FIRE">
     <type>BEAM</type>
     <tip>tip_lily_disintegrators</tip>
     <title>'Arde' Chaosfire Disintegrator Beam</title>
     <short>'Arde'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew (at 1.5x base speed or more) and burn without oxygen.
-Pierces 1 shield, -3 hp/s and x0.5 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew (at 1.5x base speed or more) and burn without oxygen.
+Pierces 1 shield, -3 hp/s and x0.5 healing and repair to crew.
+Deals 0 hull damage to breached rooms.</desc>
     <tooltip>Chaosfire Disintegrator.</tooltip>
     <damage>0</damage>
     <sysDamage>1</sysDamage>
@@ -4411,8 +4508,9 @@ Pierces 1 shield, -3 hp/s and x0.5 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>'Impedio' Chaoslock Disintegrator Beam</title>
     <short>'Impedio'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighting, sabotaging and repairing, and reducing their movespeed to 0.25.
-Pierces 1 shield, -3 hp/s and x0.5 healing and repair, to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighting, sabotaging and repairing, and reducing their movespeed to 0.25x.
+Pierces 1 shield, -3 hp/s and x0.5 healing and repair, to crew.
+Deals 0 hull damage to breached rooms.</desc>
     <tooltip>Chaoslock Disintegrator.</tooltip>
     <damage>0</damage>
     <ion>1</ion>
@@ -4609,8 +4707,9 @@ Pierces 1 shield, -3 hp/s and x0.5 healing and repair, to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Ira' Disintegrator Beam</title>
     <short>'Ira'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 3 shields, -4 hp/s and x0.5 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 3 shields, -4 hp/s and x0.5 healing and repair to crew.
+Deals 1 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 1.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4686,8 +4785,9 @@ Pierces 3 shields, -4 hp/s and x0.5 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Angoris' Disintegrator Beam</title>
     <short>'Angoris'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 3 shields, -4 hp/s and x0.5 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 3 shields, -4 hp/s and x0.5 healing and repair to crew.
+Deals 1 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 2.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4763,8 +4863,9 @@ Pierces 3 shields, -4 hp/s and x0.5 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Dolor' Disintegrator Beam</title>
     <short>'Dolor'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 4 shields, -8 hp/s and x0.25 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 4 shields, -8 hp/s and x0.25 healing and repair to crew.
+Deals 2 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 3.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4841,8 +4942,9 @@ Pierces 4 shields, -8 hp/s and x0.25 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Tormentum' Disintegrator Beam</title>
     <short>'Tormentum'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 5 shields, -4 hp/s and x0.0 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 5 shields, -8 hp/s and x0.0 healing and repair to crew.
+Deals 3 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 4.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -4914,13 +5016,111 @@ Pierces 5 shields, -4 hp/s and x0.0 healing and repair to crew.</desc>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="LILY_BEAM_SIREN_PLASMA_CHAOS">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Chaotic 'Fulmen' Chaosshock Disintegrator Beam</title>
+    <short>'Fulmen'™</short>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaosshock effect to systems, which makes ion effect dissipate at 50% of normal rate.
+Pierces 4 shields, -5 hp/s and x0.25 healing and repair to crew.
+Deals 1 hull damage to breached rooms.</desc>
+    <tooltip>Chaosshock Disintegrator.</tooltip>
+    <damage>0</damage>
+    <sysDamage>3</sysDamage>
+    <ion>3</ion>
+    <ionBeamFix>true</ionBeamFix>
+    <sp>3</sp>
+    <fireChance>6</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>24</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>4</power>
+    <speed>3</speed>
+    <color>
+        <r>170</r>
+        <g>0</g>
+        <b>255</b>
+    </color>
+    <erosion>
+        <speed>1.5</speed>
+        <maxSpeed>1.5</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.25</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_electro</wallAnim>
+        </roomAnim>
+        <canDilate>true</canDilate>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-5</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_1</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.25</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <roomStatBoosts>
+        <statBoost name="healAmount">
+            <boostType>FLAT</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>0</priority>
+            <maxStacks>1</maxStacks>
+            <duration>30</duration>
+            <roomAnim renderLayer="1">
+                <anim animType="default" animBorder="2">lily_invisible</anim>
+                <wallAnim>lily_siren_erosion_wall_electro_weak</wallAnim>
+            </roomAnim>
+        </statBoost>
+    </roomStatBoosts>
+    <cost>250</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>125</length>
+    <mv-aiSystemTarget system="shields"/>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_3</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_plasma_chaos</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="LILY_BEAM_SIREN_FIRE_CHAOS">
     <type>BEAM</type>
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Arde' Chaosfire Disintegrator Beam</title>
     <short>'Arde'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew (at 1.5x base speed or more) and burn without oxygen.
-Pierces 3 shields, -3 hp/s and x0.5 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew (at 1.5x base speed or more) and burn without oxygen.
+Pierces 3 shields, -3 hp/s and x0.5 healing and repair to crew.
+Deals 0 hull damage to breached rooms.</desc>
     <tooltip>Chaosfire Disintegrator.</tooltip>
     <damage>0</damage>
     <sysDamage>2</sysDamage>
@@ -5075,8 +5275,9 @@ Pierces 3 shields, -3 hp/s and x0.5 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>Chaotic 'Impedio' Chaoslock Disintegrator Beam</title>
     <short>'Impedio'™</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighting, sabotaging and repairing, and reducing their movespeed to 0.25.
-Pierces 3 shields, -3 hp/s and x0.5 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from manning, fighting, sabotaging and repairing, and reducing their movespeed to 0.25x.
+Pierces 3 shields, -3 hp/s and x0.5 healing and repair to crew.
+Deals 0 hull damage to breached rooms.</desc>
     <tooltip>Chaoslock Disintegrator.</tooltip>
     <damage>0</damage>
     <ion>2</ion>
@@ -5278,8 +5479,9 @@ Pierces 3 shields, -3 hp/s and x0.5 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Ira' Disintegrator Beam</title>
     <short>€ 'Ira'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 3 shields, -6 hp/s and x0.25 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 3 shields, -6 hp/s and x0.25 healing and repair to crew.
+Deals 2 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 1.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -5355,8 +5557,9 @@ Pierces 3 shields, -6 hp/s and x0.25 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Angoris' Disintegrator Beam</title>
     <short>€ 'Angoris'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 3 shields, -6 hp/s and x0.25 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 3 shields, -6 hp/s and x0.25 healing and repair to crew.
+Deals 2 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 2.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -5432,8 +5635,9 @@ Pierces 3 shields, -6 hp/s and x0.25 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Dolor' Disintegrator Beam</title>
     <short>€ 'Dolor'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 4 shields, -12 hp/s and x0.0 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 4 shields, -12 hp/s and x0.0 healing and repair to crew.
+Deals 3 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 3.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -5510,8 +5714,9 @@ Pierces 4 shields, -12 hp/s and x0.0 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Tormentum' Disintegrator Beam</title>
     <short>€ 'Tormentum'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
-Pierces 5 shields, -6 hp/s and x0.25 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs.
+Pierces 5 shields, -12 hp/s and x0.0 healing and repair to crew.
+Deals 4 hull damage to breached rooms.</desc>
     <tooltip>Disintegrator 4.</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -5592,13 +5797,107 @@ Pierces 5 shields, -6 hp/s and x0.25 healing and repair to crew.</desc>
     <iconImage>beam</iconImage>
 </weaponBlueprint>
 
+<weaponBlueprint name="LILY_BEAM_SIREN_PLASMA_ELITE">
+    <type>BEAM</type>
+    <tip>tip_lily_disintegrators</tip>
+    <title>Elite 'Fulmen' Eliteshock Disintegrator Beam</title>
+    <short>€ 'Fulmen'</short>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaosshock effect to systems, which makes ion effect dissipate at 50% of normal rate.
+Pierces 4 shields, -8 hp/s and x0.0 healing and repair to crew.
+Deals 2 hull damage to breached rooms.</desc>
+    <tooltip>Chaosshock Disintegrator.</tooltip>
+    <damage>0</damage>
+    <sysDamage>4</sysDamage>
+    <ion>4</ion>
+    <ionBeamFix>true</ionBeamFix>
+    <sp>3</sp>
+    <fireChance>8</fireChance>
+    <breachChance>0</breachChance>
+    <cooldown>24</cooldown>
+    <fireTime>0.25</fireTime>
+    <power>4</power>
+    <speed>3</speed>
+    <lily-chaosshock-elite/>
+    <erosion>
+        <speed>2</speed>
+        <maxSpeed>2</maxSpeed>
+        <time>15.0</time>
+        <maxTime>30.0</maxTime>
+        <systemRepairMultiplier>0.0</systemRepairMultiplier>
+        <erodeShields>true</erodeShields>
+        <roomAnim renderLayer="1">
+            <anim animType="default" animBorder="2">lily_invisible</anim>
+            <wallAnim>lily_siren_erosion_wall_elite_electro</wallAnim>
+        </roomAnim>
+        <canDilate>true</canDilate>
+    </erosion>
+    <statBoosts>
+        <statBoost name="trueHealAmount">
+            <boostType>FLAT</boostType>
+            <amount>-8</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+            <boostAnim>lily_siren_dot_debuff_1_elite</boostAnim>
+        </statBoost>
+        <statBoost name="healSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+        <statBoost name="repairSpeed">
+            <boostType>MULT</boostType>
+            <amount>0.0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <affectsSelf>true</affectsSelf>
+            <duration>15</duration>
+        </statBoost>
+    </statBoosts>
+    <roomStatBoosts>
+        <statBoost name="healAmount">
+            <boostType>FLAT</boostType>
+            <amount>0</amount>
+            <shipTarget>ALL</shipTarget>
+            <crewTarget>ALL</crewTarget>
+            <droneTarget>ALL</droneTarget>
+            <priority>0</priority>
+            <maxStacks>1</maxStacks>
+            <duration>40</duration>
+            <roomAnim renderLayer="1">
+                <anim animType="default" animBorder="2">lily_invisible</anim>
+                <wallAnim>lily_siren_erosion_wall_elite_electro_weak</wallAnim>
+            </roomAnim>
+        </statBoost>
+    </roomStatBoosts>
+    <cost>325</cost>
+    <bp>2</bp>
+    <rarity>0</rarity>
+    <length>125</length>
+    <mv-aiSystemTarget system="shields"/>
+    <image>beam_contact</image>
+    <launchSounds>
+        <sound>lily_disintegrator_3</sound>
+    </launchSounds>
+    <weaponArt>lily_beam_siren_plasma_elite</weaponArt>
+    <iconImage>beam</iconImage>
+</weaponBlueprint>
+
 <weaponBlueprint name="LILY_BEAM_SIREN_FIRE_ELITE">
     <type>BEAM</type>
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Arde' Chaosfire Disintegrator Beam</title>
     <short>€ 'Arde'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew (at 3x base speed or more) and burn without oxygen.
-Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally starts chaosfires, that can damage any type of crew (at 3x base speed or more) and burn without oxygen.
+Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.
+Deals 1 hull damage to breached rooms.</desc>
     <tooltip>Chaosfire Disintegrator.</tooltip>
     <damage>0</damage>
     <sysDamage>3</sysDamage>
@@ -5753,8 +6052,9 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>Elite 'Impedio' Chaoslock Disintegrator Beam</title>
     <short>€ 'Impedio'</short>
-    <desc>Fires a beam of chaotic eldritch energy that causes all touched matter to disintegrate. Applies Erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from moving, manning, fighting, sabotaging and repairing.
-Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
+    <desc>Fires a beam of chaotic Eldritch energy that causes all touched matter to disintegrate. Applies an erosion effect to rooms and damage over time to all crew hit, and impedes healing and repairs. Additionally applies chaoslock effect, preventing crew in affected rooms from moving, manning, fighting, sabotaging and repairing.
+Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.
+Deals 1 hull damage to breached rooms.</desc>
     <tooltip>Chaoslock Disintegrator.</tooltip>
     <damage>0</damage>
     <ion>3</ion>
@@ -5985,7 +6285,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
     <tip>tip_beams</tip>
     <title>Siren Abductor Artillery</title>
     <short>Abductor</short>
-    <desc>A beam weapon designed by Sirens, it pierces all shields and abduct crew it hits to the teleporter room, as well as putting them in a daze. Requires teleporter system to function. [Base cooldown: 15]</desc>
+    <desc>A beam weapon designed by the Sirens, it pierces all shields and abducts crew it hits to the teleporter room, as well as putting them in a daze. Requires teleporter system to function. [Base cooldown: 15]</desc>
     <tooltip>Siren Abductor Artillery. [Base cooldown: 15]</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -6014,7 +6314,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
     <tip>tip_beams</tip>
     <title>Siren Kaleidoscope Artillery</title>
     <short>Kaleidoscope</short>
-    <desc>A beam weapon designed by Sirens, it embraces chaos by firing one of 10 different beams at random. [Base cooldown: 16] Possible effects: Fire, Particle, Repair, Stun, Breach, Energy, Ion, Frost, Hack, Radiation</desc>
+    <desc>A beam weapon designed by the Sirens, it embraces chaos by firing one of 10 different beams at random. [Base cooldown: 16] Possible effects: Fire, Particle, Repair, Stun, Breach, Energy, Ion, Frost, Hack, Radiation</desc>
     <tooltip>Siren Kaleidoscope Artillery. [Base cooldown: 16] ROYLGCBIVM</tooltip>
     <damage>0</damage><unlock id="ship_PLAYER_SHIP_KESTREL_2_unlock"/>
     <sysDamage>0</sysDamage>
@@ -6047,7 +6347,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
     <tip>tip_beams</tip>
     <title>Siren Chaosfire Artillery</title>
     <short>Chaosfire</short>
-    <desc>A beam weapon designed by Sirens, it fires a beam of chaotic energy that ignites everything it touches with chaosflames. Unlike normal fire, chaosflames can burn with no oxygen and damage even fireproof crew. Pierces 2 shields. [Base cooldown: 40]</desc>
+    <desc>A beam weapon designed by the Sirens, it fires a beam of chaotic energy that ignites everything it touches with chaosflames. Unlike normal fire, chaosflames can burn with no oxygen and damage even fireproof crew. Pierces 2 shields. [Base cooldown: 40]</desc>
     <tooltip>Siren Chaosfire Artillery. [Base cooldown: 40]</tooltip>
     <damage>0</damage>
     <sysDamage>0</sysDamage>
@@ -6582,7 +6882,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
     <tip>tip_madness</tip>
     <title>Chaotic 'Seuss' Artillery</title>
     <short>'Seuss'™</short>
-    <desc>An artillery version of the infamous weapon, this long beam devastates enemy systems and crew, as well as temporarily induces madness on the crew it hits, disabling their active abilities. Allied Eldritch beings and Sirens are healed instead. [Base cooldown: 30]</desc>
+    <desc>An artillery version of the infamous weapon, this long beam devastates enemy systems and crew, as well as temporarily inducing madness on the crew it hits, disabling their active abilities. Allied Eldritch beings and Sirens are healed instead. [Base cooldown: 30]</desc>
     <tooltip>Chaotic 'Seuss' Artillery. [Base cooldown: 30]</tooltip>
     <damage>0</damage>
     <sysDamage>2</sysDamage>
@@ -6680,7 +6980,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
     <tip>tip_frost</tip>
     <title>'Azure Dream Blade'</title>
     <short>'Azure Blade'</short>
-    <desc>An unique beam artillery, combining Siren and Crystal technology. Pierces 3 shields, dealing 1 system, 1 ion and 30 crew (enemy only) damage and locking down rooms. Enemies in these rooms will be affected with frost debuff, while allies will gain door phasing and minor healing. [Base cooldown: 40]</desc>
+    <desc>An unique beam artillery, combining Siren and Crystal technology. Pierces 3 shields, dealing 1 system, 1 ion and 30 crew (enemy only) damage and locking down rooms. Enemies in these rooms will be affected with frost debuff (halving their movement and repair speed and preventing use of active abilities), while allies will gain door phasing and minor (1 hp/s) healing. [Base cooldown: 40]</desc>
     <tooltip>'Azure Dream Blade'. [Base cooldown: 40]</tooltip>
     <damage>0</damage>
     <ion>1</ion>
@@ -6815,7 +7115,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
     <tip>tip_lily_disintegrators</tip>
     <title>Her 'Tormentum' Disintegrator Artillery :)</title>
     <short>€ 'Tormentum' :)</short>
-    <desc>Harnessing Her eldritch power, this weapon a devastating beam of chaotic eldritch energy that causes all touched matter to disintegrate rapidly. Applies Erosion effect to rooms and damage over time to all crew hit, and completely prevents healing and repairs. [Base cooldown: 60]</desc>
+    <desc>Harnessing Her Eldritch power, this weapon fires a devastating beam of chaotic Eldritch energy that causes all touched matter to disintegrate rapidly. Applies an erosion effect to rooms and damage over time to all crew hit, and completely prevents healing and repairs. [Base cooldown: 60]</desc>
     <tooltip>Her 'Tormentum' Artillery :) [Base cooldown: 60]</tooltip>
     <damage>0</damage>
     <sysDamage>3</sysDamage>
@@ -7330,7 +7630,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
 <shipBlueprint name="LILY_PLAYER_SIREN_TRANSPORT" layout="lily_player_siren_transport" img="lily_player_siren_transport">
     <class>Siren Transport</class>
     <name>Thelxiope</name>
-    <desc>A fully restored and refitted siren transport ship, and is now a combat ready vessel. Its unique Artillery Beam dazes and abducts any crew hit, making them easy prey - one of the favourite Siren tactics.</desc>
+    <desc>A fully restored and refitted siren transport ship, which is now a combat ready vessel. Its unique Artillery beam dazes and abducts any crew hit, making them easy prey - one of the Sirens' favorite tactics.</desc>
     <unlock id="ship_LILY_SIREN_TRANSPORT_unlock"/>
     <systemList>
         <artillery power="2" room="13" start="true" weapon="LILY_SIREN_TRANSPORT_A_ARTILLERY" img="room_artillery" />
@@ -7411,7 +7711,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
 <shipBlueprint name="LILY_PLAYER_SIREN_TRANSPORT_2" layout="lily_player_siren_transport_2" img="lily_player_siren_transport_2">
     <class>Siren Transport</class>
     <name>Parthenope</name>
-    <desc>Fully embracing chaos, this ship is equipped with artillery that fires one out of 8 different beams completely at random.</desc>
+    <desc>Fully embracing chaos, this ship is equipped with artillery that fires 1 out of 8 different beams completely at random.</desc>
     <unlock id="ship_LILY_SIREN_TRANSPORT_2_unlock"/>
     <systemList>
         <artillery power="1" room="15" start="true" weapon="LILY_SIREN_TRANSPORT_B_ARTILLERY" img="room_artillery" />
@@ -7495,7 +7795,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
 <shipBlueprint name="LILY_PLAYER_SIREN_TRANSPORT_3" layout="lily_player_siren_transport_3" img="lily_player_siren_transport_3">
     <class>Siren Transport</class>
     <name>Himerope</name>
-    <desc>How do the dreams taste if you cook them? This couple of Siren harpies has decided to find out, by installing an artillery beam capable of burning everything in its path.</desc>
+    <desc>How do dreams taste if you cook them? This couple of Siren harpies has decided to find out, by installing an artillery beam capable of burning everything in its path.</desc>
     <unlock id="ship_LILY_SIREN_TRANSPORT_3_unlock"/>
     <systemList>
         <artillery power="2" room="14" start="true" weapon="LILY_SIREN_TRANSPORT_C_ARTILLERY" img="room_artillery" />
@@ -7655,10 +7955,12 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
 <shipBlueprint name="LILY_PLAYER_SIREN_HER_TRANSPORT" layout="lily_player_siren_transport_her" img="lily_player_siren_transport_her">
     <class>Lily's Crewser</class>
     <name>Void Star</name>
-    <desc>A ship empowered by Her eldritch powers themselves, it is a perfect vessel for Lily to enact Her will.</desc>
+    <desc>A ship empowered by Her Eldritch powers themselves, it is a perfect vessel for Lily to enact Her will.</desc>
     <unlock id="ship_LILY_SIREN_HER_TRANSPORT_unlock"/>
     <systemList>
-        <artillery power="2" max="5" room="13" start="true" weapon="LILY_SIREN_TRANSPORT_HER_ARTILLERY" img="room_artillery" />
+        <artillery power="2" max="5" room="20" start="true" weapon="LILY_SIREN_TRANSPORT_HER_ARTILLERY" img="room_artillery_5" />
+        <artillery power="2" max="5" room="4" start="true" weapon="LILY_BEAM_SIREN_LOCK_ELITE" img="room_artillery_4" />
+        <artillery power="2" max="5" room="13" start="true" weapon="LILY_BEAM_SIREN_FIRE_ELITE" img="room_artillery_7" />
         <battery power="2" max="3" room="0" start="false" img="room_battery_19" />
         <cloaking power="1" room="9" start="false" img="room_cloaking_4" />
         <clonebay power="1" max="4" room="3" start="true">
@@ -7666,9 +7968,9 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
                 <number>0</number>
             </slot>
         </clonebay>
-        <doors power="1" room="17" start="false" img="room_doors">
+        <doors power="2" room="17" start="false" img="room_doors">
             <slot>
-                <direction>right</direction>
+                <direction>up</direction>
                 <number>1</number>
             </slot>
         </doors>
@@ -7687,7 +7989,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
         </medbay>
         <mind power="2" max="4" room="2" start="true" img="room_mind_2" />
         <oxygen power="1" max="4" room="18" start="false" img="room_oxygen_18" />
-        <pilot power="1" room="14" start="true" img="room_pilot_2">
+        <pilot power="2" room="14" start="true" img="room_pilot_2">
             <slot>
                 <direction>right</direction>
                 <number>1</number>
@@ -7695,7 +7997,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
         </pilot>
         <sensors power="2" room="16" start="true" img="room_sensors">
             <slot>
-                <direction>right</direction>
+                <direction>down</direction>
                 <number>1</number>
             </slot>
         </sensors>
@@ -7707,7 +8009,7 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
         </shields>
         <teleporter power="1" room="21" start="true" />
         <temporal power="1" max="4" room="11" start="true" img="room_temporal_3" />
-        <weapons power="4" max="16" room="6" start="true" img="room_weapons">
+        <weapons power="4" max="16" room="6" start="false" img="room_weapons">
             <slot>
                 <direction>up</direction>
                 <number>1</number>
@@ -7717,12 +8019,10 @@ Pierces 3 shields, -4 hp/s and x0.25 healing and repair to crew.</desc>
     <weaponSlots>4</weaponSlots>
     <droneSlots>2</droneSlots>
     <weaponList missiles="10" count="4">
-        <weapon name="LILY_BEAM_SIREN_LOCK_ELITE" />
-        <weapon name="LILY_BEAM_SIREN_FIRE_ELITE" />
     </weaponList>
     <droneList drones="5" count="2" />
     <health amount="15" />
-    <maxPower amount="12" />
+    <maxPower amount="13" />
     <aug name="LILY_HER_EMPOWERMENT" />
     <mv-mapImage>map_icon_lily_player_siren_transport_her</mv-mapImage>
 </shipBlueprint>

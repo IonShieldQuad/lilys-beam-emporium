@@ -117,18 +117,21 @@ disintegrators["LILY_BEAM_SIREN_1"] = 1
 disintegrators["LILY_BEAM_SIREN_2"] = 1
 disintegrators["LILY_BEAM_SIREN_3"] = 2
 disintegrators["LILY_BEAM_SIREN_4"] = 3
+disintegrators["LILY_BEAM_SIREN_PLASMA"] = 1
 disintegrators["LILY_BEAM_SIREN_FIRE"] = 0
 disintegrators["LILY_BEAM_SIREN_LOCK"] = 0
 disintegrators["LILY_BEAM_SIREN_1_CHAOS"] = 1
 disintegrators["LILY_BEAM_SIREN_2_CHAOS"] = 1
 disintegrators["LILY_BEAM_SIREN_3_CHAOS"] = 2
 disintegrators["LILY_BEAM_SIREN_4_CHAOS"] = 3
+disintegrators["LILY_BEAM_SIREN_PLASMA_CHAOS"] = 1
 disintegrators["LILY_BEAM_SIREN_FIRE_CHAOS"] = 0
 disintegrators["LILY_BEAM_SIREN_LOCK_CHAOS"] = 0
 disintegrators["LILY_BEAM_SIREN_1_ELITE"] = 2
 disintegrators["LILY_BEAM_SIREN_2_ELITE"] = 2
 disintegrators["LILY_BEAM_SIREN_3_ELITE"] = 3
 disintegrators["LILY_BEAM_SIREN_4_ELITE"] = 4
+disintegrators["LILY_BEAM_SIREN_PLASMA_ELITE"] = 2
 disintegrators["LILY_BEAM_SIREN_FIRE_ELITE"] = 1
 disintegrators["LILY_BEAM_SIREN_LOCK_ELITE"] = 1
 disintegrators["LILY_SIREN_TRANSPORT_HER_ARTILLERY"] = 4
@@ -141,6 +144,10 @@ local chaoslock = {}
 chaosfire["LILY_BEAM_SIREN_LOCK"] = 20
 chaosfire["LILY_BEAM_SIREN_LOCK_CHAOS"] = 40
 chaosfire["LILY_BEAM_SIREN_LOCK_ELITE"] = 60
+local chaosshock = {}
+chaosshock["LILY_BEAM_SIREN_PLASMA"] = 20
+chaosshock["LILY_BEAM_SIREN_PLASMA_CHAOS"] = 30
+chaosshock["LILY_BEAM_SIREN_PLASMA_ELITE"] = 40
 
 local frostBeams = {}
 frostBeams["LILY_BEAM_FROST"] = { removeOxygen = true }
@@ -157,6 +164,7 @@ specalWidthBeams["LILY_BEAM_SIREN_1"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_2"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_3"] = { 2, 0}
 specalWidthBeams["LILY_BEAM_SIREN_4"] = { 3, 0}
+specalWidthBeams["LILY_BEAM_SIREN_PLASMA"] = { 2, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_FIRE"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_LOCK"] = { 1, 0 }
 
@@ -164,6 +172,7 @@ specalWidthBeams["LILY_BEAM_SIREN_1_CHAOS"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_2_CHAOS"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_3_CHAOS"] = { 2, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_4_CHAOS"] = { 3, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_PLASMA_CHAOS"] = { 2, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_FIRE_CHAOS"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_LOCK_CHAOS"] = { 1, 0 }
 
@@ -171,6 +180,7 @@ specalWidthBeams["LILY_BEAM_SIREN_1_ELITE"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_2_ELITE"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_3_ELITE"] = { 2, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_4_ELITE"] = { 3, 0 }
+specalWidthBeams["LILY_BEAM_SIREN_PLASMA_ELITE"] = { 2, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_FIRE_ELITE"] = { 1, 0 }
 specalWidthBeams["LILY_BEAM_SIREN_LOCK_ELITE"] = { 1, 0 }
 
@@ -212,6 +222,14 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                 local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
                 if effect_time ~= nil and roomId ~= -1 then
                     local table = userdata_table(shipManager.ship.vRoomList[roomId], "mods.lilybeams.chaosfire")
+                    table.timer = math.max(table.timer, effect_time)
+                end
+            end
+            if chaosshock[weaponName] then
+                local effect_time = chaosshock[weaponName]
+                local roomId = shipManager.ship:GetSelectedRoomId(location.x, location.y, true)
+                if effect_time ~= nil and roomId ~= -1 then
+                    local table = userdata_table(shipManager.ship.vRoomList[roomId], "mods.lilybeams.chaosshock")
                     table.timer = math.max(table.timer, effect_time)
                 end
             end
@@ -1171,6 +1189,15 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
                 for y = startY, endY do
                     shipManager:GetFire(x, y).fOxygen = 100
                 end
+            end
+        end
+        table = userdata_table(room, "mods.lilybeams.chaosshock")
+        local sys = shipManager:GetSystemInRoom(room.iRoomId)
+        if table.timer == nil then table.timer = 0 end
+        if table.timer > 0 then
+            table.timer = math.max(table.timer - time_increment(), 0)
+            if sys and sys.iLockCount > 0 then
+                sys.lockTimer.currTime = sys.lockTimer.currTime - time_increment() * 0.5
             end
         end
     end

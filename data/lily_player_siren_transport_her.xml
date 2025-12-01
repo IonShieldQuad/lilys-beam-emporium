@@ -7,11 +7,13 @@
 	<cloak x="-8" y="-8" />
 </offsets>
 <weaponMounts>
-	<mount x="333" y="56" rotate="true" mirror="true" gib="-1" slide="up" />
-	<mount x="333" y="347" rotate="true" mirror="false" gib="-1" slide="down" />
+	<mount x="195" y="10" rotate="true" mirror="true" gib="-1" slide="up" />
+	<mount x="195" y="394" rotate="true" mirror="false" gib="-1" slide="down" />
 	<mount x="393" y="128" rotate="true" mirror="true" gib="-1" slide="right" />
 	<mount x="393" y="276" rotate="true" mirror="false" gib="-1" slide="right" />
 	<mount x="324" y="202" rotate="true" mirror="false" gib="-1" slide="no" />
+	<mount x="333" y="56" rotate="true" mirror="true" gib="-1" slide="up" />
+	<mount x="333" y="349" rotate="true" mirror="false" gib="-1" slide="down" />
 </weaponMounts>
 <thrusters sync="true">
 	<thruster y="168" x="-44">lily_siren_transport_her_thruster_center</thruster>

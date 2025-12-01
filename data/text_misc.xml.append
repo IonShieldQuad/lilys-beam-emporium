@@ -3,7 +3,7 @@
 <text name="tip_lily_pointer">Tip: You can use it to play with your cat. And your drones too.</text>
 <text name="tip_lily_siphon">Tip: This beam does no damage, but transfers enemy shields to you, supershields included. Use it for offence, defence, or both!</text>
 <text name="tip_lily_refractor">Tip: Refractor beams can pierce any amount of shields, but refraction offsets the target point the stronger the shields are.</text>
-<text name="tip_lily_beam_shotgun">Tip: The pinpoint arrays fires multiple pinpoint beams at once. They have 2 modes: [Pattern] fires beams in a predefined pattern, while [Scatter] fires them randomly in a radius.</text>
+<text name="tip_lily_beam_shotgun">Tip: The pinpoint arrays fire multiple pinpoint beams at once. They have 2 modes: [Pattern] fires beams in a predefined pattern, while [Scatter] fires them randomly in a radius.</text>
 <text name="tip_lily_focus_hack">Tip: This beam can't pierce any shields, but it can effectively keep a system under constant hack if shields are down. Also mind controls any crew hit!</text>
 <text name="tip_lily_howitzers">Tip: Howitzers are a cross between beam and missile weapons. They use missiles to fire, target in a radius similar to flak, can partially pierce shields and generally inflict heavy damage.</text>
 <text name="tip_lily_disintegrators">Tip: Disintegrators are special beams designed by Lily using Eldritch technology. They apply their damage over time to crew and systems, as well as severely impeding healing and repairs, and will damage hull when hitting breached rooms. The effects apply even to resistant rooms or when hitting shield bubbles!</text>
@@ -14,7 +14,7 @@
 <text name="tip_lily_syringe">Tip: Special beam weapon. Need to be configured before use.</text>
 <text name="tip_lily_syringe_m">Tip: Applies 4/s healing for 15 second for allied crew. Also halves damage taken from hazards for the duration.</text>
 <text name="tip_lily_syringe_s">Tip: Provides doubled movement speed and damage for 10 seconds for allied crew.</text>
-<text name="tip_lily_syringe_p">Tip: Does 4 hp/s damage for 25 seconds for any crew hit, doesn't stack. Lethal for most races in ships without any medical facilities.</text>
+<text name="tip_lily_syringe_p">Tip: Does 4 hp/s damage for 25 seconds for any crew hit, doesn't stack. Lethal for most races in ships without any medical facilities. Doesn't affect crew immune to shell gas.</text>
 <text name="tip_lily_syringe_a">Tip: Applies weak erosion effect for every tile hit. Also does 10 hp/s damage for 3 seconds for any crew hit.</text>
 
 
@@ -39,7 +39,7 @@ Does additional damage to systems
 
 <text name="lily_text_multiverse_crp">FTL: Multiverse :)</text>
 
-<text name="lily_eventtext_nospareprime">You may be willing to spare Prime. But I am certainly not--</text>
+<text name="lily_eventtext_nospareprime">"You may be willing to spare Prime. But I am certainly not--"</text>
 <text name="lily_eventtext_lilysnipesprime">As your hull is reduced to critical levels, you notice Prime himself has dismounted from his rings, and is now holding them above his head. "You're right, it wasss my missstake to keep you around. Good thing I didn't make the missstake of making it perma-" Prime doesn't get to finish his words as a beam striking from an unknown direction vaporizes him instantly.</text>
 
 <text name="lily_eventtext_herrealm_alt">You've arrived in some kind of swirling hellscape, mired by a blurry haze of what seems to be taunting barely human faces flying through the abyss. Despite the nighmarishness of the surrounding space, you feel ...oddly content and at peace.
@@ -56,20 +56,20 @@ Does additional damage to systems
 I've got gome gifts that should SERIOUSLY turn the tide of battle, just wait--
 Just need to get a proper object to calibrate my jump drive at--"</text>
 
-<text name="lily_eventtext_sylvanfight1">Prepare to get obliterated, pest!--</text>
-<text name="lily_eventtext_sylvanfight2">Are you ready - to meet you maker?--</text>
-<text name="lily_eventtext_sylvanfight3">EXTERMINATION PROTOCOL: TARGET ACQUIRED</text>
-<text name="lily_eventtext_sylvanfight4">Die, in Her name!--</text>
-<text name="lily_eventtext_sylvanfight5">Yet another slimy pest about to bite the dust--</text>
+<text name="lily_eventtext_sylvanfight1">"Prepare to get obliterated, pest!--"</text>
+<text name="lily_eventtext_sylvanfight2">"Are you ready - to meet you maker?--"</text>
+<text name="lily_eventtext_sylvanfight3">"EXTERMINATION PROTOCOL: TARGET ACQUIRED"</text>
+<text name="lily_eventtext_sylvanfight4">"Die, in Her name!--"</text>
+<text name="lily_eventtext_sylvanfight5">"Yet another slimy pest about to bite the dust--"</text>
 
-<text name="lily_eventtext_sylvannosur1">No mercy for insects!--</text>
-<text name="lily_eventtext_sylvannosur2">Get Crushed!--</text>
-<text name="lily_eventtext_sylvannosur3">Begging won't help--</text>
-<text name="lily_eventtext_sylvannosur4">Any last words?</text>
-<text name="lily_eventtext_sylvannosur5">How pathetic--</text>
+<text name="lily_eventtext_sylvannosur1">"No mercy for insects!--"</text>
+<text name="lily_eventtext_sylvannosur2">"Get Crushed!--"</text>
+<text name="lily_eventtext_sylvannosur3">"Begging won't help--"</text>
+<text name="lily_eventtext_sylvannosur4">"Any last words?"</text>
+<text name="lily_eventtext_sylvannosur5">"How pathetic--"</text>
 
-<text name="lily_eventtext_visiontext1">A vessel as black as night approaches, and without words and starts charging it's weapons. But soon realizing Lily is with you, they quickly stop.</text>
-<text name="lily_eventtext_visiontext2">"And so this is the Renegade that set the eternal reign of chaos in motion?" How helpful, but don't even try to undo the inevietable. Maybe there's a place for you still.</text>
+<text name="lily_eventtext_visiontext1">A vessel as black as night approaches, and without words, starts charging its weapons. But, as soon as they realize Lily is with you, they quickly stop.</text>
+<text name="lily_eventtext_visiontext2">"And so this is the Renegade that set the eternal reign of chaos in motion? How helpful, but don't even try to undo the inevitable. Maybe there's a place for you still."</text>
 <text name="lily_eventtext_visiontext3">An alien vessel, another of Her minions, approaches. There is seemingly no end to these legions of darkness. Luckily... it doesn't seem to attack you.</text>
 <text name="lily_eventtext_visiontext4">You think you might be hallucinating at first, but a black vessel begins to take form in front of you. In the darkness of space, you narrowly avoid colliding with it.</text>
 

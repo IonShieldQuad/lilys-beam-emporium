@@ -3,7 +3,7 @@
         <mod-append:choice hidden="true" req="SUPER_AFTERBURNER_ENGINES_CHECK" max_group="7">
             <text>(Adv. Engines + Afterburner) Engage the afterburned advanced engines to fly close enough to scrap the ship and save its sole crew. [3{]</text>
             <event>
-                <text>Afterburner engaged</text>
+                <text>Afterburner engaged!</text>
                 <item_modify>
                     <item type="fuel" min="-3" max="-3"/>
                 </item_modify>
@@ -23,7 +23,7 @@
         <mod-append:choice hidden="true" req="LILY_COMBAT_AFTERBURNER" lvl="1" max_group="7">
             <text>(Afterburner) Risk your ship by flying close enough to scrap the ship and save its sole crew. [3{]</text>
             <event>
-                <text>Afterburner engaged</text>
+                <text>Afterburner engaged!</text>
                 <item_modify>
                     <item type="fuel" min="-3" max="-3"/>
                 </item_modify>

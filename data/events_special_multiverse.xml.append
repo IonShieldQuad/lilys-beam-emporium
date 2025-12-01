@@ -4,7 +4,7 @@
         <mod-append:choice req="LIST_CREW_SIREN" lvl="1" blue="false">
             <text>Present a Siren.</text>
             <event>
-                <text>"Sirens... a mysterious race of unknown origins... and with powers that can break someone's mind with their mere presence... And yet... you have made one of them your ally... Yes, I am... very impressed. Well done, traveler. Expect... rewards before your next journey."</text>
+                <text>"Sirens... a mysterious race of unknown origins... and with powers that can break someone's mind with their mere presence. And yet... you have made one of them your ally. Yes, I am... very impressed. Well done, traveler. Expect... rewards before your next journey."</text>
                 <achievement>ACH_BOON_LILY_SIREN</achievement>
                 <metaVariable name="prof_z_boon_lily_siren" op="set" val="1"/>
                 <variable name="ach_boon_lily_siren" op="set" val="1"/>
@@ -17,7 +17,7 @@
         <mod-append:choice req="LIST_CREW_LILY_AVATAR" lvl="1" blue="false">
             <text>Present Lily's Avatar.</text>
             <event>
-                <text>You suddenly feel an overwhelming sense of unease for a moment. "Wait... This energy... Is she ... Who I think she is?... Oh, please ignore my ramblings, Renegade... The creed... Forbids me from telling much anyway... All I can tell is she is an anomaly... Of immense threat and power... But the fact that you are still alive tells me that she is on your side, for now at least, whatever her motives might be... Yes, this is... very impressive. Expect... rewards before your next journey. Just... Please be careful."</text>
+                <text>You suddenly feel an overwhelming sense of unease for a moment. "Wait... this energy... is she ... who I think she is? Oh, please ignore my ramblings, Renegade... the creed... forbids me from telling much anyway. All I can tell is she is an anomaly... of immense threat and power. But the fact that you are still alive tells me that she is on your side, for now at least, whatever her motives might be. Yes, this is... very impressive. Expect... rewards before your next journey. Just... please be careful."</text>
                 <achievement>ACH_BOON_LILY_AVATAR</achievement>
                 <metaVariable name="prof_z_boon_lily_avatar" op="set" val="1"/>
                 <variable name="ach_boon_lily_avatar" op="set" val="1"/>

@@ -131,18 +131,21 @@
         <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_2_PLAYER</mod-append:name>
@@ -189,18 +192,21 @@
         <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_2_PLAYER</mod-append:name>
@@ -241,18 +247,21 @@
         <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_2_PLAYER</mod-append:name>
@@ -283,12 +292,15 @@
         <mod-append:name>LILY_FOCUS_ION_STUN</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_BIO</mod-append:name>
         <mod-append:name>LILY_FOCUS_ION_PHASE</mod-append:name>
+        <mod-append:name>LILY_FOCUS_ION_2_PLAYER</mod-append:name>
         <mod-append:name>LILY_BEAM_SCISSORS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SCISSORS_PLAYER</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
-        <mod-append:name>LILY_FOCUS_ION_2_PLAYER</mod-append:name>
-        <mod-append:name>LILY_BEAM_SCISSORS_PLAYER</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_ELITE</mod-append:name>
     </mod:findName>
 
     <mod:findName type="blueprintList" name="BLUELIST_FOCUS_ALL">
@@ -441,18 +453,21 @@
         <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
         <mod-append:name>LILY_SIREN_TRANSPORT_A_ARTILLERY</mod-append:name>
@@ -483,18 +498,21 @@
         <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
         <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
@@ -525,6 +543,9 @@
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_ELITE</mod-append:name>
         <mod-append:name>LILY_SIREN_TRANSPORT_HER_ARTILLERY</mod-append:name>
     </mod:findName>
 
@@ -543,14 +564,17 @@
         <mod-append:name>LILY_BEAM_TOGGLE_AKATSUKI_S</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
         <mod-append:name>LILY_SIREN_TRANSPORT_HER_ARTILLERY</mod-append:name>
@@ -575,6 +599,9 @@
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_ELITE</mod-append:name>
         <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
         <mod-append:name>LILY_SIREN_TRANSPORT_C_ARTILLERY</mod-append:name>
     </mod:findName>
@@ -609,18 +636,21 @@
         <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
         <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
@@ -649,18 +679,21 @@
         <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
         <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
@@ -707,6 +740,9 @@
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_ELITE</mod-append:name>
         <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
         
     </mod:findName>
@@ -728,6 +764,9 @@
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_ELITE</mod-append:name>
         <mod-append:name>LILY_SIREN_TRANSPORT_B_ARTILLERY</mod-append:name>
     </mod:findName>
 
@@ -866,12 +905,14 @@
         <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
     </mod:findName>
@@ -909,24 +950,28 @@
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
 
@@ -962,18 +1007,21 @@
         <mod-append:name>LILY_BEAM_SIREN_2</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_CHAOS</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_CHAOS</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_1_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_2_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_3_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_4_ELITE</mod-append:name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_FIRE_ELITE</mod-append:name>
         <mod-append:name>LILY_BEAM_SIREN_LOCK_ELITE</mod-append:name>
     </mod:findName>
@@ -1073,18 +1121,21 @@
         <name>LILY_BEAM_SIREN_2</name>
         <name>LILY_BEAM_SIREN_3</name>
         <name>LILY_BEAM_SIREN_4</name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA</mod-append:name>
         <name>LILY_BEAM_SIREN_FIRE</name>
         <name>LILY_BEAM_SIREN_LOCK</name>
         <name>LILY_BEAM_SIREN_1_CHAOS</name>
         <name>LILY_BEAM_SIREN_2_CHAOS</name>
         <name>LILY_BEAM_SIREN_3_CHAOS</name>
         <name>LILY_BEAM_SIREN_4_CHAOS</name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_CHAOS</mod-append:name>
         <name>LILY_BEAM_SIREN_FIRE_CHAOS</name>
         <name>LILY_BEAM_SIREN_LOCK_CHAOS</name>
         <name>LILY_BEAM_SIREN_1_ELITE</name>
         <name>LILY_BEAM_SIREN_2_ELITE</name>
         <name>LILY_BEAM_SIREN_3_ELITE</name>
         <name>LILY_BEAM_SIREN_4_ELITE</name>
+        <mod-append:name>LILY_BEAM_SIREN_PLASMA_ELITE</mod-append:name>
         <name>LILY_BEAM_SIREN_FIRE_ELITE</name>
         <name>LILY_BEAM_SIREN_LOCK_ELITE</name>
         <name>LILY_SIREN_TRANSPORT_HER_ARTILLERY</name>

@@ -5,9 +5,9 @@
                 <mod:selector req="engines"/>
 
                 <mod-append:choice hidden="true" req="LILY_COMBAT_AFTERBURNER" lvl="1">
-                    <text>(Afterburner) Bring the statue on a collision course with the planet's military installment. [3{]</text>
+                    <text>(Afterburner) Bring the statue on a collision course with the planet's military installation. [3{]</text>
                     <event>
-                        <text>Afterburner engaged</text>
+                        <text>Afterburner engaged!</text>
                         <item_modify>
                             <item type="fuel" min="-3" max="-3"/>
                         </item_modify>

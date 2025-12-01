@@ -16,13 +16,13 @@
                                                     <mod-append:choice hidden="true" req="LILY_PATRONAGE">
                                                         <text>(Lily) "So this is indeed the place..."</text>
                                                         <event>
-                                                            <text>Lily seems completely unfazed by Slug's speech, as if it was all well known to her. "So, this is indeed the place. Not much different from the expectations... Now, if you excuse me, I have business to do here, with your employee, and you will NOT stand in my way."
+                                                            <text>Lily seems completely unfazed by the Slug's speech, as if it was all well known to her. "So, this is indeed the place. Not much different from my expectations... Now, if you excuse me, I have business to do here, with your employer, and you will NOT stand in my way."
 		
-G-Van seems utterly confused at her speech. "Um... You have businesss here?... With Prime himself?! I'm afraid I don't know who you... are... Neither do you stand a chance against Prime... Unless...? If She hasss decided to... flip the tables and send you here... No... I refussse to believe thissss."
+G-Van seems utterly confused at her speech. "Um... you have businesss here?... with Prime himself?! I'm afraid I don't know who you... are... Neither do you stand a chance against Prime... Unless...? If She hasss decided to... flip the tables and send you here... No... I refussse to believe thissss."
 
-"And your lovely 'toy' pointed at our ship wont do much help to you either..."
+"And your lovely 'toy' pointed at our ship wont do much to help you either--"
 
-Lily does nothing but grins and snaps her fingers, with a flash of red and blue energy sparking between them.</text>
+Lily does nothing but grin and snap her fingers, with a flash of red and blue energy sparking between them.</text>
                                                             <choice hidden="true">
                                                                 <text>Continue...</text>
                                                                 <event>
@@ -58,11 +58,11 @@ Lily does nothing but grins and snaps her fingers, with a flash of red and blue 
                                                     <mod-append:choice hidden="true" req="LILY_PATRONAGE">
                                                         <text>(Lily) "There is..."</text>
                                                         <event>
-                                                            <text>Lily seems completely unfazed by Slug's speech, with unusually stern look in her eyes. 
+                                                            <text>Lily seems completely unfazed by Slug's speech, with an unusually stern look in her eyes. 
 
-"And by Her eldritch authority that I enforce, prepare to get obliterated, pest."
+"And by Her Eldritch authority that I enforce, prepare to get obliterated, pest."
 
-Lily does nothing but grins and snaps her fingers, with a flash of red and blue energy sparking between them.</text>
+Lily does nothing but grin and snap her fingers, with a flash of red and blue energy sparking between them.</text>
                                                             <choice hidden="true">
                                                                 <text>Continue...</text>
                                                                 <event>
@@ -115,7 +115,7 @@ Lily does nothing but grins and snaps her fingers, with a flash of red and blue 
     <triggeredEvent event="NEXUS_ENTER_GLITCH_LILY_CONTINUE" time="1" clearOnJump="true"/>
 </event>
 <event name="NEXUS_ENTER_GLITCH_LILY_CONTINUE">
-    <text>To your surprise, G-Vans systems are suddenly starting to malfunction! You suspect that whetever Lily has done has redirected the jamming to him! It looks like he's isn't going to be much of a threat in a state like this!</text>
+    <text>To your surprise, G-Van's systems are suddenly starting to malfunction! You suspect that whatever Lily has done has redirected the jamming to him! It looks like he isn't going to be much of a threat in a state like this!</text>
     <clearBackgroundObject name="GLITCH"/>
     <status type="limit" target="enemy" system="weapons" amount="0"/>
     <status type="limit" target="enemy" system="shields" amount="8"/>
@@ -136,7 +136,7 @@ Lily does nothing but grins and snaps her fingers, with a flash of red and blue 
     <mod-append:choice req="LILY_PATRONAGE" blue="true">
         <text>(Lily) "You are nothing but an obstacle to our goals that should be destroyed.--"</text>
         <event>
-            <text>Ssstranger, what obssstacle are you talking about? Dessstroyed? Do you have a ssslighest idea what are you sssaying?</text>
+            <text>"Ssstranger, what obssstacle are you talking about? Dessstroyed? Do you have a ssslighest idea what are you sssaying?"</text>
             <choice>
                 <text>"Oh, I know *precisely* what I'm doing and what I'm talking about-- Not even you can endure forever, trying to stop what was meant to be, Prime--"</text>
                 <event>
@@ -233,15 +233,15 @@ Lily does nothing but grins and snaps her fingers, with a flash of red and blue 
 </event>
 
 <event name="NEXUS_HER_HELP_LILY">
-    <text>The maddening red hue finally subsides, you wake up on your ship and find yourself all alone, save for Prime's now empty flagship. With Prime now gone and Her having recovered all three pieces of Her power, the C.E.L. is likely going to be too weak now to fight Her. Your only choice now is to wait for the inevitable.</text>
+    <text>The maddening red hue finally subsides, you wake up on your ship and find yourself all alone, save for Prime's now empty ship. With Prime now gone and Her having recovered all three pieces of Her power, the C.E.L. is likely going to be too weak now to fight Her. Your only choice now is to wait for the inevitable.</text>
     <choice>
     <text>Continue...</text>
         <event>
             <text>"Or maybe not--"
 You notice Lily is communicating to you.
 "She won. WE won!--" - You haven't heard her so excited before.
-"Great job to you by the way, carrying the Gnome ALL the way here, AND defeating the Prime on top!--"
-"She has probably returned to her (and my) home cluster, probably to gather forces and unleah hell on what remains of Nexus and C.E.L. So Exciting--"
+"Great job to you by the way, carrying the Gnome ALL the way here, AND defeating Prime on top!--"
+"She has probably returned to her (and my) home cluster, probably to gather forces and unleash hell on what remains of Nexus and the C.E.L.. So exciting--"
 "We don't want to stay here though, so come on, Renegade, let's not be rude and go join Her too--"</text>
             <choice hidden="true">
                 <text>Continue...</text>

@@ -470,7 +470,7 @@ disable shields as well as systems.</tooltip>
 
     
     <crewBlueprint name="unique_lily_avatar">
-        <desc>A multiverse traveller, beam saleswoman, and a loyal servant of the Supreme Eldritch Goddess of True Chaos. Yes, that's me--</desc>
+        <desc>"A multiverse traveller, beam saleswoman, and a loyal servant of the Supreme Eldritch Goddess of True Chaos. Yes, that's me--"</desc>
         <cost>2147483647</cost>
         <bp>20</bp>
         <title>Eldritch Avatar</title>
@@ -530,7 +530,7 @@ disable shields as well as systems.</tooltip>
         <tip>tip_clone_cannon</tip>
         <title>Clone Cannon [???]</title>
         <short>Cloner [???]</short>
-        <desc>No weapon has ever sparked a larger ethical controversy, but if it works it works. Apparently your attempts to upload Lily's Avatar into it has resulted in it becoming... a pinpoint?</desc>
+        <desc>No weapon has ever sparked a larger ethical controversy, but if it works it works. Apparently your attempts to upload Lily's Avatar into it has resulted in it becoming... a beam?</desc>
         <tooltip>Fires a blast of debris across a random area doing up to 3 damage.</tooltip>
         <radius>0</radius>
         <damage>0</damage>

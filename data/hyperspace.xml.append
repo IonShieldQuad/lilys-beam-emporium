@@ -1142,7 +1142,7 @@ Mind controls a random enemy crew in the room.</tooltip>
 			</statBoost>
 			<statBoost name="stunMultiplier">
 				<boostType>MULT</boostType>
-				<amount>100</amount>
+				<amount>0</amount>
 				<shipTarget>ALL</shipTarget>
 				<crewTarget>ALLIES</crewTarget>
 				<priority>999</priority>
@@ -3458,7 +3458,7 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
 				<name>Boon of Utopia</name>
 				<secretName>Boon of ???</secretName>
 				<secretDescription>Receive the Boon of ??? from Thest.</secretDescription>
-				<description>Show a Siren to Thest. While in effect; Siren crew gain vision of adjecent rooms, immunity to stuns, and loses no skills when cloned.</description>
+				<description>Show a Siren to Thest. While in effect; Siren crew gain vision of adjacent rooms, immunity to stuns, and loses no skills when cloned.</description>
 				<header>Boon Received</header>
 				<icon>boons/ach_boon_lily_siren</icon>
 				<lockImage>ach_locked</lockImage>

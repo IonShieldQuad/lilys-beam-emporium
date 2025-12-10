@@ -502,8 +502,8 @@ And have some freebies, on the house--"</text>
     <choice req="LILY_PATRONAGE" lvl="-999" max_lvl="0">
         <text>Ask Lily to join you.</text>
         <event>
-            <text>So you have changed your mind after all?--
-Sure, I'm in--</text>
+            <text>"So you have changed your mind after all?--"
+"Sure, I'm in--"</text>
             <hiddenAug>LILY_PATRONAGE</hiddenAug>
             <achievement>LILY_ACH_GEN_AVATAR</achievement>
             <choice hidden="true">

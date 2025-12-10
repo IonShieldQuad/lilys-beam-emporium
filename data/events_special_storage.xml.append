@@ -71,11 +71,11 @@ Get the necessarry materials and knowledge for them and I'd gladly share--"</tex
     <loadEvent>STORAGE_CHECK_LILY_QUESTS_AETHER</loadEvent>
 </event>
 <event name="STORAGE_CHECK_LILY_QUESTS_AETHER">
-<text>Ah, a classic--
+<text>"Ah, a classic--
 This kind of weapons has been around for millenia, and they still remain one of the strongest--
 Not strong enough to do the thing I was hoping to...
 But alright, just bring me some materials and I'll make one for you--
-2-3 pieces of ancient tech should suffice--</text>
+2-3 pieces of ancient tech should suffice--"</text>
     <choice hidden="true" req="lily_aether_points" lvl="-999" max_lvl="0">
         <text>[Current parts: 0]</text>
         <event load="OPTION_INVALID"/>
@@ -537,7 +537,7 @@ But alright, just bring me some materials and I'll make one for you--
     <text>"Oh, you want me to join personally?--
 While I can't do that due to ... reasons, I can lend you my Avatar--
 Think of it as a kind of remotely controlled drone, except that it's not--
-Oh, and don't dare to think of it as expendable, or I will make you pay--
+Oh, and don't dare to think of it as expendable, or I will make you pay--"
 
 "You are going to need a special piece of equipment for me to do so though..."
     </text>
@@ -553,9 +553,9 @@ Oh, and don't dare to think of it as expendable, or I will make you pay--
         </event>
     </choice>
     <choice req="eldritch_cat" lvl="1" blue="false" hidden="true">
-        <text>(The One Who Rhymes) Allow me to count: three, two, one...</text>
+        <text>(The One Who Rhymes) "Allow me to count: three, two, one...</text>
         <event>
-            <text>And everything that's needed is all done!
+            <text>And everything that's needed is all done!"
 
 A rift in space suddenly opens near you, materializing... a quite normal looking human. Although if feels like there's something off...</text>
 
@@ -627,7 +627,7 @@ Fine, I'll consider this an accident... But only this time--"
 
 <event name="STORAGE_CHECK_LILY_JOIN_RHYMES">
     <text>"Hey! Didn't I tell you NOT to treat my avatar as expendable?--
-But, seeing The One Who Rhymes here with you I'll make an exception, don't want to miss out on the fun--""
+But, seeing The One Who Rhymes here with you I'll make an exception, don't want to miss out on the fun--"
     </text>
 
     <choice blue="false" hidden="true">
@@ -647,7 +647,7 @@ But, seeing The One Who Rhymes here with you I'll make an exception, don't want 
 </event>
 
 <event name="STORAGE_CHECK_LILY_JOIN_FREE">
-    <text>Sure--</text>
+    <text>"Sure--"</text>
 
     <choice blue="false" hidden="true">
         <text>Continue...</text>
@@ -666,8 +666,8 @@ But, seeing The One Who Rhymes here with you I'll make an exception, don't want 
 </event>
 
 <event name="STORAGE_CHECK_LILY_JOIN_PAY">
-    <text>Well... pay me then--
-What do Renegades value... Scrap? Well, you can give me some or I can take it right from your ship!--
+    <text>"Well... pay me then--
+What do Renegades value... Scrap? Well, you can give me some or I can take it right from your ship!--"
     </text>
 
     <choice>
@@ -764,9 +764,9 @@ Oh, and you will get your hands on all kinds of prototype weapons I'm gonna be t
                                                             <choice>
                                                                 <text>Continue...</text>
                                                                 <event name="STORAGE_CHECK_LILY_LOREDUMP_9">
-                                                                <text>Well, that was quite the tale, wasn't it?-- I hope you now understand and will be more motivated to help us...
-Not only will it benefit me, but you as well!-- Call it a win-win--
-Anyway, was there anything else you wanted to ask?
+                                                                <text>"Well, that was quite the tale, wasn't it?-- I hope you now understand and will be more motivated to help us...
+Not only will it benefit me, but you as well!-- Call it a win-win--"
+"Anyway, was there anything else you wanted to ask?"
 (P.S. Good job if you actually have read all of this--)</text>
                                                                     <achievement>LILY_ACH_GEN_LORE</achievement>
                                                                     <choice>
@@ -2374,7 +2374,7 @@ Anyway, was there anything else you wanted to ask?
     </choice>
     <choice blue="false">
         <text>Burn the enemy!
-[-3{, deals damage to enemy equals to your engine level, starts fires]</text>
+[-3{, [deal 1 damage and start fires in a random enemy room] amount of times equal to your engine level]</text>
         <event>
             <text>You activate the combat augment.</text>
             <item_modify>
@@ -2399,7 +2399,7 @@ Anyway, was there anything else you wanted to ask?
     </choice>
     <choice req="DEBUG_GENERATOR">
         <text>Burn the enemy! (Using Emergency Generator)
-[-2{, deals damage to enemy equals to your engine level, starts fires]</text>
+[-2{, [deal 1 damage and start fires in a random enemy room] amount of times equal to your engine level]</text>
         <event>
             <text>You activate the combat augment.</text>
             <item_modify>

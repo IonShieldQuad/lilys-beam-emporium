@@ -151,6 +151,7 @@ chaosshock["LILY_BEAM_SIREN_PLASMA_ELITE"] = 40
 
 local frostBeams = {}
 frostBeams["LILY_BEAM_FROST"] = { removeOxygen = true }
+frostBeams["LILY_BEAM_FROST_PLAYER"] = { removeOxygen = true }
 frostBeams["LILY_SIREN_TRANSPORT_B_ARTILLERY_I"] = { removeOxygen = true }
 frostBeams["LILY_SIREN_MV_TRANSPORT_ARTILLERY"] = { removeOxygen = false }
 
@@ -305,7 +306,10 @@ script.on_internal_event(Defines.InternalEvents.DAMAGE_BEAM,
                 if otherShip.teleportSystem and otherShip.teleportSystem:GetEffectivePower() > 0 then
                     if beamHit == Defines.BeamHit.NEW_ROOM or beamHit == Defines.BeamHit.NEW_TILE then
                         for i, crewmem in ipairs(get_ship_crew_point(shipManager, location.x, location.y)) do
-                            crewmem.extend:InitiateTeleport(otherShip.iShipId, otherShip.teleportSystem.roomId)
+                            ---@cast crewmem Hyperspace.CrewMember
+                            if not (crewmem.extend.customTele and crewmem.extend.customTele.teleporting) and not crewmem:IsDrone() then
+                                crewmem.extend:InitiateTeleport(otherShip.iShipId, otherShip.teleportSystem.roomId)
+                            end
                             if crewmem.iShipId == otherShip.iShipId then
                                 crewmem.fStunTime = 0
                             end
@@ -877,6 +881,9 @@ local refractors = {}
 refractors["LILY_FOCUS_PIERCE_1"] = {num = 1, beams = {"LILY_FOCUS_PIERCE_1_R",}, offsets = {20, } }
 refractors["LILY_FOCUS_PIERCE_2"] = { num = 7, beams = { "LILY_FOCUS_PIERCE_2_V", "LILY_FOCUS_PIERCE_2_I", "LILY_FOCUS_PIERCE_2_B", "LILY_FOCUS_PIERCE_2_G", "LILY_FOCUS_PIERCE_2_Y", "LILY_FOCUS_PIERCE_2_O", "LILY_FOCUS_PIERCE_2_R" }, offsets = { 20, 18.33, 16.66, 15, 13.33, 11.66, 10} }
 
+refractors["LILY_FOCUS_PIERCE_1_PLAYER"] = { num = 1, beams = { "LILY_FOCUS_PIERCE_1_R", }, offsets = { 20, } }
+refractors["LILY_FOCUS_PIERCE_2_PLAYER"] = { num = 7, beams = { "LILY_FOCUS_PIERCE_2_V", "LILY_FOCUS_PIERCE_2_I", "LILY_FOCUS_PIERCE_2_B", "LILY_FOCUS_PIERCE_2_G", "LILY_FOCUS_PIERCE_2_Y", "LILY_FOCUS_PIERCE_2_O", "LILY_FOCUS_PIERCE_2_R" }, offsets = { 20, 18.33, 16.66, 15, 13.33, 11.66, 10 } }
+
 local burstPins = {}
 burstPins["LILY_BEAM_AMP_SIPHON"] = { count = 1, countSuper = 1, siphon = true }
 burstPins["LILY_BEAM_AMP_SIPHON_O"] = { count = 1, countSuper = 1, siphon = true }
@@ -1370,7 +1377,7 @@ end)
 
 
 
-script.on_render_event(Defines.RenderEvents.SHIP_SPARKS, function (ship)
+script.on_render_event(Defines.RenderEvents.SHIP, function(ship)
     --local spaceManager = Hyperspace.App.world.space
     --print("Render")
     --local combatControl = Hyperspace.App.gui.combatControl

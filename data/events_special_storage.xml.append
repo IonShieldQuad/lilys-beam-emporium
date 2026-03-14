@@ -220,7 +220,7 @@ But alright, just bring me some materials and I'll make one for you--
             <event load="STORAGE_CHECK_LILY_QUESTS_AETHER_LOAD"/>
         </event>
     </choice>
-    <choice hidden="true" req="HAVOC">
+    <choice hidden="true" req="ANCIENT_HAVOC">
         <text>Offer her an Ancient Havoceizer. (+2 pts.)</text>
         <event>
             <text id="lily_aether_submit"/>

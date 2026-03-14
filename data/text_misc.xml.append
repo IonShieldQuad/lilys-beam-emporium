@@ -32,8 +32,10 @@
 Does additional damage to systems
 -1 second cooldown, +20% breach chance</text>
 
-
-
+<text name="lily_beam_cyclotron_renderbox_1">%.0f/%.0f Damage</text>
+<text name="lily_beam_cyclotron_renderbox_2">%.0f Pierce</text>
+<text name="lily_focus_ion_phase_renderbox_1">%.0f Pierce</text>
+<text name="lily_focus_ion_phase_renderbox_2">%.0f Damage</text>
 
 <text name="lily_eventtext_continue">Continue...</text>
 

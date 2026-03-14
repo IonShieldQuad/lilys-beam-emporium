@@ -918,10 +918,13 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
             if popData.countSuper > 0 then
                 shipManager.shieldSystem:CollisionReal(projectile.position.x, projectile.position.y, Hyperspace.Damage(),
                     true)
+                local supershieldPoppedCount = math.min(shieldPower.super.first, popData.countSuper)
                 shieldPower.super.first = math.max(0, shieldPower.super.first - popData.countSuper)
                 userdata_table(projectile, "mods.lilybeams.shieldpop").poppedShield = true
                 if otherShieldPower and popData.siphon then
-                    otherShip.shieldSystem:AddSuperShield(Hyperspace.Point(projectile.position.x, projectile.position.y))
+                    for i = 1, supershieldPoppedCount, 1 do
+                        otherShip.shieldSystem:AddSuperShield(Hyperspace.Point(projectile.position.x, projectile.position.y))
+                    end
                     --otherShieldPower.super.second = math.max(otherShieldPower.super.second, 5)
                     --otherShieldPower.super.first = math.min(math.max(otherShieldPower.super.second, 5), otherShieldPower.super.first + popData.countSuper)
                 end
@@ -980,13 +983,14 @@ script.on_internal_event(Defines.InternalEvents.SHIELD_COLLISION, function(shipM
             local weaponBlueprint = Hyperspace.Blueprints:GetWeaponBlueprint(refrData.beams[i])
             local offset_per_layer = refrData.offsets[i]
 
+            local offsetMult = math.sqrt(shieldPower.first)
 
             local newTarget1 = Hyperspace.Pointf(
-                projectile.target.x + math.cos(theta) * offset_per_layer * shieldPower.first,
-                projectile.target.y + math.sin(theta) * offset_per_layer * shieldPower.first)
+                projectile.target.x + math.cos(theta) * offset_per_layer * offsetMult,
+                projectile.target.y + math.sin(theta) * offset_per_layer * offsetMult)
             local newTarget2 = Hyperspace.Pointf(
-                projectile.target.x + math.cos(theta) * offset_per_layer * shieldPower.first,
-                projectile.target.y + math.sin(theta) * offset_per_layer * shieldPower.first + 1)
+                projectile.target.x + math.cos(theta) * offset_per_layer * offsetMult,
+                projectile.target.y + math.sin(theta) * offset_per_layer * offsetMult + 1)
 
             local spaceManager = Hyperspace.App.world.space
             local beam1 = spaceManager:CreateBeam(
@@ -1022,16 +1026,16 @@ script.on_internal_event(Defines.InternalEvents.WEAPON_RENDERBOX, function(weapo
         --print(thirdLine)
         local sp = weapon.boostLevel + 3
         local dmg = 2 + (sp > 10 and (sp - 10.0) / 10 or 0)
-        local l2 = (sp - 1.0) .. " Pierce"
-        local l3 = (dmg + 0.0) .. " Damage"
+        local l2 = string.format(Hyperspace.Text:GetText("lily_focus_ion_phase_renderbox_1"), sp - 1.0)
+        local l3 = string.format(Hyperspace.Text:GetText("lily_focus_ion_phase_renderbox_2"), dmg + 0.0)
         return Defines.Chain.CONTINUE, firstLine, l2, l3
     end
     if weapon.blueprint and weapon.blueprint.name == "LILY_BEAM_CYCLOTRON" then
         local sp = math.max(weapon.weaponVisual.boostLevel, 0)
-            local dmg = 1.0 + math.max(weapon.weaponVisual.boostLevel, 0)
-            local pdmg = 30.0 + 30 * math.max(weapon.weaponVisual.boostLevel, 0)
-        local l3 = string.format("%.0f Pierce", sp)
-        local l2 = string.format("%.0f / %.0f Damage", dmg, pdmg)
+        local dmg = 1.0 + math.max(weapon.weaponVisual.boostLevel, 0)
+        local pdmg = 30.0 + 30 * math.max(weapon.weaponVisual.boostLevel, 0)
+        local l3 = string.format(Hyperspace.Text:GetText("lily_beam_cyclotron_renderbox_2"), sp)
+        local l2 = string.format(Hyperspace.Text:GetText("lily_beam_cyclotron_renderbox_1"), dmg, pdmg)
         --print(l2)
         --print(l3)
         return Defines.Chain.CONTINUE, firstLine, l2, l3
@@ -1171,7 +1175,7 @@ script.on_internal_event(Defines.InternalEvents.WEAPON_RENDERBOX,
             chargersMaxCharges[weapon and weapon.blueprint and weapon.blueprint.name] - 1)
             first = first / chargerBoost ^ boostLevel
             second = second / chargerBoost ^ boostLevel
-            chargeString = string.format("%.1f / %.1f", first, second)
+            chargeString = string.format("%.1f/%.1f", first, second)
         end
         return Defines.Chain.CONTINUE, chargeString, damageString, shotLimitString
     end)

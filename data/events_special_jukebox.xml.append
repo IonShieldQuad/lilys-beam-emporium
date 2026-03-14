@@ -1,0 +1,16 @@
+<mod:findName type="event" name="STORAGE_CHECK_JUKEBOX">
+    <mod-append:choice hidden="true" req="juke_lily_lily">
+        <text>LBE: Cataclysmic Variable - Composed by Lizzard</text>
+        <event>
+            <playMusic>lily_lily</playMusic>
+            <loadEvent>STORAGE_CHECK_JUKEBOX</loadEvent>
+        </event>
+    </mod-append:choice>
+    <mod-append:choice hidden="true" req="juke_lily_lily_fight">
+        <text>LBE: Gamma Ray Burst - Composed by Lizzard</text>
+        <event>
+            <playMusic>lily_lily_fight</playMusic>
+            <loadEvent>STORAGE_CHECK_JUKEBOX</loadEvent>
+        </event>
+    </mod-append:choice>
+</mod:findName>

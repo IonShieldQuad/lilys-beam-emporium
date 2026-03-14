@@ -1736,10 +1736,9 @@ Fire Chance: 30%
 Stun Chance: 100% (3 seconds long)
 
 (Secondary Beam)
-2x hull damage on systemlesss rooms.
 Base Hull Damage: 2
-Total System Damage: 3
-Total Crew Damage: 45
+Total System Damage: 2
+Total Crew Damage: 30
 Breach Chance: 30% (Adjusted: 30%)
 
 Default Price: 100~   -   Selling Price: 50~</descriptionOverride>
@@ -1755,10 +1754,9 @@ Fire Chance: 30%
 Stun Chance: 100% (3 seconds long)
 
 (Secondary Beam)
-2x hull damage on systemlesss rooms.
 Base Hull Damage: 2
-Total System Damage: 3
-Total Crew Damage: 45
+Total System Damage: 2
+Total Crew Damage: 30
 Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <damage>0</damage>
         <ion>2</ion>
@@ -1795,9 +1793,8 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
         <desc>An unique weapon capable of firing a pair of converging beams at once.</desc>
         <tooltip>One damage per room beam weapon</tooltip>
         <damage>2</damage>
-        <sysDamage>1</sysDamage>
-        <persDamage>1</persDamage>
-        <hullBust>1</hullBust>
+        <sysDamage>0</sysDamage>
+        <persDamage>0</persDamage>
         <ion>0</ion>
         <sp>0</sp>
         <fireChance>0</fireChance>
@@ -1839,10 +1836,9 @@ Fire Chance: 30%
 Stun Chance: 100% (3 seconds long)
 
 (Secondary Beam)
-2x hull damage on systemlesss rooms.
 Base Hull Damage: 2
-Total System Damage: 3
-Total Crew Damage: 45
+Total System Damage: 2
+Total Crew Damage: 30
 Breach Chance: 30% (Adjusted: 30%)
 
 Default Price: 100~   -   Selling Price: 50~</descriptionOverride>
@@ -1858,10 +1854,9 @@ Fire Chance: 30%
 Stun Chance: 100% (3 seconds long)
 
 (Secondary Beam)
-2x hull damage on systemlesss rooms.
 Base Hull Damage: 2
-Total System Damage: 3
-Total Crew Damage: 45
+Total System Damage: 2
+Total Crew Damage: 30
 Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <damage>0</damage>
     <ion>2</ion>
@@ -2352,7 +2347,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed> 
-    <fireTime>0.15</fireTime>
+    <fireTime>2</fireTime>
     <mv-stealth/>
     <mv-conservative/>
 
@@ -2391,7 +2386,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <bp>8</bp>
     <rarity>6</rarity>
     <speed>0</speed>
-    <fireTime>0.15</fireTime>
+    <fireTime>2</fireTime>
     <mv-stealth/>
 
     <shots>3</shots>
@@ -2430,7 +2425,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed>
-    <fireTime>0.15</fireTime>
+    <fireTime>1.5</fireTime>
     <mv-stealth/>
 
     <shots>5</shots>
@@ -2468,7 +2463,7 @@ Breach Chance: 30% (Adjusted: 30%)</tooltipOverride>
     <bp>8</bp>
     <rarity>0</rarity>
     <speed>0</speed>
-    <fireTime>0.15</fireTime>
+    <fireTime>1.5</fireTime>
     <mv-stealth/>
 
     <shots>8</shots>
@@ -3622,7 +3617,7 @@ Conservative weapons use no power on their own but require the system itself to 
         <sysDamage>0</sysDamage>
         <fireChance>0</fireChance>
         <breachChance>0</breachChance>
-        <cooldown>14</cooldown>
+        <cooldown>18</cooldown>
         <fireTime>0.25</fireTime>
         <stun>10</stun>
         <mv-conservative/>
@@ -6985,6 +6980,7 @@ Deals 1 hull damage to breached rooms.</desc>
     <damage>0</damage>
     <ion>1</ion>
     <sysDamage>1</sysDamage>
+    <ionBeamFix>true</ionBeamFix>
     <noPersDamage>true</noPersDamage>
     <sp>2</sp>
     <fireChance>0</fireChance>

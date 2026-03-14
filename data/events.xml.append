@@ -44,11 +44,16 @@
 <event name="LILY_EMPORIUM_DESTROYED">
     <text>Somehow, you have destroyed the station. It breaks into flickering colorful pieces, which then proceed to fade out of existence.
 Unfortunately, there's nothing left to scrap of the station itself.</text>
+    <playMusic/>
+    <achievement>MUSIC_LILY_LILY_FIGHT</achievement>
+    <metaVariable name="juke_lily_lily_fight" op="set" val="1"/>
     <choice hidden="true">
         <text>Continue...</text>
         <event>
             <text>However, one of the weapons on the station seems to have survived the fight and is floating in space now! You hastily pick it up.</text>
             <weapon name="LIST_LILY_STATION_LOOT"/>
+            <achievement>MUSIC_LILY_LILY</achievement>
+            <metaVariable name="juke_lily_lily" op="set" val="1"/>
             <choice hidden="true">
                 <text>Continue...</text>
                 <event>
@@ -641,6 +646,7 @@ It was probably nothing, just ignore it--"</text>
     <text>"So you have decided to still attack me?"
 "You know what, this is fine. The weapons need some testing anyway--"
 "So bring it on, hahe!"</text>
+    <playMusic>lily_lily_fight</playMusic>
     <choice>
         <text>Continue...</text>
         <event>
@@ -654,6 +660,7 @@ It was probably nothing, just ignore it--"</text>
     <text>"You know what, this is alright. The weapons need some testing anyway--"
 "And I'll reward you if you manage to win--"
 "So bring it on, hahe!"</text>
+    <playMusic>lily_lily_fight</playMusic>
     <choice>
         <text>Continue...</text>
         <event load="COMBAT_CHECK"/>

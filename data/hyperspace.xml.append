@@ -398,6 +398,12 @@
 	<mod-append:variable name="lily_questioned" op="set" value="0" />
 	<mod-append:variable name="lily_resolved" op="set" value="0" />
 	<mod-append:metaVariable name="lily_mysterious_note_unlocked" op="set" value="0" />
+	<mod-append:metaVariable name="lily_testing_allowed" op="set" value="0"/>
+	<mod-append:metaVariable name="juke_lily_lily" op="set" value="0"/>
+	<mod-append:metaVariable name="juke_lily_lily_fight" op="set" value="0"/>
+
+
+
 	<mod-append:req name="LILY_EMPORIUM_SPAWN_CHECK" type="all">
 		<req lvl="1">
 			<name>prof_siren_encounter</name>
@@ -3453,6 +3459,28 @@ Supercharges your cursor with ionic energy. For the next 10 seconds, your clicks
                 <sound>achievement_stupid</sound>
             </achievement>
         </section>
+		<section text="Lily's Music" hidden="false">
+			<achievement name="MUSIC_LILY_LILY">
+				<name>Cataclysmic Variable - Made by Lizzard</name>
+				<description id="jukebox_unlocked" />
+				<secretDescription id="jukebox_locked" />
+				<header id="jukebox_header" />
+				<icon>music_unlocked</icon>
+				<variable name="juke_lily_lily" amount="1" />
+				<multiDifficulty>false</multiDifficulty>
+			</achievement>
+			<achievement name="MUSIC_LILY_LILY_FIGHT">
+				<name>Gamma Ray Burst - Made by Lizzard</name>
+				<description id="jukebox_unlocked" />
+				<secretDescription id="jukebox_locked" />
+				<header id="jukebox_header" />
+				<icon>music_unlocked</icon>
+				<variable name="juke_lily_lily_fight" amount="1" />
+				<multiDifficulty>false</multiDifficulty>
+			</achievement>
+		</section>
+	</mod-append:page>
+	<mod-append:page>
 		<section text="Thest's Boons (LilyBeam)" hidden="false">
 			<achievement name="ACH_BOON_LILY_SIREN">
 				<name>Boon of Utopia</name>

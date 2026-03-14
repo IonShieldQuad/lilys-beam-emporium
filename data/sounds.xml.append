@@ -1,4 +1,16 @@
 <FTL>
+
+<music>
+    <track> <!--composed by Lizzard-->
+        <name>lily_lily</name>
+        <explore>lily_MUS_CataclysmicVariable.ogg</explore>
+    </track>
+    <track> <!--composed by Lizzard-->
+        <name>lily_lily_fight</name>
+        <explore>lily_MUS_GammaRayBurst.ogg</explore>
+    </track>
+</music>
+
 <lily_zap_1 volume="10">weapons_lily/zap_1.wav</lily_zap_1>
 <lily_lams_1 volume="1">weapons_lily/lams_1.wav</lily_lams_1>
 <lily_dial_up_1 volume="10">weapons_lily/dial_up_1.wav</lily_dial_up_1>

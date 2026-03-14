@@ -852,9 +852,9 @@
     </blueprintList>
 
     <blueprintList name="LIST_LILY_STATION_LOOT">
-        <mod-append:name>LILY_BEAM_SIREN_3</mod-append:name>
-        <mod-append:name>LILY_BEAM_SIREN_FIRE</mod-append:name>
-        <mod-append:name>LILY_BEAM_SIREN_LOCK</mod-append:name>
+        <name>LILY_BEAM_SIREN_3</name>
+        <name>LILY_BEAM_SIREN_FIRE</name>
+        <name>LILY_BEAM_SIREN_LOCK</name>
     </blueprintList>
 
 
